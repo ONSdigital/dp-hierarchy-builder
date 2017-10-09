@@ -5,9 +5,15 @@ dp-hierarchy-builder
 
 ### Configuration
 
-| Environment variable | Default | Description
-| -------------------- | ------- | -----------
-| BIND_ADDR            | :8080   | The host and port to bind to
+| Environment variable      | Default               | Description
+| ------------------------- | --------------------- | -----------
+| BIND_ADDR                 | :22700                | The host and port to bind to
+| KAFKA_ADDR                | localhost:9092        | A list of Kafka host addresses
+| CONSUMER_GROUP            | dp-hierarchy-builder  | The name of the Kafka consumer group
+| CONSUMER_TOPIC            | observations-imported | The name of the topic to consumes messages from
+| PRODUCER_TOPIC            | hierarchy-built       | The name of the topic to produces messages to
+| ERROR_PRODUCER_TOPIC      | import-error          | The name of the topic to send error messages to
+| GRACEFUL_SHUTDOWN_TIMEOUT | time.Second * 10      | Time time to wait when gracefully shutting down before closing
 
 ### Contributing
 
