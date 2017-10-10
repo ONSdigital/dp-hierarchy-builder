@@ -15,6 +15,30 @@
 			"revisionTime": "2017-10-05T12:50:38Z"
 		},
 		{
+			"checksumSHA1": "yVhSSS1KY9fmMVUcoZhIVyRB/YA=",
+			"path": "github.com/ONSdigital/dp-reporter-client/model",
+			"revision": "2a4f047efd3afeaf282c577dd1e87f7de34dc8de",
+			"revisionTime": "2017-10-10T10:05:43Z"
+		},
+		{
+			"checksumSHA1": "7VuAVtBFJvzKbYbIYRWNxYLu9Ww=",
+			"path": "github.com/ONSdigital/dp-reporter-client/reporter",
+			"revision": "2a4f047efd3afeaf282c577dd1e87f7de34dc8de",
+			"revisionTime": "2017-10-10T10:05:43Z"
+		},
+		{
+			"checksumSHA1": "OXjV7Al4Q42aSizk3mhzzLCLFWA=",
+			"path": "github.com/ONSdigital/dp-reporter-client/reporter/reportertest",
+			"revision": "2a4f047efd3afeaf282c577dd1e87f7de34dc8de",
+			"revisionTime": "2017-10-10T10:05:43Z"
+		},
+		{
+			"checksumSHA1": "9+/RSnsTjyQxIVXfczqMkJpN6fM=",
+			"path": "github.com/ONSdigital/dp-reporter-client/schema",
+			"revision": "2a4f047efd3afeaf282c577dd1e87f7de34dc8de",
+			"revisionTime": "2017-10-10T10:05:43Z"
+		},
+		{
 			"checksumSHA1": "dzh4fF9o6j+mJEbJn5utm8Q+Pyg=",
 			"path": "github.com/ONSdigital/go-ns/avro",
 			"revision": "f77a99756a4da7082417a23f082549903a83321e",
@@ -111,6 +135,12 @@
 			"path": "github.com/golang/snappy",
 			"revision": "f77a99756a4da7082417a23f082549903a83321e",
 			"revisionTime": "2017-10-09T12:14:44Z"
+		},
+		{
+			"checksumSHA1": "yIkYzW7bzAD81zHyuCNmEj4+oxQ=",
+			"path": "github.com/gopherjs/gopherjs/js",
+			"revision": "415225646bb92c4449bb484646f2c95a98402f6f",
+			"revisionTime": "2017-09-27T19:27:36Z"
 		},
 		{
 			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",

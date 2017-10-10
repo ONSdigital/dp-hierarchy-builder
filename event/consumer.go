@@ -2,8 +2,8 @@ package event
 
 import (
 	"context"
-	errs "errors"
-	"github.com/ONSdigital/dp-dataset-exporter/errors"
+	"errors"
+	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
 )
@@ -35,7 +35,7 @@ func NewConsumer() *Consumer {
 }
 
 // Consume converts messages to event instances, and pass the event to the provided handler.
-func (consumer *Consumer) Consume(messageConsumer MessageConsumer, handler Handler, errorHandler errors.Handler) {
+func (consumer *Consumer) Consume(messageConsumer MessageConsumer, handler Handler, errorReporter reporter.ErrorReporter) {
 
 	go func() {
 		defer close(consumer.closed)
@@ -44,7 +44,7 @@ func (consumer *Consumer) Consume(messageConsumer MessageConsumer, handler Handl
 			select {
 			case message := <-messageConsumer.Incoming():
 
-				processMessage(message, handler, errorHandler)
+				processMessage(message, handler, errorReporter)
 
 			case <-consumer.closing:
 				log.Info("closing event consumer loop", nil)
@@ -70,12 +70,12 @@ func (consumer *Consumer) Close(ctx context.Context) (err error) {
 		return nil
 	case <-ctx.Done():
 		log.Info("shutdown context time exceeded, skipping graceful shutdown of event consumer", nil)
-		return errs.New("Shutdown context timed out")
+		return errors.New("Shutdown context timed out")
 	}
 
 }
 
-func processMessage(message kafka.Message, handler Handler, errorHandler errors.Handler) {
+func processMessage(message kafka.Message, handler Handler, errorReporter reporter.ErrorReporter) {
 
 	event, err := unmarshal(message)
 	if err != nil {
@@ -87,7 +87,7 @@ func processMessage(message kafka.Message, handler Handler, errorHandler errors.
 
 	err = handler.Handle(event)
 	if err != nil {
-		errorHandler.Handle(event.InstanceID, err)
+		errorReporter.Notify(event.InstanceID, "failed to handle event", err)
 		log.Error(err, log.Data{"message": "failed to handle event"})
 	}
 

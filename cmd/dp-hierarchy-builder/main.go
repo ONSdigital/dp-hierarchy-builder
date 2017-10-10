@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
-	"github.com/ONSdigital/dp-hierarchy-builder/errors"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
+	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/go-ns/handlers/healthcheck"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
@@ -64,7 +64,8 @@ func main() {
 	exitIfError(err)
 
 	// when errors occur - we send a message on an error topic.
-	errorHandler := errors.NewKafkaHandler(kafkaErrorProducer)
+	errorHandler, err := reporter.NewImportErrorReporter(kafkaErrorProducer, log.Namespace)
+	exitIfError(err)
 
 	eventHandler := event.NewObservationsImportedHandler()
 

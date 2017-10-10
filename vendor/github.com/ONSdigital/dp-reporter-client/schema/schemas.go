@@ -1,19 +1,18 @@
-package errors
+package schema
 
 import "github.com/ONSdigital/go-ns/avro"
 
-var event = `{
+var reportEvent = `{
   "type": "record",
   "name": "report-event",
   "fields": [
-    {"name": "import_id", "type": "string"},
+    {"name": "instance_id", "type": "string"},
     {"name": "event_type", "type": "string"},
     {"name": "event_message", "type": "string"},
     {"name": "service_name", "type": "string"}
   ]
 }`
 
-// EventSchema provides the avro schema object for an error event.
-var EventSchema = &avro.Schema{
-	Definition: event,
+var ReportEventSchema *avro.Schema = &avro.Schema{
+	Definition: reportEvent,
 }

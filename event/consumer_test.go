@@ -3,9 +3,9 @@ package event_test
 import (
 	"context"
 	"errors"
-	"github.com/ONSdigital/dp-hierarchy-builder/errors/errorstest"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/event/eventtest"
+	"github.com/ONSdigital/dp-reporter-client/reporter/reportertest"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/kafka/kafkatest"
 	"github.com/ONSdigital/go-ns/log"
@@ -100,11 +100,7 @@ func TestConsume_HandlerError(t *testing.T) {
 			},
 		}
 
-		mockErrorHandler := &errorstest.HandlerMock{
-			HandleFunc: func(instanceID string, err error) {
-				// do nothing, just going to inspect the call.
-			},
-		}
+		mockErrorHandler := reportertest.NewImportErrorReporterMock(expectedError)
 
 		expectedEvent := getExampleEvent()
 
@@ -119,9 +115,9 @@ func TestConsume_HandlerError(t *testing.T) {
 			waitForEventsToBeSentToHandler(mockEventHandler)
 
 			Convey("The error handler is given the error returned from the event handler", func() {
-				So(len(mockErrorHandler.HandleCalls()), ShouldEqual, 1)
-				So(mockErrorHandler.HandleCalls()[0].Err, ShouldEqual, expectedError)
-				So(mockErrorHandler.HandleCalls()[0].ImportID, ShouldEqual, expectedEvent.InstanceID)
+				So(len(mockErrorHandler.NotifyCalls()), ShouldEqual, 1)
+				So(mockErrorHandler.NotifyCalls()[0].Err, ShouldEqual, expectedError)
+				So(mockErrorHandler.NotifyCalls()[0].ID, ShouldEqual, expectedEvent.InstanceID)
 			})
 
 			Convey("The message is committed", func() {
