@@ -10,6 +10,7 @@ import (
 
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
 var instanceID = flag.String("instance-id", "12345", "")
+var dimensionName = flag.String("dimension-name", "Aggregate", "")
 
 func main() {
 
@@ -38,10 +39,12 @@ func main() {
 	}
 
 	// mark nodes that have data
+	err = setHasData(connection)
+	if err != nil {
+		log.Println(err.Error())
+	}
 
 	// prune branches with no data
-
-	// populate breadcrumb
 
 	// set the number of children
 	err = setNumberOfChildren(connection)
@@ -50,10 +53,10 @@ func main() {
 	}
 
 }
-func createInstanceHierarcyConstraints(writeConnection bolt.Conn) error {
+func createInstanceHierarcyConstraints(connection bolt.Conn) error {
 	// CREATE CONSTRAINT ON (d:ASHE07E_Dimension6) ASSERT d.value IS UNIQUE;
-	createConstraint := fmt.Sprintf("CREATE CONSTRAINT ON (n:`_%s_hierarchy_node_%s`) ASSERT n.code IS UNIQUE;", *codeListID, *instanceID)
-	stmtInsert, err := writeConnection.PrepareNeo(createConstraint)
+	createConstraint := fmt.Sprintf("CREATE CONSTRAINT ON (n:`_hierarchy_node_%s_%s`) ASSERT n.code IS UNIQUE;", *instanceID, *dimensionName)
+	stmtInsert, err := connection.PrepareNeo(createConstraint)
 	if err != nil {
 		return err
 	}
@@ -67,15 +70,15 @@ func createInstanceHierarcyConstraints(writeConnection bolt.Conn) error {
 	return nil
 }
 
-func cloneNodes(writeConnection bolt.Conn) error {
+func cloneNodes(connection bolt.Conn) error {
 
 	startTime := time.Now()
 	log.Printf("*** Cloning nodes from the generic hierarchy\n")
 
-	insert := fmt.Sprintf("MATCH (n:`_%s_hierarchy_node`) WITH n CREATE (:`_%s_hierarchy_node_%s` { code:n.code,label:n.label });", *codeListID, *codeListID, *instanceID)
+	insert := fmt.Sprintf("MATCH (n:`_generic_hierarchy_node_%s`) WITH n MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label });", *codeListID, *instanceID, *dimensionName)
 	log.Println(insert)
 
-	stmtInsert, err := writeConnection.PrepareNeo(insert)
+	stmtInsert, err := connection.PrepareNeo(insert)
 	if err != nil {
 		return err
 	}
@@ -95,19 +98,19 @@ func cloneNodes(writeConnection bolt.Conn) error {
 }
 
 
-func cloneRelationships(writeConnection bolt.Conn) error {
+func cloneRelationships(connection bolt.Conn) error {
 
 	startTime := time.Now()
 	log.Printf("*** Cloning relationships from the generic hierarchy\n")
 
-	insert := fmt.Sprintf("MATCH (genericNode:`_%s_hierarchy_node`)-[r:hasParent]->(genericParent:`_%s_hierarchy_node`)" +
+	insert := fmt.Sprintf("MATCH (genericNode:`_generic_hierarchy_node_%s`)-[r:hasParent]->(genericParent:`_generic_hierarchy_node_%s`)" +
 		" WITH genericNode, genericParent" +
-		" MATCH (node:`_%s_hierarchy_node_%s` { code:genericNode.code })" +
-		", (parent:`_%s_hierarchy_node_%s` { code:genericParent.code }) " +
-		"MERGE (node)-[r:hasParent]->(parent);", *codeListID, *codeListID, *codeListID, *instanceID, *codeListID, *instanceID)
+		" MATCH (node:`_hierarchy_node_%s_%s` { code:genericNode.code })" +
+		", (parent:`_hierarchy_node_%s_%s` { code:genericParent.code }) " +
+		"MERGE (node)-[r:hasParent]->(parent);", *codeListID, *codeListID, *instanceID, *dimensionName, *instanceID, *dimensionName)
 	log.Println(insert)
 
-	stmtInsert, err := writeConnection.PrepareNeo(insert)
+	stmtInsert, err := connection.PrepareNeo(insert)
 	if err != nil {
 		return err
 	}
@@ -126,17 +129,49 @@ func cloneRelationships(writeConnection bolt.Conn) error {
 	return nil
 }
 
-func setNumberOfChildren(writeConnection bolt.Conn) error {
+func setNumberOfChildren(connection bolt.Conn) error {
 
 	startTime := time.Now()
 	log.Printf("*** Setting number of children on the instance hierarcy\n")
 
-	insert := fmt.Sprintf("MATCH (n:`_%s_hierarchy_node_%s`)" +
-		" with n SET n.numberOfChildren = size((n)<-[:hasParent]-(:`_%s_hierarchy_node_%s`))", *codeListID, *instanceID, *codeListID, *instanceID)
+	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)" +
+		" with n SET n.numberOfChildren = size((n)<-[:hasParent]-(:`_hierarchy_node_%s_%s`))", *instanceID, *dimensionName, *instanceID, *dimensionName)
 
 	log.Println(insert)
 
-	stmtInsert, err := writeConnection.PrepareNeo(insert)
+	stmtInsert, err := connection.PrepareNeo(insert)
+	if err != nil {
+		return err
+	}
+
+	results, err := stmtInsert.ExecNeo(nil)
+	if err != nil {
+		stmtInsert.Close()
+		return err
+	}
+	fmt.Println(results)
+	stmtInsert.Close()
+
+	elapsed := time.Since(startTime)
+	log.Printf("Time elapsed after query %s\n", elapsed)
+
+	return nil
+}
+
+func setHasData(connection bolt.Conn) error {
+
+	// this will eventually need to check that a dimension option has observations related to it
+	// we are defaulting 'hasData' property to true for now while we only deal with datasets with no sparsity
+
+	startTime := time.Now()
+	log.Printf("*** Setting hasData property on the instance hierarcy\n")
+
+	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)" +
+		" with n SET n.hasData = true", *instanceID, *dimensionName)
+
+	log.Println(insert)
+
+	stmtInsert, err := connection.PrepareNeo(insert)
 	if err != nil {
 		return err
 	}

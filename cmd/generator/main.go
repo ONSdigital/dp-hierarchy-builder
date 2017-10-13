@@ -106,7 +106,7 @@ func traverseNodesWriteCypher(nodes []*v4.HierarchicalDimensionOption, buffer *b
 
 		//(cpi1dim1S50602:`_e44de4c4-d39e-4e2f-942b-3ca10584d078_hierarchy_node` { code:"cpi1dim1S50602" })
 		buffer.WriteString(
-			fmt.Sprintf("(%s:`_%s_hierarchy_node` { code:'%s',label:'%s' })", node.Code, *codeListID, node.Code, node.Label))
+			fmt.Sprintf("(%s:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.Code, *codeListID, node.Code, node.Label))
 		if parent != nil {
 			buffer.WriteString(
 				fmt.Sprintf(",\n(%s)-[:hasParent]->(%s)", node.Code, parent.Code))
