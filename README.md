@@ -3,6 +3,31 @@ dp-hierarchy-builder
 
 ### Getting started
 
+#### Manually building an instance hierarchy
+
+* Import the generic hierarchy
+
+`cat cmd/generator/output/hierarchy.cypher | cypher-shell`
+
+* Create the generic hierarchy - please note you will have to replace the value for 'instanceid' at the start
+
+`instanceid="c4-d39e-4e2f-942b-3ca105" && cat cmd/builder/build.cypher | sed "s/12345/$instanceid/g" | cypher-shell`
+
+#### Query the instance hierarchygit s
+
+* get children of a node - note that the "code" field will have to be set in the query
+
+``` 
+MATCH (n:\`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_Aggregate\` {code:"cpi1dim1T120000"})<-[r:hasParent]-(child) RETURN child`
+```
+
+* Query the ancestors (aka breadcrumb) of a node
+
+```
+MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_Aggregate` {code:"cpi1dim1G120500"})-[:hasParent *]->(ancestor) RETURN ancestor
+```
+
+
 ### Configuration
 
 | Environment variable      | Default               | Description
