@@ -2,18 +2,21 @@ package v4
 
 import "strings"
 
+// HierarchicalLabelReader reads a code / label pair from a V4 file and parses hierarchy information from the label.
 type HierarchicalLabelReader struct {
 	dimensionOptionReader DimensionOptionReader
-	rootLabelCode string
+	rootLabelCode         string
 }
 
+// NewHierarchicalLabelReader returns a new reader. The root code is required as no hierarchy info can be determined from level 0 and 1
 func NewHierarchicalLabelReader(reader DimensionOptionReader, rootLabelCode string) *HierarchicalLabelReader {
-	return &HierarchicalLabelReader {
-		dimensionOptionReader:reader,
-		rootLabelCode:rootLabelCode,
+	return &HierarchicalLabelReader{
+		dimensionOptionReader: reader,
+		rootLabelCode:         rootLabelCode,
 	}
 }
 
+// HierarchicalDimensionOption holds the hierarchy related data parsed from the V4 file labels.
 type HierarchicalDimensionOption struct {
 	Level           int
 	Code            string
@@ -23,6 +26,7 @@ type HierarchicalDimensionOption struct {
 	Children        []*HierarchicalDimensionOption
 }
 
+// Read a V4 dimension label and extract hierarchy related data.
 func (reader HierarchicalLabelReader) Read() (*HierarchicalDimensionOption, error) {
 
 	code, label, err := reader.dimensionOptionReader.Read()
@@ -45,7 +49,7 @@ func (reader HierarchicalLabelReader) Read() (*HierarchicalDimensionOption, erro
 		level = len(labelCodeSegments)
 
 		// join the Label Code segments without the last segment to get the parent
-		parentLabelCode = strings.Join(labelCodeSegments[:len(labelCodeSegments) - 1], ".")
+		parentLabelCode = strings.Join(labelCodeSegments[:len(labelCodeSegments)-1], ".")
 
 		// special case for the nodes that sit directly under the root, just set the parent to the root
 		if parentLabelCode == "" {

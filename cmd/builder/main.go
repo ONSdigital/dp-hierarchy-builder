@@ -1,13 +1,15 @@
 package main
 
 import (
+	"flag"
+	"fmt"
 	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
 	"log"
+	"os"
 	"time"
-	"fmt"
-	"flag"
 )
 
+var neoURL = flag.String("neo-url", "bolt://localhost:7687", "")
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
 var instanceID = flag.String("instance-id", "12345", "")
 var dimensionName = flag.String("dimension-name", "Aggregate", "")
@@ -16,32 +18,36 @@ func main() {
 
 	driver := bolt.NewDriver()
 
-	connection, err := driver.OpenNeo("bolt://localhost:7687")
+	connection, err := driver.OpenNeo(*neoURL)
 	if err != nil {
-		return
+		log.Println(err.Error())
+		os.Exit(1)
 	}
 	defer connection.Close()
 
 	createInstanceHierarcyConstraints(connection)
 	if err != nil {
 		log.Println(err.Error())
-		return
+		os.Exit(1)
 	}
 
 	err = cloneNodes(connection)
 	if err != nil {
 		log.Println(err.Error())
+		os.Exit(1)
 	}
 
 	err = cloneRelationships(connection)
 	if err != nil {
 		log.Println(err.Error())
+		os.Exit(1)
 	}
 
 	// mark nodes that have data
 	err = setHasData(connection)
 	if err != nil {
 		log.Println(err.Error())
+		os.Exit(1)
 	}
 
 	// prune branches with no data
@@ -50,6 +56,7 @@ func main() {
 	err = setNumberOfChildren(connection)
 	if err != nil {
 		log.Println(err.Error())
+		os.Exit(1)
 	}
 
 }
@@ -64,7 +71,7 @@ func createInstanceHierarcyConstraints(connection bolt.Conn) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println(results)
+	log.Println(results)
 	stmtInsert.Close()
 
 	return nil
@@ -88,7 +95,7 @@ func cloneNodes(connection bolt.Conn) error {
 		stmtInsert.Close()
 		return err
 	}
-	fmt.Println(results)
+	log.Println(results)
 	stmtInsert.Close()
 
 	elapsed := time.Since(startTime)
@@ -97,16 +104,15 @@ func cloneNodes(connection bolt.Conn) error {
 	return nil
 }
 
-
 func cloneRelationships(connection bolt.Conn) error {
 
 	startTime := time.Now()
 	log.Printf("*** Cloning relationships from the generic hierarchy\n")
 
-	insert := fmt.Sprintf("MATCH (genericNode:`_generic_hierarchy_node_%s`)-[r:hasParent]->(genericParent:`_generic_hierarchy_node_%s`)" +
-		" WITH genericNode, genericParent" +
-		" MATCH (node:`_hierarchy_node_%s_%s` { code:genericNode.code })" +
-		", (parent:`_hierarchy_node_%s_%s` { code:genericParent.code }) " +
+	insert := fmt.Sprintf("MATCH (genericNode:`_generic_hierarchy_node_%s`)-[r:hasParent]->(genericParent:`_generic_hierarchy_node_%s`)"+
+		" WITH genericNode, genericParent"+
+		" MATCH (node:`_hierarchy_node_%s_%s` { code:genericNode.code })"+
+		", (parent:`_hierarchy_node_%s_%s` { code:genericParent.code }) "+
 		"MERGE (node)-[r:hasParent]->(parent);", *codeListID, *codeListID, *instanceID, *dimensionName, *instanceID, *dimensionName)
 	log.Println(insert)
 
@@ -119,7 +125,7 @@ func cloneRelationships(connection bolt.Conn) error {
 		stmtInsert.Close()
 		return err
 	}
-	fmt.Println(results)
+	log.Println(results)
 
 	stmtInsert.Close()
 
@@ -134,7 +140,7 @@ func setNumberOfChildren(connection bolt.Conn) error {
 	startTime := time.Now()
 	log.Printf("*** Setting number of children on the instance hierarcy\n")
 
-	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)" +
+	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)"+
 		" with n SET n.numberOfChildren = size((n)<-[:hasParent]-(:`_hierarchy_node_%s_%s`))", *instanceID, *dimensionName, *instanceID, *dimensionName)
 
 	log.Println(insert)
@@ -149,7 +155,7 @@ func setNumberOfChildren(connection bolt.Conn) error {
 		stmtInsert.Close()
 		return err
 	}
-	fmt.Println(results)
+	log.Println(results)
 	stmtInsert.Close()
 
 	elapsed := time.Since(startTime)
@@ -166,7 +172,7 @@ func setHasData(connection bolt.Conn) error {
 	startTime := time.Now()
 	log.Printf("*** Setting hasData property on the instance hierarcy\n")
 
-	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)" +
+	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)"+
 		" with n SET n.hasData = true", *instanceID, *dimensionName)
 
 	log.Println(insert)
@@ -181,7 +187,7 @@ func setHasData(connection bolt.Conn) error {
 		stmtInsert.Close()
 		return err
 	}
-	fmt.Println(results)
+	log.Println(results)
 	stmtInsert.Close()
 
 	elapsed := time.Since(startTime)

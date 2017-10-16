@@ -1,25 +1,16 @@
 package main
 
 import (
+	"bytes"
 	"encoding/csv"
+	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/ONSdigital/go-ns/log"
-	"os"
 	"github.com/ONSdigital/dp-hierarchy-builder/cmd/generator/v4"
-	"bytes"
+	"github.com/ONSdigital/go-ns/log"
 	"io/ioutil"
-	"encoding/json"
+	"os"
 )
-
-type HierarchyFileEntry struct {
-	codeListID      string
-	codeID          string
-	labelCode       string
-	parentLabelCode string
-	level           int
-	children        []*HierarchyFileEntry
-}
 
 var filepath = flag.String("f", "cmd/generator/coicopcomb-inc-geo.csv", "The path to the import filepath")
 var codeColumn = flag.Int("code", 5, "The column index of the code to parse")
@@ -70,11 +61,11 @@ func main() {
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
-	CreateJsonScript(topLevelNodes)
-	CreateCypherScript(topLevelNodes)
+	createJsonScript(topLevelNodes)
+	createCypherScript(topLevelNodes)
 
 }
-func CreateJsonScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
+func createJsonScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
 
 	json, err := json.MarshalIndent(topLevelNodes, "", "  ")
 	checkErr(err)
@@ -83,9 +74,9 @@ func CreateJsonScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
 	checkErr(err)
 }
 
-func CreateCypherScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
+func createCypherScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
 
-	var buffer *bytes.Buffer = &bytes.Buffer{}
+	var buffer = &bytes.Buffer{}
 
 	buffer.WriteString("CREATE ")
 
@@ -104,7 +95,6 @@ func traverseNodesWriteCypher(nodes []*v4.HierarchicalDimensionOption, buffer *b
 			buffer.WriteString(",\n")
 		}
 
-		//(cpi1dim1S50602:`_e44de4c4-d39e-4e2f-942b-3ca10584d078_hierarchy_node` { code:"cpi1dim1S50602" })
 		buffer.WriteString(
 			fmt.Sprintf("(%s:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.Code, *codeListID, node.Code, node.Label))
 		if parent != nil {

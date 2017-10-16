@@ -5,19 +5,21 @@ import (
 )
 
 // a map to look up if a particular Code has already been read from the file.
-var codesRead map[string]struct{} = make(map[string]struct{})
+var codesRead = make(map[string]struct{})
 
+// DimensionOptionReader reads a V4 file and provides unique dimension options.
 type DimensionOptionReader interface {
 	Read() (string, string, error)
 }
 
-// CSVColumnReader reads unique values from a column in a CSV file.
+// UniqueReader reads unique values from a column in a CSV file.
 type UniqueReader struct {
 	csvReader  csv.Reader
 	codeIndex  int
 	labelIndex int
 }
 
+// NewUniqueReader configures the reader to return values from the given column indexes.
 func NewUniqueReader(csvReader csv.Reader, codeIndex int, labelIndex int) *UniqueReader {
 
 	// discard header row
@@ -36,7 +38,7 @@ func (reader UniqueReader) Read() (string, string, error) {
 	var record []string
 	var err error
 	var code string
-	var codeAlreadySeen bool = true
+	var codeAlreadySeen = true
 
 	for codeAlreadySeen {
 
@@ -48,7 +50,6 @@ func (reader UniqueReader) Read() (string, string, error) {
 
 		code = record[reader.codeIndex]
 		_, codeAlreadySeen = codesRead[code]
-		//fmt.Println(codesRead, codeAlreadySeen)
 	}
 
 	codesRead[code] = struct{}{}
