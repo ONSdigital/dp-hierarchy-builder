@@ -14,4 +14,17 @@ debug: build
 	HUMAN_LOG=1 go run cmd/dp-hierarchy-builder/main.go
 test:
 	go test -cover $(shell go list ./... | grep -v /vendor/)
-.PHONY: build debug test
+
+full:
+	cypher-shell < cmd/generator/output/hierarchy.cypher
+full-clean:
+	cypher-shell < cmd/generator/output/hierarchy-delete.cypher
+instance:
+	[[ -n "$(INSTANCE_ID)" ]]
+	sed "s/12345/$(INSTANCE_ID)/g" < cmd/builder/build.cypher | cypher-shell
+instance-clean:
+	[[ -n "$(INSTANCE_ID)" ]]
+	sed "s/12345/$(INSTANCE_ID)/g" < cmd/builder/build-delete.cypher | cypher-shell
+clean: full-clean instance-clean
+
+.PHONY: build debug test full instance clean full-clean instance-clean
