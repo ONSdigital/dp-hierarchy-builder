@@ -67,10 +67,24 @@ func main() {
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
+	//breadcrumbs := []string{topLevelNodes[0].LabelCode}
+	for _, entry := range topLevelNodes {
+		addBreadcrumbs([]v4.Linky{}, entry)
+	}
+
 	createJsonScript(topLevelNodes)
 	createCypherScript(topLevelNodes)
 
 }
+
+func addBreadcrumbs(breadcrumbs []v4.Linky, entry *v4.HierarchicalDimensionOption) {
+	for _, child := range entry.Children {
+		newBreadcrumbs := append(breadcrumbs, v4.Linky{Label: entry.Label, Code: entry.Code})
+		child.Breadcrumbs = newBreadcrumbs
+		addBreadcrumbs(newBreadcrumbs, child)
+	}
+}
+
 func createJsonScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
 
 	json, err := json.MarshalIndent(topLevelNodes, "", "  ")

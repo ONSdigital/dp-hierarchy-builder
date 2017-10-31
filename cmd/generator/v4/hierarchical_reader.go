@@ -24,6 +24,12 @@ type HierarchicalDimensionOption struct {
 	Label           string
 	ParentLabelCode string
 	Children        []*HierarchicalDimensionOption
+	Breadcrumbs     []Linky
+}
+
+type Linky struct {
+	Code  string
+	Label string
 }
 
 // Read a V4 dimension label and extract hierarchy related data.
@@ -63,5 +69,6 @@ func (reader HierarchicalLabelReader) Read() (*HierarchicalDimensionOption, erro
 		LabelCode:       labelCode,
 		Level:           level,
 		ParentLabelCode: parentLabelCode,
+		Breadcrumbs:     []Linky{},
 	}, nil
 }

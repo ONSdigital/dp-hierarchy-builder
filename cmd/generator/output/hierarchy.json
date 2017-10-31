@@ -8,27 +8,120 @@
     "Children": [
       {
         "Level": 1,
-        "Code": "cpi1dim1T100000",
-        "LabelCode": "10",
-        "Label": "10 Education",
+        "Code": "cpi1dim1T110000",
+        "LabelCode": "11",
+        "Label": "11 Restaurants and hotels",
         "ParentLabelCode": "CPI",
         "Children": [
           {
             "Level": 2,
-            "Code": "cpi1dim1G100000",
-            "LabelCode": "10.0",
-            "Label": "10.0 Education",
-            "ParentLabelCode": "10",
+            "Code": "cpi1dim1G110200",
+            "LabelCode": "11.2",
+            "Label": "11.2 Accommodation services",
+            "ParentLabelCode": "11",
             "Children": [
               {
                 "Level": 3,
-                "Code": "cpi1dim1S100000",
-                "LabelCode": "10.0.0",
-                "Label": "10.0.0 Education",
-                "ParentLabelCode": "10.0",
-                "Children": null
+                "Code": "cpi1dim1S110200",
+                "LabelCode": "11.2.0",
+                "Label": "11.2.0 Accommodation Services",
+                "ParentLabelCode": "11.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T110000",
+                    "Label": "11 Restaurants and hotels"
+                  },
+                  {
+                    "Code": "cpi1dim1G110200",
+                    "Label": "11.2 Accommodation services"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T110000",
+                "Label": "11 Restaurants and hotels"
               }
             ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G110100",
+            "LabelCode": "11.1",
+            "Label": "11.1 Catering services",
+            "ParentLabelCode": "11",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S110102",
+                "LabelCode": "11.1.2",
+                "Label": "11.1.2 Canteens",
+                "ParentLabelCode": "11.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T110000",
+                    "Label": "11 Restaurants and hotels"
+                  },
+                  {
+                    "Code": "cpi1dim1G110100",
+                    "Label": "11.1 Catering services"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S110101",
+                "LabelCode": "11.1.1",
+                "Label": "11.1.1 Restaurants, cafes",
+                "ParentLabelCode": "11.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T110000",
+                    "Label": "11 Restaurants and hotels"
+                  },
+                  {
+                    "Code": "cpi1dim1G110100",
+                    "Label": "11.1 Catering services"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T110000",
+                "Label": "11 Restaurants and hotels"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
           }
         ]
       },
@@ -41,77 +134,64 @@
         "Children": [
           {
             "Level": 2,
-            "Code": "cpi1dim1G120600",
-            "LabelCode": "12.6",
-            "Label": "12.6 Financial services (nec)",
+            "Code": "cpi1dim1G120300",
+            "LabelCode": "12.3",
+            "Label": "12.3 Personal effects (nec)",
             "ParentLabelCode": "12",
             "Children": [
               {
                 "Level": 3,
-                "Code": "cpi1dim1S120602",
-                "LabelCode": "12.6.2",
-                "Label": "12.6.2 Other financial services (nec)",
-                "ParentLabelCode": "12.6",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G120100",
-            "LabelCode": "12.1",
-            "Label": "12.1 Personal care",
-            "ParentLabelCode": "12",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S120101",
-                "LabelCode": "12.1.1",
-                "Label": "12.1.1 Hairdressing and personal grooming establishments",
-                "ParentLabelCode": "12.1",
-                "Children": null
+                "Code": "cpi1dim1S120302",
+                "LabelCode": "12.3.2",
+                "Label": "12.3.2 Other personal effects",
+                "ParentLabelCode": "12.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120300",
+                    "Label": "12.3 Personal effects (nec)"
+                  }
+                ]
               },
               {
                 "Level": 3,
-                "Code": "cpi1dim1S120102",
-                "LabelCode": "12.1.2/3",
-                "Label": "12.1.2/3 Appliances and products for personal care",
-                "ParentLabelCode": "12.1",
-                "Children": null
+                "Code": "cpi1dim1S120301",
+                "LabelCode": "12.3.1",
+                "Label": "12.3.1 Jewellery, clocks and watches",
+                "ParentLabelCode": "12.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120300",
+                    "Label": "12.3 Personal effects (nec)"
+                  }
+                ]
               }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G120400",
-            "LabelCode": "12.4",
-            "Label": "12.4 Social protection",
-            "ParentLabelCode": "12",
-            "Children": [
+            ],
+            "Breadcrumbs": [
               {
-                "Level": 3,
-                "Code": "cpi1dim1S120400",
-                "LabelCode": "12.4.0",
-                "Label": "12.4.0 Social Protection",
-                "ParentLabelCode": "12.4",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G120700",
-            "LabelCode": "12.7",
-            "Label": "12.7 Other services (nec)",
-            "ParentLabelCode": "12",
-            "Children": [
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
               {
-                "Level": 3,
-                "Code": "cpi1dim1S120700",
-                "LabelCode": "12.7.0",
-                "Label": "12.7.0 Other Services Not Elsewhere covered",
-                "ParentLabelCode": "12.7",
-                "Children": null
+                "Code": "cpi1dim1T120000",
+                "Label": "12 Miscellaneous goods and services"
               }
             ]
           },
@@ -128,7 +208,21 @@
                 "LabelCode": "12.5.4",
                 "Label": "12.5.4 Transport insurance",
                 "ParentLabelCode": "12.5",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120500",
+                    "Label": "12.5 Insurance"
+                  }
+                ]
               },
               {
                 "Level": 3,
@@ -136,7 +230,21 @@
                 "LabelCode": "12.5.2",
                 "Label": "12.5.2 House contents insurance",
                 "ParentLabelCode": "12.5",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120500",
+                    "Label": "12.5 Insurance"
+                  }
+                ]
               },
               {
                 "Level": 3,
@@ -144,34 +252,1101 @@
                 "LabelCode": "12.5.3",
                 "Label": "12.5.3 Health insurance",
                 "ParentLabelCode": "12.5",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120500",
+                    "Label": "12.5 Insurance"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T120000",
+                "Label": "12 Miscellaneous goods and services"
               }
             ]
           },
           {
             "Level": 2,
-            "Code": "cpi1dim1G120300",
-            "LabelCode": "12.3",
-            "Label": "12.3 Personal effects (nec)",
+            "Code": "cpi1dim1G120400",
+            "LabelCode": "12.4",
+            "Label": "12.4 Social protection",
             "ParentLabelCode": "12",
             "Children": [
               {
                 "Level": 3,
-                "Code": "cpi1dim1S120301",
-                "LabelCode": "12.3.1",
-                "Label": "12.3.1 Jewellery, clocks and watches",
-                "ParentLabelCode": "12.3",
-                "Children": null
+                "Code": "cpi1dim1S120400",
+                "LabelCode": "12.4.0",
+                "Label": "12.4.0 Social Protection",
+                "ParentLabelCode": "12.4",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120400",
+                    "Label": "12.4 Social protection"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T120000",
+                "Label": "12 Miscellaneous goods and services"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G120700",
+            "LabelCode": "12.7",
+            "Label": "12.7 Other services (nec)",
+            "ParentLabelCode": "12",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S120700",
+                "LabelCode": "12.7.0",
+                "Label": "12.7.0 Other Services Not Elsewhere covered",
+                "ParentLabelCode": "12.7",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120700",
+                    "Label": "12.7 Other services (nec)"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T120000",
+                "Label": "12 Miscellaneous goods and services"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G120100",
+            "LabelCode": "12.1",
+            "Label": "12.1 Personal care",
+            "ParentLabelCode": "12",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S120101",
+                "LabelCode": "12.1.1",
+                "Label": "12.1.1 Hairdressing and personal grooming establishments",
+                "ParentLabelCode": "12.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120100",
+                    "Label": "12.1 Personal care"
+                  }
+                ]
               },
               {
                 "Level": 3,
-                "Code": "cpi1dim1S120302",
-                "LabelCode": "12.3.2",
-                "Label": "12.3.2 Other personal effects",
-                "ParentLabelCode": "12.3",
-                "Children": null
+                "Code": "cpi1dim1S120102",
+                "LabelCode": "12.1.2/3",
+                "Label": "12.1.2/3 Appliances and products for personal care",
+                "ParentLabelCode": "12.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120100",
+                    "Label": "12.1 Personal care"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T120000",
+                "Label": "12 Miscellaneous goods and services"
               }
             ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G120600",
+            "LabelCode": "12.6",
+            "Label": "12.6 Financial services (nec)",
+            "ParentLabelCode": "12",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S120602",
+                "LabelCode": "12.6.2",
+                "Label": "12.6.2 Other financial services (nec)",
+                "ParentLabelCode": "12.6",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T120000",
+                    "Label": "12 Miscellaneous goods and services"
+                  },
+                  {
+                    "Code": "cpi1dim1G120600",
+                    "Label": "12.6 Financial services (nec)"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T120000",
+                "Label": "12 Miscellaneous goods and services"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
+          }
+        ]
+      },
+      {
+        "Level": 1,
+        "Code": "cpi1dim1T10000",
+        "LabelCode": "01",
+        "Label": "01 Food and non-alcoholic beverages",
+        "ParentLabelCode": "CPI",
+        "Children": [
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G10100",
+            "LabelCode": "01.1",
+            "Label": "01.1 Food",
+            "ParentLabelCode": "01",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10104",
+                "LabelCode": "01.1.4",
+                "Label": "01.1.4 Milk, cheese and eggs",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10107",
+                "LabelCode": "01.1.7",
+                "Label": "01.1.7 Vegetables including potatoes and tubers",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10102",
+                "LabelCode": "01.1.2",
+                "Label": "01.1.2 Meat",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10101",
+                "LabelCode": "01.1.1",
+                "Label": "01.1.1 Bread and cereals",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10103",
+                "LabelCode": "01.1.3",
+                "Label": "01.1.3 Fish",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10109",
+                "LabelCode": "01.1.9",
+                "Label": "01.1.9 Food products (nec)",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10108",
+                "LabelCode": "01.1.8",
+                "Label": "01.1.8 Sugar, jam, syrups, chocolate and confectionery",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10105",
+                "LabelCode": "01.1.5",
+                "Label": "01.1.5 Oils and fats",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10106",
+                "LabelCode": "01.1.6",
+                "Label": "01.1.6 Fruit",
+                "ParentLabelCode": "01.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10100",
+                    "Label": "01.1 Food"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T10000",
+                "Label": "01 Food and non-alcoholic beverages"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G10200",
+            "LabelCode": "01.2",
+            "Label": "01.2 Non-alcoholic beverages",
+            "ParentLabelCode": "01",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10201",
+                "LabelCode": "01.2.1",
+                "Label": "01.2.1 Coffee, tea and cocoa",
+                "ParentLabelCode": "01.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10200",
+                    "Label": "01.2 Non-alcoholic beverages"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S10202",
+                "LabelCode": "01.2.2",
+                "Label": "01.2.2 Mineral waters, soft drinks and juices",
+                "ParentLabelCode": "01.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T10000",
+                    "Label": "01 Food and non-alcoholic beverages"
+                  },
+                  {
+                    "Code": "cpi1dim1G10200",
+                    "Label": "01.2 Non-alcoholic beverages"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T10000",
+                "Label": "01 Food and non-alcoholic beverages"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
+          }
+        ]
+      },
+      {
+        "Level": 1,
+        "Code": "cpi1dim1T90000",
+        "LabelCode": "09",
+        "Label": "09 Recreation and culture",
+        "ParentLabelCode": "CPI",
+        "Children": [
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G90600",
+            "LabelCode": "09.6",
+            "Label": "09.6 Package holidays",
+            "ParentLabelCode": "09",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90600",
+                "LabelCode": "09.6.0",
+                "Label": "09.6.0 Package Holidays",
+                "ParentLabelCode": "09.6",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90600",
+                    "Label": "09.6 Package holidays"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T90000",
+                "Label": "09 Recreation and culture"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G90300",
+            "LabelCode": "09.3",
+            "Label": "09.3 Other recreational items, gardens and pets",
+            "ParentLabelCode": "09",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90303",
+                "LabelCode": "09.3.3",
+                "Label": "09.3.3 Gardens, plants and flowers",
+                "ParentLabelCode": "09.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90300",
+                    "Label": "09.3 Other recreational items, gardens and pets"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90301",
+                "LabelCode": "09.3.1",
+                "Label": "09.3.1 Games, toys and hobbies",
+                "ParentLabelCode": "09.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90300",
+                    "Label": "09.3 Other recreational items, gardens and pets"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90302",
+                "LabelCode": "09.3.2",
+                "Label": "09.3.2 Equipment for sport and open-air recreation",
+                "ParentLabelCode": "09.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90300",
+                    "Label": "09.3 Other recreational items, gardens and pets"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90304",
+                "LabelCode": "09.3.4/5",
+                "Label": "09.3.4/5 Pets, related products and services",
+                "ParentLabelCode": "09.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90300",
+                    "Label": "09.3 Other recreational items, gardens and pets"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T90000",
+                "Label": "09 Recreation and culture"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G90500",
+            "LabelCode": "09.5",
+            "Label": "09.5 Books, newspapers and stationery",
+            "ParentLabelCode": "09",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90503",
+                "LabelCode": "09.5.3/4",
+                "Label": "09.5.3/4 Misc. printed matter, stationery, drawing materials",
+                "ParentLabelCode": "09.5",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90500",
+                    "Label": "09.5 Books, newspapers and stationery"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90502",
+                "LabelCode": "09.5.2",
+                "Label": "09.5.2 Newspapers and periodicals",
+                "ParentLabelCode": "09.5",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90500",
+                    "Label": "09.5 Books, newspapers and stationery"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90501",
+                "LabelCode": "09.5.1",
+                "Label": "09.5.1 Books",
+                "ParentLabelCode": "09.5",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90500",
+                    "Label": "09.5 Books, newspapers and stationery"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T90000",
+                "Label": "09 Recreation and culture"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G90100",
+            "LabelCode": "09.1",
+            "Label": "09.1 Audio-visual equipment and related products",
+            "ParentLabelCode": "09",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90104",
+                "LabelCode": "09.1.4",
+                "Label": "09.1.4 Recording media",
+                "ParentLabelCode": "09.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90100",
+                    "Label": "09.1 Audio-visual equipment and related products"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90105",
+                "LabelCode": "09.1.5",
+                "Label": "09.1.5 Repair of audio-visual equipment , related products",
+                "ParentLabelCode": "09.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90100",
+                    "Label": "09.1 Audio-visual equipment and related products"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90101",
+                "LabelCode": "09.1.1",
+                "Label": "09.1.1 Reception and reproduction of sound and pictures",
+                "ParentLabelCode": "09.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90100",
+                    "Label": "09.1 Audio-visual equipment and related products"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90103",
+                "LabelCode": "09.1.3",
+                "Label": "09.1.3 Data processing equipment",
+                "ParentLabelCode": "09.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90100",
+                    "Label": "09.1 Audio-visual equipment and related products"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90102",
+                "LabelCode": "09.1.2",
+                "Label": "09.1.2 Photographic, cinematographic and optical equipment",
+                "ParentLabelCode": "09.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90100",
+                    "Label": "09.1 Audio-visual equipment and related products"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T90000",
+                "Label": "09 Recreation and culture"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G90400",
+            "LabelCode": "09.4",
+            "Label": "09.4 Recreational and cultural services",
+            "ParentLabelCode": "09",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90402",
+                "LabelCode": "09.4.2",
+                "Label": "09.4.2 Cultural services",
+                "ParentLabelCode": "09.4",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90400",
+                    "Label": "09.4 Recreational and cultural services"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S90401",
+                "LabelCode": "09.4.1",
+                "Label": "09.4.1 Recreational and sporting services",
+                "ParentLabelCode": "09.4",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T90000",
+                    "Label": "09 Recreation and culture"
+                  },
+                  {
+                    "Code": "cpi1dim1G90400",
+                    "Label": "09.4 Recreational and cultural services"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T90000",
+                "Label": "09 Recreation and culture"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
+          }
+        ]
+      },
+      {
+        "Level": 1,
+        "Code": "cpi1dim1T30000",
+        "LabelCode": "03",
+        "Label": "03 Clothing and footwear",
+        "ParentLabelCode": "CPI",
+        "Children": [
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G30200",
+            "LabelCode": "03.2",
+            "Label": "03.2 Footwear including repairs",
+            "ParentLabelCode": "03",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S30200",
+                "LabelCode": "03.2.0",
+                "Label": "03.2.0 Footwear including repairs",
+                "ParentLabelCode": "03.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T30000",
+                    "Label": "03 Clothing and footwear"
+                  },
+                  {
+                    "Code": "cpi1dim1G30200",
+                    "Label": "03.2 Footwear including repairs"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T30000",
+                "Label": "03 Clothing and footwear"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G30100",
+            "LabelCode": "03.1",
+            "Label": "03.1 Clothing",
+            "ParentLabelCode": "03",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S30104",
+                "LabelCode": "03.1.4",
+                "Label": "03.1.4 Cleaning, repair and hire of clothing",
+                "ParentLabelCode": "03.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T30000",
+                    "Label": "03 Clothing and footwear"
+                  },
+                  {
+                    "Code": "cpi1dim1G30100",
+                    "Label": "03.1 Clothing"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S30103",
+                "LabelCode": "03.1.3",
+                "Label": "03.1.3 Other clothing and clothing accessories",
+                "ParentLabelCode": "03.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T30000",
+                    "Label": "03 Clothing and footwear"
+                  },
+                  {
+                    "Code": "cpi1dim1G30100",
+                    "Label": "03.1 Clothing"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S30102",
+                "LabelCode": "03.1.2",
+                "Label": "03.1.2 Garments",
+                "ParentLabelCode": "03.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T30000",
+                    "Label": "03 Clothing and footwear"
+                  },
+                  {
+                    "Code": "cpi1dim1G30100",
+                    "Label": "03.1 Clothing"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T30000",
+                "Label": "03 Clothing and footwear"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
           }
         ]
       },
@@ -195,7 +1370,21 @@
                 "LabelCode": "06.1.2/3",
                 "Label": "06.1.2/3 Other medical and therapeutic equipment",
                 "ParentLabelCode": "06.1",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T60000",
+                    "Label": "06 Health"
+                  },
+                  {
+                    "Code": "cpi1dim1G60100",
+                    "Label": "06.1 Medical products, appliances and equipment"
+                  }
+                ]
               },
               {
                 "Level": 3,
@@ -203,32 +1392,31 @@
                 "LabelCode": "06.1.1",
                 "Label": "06.1.1 Pharmaceutical products",
                 "ParentLabelCode": "06.1",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T60000",
+                    "Label": "06 Health"
+                  },
+                  {
+                    "Code": "cpi1dim1G60100",
+                    "Label": "06.1 Medical products, appliances and equipment"
+                  }
+                ]
               }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G60200",
-            "LabelCode": "06.2",
-            "Label": "06.2 Out-patient services",
-            "ParentLabelCode": "06",
-            "Children": [
+            ],
+            "Breadcrumbs": [
               {
-                "Level": 3,
-                "Code": "cpi1dim1S60202",
-                "LabelCode": "06.2.2",
-                "Label": "06.2.2 Dental services",
-                "ParentLabelCode": "06.2",
-                "Children": null
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
               },
               {
-                "Level": 3,
-                "Code": "cpi1dim1S60201",
-                "LabelCode": "06.2.1/3",
-                "Label": "06.2.1/3 Medical services, paramedical services",
-                "ParentLabelCode": "06.2",
-                "Children": null
+                "Code": "cpi1dim1T60000",
+                "Label": "06 Health"
               }
             ]
           },
@@ -245,60 +1433,743 @@
                 "LabelCode": "06.3.0",
                 "Label": "06.3.0 Hospital Services",
                 "ParentLabelCode": "06.3",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T60000",
+                    "Label": "06 Health"
+                  },
+                  {
+                    "Code": "cpi1dim1G60300",
+                    "Label": "06.3 Hospital services"
+                  }
+                ]
               }
-            ]
-          }
-        ]
-      },
-      {
-        "Level": 1,
-        "Code": "cpi1dim1T110000",
-        "LabelCode": "11",
-        "Label": "11 Restaurants and hotels",
-        "ParentLabelCode": "CPI",
-        "Children": [
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G110200",
-            "LabelCode": "11.2",
-            "Label": "11.2 Accommodation services",
-            "ParentLabelCode": "11",
-            "Children": [
+            ],
+            "Breadcrumbs": [
               {
-                "Level": 3,
-                "Code": "cpi1dim1S110200",
-                "LabelCode": "11.2.0",
-                "Label": "11.2.0 Accommodation Services",
-                "ParentLabelCode": "11.2",
-                "Children": null
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T60000",
+                "Label": "06 Health"
               }
             ]
           },
           {
             "Level": 2,
-            "Code": "cpi1dim1G110100",
-            "LabelCode": "11.1",
-            "Label": "11.1 Catering services",
-            "ParentLabelCode": "11",
+            "Code": "cpi1dim1G60200",
+            "LabelCode": "06.2",
+            "Label": "06.2 Out-patient services",
+            "ParentLabelCode": "06",
             "Children": [
               {
                 "Level": 3,
-                "Code": "cpi1dim1S110102",
-                "LabelCode": "11.1.2",
-                "Label": "11.1.2 Canteens",
-                "ParentLabelCode": "11.1",
-                "Children": null
+                "Code": "cpi1dim1S60202",
+                "LabelCode": "06.2.2",
+                "Label": "06.2.2 Dental services",
+                "ParentLabelCode": "06.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T60000",
+                    "Label": "06 Health"
+                  },
+                  {
+                    "Code": "cpi1dim1G60200",
+                    "Label": "06.2 Out-patient services"
+                  }
+                ]
               },
               {
                 "Level": 3,
-                "Code": "cpi1dim1S110101",
-                "LabelCode": "11.1.1",
-                "Label": "11.1.1 Restaurants, cafes",
-                "ParentLabelCode": "11.1",
-                "Children": null
+                "Code": "cpi1dim1S60201",
+                "LabelCode": "06.2.1/3",
+                "Label": "06.2.1/3 Medical services, paramedical services",
+                "ParentLabelCode": "06.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T60000",
+                    "Label": "06 Health"
+                  },
+                  {
+                    "Code": "cpi1dim1G60200",
+                    "Label": "06.2 Out-patient services"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T60000",
+                "Label": "06 Health"
               }
             ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
+          }
+        ]
+      },
+      {
+        "Level": 1,
+        "Code": "cpi1dim1T50000",
+        "LabelCode": "05",
+        "Label": "05 Furniture, household equipment and maintenance",
+        "ParentLabelCode": "CPI",
+        "Children": [
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G50500",
+            "LabelCode": "05.5",
+            "Label": "05.5 Tools and equipment for house and garden",
+            "ParentLabelCode": "05",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50500",
+                "LabelCode": "05.5.0",
+                "Label": "05.5.0 Tools and equipment for House and Garden",
+                "ParentLabelCode": "05.5",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50500",
+                    "Label": "05.5 Tools and equipment for house and garden"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T50000",
+                "Label": "05 Furniture, household equipment and maintenance"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G50400",
+            "LabelCode": "05.4",
+            "Label": "05.4 Glassware, tableware and household utensils",
+            "ParentLabelCode": "05",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50400",
+                "LabelCode": "05.4.0",
+                "Label": "05.4.0 Glassware, Tableware and Household Utensils",
+                "ParentLabelCode": "05.4",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50400",
+                    "Label": "05.4 Glassware, tableware and household utensils"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T50000",
+                "Label": "05 Furniture, household equipment and maintenance"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G50200",
+            "LabelCode": "05.2",
+            "Label": "05.2 Household textiles",
+            "ParentLabelCode": "05",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50200",
+                "LabelCode": "05.2.0",
+                "Label": "05.2.0 Household Textiles",
+                "ParentLabelCode": "05.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50200",
+                    "Label": "05.2 Household textiles"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T50000",
+                "Label": "05 Furniture, household equipment and maintenance"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G50300",
+            "LabelCode": "05.3",
+            "Label": "05.3 Household appliances, fitting and repairs",
+            "ParentLabelCode": "05",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50303",
+                "LabelCode": "05.3.3",
+                "Label": "05.3.3 Repair of household appliances",
+                "ParentLabelCode": "05.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50300",
+                    "Label": "05.3 Household appliances, fitting and repairs"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50301",
+                "LabelCode": "05.3.1/2",
+                "Label": "05.3.1/2 Major appliances and small electric goods",
+                "ParentLabelCode": "05.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50300",
+                    "Label": "05.3 Household appliances, fitting and repairs"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T50000",
+                "Label": "05 Furniture, household equipment and maintenance"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G50600",
+            "LabelCode": "05.6",
+            "Label": "05.6 Goods and services for routine maintenance",
+            "ParentLabelCode": "05",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50601",
+                "LabelCode": "05.6.1",
+                "Label": "05.6.1 Non-durable household goods",
+                "ParentLabelCode": "05.6",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50600",
+                    "Label": "05.6 Goods and services for routine maintenance"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50602",
+                "LabelCode": "05.6.2",
+                "Label": "05.6.2 Domestic services and household services",
+                "ParentLabelCode": "05.6",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50600",
+                    "Label": "05.6 Goods and services for routine maintenance"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T50000",
+                "Label": "05 Furniture, household equipment and maintenance"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G50100",
+            "LabelCode": "05.1",
+            "Label": "05.1 Furniture, furnishings and carpets",
+            "ParentLabelCode": "05",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50102",
+                "LabelCode": "05.1.2",
+                "Label": "05.1.2 Carpets and other floor coverings",
+                "ParentLabelCode": "05.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50100",
+                    "Label": "05.1 Furniture, furnishings and carpets"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S50101",
+                "LabelCode": "05.1.1",
+                "Label": "05.1.1 Furniture and furnishings",
+                "ParentLabelCode": "05.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T50000",
+                    "Label": "05 Furniture, household equipment and maintenance"
+                  },
+                  {
+                    "Code": "cpi1dim1G50100",
+                    "Label": "05.1 Furniture, furnishings and carpets"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T50000",
+                "Label": "05 Furniture, household equipment and maintenance"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
+          }
+        ]
+      },
+      {
+        "Level": 1,
+        "Code": "cpi1dim1T70000",
+        "LabelCode": "07",
+        "Label": "07 Transport",
+        "ParentLabelCode": "CPI",
+        "Children": [
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G70300",
+            "LabelCode": "07.3",
+            "Label": "07.3 Transport services",
+            "ParentLabelCode": "07",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70304",
+                "LabelCode": "07.3.4",
+                "Label": "07.3.4 Passenger transport by sea and inland waterway",
+                "ParentLabelCode": "07.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70300",
+                    "Label": "07.3 Transport services"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70301",
+                "LabelCode": "07.3.1",
+                "Label": "07.3.1 Passenger transport by railway",
+                "ParentLabelCode": "07.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70300",
+                    "Label": "07.3 Transport services"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70302",
+                "LabelCode": "07.3.2",
+                "Label": "07.3.2 Passenger transport by road",
+                "ParentLabelCode": "07.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70300",
+                    "Label": "07.3 Transport services"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70303",
+                "LabelCode": "07.3.3",
+                "Label": "07.3.3 Passenger transport by air",
+                "ParentLabelCode": "07.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70300",
+                    "Label": "07.3 Transport services"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T70000",
+                "Label": "07 Transport"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G70200",
+            "LabelCode": "07.2",
+            "Label": "07.2 Operation of personal transport equipment",
+            "ParentLabelCode": "07",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70202",
+                "LabelCode": "07.2.2",
+                "Label": "07.2.2 Fuels and lubricants",
+                "ParentLabelCode": "07.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70200",
+                    "Label": "07.2 Operation of personal transport equipment"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70204",
+                "LabelCode": "07.2.4",
+                "Label": "07.2.4 Other services",
+                "ParentLabelCode": "07.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70200",
+                    "Label": "07.2 Operation of personal transport equipment"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70203",
+                "LabelCode": "07.2.3",
+                "Label": "07.2.3 Maintenance and repairs",
+                "ParentLabelCode": "07.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70200",
+                    "Label": "07.2 Operation of personal transport equipment"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70201",
+                "LabelCode": "07.2.1",
+                "Label": "07.2.1 Spare parts and accessories",
+                "ParentLabelCode": "07.2",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70200",
+                    "Label": "07.2 Operation of personal transport equipment"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T70000",
+                "Label": "07 Transport"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G70100",
+            "LabelCode": "07.1",
+            "Label": "07.1 Purchase of vehicles",
+            "ParentLabelCode": "07",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70102",
+                "LabelCode": "07.1.2/3",
+                "Label": "07.1.2/3 Motorcycles and bicycles",
+                "ParentLabelCode": "07.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70100",
+                    "Label": "07.1 Purchase of vehicles"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70181",
+                "LabelCode": "07.1.1",
+                "Label": "07.1.1 New Cars",
+                "ParentLabelCode": "07.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70100",
+                    "Label": "07.1 Purchase of vehicles"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S70191",
+                "LabelCode": "07.1.1b",
+                "Label": "07.1.1b Second Hand Cars",
+                "ParentLabelCode": "07.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T70000",
+                    "Label": "07 Transport"
+                  },
+                  {
+                    "Code": "cpi1dim1G70100",
+                    "Label": "07.1 Purchase of vehicles"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T70000",
+                "Label": "07 Transport"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
           }
         ]
       },
@@ -309,14 +2180,6 @@
         "Label": "08 Communication",
         "ParentLabelCode": "CPI",
         "Children": [
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G80200",
-            "LabelCode": "08.2/3",
-            "Label": "08.2/3 Telephone and telefax equip",
-            "ParentLabelCode": "08",
-            "Children": null
-          },
           {
             "Level": 2,
             "Code": "cpi1dim1G80100",
@@ -330,133 +2193,113 @@
                 "LabelCode": "08.1.0",
                 "Label": "08.1.0 Postal Services",
                 "ParentLabelCode": "08.1",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T80000",
+                    "Label": "08 Communication"
+                  },
+                  {
+                    "Code": "cpi1dim1G80100",
+                    "Label": "08.1 Postal services"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T80000",
+                "Label": "08 Communication"
               }
             ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G80200",
+            "LabelCode": "08.2/3",
+            "Label": "08.2/3 Telephone and telefax equip",
+            "ParentLabelCode": "08",
+            "Children": null,
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T80000",
+                "Label": "08 Communication"
+              }
+            ]
+          }
+        ],
+        "Breadcrumbs": [
+          {
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
           }
         ]
       },
       {
         "Level": 1,
-        "Code": "cpi1dim1T70000",
-        "LabelCode": "07",
-        "Label": "07 Transport",
+        "Code": "cpi1dim1T100000",
+        "LabelCode": "10",
+        "Label": "10 Education",
         "ParentLabelCode": "CPI",
         "Children": [
           {
             "Level": 2,
-            "Code": "cpi1dim1G70100",
-            "LabelCode": "07.1",
-            "Label": "07.1 Purchase of vehicles",
-            "ParentLabelCode": "07",
+            "Code": "cpi1dim1G100000",
+            "LabelCode": "10.0",
+            "Label": "10.0 Education",
+            "ParentLabelCode": "10",
             "Children": [
               {
                 "Level": 3,
-                "Code": "cpi1dim1S70181",
-                "LabelCode": "07.1.1",
-                "Label": "07.1.1 New Cars",
-                "ParentLabelCode": "07.1",
-                "Children": null
+                "Code": "cpi1dim1S100000",
+                "LabelCode": "10.0.0",
+                "Label": "10.0.0 Education",
+                "ParentLabelCode": "10.0",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T100000",
+                    "Label": "10 Education"
+                  },
+                  {
+                    "Code": "cpi1dim1G100000",
+                    "Label": "10.0 Education"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
               },
               {
-                "Level": 3,
-                "Code": "cpi1dim1S70191",
-                "LabelCode": "07.1.1b",
-                "Label": "07.1.1b Second Hand Cars",
-                "ParentLabelCode": "07.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70102",
-                "LabelCode": "07.1.2/3",
-                "Label": "07.1.2/3 Motorcycles and bicycles",
-                "ParentLabelCode": "07.1",
-                "Children": null
+                "Code": "cpi1dim1T100000",
+                "Label": "10 Education"
               }
             ]
-          },
+          }
+        ],
+        "Breadcrumbs": [
           {
-            "Level": 2,
-            "Code": "cpi1dim1G70300",
-            "LabelCode": "07.3",
-            "Label": "07.3 Transport services",
-            "ParentLabelCode": "07",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70302",
-                "LabelCode": "07.3.2",
-                "Label": "07.3.2 Passenger transport by road",
-                "ParentLabelCode": "07.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70304",
-                "LabelCode": "07.3.4",
-                "Label": "07.3.4 Passenger transport by sea and inland waterway",
-                "ParentLabelCode": "07.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70301",
-                "LabelCode": "07.3.1",
-                "Label": "07.3.1 Passenger transport by railway",
-                "ParentLabelCode": "07.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70303",
-                "LabelCode": "07.3.3",
-                "Label": "07.3.3 Passenger transport by air",
-                "ParentLabelCode": "07.3",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G70200",
-            "LabelCode": "07.2",
-            "Label": "07.2 Operation of personal transport equipment",
-            "ParentLabelCode": "07",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70204",
-                "LabelCode": "07.2.4",
-                "Label": "07.2.4 Other services",
-                "ParentLabelCode": "07.2",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70203",
-                "LabelCode": "07.2.3",
-                "Label": "07.2.3 Maintenance and repairs",
-                "ParentLabelCode": "07.2",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70201",
-                "LabelCode": "07.2.1",
-                "Label": "07.2.1 Spare parts and accessories",
-                "ParentLabelCode": "07.2",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S70202",
-                "LabelCode": "07.2.2",
-                "Label": "07.2.2 Fuels and lubricants",
-                "ParentLabelCode": "07.2",
-                "Children": null
-              }
-            ]
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
           }
         ]
       },
@@ -476,19 +2319,25 @@
             "Children": [
               {
                 "Level": 3,
-                "Code": "cpi1dim1S20102",
-                "LabelCode": "02.1.2",
-                "Label": "02.1.2 Wine",
-                "ParentLabelCode": "02.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
                 "Code": "cpi1dim1S20103",
                 "LabelCode": "02.1.3",
                 "Label": "02.1.3 Beer",
                 "ParentLabelCode": "02.1",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T20000",
+                    "Label": "02 Alcoholic beverages and tobacco"
+                  },
+                  {
+                    "Code": "cpi1dim1G20100",
+                    "Label": "02.1 Alcoholic beverages"
+                  }
+                ]
               },
               {
                 "Level": 3,
@@ -496,7 +2345,53 @@
                 "LabelCode": "02.1.1",
                 "Label": "02.1.1 Spirits",
                 "ParentLabelCode": "02.1",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T20000",
+                    "Label": "02 Alcoholic beverages and tobacco"
+                  },
+                  {
+                    "Code": "cpi1dim1G20100",
+                    "Label": "02.1 Alcoholic beverages"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S20102",
+                "LabelCode": "02.1.2",
+                "Label": "02.1.2 Wine",
+                "ParentLabelCode": "02.1",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T20000",
+                    "Label": "02 Alcoholic beverages and tobacco"
+                  },
+                  {
+                    "Code": "cpi1dim1G20100",
+                    "Label": "02.1 Alcoholic beverages"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T20000",
+                "Label": "02 Alcoholic beverages and tobacco"
               }
             ]
           },
@@ -513,357 +2408,39 @@
                 "LabelCode": "02.2.0",
                 "Label": "02.2.0 Tobacco",
                 "ParentLabelCode": "02.2",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T20000",
+                    "Label": "02 Alcoholic beverages and tobacco"
+                  },
+                  {
+                    "Code": "cpi1dim1G20200",
+                    "Label": "02.2 Tobacco"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T20000",
+                "Label": "02 Alcoholic beverages and tobacco"
               }
             ]
           }
-        ]
-      },
-      {
-        "Level": 1,
-        "Code": "cpi1dim1T30000",
-        "LabelCode": "03",
-        "Label": "03 Clothing and footwear",
-        "ParentLabelCode": "CPI",
-        "Children": [
+        ],
+        "Breadcrumbs": [
           {
-            "Level": 2,
-            "Code": "cpi1dim1G30100",
-            "LabelCode": "03.1",
-            "Label": "03.1 Clothing",
-            "ParentLabelCode": "03",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S30103",
-                "LabelCode": "03.1.3",
-                "Label": "03.1.3 Other clothing and clothing accessories",
-                "ParentLabelCode": "03.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S30102",
-                "LabelCode": "03.1.2",
-                "Label": "03.1.2 Garments",
-                "ParentLabelCode": "03.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S30104",
-                "LabelCode": "03.1.4",
-                "Label": "03.1.4 Cleaning, repair and hire of clothing",
-                "ParentLabelCode": "03.1",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G30200",
-            "LabelCode": "03.2",
-            "Label": "03.2 Footwear including repairs",
-            "ParentLabelCode": "03",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S30200",
-                "LabelCode": "03.2.0",
-                "Label": "03.2.0 Footwear including repairs",
-                "ParentLabelCode": "03.2",
-                "Children": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "Level": 1,
-        "Code": "cpi1dim1T90000",
-        "LabelCode": "09",
-        "Label": "09 Recreation and culture",
-        "ParentLabelCode": "CPI",
-        "Children": [
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G90300",
-            "LabelCode": "09.3",
-            "Label": "09.3 Other recreational items, gardens and pets",
-            "ParentLabelCode": "09",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90304",
-                "LabelCode": "09.3.4/5",
-                "Label": "09.3.4/5 Pets, related products and services",
-                "ParentLabelCode": "09.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90303",
-                "LabelCode": "09.3.3",
-                "Label": "09.3.3 Gardens, plants and flowers",
-                "ParentLabelCode": "09.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90302",
-                "LabelCode": "09.3.2",
-                "Label": "09.3.2 Equipment for sport and open-air recreation",
-                "ParentLabelCode": "09.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90301",
-                "LabelCode": "09.3.1",
-                "Label": "09.3.1 Games, toys and hobbies",
-                "ParentLabelCode": "09.3",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G90100",
-            "LabelCode": "09.1",
-            "Label": "09.1 Audio-visual equipment and related products",
-            "ParentLabelCode": "09",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90105",
-                "LabelCode": "09.1.5",
-                "Label": "09.1.5 Repair of audio-visual equipment , related products",
-                "ParentLabelCode": "09.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90103",
-                "LabelCode": "09.1.3",
-                "Label": "09.1.3 Data processing equipment",
-                "ParentLabelCode": "09.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90104",
-                "LabelCode": "09.1.4",
-                "Label": "09.1.4 Recording media",
-                "ParentLabelCode": "09.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90101",
-                "LabelCode": "09.1.1",
-                "Label": "09.1.1 Reception and reproduction of sound and pictures",
-                "ParentLabelCode": "09.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90102",
-                "LabelCode": "09.1.2",
-                "Label": "09.1.2 Photographic, cinematographic and optical equipment",
-                "ParentLabelCode": "09.1",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G90600",
-            "LabelCode": "09.6",
-            "Label": "09.6 Package holidays",
-            "ParentLabelCode": "09",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90600",
-                "LabelCode": "09.6.0",
-                "Label": "09.6.0 Package Holidays",
-                "ParentLabelCode": "09.6",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G90500",
-            "LabelCode": "09.5",
-            "Label": "09.5 Books, newspapers and stationery",
-            "ParentLabelCode": "09",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90503",
-                "LabelCode": "09.5.3/4",
-                "Label": "09.5.3/4 Misc. printed matter, stationery, drawing materials",
-                "ParentLabelCode": "09.5",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90501",
-                "LabelCode": "09.5.1",
-                "Label": "09.5.1 Books",
-                "ParentLabelCode": "09.5",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90502",
-                "LabelCode": "09.5.2",
-                "Label": "09.5.2 Newspapers and periodicals",
-                "ParentLabelCode": "09.5",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G90400",
-            "LabelCode": "09.4",
-            "Label": "09.4 Recreational and cultural services",
-            "ParentLabelCode": "09",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90402",
-                "LabelCode": "09.4.2",
-                "Label": "09.4.2 Cultural services",
-                "ParentLabelCode": "09.4",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S90401",
-                "LabelCode": "09.4.1",
-                "Label": "09.4.1 Recreational and sporting services",
-                "ParentLabelCode": "09.4",
-                "Children": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "Level": 1,
-        "Code": "cpi1dim1T10000",
-        "LabelCode": "01",
-        "Label": "01 Food and non-alcoholic beverages",
-        "ParentLabelCode": "CPI",
-        "Children": [
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G10200",
-            "LabelCode": "01.2",
-            "Label": "01.2 Non-alcoholic beverages",
-            "ParentLabelCode": "01",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10202",
-                "LabelCode": "01.2.2",
-                "Label": "01.2.2 Mineral waters, soft drinks and juices",
-                "ParentLabelCode": "01.2",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10201",
-                "LabelCode": "01.2.1",
-                "Label": "01.2.1 Coffee, tea and cocoa",
-                "ParentLabelCode": "01.2",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G10100",
-            "LabelCode": "01.1",
-            "Label": "01.1 Food",
-            "ParentLabelCode": "01",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10102",
-                "LabelCode": "01.1.2",
-                "Label": "01.1.2 Meat",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10107",
-                "LabelCode": "01.1.7",
-                "Label": "01.1.7 Vegetables including potatoes and tubers",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10101",
-                "LabelCode": "01.1.1",
-                "Label": "01.1.1 Bread and cereals",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10109",
-                "LabelCode": "01.1.9",
-                "Label": "01.1.9 Food products (nec)",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10106",
-                "LabelCode": "01.1.6",
-                "Label": "01.1.6 Fruit",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10103",
-                "LabelCode": "01.1.3",
-                "Label": "01.1.3 Fish",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10104",
-                "LabelCode": "01.1.4",
-                "Label": "01.1.4 Milk, cheese and eggs",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10108",
-                "LabelCode": "01.1.8",
-                "Label": "01.1.8 Sugar, jam, syrups, chocolate and confectionery",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S10105",
-                "LabelCode": "01.1.5",
-                "Label": "01.1.5 Oils and fats",
-                "ParentLabelCode": "01.1",
-                "Children": null
-              }
-            ]
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
           }
         ]
       },
@@ -874,6 +2451,132 @@
         "Label": "04 Housing, water, electricity, gas and other fuels",
         "ParentLabelCode": "CPI",
         "Children": [
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G40400",
+            "LabelCode": "04.4",
+            "Label": "04.4 Water supply and misc. services for the dwelling",
+            "ParentLabelCode": "04",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S40403",
+                "LabelCode": "04.4.3",
+                "Label": "04.4.3 Sewerage collection",
+                "ParentLabelCode": "04.4",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40400",
+                    "Label": "04.4 Water supply and misc. services for the dwelling"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S40401",
+                "LabelCode": "04.4.1",
+                "Label": "04.4.1 Water supply",
+                "ParentLabelCode": "04.4",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40400",
+                    "Label": "04.4 Water supply and misc. services for the dwelling"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T40000",
+                "Label": "04 Housing, water, electricity, gas and other fuels"
+              }
+            ]
+          },
+          {
+            "Level": 2,
+            "Code": "cpi1dim1G40300",
+            "LabelCode": "04.3",
+            "Label": "04.3 Regular maintenance and repair of the dwelling",
+            "ParentLabelCode": "04",
+            "Children": [
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S40301",
+                "LabelCode": "04.3.1",
+                "Label": "04.3.1 Materials for maintenance and repair",
+                "ParentLabelCode": "04.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40300",
+                    "Label": "04.3 Regular maintenance and repair of the dwelling"
+                  }
+                ]
+              },
+              {
+                "Level": 3,
+                "Code": "cpi1dim1S40302",
+                "LabelCode": "04.3.2",
+                "Label": "04.3.2 Services for maintenance and repair",
+                "ParentLabelCode": "04.3",
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40300",
+                    "Label": "04.3 Regular maintenance and repair of the dwelling"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T40000",
+                "Label": "04 Housing, water, electricity, gas and other fuels"
+              }
+            ]
+          },
           {
             "Level": 2,
             "Code": "cpi1dim1G40100",
@@ -887,57 +2590,31 @@
                 "LabelCode": "04.1.0",
                 "Label": "04.1.0 Actual rentals for housing",
                 "ParentLabelCode": "04.1",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40100",
+                    "Label": "04.1 Actual rentals for housing"
+                  }
+                ]
               }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G40400",
-            "LabelCode": "04.4",
-            "Label": "04.4 Water supply and misc. services for the dwelling",
-            "ParentLabelCode": "04",
-            "Children": [
+            ],
+            "Breadcrumbs": [
               {
-                "Level": 3,
-                "Code": "cpi1dim1S40401",
-                "LabelCode": "04.4.1",
-                "Label": "04.4.1 Water supply",
-                "ParentLabelCode": "04.4",
-                "Children": null
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
               },
               {
-                "Level": 3,
-                "Code": "cpi1dim1S40403",
-                "LabelCode": "04.4.3",
-                "Label": "04.4.3 Sewerage collection",
-                "ParentLabelCode": "04.4",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G40300",
-            "LabelCode": "04.3",
-            "Label": "04.3 Regular maintenance and repair of the dwelling",
-            "ParentLabelCode": "04",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S40302",
-                "LabelCode": "04.3.2",
-                "Label": "04.3.2 Services for maintenance and repair",
-                "ParentLabelCode": "04.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S40301",
-                "LabelCode": "04.3.1",
-                "Label": "04.3.1 Materials for maintenance and repair",
-                "ParentLabelCode": "04.3",
-                "Children": null
+                "Code": "cpi1dim1T40000",
+                "Label": "04 Housing, water, electricity, gas and other fuels"
               }
             ]
           },
@@ -954,7 +2631,21 @@
                 "LabelCode": "04.5.2",
                 "Label": "04.5.2 Gas",
                 "ParentLabelCode": "04.5",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40500",
+                    "Label": "04.5 Electricity , gas and other fuels"
+                  }
+                ]
               },
               {
                 "Level": 3,
@@ -962,7 +2653,21 @@
                 "LabelCode": "04.5.1",
                 "Label": "04.5.1 Electricity",
                 "ParentLabelCode": "04.5",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40500",
+                    "Label": "04.5 Electricity , gas and other fuels"
+                  }
+                ]
               },
               {
                 "Level": 3,
@@ -970,7 +2675,21 @@
                 "LabelCode": "04.5.4",
                 "Label": "04.5.4 Solid fuels",
                 "ParentLabelCode": "04.5",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40500",
+                    "Label": "04.5 Electricity , gas and other fuels"
+                  }
+                ]
               },
               {
                 "Level": 3,
@@ -978,147 +2697,43 @@
                 "LabelCode": "04.5.3",
                 "Label": "04.5.3 Liquid fuels",
                 "ParentLabelCode": "04.5",
-                "Children": null
+                "Children": null,
+                "Breadcrumbs": [
+                  {
+                    "Code": "cpi1dim1A0",
+                    "Label": "CPI (overall index)"
+                  },
+                  {
+                    "Code": "cpi1dim1T40000",
+                    "Label": "04 Housing, water, electricity, gas and other fuels"
+                  },
+                  {
+                    "Code": "cpi1dim1G40500",
+                    "Label": "04.5 Electricity , gas and other fuels"
+                  }
+                ]
+              }
+            ],
+            "Breadcrumbs": [
+              {
+                "Code": "cpi1dim1A0",
+                "Label": "CPI (overall index)"
+              },
+              {
+                "Code": "cpi1dim1T40000",
+                "Label": "04 Housing, water, electricity, gas and other fuels"
               }
             ]
           }
-        ]
-      },
-      {
-        "Level": 1,
-        "Code": "cpi1dim1T50000",
-        "LabelCode": "05",
-        "Label": "05 Furniture, household equipment and maintenance",
-        "ParentLabelCode": "CPI",
-        "Children": [
+        ],
+        "Breadcrumbs": [
           {
-            "Level": 2,
-            "Code": "cpi1dim1G50100",
-            "LabelCode": "05.1",
-            "Label": "05.1 Furniture, furnishings and carpets",
-            "ParentLabelCode": "05",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50101",
-                "LabelCode": "05.1.1",
-                "Label": "05.1.1 Furniture and furnishings",
-                "ParentLabelCode": "05.1",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50102",
-                "LabelCode": "05.1.2",
-                "Label": "05.1.2 Carpets and other floor coverings",
-                "ParentLabelCode": "05.1",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G50600",
-            "LabelCode": "05.6",
-            "Label": "05.6 Goods and services for routine maintenance",
-            "ParentLabelCode": "05",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50601",
-                "LabelCode": "05.6.1",
-                "Label": "05.6.1 Non-durable household goods",
-                "ParentLabelCode": "05.6",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50602",
-                "LabelCode": "05.6.2",
-                "Label": "05.6.2 Domestic services and household services",
-                "ParentLabelCode": "05.6",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G50500",
-            "LabelCode": "05.5",
-            "Label": "05.5 Tools and equipment for house and garden",
-            "ParentLabelCode": "05",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50500",
-                "LabelCode": "05.5.0",
-                "Label": "05.5.0 Tools and equipment for House and Garden",
-                "ParentLabelCode": "05.5",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G50200",
-            "LabelCode": "05.2",
-            "Label": "05.2 Household textiles",
-            "ParentLabelCode": "05",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50200",
-                "LabelCode": "05.2.0",
-                "Label": "05.2.0 Household Textiles",
-                "ParentLabelCode": "05.2",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G50300",
-            "LabelCode": "05.3",
-            "Label": "05.3 Household appliances, fitting and repairs",
-            "ParentLabelCode": "05",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50301",
-                "LabelCode": "05.3.1/2",
-                "Label": "05.3.1/2 Major appliances and small electric goods",
-                "ParentLabelCode": "05.3",
-                "Children": null
-              },
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50303",
-                "LabelCode": "05.3.3",
-                "Label": "05.3.3 Repair of household appliances",
-                "ParentLabelCode": "05.3",
-                "Children": null
-              }
-            ]
-          },
-          {
-            "Level": 2,
-            "Code": "cpi1dim1G50400",
-            "LabelCode": "05.4",
-            "Label": "05.4 Glassware, tableware and household utensils",
-            "ParentLabelCode": "05",
-            "Children": [
-              {
-                "Level": 3,
-                "Code": "cpi1dim1S50400",
-                "LabelCode": "05.4.0",
-                "Label": "05.4.0 Glassware, Tableware and Household Utensils",
-                "ParentLabelCode": "05.4",
-                "Children": null
-              }
-            ]
+            "Code": "cpi1dim1A0",
+            "Label": "CPI (overall index)"
           }
         ]
       }
-    ]
+    ],
+    "Breadcrumbs": []
   }
 ]
