@@ -3,13 +3,13 @@ dp-hierarchy-builder
 
 ### Getting started
 
-#### Manually building an instance hierarchy
+#### Manually building full and instance hierarchies
 
 * Import the full hierarchy
 
 `make full`
 
-* Create the generic hierarchy - please note you will have to replace the value for 'instanceid' at the start
+* Create the instance hierarchy - please note you will have to replace the value for 'INSTANCE_ID'
 
 `make INSTANCE_ID="c4-d39e-4e2f-942b-3ca105" instance`
 

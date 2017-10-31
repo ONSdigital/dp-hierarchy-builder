@@ -3,10 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
 	"log"
 	"os"
 	"time"
+
+	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
 )
 
 var neoURL = flag.String("neo-url", "bolt://localhost:7687", "")
@@ -14,7 +15,10 @@ var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d0
 var instanceID = flag.String("instance-id", "12345", "")
 var dimensionName = flag.String("dimension-name", "Aggregate", "")
 
+type neoArgMap map[string]interface{}
+
 func main() {
+	flag.Parse()
 
 	driver := bolt.NewDriver()
 
@@ -25,7 +29,7 @@ func main() {
 	}
 	defer connection.Close()
 
-	createInstanceHierarcyConstraints(connection)
+	createInstanceHierarchyConstraints(connection)
 	if err != nil {
 		log.Println(err.Error())
 		os.Exit(1)
@@ -60,7 +64,7 @@ func main() {
 	}
 
 }
-func createInstanceHierarcyConstraints(connection bolt.Conn) error {
+func createInstanceHierarchyConstraints(connection bolt.Conn) error {
 	// CREATE CONSTRAINT ON (d:ASHE07E_Dimension6) ASSERT d.value IS UNIQUE;
 	createConstraint := fmt.Sprintf("CREATE CONSTRAINT ON (n:`_hierarchy_node_%s_%s`) ASSERT n.code IS UNIQUE;", *instanceID, *dimensionName)
 	stmtInsert, err := connection.PrepareNeo(createConstraint)
@@ -82,7 +86,7 @@ func cloneNodes(connection bolt.Conn) error {
 	startTime := time.Now()
 	log.Printf("*** Cloning nodes from the generic hierarchy\n")
 
-	insert := fmt.Sprintf("MATCH (n:`_generic_hierarchy_node_%s`) WITH n MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label });", *codeListID, *instanceID, *dimensionName)
+	insert := fmt.Sprintf("MATCH (n:`_generic_hierarchy_node_%s`) WITH n MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label,codeList:{code_list} });", *codeListID, *instanceID, *dimensionName)
 	log.Println(insert)
 
 	stmtInsert, err := connection.PrepareNeo(insert)
@@ -90,7 +94,7 @@ func cloneNodes(connection bolt.Conn) error {
 		return err
 	}
 
-	results, err := stmtInsert.ExecNeo(nil)
+	results, err := stmtInsert.ExecNeo(neoArgMap{"code_list": *codeListID})
 	if err != nil {
 		stmtInsert.Close()
 		return err
@@ -138,7 +142,7 @@ func cloneRelationships(connection bolt.Conn) error {
 func setNumberOfChildren(connection bolt.Conn) error {
 
 	startTime := time.Now()
-	log.Printf("*** Setting number of children on the instance hierarcy\n")
+	log.Printf("*** Setting number of children on the instance hierarchy\n")
 
 	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)"+
 		" with n SET n.numberOfChildren = size((n)<-[:hasParent]-(:`_hierarchy_node_%s_%s`))", *instanceID, *dimensionName, *instanceID, *dimensionName)
@@ -170,7 +174,7 @@ func setHasData(connection bolt.Conn) error {
 	// we are defaulting 'hasData' property to true for now while we only deal with datasets with no sparsity
 
 	startTime := time.Now()
-	log.Printf("*** Setting hasData property on the instance hierarcy\n")
+	log.Printf("*** Setting hasData property on the instance hierarchy\n")
 
 	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)"+
 		" with n SET n.hasData = true", *instanceID, *dimensionName)

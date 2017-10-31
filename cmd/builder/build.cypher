@@ -1,8 +1,8 @@
 CREATE CONSTRAINT ON (n:`_hierarchy_node_12345_Aggregate`) ASSERT n.code IS UNIQUE;
 
-// Cloning nodes from the generic hierarchy
+// Cloning nodes from the full hierarchy
 MATCH (n:`_generic_hierarchy_node_e44de4c4-d39e-4e2f-942b-3ca10584d078`)
-WITH n MERGE (:`_hierarchy_node_12345_Aggregate` { code:n.code,label:n.label });
+WITH n MERGE (:`_hierarchy_node_12345_Aggregate` { code:n.code,label:n.label,code_list:'e44de4c4-d39e-4e2f-942b-3ca10584d078' });
 
 // Cloning relationships from the generic hierarchy
 MATCH (genericNode:`_generic_hierarchy_node_e44de4c4-d39e-4e2f-942b-3ca10584d078`)
@@ -13,10 +13,10 @@ MATCH (node:`_hierarchy_node_12345_Aggregate` { code:genericNode.code }),
       (parent:`_hierarchy_node_12345_Aggregate` { code:genericParent.code })
 MERGE (node)-[r:hasParent]->(parent);
 
-// Setting hasData property on the instance hierarcy
+// Setting hasData property on the instance hierarchy
 MATCH (n:`_hierarchy_node_12345_Aggregate`)
-with n SET n.hasData = true;
+WITH n SET n.hasData = true;
 
-// Setting number of children on the instance hierarcy
+// Setting number of children on the instance hierarchy
 MATCH (n:`_hierarchy_node_12345_Aggregate`)
-with n SET n.numberOfChildren = size((n)<-[:hasParent]-(:`_hierarchy_node_12345_Aggregate`));
+WITH n SET n.numberOfChildren = size((n)<-[:hasParent]-(:`_hierarchy_node_12345_Aggregate`));

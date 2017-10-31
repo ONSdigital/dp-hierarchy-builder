@@ -34,11 +34,11 @@ func (reader HierarchicalLabelReader) Read() (*HierarchicalDimensionOption, erro
 		return nil, err
 	}
 
-	labelSegments := strings.Split(label, " ")
-	labelCode := labelSegments[0]
-
-	var level int
-	var parentLabelCode string
+	var (
+		labelCode       = strings.SplitN(label, " ", 2)[0]
+		level           int
+		parentLabelCode string
+	)
 
 	if labelCode == reader.rootLabelCode {
 		level = 0

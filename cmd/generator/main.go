@@ -6,10 +6,11 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/ONSdigital/dp-hierarchy-builder/cmd/generator/v4"
-	"github.com/ONSdigital/go-ns/log"
 	"io/ioutil"
 	"os"
+
+	"github.com/ONSdigital/dp-hierarchy-builder/cmd/generator/v4"
+	"github.com/ONSdigital/go-ns/log"
 )
 
 var filepath = flag.String("f", "cmd/generator/coicopcomb-inc-geo.csv", "The path to the import filepath")
@@ -18,8 +19,10 @@ var labelColumn = flag.Int("label", 6, "The column index of the label to parse")
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
 var jsonFile = flag.String("json", "cmd/generator/output/hierarchy.json", "")
 var cypherFile = flag.String("cypher", "cmd/generator/output/hierarchy.cypher", "")
+var cypherDelFile = flag.String("cypher-delete", "cmd/generator/output/hierarchy-delete.cypher", "")
 
 func main() {
+	flag.Parse()
 
 	f, err := os.Open(*filepath)
 	checkErr(err)
@@ -50,6 +53,9 @@ func main() {
 	for _, entry := range labelIDToEntry {
 
 		if entry.ParentLabelCode == "" {
+			if entry.Level != 0 {
+				log.Info("entry no parent, but level>0", log.Data{"entry": entry})
+			}
 			continue
 		}
 
@@ -85,6 +91,11 @@ func createCypherScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
 	buffer.WriteString(";")
 
 	err := ioutil.WriteFile(*cypherFile, buffer.Bytes(), 0644)
+	checkErr(err)
+
+	neoDeleteBuffer := &bytes.Buffer{}
+	neoDeleteBuffer.WriteString(fmt.Sprintf("// Deleting nodes from full hierarchy\nMATCH (n:%s_generic_hierarchy_node_%s%s)\nDETACH DELETE n;\n", "`", *codeListID, "`"))
+	err = ioutil.WriteFile(*cypherDelFile, neoDeleteBuffer.Bytes(), 0644)
 	checkErr(err)
 }
 
