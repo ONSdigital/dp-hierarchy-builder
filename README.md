@@ -18,13 +18,13 @@ dp-hierarchy-builder
 * get children of a node - note that the "code" field will have to be set in the query
 
 ```
-MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_Aggregate` {code:"cpi1dim1T120000"})<-[r:hasParent]-(child) RETURN child`
+MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_aggregate` {code:"cpi1dim1T120000"})<-[r:hasParent]-(child) RETURN child`
 ```
 
 * Query the ancestors (aka breadcrumb) of a node
 
 ```
-MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_Aggregate` {code:"cpi1dim1G120500"})-[:hasParent *]->(ancestor) RETURN ancestor
+MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_aggregate` {code:"cpi1dim1G120500"})-[:hasParent *]->(ancestor) RETURN ancestor
 ```
 
 
