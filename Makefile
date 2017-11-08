@@ -18,9 +18,9 @@ test:
 	go test -cover $(shell go list ./... | grep -v /vendor/)
 
 full:
-	cypher-shell < cmd/generator/output/hierarchy.cypher
+	cypher-shell < cmd/v4-transformer/output/hierarchy.cypher
 full-clean:
-	cypher-shell < cmd/generator/output/hierarchy-delete.cypher
+	cypher-shell < cmd/v4-transformer/output/hierarchy-delete.cypher
 instance-builder:
 	[[ -n "$(INSTANCE_ID)" ]]
 	HUMAN_LOG=1 go run -race cmd/builder/main.go --neo-url="$(DATABASE_ADDRESS)" --instance-id="$(INSTANCE_ID)"
@@ -31,7 +31,7 @@ instance-clean:
 	[[ -n "$(INSTANCE_ID)" ]]
 	sed "s/12345/$(INSTANCE_ID)/g" < cmd/builder/build-delete.cypher | cypher-shell
 generate-full:
-	HUMAN_LOG=1 go run -race cmd/generator/main.go
+	HUMAN_LOG=1 go run -race cmd/v4-transformer/main.go
 clean: full-clean instance-clean
 
 .PHONY: build debug test full instance clean full-clean instance-builder instance-clean generate-full

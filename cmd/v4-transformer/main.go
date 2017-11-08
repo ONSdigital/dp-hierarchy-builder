@@ -1,5 +1,11 @@
 package main
 
+/**
+
+This generator takes a v4 file and infers a hierarchy from the code in the label.
+
+ */
+
 import (
 	"bytes"
 	"encoding/csv"
@@ -19,6 +25,7 @@ var labelColumn = flag.Int("label", 6, "The column index of the label to parse")
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
 var jsonFile = flag.String("json", "cmd/generator/output/hierarchy.json", "")
 var cypherFile = flag.String("cypher", "cmd/generator/output/hierarchy.cypher", "")
+var csvFile = flag.String("csv", "cmd/generator/output/hierarchy.csv", "")
 var cypherDelFile = flag.String("cypher-delete", "cmd/generator/output/hierarchy-delete.cypher", "")
 
 func main() {
@@ -75,6 +82,39 @@ func main() {
 	createJsonScript(topLevelNodes)
 	createCypherScript(topLevelNodes)
 
+	createCSV(topLevelNodes)
+}
+func createCSV(topLevelNodes []*v4.HierarchicalDimensionOption) {
+
+	file, err := os.Create(*csvFile)
+	checkErr(err)
+	defer file.Close()
+
+	csvWriter := csv.NewWriter(file)
+
+	csvWriter.Write([]string{"Codelist", "Code", "Label", "ParentCode"})
+
+	traverseNodesWriteCSV(topLevelNodes, csvWriter, nil)
+
+	checkErr(err)
+}
+
+func traverseNodesWriteCSV(nodes []*v4.HierarchicalDimensionOption, csvWriter *csv.Writer, parent *v4.HierarchicalDimensionOption) {
+	for _, node := range nodes {
+
+		parentCode := ""
+
+		if parent != nil {
+			parentCode = parent.Code
+		}
+
+		csvWriter.Write([]string{*codeListID, node.Code, node.Label, parentCode})
+		csvWriter.Flush()
+
+		if node.Children != nil {
+			traverseNodesWriteCSV(node.Children, csvWriter, node)
+		}
+	}
 }
 
 func addBreadcrumbs(breadcrumbs []v4.Linky, entry *v4.HierarchicalDimensionOption) {
