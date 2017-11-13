@@ -7,9 +7,11 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
  */
 
 import (
+	"bytes"
 	"encoding/csv"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"os"
 
 	"github.com/ONSdigital/go-ns/log"
@@ -38,10 +40,10 @@ func main() {
 
 	var optionReader v4.DimensionOptionReader = v4.NewUniqueReader(*csvr, *codeColumn, *labelColumn)
 
-	reader := v4.NewHierarchicalLabelReader(optionReader, "CPI")
+	reader := v4.NewHierarchicalLabelReader(optionReader, "CPI", *codeListID)
 
-	var labelIDToEntry = make(map[string]*hierarchy.Node)
-	var topLevelNodes []*hierarchy.Node
+	var labelIDToEntry= make(map[string]*hierarchy.Node)
+	var rootNodes []*hierarchy.Node
 
 	for {
 		entry, err := reader.Read()
@@ -52,7 +54,7 @@ func main() {
 		labelIDToEntry[entry.LabelCode] = entry
 
 		if entry.Level == 0 {
-			topLevelNodes = append(topLevelNodes, entry)
+			rootNodes = append(rootNodes, entry)
 		}
 	}
 
@@ -73,16 +75,12 @@ func main() {
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
-	log.Debug("Generating csv", nil)
-	err = hierarchy.CreateCSVFile(topLevelNodes, *csvFile)
-	logErr(err)
-
 	log.Debug("Generating cypher script", nil)
-	err = cypher.CreateCypherFile(topLevelNodes, *cypherFile)
+	err = cypher.CreateCypherFile(rootNodes, *cypherFile)
 	logErr(err)
 
 	log.Debug("Generating cypher deletion script", nil)
-	err = cypher.CreateCypherDeleteFile(topLevelNodes, *cypherDelFile)
+	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
 	logErr(err)
 }
 

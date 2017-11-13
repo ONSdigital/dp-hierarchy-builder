@@ -9,13 +9,15 @@ import (
 type HierarchicalLabelReader struct {
 	dimensionOptionReader DimensionOptionReader
 	rootLabelCode         string
+	codeListID            string
 }
 
 // NewHierarchicalLabelReader returns a new reader. The root code is required as no hierarchy info can be determined from level 0 and 1
-func NewHierarchicalLabelReader(reader DimensionOptionReader, rootLabelCode string) *HierarchicalLabelReader {
+func NewHierarchicalLabelReader(reader DimensionOptionReader, rootLabelCode string, codeListID string) *HierarchicalLabelReader {
 	return &HierarchicalLabelReader{
 		dimensionOptionReader: reader,
 		rootLabelCode:         rootLabelCode,
+		codeListID:            codeListID,
 	}
 }
 
@@ -51,6 +53,7 @@ func (reader HierarchicalLabelReader) Read() (*hierarchy.Node, error) {
 	}
 
 	return &hierarchy.Node{
+		CodeList:reader.codeListID,
 		Code:            code,
 		Label:           label,
 		Level:           level,
