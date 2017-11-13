@@ -3,15 +3,34 @@ dp-hierarchy-builder
 
 ### Getting started
 
+There are a number of utility applications as part of this project (found under the cmd directory):
+
+* v4-transformer - take a V4 file and create a full hierarchy input file / cypher script
+* geography-transformer - take a geography input CSV file and output a full hierarchy input file / cypher script
+* hierarchy-transformer - take a hierarchy input CSV file and generate cypher script
+* builder - builds an instance hierarchy from a full hierarchy
+
 #### Manually building full and instance hierarchies
 
-* Import the full hierarchy
+* Import the full coicop hierarchy for the CPI dataset
 
 `make full`
 
-* Create the instance hierarchy - please note you will have to replace the value for 'INSTANCE_ID'
+* Create an instance hierarchy for the coicop hierarchy - please note you will have to replace the value for 'INSTANCE_ID'
 
 `make INSTANCE_ID="c4-d39e-4e2f-942b-3ca105" instance`
+
+#### transform a hierarchy input file to a cypher script (set FILE as required input file)
+
+`make FILE=./cmd/hierarchy-transformer/hierarchy.csv generate-full`
+
+output is written to ``./cmd/hierarchy-transformer/output`
+
+#### transform a geography input file to a hierarchy input file / cypher script
+
+`make FILE=./cmd/geography-transformer/WD16_LAD16_CTY16_OTH_UK_LU.csv  generate-full-from-geography `
+
+output is written to ``./cmd/geography-transformer/output`
 
 #### Query the instance hierarchy
 

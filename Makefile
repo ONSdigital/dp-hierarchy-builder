@@ -31,7 +31,11 @@ instance-clean:
 	[[ -n "$(INSTANCE_ID)" ]]
 	sed "s/12345/$(INSTANCE_ID)/g" < cmd/builder/build-delete.cypher | cypher-shell
 generate-full:
+	HUMAN_LOG=1 go run -race cmd/hierarchy-transformer/main.go
+generate-full-from-v4:
 	HUMAN_LOG=1 go run -race cmd/v4-transformer/main.go
+generate-full-from-geography:
+	HUMAN_LOG=1 go run -race cmd/geography-transformer/main.go
 clean: full-clean instance-clean
 
 .PHONY: build debug test full instance clean full-clean instance-builder instance-clean generate-full

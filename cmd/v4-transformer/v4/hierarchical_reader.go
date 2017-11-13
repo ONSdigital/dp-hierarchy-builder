@@ -1,6 +1,9 @@
 package v4
 
-import "strings"
+import (
+	"strings"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+)
 
 // HierarchicalLabelReader reads a code / label pair from a V4 file and parses hierarchy information from the label.
 type HierarchicalLabelReader struct {
@@ -16,24 +19,8 @@ func NewHierarchicalLabelReader(reader DimensionOptionReader, rootLabelCode stri
 	}
 }
 
-// HierarchicalDimensionOption holds the hierarchy related data parsed from the V4 file labels.
-type HierarchicalDimensionOption struct {
-	Level           int
-	Code            string
-	LabelCode       string
-	Label           string
-	ParentLabelCode string
-	Children        []*HierarchicalDimensionOption
-	Breadcrumbs     []Linky
-}
-
-type Linky struct {
-	Code  string
-	Label string
-}
-
 // Read a V4 dimension label and extract hierarchy related data.
-func (reader HierarchicalLabelReader) Read() (*HierarchicalDimensionOption, error) {
+func (reader HierarchicalLabelReader) Read() (*hierarchy.Node, error) {
 
 	code, label, err := reader.dimensionOptionReader.Read()
 	if err != nil {
@@ -63,12 +50,11 @@ func (reader HierarchicalLabelReader) Read() (*HierarchicalDimensionOption, erro
 		}
 	}
 
-	return &HierarchicalDimensionOption{
+	return &hierarchy.Node{
 		Code:            code,
 		Label:           label,
-		LabelCode:       labelCode,
 		Level:           level,
+		LabelCode:       labelCode,
 		ParentLabelCode: parentLabelCode,
-		Breadcrumbs:     []Linky{},
 	}, nil
 }

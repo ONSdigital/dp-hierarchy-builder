@@ -15,19 +15,13 @@ import (
 	"os"
 
 	"github.com/ONSdigital/go-ns/log"
+	"strings"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 )
 
-var filepath = flag.String("f", "cmd/hierarchy-transformer/hierarchy.csv", "The path to the import filepath")
+var filepath = flag.String("file", "cmd/hierarchy-transformer/sic07-heirarchy.csv", "The path to the import filepath")
 var cypherFile = flag.String("cypher", "cmd/hierarchy-transformer/output/hierarchy.cypher", "")
 var cypherDelFile = flag.String("cypher-delete", "cmd/hierarchy-transformer/output/hierarchy-delete.cypher", "")
-
-type HierarchicalDimensionOption struct {
-	Code       string
-	CodeList   string
-	Label      string
-	ParentCode string
-	Children   []*HierarchicalDimensionOption
-}
 
 func main() {
 	flag.Parse()
@@ -39,13 +33,14 @@ func main() {
 	defer f.Close()
 
 	// create node map
-	var nodeMap = make(map[string]*HierarchicalDimensionOption, 0)
-	var topLevelNodes []*HierarchicalDimensionOption
+	var nodeMap = make(map[string]*hierarchy.Node, 0)
+	var topLevelNodes []*hierarchy.Node
 
 	// discard header
 	_, err = csvr.Read()
 	checkErr(err)
 
+	// populate a full map of codes to node objects.
 	for err == nil {
 
 		record, err := csvr.Read()
@@ -53,11 +48,14 @@ func main() {
 			break
 		}
 
-		option := &HierarchicalDimensionOption{
-			CodeList:   record[0],
-			Code:       record[1],
-			Label:      record[2],
-			ParentCode: record[3],
+		trimmedLabel := strings.Trim(record[2], " ")
+		escapedLabel := strings.Replace(trimmedLabel, "'", "\\'", -1)
+
+		option := &hierarchy.Node{
+			CodeList:   strings.Trim(record[0], " "),
+			Code:       strings.Trim(record[1], " "),
+			Label:      escapedLabel,
+			ParentCode: strings.Trim(record[3], " "),
 		}
 
 		nodeMap[option.Code] = option
@@ -65,13 +63,11 @@ func main() {
 		log.Debug(fmt.Sprintf("%+v", option), nil)
 
 		if option.ParentCode == "" {
-
-
 			topLevelNodes = append(topLevelNodes, option)
 		}
 	}
 
-	// populate children
+	// populate the children of each node using the map to look up parents
 	for _, entry := range nodeMap {
 
 		if nodeMap[entry.ParentCode] == nil {
@@ -85,7 +81,7 @@ func main() {
 	createCypherScript(topLevelNodes)
 }
 
-func createCypherScript(topLevelNodes []*HierarchicalDimensionOption) {
+func createCypherScript(topLevelNodes []*hierarchy.Node) {
 
 	var buffer = &bytes.Buffer{}
 
@@ -104,18 +100,21 @@ func createCypherScript(topLevelNodes []*HierarchicalDimensionOption) {
 	checkErr(err)
 }
 
-func traverseNodesWriteCypher(nodes []*HierarchicalDimensionOption, buffer *bytes.Buffer, parent *HierarchicalDimensionOption) {
-	for _, node := range nodes {
+func traverseNodesWriteCypher(nodes []*hierarchy.Node, buffer *bytes.Buffer, parent *hierarchy.Node) {
+	for i, node := range nodes {
 
-		if parent != nil {
+		// write the new line unless we are right at the beginning of the file.
+		if parent != nil || i != 0 {
 			buffer.WriteString(",\n")
 		}
 
 		buffer.WriteString(
-			fmt.Sprintf("(%s:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.Code, node.CodeList, node.Code, node.Label))
+			fmt.Sprintf("(`%s`:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.Code, node.CodeList, node.Code, node.Label))
+
+
 		if parent != nil {
 			buffer.WriteString(
-				fmt.Sprintf(",\n(%s)-[:hasParent]->(%s)", node.Code, parent.Code))
+				fmt.Sprintf(",\n(`%s`)-[:hasParent]->(`%s`)", node.Code, parent.Code))
 		}
 
 		if node.Children != nil {

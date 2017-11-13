@@ -9,7 +9,6 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
 import (
 	"bytes"
 	"encoding/csv"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -17,9 +16,10 @@ import (
 
 	"github.com/ONSdigital/go-ns/log"
 	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 )
 
-var filepath = flag.String("f", "cmd/v4-transformer/coicopcomb-inc-geo.csv", "The path to the import filepath")
+var filepath = flag.String("file", "cmd/v4-transformer/coicopcomb-inc-geo.csv", "The path to the import filepath")
 var codeColumn = flag.Int("code", 5, "The column index of the code to parse")
 var labelColumn = flag.Int("label", 6, "The column index of the label to parse")
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
@@ -41,8 +41,8 @@ func main() {
 
 	reader := v4.NewHierarchicalLabelReader(optionReader, "CPI")
 
-	var labelIDToEntry map[string]*v4.HierarchicalDimensionOption = make(map[string]*v4.HierarchicalDimensionOption)
-	var topLevelNodes []*v4.HierarchicalDimensionOption
+	var labelIDToEntry = make(map[string]*hierarchy.Node)
+	var topLevelNodes []*hierarchy.Node
 
 	for {
 		entry, err := reader.Read()
@@ -74,67 +74,25 @@ func main() {
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
-	//breadcrumbs := []string{topLevelNodes[0].LabelCode}
-	for _, entry := range topLevelNodes {
-		addBreadcrumbs([]v4.Linky{}, entry)
-	}
-
-	createJsonScript(topLevelNodes)
 	createCypherScript(topLevelNodes)
 
-	createCSV(topLevelNodes)
+
+	err = createCSV(topLevelNodes)
+	checkErr(err)
 }
-func createCSV(topLevelNodes []*v4.HierarchicalDimensionOption) {
+
+func createCSV(nodes []*hierarchy.Node) error {
+
+	log.Debug("Generating csv", nil)
 
 	file, err := os.Create(*csvFile)
 	checkErr(err)
 	defer file.Close()
 
-	csvWriter := csv.NewWriter(file)
-
-	csvWriter.Write([]string{"Codelist", "Code", "Label", "ParentCode"})
-
-	traverseNodesWriteCSV(topLevelNodes, csvWriter, nil)
-
-	checkErr(err)
+	return hierarchy.CreateCSV(nodes, file)
 }
 
-func traverseNodesWriteCSV(nodes []*v4.HierarchicalDimensionOption, csvWriter *csv.Writer, parent *v4.HierarchicalDimensionOption) {
-	for _, node := range nodes {
-
-		parentCode := ""
-
-		if parent != nil {
-			parentCode = parent.Code
-		}
-
-		csvWriter.Write([]string{*codeListID, node.Code, node.Label, parentCode})
-		csvWriter.Flush()
-
-		if node.Children != nil {
-			traverseNodesWriteCSV(node.Children, csvWriter, node)
-		}
-	}
-}
-
-func addBreadcrumbs(breadcrumbs []v4.Linky, entry *v4.HierarchicalDimensionOption) {
-	for _, child := range entry.Children {
-		newBreadcrumbs := append(breadcrumbs, v4.Linky{Label: entry.Label, Code: entry.Code})
-		child.Breadcrumbs = newBreadcrumbs
-		addBreadcrumbs(newBreadcrumbs, child)
-	}
-}
-
-func createJsonScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
-
-	json, err := json.MarshalIndent(topLevelNodes, "", "  ")
-	checkErr(err)
-
-	err = ioutil.WriteFile(*jsonFile, json, 0644)
-	checkErr(err)
-}
-
-func createCypherScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
+func createCypherScript(topLevelNodes []*hierarchy.Node) {
 
 	var buffer = &bytes.Buffer{}
 
@@ -153,7 +111,7 @@ func createCypherScript(topLevelNodes []*v4.HierarchicalDimensionOption) {
 	checkErr(err)
 }
 
-func traverseNodesWriteCypher(nodes []*v4.HierarchicalDimensionOption, buffer *bytes.Buffer, parent *v4.HierarchicalDimensionOption) {
+func traverseNodesWriteCypher(nodes []*hierarchy.Node, buffer *bytes.Buffer, parent *hierarchy.Node) {
 	for _, node := range nodes {
 
 		if parent != nil {
