@@ -7,16 +7,15 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
  */
 
 import (
-	"bytes"
 	"encoding/csv"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 
 	"github.com/ONSdigital/go-ns/log"
 	"strings"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
 )
 
 var filepath = flag.String("file", "cmd/hierarchy-transformer/sic07-heirarchy.csv", "The path to the import filepath")
@@ -78,54 +77,24 @@ func main() {
 		nodeMap[entry.ParentCode].Children = append(nodeMap[entry.ParentCode].Children, entry)
 	}
 
-	createCypherScript(topLevelNodes)
-}
+	log.Debug("Generating cypher script", nil)
+	err = cypher.CreateCypherFile(topLevelNodes, *cypherFile)
+	logErr(err)
 
-func createCypherScript(topLevelNodes []*hierarchy.Node) {
-
-	var buffer = &bytes.Buffer{}
-
-	buffer.WriteString("CREATE ")
-
-	traverseNodesWriteCypher(topLevelNodes, buffer, nil)
-
-	buffer.WriteString(";")
-
-	err := ioutil.WriteFile(*cypherFile, buffer.Bytes(), 0644)
-	checkErr(err)
-
-	neoDeleteBuffer := &bytes.Buffer{}
-	neoDeleteBuffer.WriteString(fmt.Sprintf("// Deleting nodes from full hierarchy\nMATCH (n:%s_generic_hierarchy_node_%s%s)\nDETACH DELETE n;\n", "`", topLevelNodes[0].CodeList, "`"))
-	err = ioutil.WriteFile(*cypherDelFile, neoDeleteBuffer.Bytes(), 0644)
-	checkErr(err)
-}
-
-func traverseNodesWriteCypher(nodes []*hierarchy.Node, buffer *bytes.Buffer, parent *hierarchy.Node) {
-	for i, node := range nodes {
-
-		// write the new line unless we are right at the beginning of the file.
-		if parent != nil || i != 0 {
-			buffer.WriteString(",\n")
-		}
-
-		buffer.WriteString(
-			fmt.Sprintf("(`%s`:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.Code, node.CodeList, node.Code, node.Label))
-
-
-		if parent != nil {
-			buffer.WriteString(
-				fmt.Sprintf(",\n(`%s`)-[:hasParent]->(`%s`)", node.Code, parent.Code))
-		}
-
-		if node.Children != nil {
-			traverseNodesWriteCypher(node.Children, buffer, node)
-		}
-	}
+	log.Debug("Generating cypher deletion script", nil)
+	err = cypher.CreateCypherDeleteFile(topLevelNodes, *cypherDelFile)
+	logErr(err)
 }
 
 func checkErr(err error) {
 	if err != nil {
 		log.Error(err, nil)
 		os.Exit(1)
+	}
+}
+
+func logErr(err error) {
+	if err != nil {
+		log.Error(err, nil)
 	}
 }

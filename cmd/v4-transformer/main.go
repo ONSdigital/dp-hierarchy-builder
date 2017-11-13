@@ -7,16 +7,15 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
  */
 
 import (
-	"bytes"
 	"encoding/csv"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 
 	"github.com/ONSdigital/go-ns/log"
 	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
 )
 
 var filepath = flag.String("file", "cmd/v4-transformer/coicopcomb-inc-geo.csv", "The path to the import filepath")
@@ -74,66 +73,28 @@ func main() {
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
-	createCypherScript(topLevelNodes)
-
-
-	err = createCSV(topLevelNodes)
-	checkErr(err)
-}
-
-func createCSV(nodes []*hierarchy.Node) error {
-
 	log.Debug("Generating csv", nil)
+	err = hierarchy.CreateCSVFile(topLevelNodes, *csvFile)
+	logErr(err)
 
-	file, err := os.Create(*csvFile)
-	checkErr(err)
-	defer file.Close()
+	log.Debug("Generating cypher script", nil)
+	err = cypher.CreateCypherFile(topLevelNodes, *cypherFile)
+	logErr(err)
 
-	return hierarchy.CreateCSV(nodes, file)
-}
-
-func createCypherScript(topLevelNodes []*hierarchy.Node) {
-
-	var buffer = &bytes.Buffer{}
-
-	buffer.WriteString("CREATE ")
-
-	traverseNodesWriteCypher(topLevelNodes, buffer, nil)
-
-	buffer.WriteString(";")
-
-	err := ioutil.WriteFile(*cypherFile, buffer.Bytes(), 0644)
-	checkErr(err)
-
-	neoDeleteBuffer := &bytes.Buffer{}
-	neoDeleteBuffer.WriteString(fmt.Sprintf("// Deleting nodes from full hierarchy\nMATCH (n:%s_generic_hierarchy_node_%s%s)\nDETACH DELETE n;\n", "`", *codeListID, "`"))
-	err = ioutil.WriteFile(*cypherDelFile, neoDeleteBuffer.Bytes(), 0644)
-	checkErr(err)
-}
-
-func traverseNodesWriteCypher(nodes []*hierarchy.Node, buffer *bytes.Buffer, parent *hierarchy.Node) {
-	for _, node := range nodes {
-
-		if parent != nil {
-			buffer.WriteString(",\n")
-		}
-
-		buffer.WriteString(
-			fmt.Sprintf("(%s:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.Code, *codeListID, node.Code, node.Label))
-		if parent != nil {
-			buffer.WriteString(
-				fmt.Sprintf(",\n(%s)-[:hasParent]->(%s)", node.Code, parent.Code))
-		}
-
-		if node.Children != nil {
-			traverseNodesWriteCypher(node.Children, buffer, node)
-		}
-	}
+	log.Debug("Generating cypher deletion script", nil)
+	err = cypher.CreateCypherDeleteFile(topLevelNodes, *cypherDelFile)
+	logErr(err)
 }
 
 func checkErr(err error) {
 	if err != nil {
 		log.Error(err, nil)
 		os.Exit(1)
+	}
+}
+
+func logErr(err error) {
+	if err != nil {
+		log.Error(err, nil)
 	}
 }

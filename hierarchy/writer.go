@@ -5,7 +5,20 @@ import (
 	"encoding/csv"
 	"github.com/ONSdigital/go-ns/log"
 	"io"
+	"os"
 )
+
+// CreateCSVFile generates hierarchy csv content and writes it to the given file.
+func CreateCSVFile(nodes []*Node, filename string) error {
+
+	file, err := os.Create(filename)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	return CreateCSV(nodes, file)
+}
 
 // CreateCSV creates a CSV representation of the given nodes and writes it to the given file.
 func CreateCSV(nodes []*Node, writer io.Writer) error {
