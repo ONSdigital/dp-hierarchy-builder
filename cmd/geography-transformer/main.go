@@ -83,8 +83,6 @@ func main() {
 						for parentCode == "" {
 							parentCodeIndex = parentCodeIndex + 2
 							parentCode = record[parentCodeIndex]
-
-							log.Debug(fmt.Sprintf("%+v: %+v", code, parentCode), nil)
 						}
 					}
 

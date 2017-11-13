@@ -2,7 +2,6 @@ package cypher
 
 import (
 	"fmt"
-	"github.com/ONSdigital/go-ns/log"
 	"bytes"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"io/ioutil"
@@ -32,31 +31,26 @@ func CreateCypher(nodes []*hierarchy.Node) (string, error) {
 
 	var buffer = &bytes.Buffer{}
 
-	buffer.WriteString("CREATE ")
+	buffer.WriteString(
+		fmt.Sprintf("CREATE CONSTRAINT ON (n:`_generic_hierarchy_node_%s`) ASSERT n.code IS UNIQUE;\n", nodes[0].CodeList))
 
 	traverseNodesWriteCypher(nodes, buffer, nil)
-
-	buffer.WriteString(";")
 
 	return buffer.String(), nil
 }
 
 func traverseNodesWriteCypher(nodes []*hierarchy.Node, buffer *bytes.Buffer, parent *hierarchy.Node) {
-	for i, node := range nodes {
+	for _, node := range nodes {
 
-		log.Debug(fmt.Sprintf("%+v", node), nil)
+		createNode := fmt.Sprintf("CREATE (node:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.CodeList, node.Code, node.Label)
 
-		// write the new line unless we are right at the beginning of the file.
-		if parent != nil || i != 0 {
-			buffer.WriteString(",\n")
-		}
+		if parent == nil {
+			buffer.WriteString(createNode + ";\n")
+		} else {
 
-		buffer.WriteString(
-			fmt.Sprintf("(`%s`:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.Code, node.CodeList, node.Code, node.Label))
-
-		if parent != nil {
+			// inject the create node statement into a larger statement that also creates the relation to its parent
 			buffer.WriteString(
-				fmt.Sprintf(",\n(`%s`)-[:hasParent]->(`%s`)", node.Code, parent.Code))
+				fmt.Sprintf("MATCH (parent:`_generic_hierarchy_node_%s` { code:'%s' })\nWITH parent %s-[:hasParent]->(parent);\n", node.CodeList, parent.Code, createNode))
 		}
 
 		if node.Children != nil {

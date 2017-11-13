@@ -1,9 +1,7 @@
 package hierarchy
 
 import (
-	"fmt"
 	"encoding/csv"
-	"github.com/ONSdigital/go-ns/log"
 	"io"
 	"os"
 )
@@ -47,8 +45,6 @@ func traverseNodesWriteCSV(nodes []*Node, csvWriter *csv.Writer, parent *Node, l
 		csvWriter.Flush()
 
 		if node.Children != nil {
-
-			log.Debug(fmt.Sprintf("%s %+v", level, node.Code), nil)
 			traverseNodesWriteCSV(node.Children, csvWriter, node, level+1)
 		}
 	}

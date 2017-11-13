@@ -59,8 +59,6 @@ func main() {
 
 		nodeMap[option.Code] = option
 
-		log.Debug(fmt.Sprintf("%+v", option), nil)
-
 		if option.ParentCode == "" {
 			topLevelNodes = append(topLevelNodes, option)
 		}

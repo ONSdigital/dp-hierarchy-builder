@@ -1,2353 +1,2354 @@
-CREATE (`A`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'A',label:'AGRICULTURE, FORESTRY AND FISHING' }),
-(`02`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02',label:'Forestry and logging' }),
-(`02`)-[:hasParent]->(`A`),
-(`02.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.2',label:'Logging' }),
-(`02.2`)-[:hasParent]->(`02`),
-(`02.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.20',label:'Logging' }),
-(`02.20`)-[:hasParent]->(`02.2`),
-(`02.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.4',label:'Support services to forestry' }),
-(`02.4`)-[:hasParent]->(`02`),
-(`02.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.40',label:'Support services to forestry' }),
-(`02.40`)-[:hasParent]->(`02.4`),
-(`02.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.1',label:'Silviculture and other forestry activities' }),
-(`02.1`)-[:hasParent]->(`02`),
-(`02.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.10',label:'Silviculture and other forestry activities' }),
-(`02.10`)-[:hasParent]->(`02.1`),
-(`02.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.3',label:'Gathering of wild growing non-wood products' }),
-(`02.3`)-[:hasParent]->(`02`),
-(`02.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.30',label:'Gathering of wild growing non-wood products' }),
-(`02.30`)-[:hasParent]->(`02.3`),
-(`01`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01',label:'Crop and animal production, hunting and related service activities' }),
-(`01`)-[:hasParent]->(`A`),
-(`01.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4',label:'Animal production' }),
-(`01.4`)-[:hasParent]->(`01`),
-(`01.49`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.49',label:'Raising of other animals' }),
-(`01.49`)-[:hasParent]->(`01.4`),
-(`01.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.41',label:'Raising of dairy cattle' }),
-(`01.41`)-[:hasParent]->(`01.4`),
-(`01.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.42',label:'Raising of other cattle and buffaloes' }),
-(`01.42`)-[:hasParent]->(`01.4`),
-(`01.45`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.45',label:'Raising of sheep and goats' }),
-(`01.45`)-[:hasParent]->(`01.4`),
-(`01.44`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.44',label:'Raising of camels and camelids' }),
-(`01.44`)-[:hasParent]->(`01.4`),
-(`01.43`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.43',label:'Raising of horses and other equines' }),
-(`01.43`)-[:hasParent]->(`01.4`),
-(`01.46`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.46',label:'Raising of swine/pigs' }),
-(`01.46`)-[:hasParent]->(`01.4`),
-(`01.47`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.47',label:'Raising of poultry' }),
-(`01.47`)-[:hasParent]->(`01.4`),
-(`01.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.3',label:'Plant propagation' }),
-(`01.3`)-[:hasParent]->(`01`),
-(`01.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.30',label:'Plant propagation' }),
-(`01.30`)-[:hasParent]->(`01.3`),
-(`01.7`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.7',label:'Hunting, trapping and related service activities' }),
-(`01.7`)-[:hasParent]->(`01`),
-(`01.70`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.70',label:'Hunting, trapping and related service activities' }),
-(`01.70`)-[:hasParent]->(`01.7`),
-(`01.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.5',label:'Mixed farming' }),
-(`01.5`)-[:hasParent]->(`01`),
-(`01.50`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.50',label:'Mixed farming' }),
-(`01.50`)-[:hasParent]->(`01.5`),
-(`01.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1',label:'Growing of non-perennial crops' }),
-(`01.1`)-[:hasParent]->(`01`),
-(`01.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.11',label:'Growing of cereals (except rice), leguminous crops and oil seeds' }),
-(`01.11`)-[:hasParent]->(`01.1`),
-(`01.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.14',label:'Growing of sugar cane' }),
-(`01.14`)-[:hasParent]->(`01.1`),
-(`01.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.12',label:'Growing of rice' }),
-(`01.12`)-[:hasParent]->(`01.1`),
-(`01.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.19',label:'Growing of other non-perennial crops' }),
-(`01.19`)-[:hasParent]->(`01.1`),
-(`01.15`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.15',label:'Growing of tobacco' }),
-(`01.15`)-[:hasParent]->(`01.1`),
-(`01.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.13',label:'Growing of vegetables and melons, roots and tubers' }),
-(`01.13`)-[:hasParent]->(`01.1`),
-(`01.16`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.16',label:'Growing of fibre crops' }),
-(`01.16`)-[:hasParent]->(`01.1`),
-(`01.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.6',label:'Support activities to agriculture and post-harvest crop activities' }),
-(`01.6`)-[:hasParent]->(`01`),
-(`01.62`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62',label:'Support activities for animal production' }),
-(`01.62`)-[:hasParent]->(`01.6`),
-(`01.62/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62/1',label:'Farm animal boarding and care' }),
-(`01.62/1`)-[:hasParent]->(`01.62`),
-(`01.62/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62/9',label:'Support activities for animal production (other than farm animal boarding and care) n.e.c.' }),
-(`01.62/9`)-[:hasParent]->(`01.62`),
-(`01.63`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.63',label:'Post-harvest crop activities' }),
-(`01.63`)-[:hasParent]->(`01.6`),
-(`01.64`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.64',label:'Seed processing for propagation' }),
-(`01.64`)-[:hasParent]->(`01.6`),
-(`01.61`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.61',label:'Support activities for crop production' }),
-(`01.61`)-[:hasParent]->(`01.6`),
-(`01.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2',label:'Growing of perennial crops' }),
-(`01.2`)-[:hasParent]->(`01`),
-(`01.25`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.25',label:'Growing of other tree and bush fruits and nuts' }),
-(`01.25`)-[:hasParent]->(`01.2`),
-(`01.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.29',label:'Growing of other perennial crops' }),
-(`01.29`)-[:hasParent]->(`01.2`),
-(`01.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.23',label:'Growing of citrus fruits' }),
-(`01.23`)-[:hasParent]->(`01.2`),
-(`01.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.24',label:'Growing of pome fruits and stone fruits' }),
-(`01.24`)-[:hasParent]->(`01.2`),
-(`01.26`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.26',label:'Growing of oleaginous fruits' }),
-(`01.26`)-[:hasParent]->(`01.2`),
-(`01.27`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.27',label:'Growing of beverage crops' }),
-(`01.27`)-[:hasParent]->(`01.2`),
-(`01.28`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.28',label:'Growing of spices, aromatic, drug and pharmaceutical crops' }),
-(`01.28`)-[:hasParent]->(`01.2`),
-(`01.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.21',label:'Growing of grapes' }),
-(`01.21`)-[:hasParent]->(`01.2`),
-(`01.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.22',label:'Growing of tropical and subtropical fruits' }),
-(`01.22`)-[:hasParent]->(`01.2`),
-(`03`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03',label:'Fishing and aquaculture' }),
-(`03`)-[:hasParent]->(`A`),
-(`03.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.2',label:'Aquaculture' }),
-(`03.2`)-[:hasParent]->(`03`),
-(`03.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.22',label:'Freshwater aquaculture' }),
-(`03.22`)-[:hasParent]->(`03.2`),
-(`03.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.21',label:'Marine aquaculture' }),
-(`03.21`)-[:hasParent]->(`03.2`),
-(`03.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.1',label:'Fishing' }),
-(`03.1`)-[:hasParent]->(`03`),
-(`03.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.11',label:'Marine fishing' }),
-(`03.11`)-[:hasParent]->(`03.1`),
-(`03.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.12',label:'Freshwater fishing' }),
-(`03.12`)-[:hasParent]->(`03.1`),
-(`B`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'B',label:'MINING AND QUARRYING' }),
-(`06`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06',label:'Extraction of crude petroleum and natural gas' }),
-(`06`)-[:hasParent]->(`B`),
-(`06.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.2',label:'Extraction of natural gas' }),
-(`06.2`)-[:hasParent]->(`06`),
-(`06.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.20',label:'Extraction of natural gas' }),
-(`06.20`)-[:hasParent]->(`06.2`),
-(`06.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.1',label:'Extraction of crude petroleum' }),
-(`06.1`)-[:hasParent]->(`06`),
-(`06.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.10',label:'Extraction of crude petroleum' }),
-(`06.10`)-[:hasParent]->(`06.1`),
-(`09`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09',label:'Mining support service activities' }),
-(`09`)-[:hasParent]->(`B`),
-(`09.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.9',label:'Support activities for other mining and quarrying' }),
-(`09.9`)-[:hasParent]->(`09`),
-(`09.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.90',label:'Support activities for other mining and quarrying' }),
-(`09.90`)-[:hasParent]->(`09.9`),
-(`09.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.1',label:'Support activities for petroleum and natural gas extraction' }),
-(`09.1`)-[:hasParent]->(`09`),
-(`09.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.10',label:'Support activities for petroleum and natural gas extraction' }),
-(`09.10`)-[:hasParent]->(`09.1`),
-(`07`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07',label:'Mining of metal ores' }),
-(`07`)-[:hasParent]->(`B`),
-(`07.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.1',label:'Mining of iron ores' }),
-(`07.1`)-[:hasParent]->(`07`),
-(`07.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.10',label:'Mining of iron ores' }),
-(`07.10`)-[:hasParent]->(`07.1`),
-(`07.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.2',label:'Mining of non-ferrous metal ores' }),
-(`07.2`)-[:hasParent]->(`07`),
-(`07.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.21',label:'Mining of uranium and thorium ores' }),
-(`07.21`)-[:hasParent]->(`07.2`),
-(`07.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.29',label:'Mining of other non-ferrous metal ores' }),
-(`07.29`)-[:hasParent]->(`07.2`),
-(`05`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05',label:'Mining of coal and lignite' }),
-(`05`)-[:hasParent]->(`B`),
-(`05.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.2',label:'Mining of lignite' }),
-(`05.2`)-[:hasParent]->(`05`),
-(`05.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.20',label:'Mining of lignite' }),
-(`05.20`)-[:hasParent]->(`05.2`),
-(`05.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.1',label:'Mining of hard coal' }),
-(`05.1`)-[:hasParent]->(`05`),
-(`05.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10',label:'Mining of hard coal' }),
-(`05.10`)-[:hasParent]->(`05.1`),
-(`05.10/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10/2',label:'Mining of hard coal from open cast coal working (surface mining)' }),
-(`05.10/2`)-[:hasParent]->(`05.10`),
-(`05.10/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10/1',label:'Mining of hard coal from deep coal mines (underground mining)' }),
-(`05.10/1`)-[:hasParent]->(`05.10`),
-(`08`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08',label:'Other mining and quarrying' }),
-(`08`)-[:hasParent]->(`B`),
-(`08.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.9',label:'Mining and quarrying n.e.c.' }),
-(`08.9`)-[:hasParent]->(`08`),
-(`08.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.92',label:'Extraction of peat' }),
-(`08.92`)-[:hasParent]->(`08.9`),
-(`08.93`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.93',label:'Extraction of salt' }),
-(`08.93`)-[:hasParent]->(`08.9`),
-(`08.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.99',label:'Other mining and quarrying n.e.c.' }),
-(`08.99`)-[:hasParent]->(`08.9`),
-(`08.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.91',label:'Mining of chemical and fertiliser minerals' }),
-(`08.91`)-[:hasParent]->(`08.9`),
-(`08.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.1',label:'Quarrying of stone, sand and clay' }),
-(`08.1`)-[:hasParent]->(`08`),
-(`08.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.11',label:'Quarrying of ornamental and building stone, limestone, gypsum, chalk and slate' }),
-(`08.11`)-[:hasParent]->(`08.1`),
-(`08.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.12',label:'Operation of gravel and sand pits; mining of clays and kaolin' }),
-(`08.12`)-[:hasParent]->(`08.1`),
-(`C`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C',label:'MANUFACTURING' }),
-(`11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11',label:'Manufacture of beverages' }),
-(`11`)-[:hasParent]->(`C`),
-(`11.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0',label:'Manufacture of beverages' }),
-(`11.0`)-[:hasParent]->(`11`),
-(`11.05`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.05',label:'Manufacture of beer' }),
-(`11.05`)-[:hasParent]->(`11.0`),
-(`11.01`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.01',label:'Distilling, rectifying and blending of spirits' }),
-(`11.01`)-[:hasParent]->(`11.0`),
-(`11.04`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.04',label:'Manufacture of other non-distilled fermented beverages' }),
-(`11.04`)-[:hasParent]->(`11.0`),
-(`11.02`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.02',label:'Manufacture of wine from grape' }),
-(`11.02`)-[:hasParent]->(`11.0`),
-(`11.06`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.06',label:'Manufacture of malt' }),
-(`11.06`)-[:hasParent]->(`11.0`),
-(`11.03`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.03',label:'Manufacture of cider and other fruit wines' }),
-(`11.03`)-[:hasParent]->(`11.0`),
-(`11.07`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.07',label:'Manufacture of soft drinks; production of mineral waters and other bottled waters' }),
-(`11.07`)-[:hasParent]->(`11.0`),
-(`14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14',label:'Manufacture of wearing apparel' }),
-(`14`)-[:hasParent]->(`C`),
-(`14.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.3',label:'Manufacture of knitted and crocheted apparel' }),
-(`14.3`)-[:hasParent]->(`14`),
-(`14.39`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.39',label:'Manufacture of other knitted and crocheted apparel' }),
-(`14.39`)-[:hasParent]->(`14.3`),
-(`14.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.31',label:'Manufacture of knitted and crocheted hosiery' }),
-(`14.31`)-[:hasParent]->(`14.3`),
-(`14.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.2',label:'Manufacture of articles of fur' }),
-(`14.2`)-[:hasParent]->(`14`),
-(`14.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.20',label:'Manufacture of articles of fur' }),
-(`14.20`)-[:hasParent]->(`14.2`),
-(`14.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.1',label:'Manufacture of wearing apparel, except fur apparel' }),
-(`14.1`)-[:hasParent]->(`14`),
-(`14.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.12',label:'Manufacture of workwear' }),
-(`14.12`)-[:hasParent]->(`14.1`),
-(`14.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.19',label:'Manufacture of other wearing apparel and accessories' }),
-(`14.19`)-[:hasParent]->(`14.1`),
-(`14.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.11',label:'Manufacture of leather clothes' }),
-(`14.11`)-[:hasParent]->(`14.1`),
-(`14.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14',label:'Manufacture of underwear' }),
-(`14.14`)-[:hasParent]->(`14.1`),
-(`14.14/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14/1',label:'Manufacture of men\'s underwear' }),
-(`14.14/1`)-[:hasParent]->(`14.14`),
-(`14.14/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14/2',label:'Manufacture of women\'s underwear' }),
-(`14.14/2`)-[:hasParent]->(`14.14`),
-(`14.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13',label:'Manufacture of other outerwear' }),
-(`14.13`)-[:hasParent]->(`14.1`),
-(`14.13/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13/2',label:'Manufacture of women\'s outerwear, other than leather clothes and workwear' }),
-(`14.13/2`)-[:hasParent]->(`14.13`),
-(`14.13/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13/1',label:'Manufacture of men\'s outerwear, other than leather clothes and workwear' }),
-(`14.13/1`)-[:hasParent]->(`14.13`),
-(`30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30',label:'Manufacture of other transport equipment' }),
-(`30`)-[:hasParent]->(`C`),
-(`30.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.4',label:'Manufacture of military fighting vehicles' }),
-(`30.4`)-[:hasParent]->(`30`),
-(`30.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.40',label:'Manufacture of military fighting vehicles' }),
-(`30.40`)-[:hasParent]->(`30.4`),
-(`30.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.9',label:'Manufacture of transport equipment n.e.c.' }),
-(`30.9`)-[:hasParent]->(`30`),
-(`30.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.99',label:'Manufacture of other transport equipment n.e.c.' }),
-(`30.99`)-[:hasParent]->(`30.9`),
-(`30.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.92',label:'Manufacture of bicycles and invalid carriages' }),
-(`30.92`)-[:hasParent]->(`30.9`),
-(`30.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.91',label:'Manufacture of motorcycles' }),
-(`30.91`)-[:hasParent]->(`30.9`),
-(`30.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.1',label:'Building of ships and boats' }),
-(`30.1`)-[:hasParent]->(`30`),
-(`30.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.11',label:'Building of ships and floating structures' }),
-(`30.11`)-[:hasParent]->(`30.1`),
-(`30.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.12',label:'Building of pleasure and sporting boats' }),
-(`30.12`)-[:hasParent]->(`30.1`),
-(`30.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.2',label:'Manufacture of railway locomotives and rolling stock' }),
-(`30.2`)-[:hasParent]->(`30`),
-(`30.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.20',label:'Manufacture of railway locomotives and rolling stock' }),
-(`30.20`)-[:hasParent]->(`30.2`),
-(`30.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.3',label:'Manufacture of air and spacecraft and related machinery' }),
-(`30.3`)-[:hasParent]->(`30`),
-(`30.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.30',label:'Manufacture of air and spacecraft and related machinery' }),
-(`30.30`)-[:hasParent]->(`30.3`),
-(`19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19',label:'Manufacture of coke and refined petroleum products' }),
-(`19`)-[:hasParent]->(`C`),
-(`19.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.2',label:'Manufacture of refined petroleum products' }),
-(`19.2`)-[:hasParent]->(`19`),
-(`19.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20',label:'Manufacture of refined petroleum products' }),
-(`19.20`)-[:hasParent]->(`19.2`),
-(`19.20/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20/9',label:'Other treatment of petroleum products (excluding mineral oil refining/petrochemicals manufacture)' }),
-(`19.20/9`)-[:hasParent]->(`19.20`),
-(`19.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20/1',label:'Mineral oil refining' }),
-(`19.20/1`)-[:hasParent]->(`19.20`),
-(`19.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.1',label:'Manufacture of coke oven products' }),
-(`19.1`)-[:hasParent]->(`19`),
-(`19.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.10',label:'Manufacture of coke oven products' }),
-(`19.10`)-[:hasParent]->(`19.1`),
-(`20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20',label:'Manufacture of chemicals and chemical products' }),
-(`20`)-[:hasParent]->(`C`),
-(`20.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.6',label:'Manufacture of man-made fibres' }),
-(`20.6`)-[:hasParent]->(`20`),
-(`20.60`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.60',label:'Manufacture of man-made fibres' }),
-(`20.60`)-[:hasParent]->(`20.6`),
-(`20.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.3',label:'Manufacture of paints, varnishes and similar coatings, printing ink and mastics' }),
-(`20.3`)-[:hasParent]->(`20`),
-(`20.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30',label:'Manufacture of paints, varnishes and similar coatings, printing ink and mastics' }),
-(`20.30`)-[:hasParent]->(`20.3`),
-(`20.30/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30/2',label:'Manufacture of printing ink' }),
-(`20.30/2`)-[:hasParent]->(`20.30`),
-(`20.30/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30/1',label:'Manufacture of paints, varnishes and similar coatings, mastics and sealants' }),
-(`20.30/1`)-[:hasParent]->(`20.30`),
-(`20.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.5',label:'Manufacture of other chemical products' }),
-(`20.5`)-[:hasParent]->(`20`),
-(`20.53`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.53',label:'Manufacture of essential oils' }),
-(`20.53`)-[:hasParent]->(`20.5`),
-(`20.59`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.59',label:'Manufacture of other chemical products n.e.c.' }),
-(`20.59`)-[:hasParent]->(`20.5`),
-(`20.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.51',label:'Manufacture of explosives' }),
-(`20.51`)-[:hasParent]->(`20.5`),
-(`20.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.52',label:'Manufacture of glues' }),
-(`20.52`)-[:hasParent]->(`20.5`),
-(`20.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.4',label:'Manufacture of soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations' }),
-(`20.4`)-[:hasParent]->(`20`),
-(`20.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41',label:'Manufacture of soap and detergents, cleaning and polishing preparations' }),
-(`20.41`)-[:hasParent]->(`20.4`),
-(`20.41/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41/2',label:'Manufacture of cleaning and polishing preparations' }),
-(`20.41/2`)-[:hasParent]->(`20.41`),
-(`20.41/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41/1',label:'Manufacture of soap and detergents' }),
-(`20.41/1`)-[:hasParent]->(`20.41`),
-(`20.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.42',label:'Manufacture of perfumes and toilet preparations' }),
-(`20.42`)-[:hasParent]->(`20.4`),
-(`20.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.2',label:'Manufacture of pesticides and other agrochemical products' }),
-(`20.2`)-[:hasParent]->(`20`),
-(`20.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.20',label:'Manufacture of pesticides and other agrochemical products' }),
-(`20.20`)-[:hasParent]->(`20.2`),
-(`20.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1',label:'Manufacture of basic chemicals, fertilisers and nitrogen compounds, plastics and synthetic rubber in primary forms' }),
-(`20.1`)-[:hasParent]->(`20`),
-(`20.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.14',label:'Manufacture of other organic basic chemicals' }),
-(`20.14`)-[:hasParent]->(`20.1`),
-(`20.16`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.16',label:'Manufacture of plastics in primary forms' }),
-(`20.16`)-[:hasParent]->(`20.1`),
-(`20.17`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.17',label:'Manufacture of synthetic rubber in primary forms' }),
-(`20.17`)-[:hasParent]->(`20.1`),
-(`20.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.11',label:'Manufacture of industrial gases' }),
-(`20.11`)-[:hasParent]->(`20.1`),
-(`20.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.13',label:'Manufacture of other inorganic basic chemicals' }),
-(`20.13`)-[:hasParent]->(`20.1`),
-(`20.15`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.15',label:'Manufacture of fertilisers and nitrogen compounds' }),
-(`20.15`)-[:hasParent]->(`20.1`),
-(`20.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.12',label:'Manufacture of dyes and pigments' }),
-(`20.12`)-[:hasParent]->(`20.1`),
-(`23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23',label:'Manufacture of other non-metallic mineral products' }),
-(`23`)-[:hasParent]->(`C`),
-(`23.7`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.7',label:'Cutting, shaping and finishing of stone' }),
-(`23.7`)-[:hasParent]->(`23`),
-(`23.70`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.70',label:'Cutting, shaping and finishing of stone' }),
-(`23.70`)-[:hasParent]->(`23.7`),
-(`23.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.9',label:'Manufacture of abrasive products and non-metallic mineral products n.e.c.' }),
-(`23.9`)-[:hasParent]->(`23`),
-(`23.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.99',label:'Manufacture of other non-metallic mineral products n.e.c.' }),
-(`23.99`)-[:hasParent]->(`23.9`),
-(`23.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.91',label:'Production of abrasive products' }),
-(`23.91`)-[:hasParent]->(`23.9`),
-(`23.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.3',label:'Manufacture of clay building materials' }),
-(`23.3`)-[:hasParent]->(`23`),
-(`23.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.31',label:'Manufacture of ceramic tiles and flags' }),
-(`23.31`)-[:hasParent]->(`23.3`),
-(`23.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.32',label:'Manufacture of bricks, tiles and construction products, in baked clay' }),
-(`23.32`)-[:hasParent]->(`23.3`),
-(`23.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.2',label:'Manufacture of refractory products' }),
-(`23.2`)-[:hasParent]->(`23`),
-(`23.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.20',label:'Manufacture of refractory products' }),
-(`23.20`)-[:hasParent]->(`23.2`),
-(`23.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.4',label:'Manufacture of other porcelain and ceramic products' }),
-(`23.4`)-[:hasParent]->(`23`),
-(`23.49`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.49',label:'Manufacture of other ceramic products' }),
-(`23.49`)-[:hasParent]->(`23.4`),
-(`23.43`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.43',label:'Manufacture of ceramic insulators and insulating fittings' }),
-(`23.43`)-[:hasParent]->(`23.4`),
-(`23.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.41',label:'Manufacture of ceramic household and ornamental articles' }),
-(`23.41`)-[:hasParent]->(`23.4`),
-(`23.44`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.44',label:'Manufacture of other technical ceramic products' }),
-(`23.44`)-[:hasParent]->(`23.4`),
-(`23.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.42',label:'Manufacture of ceramic sanitary fixtures' }),
-(`23.42`)-[:hasParent]->(`23.4`),
-(`23.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.1',label:'Manufacture of glass and glass products' }),
-(`23.1`)-[:hasParent]->(`23`),
-(`23.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.14',label:'Manufacture of glass fibres' }),
-(`23.14`)-[:hasParent]->(`23.1`),
-(`23.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.19',label:'Manufacture and processing of other glass, including technical glassware' }),
-(`23.19`)-[:hasParent]->(`23.1`),
-(`23.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.12',label:'Shaping and processing of flat glass' }),
-(`23.12`)-[:hasParent]->(`23.1`),
-(`23.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.11',label:'Manufacture of flat glass' }),
-(`23.11`)-[:hasParent]->(`23.1`),
-(`23.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.13',label:'Manufacture of hollow glass' }),
-(`23.13`)-[:hasParent]->(`23.1`),
-(`23.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6',label:'Manufacture of articles of concrete, cement and plaster' }),
-(`23.6`)-[:hasParent]->(`23`),
-(`23.65`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.65',label:'Manufacture of fibre cement' }),
-(`23.65`)-[:hasParent]->(`23.6`),
-(`23.63`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.63',label:'Manufacture of ready-mixed concrete' }),
-(`23.63`)-[:hasParent]->(`23.6`),
-(`23.61`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.61',label:'Manufacture of concrete products for construction purposes' }),
-(`23.61`)-[:hasParent]->(`23.6`),
-(`23.69`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.69',label:'Manufacture of other articles of concrete, plaster and cement' }),
-(`23.69`)-[:hasParent]->(`23.6`),
-(`23.64`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.64',label:'Manufacture of mortars' }),
-(`23.64`)-[:hasParent]->(`23.6`),
-(`23.62`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.62',label:'Manufacture of plaster products for construction purposes' }),
-(`23.62`)-[:hasParent]->(`23.6`),
-(`23.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.5',label:'Manufacture of cement, lime and plaster' }),
-(`23.5`)-[:hasParent]->(`23`),
-(`23.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.51',label:'Manufacture of cement' }),
-(`23.51`)-[:hasParent]->(`23.5`),
-(`23.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.52',label:'Manufacture of lime and plaster' }),
-(`23.52`)-[:hasParent]->(`23.5`),
-(`12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12',label:'Manufacture of tobacco products' }),
-(`12`)-[:hasParent]->(`C`),
-(`12.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12.0',label:'Manufacture of tobacco products' }),
-(`12.0`)-[:hasParent]->(`12`),
-(`12.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12.00',label:'Manufacture of tobacco products' }),
-(`12.00`)-[:hasParent]->(`12.0`),
-(`24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24',label:'Manufacture of basic metals' }),
-(`24`)-[:hasParent]->(`C`),
-(`24.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4',label:'Manufacture of basic precious and other non-ferrous metals' }),
-(`24.4`)-[:hasParent]->(`24`),
-(`24.46`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.46',label:'Processing of nuclear fuel' }),
-(`24.46`)-[:hasParent]->(`24.4`),
-(`24.44`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.44',label:'Copper production' }),
-(`24.44`)-[:hasParent]->(`24.4`),
-(`24.45`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.45',label:'Other non-ferrous metal production' }),
-(`24.45`)-[:hasParent]->(`24.4`),
-(`24.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.41',label:'Precious metals production' }),
-(`24.41`)-[:hasParent]->(`24.4`),
-(`24.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.42',label:'Aluminium production' }),
-(`24.42`)-[:hasParent]->(`24.4`),
-(`24.43`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.43',label:'Lead, zinc and tin production' }),
-(`24.43`)-[:hasParent]->(`24.4`),
-(`24.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.5',label:'Casting of metals' }),
-(`24.5`)-[:hasParent]->(`24`),
-(`24.54`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.54',label:'Casting of other non-ferrous metals' }),
-(`24.54`)-[:hasParent]->(`24.5`),
-(`24.53`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.53',label:'Casting of light metals' }),
-(`24.53`)-[:hasParent]->(`24.5`),
-(`24.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.51',label:'Casting of iron' }),
-(`24.51`)-[:hasParent]->(`24.5`),
-(`24.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.52',label:'Casting of steel' }),
-(`24.52`)-[:hasParent]->(`24.5`),
-(`24.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.1',label:'Manufacture of basic iron and steel and of ferro-alloys' }),
-(`24.1`)-[:hasParent]->(`24`),
-(`24.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.10',label:'Manufacture of basic iron and steel and of ferro-alloys' }),
-(`24.10`)-[:hasParent]->(`24.1`),
-(`24.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.3',label:'Manufacture of other products of first processing of steel' }),
-(`24.3`)-[:hasParent]->(`24`),
-(`24.33`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.33',label:'Cold forming or folding' }),
-(`24.33`)-[:hasParent]->(`24.3`),
-(`24.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.32',label:'Cold rolling of narrow strip' }),
-(`24.32`)-[:hasParent]->(`24.3`),
-(`24.34`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.34',label:'Cold drawing of wire' }),
-(`24.34`)-[:hasParent]->(`24.3`),
-(`24.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.31',label:'Cold drawing of bars' }),
-(`24.31`)-[:hasParent]->(`24.3`),
-(`24.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.2',label:'Manufacture of tubes, pipes, hollow profiles and related fittings, of steel' }),
-(`24.2`)-[:hasParent]->(`24`),
-(`24.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.20',label:'Manufacture of tubes, pipes, hollow profiles and related fittings, of steel' }),
-(`24.20`)-[:hasParent]->(`24.2`),
-(`28`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28',label:'Manufacture of machinery and equipment n.e.c.' }),
-(`28`)-[:hasParent]->(`C`),
-(`28.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.1',label:'Manufacture of general-purpose machinery' }),
-(`28.1`)-[:hasParent]->(`28`),
-(`28.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.11',label:'Manufacture of engines and turbines, except aircraft, vehicle and cycle engines' }),
-(`28.11`)-[:hasParent]->(`28.1`),
-(`28.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13',label:'Manufacture of other pumps and compressors' }),
-(`28.13`)-[:hasParent]->(`28.1`),
-(`28.13/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13/1',label:'Manufacture of pumps' }),
-(`28.13/1`)-[:hasParent]->(`28.13`),
-(`28.13/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13/2',label:'Manufacture of compressors' }),
-(`28.13/2`)-[:hasParent]->(`28.13`),
-(`28.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.14',label:'Manufacture of other taps and valves' }),
-(`28.14`)-[:hasParent]->(`28.1`),
-(`28.15`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.15',label:'Manufacture of bearings, gears, gearing and driving elements' }),
-(`28.15`)-[:hasParent]->(`28.1`),
-(`28.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.12',label:'Manufacture of fluid power equipment' }),
-(`28.12`)-[:hasParent]->(`28.1`),
-(`28.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.3',label:'Manufacture of agricultural and forestry machinery' }),
-(`28.3`)-[:hasParent]->(`28`),
-(`28.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30',label:'Manufacture of agricultural and forestry machinery' }),
-(`28.30`)-[:hasParent]->(`28.3`),
-(`28.30/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30/2',label:'Manufacture of agricultural and forestry machinery (other than agricultural tractors)' }),
-(`28.30/2`)-[:hasParent]->(`28.30`),
-(`28.30/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30/1',label:'Manufacture of agricultural tractors' }),
-(`28.30/1`)-[:hasParent]->(`28.30`),
-(`28.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9',label:'Manufacture of other special-purpose machinery' }),
-(`28.9`)-[:hasParent]->(`28`),
-(`28.95`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.95',label:'Manufacture of machinery for paper and paperboard production' }),
-(`28.95`)-[:hasParent]->(`28.9`),
-(`28.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.99',label:'Manufacture of other special-purpose machinery n.e.c.' }),
-(`28.99`)-[:hasParent]->(`28.9`),
-(`28.94`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.94',label:'Manufacture of machinery for textile, apparel and leather production' }),
-(`28.94`)-[:hasParent]->(`28.9`),
-(`28.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92',label:'Manufacture of machinery for mining, quarrying and construction' }),
-(`28.92`)-[:hasParent]->(`28.9`),
-(`28.92/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92/1',label:'Manufacture of machinery for mining' }),
-(`28.92/1`)-[:hasParent]->(`28.92`),
-(`28.92/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92/3',label:'Manufacture of equipment for concrete crushing and screening roadworks' }),
-(`28.92/3`)-[:hasParent]->(`28.92`),
-(`28.92/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92/2',label:'Manufacture of earthmoving equipment' }),
-(`28.92/2`)-[:hasParent]->(`28.92`),
-(`28.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.91',label:'Manufacture of machinery for metallurgy' }),
-(`28.91`)-[:hasParent]->(`28.9`),
-(`28.96`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.96',label:'Manufacture of plastics and rubber machinery' }),
-(`28.96`)-[:hasParent]->(`28.9`),
-(`28.93`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.93',label:'Manufacture of machinery for food, beverage and tobacco processing' }),
-(`28.93`)-[:hasParent]->(`28.9`),
-(`28.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.4',label:'Manufacture of metal forming machinery and machine tools' }),
-(`28.4`)-[:hasParent]->(`28`),
-(`28.49`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.49',label:'Manufacture of other machine tools' }),
-(`28.49`)-[:hasParent]->(`28.4`),
-(`28.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.41',label:'Manufacture of metal forming machinery' }),
-(`28.41`)-[:hasParent]->(`28.4`),
-(`28.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2',label:'Manufacture of other general-purpose machinery' }),
-(`28.2`)-[:hasParent]->(`28`),
-(`28.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.22',label:'Manufacture of lifting and handling equipment' }),
-(`28.22`)-[:hasParent]->(`28.2`),
-(`28.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.29',label:'Manufacture of other general-purpose machinery n.e.c.' }),
-(`28.29`)-[:hasParent]->(`28.2`),
-(`28.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.21',label:'Manufacture of ovens, furnaces and furnace burners' }),
-(`28.21`)-[:hasParent]->(`28.2`),
-(`28.25`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.25',label:'Manufacture of non-domestic cooling and ventilation equipment' }),
-(`28.25`)-[:hasParent]->(`28.2`),
-(`28.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.24',label:'Manufacture of power-driven hand tools' }),
-(`28.24`)-[:hasParent]->(`28.2`),
-(`28.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.23',label:'Manufacture of office machinery and equipment (except computers and peripheral equipment)' }),
-(`28.23`)-[:hasParent]->(`28.2`),
-(`33`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33',label:'Repair and installation of machinery and equipment' }),
-(`33`)-[:hasParent]->(`C`),
-(`33.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.2',label:'Installation of industrial machinery and equipment' }),
-(`33.2`)-[:hasParent]->(`33`),
-(`33.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.20',label:'Installation of industrial machinery and equipment' }),
-(`33.20`)-[:hasParent]->(`33.2`),
-(`33.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1',label:'Repair of fabricated metal products, machinery and equipment' }),
-(`33.1`)-[:hasParent]->(`33`),
-(`33.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.19',label:'Repair of other equipment' }),
-(`33.19`)-[:hasParent]->(`33.1`),
-(`33.15`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.15',label:'Repair and maintenance of ships and boats' }),
-(`33.15`)-[:hasParent]->(`33.1`),
-(`33.17`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.17',label:'Repair and maintenance of other transport equipment' }),
-(`33.17`)-[:hasParent]->(`33.1`),
-(`33.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.12',label:'Repair of machinery' }),
-(`33.12`)-[:hasParent]->(`33.1`),
-(`33.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.13',label:'Repair of electronic and optical equipment' }),
-(`33.13`)-[:hasParent]->(`33.1`),
-(`33.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.11',label:'Repair of fabricated metal products' }),
-(`33.11`)-[:hasParent]->(`33.1`),
-(`33.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.14',label:'Repair of electrical equipment' }),
-(`33.14`)-[:hasParent]->(`33.1`),
-(`33.16`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.16',label:'Repair and maintenance of aircraft and spacecraft' }),
-(`33.16`)-[:hasParent]->(`33.1`),
-(`16`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16',label:'Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials' }),
-(`16`)-[:hasParent]->(`C`),
-(`16.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.1',label:'Sawmilling and planing of wood' }),
-(`16.1`)-[:hasParent]->(`16`),
-(`16.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.10',label:'Sawmilling and planing of wood' }),
-(`16.10`)-[:hasParent]->(`16.1`),
-(`16.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.2',label:'Manufacture of products of wood, cork, straw and plaiting materials' }),
-(`16.2`)-[:hasParent]->(`16`),
-(`16.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.23',label:'Manufacture of other builders\' carpentry and joinery' }),
-(`16.23`)-[:hasParent]->(`16.2`),
-(`16.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.24',label:'Manufacture of wooden containers' }),
-(`16.24`)-[:hasParent]->(`16.2`),
-(`16.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.22',label:'Manufacture of assembled parquet floors' }),
-(`16.22`)-[:hasParent]->(`16.2`),
-(`16.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.29',label:'Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials' }),
-(`16.29`)-[:hasParent]->(`16.2`),
-(`16.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.21',label:'Manufacture of veneer sheets and wood-based panels' }),
-(`16.21`)-[:hasParent]->(`16.2`),
-(`15`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15',label:'Manufacture of leather and related products' }),
-(`15`)-[:hasParent]->(`C`),
-(`15.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.2',label:'Manufacture of footwear' }),
-(`15.2`)-[:hasParent]->(`15`),
-(`15.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.20',label:'Manufacture of footwear' }),
-(`15.20`)-[:hasParent]->(`15.2`),
-(`15.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.1',label:'Tanning and dressing of leather; manufacture of luggage, handbags, saddlery and harness; dressing and dyeing of fur' }),
-(`15.1`)-[:hasParent]->(`15`),
-(`15.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.12',label:'Manufacture of luggage, handbags and the like, saddlery and harness' }),
-(`15.12`)-[:hasParent]->(`15.1`),
-(`15.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.11',label:'Tanning and dressing of leather; dressing and dyeing of fur' }),
-(`15.11`)-[:hasParent]->(`15.1`),
-(`18`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18',label:'Printing and reproduction of recorded media' }),
-(`18`)-[:hasParent]->(`C`),
-(`18.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.2',label:'Reproduction of recorded media' }),
-(`18.2`)-[:hasParent]->(`18`),
-(`18.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20',label:'Reproduction of recorded media' }),
-(`18.20`)-[:hasParent]->(`18.2`),
-(`18.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20/1',label:'Reproduction of sound recording' }),
-(`18.20/1`)-[:hasParent]->(`18.20`),
-(`18.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20/2',label:'Reproduction of video recording' }),
-(`18.20/2`)-[:hasParent]->(`18.20`),
-(`18.20/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20/3',label:'Reproduction of computer media' }),
-(`18.20/3`)-[:hasParent]->(`18.20`),
-(`18.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.1',label:'Printing and service activities related to printing' }),
-(`18.1`)-[:hasParent]->(`18`),
-(`18.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12',label:'Other printing' }),
-(`18.12`)-[:hasParent]->(`18.1`),
-(`18.12/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12/1',label:'Manufacture of printed labels' }),
-(`18.12/1`)-[:hasParent]->(`18.12`),
-(`18.12/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12/9',label:'Printing (other than printing of newspapers and printing on labels and tags) n.e.c.' }),
-(`18.12/9`)-[:hasParent]->(`18.12`),
-(`18.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.14',label:'Binding and related services' }),
-(`18.14`)-[:hasParent]->(`18.1`),
-(`18.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.13',label:'Pre-press and pre-media services' }),
-(`18.13`)-[:hasParent]->(`18.1`),
-(`18.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.11',label:'Printing of newspapers' }),
-(`18.11`)-[:hasParent]->(`18.1`),
-(`31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31',label:'Manufacture of furniture' }),
-(`31`)-[:hasParent]->(`C`),
-(`31.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.0',label:'Manufacture of furniture' }),
-(`31.0`)-[:hasParent]->(`31`),
-(`31.03`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.03',label:'Manufacture of mattresses' }),
-(`31.03`)-[:hasParent]->(`31.0`),
-(`31.01`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.01',label:'Manufacture of office and shop furniture' }),
-(`31.01`)-[:hasParent]->(`31.0`),
-(`31.02`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.02',label:'Manufacture of kitchen furniture' }),
-(`31.02`)-[:hasParent]->(`31.0`),
-(`31.09`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.09',label:'Manufacture of other furniture' }),
-(`31.09`)-[:hasParent]->(`31.0`),
-(`17`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17',label:'Manufacture of paper and paper products' }),
-(`17`)-[:hasParent]->(`C`),
-(`17.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.1',label:'Manufacture of pulp, paper and paperboard' }),
-(`17.1`)-[:hasParent]->(`17`),
-(`17.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.12',label:'Manufacture of paper and paperboard' }),
-(`17.12`)-[:hasParent]->(`17.1`),
-(`17.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.11',label:'Manufacture of pulp' }),
-(`17.11`)-[:hasParent]->(`17.1`),
-(`17.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.2',label:'Manufacture of articles of paper and paperboard' }),
-(`17.2`)-[:hasParent]->(`17`),
-(`17.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.23',label:'Manufacture of paper stationery' }),
-(`17.23`)-[:hasParent]->(`17.2`),
-(`17.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.29',label:'Manufacture of other articles of paper and paperboard' }),
-(`17.29`)-[:hasParent]->(`17.2`),
-(`17.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21',label:'Manufacture of corrugated paper and paperboard and of containers of paper and paperboard' }),
-(`17.21`)-[:hasParent]->(`17.2`),
-(`17.21/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21/1',label:'Manufacture of corrugated paper and paperboard; manufacture of sacks and bags of paper' }),
-(`17.21/1`)-[:hasParent]->(`17.21`),
-(`17.21/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21/9',label:'Manufacture of paper and paperboard containers other than sacks and bags' }),
-(`17.21/9`)-[:hasParent]->(`17.21`),
-(`17.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.22',label:'Manufacture of household and sanitary goods and of toilet requisites' }),
-(`17.22`)-[:hasParent]->(`17.2`),
-(`17.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.24',label:'Manufacture of wallpaper' }),
-(`17.24`)-[:hasParent]->(`17.2`),
-(`21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21',label:'Manufacture of basic pharmaceutical products and pharmaceutical preparations' }),
-(`21`)-[:hasParent]->(`C`),
-(`21.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.2',label:'Manufacture of pharmaceutical preparations' }),
-(`21.2`)-[:hasParent]->(`21`),
-(`21.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.20',label:'Manufacture of pharmaceutical preparations' }),
-(`21.20`)-[:hasParent]->(`21.2`),
-(`21.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.1',label:'Manufacture of basic pharmaceutical products' }),
-(`21.1`)-[:hasParent]->(`21`),
-(`21.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.10',label:'Manufacture of basic pharmaceutical products' }),
-(`21.10`)-[:hasParent]->(`21.1`),
-(`32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32',label:'Other manufacturing' }),
-(`32`)-[:hasParent]->(`C`),
-(`32.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.4',label:'Manufacture of games and toys' }),
-(`32.4`)-[:hasParent]->(`32`),
-(`32.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40',label:'Manufacture of games and toys' }),
-(`32.40`)-[:hasParent]->(`32.4`),
-(`32.40/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40/9',label:'Manufacture of games and toys (other than professional and arcade games and toys) n.e.c.' }),
-(`32.40/9`)-[:hasParent]->(`32.40`),
-(`32.40/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40/1',label:'Manufacture of professional and arcade games and toys' }),
-(`32.40/1`)-[:hasParent]->(`32.40`),
-(`32.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.9',label:'Other manufacturing n.e.c.' }),
-(`32.9`)-[:hasParent]->(`32`),
-(`32.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.99',label:'Other manufacturing n.e.c.' }),
-(`32.99`)-[:hasParent]->(`32.9`),
-(`32.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.91',label:'Manufacture of brooms and brushes' }),
-(`32.91`)-[:hasParent]->(`32.9`),
-(`32.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.2',label:'Manufacture of musical instruments' }),
-(`32.2`)-[:hasParent]->(`32`),
-(`32.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.20',label:'Manufacture of musical instruments' }),
-(`32.20`)-[:hasParent]->(`32.2`),
-(`32.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.5',label:'Manufacture of medical and dental instruments and supplies' }),
-(`32.5`)-[:hasParent]->(`32`),
-(`32.50`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.50',label:'Manufacture of medical and dental instruments and supplies' }),
-(`32.50`)-[:hasParent]->(`32.5`),
-(`32.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.3',label:'Manufacture of sports goods' }),
-(`32.3`)-[:hasParent]->(`32`),
-(`32.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.30',label:'Manufacture of sports goods' }),
-(`32.30`)-[:hasParent]->(`32.3`),
-(`32.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.1',label:'Manufacture of jewellery, bijouterie and related articles' }),
-(`32.1`)-[:hasParent]->(`32`),
-(`32.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.11',label:'Striking of coins' }),
-(`32.11`)-[:hasParent]->(`32.1`),
-(`32.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.12',label:'Manufacture of jewellery and related articles' }),
-(`32.12`)-[:hasParent]->(`32.1`),
-(`32.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.13',label:'Manufacture of imitation jewellery and related articles' }),
-(`32.13`)-[:hasParent]->(`32.1`),
-(`10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10',label:'Manufacture of food products' }),
-(`10`)-[:hasParent]->(`C`),
-(`10.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.9',label:'Manufacture of prepared animal feeds' }),
-(`10.9`)-[:hasParent]->(`10`),
-(`10.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.91',label:'Manufacture of prepared feeds for farm animals' }),
-(`10.91`)-[:hasParent]->(`10.9`),
-(`10.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.92',label:'Manufacture of prepared pet foods' }),
-(`10.92`)-[:hasParent]->(`10.9`),
-(`10.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.5',label:'Manufacture of dairy products' }),
-(`10.5`)-[:hasParent]->(`10`),
-(`10.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51',label:'Operation of dairies and cheese making' }),
-(`10.51`)-[:hasParent]->(`10.5`),
-(`10.51/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51/1',label:'Liquid milk and cream production' }),
-(`10.51/1`)-[:hasParent]->(`10.51`),
-(`10.51/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51/9',label:'Manufacture of milk products (other than liquid milk and cream, butter, cheese) n.e.c.' }),
-(`10.51/9`)-[:hasParent]->(`10.51`),
-(`10.51/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51/2',label:'Butter and cheese production' }),
-(`10.51/2`)-[:hasParent]->(`10.51`),
-(`10.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.52',label:'Manufacture of ice cream' }),
-(`10.52`)-[:hasParent]->(`10.5`),
-(`10.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.1',label:'Processing and preserving of meat and production of meat products' }),
-(`10.1`)-[:hasParent]->(`10`),
-(`10.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.12',label:'Processing and preserving of poultry meat' }),
-(`10.12`)-[:hasParent]->(`10.1`),
-(`10.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.11',label:'Processing and preserving of meat' }),
-(`10.11`)-[:hasParent]->(`10.1`),
-(`10.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.13',label:'Production of meat and poultry meat products' }),
-(`10.13`)-[:hasParent]->(`10.1`),
-(`10.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.6',label:'Manufacture of grain mill products, starches and starch products' }),
-(`10.6`)-[:hasParent]->(`10`),
-(`10.61`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61',label:'Manufacture of grain mill products' }),
-(`10.61`)-[:hasParent]->(`10.6`),
-(`10.61/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61/1',label:'Grain milling' }),
-(`10.61/1`)-[:hasParent]->(`10.61`),
-(`10.61/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61/2',label:'Manufacture of breakfast cereals and cereals-based foods' }),
-(`10.61/2`)-[:hasParent]->(`10.61`),
-(`10.62`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.62',label:'Manufacture of starches and starch products' }),
-(`10.62`)-[:hasParent]->(`10.6`),
-(`10.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.3',label:'Processing and preserving of fruit and vegetables' }),
-(`10.3`)-[:hasParent]->(`10`),
-(`10.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.32',label:'Manufacture of fruit and vegetable juice' }),
-(`10.32`)-[:hasParent]->(`10.3`),
-(`10.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.31',label:'Processing and preserving of potatoes' }),
-(`10.31`)-[:hasParent]->(`10.3`),
-(`10.39`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.39',label:'Other processing and preserving of fruit and vegetables' }),
-(`10.39`)-[:hasParent]->(`10.3`),
-(`10.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.2',label:'Processing and preserving of fish, crustaceans and molluscs' }),
-(`10.2`)-[:hasParent]->(`10`),
-(`10.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.20',label:'Processing and preserving of fish, crustaceans and molluscs' }),
-(`10.20`)-[:hasParent]->(`10.2`),
-(`10.8`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8',label:'Manufacture of other food products' }),
-(`10.8`)-[:hasParent]->(`10`),
-(`10.82`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82',label:'Manufacture of cocoa, chocolate and sugar confectionery' }),
-(`10.82`)-[:hasParent]->(`10.8`),
-(`10.82/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82/1',label:'Manufacture of cocoa, and chocolate confectionery' }),
-(`10.82/1`)-[:hasParent]->(`10.82`),
-(`10.82/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82/2',label:'Manufacture of sugar confectionery' }),
-(`10.82/2`)-[:hasParent]->(`10.82`),
-(`10.83`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83',label:'Processing of tea and coffee' }),
-(`10.83`)-[:hasParent]->(`10.8`),
-(`10.83/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83/2',label:'Production of coffee and coffee substitutes' }),
-(`10.83/2`)-[:hasParent]->(`10.83`),
-(`10.83/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83/1',label:'Tea processing' }),
-(`10.83/1`)-[:hasParent]->(`10.83`),
-(`10.89`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.89',label:'Manufacture of other food products n.e.c.' }),
-(`10.89`)-[:hasParent]->(`10.8`),
-(`10.84`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.84',label:'Manufacture of condiments and seasonings' }),
-(`10.84`)-[:hasParent]->(`10.8`),
-(`10.85`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.85',label:'Manufacture of prepared meals and dishes' }),
-(`10.85`)-[:hasParent]->(`10.8`),
-(`10.86`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.86',label:'Manufacture of homogenised food preparations and dietetic food' }),
-(`10.86`)-[:hasParent]->(`10.8`),
-(`10.81`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.81',label:'Manufacture of sugar' }),
-(`10.81`)-[:hasParent]->(`10.8`),
-(`10.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.4',label:'Manufacture of vegetable and animal oils and fats' }),
-(`10.4`)-[:hasParent]->(`10`),
-(`10.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.41',label:'Manufacture of oils and fats' }),
-(`10.41`)-[:hasParent]->(`10.4`),
-(`10.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.42',label:'Manufacture of margarine and similar edible fats' }),
-(`10.42`)-[:hasParent]->(`10.4`),
-(`10.7`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.7',label:'Manufacture of bakery and farinaceous products' }),
-(`10.7`)-[:hasParent]->(`10`),
-(`10.71`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.71',label:'Manufacture of bread; manufacture of fresh pastry goods and cakes' }),
-(`10.71`)-[:hasParent]->(`10.7`),
-(`10.72`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.72',label:'Manufacture of rusks and biscuits; manufacture of preserved pastry goods and cakes' }),
-(`10.72`)-[:hasParent]->(`10.7`),
-(`10.73`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.73',label:'Manufacture of macaroni, noodles, couscous and similar farinaceous products' }),
-(`10.73`)-[:hasParent]->(`10.7`),
-(`13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13',label:'Manufacture of textiles' }),
-(`13`)-[:hasParent]->(`C`),
-(`13.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9',label:'Manufacture of other textiles' }),
-(`13.9`)-[:hasParent]->(`13`),
-(`13.96`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.96',label:'Manufacture of other technical and industrial textiles' }),
-(`13.96`)-[:hasParent]->(`13.9`),
-(`13.94`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.94',label:'Manufacture of cordage, rope, twine and netting' }),
-(`13.94`)-[:hasParent]->(`13.9`),
-(`13.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92',label:'Manufacture of made-up textile articles, except apparel' }),
-(`13.92`)-[:hasParent]->(`13.9`),
-(`13.92/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92/2',label:'Manufacture of canvas goods, sacks etc.' }),
-(`13.92/2`)-[:hasParent]->(`13.92`),
-(`13.92/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92/1',label:'Manufacture of soft furnishings' }),
-(`13.92/1`)-[:hasParent]->(`13.92`),
-(`13.92/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92/3',label:'Manufacture of household textiles (other than soft furnishings of 13.92/1)' }),
-(`13.92/3`)-[:hasParent]->(`13.92`),
-(`13.95`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.95',label:'Manufacture of non-wovens and articles made from non-wovens, except apparel' }),
-(`13.95`)-[:hasParent]->(`13.9`),
-(`13.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.99',label:'Manufacture of other textiles n.e.c.' }),
-(`13.99`)-[:hasParent]->(`13.9`),
-(`13.93`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93',label:'Manufacture of carpets and rugs' }),
-(`13.93`)-[:hasParent]->(`13.9`),
-(`13.93/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93/9',label:'Manufacture of carpets and rugs (other than woven or tufted) n.e.c.' }),
-(`13.93/9`)-[:hasParent]->(`13.93`),
-(`13.93/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93/1',label:'Manufacture of woven or tufted carpets and rugs' }),
-(`13.93/1`)-[:hasParent]->(`13.93`),
-(`13.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.91',label:'Manufacture of knitted and crocheted fabrics' }),
-(`13.91`)-[:hasParent]->(`13.9`),
-(`13.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.1',label:'Preparation and spinning of textile fibres' }),
-(`13.1`)-[:hasParent]->(`13`),
-(`13.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.10',label:'Preparation and spinning of textile fibres' }),
-(`13.10`)-[:hasParent]->(`13.1`),
-(`13.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.2',label:'Weaving of textiles' }),
-(`13.2`)-[:hasParent]->(`13`),
-(`13.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.20',label:'Weaving of textiles' }),
-(`13.20`)-[:hasParent]->(`13.2`),
-(`13.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.3',label:'Finishing of textiles' }),
-(`13.3`)-[:hasParent]->(`13`),
-(`13.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.30',label:'Finishing of textiles' }),
-(`13.30`)-[:hasParent]->(`13.3`),
-(`25`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25',label:'Manufacture of fabricated metal products, except machinery and equipment' }),
-(`25`)-[:hasParent]->(`C`),
-(`25.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.2',label:'Manufacture of tanks, reservoirs and containers of metal' }),
-(`25.2`)-[:hasParent]->(`25`),
-(`25.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.29',label:'Manufacture of other tanks, reservoirs and containers of metal' }),
-(`25.29`)-[:hasParent]->(`25.2`),
-(`25.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.21',label:'Manufacture of central heating radiators and boilers' }),
-(`25.21`)-[:hasParent]->(`25.2`),
-(`25.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.9',label:'Manufacture of other fabricated metal products' }),
-(`25.9`)-[:hasParent]->(`25`),
-(`25.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.91',label:'Manufacture of steel drums and similar containers' }),
-(`25.91`)-[:hasParent]->(`25.9`),
-(`25.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.99',label:'Manufacture of other fabricated metal products n.e.c.' }),
-(`25.99`)-[:hasParent]->(`25.9`),
-(`25.93`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.93',label:'Manufacture of wire products, chain and springs' }),
-(`25.93`)-[:hasParent]->(`25.9`),
-(`25.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.92',label:'Manufacture of light metal packaging' }),
-(`25.92`)-[:hasParent]->(`25.9`),
-(`25.94`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.94',label:'Manufacture of fasteners and screw machine products' }),
-(`25.94`)-[:hasParent]->(`25.9`),
-(`25.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.4',label:'Manufacture of weapons and ammunition' }),
-(`25.4`)-[:hasParent]->(`25`),
-(`25.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.40',label:'Manufacture of weapons and ammunition' }),
-(`25.40`)-[:hasParent]->(`25.4`),
-(`25.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.1',label:'Manufacture of structural metal products' }),
-(`25.1`)-[:hasParent]->(`25`),
-(`25.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.11',label:'Manufacture of metal structures and parts of structures' }),
-(`25.11`)-[:hasParent]->(`25.1`),
-(`25.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.12',label:'Manufacture of doors and windows of metal' }),
-(`25.12`)-[:hasParent]->(`25.1`),
-(`25.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.6',label:'Treatment and coating of metals; machining' }),
-(`25.6`)-[:hasParent]->(`25`),
-(`25.62`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.62',label:'Machining' }),
-(`25.62`)-[:hasParent]->(`25.6`),
-(`25.61`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.61',label:'Treatment and coating of metals' }),
-(`25.61`)-[:hasParent]->(`25.6`),
-(`25.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.5',label:'Forging, pressing, stamping and roll-forming of metal; powder metallurgy' }),
-(`25.5`)-[:hasParent]->(`25`),
-(`25.50`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.50',label:'Forging, pressing, stamping and roll-forming of metal; powder metallurgy' }),
-(`25.50`)-[:hasParent]->(`25.5`),
-(`25.7`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.7',label:'Manufacture of cutlery, tools and general hardware' }),
-(`25.7`)-[:hasParent]->(`25`),
-(`25.71`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.71',label:'Manufacture of cutlery' }),
-(`25.71`)-[:hasParent]->(`25.7`),
-(`25.73`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.73',label:'Manufacture of tools' }),
-(`25.73`)-[:hasParent]->(`25.7`),
-(`25.72`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.72',label:'Manufacture of locks and hinges' }),
-(`25.72`)-[:hasParent]->(`25.7`),
-(`25.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.3',label:'Manufacture of steam generators, except central heating hot water boilers' }),
-(`25.3`)-[:hasParent]->(`25`),
-(`25.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.30',label:'Manufacture of steam generators, except central heating hot water boilers' }),
-(`25.30`)-[:hasParent]->(`25.3`),
-(`29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29',label:'Manufacture of motor vehicles, trailers and semi-trailers' }),
-(`29`)-[:hasParent]->(`C`),
-(`29.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.3',label:'Manufacture of parts and accessories for motor vehicles' }),
-(`29.3`)-[:hasParent]->(`29`),
-(`29.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.32',label:'Manufacture of other parts and accessories for motor vehicles' }),
-(`29.32`)-[:hasParent]->(`29.3`),
-(`29.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.31',label:'Manufacture of electrical and electronic equipment for motor vehicles' }),
-(`29.31`)-[:hasParent]->(`29.3`),
-(`29.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.1',label:'Manufacture of motor vehicles' }),
-(`29.1`)-[:hasParent]->(`29`),
-(`29.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.10',label:'Manufacture of motor vehicles' }),
-(`29.10`)-[:hasParent]->(`29.1`),
-(`29.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.2',label:'Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers' }),
-(`29.2`)-[:hasParent]->(`29`),
-(`29.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20',label:'Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers' }),
-(`29.20`)-[:hasParent]->(`29.2`),
-(`29.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20/2',label:'Manufacture of trailers and semi-trailers' }),
-(`29.20/2`)-[:hasParent]->(`29.20`),
-(`29.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20/1',label:'Manufacture of bodies (coachwork) for motor vehicles (except caravans)' }),
-(`29.20/1`)-[:hasParent]->(`29.20`),
-(`29.20/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20/3',label:'Manufacture of caravans' }),
-(`29.20/3`)-[:hasParent]->(`29.20`),
-(`22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22',label:'Manufacture of rubber and plastic products' }),
-(`22`)-[:hasParent]->(`C`),
-(`22.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.2',label:'Manufacture of plastics products' }),
-(`22.2`)-[:hasParent]->(`22`),
-(`22.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.22',label:'Manufacture of plastic packing goods' }),
-(`22.22`)-[:hasParent]->(`22.2`),
-(`22.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.21',label:'Manufacture of plastic plates, sheets, tubes and profiles' }),
-(`22.21`)-[:hasParent]->(`22.2`),
-(`22.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.23',label:'Manufacture of builders� ware of plastic' }),
-(`22.23`)-[:hasParent]->(`22.2`),
-(`22.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.29',label:'Manufacture of other plastic products' }),
-(`22.29`)-[:hasParent]->(`22.2`),
-(`22.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.1',label:'Manufacture of rubber products' }),
-(`22.1`)-[:hasParent]->(`22`),
-(`22.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.19',label:'Manufacture of other rubber products' }),
-(`22.19`)-[:hasParent]->(`22.1`),
-(`22.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.11',label:'Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres' }),
-(`22.11`)-[:hasParent]->(`22.1`),
-(`27`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27',label:'Manufacture of electrical equipment' }),
-(`27`)-[:hasParent]->(`C`),
-(`27.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.1',label:'Manufacture of electric motors, generators, transformers and electricity distribution and control apparatus' }),
-(`27.1`)-[:hasParent]->(`27`),
-(`27.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.12',label:'Manufacture of electricity distribution and control apparatus' }),
-(`27.12`)-[:hasParent]->(`27.1`),
-(`27.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.11',label:'Manufacture of electric motors, generators and transformers' }),
-(`27.11`)-[:hasParent]->(`27.1`),
-(`27.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.9',label:'Manufacture of other electrical equipment' }),
-(`27.9`)-[:hasParent]->(`27`),
-(`27.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.90',label:'Manufacture of other electrical equipment' }),
-(`27.90`)-[:hasParent]->(`27.9`),
-(`27.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.5',label:'Manufacture of domestic appliances' }),
-(`27.5`)-[:hasParent]->(`27`),
-(`27.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.52',label:'Manufacture of non-electric domestic appliances' }),
-(`27.52`)-[:hasParent]->(`27.5`),
-(`27.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.51',label:'Manufacture of electric domestic appliances' }),
-(`27.51`)-[:hasParent]->(`27.5`),
-(`27.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.2',label:'Manufacture of batteries and accumulators' }),
-(`27.2`)-[:hasParent]->(`27`),
-(`27.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.20',label:'Manufacture of batteries and accumulators' }),
-(`27.20`)-[:hasParent]->(`27.2`),
-(`27.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.3',label:'Manufacture of wiring and wiring devices' }),
-(`27.3`)-[:hasParent]->(`27`),
-(`27.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.31',label:'Manufacture of fibre optic cables' }),
-(`27.31`)-[:hasParent]->(`27.3`),
-(`27.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.32',label:'Manufacture of other electronic and electric wires and cables' }),
-(`27.32`)-[:hasParent]->(`27.3`),
-(`27.33`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.33',label:'Manufacture of wiring devices' }),
-(`27.33`)-[:hasParent]->(`27.3`),
-(`27.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.4',label:'Manufacture of electric lighting equipment' }),
-(`27.4`)-[:hasParent]->(`27`),
-(`27.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.40',label:'Manufacture of electric lighting equipment' }),
-(`27.40`)-[:hasParent]->(`27.4`),
-(`26`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26',label:'Manufacture of computer, electronic and optical products' }),
-(`26`)-[:hasParent]->(`C`),
-(`26.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.6',label:'Manufacture of irradiation, electromedical and electrotherapeutic equipment' }),
-(`26.6`)-[:hasParent]->(`26`),
-(`26.60`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.60',label:'Manufacture of irradiation, electromedical and electrotherapeutic equipment' }),
-(`26.60`)-[:hasParent]->(`26.6`),
-(`26.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.3',label:'Manufacture of communication equipment' }),
-(`26.3`)-[:hasParent]->(`26`),
-(`26.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30',label:'Manufacture of communication equipment' }),
-(`26.30`)-[:hasParent]->(`26.3`),
-(`26.30/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30/1',label:'Manufacture of telegraph and telephone apparatus and equipment' }),
-(`26.30/1`)-[:hasParent]->(`26.30`),
-(`26.30/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30/9',label:'Manufacture of communication equipment (other than telegraph and telephone apparatus and equipment)' }),
-(`26.30/9`)-[:hasParent]->(`26.30`),
-(`26.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.2',label:'Manufacture of computers and peripheral equipment' }),
-(`26.2`)-[:hasParent]->(`26`),
-(`26.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.20',label:'Manufacture of computers and peripheral equipment' }),
-(`26.20`)-[:hasParent]->(`26.2`),
-(`26.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.5',label:'Manufacture of instruments and appliances for measuring, testing and navigation; watches and clocks' }),
-(`26.5`)-[:hasParent]->(`26`),
-(`26.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51',label:'Manufacture of instruments and appliances for measuring, testing and navigation' }),
-(`26.51`)-[:hasParent]->(`26.5`),
-(`26.51/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/1',label:'Manufacture of electronic instruments and appliances for measuring, testing, and navigation, except industrial process control equipment' }),
-(`26.51/1`)-[:hasParent]->(`26.51`),
-(`26.51/4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/4',label:'Manufacture of non-electronic industrial process control equipment' }),
-(`26.51/4`)-[:hasParent]->(`26.51`),
-(`26.51/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/2',label:'Manufacture of electronic industrial process control equipment' }),
-(`26.51/2`)-[:hasParent]->(`26.51`),
-(`26.51/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/3',label:'Manufacture of non-electronic instruments and appliances for measuring, testing and navigation, except industrial process control equipment' }),
-(`26.51/3`)-[:hasParent]->(`26.51`),
-(`26.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.52',label:'Manufacture of watches and clocks' }),
-(`26.52`)-[:hasParent]->(`26.5`),
-(`26.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.1',label:'Manufacture of electronic components and boards' }),
-(`26.1`)-[:hasParent]->(`26`),
-(`26.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.11',label:'Manufacture of electronic components' }),
-(`26.11`)-[:hasParent]->(`26.1`),
-(`26.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.12',label:'Manufacture of loaded electronic boards' }),
-(`26.12`)-[:hasParent]->(`26.1`),
-(`26.8`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.8',label:'Manufacture of magnetic and optical media' }),
-(`26.8`)-[:hasParent]->(`26`),
-(`26.80`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.80',label:'Manufacture of magnetic and optical media' }),
-(`26.80`)-[:hasParent]->(`26.8`),
-(`26.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.4',label:'Manufacture of consumer electronics' }),
-(`26.4`)-[:hasParent]->(`26`),
-(`26.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.40',label:'Manufacture of consumer electronics' }),
-(`26.40`)-[:hasParent]->(`26.4`),
-(`26.7`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.7',label:'Manufacture of optical instruments and photographic equipment' }),
-(`26.7`)-[:hasParent]->(`26`),
-(`26.70`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70',label:'Manufacture of optical instruments and photographic equipment' }),
-(`26.70`)-[:hasParent]->(`26.7`),
-(`26.70/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70/1',label:'Manufacture of optical precision instruments' }),
-(`26.70/1`)-[:hasParent]->(`26.70`),
-(`26.70/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70/2',label:'Manufacture of photographic and cinematographic equipment' }),
-(`26.70/2`)-[:hasParent]->(`26.70`),
-(`D`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'D',label:'ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY' }),
-(`35`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35',label:'Electricity, gas, steam and air conditioning supply' }),
-(`35`)-[:hasParent]->(`D`),
-(`35.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.1',label:'Electric power generation, transmission and distribution' }),
-(`35.1`)-[:hasParent]->(`35`),
-(`35.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.11',label:'Production of electricity' }),
-(`35.11`)-[:hasParent]->(`35.1`),
-(`35.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.12',label:'Transmission of electricity' }),
-(`35.12`)-[:hasParent]->(`35.1`),
-(`35.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.13',label:'Distribution of electricity' }),
-(`35.13`)-[:hasParent]->(`35.1`),
-(`35.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.14',label:'Trade of electricity' }),
-(`35.14`)-[:hasParent]->(`35.1`),
-(`35.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.2',label:'Manufacture of gas; distribution of gaseous fuels through mains' }),
-(`35.2`)-[:hasParent]->(`35`),
-(`35.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.23',label:'Trade of gas through mains' }),
-(`35.23`)-[:hasParent]->(`35.2`),
-(`35.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.21',label:'Manufacture of gas' }),
-(`35.21`)-[:hasParent]->(`35.2`),
-(`35.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.22',label:'Distribution of gaseous fuels through mains' }),
-(`35.22`)-[:hasParent]->(`35.2`),
-(`35.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.3',label:'Steam and air conditioning supply' }),
-(`35.3`)-[:hasParent]->(`35`),
-(`35.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.30',label:'Steam and air conditioning supply' }),
-(`35.30`)-[:hasParent]->(`35.3`),
-(`E`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'E',label:'WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES' }),
-(`37`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37',label:'Sewerage' }),
-(`37`)-[:hasParent]->(`E`),
-(`37.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37.0',label:'Sewerage' }),
-(`37.0`)-[:hasParent]->(`37`),
-(`37.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37.00',label:'Sewerage' }),
-(`37.00`)-[:hasParent]->(`37.0`),
-(`36`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36',label:'Water collection, treatment and supply' }),
-(`36`)-[:hasParent]->(`E`),
-(`36.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36.0',label:'Water collection, treatment and supply' }),
-(`36.0`)-[:hasParent]->(`36`),
-(`36.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36.00',label:'Water collection, treatment and supply' }),
-(`36.00`)-[:hasParent]->(`36.0`),
-(`38`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38',label:'Waste collection, treatment and disposal activities; materials recovery' }),
-(`38`)-[:hasParent]->(`E`),
-(`38.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.1',label:'Waste collection' }),
-(`38.1`)-[:hasParent]->(`38`),
-(`38.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.12',label:'Collection of hazardous waste' }),
-(`38.12`)-[:hasParent]->(`38.1`),
-(`38.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.11',label:'Collection of non-hazardous waste' }),
-(`38.11`)-[:hasParent]->(`38.1`),
-(`38.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.3',label:'Materials recovery' }),
-(`38.3`)-[:hasParent]->(`38`),
-(`38.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.31',label:'Dismantling of wrecks' }),
-(`38.31`)-[:hasParent]->(`38.3`),
-(`38.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.32',label:'Recovery of sorted materials' }),
-(`38.32`)-[:hasParent]->(`38.3`),
-(`38.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.2',label:'Waste treatment and disposal' }),
-(`38.2`)-[:hasParent]->(`38`),
-(`38.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.22',label:'Treatment and disposal of hazardous waste' }),
-(`38.22`)-[:hasParent]->(`38.2`),
-(`38.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.21',label:'Treatment and disposal of non-hazardous waste' }),
-(`38.21`)-[:hasParent]->(`38.2`),
-(`39`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39',label:'This division includes the provision of remediation services, i.e. the cleanup of contaminated buildings and sites, soil, surface or ground water.' }),
-(`39`)-[:hasParent]->(`E`),
-(`39.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39.0',label:'Remediation activities and other waste management services' }),
-(`39.0`)-[:hasParent]->(`39`),
-(`39.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39.00',label:'Remediation activities and other waste management services' }),
-(`39.00`)-[:hasParent]->(`39.0`),
-(`F`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'F',label:'CONSTRUCTION' }),
-(`41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41',label:'Construction of buildings' }),
-(`41`)-[:hasParent]->(`F`),
-(`41.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.1',label:'Development of building projects' }),
-(`41.1`)-[:hasParent]->(`41`),
-(`41.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.10',label:'Development of building projects' }),
-(`41.10`)-[:hasParent]->(`41.1`),
-(`41.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.2',label:'Construction of residential and non-residential buildings' }),
-(`41.2`)-[:hasParent]->(`41`),
-(`41.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20',label:'Construction of residential and non-residential buildings' }),
-(`41.20`)-[:hasParent]->(`41.2`),
-(`41.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20/2',label:'Construction of domestic buildings' }),
-(`41.20/2`)-[:hasParent]->(`41.20`),
-(`41.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20/1',label:'Construction of commercial buildings' }),
-(`41.20/1`)-[:hasParent]->(`41.20`),
-(`42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42',label:'Civil engineering' }),
-(`42`)-[:hasParent]->(`F`),
-(`42.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.1',label:'Construction of roads and railways' }),
-(`42.1`)-[:hasParent]->(`42`),
-(`42.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.11',label:'Construction of roads and motorways' }),
-(`42.11`)-[:hasParent]->(`42.1`),
-(`42.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.13',label:'Construction of bridges and tunnels' }),
-(`42.13`)-[:hasParent]->(`42.1`),
-(`42.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.12',label:'Construction of railways and underground railways' }),
-(`42.12`)-[:hasParent]->(`42.1`),
-(`42.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.9',label:'Construction of other civil engineering projects' }),
-(`42.9`)-[:hasParent]->(`42`),
-(`42.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.91',label:'Construction of water projects' }),
-(`42.91`)-[:hasParent]->(`42.9`),
-(`42.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.99',label:'Construction of other civil engineering projects n.e.c.' }),
-(`42.99`)-[:hasParent]->(`42.9`),
-(`42.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.2',label:'Construction of utility projects' }),
-(`42.2`)-[:hasParent]->(`42`),
-(`42.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.21',label:'Construction of utility projects for fluids' }),
-(`42.21`)-[:hasParent]->(`42.2`),
-(`42.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.22',label:'Construction of utility projects for electricity and telecommunications' }),
-(`42.22`)-[:hasParent]->(`42.2`),
-(`43`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43',label:'Specialised construction activities' }),
-(`43`)-[:hasParent]->(`F`),
-(`43.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.1',label:'Demolition and site preparation' }),
-(`43.1`)-[:hasParent]->(`43`),
-(`43.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.13',label:'Test drilling and boring' }),
-(`43.13`)-[:hasParent]->(`43.1`),
-(`43.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.11',label:'Demolition' }),
-(`43.11`)-[:hasParent]->(`43.1`),
-(`43.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.12',label:'Site preparation' }),
-(`43.12`)-[:hasParent]->(`43.1`),
-(`43.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.3',label:'Building completion and finishing' }),
-(`43.3`)-[:hasParent]->(`43`),
-(`43.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.31',label:'Plastering' }),
-(`43.31`)-[:hasParent]->(`43.3`),
-(`43.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.32',label:'Joinery installation' }),
-(`43.32`)-[:hasParent]->(`43.3`),
-(`43.33`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.33',label:'Floor and wall covering' }),
-(`43.33`)-[:hasParent]->(`43.3`),
-(`43.39`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.39',label:'Other building completion and finishing' }),
-(`43.39`)-[:hasParent]->(`43.3`),
-(`43.34`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34',label:'Painting and glazing' }),
-(`43.34`)-[:hasParent]->(`43.3`),
-(`43.34/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34/2',label:'Glazing' }),
-(`43.34/2`)-[:hasParent]->(`43.34`),
-(`43.34/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34/1',label:'Painting' }),
-(`43.34/1`)-[:hasParent]->(`43.34`),
-(`43.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.2',label:'Electrical, plumbing and other construction installation activities' }),
-(`43.2`)-[:hasParent]->(`43`),
-(`43.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.22',label:'Plumbing, heat and air-conditioning installation' }),
-(`43.22`)-[:hasParent]->(`43.2`),
-(`43.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.29',label:'Other construction installation' }),
-(`43.29`)-[:hasParent]->(`43.2`),
-(`43.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.21',label:'Electrical installation' }),
-(`43.21`)-[:hasParent]->(`43.2`),
-(`43.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.9',label:'Other specialised construction activities' }),
-(`43.9`)-[:hasParent]->(`43`),
-(`43.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.91',label:'Roofing activities' }),
-(`43.91`)-[:hasParent]->(`43.9`),
-(`43.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99',label:'Other specialised construction activities n.e.c.' }),
-(`43.99`)-[:hasParent]->(`43.9`),
-(`43.99/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99/9',label:'Specialised construction activities (other than scaffold erection) n.e.c.' }),
-(`43.99/9`)-[:hasParent]->(`43.99`),
-(`43.99/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99/1',label:'Scaffold erection' }),
-(`43.99/1`)-[:hasParent]->(`43.99`),
-(`G`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'G',label:'WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES' }),
-(`45`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45',label:'Wholesale and retail trade and repair of motor vehicles and motorcycles' }),
-(`45`)-[:hasParent]->(`G`),
-(`45.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.3',label:'Sale of motor vehicle parts and accessories' }),
-(`45.3`)-[:hasParent]->(`45`),
-(`45.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.31',label:'Wholesale trade of motor vehicle parts and accessories' }),
-(`45.31`)-[:hasParent]->(`45.3`),
-(`45.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.32',label:'Retail trade of motor vehicle parts and accessories' }),
-(`45.32`)-[:hasParent]->(`45.3`),
-(`45.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.4',label:'Sale, maintenance and repair of motorcycles and related parts and accessories' }),
-(`45.4`)-[:hasParent]->(`45`),
-(`45.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.40',label:'Sale, maintenance and repair of motorcycles and related parts and accessories' }),
-(`45.40`)-[:hasParent]->(`45.4`),
-(`45.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.2',label:'Maintenance and repair of motor vehicles' }),
-(`45.2`)-[:hasParent]->(`45`),
-(`45.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.20',label:'Maintenance and repair of motor vehicles' }),
-(`45.20`)-[:hasParent]->(`45.2`),
-(`45.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.1',label:'Sale of motor vehicles' }),
-(`45.1`)-[:hasParent]->(`45`),
-(`45.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11',label:'Sale of cars and light motor vehicles' }),
-(`45.11`)-[:hasParent]->(`45.1`),
-(`45.11/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11/1',label:'Sale of new cars and light motor vehicles' }),
-(`45.11/1`)-[:hasParent]->(`45.11`),
-(`45.11/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11/2',label:'Sale of used cars and light motor vehicles' }),
-(`45.11/2`)-[:hasParent]->(`45.11`),
-(`45.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.19',label:'Sale of other motor vehicles' }),
-(`45.19`)-[:hasParent]->(`45.1`),
-(`46`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46',label:'Wholesale trade, except of motor vehicles and motorcycles' }),
-(`46`)-[:hasParent]->(`G`),
-(`46.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.9',label:'Non-specialised wholesale trade' }),
-(`46.9`)-[:hasParent]->(`46`),
-(`46.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.90',label:'Non-specialised wholesale trade' }),
-(`46.90`)-[:hasParent]->(`46.9`),
-(`46.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3',label:'Wholesale of food, beverages and tobacco' }),
-(`46.3`)-[:hasParent]->(`46`),
-(`46.35`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.35',label:'Wholesale of tobacco products' }),
-(`46.35`)-[:hasParent]->(`46.3`),
-(`46.38`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.38',label:'Wholesale of other food, including fish, crustaceans and molluscs' }),
-(`46.38`)-[:hasParent]->(`46.3`),
-(`46.34`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34',label:'Wholesale of beverages' }),
-(`46.34`)-[:hasParent]->(`46.3`),
-(`46.34/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34/2',label:'Wholesale of wine, beer, spirits and other alcoholic beverages' }),
-(`46.34/2`)-[:hasParent]->(`46.34`),
-(`46.34/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34/1',label:'Wholesale of fruit and vegetable juices, mineral waters and soft drinks' }),
-(`46.34/1`)-[:hasParent]->(`46.34`),
-(`46.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.32',label:'Wholesale of meat and meat products' }),
-(`46.32`)-[:hasParent]->(`46.3`),
-(`46.39`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.39',label:'Non-specialised wholesale of food, beverages and tobacco' }),
-(`46.39`)-[:hasParent]->(`46.3`),
-(`46.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.31',label:'Wholesale of fruit and vegetables' }),
-(`46.31`)-[:hasParent]->(`46.3`),
-(`46.37`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.37',label:'Wholesale of coffee, tea, cocoa and spices' }),
-(`46.37`)-[:hasParent]->(`46.3`),
-(`46.33`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.33',label:'Wholesale of dairy products, eggs and edible oils and fats' }),
-(`46.33`)-[:hasParent]->(`46.3`),
-(`46.36`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.36',label:'Wholesale of sugar and chocolate and sugar confectionery' }),
-(`46.36`)-[:hasParent]->(`46.3`),
-(`46.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4',label:'Wholesale of household goods' }),
-(`46.4`)-[:hasParent]->(`46`),
-(`46.45`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.45',label:'Wholesale of perfume and cosmetics' }),
-(`46.45`)-[:hasParent]->(`46.4`),
-(`46.48`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.48',label:'Wholesale of watches and jewellery' }),
-(`46.48`)-[:hasParent]->(`46.4`),
-(`46.44`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.44',label:'Wholesale of china and glassware and cleaning materials' }),
-(`46.44`)-[:hasParent]->(`46.4`),
-(`46.47`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.47',label:'Wholesale of furniture, carpets and lighting equipment' }),
-(`46.47`)-[:hasParent]->(`46.4`),
-(`46.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.41',label:'Wholesale of textiles' }),
-(`46.41`)-[:hasParent]->(`46.4`),
-(`46.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.42',label:'Wholesale of clothing and footwear' }),
-(`46.42`)-[:hasParent]->(`46.4`),
-(`46.46`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.46',label:'Wholesale of pharmaceutical goods' }),
-(`46.46`)-[:hasParent]->(`46.4`),
-(`46.43`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43',label:'Wholesale of electrical household appliances' }),
-(`46.43`)-[:hasParent]->(`46.4`),
-(`46.43/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43/9',label:'Wholesale of radio and television goods and of electrical household appliances (other than of gramophone records, audio tapes, compact discs and video tapes and the equipment on which these are played) n.e.c.' }),
-(`46.43/9`)-[:hasParent]->(`46.43`),
-(`46.43/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43/1',label:'Wholesale of gramophone records, audio tapes, compact discs and video tapes and of the equipment on which these are played' }),
-(`46.43/1`)-[:hasParent]->(`46.43`),
-(`46.49`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49',label:'Wholesale of other household goods' }),
-(`46.49`)-[:hasParent]->(`46.4`),
-(`46.49/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49/1',label:'Wholesale of musical instruments' }),
-(`46.49/1`)-[:hasParent]->(`46.49`),
-(`46.49/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49/9',label:'Wholesale of household goods (other than musical instruments) n.e.c.' }),
-(`46.49/9`)-[:hasParent]->(`46.49`),
-(`46.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6',label:'Wholesale of other machinery, equipment and supplies' }),
-(`46.6`)-[:hasParent]->(`46`),
-(`46.63`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.63',label:'Wholesale of mining, construction and civil engineering machinery' }),
-(`46.63`)-[:hasParent]->(`46.6`),
-(`46.65`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.65',label:'Wholesale of office furniture' }),
-(`46.65`)-[:hasParent]->(`46.6`),
-(`46.69`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.69',label:'Wholesale of other machinery and equipment' }),
-(`46.69`)-[:hasParent]->(`46.6`),
-(`46.61`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.61',label:'Wholesale of agricultural machinery, equipment and supplies' }),
-(`46.61`)-[:hasParent]->(`46.6`),
-(`46.66`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.66',label:'Wholesale of other office machinery and equipment' }),
-(`46.66`)-[:hasParent]->(`46.6`),
-(`46.64`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.64',label:'Wholesale of machinery for the textile industry and of sewing and knitting machines' }),
-(`46.64`)-[:hasParent]->(`46.6`),
-(`46.62`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.62',label:'Wholesale of machine tools' }),
-(`46.62`)-[:hasParent]->(`46.6`),
-(`46.7`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7',label:'Other specialised wholesale' }),
-(`46.7`)-[:hasParent]->(`46`),
-(`46.72`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.72',label:'Wholesale of metals and metal ores' }),
-(`46.72`)-[:hasParent]->(`46.7`),
-(`46.75`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.75',label:'Wholesale of chemical products' }),
-(`46.75`)-[:hasParent]->(`46.7`),
-(`46.77`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.77',label:'Wholesale of waste and scrap' }),
-(`46.77`)-[:hasParent]->(`46.7`),
-(`46.71`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71',label:'Wholesale of solid, liquid and gaseous fuels and related products' }),
-(`46.71`)-[:hasParent]->(`46.7`),
-(`46.71/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71/1',label:'Wholesale of petroleum and petroleum products' }),
-(`46.71/1`)-[:hasParent]->(`46.71`),
-(`46.71/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71/9',label:'Wholesale of fuels and related products (other than petroleum and petroleum products)' }),
-(`46.71/9`)-[:hasParent]->(`46.71`),
-(`46.74`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.74',label:'Wholesale of hardware, plumbing and heating equipment and supplies' }),
-(`46.74`)-[:hasParent]->(`46.7`),
-(`46.73`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.73',label:'Wholesale of wood, construction materials and sanitary equipment' }),
-(`46.73`)-[:hasParent]->(`46.7`),
-(`46.76`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.76',label:'Wholesale of other intermediate products' }),
-(`46.76`)-[:hasParent]->(`46.7`),
-(`46.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.5',label:'Wholesale of information and communication equipment' }),
-(`46.5`)-[:hasParent]->(`46`),
-(`46.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.51',label:'Wholesale of computers, computer peripheral equipment and software' }),
-(`46.51`)-[:hasParent]->(`46.5`),
-(`46.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.52',label:'Wholesale of electronic and telecommunications equipment and parts' }),
-(`46.52`)-[:hasParent]->(`46.5`),
-(`46.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.2',label:'Wholesale of agricultural raw materials and live animals' }),
-(`46.2`)-[:hasParent]->(`46`),
-(`46.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.23',label:'Wholesale of live animals' }),
-(`46.23`)-[:hasParent]->(`46.2`),
-(`46.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.22',label:'Wholesale of flowers and plants' }),
-(`46.22`)-[:hasParent]->(`46.2`),
-(`46.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.24',label:'Wholesale of hides, skins and leather' }),
-(`46.24`)-[:hasParent]->(`46.2`),
-(`46.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.21',label:'Wholesale of grain, unmanufactured tobacco, seeds and animal feeds' }),
-(`46.21`)-[:hasParent]->(`46.2`),
-(`46.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1',label:'Wholesale on a fee or contract basis' }),
-(`46.1`)-[:hasParent]->(`46`),
-(`46.15`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.15',label:'Agents involved in the sale of furniture, household goods, hardware and ironmongery' }),
-(`46.15`)-[:hasParent]->(`46.1`),
-(`46.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.13',label:'Agents involved in the sale of timber and building materials' }),
-(`46.13`)-[:hasParent]->(`46.1`),
-(`46.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.11',label:'Agents involved in the sale of agricultural raw materials, live animals, textile raw materials and semi-finished goods' }),
-(`46.11`)-[:hasParent]->(`46.1`),
-(`46.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.19',label:'Agents involved in the sale of a variety of goods' }),
-(`46.19`)-[:hasParent]->(`46.1`),
-(`46.17`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.17',label:'Agents involved in the sale of food, beverages and tobacco' }),
-(`46.17`)-[:hasParent]->(`46.1`),
-(`46.18`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.18',label:'Agents specialised in the sale of other particular products' }),
-(`46.18`)-[:hasParent]->(`46.1`),
-(`46.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.14',label:'Agents involved in the sale of machinery, industrial equipment, ships and aircraft' }),
-(`46.14`)-[:hasParent]->(`46.1`),
-(`46.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.12',label:'Agents involved in the sale of fuels, ores, metals and industrial chemicals' }),
-(`46.12`)-[:hasParent]->(`46.1`),
-(`46.16`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.16',label:'Agents involved in the sale of textiles, clothing, fur, footwear and leather goods' }),
-(`46.16`)-[:hasParent]->(`46.1`),
-(`47`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47',label:'Retail trade, except of motor vehicles and motorcycles' }),
-(`47`)-[:hasParent]->(`G`),
-(`47.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.6',label:'Retail sale of cultural and recreation goods in specialised stores' }),
-(`47.6`)-[:hasParent]->(`47`),
-(`47.61`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.61',label:'Retail sale of books in specialised stores' }),
-(`47.61`)-[:hasParent]->(`47.6`),
-(`47.63`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.63',label:'Retail sale of music and video recordings in specialised stores' }),
-(`47.63`)-[:hasParent]->(`47.6`),
-(`47.62`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.62',label:'Retail sale of newspapers and stationery in specialised stores' }),
-(`47.62`)-[:hasParent]->(`47.6`),
-(`47.65`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.65',label:'Retail sale of games and toys in specialised stores' }),
-(`47.65`)-[:hasParent]->(`47.6`),
-(`47.64`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.64',label:'Retail sale of sporting equipment in specialised stores' }),
-(`47.64`)-[:hasParent]->(`47.6`),
-(`47.8`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.8',label:'Retail sale via stalls and markets' }),
-(`47.8`)-[:hasParent]->(`47`),
-(`47.89`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.89',label:'Retail sale via stalls and markets of other goods' }),
-(`47.89`)-[:hasParent]->(`47.8`),
-(`47.82`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.82',label:'Retail sale via stalls and markets of textiles, clothing and footwear' }),
-(`47.82`)-[:hasParent]->(`47.8`),
-(`47.81`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.81',label:'Retail sale via stalls and markets of food, beverages and tobacco products' }),
-(`47.81`)-[:hasParent]->(`47.8`),
-(`47.7`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7',label:'Retail sale of other goods in specialised stores' }),
-(`47.7`)-[:hasParent]->(`47`),
-(`47.71`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.71',label:'Retail sale of clothing in specialised stores' }),
-(`47.71`)-[:hasParent]->(`47.7`),
-(`47.79`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79',label:'Retail sale of second-hand goods in stores' }),
-(`47.79`)-[:hasParent]->(`47.7`),
-(`47.79/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79/9',label:'Retail sale of second-hand goods (other than antiques and antique books) in stores' }),
-(`47.79/9`)-[:hasParent]->(`47.79`),
-(`47.79/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79/1',label:'Retail sale of antiques including antique books, in stores' }),
-(`47.79/1`)-[:hasParent]->(`47.79`),
-(`47.74`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74',label:'Retail sale of medical and orthopaedic goods in specialised stores' }),
-(`47.74`)-[:hasParent]->(`47.7`),
-(`47.74/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74/9',label:'Retail sale of medical and orthopaedic goods (other than hearing aids) n.e.c., in specialised stores' }),
-(`47.74/9`)-[:hasParent]->(`47.74`),
-(`47.74/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74/1',label:'Retail sale of hearing aids in specialised stores' }),
-(`47.74/1`)-[:hasParent]->(`47.74`),
-(`47.78`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78',label:'Other retail sale of new goods in specialised stores' }),
-(`47.78`)-[:hasParent]->(`47.7`),
-(`47.78/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78/1',label:'Retail sale in commercial art galleries' }),
-(`47.78/1`)-[:hasParent]->(`47.78`),
-(`47.78/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78/9',label:'Other retail sale of new goods in specialised stores (other than by opticians or commercial art galleries), n.e.c' }),
-(`47.78/9`)-[:hasParent]->(`47.78`),
-(`47.78/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78/2',label:'Retail sale by opticians' }),
-(`47.78/2`)-[:hasParent]->(`47.78`),
-(`47.73`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.73',label:'Dispensing chemist in specialised stores' }),
-(`47.73`)-[:hasParent]->(`47.7`),
-(`47.76`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.76',label:'Retail sale of flowers, plants, seeds, fertilisers, pet animals and pet food in specialised stores' }),
-(`47.76`)-[:hasParent]->(`47.7`),
-(`47.75`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.75',label:'Retail sale of cosmetic and toilet articles in specialised stores' }),
-(`47.75`)-[:hasParent]->(`47.7`),
-(`47.77`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.77',label:'Retail sale of watches and jewellery in specialised stores' }),
-(`47.77`)-[:hasParent]->(`47.7`),
-(`47.72`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72',label:'Retail sale of footwear and leather goods in specialised stores' }),
-(`47.72`)-[:hasParent]->(`47.7`),
-(`47.72/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72/1',label:'Retail sale of footwear in specialised stores' }),
-(`47.72/1`)-[:hasParent]->(`47.72`),
-(`47.72/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72/2',label:'Retail sale of leather goods in specialised stores' }),
-(`47.72/2`)-[:hasParent]->(`47.72`),
-(`47.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2',label:'Retail sale of food, beverages and tobacco in specialised stores' }),
-(`47.2`)-[:hasParent]->(`47`),
-(`47.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.23',label:'Retail sale of fish, crustaceans and molluscs in specialised stores' }),
-(`47.23`)-[:hasParent]->(`47.2`),
-(`47.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.22',label:'Retail sale of meat and meat products in specialised stores' }),
-(`47.22`)-[:hasParent]->(`47.2`),
-(`47.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.21',label:'Retail sale of fruit and vegetables in specialised stores' }),
-(`47.21`)-[:hasParent]->(`47.2`),
-(`47.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.24',label:'Retail sale of bread, cakes, flour confectionery and sugar confectionery in specialised stores' }),
-(`47.24`)-[:hasParent]->(`47.2`),
-(`47.25`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.25',label:'Retail sale of beverages in specialised stores' }),
-(`47.25`)-[:hasParent]->(`47.2`),
-(`47.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.29',label:'Other retail sale of food in specialised stores' }),
-(`47.29`)-[:hasParent]->(`47.2`),
-(`47.26`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.26',label:'Retail sale of tobacco products in specialised stores' }),
-(`47.26`)-[:hasParent]->(`47.2`),
-(`47.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.1',label:'Retail sale in non-specialised stores' }),
-(`47.1`)-[:hasParent]->(`47`),
-(`47.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.11',label:'Retail sale in non-specialised stores with food, beverages or tobacco predominating' }),
-(`47.11`)-[:hasParent]->(`47.1`),
-(`47.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.19',label:'Other retail sale in non-specialised stores' }),
-(`47.19`)-[:hasParent]->(`47.1`),
-(`47.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.3',label:'Retail sale of automotive fuel in specialised stores' }),
-(`47.3`)-[:hasParent]->(`47`),
-(`47.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.30',label:'Retail sale of automotive fuel in specialised stores' }),
-(`47.30`)-[:hasParent]->(`47.3`),
-(`47.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.5',label:'Retail sale of other household equipment in specialised stores' }),
-(`47.5`)-[:hasParent]->(`47`),
-(`47.59`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59',label:'Retail sale of furniture, lighting equipment and other household articles in specialised stores' }),
-(`47.59`)-[:hasParent]->(`47.5`),
-(`47.59/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59/1',label:'Retail sale of musical instruments and scores in specialised stores' }),
-(`47.59/1`)-[:hasParent]->(`47.59`),
-(`47.59/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59/9',label:'Retail sale of furniture, lighting equipment and other household articles (other than musical instruments) n.e.c., in specialised stores' }),
-(`47.59/9`)-[:hasParent]->(`47.59`),
-(`47.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.51',label:'Retail sale of textiles in specialised stores' }),
-(`47.51`)-[:hasParent]->(`47.5`),
-(`47.54`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.54',label:'Retail sale of electrical household appliances in specialised stores' }),
-(`47.54`)-[:hasParent]->(`47.5`),
-(`47.53`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.53',label:'Retail sale of carpets, rugs, wall and floor coverings in specialised stores' }),
-(`47.53`)-[:hasParent]->(`47.5`),
-(`47.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.52',label:'Retail sale of hardware, paints and glass in specialised stores' }),
-(`47.52`)-[:hasParent]->(`47.5`),
-(`47.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.4',label:'Retail sale of information and communication equipment in specialised stores' }),
-(`47.4`)-[:hasParent]->(`47`),
-(`47.43`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.43',label:'Retail sale of audio and video equipment in specialised stores' }),
-(`47.43`)-[:hasParent]->(`47.4`),
-(`47.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.41',label:'Retail sale of computers, peripheral units and software in specialised stores' }),
-(`47.41`)-[:hasParent]->(`47.4`),
-(`47.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42',label:'Retail sale of telecommunications equipment in specialised stores' }),
-(`47.42`)-[:hasParent]->(`47.4`),
-(`47.42/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42/9',label:'Retail sale of telecommunications equipment (other than mobile telephones) n.e.c., in specialised stores' }),
-(`47.42/9`)-[:hasParent]->(`47.42`),
-(`47.42/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42/1',label:'Retail sale of mobile telephones in specialised stores' }),
-(`47.42/1`)-[:hasParent]->(`47.42`),
-(`47.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.9',label:'Retail trade not in stores, stalls or markets' }),
-(`47.9`)-[:hasParent]->(`47`),
-(`47.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.99',label:'Other retail sale not in stores, stalls or markets' }),
-(`47.99`)-[:hasParent]->(`47.9`),
-(`47.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.91',label:'Retail sale via mail order houses or via Internet' }),
-(`47.91`)-[:hasParent]->(`47.9`),
-(`H`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'H',label:'TRANSPORTATION AND STORAGE' }),
-(`49`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49',label:'Land transport and transport via pipelines' }),
-(`49`)-[:hasParent]->(`H`),
-(`49.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.1',label:'Passenger rail transport, interurban' }),
-(`49.1`)-[:hasParent]->(`49`),
-(`49.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.10',label:'Passenger rail transport, interurban' }),
-(`49.10`)-[:hasParent]->(`49.1`),
-(`49.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.2',label:'Freight rail transport' }),
-(`49.2`)-[:hasParent]->(`49`),
-(`49.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.20',label:'Freight rail transport' }),
-(`49.20`)-[:hasParent]->(`49.2`),
-(`49.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.5',label:'Transport via pipeline' }),
-(`49.5`)-[:hasParent]->(`49`),
-(`49.50`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.50',label:'Transport via pipeline' }),
-(`49.50`)-[:hasParent]->(`49.5`),
-(`49.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.3',label:'Other passenger land transport' }),
-(`49.3`)-[:hasParent]->(`49`),
-(`49.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.32',label:'Taxi operation' }),
-(`49.32`)-[:hasParent]->(`49.3`),
-(`49.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31',label:'Urban and suburban passenger land transport' }),
-(`49.31`)-[:hasParent]->(`49.3`),
-(`49.31/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31/9',label:'Urban, suburban or metropolitan area passenger land transport other than railway transportation by underground, metro and similar systems' }),
-(`49.31/9`)-[:hasParent]->(`49.31`),
-(`49.31/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31/1',label:'Urban, suburban or metropolitan area passenger railway transportation by underground, metro and similar systems' }),
-(`49.31/1`)-[:hasParent]->(`49.31`),
-(`49.39`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.39',label:'Other passenger land transport n.e.c.' }),
-(`49.39`)-[:hasParent]->(`49.3`),
-(`49.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.4',label:'Freight transport by road and removal services' }),
-(`49.4`)-[:hasParent]->(`49`),
-(`49.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.42',label:'Removal services' }),
-(`49.42`)-[:hasParent]->(`49.4`),
-(`49.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.41',label:'Freight transport by road' }),
-(`49.41`)-[:hasParent]->(`49.4`),
-(`52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52',label:'Warehousing and support activities for transportation' }),
-(`52`)-[:hasParent]->(`H`),
-(`52.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.1',label:'Warehousing and storage' }),
-(`52.1`)-[:hasParent]->(`52`),
-(`52.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10',label:'Warehousing and storage' }),
-(`52.10`)-[:hasParent]->(`52.1`),
-(`52.10/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10/2',label:'Operation of warehousing and storage facilities for air transport activities of division 51' }),
-(`52.10/2`)-[:hasParent]->(`52.10`),
-(`52.10/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10/3',label:'Operation of warehousing and storage facilities for land transport activities of division 49' }),
-(`52.10/3`)-[:hasParent]->(`52.10`),
-(`52.10/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10/1',label:'Operation of warehousing and storage facilities for water transport activities of division 50' }),
-(`52.10/1`)-[:hasParent]->(`52.10`),
-(`52.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.2',label:'Support activities for transportation' }),
-(`52.2`)-[:hasParent]->(`52`),
-(`52.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.29',label:'Other transportation support activities' }),
-(`52.29`)-[:hasParent]->(`52.2`),
-(`52.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.23',label:'Service activities incidental to air transportation' }),
-(`52.23`)-[:hasParent]->(`52.2`),
-(`52.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.22',label:'Service activities incidental to water transportation' }),
-(`52.22`)-[:hasParent]->(`52.2`),
-(`52.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24',label:'Cargo handling' }),
-(`52.24`)-[:hasParent]->(`52.2`),
-(`52.24/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24/3',label:'Cargo handling for land transport activities of division 49' }),
-(`52.24/3`)-[:hasParent]->(`52.24`),
-(`52.24/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24/1',label:'Cargo handling for water transport activities of division 50' }),
-(`52.24/1`)-[:hasParent]->(`52.24`),
-(`52.24/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24/2',label:'Cargo handling for air transport activities of division 51' }),
-(`52.24/2`)-[:hasParent]->(`52.24`),
-(`52.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21',label:'Service activities incidental to land transportation' }),
-(`52.21`)-[:hasParent]->(`52.2`),
-(`52.21/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/9',label:'Other service activities incidental to land transportation, n.e.c. (not including operation of rail freight terminals, passenger facilities at railway stations or passenger facilities at bus and coach stations)' }),
-(`52.21/9`)-[:hasParent]->(`52.21`),
-(`52.21/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/2',label:'Operation of rail passenger facilities at railway stations' }),
-(`52.21/2`)-[:hasParent]->(`52.21`),
-(`52.21/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/3',label:'Operation of bus and coach passenger facilities at bus and coach stations' }),
-(`52.21/3`)-[:hasParent]->(`52.21`),
-(`52.21/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/1',label:'Operation of rail freight terminals' }),
-(`52.21/1`)-[:hasParent]->(`52.21`),
-(`53`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53',label:'Postal and courier activities' }),
-(`53`)-[:hasParent]->(`H`),
-(`53.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.1',label:'Postal activities under universal service obligation' }),
-(`53.1`)-[:hasParent]->(`53`),
-(`53.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.10',label:'Postal activities under universal service obligation' }),
-(`53.10`)-[:hasParent]->(`53.1`),
-(`53.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.2',label:'Other postal and courier activities' }),
-(`53.2`)-[:hasParent]->(`53`),
-(`53.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20',label:'Other postal and courier activities' }),
-(`53.20`)-[:hasParent]->(`53.2`),
-(`53.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20/2',label:'Unlicensed Carriers' }),
-(`53.20/2`)-[:hasParent]->(`53.20`),
-(`53.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20/1',label:'Licensed Carriers' }),
-(`53.20/1`)-[:hasParent]->(`53.20`),
-(`51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51',label:'Air transport' }),
-(`51`)-[:hasParent]->(`H`),
-(`51.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.2',label:'Freight air transport and space transport' }),
-(`51.2`)-[:hasParent]->(`51`),
-(`51.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.22',label:'Space transport' }),
-(`51.22`)-[:hasParent]->(`51.2`),
-(`51.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.21',label:'Freight air transport' }),
-(`51.21`)-[:hasParent]->(`51.2`),
-(`51.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.1',label:'Passenger air transport' }),
-(`51.1`)-[:hasParent]->(`51`),
-(`51.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10',label:'Passenger air transport' }),
-(`51.10`)-[:hasParent]->(`51.1`),
-(`51.10/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10/1',label:'Scheduled passenger air transport' }),
-(`51.10/1`)-[:hasParent]->(`51.10`),
-(`51.10/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10/2',label:'Non-scheduled passenger air transport' }),
-(`51.10/2`)-[:hasParent]->(`51.10`),
-(`50`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50',label:'Water transport' }),
-(`50`)-[:hasParent]->(`H`),
-(`50.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.2',label:'Sea and coastal freight water transport' }),
-(`50.2`)-[:hasParent]->(`50`),
-(`50.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.20',label:'Sea and coastal freight water transport' }),
-(`50.20`)-[:hasParent]->(`50.2`),
-(`50.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.3',label:'Inland passenger water transport' }),
-(`50.3`)-[:hasParent]->(`50`),
-(`50.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.30',label:'Inland passenger water transport' }),
-(`50.30`)-[:hasParent]->(`50.3`),
-(`50.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.1',label:'Sea and coastal passenger water transport' }),
-(`50.1`)-[:hasParent]->(`50`),
-(`50.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.10',label:'Sea and coastal passenger water transport' }),
-(`50.10`)-[:hasParent]->(`50.1`),
-(`50.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.4',label:'Inland freight water transport' }),
-(`50.4`)-[:hasParent]->(`50`),
-(`50.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.40',label:'Inland freight water transport' }),
-(`50.40`)-[:hasParent]->(`50.4`),
-(`I`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'I',label:'ACCOMMODATION AND FOOD SERVICE ACTIVITIES' }),
-(`55`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55',label:'Accommodation' }),
-(`55`)-[:hasParent]->(`I`),
-(`55.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.9',label:'Other accommodation' }),
-(`55.9`)-[:hasParent]->(`55`),
-(`55.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.90',label:'Other accommodation' }),
-(`55.90`)-[:hasParent]->(`55.9`),
-(`55.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.3',label:'Camping grounds, recreational vehicle parks and trailer parks' }),
-(`55.3`)-[:hasParent]->(`55`),
-(`55.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.30',label:'Camping grounds, recreational vehicle parks and trailer parks' }),
-(`55.30`)-[:hasParent]->(`55.3`),
-(`55.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.2',label:'Holiday and other short-stay accommodation' }),
-(`55.2`)-[:hasParent]->(`55`),
-(`55.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20',label:'Holiday and other short-stay accommodation' }),
-(`55.20`)-[:hasParent]->(`55.2`),
-(`55.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20/2',label:'Youth hostels' }),
-(`55.20/2`)-[:hasParent]->(`55.20`),
-(`55.20/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20/9',label:'Other holiday and other short-stay accommodation (not including holiday centres and villages or youth hostels) n.e.c.' }),
-(`55.20/9`)-[:hasParent]->(`55.20`),
-(`55.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20/1',label:'Holiday centres and villages' }),
-(`55.20/1`)-[:hasParent]->(`55.20`),
-(`55.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.1',label:'Hotels and similar accommodation' }),
-(`55.1`)-[:hasParent]->(`55`),
-(`55.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.10',label:'Hotels and similar accommodation' }),
-(`55.10`)-[:hasParent]->(`55.1`),
-(`56`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56',label:'Food and beverage service activities' }),
-(`56`)-[:hasParent]->(`I`),
-(`56.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.3',label:'Beverage serving activities' }),
-(`56.3`)-[:hasParent]->(`56`),
-(`56.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30',label:'Beverage serving activities' }),
-(`56.30`)-[:hasParent]->(`56.3`),
-(`56.30/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30/2',label:'Public houses and bars' }),
-(`56.30/2`)-[:hasParent]->(`56.30`),
-(`56.30/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30/1',label:'Licensed clubs' }),
-(`56.30/1`)-[:hasParent]->(`56.30`),
-(`56.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.1',label:'Restaurants and mobile food service activities' }),
-(`56.1`)-[:hasParent]->(`56`),
-(`56.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10',label:'Restaurants and mobile food service activities' }),
-(`56.10`)-[:hasParent]->(`56.1`),
-(`56.10/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10/3',label:'Take away food shops and mobile food stands' }),
-(`56.10/3`)-[:hasParent]->(`56.10`),
-(`56.10/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10/2',label:'Unlicensed restaurants and cafes' }),
-(`56.10/2`)-[:hasParent]->(`56.10`),
-(`56.10/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10/1',label:'Licensed restaurants' }),
-(`56.10/1`)-[:hasParent]->(`56.10`),
-(`56.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.2',label:'Event catering and other food service activities' }),
-(`56.2`)-[:hasParent]->(`56`),
-(`56.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.21',label:'Event catering activities' }),
-(`56.21`)-[:hasParent]->(`56.2`),
-(`56.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.29',label:'Other food service activities' }),
-(`56.29`)-[:hasParent]->(`56.2`),
-(`J`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J',label:'INFORMATION AND COMMUNICATION' }),
-(`61`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61',label:'Telecommunications' }),
-(`61`)-[:hasParent]->(`J`),
-(`61.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.1',label:'Wired telecommunications activities' }),
-(`61.1`)-[:hasParent]->(`61`),
-(`61.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.10',label:'Wired telecommunications activities' }),
-(`61.10`)-[:hasParent]->(`61.1`),
-(`61.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.9',label:'Other telecommunications activities' }),
-(`61.9`)-[:hasParent]->(`61`),
-(`61.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.90',label:'Other telecommunications activities' }),
-(`61.90`)-[:hasParent]->(`61.9`),
-(`61.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.3',label:'Satellite telecommunications activities' }),
-(`61.3`)-[:hasParent]->(`61`),
-(`61.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.30',label:'Satellite telecommunications activities' }),
-(`61.30`)-[:hasParent]->(`61.3`),
-(`61.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.2',label:'Wireless telecommunications activities' }),
-(`61.2`)-[:hasParent]->(`61`),
-(`61.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.20',label:'Wireless telecommunications activities' }),
-(`61.20`)-[:hasParent]->(`61.2`),
-(`63`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63',label:'Information service activities' }),
-(`63`)-[:hasParent]->(`J`),
-(`63.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.1',label:'Data processing, hosting and related activities; web portals' }),
-(`63.1`)-[:hasParent]->(`63`),
-(`63.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.11',label:'Data processing, hosting and related activities' }),
-(`63.11`)-[:hasParent]->(`63.1`),
-(`63.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.12',label:'Web portals' }),
-(`63.12`)-[:hasParent]->(`63.1`),
-(`63.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.9',label:'Other information service activities' }),
-(`63.9`)-[:hasParent]->(`63`),
-(`63.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.99',label:'Other information service activities n.e.c.' }),
-(`63.99`)-[:hasParent]->(`63.9`),
-(`63.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.91',label:'News agency activities' }),
-(`63.91`)-[:hasParent]->(`63.9`),
-(`58`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58',label:'Publishing activities' }),
-(`58`)-[:hasParent]->(`J`),
-(`58.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.1',label:'Publishing of books, periodicals and other publishing activities' }),
-(`58.1`)-[:hasParent]->(`58`),
-(`58.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.11',label:'Book publishing' }),
-(`58.11`)-[:hasParent]->(`58.1`),
-(`58.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14',label:'Publishing of journals and periodicals' }),
-(`58.14`)-[:hasParent]->(`58.1`),
-(`58.14/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14/1',label:'Publishing of learned journals' }),
-(`58.14/1`)-[:hasParent]->(`58.14`),
-(`58.14/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14/2',label:'Publishing of consumer, business and professional journals and periodicals' }),
-(`58.14/2`)-[:hasParent]->(`58.14`),
-(`58.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.12',label:'Publishing of directories and mailing lists' }),
-(`58.12`)-[:hasParent]->(`58.1`),
-(`58.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.13',label:'Publishing of newspapers' }),
-(`58.13`)-[:hasParent]->(`58.1`),
-(`58.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.19',label:'Other publishing activities' }),
-(`58.19`)-[:hasParent]->(`58.1`),
-(`58.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.2',label:'Software publishing' }),
-(`58.2`)-[:hasParent]->(`58`),
-(`58.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.29',label:'Other software publishing' }),
-(`58.29`)-[:hasParent]->(`58.2`),
-(`58.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.21',label:'Publishing of computer games' }),
-(`58.21`)-[:hasParent]->(`58.2`),
-(`60`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60',label:'Programming and broadcasting activities' }),
-(`60`)-[:hasParent]->(`J`),
-(`60.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.2',label:'Television programming and broadcasting activities' }),
-(`60.2`)-[:hasParent]->(`60`),
-(`60.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.20',label:'Television programming and broadcasting activities' }),
-(`60.20`)-[:hasParent]->(`60.2`),
-(`60.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.1',label:'Radio broadcasting' }),
-(`60.1`)-[:hasParent]->(`60`),
-(`60.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.10',label:'Radio broadcasting' }),
-(`60.10`)-[:hasParent]->(`60.1`),
-(`59`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59',label:'Motion picture, video and television programme production, sound recording and music publishing activities' }),
-(`59`)-[:hasParent]->(`J`),
-(`59.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.2',label:'Sound recording and music publishing activities' }),
-(`59.2`)-[:hasParent]->(`59`),
-(`59.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.20',label:'Sound recording and music publishing activities' }),
-(`59.20`)-[:hasParent]->(`59.2`),
-(`59.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.1',label:'Motion picture, video and television programme activities' }),
-(`59.1`)-[:hasParent]->(`59`),
-(`59.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11',label:'Motion picture, video and television programme production activities' }),
-(`59.11`)-[:hasParent]->(`59.1`),
-(`59.11/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11/3',label:'Television programme production activities' }),
-(`59.11/3`)-[:hasParent]->(`59.11`),
-(`59.11/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11/2',label:'Video production activities' }),
-(`59.11/2`)-[:hasParent]->(`59.11`),
-(`59.11/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11/1',label:'Motion picture production activities' }),
-(`59.11/1`)-[:hasParent]->(`59.11`),
-(`59.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.12',label:'Motion picture, video and television programme post-production activities' }),
-(`59.12`)-[:hasParent]->(`59.1`),
-(`59.14`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.14',label:'Motion picture projection activities' }),
-(`59.14`)-[:hasParent]->(`59.1`),
-(`59.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13',label:'Motion picture, video and television programme distribution activities' }),
-(`59.13`)-[:hasParent]->(`59.1`),
-(`59.13/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13/3',label:'Television programme distribution activities' }),
-(`59.13/3`)-[:hasParent]->(`59.13`),
-(`59.13/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13/2',label:'Video distribution activities' }),
-(`59.13/2`)-[:hasParent]->(`59.13`),
-(`59.13/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13/1',label:'Motion picture distribution activities' }),
-(`59.13/1`)-[:hasParent]->(`59.13`),
-(`62`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62',label:'Computer programming, consultancy and related activities' }),
-(`62`)-[:hasParent]->(`J`),
-(`62.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.0',label:'Computer programming, consultancy and related activities' }),
-(`62.0`)-[:hasParent]->(`62`),
-(`62.03`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.03',label:'Computer facilities management activities' }),
-(`62.03`)-[:hasParent]->(`62.0`),
-(`62.02`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.02',label:'Computer consultancy activities' }),
-(`62.02`)-[:hasParent]->(`62.0`),
-(`62.01`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01',label:'Computer programming activities' }),
-(`62.01`)-[:hasParent]->(`62.0`),
-(`62.01/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01/1',label:'Ready-made interactive leisure and entertainment software development' }),
-(`62.01/1`)-[:hasParent]->(`62.01`),
-(`62.01/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01/2',label:'Business and domestic software development' }),
-(`62.01/2`)-[:hasParent]->(`62.01`),
-(`62.09`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.09',label:'Other information technology and computer service activities' }),
-(`62.09`)-[:hasParent]->(`62.0`),
-(`K`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'K',label:'FINANCIAL AND INSURANCE ACTIVITIES' }),
-(`64`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64',label:'Financial service activities, except insurance and pension funding' }),
-(`64`)-[:hasParent]->(`K`),
-(`64.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.1',label:'Monetary intermediation' }),
-(`64.1`)-[:hasParent]->(`64`),
-(`64.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.11',label:'Central banking' }),
-(`64.11`)-[:hasParent]->(`64.1`),
-(`64.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19',label:'Other monetary intermediation' }),
-(`64.19`)-[:hasParent]->(`64.1`),
-(`64.19/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19/2',label:'Building societies' }),
-(`64.19/2`)-[:hasParent]->(`64.19`),
-(`64.19/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19/1',label:'Banks' }),
-(`64.19/1`)-[:hasParent]->(`64.19`),
-(`64.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.3',label:'Trusts, funds and similar financial entities' }),
-(`64.3`)-[:hasParent]->(`64`),
-(`64.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30',label:'Trusts, funds and similar financial entities' }),
-(`64.30`)-[:hasParent]->(`64.3`),
-(`64.30/4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/4',label:'Activities of open-ended investment companies' }),
-(`64.30/4`)-[:hasParent]->(`64.30`),
-(`64.30/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/3',label:'Activities of venture and development capital companies' }),
-(`64.30/3`)-[:hasParent]->(`64.30`),
-(`64.30/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/2',label:'Activities of unit trusts' }),
-(`64.30/2`)-[:hasParent]->(`64.30`),
-(`64.30/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/1',label:'Activities of investment trusts' }),
-(`64.30/1`)-[:hasParent]->(`64.30`),
-(`64.30/5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/5',label:'Activities of property unit trusts' }),
-(`64.30/5`)-[:hasParent]->(`64.30`),
-(`64.30/6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/6',label:'Activities of real estate investment trusts' }),
-(`64.30/6`)-[:hasParent]->(`64.30`),
-(`64.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.9',label:'Other financial service activities, except insurance and pension funding' }),
-(`64.9`)-[:hasParent]->(`64`),
-(`64.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99',label:'Other financial service activities, except insurance and pension funding, n.e.c.' }),
-(`64.99`)-[:hasParent]->(`64.9`),
-(`64.99/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99/1',label:'Security dealing on own account' }),
-(`64.99/1`)-[:hasParent]->(`64.99`),
-(`64.99/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99/9',label:'Other financial service activities, except insurance and pension funding, (not including security dealing on own account and factoring) n.e.c.' }),
-(`64.99/9`)-[:hasParent]->(`64.99`),
-(`64.99/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99/2',label:'Factoring' }),
-(`64.99/2`)-[:hasParent]->(`64.99`),
-(`64.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92',label:'Other credit granting' }),
-(`64.92`)-[:hasParent]->(`64.9`),
-(`64.92/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92/2',label:'Activities of mortgage finance companies' }),
-(`64.92/2`)-[:hasParent]->(`64.92`),
-(`64.92/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92/1',label:'Credit granting by non-deposit taking finance houses and other specialist consumer credit grantors' }),
-(`64.92/1`)-[:hasParent]->(`64.92`),
-(`64.92/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92/9',label:'Other credit granting (not including credit granting by non-deposit taking finance houses and other specialist consumer credit grantors and activities of mortgage finance companies) n.e.c.' }),
-(`64.92/9`)-[:hasParent]->(`64.92`),
-(`64.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.91',label:'Financial leasing' }),
-(`64.91`)-[:hasParent]->(`64.9`),
-(`64.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.2',label:'Activities of holding companies' }),
-(`64.2`)-[:hasParent]->(`64`),
-(`64.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20',label:'Activities of holding companies' }),
-(`64.20`)-[:hasParent]->(`64.2`),
-(`64.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/2',label:'Activities of production holding companies' }),
-(`64.20/2`)-[:hasParent]->(`64.20`),
-(`64.20/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/9',label:'Activities of other holding companies (not including agricultural, production, construction, distribution and financial services holding companies) n.e.c.' }),
-(`64.20/9`)-[:hasParent]->(`64.20`),
-(`64.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/1',label:'Activities of agricultural holding companies' }),
-(`64.20/1`)-[:hasParent]->(`64.20`),
-(`64.20/4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/4',label:'Activities of distribution holding companies' }),
-(`64.20/4`)-[:hasParent]->(`64.20`),
-(`64.20/5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/5',label:'Activities of financial services holding companies' }),
-(`64.20/5`)-[:hasParent]->(`64.20`),
-(`64.20/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/3',label:'Activities of construction holding companies' }),
-(`64.20/3`)-[:hasParent]->(`64.20`),
-(`66`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66',label:'Activities auxiliary to financial services and insurance activities' }),
-(`66`)-[:hasParent]->(`K`),
-(`66.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.3',label:'Fund management activities' }),
-(`66.3`)-[:hasParent]->(`66`),
-(`66.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.30',label:'Fund management activities' }),
-(`66.30`)-[:hasParent]->(`66.3`),
-(`66.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.1',label:'Activities auxiliary to financial services, except insurance and pension funding' }),
-(`66.1`)-[:hasParent]->(`66`),
-(`66.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.12',label:'Security and commodity contracts brokerage' }),
-(`66.12`)-[:hasParent]->(`66.1`),
-(`66.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.19',label:'Other activities auxiliary to financial services, except insurance and pension funding' }),
-(`66.19`)-[:hasParent]->(`66.1`),
-(`66.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.11',label:'Administration of financial markets' }),
-(`66.11`)-[:hasParent]->(`66.1`),
-(`66.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.2',label:'Activities auxiliary to insurance and pension funding' }),
-(`66.2`)-[:hasParent]->(`66`),
-(`66.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.21',label:'Risk and damage evaluation' }),
-(`66.21`)-[:hasParent]->(`66.2`),
-(`66.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.22',label:'Activities of insurance agents and brokers' }),
-(`66.22`)-[:hasParent]->(`66.2`),
-(`66.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.29',label:'Other activities auxiliary to insurance and pension funding' }),
-(`66.29`)-[:hasParent]->(`66.2`),
-(`65`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65',label:'Insurance, reinsurance and pension funding, except compulsory social security' }),
-(`65`)-[:hasParent]->(`K`),
-(`65.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.2',label:'Reinsurance' }),
-(`65.2`)-[:hasParent]->(`65`),
-(`65.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20',label:'Reinsurance' }),
-(`65.20`)-[:hasParent]->(`65.2`),
-(`65.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20/2',label:'Non-life reinsurance' }),
-(`65.20/2`)-[:hasParent]->(`65.20`),
-(`65.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20/1',label:'Life reinsurance' }),
-(`65.20/1`)-[:hasParent]->(`65.20`),
-(`65.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.3',label:'Pension funding' }),
-(`65.3`)-[:hasParent]->(`65`),
-(`65.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.30',label:'Pension funding' }),
-(`65.30`)-[:hasParent]->(`65.3`),
-(`65.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.1',label:'Insurance' }),
-(`65.1`)-[:hasParent]->(`65`),
-(`65.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.11',label:'Life insurance' }),
-(`65.11`)-[:hasParent]->(`65.1`),
-(`65.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.12',label:'Non-life insurance' }),
-(`65.12`)-[:hasParent]->(`65.1`),
-(`L`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'L',label:'REAL ESTATE ACTIVITIES' }),
-(`68`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68',label:'Real estate activities' }),
-(`68`)-[:hasParent]->(`L`),
-(`68.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.1',label:'Buying and selling of own real estate' }),
-(`68.1`)-[:hasParent]->(`68`),
-(`68.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.10',label:'Buying and selling of own real estate' }),
-(`68.10`)-[:hasParent]->(`68.1`),
-(`68.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.3',label:'Real estate activities on a fee or contract basis' }),
-(`68.3`)-[:hasParent]->(`68`),
-(`68.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.32',label:'Management of real estate on a fee or contract basis' }),
-(`68.32`)-[:hasParent]->(`68.3`),
-(`68.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.31',label:'Real estate agencies' }),
-(`68.31`)-[:hasParent]->(`68.3`),
-(`68.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.2',label:'Renting and operating of own or leased real estate' }),
-(`68.2`)-[:hasParent]->(`68`),
-(`68.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20',label:'Renting and operating of own or leased real estate' }),
-(`68.20`)-[:hasParent]->(`68.2`),
-(`68.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20/1',label:'Renting and operating of Housing Association real estate' }),
-(`68.20/1`)-[:hasParent]->(`68.20`),
-(`68.20/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20/9',label:'Letting and operating of own or leased real estate (other than Housing Association real estate and conference and exhibition services) n.e.c.' }),
-(`68.20/9`)-[:hasParent]->(`68.20`),
-(`68.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20/2',label:'Letting and operating of conference and exhibition centres' }),
-(`68.20/2`)-[:hasParent]->(`68.20`),
-(`M`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M',label:'PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES' }),
-(`73`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73',label:'Advertising and market research' }),
-(`73`)-[:hasParent]->(`M`),
-(`73.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.2',label:'Market research and public opinion polling' }),
-(`73.2`)-[:hasParent]->(`73`),
-(`73.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.20',label:'Market research and public opinion polling' }),
-(`73.20`)-[:hasParent]->(`73.2`),
-(`73.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.1',label:'Advertising' }),
-(`73.1`)-[:hasParent]->(`73`),
-(`73.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.11',label:'Advertising agencies' }),
-(`73.11`)-[:hasParent]->(`73.1`),
-(`73.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.12',label:'Media representation' }),
-(`73.12`)-[:hasParent]->(`73.1`),
-(`71`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71',label:'Architectural and engineering activities; technical testing and analysis' }),
-(`71`)-[:hasParent]->(`M`),
-(`71.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.1',label:'Architectural and engineering activities and related technical consultancy' }),
-(`71.1`)-[:hasParent]->(`71`),
-(`71.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11',label:'Architectural activities' }),
-(`71.11`)-[:hasParent]->(`71.1`),
-(`71.11/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11/1',label:'Architectural activities' }),
-(`71.11/1`)-[:hasParent]->(`71.11`),
-(`71.11/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11/2',label:'Urban planning and landscape architectural activities' }),
-(`71.11/2`)-[:hasParent]->(`71.11`),
-(`71.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12',label:'Engineering activities and related technical consultancy' }),
-(`71.12`)-[:hasParent]->(`71.1`),
-(`71.12/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12/9',label:'Other engineering activities (not including engineering design for industrial process and production or engineering related scientific and technical consulting activities)' }),
-(`71.12/9`)-[:hasParent]->(`71.12`),
-(`71.12/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12/2',label:'Engineering related scientific and technical consulting activities' }),
-(`71.12/2`)-[:hasParent]->(`71.12`),
-(`71.12/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12/1',label:'Engineering design activities for industrial process and production' }),
-(`71.12/1`)-[:hasParent]->(`71.12`),
-(`71.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.2',label:'Technical testing and analysis' }),
-(`71.2`)-[:hasParent]->(`71`),
-(`71.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.20',label:'Technical testing and analysis' }),
-(`71.20`)-[:hasParent]->(`71.2`),
-(`75`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75',label:'Veterinary activities' }),
-(`75`)-[:hasParent]->(`M`),
-(`75.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75.0',label:'Veterinary activities' }),
-(`75.0`)-[:hasParent]->(`75`),
-(`75.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75.00',label:'Veterinary activities' }),
-(`75.00`)-[:hasParent]->(`75.0`),
-(`70`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70',label:'Activities of head offices; management consultancy activities' }),
-(`70`)-[:hasParent]->(`M`),
-(`70.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.2',label:'Management consultancy activities' }),
-(`70.2`)-[:hasParent]->(`70`),
-(`70.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.21',label:'Public relations and communication activities' }),
-(`70.21`)-[:hasParent]->(`70.2`),
-(`70.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22',label:'Business and other management consultancy activities' }),
-(`70.22`)-[:hasParent]->(`70.2`),
-(`70.22/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22/1',label:'Financial management' }),
-(`70.22/1`)-[:hasParent]->(`70.22`),
-(`70.22/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22/9',label:'Management consultancy activities (other than financial management)' }),
-(`70.22/9`)-[:hasParent]->(`70.22`),
-(`70.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.1',label:'Activities of head offices' }),
-(`70.1`)-[:hasParent]->(`70`),
-(`70.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.10',label:'Activities of head offices' }),
-(`70.10`)-[:hasParent]->(`70.1`),
-(`72`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72',label:'Scientific research and development' }),
-(`72`)-[:hasParent]->(`M`),
-(`72.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.2',label:'Research and experimental development on social sciences and humanities' }),
-(`72.2`)-[:hasParent]->(`72`),
-(`72.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.20',label:'Research and experimental development on social sciences and humanities' }),
-(`72.20`)-[:hasParent]->(`72.2`),
-(`72.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.1',label:'Research and experimental development on natural sciences and engineering' }),
-(`72.1`)-[:hasParent]->(`72`),
-(`72.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.19',label:'Other research and experimental development on natural sciences and engineering' }),
-(`72.19`)-[:hasParent]->(`72.1`),
-(`72.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.11',label:'Research and experimental development on biotechnology' }),
-(`72.11`)-[:hasParent]->(`72.1`),
-(`69`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69',label:'Legal and accounting activities' }),
-(`69`)-[:hasParent]->(`M`),
-(`69.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.1',label:'Legal activities' }),
-(`69.1`)-[:hasParent]->(`69`),
-(`69.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10',label:'Legal activities' }),
-(`69.10`)-[:hasParent]->(`69.1`),
-(`69.10/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10/2',label:'Solicitors' }),
-(`69.10/2`)-[:hasParent]->(`69.10`),
-(`69.10/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10/9',label:'Activities of patent and copyright agents; other legal activities (other than those of barristers and solicitors) n.e.c.' }),
-(`69.10/9`)-[:hasParent]->(`69.10`),
-(`69.10/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10/1',label:'Barristers at law' }),
-(`69.10/1`)-[:hasParent]->(`69.10`),
-(`69.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.2',label:'Accounting, bookkeeping and auditing activities; tax consultancy' }),
-(`69.2`)-[:hasParent]->(`69`),
-(`69.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20',label:'Accounting, bookkeeping and auditing activities; tax consultancy' }),
-(`69.20`)-[:hasParent]->(`69.2`),
-(`69.20/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20/3',label:'Tax consultancy' }),
-(`69.20/3`)-[:hasParent]->(`69.20`),
-(`69.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20/1',label:'Accounting, and auditing activities' }),
-(`69.20/1`)-[:hasParent]->(`69.20`),
-(`69.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20/2',label:'Bookkeeping activities' }),
-(`69.20/2`)-[:hasParent]->(`69.20`),
-(`74`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74',label:'Other professional, scientific and technical activities' }),
-(`74`)-[:hasParent]->(`M`),
-(`74.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.2',label:'Photographic activities' }),
-(`74.2`)-[:hasParent]->(`74`),
-(`74.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20',label:'Photographic activities' }),
-(`74.20`)-[:hasParent]->(`74.2`),
-(`74.20/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/9',label:'Other photographic activities (not including portrait and other specialist photography and film processing) n.e.c.' }),
-(`74.20/9`)-[:hasParent]->(`74.20`),
-(`74.20/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/2',label:'Other specialist photography (not including portrait photography)' }),
-(`74.20/2`)-[:hasParent]->(`74.20`),
-(`74.20/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/3',label:'Film processing' }),
-(`74.20/3`)-[:hasParent]->(`74.20`),
-(`74.20/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/1',label:'Portrait photographic activities' }),
-(`74.20/1`)-[:hasParent]->(`74.20`),
-(`74.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.3',label:'Translation and interpretation activities' }),
-(`74.3`)-[:hasParent]->(`74`),
-(`74.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.30',label:'Translation and interpretation activities' }),
-(`74.30`)-[:hasParent]->(`74.3`),
-(`74.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.9',label:'Other professional, scientific and technical activities n.e.c.' }),
-(`74.9`)-[:hasParent]->(`74`),
-(`74.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90',label:'Other professional, scientific and technical activities n.e.c.' }),
-(`74.90`)-[:hasParent]->(`74.9`),
-(`74.90/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90/9',label:'Other professional, scientific and technical activities (not including environmental consultancy or quantity surveying) n.e.c.' }),
-(`74.90/9`)-[:hasParent]->(`74.90`),
-(`74.90/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90/1',label:'Environmental consulting activities' }),
-(`74.90/1`)-[:hasParent]->(`74.90`),
-(`74.90/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90/2',label:'Quantity surveying activities' }),
-(`74.90/2`)-[:hasParent]->(`74.90`),
-(`74.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.1',label:'Specialised design activities' }),
-(`74.1`)-[:hasParent]->(`74`),
-(`74.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.10',label:'Specialised design activities' }),
-(`74.10`)-[:hasParent]->(`74.1`),
-(`N`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N',label:'ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES' }),
-(`79`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79',label:'Travel agency, tour operator and other reservation service and related activities' }),
-(`79`)-[:hasParent]->(`N`),
-(`79.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.1',label:'Travel agency and tour operator activities' }),
-(`79.1`)-[:hasParent]->(`79`),
-(`79.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.12',label:'Tour operator activities' }),
-(`79.12`)-[:hasParent]->(`79.1`),
-(`79.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.11',label:'Travel agency activities' }),
-(`79.11`)-[:hasParent]->(`79.1`),
-(`79.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.9',label:'Other reservation service and related activities' }),
-(`79.9`)-[:hasParent]->(`79`),
-(`79.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90',label:'Other reservation service and related activities' }),
-(`79.90`)-[:hasParent]->(`79.9`),
-(`79.90/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90/9',label:'Other reservation service and related activities (not including activities of tourist guides)' }),
-(`79.90/9`)-[:hasParent]->(`79.90`),
-(`79.90/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90/1',label:'Activities of tourist guides' }),
-(`79.90/1`)-[:hasParent]->(`79.90`),
-(`82`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82',label:'Office administrative, office support and other business support activities' }),
-(`82`)-[:hasParent]->(`N`),
-(`82.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.2',label:'Activities of call centres' }),
-(`82.2`)-[:hasParent]->(`82`),
-(`82.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.20',label:'Activities of call centres' }),
-(`82.20`)-[:hasParent]->(`82.2`),
-(`82.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.3',label:'Organisation of conventions and trade shows' }),
-(`82.3`)-[:hasParent]->(`82`),
-(`82.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30',label:'Organisation of conventions and trade shows' }),
-(`82.30`)-[:hasParent]->(`82.3`),
-(`82.30/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30/2',label:'Activities of conference organizers' }),
-(`82.30/2`)-[:hasParent]->(`82.30`),
-(`82.30/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30/1',label:'Activities of exhibition and fair organizers' }),
-(`82.30/1`)-[:hasParent]->(`82.30`),
-(`82.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.1',label:'Office administrative and support activities' }),
-(`82.1`)-[:hasParent]->(`82`),
-(`82.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.19',label:'Photocopying, document preparation and other specialised office support activities' }),
-(`82.19`)-[:hasParent]->(`82.1`),
-(`82.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.11',label:'Combined office administrative service activities' }),
-(`82.11`)-[:hasParent]->(`82.1`),
-(`82.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.9',label:'Business support service activities n.e.c.' }),
-(`82.9`)-[:hasParent]->(`82`),
-(`82.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91',label:'Activities of collection agencies and credit bureaus' }),
-(`82.91`)-[:hasParent]->(`82.9`),
-(`82.91/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91/2',label:'Activities of credit bureaus' }),
-(`82.91/2`)-[:hasParent]->(`82.91`),
-(`82.91/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91/1',label:'Activities of collection agencies' }),
-(`82.91/1`)-[:hasParent]->(`82.91`),
-(`82.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.92',label:'Packaging activities' }),
-(`82.92`)-[:hasParent]->(`82.9`),
-(`82.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.99',label:'Other business support service activities n.e.c.' }),
-(`82.99`)-[:hasParent]->(`82.9`),
-(`78`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78',label:'Employment activities' }),
-(`78`)-[:hasParent]->(`N`),
-(`78.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.3',label:'Other human resources provision' }),
-(`78.3`)-[:hasParent]->(`78`),
-(`78.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.30',label:'Other human resources provision' }),
-(`78.30`)-[:hasParent]->(`78.3`),
-(`78.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.2',label:'Temporary employment agency activities' }),
-(`78.2`)-[:hasParent]->(`78`),
-(`78.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.20',label:'Temporary employment agency activities' }),
-(`78.20`)-[:hasParent]->(`78.2`),
-(`78.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.1',label:'Activities of employment placement agencies' }),
-(`78.1`)-[:hasParent]->(`78`),
-(`78.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10',label:'Activities of employment placement agencies' }),
-(`78.10`)-[:hasParent]->(`78.1`),
-(`78.10/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10/1',label:'Motion picture, television and other theatrical casting' }),
-(`78.10/1`)-[:hasParent]->(`78.10`),
-(`78.10/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10/9',label:'Activities of employment placement agencies (other than motion picture, television and other theatrical casting) n.e.c.' }),
-(`78.10/9`)-[:hasParent]->(`78.10`),
-(`80`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80',label:'Security and investigation activities' }),
-(`80`)-[:hasParent]->(`N`),
-(`80.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.1',label:'Private security activities' }),
-(`80.1`)-[:hasParent]->(`80`),
-(`80.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.10',label:'Private security activities' }),
-(`80.10`)-[:hasParent]->(`80.1`),
-(`80.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.3',label:'Investigation activities' }),
-(`80.3`)-[:hasParent]->(`80`),
-(`80.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.30',label:'Investigation activities' }),
-(`80.30`)-[:hasParent]->(`80.3`),
-(`80.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.2',label:'Security systems service activities' }),
-(`80.2`)-[:hasParent]->(`80`),
-(`80.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.20',label:'Security systems service activities' }),
-(`80.20`)-[:hasParent]->(`80.2`),
-(`81`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81',label:'Services to buildings and landscape activities' }),
-(`81`)-[:hasParent]->(`N`),
-(`81.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.1',label:'Combined facilities support activities' }),
-(`81.1`)-[:hasParent]->(`81`),
-(`81.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.10',label:'Combined facilities support activities' }),
-(`81.10`)-[:hasParent]->(`81.1`),
-(`81.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.2',label:'Cleaning activities' }),
-(`81.2`)-[:hasParent]->(`81`),
-(`81.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.21',label:'General cleaning of buildings' }),
-(`81.21`)-[:hasParent]->(`81.2`),
-(`81.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29',label:'Other cleaning activities' }),
-(`81.29`)-[:hasParent]->(`81.2`),
-(`81.29/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29/1',label:'Disinfecting and extermination services' }),
-(`81.29/1`)-[:hasParent]->(`81.29`),
-(`81.29/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29/9',label:'Cleaning services (other than disinfecting and extermination services) n.e.c.' }),
-(`81.29/9`)-[:hasParent]->(`81.29`),
-(`81.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22',label:'Other building and industrial cleaning activities' }),
-(`81.22`)-[:hasParent]->(`81.2`),
-(`81.22/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/1',label:'Window cleaning services' }),
-(`81.22/1`)-[:hasParent]->(`81.22`),
-(`81.22/3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/3',label:'Furnace and chimney cleaning services' }),
-(`81.22/3`)-[:hasParent]->(`81.22`),
-(`81.22/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/2',label:'Specialised cleaning services' }),
-(`81.22/2`)-[:hasParent]->(`81.22`),
-(`81.22/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/9',label:'Building and industrial cleaning activities (other than window cleaning, specialised cleaning and furnace and chimney cleaning services) n.e.c.' }),
-(`81.22/9`)-[:hasParent]->(`81.22`),
-(`81.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.3',label:'Landscape service activities' }),
-(`81.3`)-[:hasParent]->(`81`),
-(`81.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.30',label:'Landscape service activities' }),
-(`81.30`)-[:hasParent]->(`81.3`),
-(`77`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77',label:'Rental and leasing activities' }),
-(`77`)-[:hasParent]->(`N`),
-(`77.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3',label:'Renting and leasing of other machinery, equipment and tangible goods' }),
-(`77.3`)-[:hasParent]->(`77`),
-(`77.33`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.33',label:'Renting and leasing of office machinery and equipment (including computers)' }),
-(`77.33`)-[:hasParent]->(`77.3`),
-(`77.35`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35',label:'Renting and leasing of air transport equipment' }),
-(`77.35`)-[:hasParent]->(`77.3`),
-(`77.35/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35/1',label:'Renting and leasing of passenger air transport equipment' }),
-(`77.35/1`)-[:hasParent]->(`77.35`),
-(`77.35/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35/2',label:'Renting and leasing of freight air transport equipment' }),
-(`77.35/2`)-[:hasParent]->(`77.35`),
-(`77.39`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.39',label:'Renting and leasing of other machinery, equipment and tangible goods n.e.c.' }),
-(`77.39`)-[:hasParent]->(`77.3`),
-(`77.34`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34',label:'Renting and leasing of water transport equipment' }),
-(`77.34`)-[:hasParent]->(`77.3`),
-(`77.34/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34/2',label:'Renting and leasing of freight water transport equipment' }),
-(`77.34/2`)-[:hasParent]->(`77.34`),
-(`77.34/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34/1',label:'Renting and leasing of passenger water transport equipment' }),
-(`77.34/1`)-[:hasParent]->(`77.34`),
-(`77.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.32',label:'Renting and leasing of construction and civil engineering machinery and equipment' }),
-(`77.32`)-[:hasParent]->(`77.3`),
-(`77.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.31',label:'Renting and leasing of agricultural machinery and equipment' }),
-(`77.31`)-[:hasParent]->(`77.3`),
-(`77.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.2',label:'Renting and leasing of personal and household goods' }),
-(`77.2`)-[:hasParent]->(`77`),
-(`77.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.22',label:'Renting of video tapes and disks' }),
-(`77.22`)-[:hasParent]->(`77.2`),
-(`77.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.21',label:'Renting and leasing of recreational and sports goods' }),
-(`77.21`)-[:hasParent]->(`77.2`),
-(`77.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29',label:'Renting and leasing of other personal and household goods' }),
-(`77.29`)-[:hasParent]->(`77.2`),
-(`77.29/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29/1',label:'Renting and leasing of media entertainment equipment' }),
-(`77.29/1`)-[:hasParent]->(`77.29`),
-(`77.29/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29/9',label:'Renting and leasing of other personal and household goods (other than media entertainment equipment)' }),
-(`77.29/9`)-[:hasParent]->(`77.29`),
-(`77.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.1',label:'Renting and leasing of motor vehicles' }),
-(`77.1`)-[:hasParent]->(`77`),
-(`77.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.11',label:'Renting and leasing of cars and light motor vehicles' }),
-(`77.11`)-[:hasParent]->(`77.1`),
-(`77.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.12',label:'Renting and leasing of trucks' }),
-(`77.12`)-[:hasParent]->(`77.1`),
-(`77.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.4',label:'Leasing of intellectual property and similar products, except copyrighted works' }),
-(`77.4`)-[:hasParent]->(`77`),
-(`77.40`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.40',label:'Leasing of intellectual property and similar products, except copyrighted works' }),
-(`77.40`)-[:hasParent]->(`77.4`),
-(`O`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'O',label:'PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY' }),
-(`84`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84',label:'Public administration and defence; compulsory social security' }),
-(`84`)-[:hasParent]->(`O`),
-(`84.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.3',label:'Compulsory social security activities' }),
-(`84.3`)-[:hasParent]->(`84`),
-(`84.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.30',label:'Compulsory social security activities' }),
-(`84.30`)-[:hasParent]->(`84.3`),
-(`84.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.2',label:'Provision of services to the community as a whole' }),
-(`84.2`)-[:hasParent]->(`84`),
-(`84.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.21',label:'Foreign affairs' }),
-(`84.21`)-[:hasParent]->(`84.2`),
-(`84.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.24',label:'Public order and safety activities' }),
-(`84.24`)-[:hasParent]->(`84.2`),
-(`84.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.22',label:'Defence activities' }),
-(`84.22`)-[:hasParent]->(`84.2`),
-(`84.25`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.25',label:'Fire service activities' }),
-(`84.25`)-[:hasParent]->(`84.2`),
-(`84.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.23',label:'Justice and judicial activities' }),
-(`84.23`)-[:hasParent]->(`84.2`),
-(`84.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.1',label:'Administration of the State and the economic and social policy of the community' }),
-(`84.1`)-[:hasParent]->(`84`),
-(`84.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.11',label:'General public administration activities' }),
-(`84.11`)-[:hasParent]->(`84.1`),
-(`84.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.13',label:'Regulation of and contribution to more efficient operation of businesses' }),
-(`84.13`)-[:hasParent]->(`84.1`),
-(`84.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.12',label:'Regulation of the activities of providing health care, education, cultural services and other social services, excluding social security' }),
-(`84.12`)-[:hasParent]->(`84.1`),
-(`P`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'P',label:'EDUCATION' }),
-(`85`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85',label:'Education' }),
-(`85`)-[:hasParent]->(`P`),
-(`85.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.1',label:'Pre-primary education' }),
-(`85.1`)-[:hasParent]->(`85`),
-(`85.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.10',label:'Pre-primary education' }),
-(`85.10`)-[:hasParent]->(`85.1`),
-(`85.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.2',label:'Primary education' }),
-(`85.2`)-[:hasParent]->(`85`),
-(`85.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.20',label:'Primary education' }),
-(`85.20`)-[:hasParent]->(`85.2`),
-(`85.4`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.4',label:'Higher education' }),
-(`85.4`)-[:hasParent]->(`85`),
-(`85.42`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42',label:'Tertiary education' }),
-(`85.42`)-[:hasParent]->(`85.4`),
-(`85.42/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42/1',label:'First-degree level higher education' }),
-(`85.42/1`)-[:hasParent]->(`85.42`),
-(`85.42/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42/2',label:'Post-graduate level higher education' }),
-(`85.42/2`)-[:hasParent]->(`85.42`),
-(`85.41`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.41',label:'Post-secondary non-tertiary education' }),
-(`85.41`)-[:hasParent]->(`85.4`),
-(`85.6`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.6',label:'Educational support activities' }),
-(`85.6`)-[:hasParent]->(`85`),
-(`85.60`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.60',label:'Educational support activities' }),
-(`85.60`)-[:hasParent]->(`85.6`),
-(`85.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.3',label:'Secondary education' }),
-(`85.3`)-[:hasParent]->(`85`),
-(`85.31`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.31',label:'General secondary education' }),
-(`85.31`)-[:hasParent]->(`85.3`),
-(`85.32`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.32',label:'Technical and vocational secondary education' }),
-(`85.32`)-[:hasParent]->(`85.3`),
-(`85.5`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.5',label:'Other education' }),
-(`85.5`)-[:hasParent]->(`85`),
-(`85.51`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.51',label:'Sports and recreation education' }),
-(`85.51`)-[:hasParent]->(`85.5`),
-(`85.59`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.59',label:'Other education n.e.c.' }),
-(`85.59`)-[:hasParent]->(`85.5`),
-(`85.52`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.52',label:'Cultural education' }),
-(`85.52`)-[:hasParent]->(`85.5`),
-(`85.53`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.53',label:'Driving school activities' }),
-(`85.53`)-[:hasParent]->(`85.5`),
-(`Q`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'Q',label:'HUMAN HEALTH AND SOCIAL WORK ACTIVITIES' }),
-(`87`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87',label:'Residential care activities' }),
-(`87`)-[:hasParent]->(`Q`),
-(`87.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.9',label:'Other residential care activities' }),
-(`87.9`)-[:hasParent]->(`87`),
-(`87.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.90',label:'Other residential care activities' }),
-(`87.90`)-[:hasParent]->(`87.9`),
-(`87.3`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.3',label:'Residential care activities for the elderly and disabled' }),
-(`87.3`)-[:hasParent]->(`87`),
-(`87.30`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.30',label:'Residential care activities for the elderly and disabled' }),
-(`87.30`)-[:hasParent]->(`87.3`),
-(`87.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.2',label:'Residential care activities for learning disabilities, mental health and substance abuse' }),
-(`87.2`)-[:hasParent]->(`87`),
-(`87.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.20',label:'Residential care activities for learning disabilities, mental health and substance abuse' }),
-(`87.20`)-[:hasParent]->(`87.2`),
-(`87.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.1',label:'Residential nursing care activities' }),
-(`87.1`)-[:hasParent]->(`87`),
-(`87.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.10',label:'Residential nursing care activities' }),
-(`87.10`)-[:hasParent]->(`87.1`),
-(`86`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86',label:'Human health activities' }),
-(`86`)-[:hasParent]->(`Q`),
-(`86.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.9',label:'Other human health activities' }),
-(`86.9`)-[:hasParent]->(`86`),
-(`86.90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.90',label:'Other human health activities' }),
-(`86.90`)-[:hasParent]->(`86.9`),
-(`86.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.2',label:'Medical and dental practice activities' }),
-(`86.2`)-[:hasParent]->(`86`),
-(`86.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.21',label:'General medical practice activities' }),
-(`86.21`)-[:hasParent]->(`86.2`),
-(`86.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.23',label:'Dental practice activities' }),
-(`86.23`)-[:hasParent]->(`86.2`),
-(`86.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.22',label:'Specialist medical practice activities' }),
-(`86.22`)-[:hasParent]->(`86.2`),
-(`86.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.1',label:'Hospital activities' }),
-(`86.1`)-[:hasParent]->(`86`),
-(`86.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10',label:'Hospital activities' }),
-(`86.10`)-[:hasParent]->(`86.1`),
-(`86.10/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10/1',label:'Hospital activities' }),
-(`86.10/1`)-[:hasParent]->(`86.10`),
-(`86.10/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10/2',label:'Medical nursing home activities' }),
-(`86.10/2`)-[:hasParent]->(`86.10`),
-(`88`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88',label:'Social work activities without accommodation' }),
-(`88`)-[:hasParent]->(`Q`),
-(`88.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.9',label:'Other social work activities without accommodation' }),
-(`88.9`)-[:hasParent]->(`88`),
-(`88.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.99',label:'Other social work activities without accommodation n.e.c.' }),
-(`88.99`)-[:hasParent]->(`88.9`),
-(`88.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.91',label:'Child day-care activities' }),
-(`88.91`)-[:hasParent]->(`88.9`),
-(`88.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.1',label:'Social work activities without accommodation for the elderly and disabled' }),
-(`88.1`)-[:hasParent]->(`88`),
-(`88.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.10',label:'Social work activities without accommodation for the elderly and disabled' }),
-(`88.10`)-[:hasParent]->(`88.1`),
-(`R`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'R',label:'ARTS, ENTERTAINMENT AND RECREATION' }),
-(`93`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93',label:'Sports activities and amusement and recreation activities' }),
-(`93`)-[:hasParent]->(`R`),
-(`93.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.1',label:'Sports activities' }),
-(`93.1`)-[:hasParent]->(`93`),
-(`93.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.12',label:'Activities of sport clubs' }),
-(`93.12`)-[:hasParent]->(`93.1`),
-(`93.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.11',label:'Operation of sports facilities' }),
-(`93.11`)-[:hasParent]->(`93.1`),
-(`93.19`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19',label:'Other sports activities' }),
-(`93.19`)-[:hasParent]->(`93.1`),
-(`93.19/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19/1',label:'Activities of racehorse owners' }),
-(`93.19/1`)-[:hasParent]->(`93.19`),
-(`93.19/9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19/9',label:'Other sports activities (not including activities of racehorse owners) n.e.c.' }),
-(`93.19/9`)-[:hasParent]->(`93.19`),
-(`93.13`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.13',label:'Fitness facilities' }),
-(`93.13`)-[:hasParent]->(`93.1`),
-(`93.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.2',label:'Amusement and recreation activities' }),
-(`93.2`)-[:hasParent]->(`93`),
-(`93.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.21',label:'Activities of amusement parks and theme parks' }),
-(`93.21`)-[:hasParent]->(`93.2`),
-(`93.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.29',label:'Other amusement and recreation activities' }),
-(`93.29`)-[:hasParent]->(`93.2`),
-(`91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91',label:'Libraries, archives, museums and other cultural activities' }),
-(`91`)-[:hasParent]->(`R`),
-(`91.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.0',label:'Libraries, archives, museums and other cultural activities' }),
-(`91.0`)-[:hasParent]->(`91`),
-(`91.03`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.03',label:'Operation of historical sites and buildings and similar visitor attractions' }),
-(`91.03`)-[:hasParent]->(`91.0`),
-(`91.04`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.04',label:'Botanical and zoological gardens and nature reserve activities' }),
-(`91.04`)-[:hasParent]->(`91.0`),
-(`91.02`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.02',label:'Museum activities' }),
-(`91.02`)-[:hasParent]->(`91.0`),
-(`91.01`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01',label:'Library and archive activities' }),
-(`91.01`)-[:hasParent]->(`91.0`),
-(`91.01/2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01/2',label:'Archive activities' }),
-(`91.01/2`)-[:hasParent]->(`91.01`),
-(`91.01/1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01/1',label:'Library activities' }),
-(`91.01/1`)-[:hasParent]->(`91.01`),
-(`92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92',label:'Gambling and betting activities' }),
-(`92`)-[:hasParent]->(`R`),
-(`92.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92.0',label:'Gambling and betting activities' }),
-(`92.0`)-[:hasParent]->(`92`),
-(`92.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92.00',label:'Gambling and betting activities' }),
-(`92.00`)-[:hasParent]->(`92.0`),
-(`90`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90',label:'Creative, arts and entertainment activities' }),
-(`90`)-[:hasParent]->(`R`),
-(`90.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.0',label:'Creative, arts and entertainment activities' }),
-(`90.0`)-[:hasParent]->(`90`),
-(`90.02`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.02',label:'Support activities to performing arts' }),
-(`90.02`)-[:hasParent]->(`90.0`),
-(`90.01`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.01',label:'Performing arts' }),
-(`90.01`)-[:hasParent]->(`90.0`),
-(`90.04`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.04',label:'Operation of arts facilities' }),
-(`90.04`)-[:hasParent]->(`90.0`),
-(`90.03`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.03',label:'Artistic creation' }),
-(`90.03`)-[:hasParent]->(`90.0`),
-(`S`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'S',label:'OTHER SERVICE ACTIVITIES' }),
-(`96`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96',label:'Other personal service activities' }),
-(`96`)-[:hasParent]->(`S`),
-(`96.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.0',label:'Other personal service activities' }),
-(`96.0`)-[:hasParent]->(`96`),
-(`96.09`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.09',label:'Other personal service activities n.e.c.' }),
-(`96.09`)-[:hasParent]->(`96.0`),
-(`96.01`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.01',label:'Washing and (dry-)cleaning of textile and fur products' }),
-(`96.01`)-[:hasParent]->(`96.0`),
-(`96.04`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.04',label:'Physical well-being activities' }),
-(`96.04`)-[:hasParent]->(`96.0`),
-(`96.03`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.03',label:'Funeral and related activities' }),
-(`96.03`)-[:hasParent]->(`96.0`),
-(`96.02`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.02',label:'Hairdressing and other beauty treatment' }),
-(`96.02`)-[:hasParent]->(`96.0`),
-(`95`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95',label:'Repair of computers and personal and household goods' }),
-(`95`)-[:hasParent]->(`S`),
-(`95.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2',label:'Repair of personal and household goods' }),
-(`95.2`)-[:hasParent]->(`95`),
-(`95.22`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.22',label:'Repair of household appliances and home and garden equipment' }),
-(`95.22`)-[:hasParent]->(`95.2`),
-(`95.25`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.25',label:'Repair of watches, clocks and jewellery' }),
-(`95.25`)-[:hasParent]->(`95.2`),
-(`95.24`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.24',label:'Repair of furniture and home furnishings' }),
-(`95.24`)-[:hasParent]->(`95.2`),
-(`95.21`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.21',label:'Repair of consumer electronics' }),
-(`95.21`)-[:hasParent]->(`95.2`),
-(`95.23`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.23',label:'Repair of footwear and leather goods' }),
-(`95.23`)-[:hasParent]->(`95.2`),
-(`95.29`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.29',label:'Repair of other personal and household goods' }),
-(`95.29`)-[:hasParent]->(`95.2`),
-(`95.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.1',label:'Repair of computers and communication equipment' }),
-(`95.1`)-[:hasParent]->(`95`),
-(`95.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.12',label:'Repair of communication equipment' }),
-(`95.12`)-[:hasParent]->(`95.1`),
-(`95.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.11',label:'Repair of computers and peripheral equipment' }),
-(`95.11`)-[:hasParent]->(`95.1`),
-(`94`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94',label:'Activities of membership organisations' }),
-(`94`)-[:hasParent]->(`S`),
-(`94.9`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.9',label:'Activities of other membership organisations' }),
-(`94.9`)-[:hasParent]->(`94`),
-(`94.92`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.92',label:'Activities of political organisations' }),
-(`94.92`)-[:hasParent]->(`94.9`),
-(`94.99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.99',label:'Activities of other membership organisations n.e.c.' }),
-(`94.99`)-[:hasParent]->(`94.9`),
-(`94.91`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.91',label:'Activities of religious organisations' }),
-(`94.91`)-[:hasParent]->(`94.9`),
-(`94.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.2',label:'Activities of trade unions' }),
-(`94.2`)-[:hasParent]->(`94`),
-(`94.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.20',label:'Activities of trade unions' }),
-(`94.20`)-[:hasParent]->(`94.2`),
-(`94.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.1',label:'Activities of business, employers and professional membership organisations' }),
-(`94.1`)-[:hasParent]->(`94`),
-(`94.11`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.11',label:'Activities of business and employers membership organisations' }),
-(`94.11`)-[:hasParent]->(`94.1`),
-(`94.12`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.12',label:'Activities of professional membership organisations' }),
-(`94.12`)-[:hasParent]->(`94.1`),
-(`T`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'T',label:'ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS; UNDIFFERENTIATED GOODS-AND SERVICES-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE' }),
-(`98`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98',label:'Undifferentiated goods- and services-producing activities of private households for own use' }),
-(`98`)-[:hasParent]->(`T`),
-(`98.1`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.1',label:'Undifferentiated goods-producing activities of private households for own use' }),
-(`98.1`)-[:hasParent]->(`98`),
-(`98.10`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.10',label:'Undifferentiated goods-producing activities of private households for own use' }),
-(`98.10`)-[:hasParent]->(`98.1`),
-(`98.2`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.2',label:'Undifferentiated service-producing activities of private households for own use' }),
-(`98.2`)-[:hasParent]->(`98`),
-(`98.20`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.20',label:'Undifferentiated service-producing activities of private households for own use' }),
-(`98.20`)-[:hasParent]->(`98.2`),
-(`97`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97',label:'Activities of households as employers of domestic personnel' }),
-(`97`)-[:hasParent]->(`T`),
-(`97.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97.0',label:'Activities of households as employers of domestic personnel' }),
-(`97.0`)-[:hasParent]->(`97`),
-(`97.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97.00',label:'Activities of households as employers of domestic personnel' }),
-(`97.00`)-[:hasParent]->(`97.0`),
-(`U`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'U',label:'ACTIVITIES OF EXTRATERRITORIAL ORGANISATIONS AND BODIES' }),
-(`99`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99',label:'Activities of extraterritorial organisations and bodies' }),
-(`99`)-[:hasParent]->(`U`),
-(`99.0`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99.0',label:'Activities of extraterritorial organisations and bodies' }),
-(`99.0`)-[:hasParent]->(`99`),
-(`99.00`:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99.00',label:'Activities of extraterritorial organisations and bodies' }),
-(`99.00`)-[:hasParent]->(`99.0`);
+CREATE CONSTRAINT ON (n:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'A',label:'AGRICULTURE, FORESTRY AND FISHING' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'A' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01',label:'Crop and animal production, hunting and related service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1',label:'Growing of non-perennial crops' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.19',label:'Growing of other non-perennial crops' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.13',label:'Growing of vegetables and melons, roots and tubers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.12',label:'Growing of rice' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.14',label:'Growing of sugar cane' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.15',label:'Growing of tobacco' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.11',label:'Growing of cereals (except rice), leguminous crops and oil seeds' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.16',label:'Growing of fibre crops' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2',label:'Growing of perennial crops' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.21',label:'Growing of grapes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.26',label:'Growing of oleaginous fruits' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.22',label:'Growing of tropical and subtropical fruits' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.24',label:'Growing of pome fruits and stone fruits' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.23',label:'Growing of citrus fruits' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.27',label:'Growing of beverage crops' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.29',label:'Growing of other perennial crops' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.25',label:'Growing of other tree and bush fruits and nuts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.28',label:'Growing of spices, aromatic, drug and pharmaceutical crops' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.7',label:'Hunting, trapping and related service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.70',label:'Hunting, trapping and related service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.5',label:'Mixed farming' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.50',label:'Mixed farming' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.6',label:'Support activities to agriculture and post-harvest crop activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.64',label:'Seed processing for propagation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.63',label:'Post-harvest crop activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62',label:'Support activities for animal production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62/1',label:'Farm animal boarding and care' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.62/9',label:'Support activities for animal production (other than farm animal boarding and care) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.61',label:'Support activities for crop production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4',label:'Animal production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.43',label:'Raising of horses and other equines' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.46',label:'Raising of swine/pigs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.45',label:'Raising of sheep and goats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.47',label:'Raising of poultry' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.41',label:'Raising of dairy cattle' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.42',label:'Raising of other cattle and buffaloes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.44',label:'Raising of camels and camelids' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.49',label:'Raising of other animals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.3',label:'Plant propagation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'01.30',label:'Plant propagation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'A' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02',label:'Forestry and logging' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.1',label:'Silviculture and other forestry activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.10',label:'Silviculture and other forestry activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.4',label:'Support services to forestry' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.40',label:'Support services to forestry' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.3',label:'Gathering of wild growing non-wood products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.30',label:'Gathering of wild growing non-wood products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.2',label:'Logging' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'02.20',label:'Logging' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'A' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03',label:'Fishing and aquaculture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.2',label:'Aquaculture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.22',label:'Freshwater aquaculture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.21',label:'Marine aquaculture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.1',label:'Fishing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.11',label:'Marine fishing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'03.12',label:'Freshwater fishing' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'B',label:'MINING AND QUARRYING' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'B' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05',label:'Mining of coal and lignite' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.1',label:'Mining of hard coal' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10',label:'Mining of hard coal' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10/1',label:'Mining of hard coal from deep coal mines (underground mining)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.10/2',label:'Mining of hard coal from open cast coal working (surface mining)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.2',label:'Mining of lignite' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'05.20',label:'Mining of lignite' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'B' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06',label:'Extraction of crude petroleum and natural gas' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.1',label:'Extraction of crude petroleum' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.10',label:'Extraction of crude petroleum' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.2',label:'Extraction of natural gas' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'06.20',label:'Extraction of natural gas' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'B' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08',label:'Other mining and quarrying' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.1',label:'Quarrying of stone, sand and clay' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.11',label:'Quarrying of ornamental and building stone, limestone, gypsum, chalk and slate' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.12',label:'Operation of gravel and sand pits; mining of clays and kaolin' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.9',label:'Mining and quarrying n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.99',label:'Other mining and quarrying n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.91',label:'Mining of chemical and fertiliser minerals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.92',label:'Extraction of peat' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'08.93',label:'Extraction of salt' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'B' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09',label:'Mining support service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.9',label:'Support activities for other mining and quarrying' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.90',label:'Support activities for other mining and quarrying' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.1',label:'Support activities for petroleum and natural gas extraction' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'09.10',label:'Support activities for petroleum and natural gas extraction' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'B' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07',label:'Mining of metal ores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.2',label:'Mining of non-ferrous metal ores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.21',label:'Mining of uranium and thorium ores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.29',label:'Mining of other non-ferrous metal ores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.1',label:'Mining of iron ores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'07.10',label:'Mining of iron ores' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C',label:'MANUFACTURING' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25',label:'Manufacture of fabricated metal products, except machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.3',label:'Manufacture of steam generators, except central heating hot water boilers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.30',label:'Manufacture of steam generators, except central heating hot water boilers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.2',label:'Manufacture of tanks, reservoirs and containers of metal' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.21',label:'Manufacture of central heating radiators and boilers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.29',label:'Manufacture of other tanks, reservoirs and containers of metal' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.6',label:'Treatment and coating of metals; machining' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.61',label:'Treatment and coating of metals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.62',label:'Machining' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.4',label:'Manufacture of weapons and ammunition' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.40',label:'Manufacture of weapons and ammunition' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.1',label:'Manufacture of structural metal products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.11',label:'Manufacture of metal structures and parts of structures' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.12',label:'Manufacture of doors and windows of metal' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.7',label:'Manufacture of cutlery, tools and general hardware' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.73',label:'Manufacture of tools' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.72',label:'Manufacture of locks and hinges' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.71',label:'Manufacture of cutlery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.5',label:'Forging, pressing, stamping and roll-forming of metal; powder metallurgy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.50',label:'Forging, pressing, stamping and roll-forming of metal; powder metallurgy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.9',label:'Manufacture of other fabricated metal products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.91',label:'Manufacture of steel drums and similar containers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.94',label:'Manufacture of fasteners and screw machine products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.92',label:'Manufacture of light metal packaging' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.99',label:'Manufacture of other fabricated metal products n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'25.93',label:'Manufacture of wire products, chain and springs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32',label:'Other manufacturing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.2',label:'Manufacture of musical instruments' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.20',label:'Manufacture of musical instruments' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.4',label:'Manufacture of games and toys' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40',label:'Manufacture of games and toys' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40/9',label:'Manufacture of games and toys (other than professional and arcade games and toys) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.40/1',label:'Manufacture of professional and arcade games and toys' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.1',label:'Manufacture of jewellery, bijouterie and related articles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.11',label:'Striking of coins' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.12',label:'Manufacture of jewellery and related articles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.13',label:'Manufacture of imitation jewellery and related articles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.9',label:'Other manufacturing n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.91',label:'Manufacture of brooms and brushes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.99',label:'Other manufacturing n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.3',label:'Manufacture of sports goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.30',label:'Manufacture of sports goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.5',label:'Manufacture of medical and dental instruments and supplies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'32.50',label:'Manufacture of medical and dental instruments and supplies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15',label:'Manufacture of leather and related products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.1',label:'Tanning and dressing of leather; manufacture of luggage, handbags, saddlery and harness; dressing and dyeing of fur' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.12',label:'Manufacture of luggage, handbags and the like, saddlery and harness' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.11',label:'Tanning and dressing of leather; dressing and dyeing of fur' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.2',label:'Manufacture of footwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'15.20',label:'Manufacture of footwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24',label:'Manufacture of basic metals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.2',label:'Manufacture of tubes, pipes, hollow profiles and related fittings, of steel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.20',label:'Manufacture of tubes, pipes, hollow profiles and related fittings, of steel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.3',label:'Manufacture of other products of first processing of steel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.34',label:'Cold drawing of wire' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.31',label:'Cold drawing of bars' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.32',label:'Cold rolling of narrow strip' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.33',label:'Cold forming or folding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.1',label:'Manufacture of basic iron and steel and of ferro-alloys' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.10',label:'Manufacture of basic iron and steel and of ferro-alloys' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4',label:'Manufacture of basic precious and other non-ferrous metals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.41',label:'Precious metals production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.46',label:'Processing of nuclear fuel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.42',label:'Aluminium production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.45',label:'Other non-ferrous metal production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.44',label:'Copper production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.43',label:'Lead, zinc and tin production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.5',label:'Casting of metals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.54',label:'Casting of other non-ferrous metals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.51',label:'Casting of iron' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.53',label:'Casting of light metals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'24.52',label:'Casting of steel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20',label:'Manufacture of chemicals and chemical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.6',label:'Manufacture of man-made fibres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.60',label:'Manufacture of man-made fibres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.2',label:'Manufacture of pesticides and other agrochemical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.20',label:'Manufacture of pesticides and other agrochemical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.4',label:'Manufacture of soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41',label:'Manufacture of soap and detergents, cleaning and polishing preparations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41/1',label:'Manufacture of soap and detergents' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.41/2',label:'Manufacture of cleaning and polishing preparations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.42',label:'Manufacture of perfumes and toilet preparations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1',label:'Manufacture of basic chemicals, fertilisers and nitrogen compounds, plastics and synthetic rubber in primary forms' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.11',label:'Manufacture of industrial gases' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.17',label:'Manufacture of synthetic rubber in primary forms' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.14',label:'Manufacture of other organic basic chemicals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.13',label:'Manufacture of other inorganic basic chemicals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.12',label:'Manufacture of dyes and pigments' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.16',label:'Manufacture of plastics in primary forms' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.15',label:'Manufacture of fertilisers and nitrogen compounds' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.5',label:'Manufacture of other chemical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.53',label:'Manufacture of essential oils' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.52',label:'Manufacture of glues' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.51',label:'Manufacture of explosives' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.59',label:'Manufacture of other chemical products n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.3',label:'Manufacture of paints, varnishes and similar coatings, printing ink and mastics' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30',label:'Manufacture of paints, varnishes and similar coatings, printing ink and mastics' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30/2',label:'Manufacture of printing ink' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'20.30/1',label:'Manufacture of paints, varnishes and similar coatings, mastics and sealants' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23',label:'Manufacture of other non-metallic mineral products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.7',label:'Cutting, shaping and finishing of stone' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.70',label:'Cutting, shaping and finishing of stone' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.1',label:'Manufacture of glass and glass products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.13',label:'Manufacture of hollow glass' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.12',label:'Shaping and processing of flat glass' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.11',label:'Manufacture of flat glass' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.14',label:'Manufacture of glass fibres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.19',label:'Manufacture and processing of other glass, including technical glassware' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.3',label:'Manufacture of clay building materials' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.32',label:'Manufacture of bricks, tiles and construction products, in baked clay' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.31',label:'Manufacture of ceramic tiles and flags' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.4',label:'Manufacture of other porcelain and ceramic products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.43',label:'Manufacture of ceramic insulators and insulating fittings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.41',label:'Manufacture of ceramic household and ornamental articles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.44',label:'Manufacture of other technical ceramic products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.42',label:'Manufacture of ceramic sanitary fixtures' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.49',label:'Manufacture of other ceramic products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.9',label:'Manufacture of abrasive products and non-metallic mineral products n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.91',label:'Production of abrasive products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.99',label:'Manufacture of other non-metallic mineral products n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6',label:'Manufacture of articles of concrete, cement and plaster' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.61',label:'Manufacture of concrete products for construction purposes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.64',label:'Manufacture of mortars' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.62',label:'Manufacture of plaster products for construction purposes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.65',label:'Manufacture of fibre cement' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.69',label:'Manufacture of other articles of concrete, plaster and cement' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.63',label:'Manufacture of ready-mixed concrete' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.5',label:'Manufacture of cement, lime and plaster' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.52',label:'Manufacture of lime and plaster' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.51',label:'Manufacture of cement' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.2',label:'Manufacture of refractory products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'23.20',label:'Manufacture of refractory products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30',label:'Manufacture of other transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.4',label:'Manufacture of military fighting vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.40',label:'Manufacture of military fighting vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.1',label:'Building of ships and boats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.12',label:'Building of pleasure and sporting boats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.11',label:'Building of ships and floating structures' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.9',label:'Manufacture of transport equipment n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.92',label:'Manufacture of bicycles and invalid carriages' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.91',label:'Manufacture of motorcycles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.99',label:'Manufacture of other transport equipment n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.2',label:'Manufacture of railway locomotives and rolling stock' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.20',label:'Manufacture of railway locomotives and rolling stock' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.3',label:'Manufacture of air and spacecraft and related machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'30.30',label:'Manufacture of air and spacecraft and related machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28',label:'Manufacture of machinery and equipment n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.3',label:'Manufacture of agricultural and forestry machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30',label:'Manufacture of agricultural and forestry machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30/1',label:'Manufacture of agricultural tractors' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.30/2',label:'Manufacture of agricultural and forestry machinery (other than agricultural tractors)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.1',label:'Manufacture of general-purpose machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13',label:'Manufacture of other pumps and compressors' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13/1',label:'Manufacture of pumps' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.13/2',label:'Manufacture of compressors' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.12',label:'Manufacture of fluid power equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.15',label:'Manufacture of bearings, gears, gearing and driving elements' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.14',label:'Manufacture of other taps and valves' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.11',label:'Manufacture of engines and turbines, except aircraft, vehicle and cycle engines' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2',label:'Manufacture of other general-purpose machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.24',label:'Manufacture of power-driven hand tools' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.21',label:'Manufacture of ovens, furnaces and furnace burners' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.25',label:'Manufacture of non-domestic cooling and ventilation equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.22',label:'Manufacture of lifting and handling equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.23',label:'Manufacture of office machinery and equipment (except computers and peripheral equipment)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.29',label:'Manufacture of other general-purpose machinery n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.4',label:'Manufacture of metal forming machinery and machine tools' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.41',label:'Manufacture of metal forming machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.49',label:'Manufacture of other machine tools' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9',label:'Manufacture of other special-purpose machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.99',label:'Manufacture of other special-purpose machinery n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92',label:'Manufacture of machinery for mining, quarrying and construction' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92/3',label:'Manufacture of equipment for concrete crushing and screening roadworks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92/2',label:'Manufacture of earthmoving equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.92/1',label:'Manufacture of machinery for mining' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.91',label:'Manufacture of machinery for metallurgy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.94',label:'Manufacture of machinery for textile, apparel and leather production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.93',label:'Manufacture of machinery for food, beverage and tobacco processing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.96',label:'Manufacture of plastics and rubber machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'28.95',label:'Manufacture of machinery for paper and paperboard production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22',label:'Manufacture of rubber and plastic products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.2',label:'Manufacture of plastics products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.29',label:'Manufacture of other plastic products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.21',label:'Manufacture of plastic plates, sheets, tubes and profiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.23',label:'Manufacture of builders� ware of plastic' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.22',label:'Manufacture of plastic packing goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.1',label:'Manufacture of rubber products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.11',label:'Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'22.19',label:'Manufacture of other rubber products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18',label:'Printing and reproduction of recorded media' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.1',label:'Printing and service activities related to printing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12',label:'Other printing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12/1',label:'Manufacture of printed labels' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.12/9',label:'Printing (other than printing of newspapers and printing on labels and tags) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.13',label:'Pre-press and pre-media services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.11',label:'Printing of newspapers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.14',label:'Binding and related services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.2',label:'Reproduction of recorded media' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20',label:'Reproduction of recorded media' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20/2',label:'Reproduction of video recording' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20/1',label:'Reproduction of sound recording' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'18.20/3',label:'Reproduction of computer media' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31',label:'Manufacture of furniture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.0',label:'Manufacture of furniture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.01',label:'Manufacture of office and shop furniture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.03',label:'Manufacture of mattresses' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.02',label:'Manufacture of kitchen furniture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'31.09',label:'Manufacture of other furniture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29',label:'Manufacture of motor vehicles, trailers and semi-trailers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.1',label:'Manufacture of motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.10',label:'Manufacture of motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.3',label:'Manufacture of parts and accessories for motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.32',label:'Manufacture of other parts and accessories for motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.31',label:'Manufacture of electrical and electronic equipment for motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.2',label:'Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20',label:'Manufacture of bodies (coachwork) for motor vehicles; manufacture of trailers and semi-trailers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20/1',label:'Manufacture of bodies (coachwork) for motor vehicles (except caravans)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20/2',label:'Manufacture of trailers and semi-trailers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'29.20/3',label:'Manufacture of caravans' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16',label:'Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.1',label:'Sawmilling and planing of wood' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.10',label:'Sawmilling and planing of wood' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.2',label:'Manufacture of products of wood, cork, straw and plaiting materials' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.21',label:'Manufacture of veneer sheets and wood-based panels' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.23',label:'Manufacture of other builders\' carpentry and joinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.29',label:'Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.24',label:'Manufacture of wooden containers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'16.22',label:'Manufacture of assembled parquet floors' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17',label:'Manufacture of paper and paper products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.1',label:'Manufacture of pulp, paper and paperboard' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.11',label:'Manufacture of pulp' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.12',label:'Manufacture of paper and paperboard' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.2',label:'Manufacture of articles of paper and paperboard' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21',label:'Manufacture of corrugated paper and paperboard and of containers of paper and paperboard' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21/1',label:'Manufacture of corrugated paper and paperboard; manufacture of sacks and bags of paper' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.21/9',label:'Manufacture of paper and paperboard containers other than sacks and bags' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.29',label:'Manufacture of other articles of paper and paperboard' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.24',label:'Manufacture of wallpaper' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.22',label:'Manufacture of household and sanitary goods and of toilet requisites' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'17.23',label:'Manufacture of paper stationery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33',label:'Repair and installation of machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1',label:'Repair of fabricated metal products, machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.14',label:'Repair of electrical equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.17',label:'Repair and maintenance of other transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.11',label:'Repair of fabricated metal products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.12',label:'Repair of machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.13',label:'Repair of electronic and optical equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.19',label:'Repair of other equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.15',label:'Repair and maintenance of ships and boats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.16',label:'Repair and maintenance of aircraft and spacecraft' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.2',label:'Installation of industrial machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'33.20',label:'Installation of industrial machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21',label:'Manufacture of basic pharmaceutical products and pharmaceutical preparations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.1',label:'Manufacture of basic pharmaceutical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.10',label:'Manufacture of basic pharmaceutical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.2',label:'Manufacture of pharmaceutical preparations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'21.20',label:'Manufacture of pharmaceutical preparations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14',label:'Manufacture of wearing apparel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.2',label:'Manufacture of articles of fur' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.20',label:'Manufacture of articles of fur' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.3',label:'Manufacture of knitted and crocheted apparel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.31',label:'Manufacture of knitted and crocheted hosiery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.39',label:'Manufacture of other knitted and crocheted apparel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.1',label:'Manufacture of wearing apparel, except fur apparel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14',label:'Manufacture of underwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14/2',label:'Manufacture of women\'s underwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.14/1',label:'Manufacture of men\'s underwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13',label:'Manufacture of other outerwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13/1',label:'Manufacture of men\'s outerwear, other than leather clothes and workwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.13/2',label:'Manufacture of women\'s outerwear, other than leather clothes and workwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.12',label:'Manufacture of workwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.19',label:'Manufacture of other wearing apparel and accessories' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'14.11',label:'Manufacture of leather clothes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11',label:'Manufacture of beverages' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0',label:'Manufacture of beverages' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.06',label:'Manufacture of malt' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.05',label:'Manufacture of beer' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.01',label:'Distilling, rectifying and blending of spirits' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.02',label:'Manufacture of wine from grape' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.04',label:'Manufacture of other non-distilled fermented beverages' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.03',label:'Manufacture of cider and other fruit wines' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'11.07',label:'Manufacture of soft drinks; production of mineral waters and other bottled waters' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10',label:'Manufacture of food products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.9',label:'Manufacture of prepared animal feeds' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.92',label:'Manufacture of prepared pet foods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.91',label:'Manufacture of prepared feeds for farm animals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.1',label:'Processing and preserving of meat and production of meat products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.11',label:'Processing and preserving of meat' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.13',label:'Production of meat and poultry meat products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.12',label:'Processing and preserving of poultry meat' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8',label:'Manufacture of other food products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83',label:'Processing of tea and coffee' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83/2',label:'Production of coffee and coffee substitutes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.83/1',label:'Tea processing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82',label:'Manufacture of cocoa, chocolate and sugar confectionery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82/2',label:'Manufacture of sugar confectionery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.82/1',label:'Manufacture of cocoa, and chocolate confectionery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.89',label:'Manufacture of other food products n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.81',label:'Manufacture of sugar' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.84',label:'Manufacture of condiments and seasonings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.85',label:'Manufacture of prepared meals and dishes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.86',label:'Manufacture of homogenised food preparations and dietetic food' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.2',label:'Processing and preserving of fish, crustaceans and molluscs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.20',label:'Processing and preserving of fish, crustaceans and molluscs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.7',label:'Manufacture of bakery and farinaceous products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.72',label:'Manufacture of rusks and biscuits; manufacture of preserved pastry goods and cakes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.73',label:'Manufacture of macaroni, noodles, couscous and similar farinaceous products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.71',label:'Manufacture of bread; manufacture of fresh pastry goods and cakes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.6',label:'Manufacture of grain mill products, starches and starch products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.62',label:'Manufacture of starches and starch products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61',label:'Manufacture of grain mill products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61/1',label:'Grain milling' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.61/2',label:'Manufacture of breakfast cereals and cereals-based foods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.5',label:'Manufacture of dairy products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.52',label:'Manufacture of ice cream' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51',label:'Operation of dairies and cheese making' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51/2',label:'Butter and cheese production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51/1',label:'Liquid milk and cream production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.51/9',label:'Manufacture of milk products (other than liquid milk and cream, butter, cheese) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.3',label:'Processing and preserving of fruit and vegetables' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.39',label:'Other processing and preserving of fruit and vegetables' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.31',label:'Processing and preserving of potatoes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.32',label:'Manufacture of fruit and vegetable juice' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.4',label:'Manufacture of vegetable and animal oils and fats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.42',label:'Manufacture of margarine and similar edible fats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'10.41',label:'Manufacture of oils and fats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26',label:'Manufacture of computer, electronic and optical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.5',label:'Manufacture of instruments and appliances for measuring, testing and navigation; watches and clocks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51',label:'Manufacture of instruments and appliances for measuring, testing and navigation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/4',label:'Manufacture of non-electronic industrial process control equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/3',label:'Manufacture of non-electronic instruments and appliances for measuring, testing and navigation, except industrial process control equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/1',label:'Manufacture of electronic instruments and appliances for measuring, testing, and navigation, except industrial process control equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.51/2',label:'Manufacture of electronic industrial process control equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.52',label:'Manufacture of watches and clocks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.7',label:'Manufacture of optical instruments and photographic equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70',label:'Manufacture of optical instruments and photographic equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70/1',label:'Manufacture of optical precision instruments' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.70/2',label:'Manufacture of photographic and cinematographic equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.6',label:'Manufacture of irradiation, electromedical and electrotherapeutic equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.60',label:'Manufacture of irradiation, electromedical and electrotherapeutic equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.3',label:'Manufacture of communication equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30',label:'Manufacture of communication equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30/1',label:'Manufacture of telegraph and telephone apparatus and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.30/9',label:'Manufacture of communication equipment (other than telegraph and telephone apparatus and equipment)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.8',label:'Manufacture of magnetic and optical media' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.80',label:'Manufacture of magnetic and optical media' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.1',label:'Manufacture of electronic components and boards' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.11',label:'Manufacture of electronic components' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.12',label:'Manufacture of loaded electronic boards' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.4',label:'Manufacture of consumer electronics' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.40',label:'Manufacture of consumer electronics' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.2',label:'Manufacture of computers and peripheral equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'26.20',label:'Manufacture of computers and peripheral equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19',label:'Manufacture of coke and refined petroleum products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.1',label:'Manufacture of coke oven products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.10',label:'Manufacture of coke oven products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.2',label:'Manufacture of refined petroleum products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20',label:'Manufacture of refined petroleum products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20/9',label:'Other treatment of petroleum products (excluding mineral oil refining/petrochemicals manufacture)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'19.20/1',label:'Mineral oil refining' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12',label:'Manufacture of tobacco products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12.0',label:'Manufacture of tobacco products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'12.00',label:'Manufacture of tobacco products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13',label:'Manufacture of textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.1',label:'Preparation and spinning of textile fibres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.10',label:'Preparation and spinning of textile fibres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.3',label:'Finishing of textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.30',label:'Finishing of textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.2',label:'Weaving of textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.20',label:'Weaving of textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9',label:'Manufacture of other textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.96',label:'Manufacture of other technical and industrial textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.95',label:'Manufacture of non-wovens and articles made from non-wovens, except apparel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92',label:'Manufacture of made-up textile articles, except apparel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92/1',label:'Manufacture of soft furnishings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92/2',label:'Manufacture of canvas goods, sacks etc.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.92/3',label:'Manufacture of household textiles (other than soft furnishings of 13.92/1)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.99',label:'Manufacture of other textiles n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.91',label:'Manufacture of knitted and crocheted fabrics' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93',label:'Manufacture of carpets and rugs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93/9',label:'Manufacture of carpets and rugs (other than woven or tufted) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.93/1',label:'Manufacture of woven or tufted carpets and rugs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'13.94',label:'Manufacture of cordage, rope, twine and netting' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'C' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27',label:'Manufacture of electrical equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.5',label:'Manufacture of domestic appliances' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.52',label:'Manufacture of non-electric domestic appliances' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.51',label:'Manufacture of electric domestic appliances' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.3',label:'Manufacture of wiring and wiring devices' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.32',label:'Manufacture of other electronic and electric wires and cables' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.31',label:'Manufacture of fibre optic cables' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.33',label:'Manufacture of wiring devices' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.2',label:'Manufacture of batteries and accumulators' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.20',label:'Manufacture of batteries and accumulators' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.4',label:'Manufacture of electric lighting equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.40',label:'Manufacture of electric lighting equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.1',label:'Manufacture of electric motors, generators, transformers and electricity distribution and control apparatus' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.12',label:'Manufacture of electricity distribution and control apparatus' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.11',label:'Manufacture of electric motors, generators and transformers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.9',label:'Manufacture of other electrical equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'27.90',label:'Manufacture of other electrical equipment' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'D',label:'ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'D' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35',label:'Electricity, gas, steam and air conditioning supply' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.2',label:'Manufacture of gas; distribution of gaseous fuels through mains' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.22',label:'Distribution of gaseous fuels through mains' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.23',label:'Trade of gas through mains' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.21',label:'Manufacture of gas' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.1',label:'Electric power generation, transmission and distribution' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.11',label:'Production of electricity' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.13',label:'Distribution of electricity' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.14',label:'Trade of electricity' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.12',label:'Transmission of electricity' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.3',label:'Steam and air conditioning supply' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'35.30',label:'Steam and air conditioning supply' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'E',label:'WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'E' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37',label:'Sewerage' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37.0',label:'Sewerage' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'37.00',label:'Sewerage' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'E' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36',label:'Water collection, treatment and supply' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36.0',label:'Water collection, treatment and supply' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'36.00',label:'Water collection, treatment and supply' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'E' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38',label:'Waste collection, treatment and disposal activities; materials recovery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.2',label:'Waste treatment and disposal' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.21',label:'Treatment and disposal of non-hazardous waste' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.22',label:'Treatment and disposal of hazardous waste' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.3',label:'Materials recovery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.32',label:'Recovery of sorted materials' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.31',label:'Dismantling of wrecks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.1',label:'Waste collection' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.11',label:'Collection of non-hazardous waste' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'38.12',label:'Collection of hazardous waste' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'E' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39',label:'This division includes the provision of remediation services, i.e. the cleanup of contaminated buildings and sites, soil, surface or ground water.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39.0',label:'Remediation activities and other waste management services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'39.00',label:'Remediation activities and other waste management services' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'F',label:'CONSTRUCTION' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'F' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42',label:'Civil engineering' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.2',label:'Construction of utility projects' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.22',label:'Construction of utility projects for electricity and telecommunications' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.21',label:'Construction of utility projects for fluids' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.1',label:'Construction of roads and railways' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.11',label:'Construction of roads and motorways' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.12',label:'Construction of railways and underground railways' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.13',label:'Construction of bridges and tunnels' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.9',label:'Construction of other civil engineering projects' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.99',label:'Construction of other civil engineering projects n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'42.91',label:'Construction of water projects' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'F' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43',label:'Specialised construction activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.9',label:'Other specialised construction activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.91',label:'Roofing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99',label:'Other specialised construction activities n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99/9',label:'Specialised construction activities (other than scaffold erection) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.99/1',label:'Scaffold erection' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.2',label:'Electrical, plumbing and other construction installation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.29',label:'Other construction installation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.22',label:'Plumbing, heat and air-conditioning installation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.21',label:'Electrical installation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.1',label:'Demolition and site preparation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.11',label:'Demolition' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.12',label:'Site preparation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.13',label:'Test drilling and boring' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.3',label:'Building completion and finishing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34',label:'Painting and glazing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34/2',label:'Glazing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.34/1',label:'Painting' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.31',label:'Plastering' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.39',label:'Other building completion and finishing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.32',label:'Joinery installation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'43.33',label:'Floor and wall covering' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'F' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41',label:'Construction of buildings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.1',label:'Development of building projects' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.10',label:'Development of building projects' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.2',label:'Construction of residential and non-residential buildings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20',label:'Construction of residential and non-residential buildings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20/1',label:'Construction of commercial buildings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'41.20/2',label:'Construction of domestic buildings' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'G',label:'WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'G' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47',label:'Retail trade, except of motor vehicles and motorcycles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.6',label:'Retail sale of cultural and recreation goods in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.63',label:'Retail sale of music and video recordings in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.61',label:'Retail sale of books in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.62',label:'Retail sale of newspapers and stationery in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.65',label:'Retail sale of games and toys in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.64',label:'Retail sale of sporting equipment in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.9',label:'Retail trade not in stores, stalls or markets' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.99',label:'Other retail sale not in stores, stalls or markets' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.91',label:'Retail sale via mail order houses or via Internet' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.8',label:'Retail sale via stalls and markets' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.82',label:'Retail sale via stalls and markets of textiles, clothing and footwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.89',label:'Retail sale via stalls and markets of other goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.8' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.81',label:'Retail sale via stalls and markets of food, beverages and tobacco products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7',label:'Retail sale of other goods in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74',label:'Retail sale of medical and orthopaedic goods in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74/1',label:'Retail sale of hearing aids in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.74/9',label:'Retail sale of medical and orthopaedic goods (other than hearing aids) n.e.c., in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.73',label:'Dispensing chemist in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.75',label:'Retail sale of cosmetic and toilet articles in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78',label:'Other retail sale of new goods in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78/1',label:'Retail sale in commercial art galleries' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78/2',label:'Retail sale by opticians' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.78/9',label:'Other retail sale of new goods in specialised stores (other than by opticians or commercial art galleries), n.e.c' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72',label:'Retail sale of footwear and leather goods in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72/1',label:'Retail sale of footwear in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.72/2',label:'Retail sale of leather goods in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79',label:'Retail sale of second-hand goods in stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79/9',label:'Retail sale of second-hand goods (other than antiques and antique books) in stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.79/1',label:'Retail sale of antiques including antique books, in stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.71',label:'Retail sale of clothing in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.76',label:'Retail sale of flowers, plants, seeds, fertilisers, pet animals and pet food in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.77',label:'Retail sale of watches and jewellery in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.3',label:'Retail sale of automotive fuel in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.30',label:'Retail sale of automotive fuel in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.4',label:'Retail sale of information and communication equipment in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.43',label:'Retail sale of audio and video equipment in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42',label:'Retail sale of telecommunications equipment in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42/9',label:'Retail sale of telecommunications equipment (other than mobile telephones) n.e.c., in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.42/1',label:'Retail sale of mobile telephones in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.41',label:'Retail sale of computers, peripheral units and software in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.5',label:'Retail sale of other household equipment in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.52',label:'Retail sale of hardware, paints and glass in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.51',label:'Retail sale of textiles in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.53',label:'Retail sale of carpets, rugs, wall and floor coverings in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59',label:'Retail sale of furniture, lighting equipment and other household articles in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59/1',label:'Retail sale of musical instruments and scores in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.59/9',label:'Retail sale of furniture, lighting equipment and other household articles (other than musical instruments) n.e.c., in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.54',label:'Retail sale of electrical household appliances in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.1',label:'Retail sale in non-specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.19',label:'Other retail sale in non-specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.11',label:'Retail sale in non-specialised stores with food, beverages or tobacco predominating' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2',label:'Retail sale of food, beverages and tobacco in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.25',label:'Retail sale of beverages in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.23',label:'Retail sale of fish, crustaceans and molluscs in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.24',label:'Retail sale of bread, cakes, flour confectionery and sugar confectionery in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.21',label:'Retail sale of fruit and vegetables in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.29',label:'Other retail sale of food in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.26',label:'Retail sale of tobacco products in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'47.22',label:'Retail sale of meat and meat products in specialised stores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'G' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46',label:'Wholesale trade, except of motor vehicles and motorcycles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.5',label:'Wholesale of information and communication equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.52',label:'Wholesale of electronic and telecommunications equipment and parts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.51',label:'Wholesale of computers, computer peripheral equipment and software' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4',label:'Wholesale of household goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43',label:'Wholesale of electrical household appliances' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43/1',label:'Wholesale of gramophone records, audio tapes, compact discs and video tapes and of the equipment on which these are played' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.43/9',label:'Wholesale of radio and television goods and of electrical household appliances (other than of gramophone records, audio tapes, compact discs and video tapes and the equipment on which these are played) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.48',label:'Wholesale of watches and jewellery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.47',label:'Wholesale of furniture, carpets and lighting equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.45',label:'Wholesale of perfume and cosmetics' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.44',label:'Wholesale of china and glassware and cleaning materials' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49',label:'Wholesale of other household goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49/1',label:'Wholesale of musical instruments' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.49/9',label:'Wholesale of household goods (other than musical instruments) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.42',label:'Wholesale of clothing and footwear' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.41',label:'Wholesale of textiles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.46',label:'Wholesale of pharmaceutical goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.2',label:'Wholesale of agricultural raw materials and live animals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.21',label:'Wholesale of grain, unmanufactured tobacco, seeds and animal feeds' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.24',label:'Wholesale of hides, skins and leather' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.22',label:'Wholesale of flowers and plants' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.23',label:'Wholesale of live animals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7',label:'Other specialised wholesale' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71',label:'Wholesale of solid, liquid and gaseous fuels and related products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71/1',label:'Wholesale of petroleum and petroleum products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.71/9',label:'Wholesale of fuels and related products (other than petroleum and petroleum products)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.77',label:'Wholesale of waste and scrap' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.75',label:'Wholesale of chemical products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.72',label:'Wholesale of metals and metal ores' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.73',label:'Wholesale of wood, construction materials and sanitary equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.74',label:'Wholesale of hardware, plumbing and heating equipment and supplies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.7' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.76',label:'Wholesale of other intermediate products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3',label:'Wholesale of food, beverages and tobacco' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.38',label:'Wholesale of other food, including fish, crustaceans and molluscs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.37',label:'Wholesale of coffee, tea, cocoa and spices' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.32',label:'Wholesale of meat and meat products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.31',label:'Wholesale of fruit and vegetables' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.33',label:'Wholesale of dairy products, eggs and edible oils and fats' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.39',label:'Non-specialised wholesale of food, beverages and tobacco' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.36',label:'Wholesale of sugar and chocolate and sugar confectionery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.35',label:'Wholesale of tobacco products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34',label:'Wholesale of beverages' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34/2',label:'Wholesale of wine, beer, spirits and other alcoholic beverages' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.34/1',label:'Wholesale of fruit and vegetable juices, mineral waters and soft drinks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6',label:'Wholesale of other machinery, equipment and supplies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.62',label:'Wholesale of machine tools' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.63',label:'Wholesale of mining, construction and civil engineering machinery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.69',label:'Wholesale of other machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.61',label:'Wholesale of agricultural machinery, equipment and supplies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.64',label:'Wholesale of machinery for the textile industry and of sewing and knitting machines' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.66',label:'Wholesale of other office machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.65',label:'Wholesale of office furniture' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.9',label:'Non-specialised wholesale trade' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.90',label:'Non-specialised wholesale trade' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1',label:'Wholesale on a fee or contract basis' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.18',label:'Agents specialised in the sale of other particular products' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.14',label:'Agents involved in the sale of machinery, industrial equipment, ships and aircraft' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.15',label:'Agents involved in the sale of furniture, household goods, hardware and ironmongery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.11',label:'Agents involved in the sale of agricultural raw materials, live animals, textile raw materials and semi-finished goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.19',label:'Agents involved in the sale of a variety of goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.13',label:'Agents involved in the sale of timber and building materials' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.17',label:'Agents involved in the sale of food, beverages and tobacco' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.12',label:'Agents involved in the sale of fuels, ores, metals and industrial chemicals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'46.16',label:'Agents involved in the sale of textiles, clothing, fur, footwear and leather goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'G' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45',label:'Wholesale and retail trade and repair of motor vehicles and motorcycles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.1',label:'Sale of motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11',label:'Sale of cars and light motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11/1',label:'Sale of new cars and light motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.11/2',label:'Sale of used cars and light motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.19',label:'Sale of other motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.4',label:'Sale, maintenance and repair of motorcycles and related parts and accessories' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.40',label:'Sale, maintenance and repair of motorcycles and related parts and accessories' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.2',label:'Maintenance and repair of motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.20',label:'Maintenance and repair of motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.3',label:'Sale of motor vehicle parts and accessories' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.32',label:'Retail trade of motor vehicle parts and accessories' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'45.31',label:'Wholesale trade of motor vehicle parts and accessories' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'H',label:'TRANSPORTATION AND STORAGE' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'H' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51',label:'Air transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.2',label:'Freight air transport and space transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.22',label:'Space transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.21',label:'Freight air transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.1',label:'Passenger air transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10',label:'Passenger air transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10/2',label:'Non-scheduled passenger air transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'51.10/1',label:'Scheduled passenger air transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'H' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53',label:'Postal and courier activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.2',label:'Other postal and courier activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20',label:'Other postal and courier activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20/2',label:'Unlicensed Carriers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.20/1',label:'Licensed Carriers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.1',label:'Postal activities under universal service obligation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'53.10',label:'Postal activities under universal service obligation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'H' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50',label:'Water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.3',label:'Inland passenger water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.30',label:'Inland passenger water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.1',label:'Sea and coastal passenger water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.10',label:'Sea and coastal passenger water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.2',label:'Sea and coastal freight water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.20',label:'Sea and coastal freight water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.4',label:'Inland freight water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'50.40',label:'Inland freight water transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'H' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52',label:'Warehousing and support activities for transportation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.1',label:'Warehousing and storage' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10',label:'Warehousing and storage' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10/2',label:'Operation of warehousing and storage facilities for air transport activities of division 51' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10/3',label:'Operation of warehousing and storage facilities for land transport activities of division 49' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.10/1',label:'Operation of warehousing and storage facilities for water transport activities of division 50' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.2',label:'Support activities for transportation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.22',label:'Service activities incidental to water transportation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21',label:'Service activities incidental to land transportation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/2',label:'Operation of rail passenger facilities at railway stations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/9',label:'Other service activities incidental to land transportation, n.e.c. (not including operation of rail freight terminals, passenger facilities at railway stations or passenger facilities at bus and coach stations)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/3',label:'Operation of bus and coach passenger facilities at bus and coach stations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.21/1',label:'Operation of rail freight terminals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24',label:'Cargo handling' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24/2',label:'Cargo handling for air transport activities of division 51' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24/1',label:'Cargo handling for water transport activities of division 50' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.24/3',label:'Cargo handling for land transport activities of division 49' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.23',label:'Service activities incidental to air transportation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'52.29',label:'Other transportation support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'H' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49',label:'Land transport and transport via pipelines' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.5',label:'Transport via pipeline' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.50',label:'Transport via pipeline' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.2',label:'Freight rail transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.20',label:'Freight rail transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.1',label:'Passenger rail transport, interurban' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.10',label:'Passenger rail transport, interurban' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.4',label:'Freight transport by road and removal services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.42',label:'Removal services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.41',label:'Freight transport by road' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.3',label:'Other passenger land transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31',label:'Urban and suburban passenger land transport' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31/9',label:'Urban, suburban or metropolitan area passenger land transport other than railway transportation by underground, metro and similar systems' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.31/1',label:'Urban, suburban or metropolitan area passenger railway transportation by underground, metro and similar systems' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.32',label:'Taxi operation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'49.39',label:'Other passenger land transport n.e.c.' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'I',label:'ACCOMMODATION AND FOOD SERVICE ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'I' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55',label:'Accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.2',label:'Holiday and other short-stay accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20',label:'Holiday and other short-stay accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20/2',label:'Youth hostels' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20/1',label:'Holiday centres and villages' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.20/9',label:'Other holiday and other short-stay accommodation (not including holiday centres and villages or youth hostels) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.3',label:'Camping grounds, recreational vehicle parks and trailer parks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.30',label:'Camping grounds, recreational vehicle parks and trailer parks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.1',label:'Hotels and similar accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.10',label:'Hotels and similar accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.9',label:'Other accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'55.90',label:'Other accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'I' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56',label:'Food and beverage service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.1',label:'Restaurants and mobile food service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10',label:'Restaurants and mobile food service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10/3',label:'Take away food shops and mobile food stands' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10/2',label:'Unlicensed restaurants and cafes' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.10/1',label:'Licensed restaurants' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.2',label:'Event catering and other food service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.29',label:'Other food service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.21',label:'Event catering activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.3',label:'Beverage serving activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30',label:'Beverage serving activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30/2',label:'Public houses and bars' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'56.30/1',label:'Licensed clubs' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J',label:'INFORMATION AND COMMUNICATION' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62',label:'Computer programming, consultancy and related activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.0',label:'Computer programming, consultancy and related activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01',label:'Computer programming activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01/2',label:'Business and domestic software development' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.01/1',label:'Ready-made interactive leisure and entertainment software development' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.02',label:'Computer consultancy activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.09',label:'Other information technology and computer service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'62.03',label:'Computer facilities management activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63',label:'Information service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.9',label:'Other information service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.91',label:'News agency activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.99',label:'Other information service activities n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.1',label:'Data processing, hosting and related activities; web portals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.12',label:'Web portals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'63.11',label:'Data processing, hosting and related activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58',label:'Publishing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.1',label:'Publishing of books, periodicals and other publishing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.11',label:'Book publishing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.19',label:'Other publishing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.12',label:'Publishing of directories and mailing lists' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.13',label:'Publishing of newspapers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14',label:'Publishing of journals and periodicals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14/1',label:'Publishing of learned journals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.14/2',label:'Publishing of consumer, business and professional journals and periodicals' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.2',label:'Software publishing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.21',label:'Publishing of computer games' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'58.29',label:'Other software publishing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61',label:'Telecommunications' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.3',label:'Satellite telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.30',label:'Satellite telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.1',label:'Wired telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.10',label:'Wired telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.2',label:'Wireless telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.20',label:'Wireless telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.9',label:'Other telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'61.90',label:'Other telecommunications activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59',label:'Motion picture, video and television programme production, sound recording and music publishing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.1',label:'Motion picture, video and television programme activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.14',label:'Motion picture projection activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.12',label:'Motion picture, video and television programme post-production activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13',label:'Motion picture, video and television programme distribution activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13/2',label:'Video distribution activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13/1',label:'Motion picture distribution activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.13/3',label:'Television programme distribution activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11',label:'Motion picture, video and television programme production activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11/2',label:'Video production activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11/3',label:'Television programme production activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.11/1',label:'Motion picture production activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.2',label:'Sound recording and music publishing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'59.20',label:'Sound recording and music publishing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'J' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60',label:'Programming and broadcasting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.2',label:'Television programming and broadcasting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.20',label:'Television programming and broadcasting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.1',label:'Radio broadcasting' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'60.10',label:'Radio broadcasting' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'K',label:'FINANCIAL AND INSURANCE ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'K' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64',label:'Financial service activities, except insurance and pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.9',label:'Other financial service activities, except insurance and pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99',label:'Other financial service activities, except insurance and pension funding, n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99/9',label:'Other financial service activities, except insurance and pension funding, (not including security dealing on own account and factoring) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99/2',label:'Factoring' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.99/1',label:'Security dealing on own account' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92',label:'Other credit granting' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92/1',label:'Credit granting by non-deposit taking finance houses and other specialist consumer credit grantors' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92/9',label:'Other credit granting (not including credit granting by non-deposit taking finance houses and other specialist consumer credit grantors and activities of mortgage finance companies) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.92/2',label:'Activities of mortgage finance companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.91',label:'Financial leasing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.2',label:'Activities of holding companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20',label:'Activities of holding companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/4',label:'Activities of distribution holding companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/3',label:'Activities of construction holding companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/5',label:'Activities of financial services holding companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/9',label:'Activities of other holding companies (not including agricultural, production, construction, distribution and financial services holding companies) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/2',label:'Activities of production holding companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.20/1',label:'Activities of agricultural holding companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.1',label:'Monetary intermediation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19',label:'Other monetary intermediation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19/1',label:'Banks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.19/2',label:'Building societies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.11',label:'Central banking' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.3',label:'Trusts, funds and similar financial entities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30',label:'Trusts, funds and similar financial entities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/4',label:'Activities of open-ended investment companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/5',label:'Activities of property unit trusts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/6',label:'Activities of real estate investment trusts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/2',label:'Activities of unit trusts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/3',label:'Activities of venture and development capital companies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'64.30/1',label:'Activities of investment trusts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'K' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66',label:'Activities auxiliary to financial services and insurance activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.2',label:'Activities auxiliary to insurance and pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.21',label:'Risk and damage evaluation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.29',label:'Other activities auxiliary to insurance and pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.22',label:'Activities of insurance agents and brokers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.1',label:'Activities auxiliary to financial services, except insurance and pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.11',label:'Administration of financial markets' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.12',label:'Security and commodity contracts brokerage' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.19',label:'Other activities auxiliary to financial services, except insurance and pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.3',label:'Fund management activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'66.30',label:'Fund management activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'K' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65',label:'Insurance, reinsurance and pension funding, except compulsory social security' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.3',label:'Pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.30',label:'Pension funding' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.1',label:'Insurance' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.12',label:'Non-life insurance' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.11',label:'Life insurance' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.2',label:'Reinsurance' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20',label:'Reinsurance' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20/2',label:'Non-life reinsurance' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'65.20/1',label:'Life reinsurance' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'L',label:'REAL ESTATE ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'L' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68',label:'Real estate activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.2',label:'Renting and operating of own or leased real estate' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20',label:'Renting and operating of own or leased real estate' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20/2',label:'Letting and operating of conference and exhibition centres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20/1',label:'Renting and operating of Housing Association real estate' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.20/9',label:'Letting and operating of own or leased real estate (other than Housing Association real estate and conference and exhibition services) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.1',label:'Buying and selling of own real estate' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.10',label:'Buying and selling of own real estate' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.3',label:'Real estate activities on a fee or contract basis' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.32',label:'Management of real estate on a fee or contract basis' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'68.31',label:'Real estate agencies' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M',label:'PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69',label:'Legal and accounting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.1',label:'Legal activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10',label:'Legal activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10/1',label:'Barristers at law' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10/9',label:'Activities of patent and copyright agents; other legal activities (other than those of barristers and solicitors) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.10/2',label:'Solicitors' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.2',label:'Accounting, bookkeeping and auditing activities; tax consultancy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20',label:'Accounting, bookkeeping and auditing activities; tax consultancy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20/1',label:'Accounting, and auditing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20/3',label:'Tax consultancy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'69.20/2',label:'Bookkeeping activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71',label:'Architectural and engineering activities; technical testing and analysis' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.2',label:'Technical testing and analysis' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.20',label:'Technical testing and analysis' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.1',label:'Architectural and engineering activities and related technical consultancy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12',label:'Engineering activities and related technical consultancy' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12/1',label:'Engineering design activities for industrial process and production' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12/9',label:'Other engineering activities (not including engineering design for industrial process and production or engineering related scientific and technical consulting activities)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.12/2',label:'Engineering related scientific and technical consulting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11',label:'Architectural activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11/2',label:'Urban planning and landscape architectural activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'71.11/1',label:'Architectural activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74',label:'Other professional, scientific and technical activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.2',label:'Photographic activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20',label:'Photographic activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/9',label:'Other photographic activities (not including portrait and other specialist photography and film processing) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/1',label:'Portrait photographic activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/3',label:'Film processing' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.20/2',label:'Other specialist photography (not including portrait photography)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.9',label:'Other professional, scientific and technical activities n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90',label:'Other professional, scientific and technical activities n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90/2',label:'Quantity surveying activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90/9',label:'Other professional, scientific and technical activities (not including environmental consultancy or quantity surveying) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.90/1',label:'Environmental consulting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.1',label:'Specialised design activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.10',label:'Specialised design activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.3',label:'Translation and interpretation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'74.30',label:'Translation and interpretation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75',label:'Veterinary activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75.0',label:'Veterinary activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'75.00',label:'Veterinary activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72',label:'Scientific research and development' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.1',label:'Research and experimental development on natural sciences and engineering' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.11',label:'Research and experimental development on biotechnology' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.19',label:'Other research and experimental development on natural sciences and engineering' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.2',label:'Research and experimental development on social sciences and humanities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'72.20',label:'Research and experimental development on social sciences and humanities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73',label:'Advertising and market research' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.1',label:'Advertising' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.11',label:'Advertising agencies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.12',label:'Media representation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.2',label:'Market research and public opinion polling' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'73.20',label:'Market research and public opinion polling' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'M' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70',label:'Activities of head offices; management consultancy activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.1',label:'Activities of head offices' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.10',label:'Activities of head offices' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.2',label:'Management consultancy activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.21',label:'Public relations and communication activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22',label:'Business and other management consultancy activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22/1',label:'Financial management' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'70.22/9',label:'Management consultancy activities (other than financial management)' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N',label:'ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81',label:'Services to buildings and landscape activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.3',label:'Landscape service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.30',label:'Landscape service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.2',label:'Cleaning activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.21',label:'General cleaning of buildings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22',label:'Other building and industrial cleaning activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/2',label:'Specialised cleaning services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/1',label:'Window cleaning services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/3',label:'Furnace and chimney cleaning services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.22/9',label:'Building and industrial cleaning activities (other than window cleaning, specialised cleaning and furnace and chimney cleaning services) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29',label:'Other cleaning activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29/1',label:'Disinfecting and extermination services' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.29/9',label:'Cleaning services (other than disinfecting and extermination services) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.1',label:'Combined facilities support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'81.10',label:'Combined facilities support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80',label:'Security and investigation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.1',label:'Private security activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.10',label:'Private security activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.3',label:'Investigation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.30',label:'Investigation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.2',label:'Security systems service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'80.20',label:'Security systems service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78',label:'Employment activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.1',label:'Activities of employment placement agencies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10',label:'Activities of employment placement agencies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10/9',label:'Activities of employment placement agencies (other than motion picture, television and other theatrical casting) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.10/1',label:'Motion picture, television and other theatrical casting' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.3',label:'Other human resources provision' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.30',label:'Other human resources provision' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.2',label:'Temporary employment agency activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'78.20',label:'Temporary employment agency activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82',label:'Office administrative, office support and other business support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.9',label:'Business support service activities n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.92',label:'Packaging activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91',label:'Activities of collection agencies and credit bureaus' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91/1',label:'Activities of collection agencies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.91/2',label:'Activities of credit bureaus' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.99',label:'Other business support service activities n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.3',label:'Organisation of conventions and trade shows' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30',label:'Organisation of conventions and trade shows' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30/2',label:'Activities of conference organizers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.30/1',label:'Activities of exhibition and fair organizers' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.1',label:'Office administrative and support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.11',label:'Combined office administrative service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.19',label:'Photocopying, document preparation and other specialised office support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.2',label:'Activities of call centres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'82.20',label:'Activities of call centres' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77',label:'Rental and leasing activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.1',label:'Renting and leasing of motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.11',label:'Renting and leasing of cars and light motor vehicles' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.12',label:'Renting and leasing of trucks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3',label:'Renting and leasing of other machinery, equipment and tangible goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35',label:'Renting and leasing of air transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35/1',label:'Renting and leasing of passenger air transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.35/2',label:'Renting and leasing of freight air transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.31',label:'Renting and leasing of agricultural machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.33',label:'Renting and leasing of office machinery and equipment (including computers)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.32',label:'Renting and leasing of construction and civil engineering machinery and equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.39',label:'Renting and leasing of other machinery, equipment and tangible goods n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34',label:'Renting and leasing of water transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34/1',label:'Renting and leasing of passenger water transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.34/2',label:'Renting and leasing of freight water transport equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.4',label:'Leasing of intellectual property and similar products, except copyrighted works' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.40',label:'Leasing of intellectual property and similar products, except copyrighted works' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.2',label:'Renting and leasing of personal and household goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.22',label:'Renting of video tapes and disks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.21',label:'Renting and leasing of recreational and sports goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29',label:'Renting and leasing of other personal and household goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29/9',label:'Renting and leasing of other personal and household goods (other than media entertainment equipment)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'77.29/1',label:'Renting and leasing of media entertainment equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'N' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79',label:'Travel agency, tour operator and other reservation service and related activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.9',label:'Other reservation service and related activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90',label:'Other reservation service and related activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90/1',label:'Activities of tourist guides' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.90/9',label:'Other reservation service and related activities (not including activities of tourist guides)' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.1',label:'Travel agency and tour operator activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.12',label:'Tour operator activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'79.11',label:'Travel agency activities' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'O',label:'PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'O' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84',label:'Public administration and defence; compulsory social security' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.1',label:'Administration of the State and the economic and social policy of the community' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.13',label:'Regulation of and contribution to more efficient operation of businesses' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.11',label:'General public administration activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.12',label:'Regulation of the activities of providing health care, education, cultural services and other social services, excluding social security' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.3',label:'Compulsory social security activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.30',label:'Compulsory social security activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.2',label:'Provision of services to the community as a whole' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.24',label:'Public order and safety activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.21',label:'Foreign affairs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.23',label:'Justice and judicial activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.22',label:'Defence activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'84.25',label:'Fire service activities' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'P',label:'EDUCATION' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'P' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85',label:'Education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.3',label:'Secondary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.32',label:'Technical and vocational secondary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.31',label:'General secondary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.2',label:'Primary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.20',label:'Primary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.5',label:'Other education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.51',label:'Sports and recreation education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.53',label:'Driving school activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.52',label:'Cultural education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.5' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.59',label:'Other education n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.6',label:'Educational support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.6' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.60',label:'Educational support activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.4',label:'Higher education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.41',label:'Post-secondary non-tertiary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.4' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42',label:'Tertiary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42/1',label:'First-degree level higher education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.42/2',label:'Post-graduate level higher education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.1',label:'Pre-primary education' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'85.10',label:'Pre-primary education' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'Q',label:'HUMAN HEALTH AND SOCIAL WORK ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'Q' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86',label:'Human health activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.2',label:'Medical and dental practice activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.22',label:'Specialist medical practice activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.23',label:'Dental practice activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.21',label:'General medical practice activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.9',label:'Other human health activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.90',label:'Other human health activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.1',label:'Hospital activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10',label:'Hospital activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10/2',label:'Medical nursing home activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'86.10/1',label:'Hospital activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'Q' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88',label:'Social work activities without accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.9',label:'Other social work activities without accommodation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.91',label:'Child day-care activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.99',label:'Other social work activities without accommodation n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.1',label:'Social work activities without accommodation for the elderly and disabled' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'88.10',label:'Social work activities without accommodation for the elderly and disabled' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'Q' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87',label:'Residential care activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.9',label:'Other residential care activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.90',label:'Other residential care activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.3',label:'Residential care activities for the elderly and disabled' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.3' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.30',label:'Residential care activities for the elderly and disabled' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.2',label:'Residential care activities for learning disabilities, mental health and substance abuse' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.20',label:'Residential care activities for learning disabilities, mental health and substance abuse' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.1',label:'Residential nursing care activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'87.10',label:'Residential nursing care activities' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'R',label:'ARTS, ENTERTAINMENT AND RECREATION' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'R' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93',label:'Sports activities and amusement and recreation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.2',label:'Amusement and recreation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.29',label:'Other amusement and recreation activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.21',label:'Activities of amusement parks and theme parks' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.1',label:'Sports activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19',label:'Other sports activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19/9',label:'Other sports activities (not including activities of racehorse owners) n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.19/1',label:'Activities of racehorse owners' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.11',label:'Operation of sports facilities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.12',label:'Activities of sport clubs' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'93.13',label:'Fitness facilities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'R' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92',label:'Gambling and betting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92.0',label:'Gambling and betting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'92.00',label:'Gambling and betting activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'R' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90',label:'Creative, arts and entertainment activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.0',label:'Creative, arts and entertainment activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.01',label:'Performing arts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.02',label:'Support activities to performing arts' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.03',label:'Artistic creation' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'90.04',label:'Operation of arts facilities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'R' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91',label:'Libraries, archives, museums and other cultural activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.0',label:'Libraries, archives, museums and other cultural activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.03',label:'Operation of historical sites and buildings and similar visitor attractions' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01',label:'Library and archive activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01/1',label:'Library activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.01/2',label:'Archive activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.02',label:'Museum activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'91.04',label:'Botanical and zoological gardens and nature reserve activities' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'S',label:'OTHER SERVICE ACTIVITIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'S' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95',label:'Repair of computers and personal and household goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2',label:'Repair of personal and household goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.22',label:'Repair of household appliances and home and garden equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.23',label:'Repair of footwear and leather goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.25',label:'Repair of watches, clocks and jewellery' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.29',label:'Repair of other personal and household goods' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.21',label:'Repair of consumer electronics' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.24',label:'Repair of furniture and home furnishings' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.1',label:'Repair of computers and communication equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.12',label:'Repair of communication equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'95.11',label:'Repair of computers and peripheral equipment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'S' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94',label:'Activities of membership organisations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.1',label:'Activities of business, employers and professional membership organisations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.11',label:'Activities of business and employers membership organisations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.12',label:'Activities of professional membership organisations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.9',label:'Activities of other membership organisations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.92',label:'Activities of political organisations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.91',label:'Activities of religious organisations' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.9' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.99',label:'Activities of other membership organisations n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.2',label:'Activities of trade unions' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'94.20',label:'Activities of trade unions' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'S' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96',label:'Other personal service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.0',label:'Other personal service activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.03',label:'Funeral and related activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.02',label:'Hairdressing and other beauty treatment' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.09',label:'Other personal service activities n.e.c.' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.04',label:'Physical well-being activities' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'96.01',label:'Washing and (dry-)cleaning of textile and fur products' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'T',label:'ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS; UNDIFFERENTIATED GOODS-AND SERVICES-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'T' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98',label:'Undifferentiated goods- and services-producing activities of private households for own use' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.1',label:'Undifferentiated goods-producing activities of private households for own use' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.1' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.10',label:'Undifferentiated goods-producing activities of private households for own use' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.2',label:'Undifferentiated service-producing activities of private households for own use' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.2' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'98.20',label:'Undifferentiated service-producing activities of private households for own use' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'T' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97',label:'Activities of households as employers of domestic personnel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97.0',label:'Activities of households as employers of domestic personnel' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'97.00',label:'Activities of households as employers of domestic personnel' })-[:hasParent]->(parent);
+CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'U',label:'ACTIVITIES OF EXTRATERRITORIAL ORGANISATIONS AND BODIES' });
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'U' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99',label:'Activities of extraterritorial organisations and bodies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99.0',label:'Activities of extraterritorial organisations and bodies' })-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99.0' })
+WITH parent CREATE (node:`_generic_hierarchy_node_f012ff16-4616-43c3-be3c-c29b27d4bb88` { code:'99.00',label:'Activities of extraterritorial organisations and bodies' })-[:hasParent]->(parent);
