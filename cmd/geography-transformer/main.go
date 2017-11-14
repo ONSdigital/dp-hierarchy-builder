@@ -15,6 +15,7 @@ import (
 	"encoding/csv"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"io"
 )
 
 var filepath = flag.String("file", "cmd/geography-transformer/WD16_LAD16_CTY16_OTH_UK_LU.csv", "The path to the import filepath")
@@ -27,10 +28,7 @@ func main() {
 	flag.Parse()
 
 	f, err := os.Open(*filepath)
-	if err != nil {
-		log.ErrorC("Failed to open input file", err, log.Data{ "file": *filepath })
-		os.Exit(1)
-	}
+
 
 	csvReader := csv.NewReader(f)
 	defer f.Close()
@@ -46,7 +44,11 @@ func main() {
 	codelists := createCodeListSlice(headerRow)
 
 	// Create a map of code:node
-	nodeMap := createNodeMap(csvReader, codelists)
+	nodeMap, err := createNodeMap(csvReader, codelists)
+	if err != nil {
+		log.ErrorC("Failed to read the rows of the input CSV", err, log.Data{ "file": *filepath })
+		os.Exit(1)
+	}
 
 	// populate a slice of top level nodes, i.e. the root elements
 	rootNodes := hierarchy.IdentifyRootNodes(nodeMap)
@@ -67,7 +69,7 @@ func main() {
 	logErr(err)
 }
 
-func createNodeMap(csvr *csv.Reader, codelists []string) *map[string]*hierarchy.Node {
+func createNodeMap(csvr *csv.Reader, codelists []string) (*map[string]*hierarchy.Node, error) {
 
 	var nodeMap = make(map[string]*hierarchy.Node, 0)
 	var err error = nil
@@ -77,6 +79,10 @@ func createNodeMap(csvr *csv.Reader, codelists []string) *map[string]*hierarchy.
 
 		csvRow, err := csvr.Read()
 		if err != nil {
+			if err != io.EOF {
+				return nil, err
+			}
+
 			break
 		}
 
@@ -102,7 +108,7 @@ func createNodeMap(csvr *csv.Reader, codelists []string) *map[string]*hierarchy.
 		}
 	}
 
-	return &nodeMap
+	return &nodeMap, nil
 }
 
 func createNode(columnOffset int, csvRow []string, codelist string, code string) *hierarchy.Node {
