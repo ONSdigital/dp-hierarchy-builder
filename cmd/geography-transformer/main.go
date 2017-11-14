@@ -27,14 +27,20 @@ func main() {
 	flag.Parse()
 
 	f, err := os.Open(*filepath)
-	checkErr(err)
+	if err != nil {
+		log.ErrorC("Failed to open input file", err, log.Data{ "file": *filepath })
+		os.Exit(1)
+	}
 
 	csvReader := csv.NewReader(f)
 	defer f.Close()
 
 	// identify the code lists used in this file from the header row.
 	headerRow, err := csvReader.Read()
-	checkErr(err)
+	if err != nil {
+		log.ErrorC("Failed to read the first row of the input CSV", err, log.Data{ "file": *filepath })
+		os.Exit(1)
+	}
 
 	// maintain a slice of the code lists used in this file to reference later.
 	codelists := createCodeListSlice(headerRow)
@@ -142,13 +148,6 @@ func createCodeListSlice(headerRow []string) []string {
 		}
 	}
 	return codelists
-}
-
-func checkErr(err error) {
-	if err != nil {
-		log.Error(err, nil)
-		os.Exit(1)
-	}
 }
 
 func logErr(err error) {

@@ -31,7 +31,10 @@ func main() {
 	flag.Parse()
 
 	f, err := os.Open(*filepath)
-	checkErr(err)
+	if err != nil {
+		log.ErrorC("Failed to open input file", err, log.Data{ "file": *filepath })
+		os.Exit(1)
+	}
 
 	csvr := csv.NewReader(f)
 	defer f.Close()
@@ -80,13 +83,6 @@ func main() {
 	log.Debug("Generating cypher deletion script", nil)
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
 	logErr(err)
-}
-
-func checkErr(err error) {
-	if err != nil {
-		log.Error(err, nil)
-		os.Exit(1)
-	}
 }
 
 func logErr(err error) {

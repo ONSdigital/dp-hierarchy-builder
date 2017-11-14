@@ -27,14 +27,20 @@ func main() {
 
 	// open the input file
 	f, err := os.Open(*filepath)
-	checkErr(err)
+	if err != nil {
+		log.ErrorC("Failed to open input file", err, log.Data{ "file": *filepath })
+		os.Exit(1)
+	}
 
 	csvReader := csv.NewReader(f)
 	defer f.Close()
 
 	// discard header row
 	_, err = csvReader.Read()
-	checkErr(err)
+	if err != nil {
+		log.ErrorC("Failed to read CSV header row", err, log.Data{ "file": *filepath })
+		os.Exit(1)
+	}
 
 	// Create a map of code:node
 	nodeMap, err := createNodeMap(csvReader)
@@ -84,13 +90,6 @@ func createNodeMap(csvReader *csv.Reader) (*map[string]*hierarchy.Node, error) {
 	}
 
 	return &nodeMap, err
-}
-
-func checkErr(err error) {
-	if err != nil {
-		log.Error(err, nil)
-		os.Exit(1)
-	}
 }
 
 func logErr(err error) {
