@@ -9,13 +9,14 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
 import (
 	"encoding/csv"
 	"flag"
-	"fmt"
 	"os"
 
 	"github.com/ONSdigital/go-ns/log"
 	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"io"
+	"errors"
 )
 
 var filepath = flag.String("file", "cmd/v4-transformer/coicopcomb-inc-geo.csv", "The path to the import filepath")
@@ -33,7 +34,7 @@ func main() {
 
 	f, err := os.Open(*filepath)
 	if err != nil {
-		log.ErrorC("Failed to open input file", err, log.Data{ "file": *filepath })
+		log.ErrorC("Failed to open input file", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -50,6 +51,11 @@ func main() {
 	for {
 		entry, err := reader.Read()
 		if err != nil {
+			if err != io.EOF {
+				log.ErrorC("Failed to read CSV rows from the input file", err, log.Data{"file": *filepath})
+				os.Exit(1)
+			}
+
 			break
 		}
 
@@ -70,7 +76,10 @@ func main() {
 		}
 
 		if labelIDToEntry[entry.ParentLabelCode] == nil {
-			fmt.Println("Entry not found for label code " + entry.ParentLabelCode)
+			log.Error(errors.New("entry not found for label code"), log.Data{
+				"code":        entry.Code,
+				"parent code": entry.ParentCode,
+			})
 			continue
 		}
 

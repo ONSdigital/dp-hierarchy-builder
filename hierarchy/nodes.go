@@ -1,6 +1,9 @@
 package hierarchy
 
-import "fmt"
+import (
+	"github.com/pkg/errors"
+	"github.com/ONSdigital/go-ns/log"
+)
 
 // PopulateChildNodes takes a flat map of nodes and populates the children slice for each node.
 func PopulateChildNodes(nodes *map[string]*Node) {
@@ -10,7 +13,10 @@ func PopulateChildNodes(nodes *map[string]*Node) {
 	for _, entry := range nodeMap {
 
 		if nodeMap[entry.ParentCode] == nil {
-			fmt.Println("Entry not found for label code " + entry.ParentCode)
+			log.Error(errors.New("entry not found for label code"), log.Data{
+				"code":        entry.Code,
+				"parent code": entry.ParentCode,
+			})
 			continue
 		}
 
