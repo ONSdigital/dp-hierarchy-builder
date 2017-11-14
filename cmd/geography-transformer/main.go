@@ -19,6 +19,7 @@ import (
 )
 
 var filepath = flag.String("file", "cmd/geography-transformer/WD16_LAD16_CTY16_OTH_UK_LU.csv", "The path to the import filepath")
+var codeList = flag.String("codeList", "123", "The single codelist value to set for the entire hierarchy. (TBD on the approach here)")
 var csvFile = flag.String("csv", "cmd/geography-transformer/output/hierarchy.csv", "")
 var cypherFile = flag.String("cypher", "cmd/geography-transformer/output/hierarchy.cypher", "")
 var cypherDelFile = flag.String("cypher-delete", "cmd/geography-transformer/output/hierarchy-delete.cypher", "")
@@ -92,7 +93,7 @@ func createNodeMap(csvr *csv.Reader, codelists []string) (*map[string]*hierarchy
 			isCode := columnOffset%2 == 0
 			codelistIndex := columnOffset / 2
 			codelist := codelists[codelistIndex]
-			codelist = "123" // todo : remove this override of the code list multiple codelists in a single geog - what to do???
+			codelist = *codeList // todo : remove this override of the code list multiple codelists in a single geog - what to do???
 
 			// create a node for each code in the row
 			// the code will be empty where gaps exist between an area and its parent so ignore them
