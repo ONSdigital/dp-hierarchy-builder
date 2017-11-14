@@ -22,6 +22,7 @@ var filepath = flag.String("file", "cmd/v4-transformer/coicopcomb-inc-geo.csv", 
 var codeColumn = flag.Int("code", 5, "The column index of the code to parse")
 var labelColumn = flag.Int("label", 6, "The column index of the label to parse")
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
+var rootLabelCode = flag.String("root-label-code", "CPI", "")
 var jsonFile = flag.String("json", "cmd/v4-transformer/output/hierarchy.json", "")
 var cypherFile = flag.String("cypher", "cmd/v4-transformer/output/hierarchy.cypher", "")
 var csvFile = flag.String("csv", "cmd/v4-transformer/output/hierarchy.csv", "")
@@ -41,7 +42,7 @@ func main() {
 
 	var optionReader v4.DimensionOptionReader = v4.NewUniqueReader(*csvr, *codeColumn, *labelColumn)
 
-	reader := v4.NewHierarchicalLabelReader(optionReader, "CPI", *codeListID)
+	reader := v4.NewHierarchicalLabelReader(optionReader, *rootLabelCode, *codeListID)
 
 	var labelIDToEntry = make(map[string]*hierarchy.Node)
 	var rootNodes []*hierarchy.Node
