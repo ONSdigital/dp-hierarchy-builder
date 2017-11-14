@@ -4,6 +4,8 @@ BUILD=build
 BUILD_ARCH=$(BUILD)/$(GOOS)-$(GOARCH)
 BIN_DIR?=.
 
+V4_TRANSFORMER_DIR=cmd/v4-transformer
+
 DATABASE_ADDRESS?=bolt://localhost:7687
 
 export GOOS?=$(shell go env GOOS)
@@ -18,9 +20,9 @@ test:
 	go test -cover $(shell go list ./... | grep -v /vendor/)
 
 full:
-	cypher-shell < cmd/v4-transformer/output/hierarchy.cypher
+	cypher-shell < "$(V4_TRANSFORMER_DIR)/output/hierarchy.cypher"
 full-clean:
-	cypher-shell < cmd/v4-transformer/output/hierarchy-delete.cypher
+	cypher-shell < "$(V4_TRANSFORMER_DIR)/output/hierarchy-delete.cypher"
 instance-builder:
 	[[ -n "$(INSTANCE_ID)" ]]
 	HUMAN_LOG=1 go run -race cmd/builder/main.go --neo-url="$(DATABASE_ADDRESS)" --instance-id="$(INSTANCE_ID)"
@@ -33,7 +35,7 @@ instance-clean:
 generate-full:
 	HUMAN_LOG=1 go run -race cmd/hierarchy-transformer/main.go
 generate-full-from-v4:
-	HUMAN_LOG=1 go run -race cmd/v4-transformer/main.go
+	HUMAN_LOG=1 go run -race "$(V4_TRANSFORMER_DIR)/main.go"
 generate-full-from-geography:
 	HUMAN_LOG=1 go run -race cmd/geography-transformer/main.go
 clean: full-clean instance-clean

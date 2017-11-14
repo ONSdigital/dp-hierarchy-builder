@@ -7,11 +7,9 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
  */
 
 import (
-	"bytes"
 	"encoding/csv"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 
 	"github.com/ONSdigital/go-ns/log"
@@ -42,7 +40,7 @@ func main() {
 
 	reader := v4.NewHierarchicalLabelReader(optionReader, "CPI", *codeListID)
 
-	var labelIDToEntry= make(map[string]*hierarchy.Node)
+	var labelIDToEntry = make(map[string]*hierarchy.Node)
 	var rootNodes []*hierarchy.Node
 
 	for {
