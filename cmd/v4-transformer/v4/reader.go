@@ -2,6 +2,7 @@ package v4
 
 import (
 	"encoding/csv"
+	"strings"
 )
 
 // a map to look up if a particular Code has already been read from the file.
@@ -48,13 +49,13 @@ func (reader UniqueReader) Read() (string, string, error) {
 			return "", "", err
 		}
 
-		code = record[reader.codeIndex]
+		code = strings.TrimSpace(record[reader.codeIndex])
 		_, codeAlreadySeen = codesRead[code]
 	}
 
 	codesRead[code] = struct{}{}
 
-	label := record[reader.labelIndex]
+	label := strings.TrimSpace(record[reader.labelIndex])
 
 	return code, label, nil
 }
