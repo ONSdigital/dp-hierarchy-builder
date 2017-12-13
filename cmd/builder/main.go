@@ -179,8 +179,14 @@ func setHasData(connection bolt.Conn) error {
 	startTime := time.Now()
 	log.Printf("*** Setting hasData property on the instance hierarchy\n")
 
-	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)"+
-		" with n SET n.hasData = true", *instanceID, dimensionName)
+	// If a node appears in both the generic hierarchy and the instance hierarchy, it has data - set to True
+	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_generic_hierarchy_node_%s`) " +
+		"WHERE n.code = p.code " +
+		"WITH n SET n.hasData=true", *instanceID, dimensionName, *codeListID)
+	log.Println("Insert")
+
+	// then overwrite to false where it applies
+
 
 	log.Println(insert)
 
