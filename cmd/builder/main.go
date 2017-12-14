@@ -120,7 +120,7 @@ func cloneRelationships(connection bolt.Conn) error {
 		" WITH genericNode, genericParent"+
 		" MATCH (node:`_hierarchy_node_%s_%s` { code:genericNode.code })"+
 		", (parent:`_hierarchy_node_%s_%s` { code:genericParent.code }) "+
-		"MERGE (node)-[r:hasParent]->(parent);", *codeListID, *codeListID, *instanceID, dimensionName, *instanceID, dimensionName)
+		"MERGE (node)-[r:hasParent]->(parent) SET node.hasData=false;", *codeListID, *codeListID, *instanceID, dimensionName, *instanceID, dimensionName)
 	log.Println(insert)
 
 	stmtInsert, err := connection.PrepareNeo(insert)
@@ -183,7 +183,7 @@ func setHasData(connection bolt.Conn) error {
 	// If a node appears in the instance hierarchy and the geography dimension graph, set hasData=true
 	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_%s_%s`) "+
 		"WHERE n.code = p.value "+
-		"WITH n SET n.hasData=true", *instanceID, dimensionName, *instanceID, dimensionName)
+		"SET n.hasData=true", *instanceID, dimensionName, *instanceID, dimensionName)
 
 	log.Println(insert)
 
