@@ -12,9 +12,9 @@ import (
 )
 
 var neoURL = flag.String("neo-url", "bolt://localhost:7687", "")
-var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
-var instanceID = flag.String("instance-id", "12345", "")
-var dimensionNameArg = flag.String("dimension-name", "Aggregate", "")
+var codeListID = flag.String("code-list-id", "mid-year-pop-geography", "")
+var instanceID = flag.String("instance-id", "3460c29b-28c5-428e-85cc-53bf4445aeed", "")
+var dimensionNameArg = flag.String("dimension-name", "geography", "")
 var dimensionName = ""
 
 type neoArgMap map[string]interface{}
@@ -179,14 +179,11 @@ func setHasData(connection bolt.Conn) error {
 	startTime := time.Now()
 	log.Printf("*** Setting hasData property on the instance hierarchy\n")
 
-	// If a node appears in both the generic hierarchy and the instance hierarchy, it has data - set to True
-	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_generic_hierarchy_node_%s`) " +
-		"WHERE n.code = p.code " +
-		"WITH n SET n.hasData=true", *instanceID, dimensionName, *codeListID)
-	log.Println("Insert")
 
-	// then overwrite to false where it applies
-
+	// If a node appears in the instance hierarchy and the geography dimension graph, set hasData=true
+	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_%s_%s`) "+
+		"WHERE n.code <> p.value "+
+		"WITH n SET n.hasData=false", *instanceID, dimensionName, *instanceID, dimensionName)
 
 	log.Println(insert)
 
