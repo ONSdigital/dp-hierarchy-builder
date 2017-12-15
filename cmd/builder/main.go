@@ -173,14 +173,10 @@ func setNumberOfChildren(connection bolt.Conn) error {
 
 func setHasData(connection bolt.Conn) error {
 
-	// this will eventually need to check that a dimension option has observations related to it
-	// we are defaulting 'hasData' property to true for now while we only deal with datasets with no sparsity
-
 	startTime := time.Now()
 	log.Printf("*** Setting hasData property on the instance hierarchy\n")
 
-
-	// If a node appears in the instance hierarchy and the geography dimension graph, set hasData=true
+	// If a node appears in the hierarchy_node_instance_name graph and the instance_name graph then we have data - set hasData=true
 	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_%s_%s`) "+
 		"WHERE n.code = p.value "+
 		"SET n.has_data=true", *instanceID, dimensionName, *instanceID, dimensionName)
