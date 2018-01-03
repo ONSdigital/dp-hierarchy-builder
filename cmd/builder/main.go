@@ -14,7 +14,7 @@ import (
 var neoURL = flag.String("neo-url", "bolt://localhost:7687", "")
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
 var instanceID = flag.String("instance-id", "12345", "")
-var dimensionNameArg = flag.String("dimension-name", "Aggregate", "")
+var dimensionNameArg = flag.String("dimension-name", "aggregate", "")
 var dimensionName = ""
 
 type neoArgMap map[string]interface{}
@@ -120,7 +120,7 @@ func cloneRelationships(connection bolt.Conn) error {
 		" WITH genericNode, genericParent"+
 		" MATCH (node:`_hierarchy_node_%s_%s` { code:genericNode.code })"+
 		", (parent:`_hierarchy_node_%s_%s` { code:genericParent.code }) "+
-		"MERGE (node)-[r:hasParent]->(parent) SET node.has_data=false;", *codeListID, *codeListID, *instanceID, dimensionName, *instanceID, dimensionName)
+		"MERGE (node)-[r:hasParent]->(parent) SET node.hasData=false;", *codeListID, *codeListID, *instanceID, dimensionName, *instanceID, dimensionName)
 	log.Println(insert)
 
 	stmtInsert, err := connection.PrepareNeo(insert)
@@ -179,7 +179,7 @@ func setHasData(connection bolt.Conn) error {
 	// If a node appears in the hierarchy_node_instance_name graph and the instance_name graph then we have data - set hasData=true
 	insert := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_%s_%s`) "+
 		"WHERE n.code = p.value "+
-		"SET n.has_data=true", *instanceID, dimensionName, *instanceID, dimensionName)
+		"SET n.hasData=true", *instanceID, dimensionName, *instanceID, dimensionName)
 
 	log.Println(insert)
 

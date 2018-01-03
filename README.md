@@ -18,7 +18,7 @@ There are a number of utility applications as part of this project (found under 
 
 * Create an instance hierarchy for the coicop hierarchy - please note you will have to replace the value for 'INSTANCE_ID'
 
-`make INSTANCE_ID="c4-d39e-4e2f-942b-3ca105" instance`
+`make INSTANCE_ID="c4-d39e-4e2f-942b-3ca105" instance-builder`
 
 #### transform a hierarchy input file to a cypher script (set FILE as required input file)
 
