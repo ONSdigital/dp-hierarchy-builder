@@ -22,7 +22,7 @@ func TestSpec(t *testing.T) {
 			Convey("The values should be set to the expected defaults", func() {
 				So(cfg.BindAddr, ShouldEqual, ":22700")
 				So(cfg.KafkaAddr, ShouldResemble, []string{"localhost:9092"})
-				So(cfg.ConsumerTopic, ShouldEqual, "observations-imported")
+				So(cfg.ConsumerTopic, ShouldEqual, "data-import-complete")
 				So(cfg.ConsumerGroup, ShouldEqual, "dp-hierarchy-builder")
 				So(cfg.ProducerTopic, ShouldEqual, "hierarchy-built")
 				So(cfg.GracefulShutdownTimeout, ShouldEqual, time.Second*10)

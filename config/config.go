@@ -22,7 +22,7 @@ func Get() (*Config, error) {
 	cfg := &Config{
 		BindAddr:                ":22700",
 		KafkaAddr:               []string{"localhost:9092"},
-		ConsumerTopic:           "observations-imported",
+		ConsumerTopic:           "data-import-complete",
 		ConsumerGroup:           "dp-hierarchy-builder",
 		ProducerTopic:           "hierarchy-built",
 		ErrorProducerTopic:      "import-error",
