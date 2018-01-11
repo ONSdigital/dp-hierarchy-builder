@@ -4,11 +4,13 @@ import (
 	"context"
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/go-ns/handlers/healthcheck"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
 	"github.com/ONSdigital/go-ns/server"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 	"github.com/gorilla/mux"
 	"os"
 	"os/signal"
@@ -25,10 +27,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Avoid logging the neo4j FileURL as it may contain a password
-	log.Debug("loaded config", log.Data{
-		"config": config,
-	})
+	// sensitive fields are omitted from config.String().
+	log.Debug("loaded config", log.Data{"config": config})
 
 	// a channel used to signal a graceful exit is required.
 	errorChannel := make(chan error)
@@ -63,11 +63,18 @@ func main() {
 	kafkaErrorProducer, err := kafka.NewProducer(config.KafkaAddr, config.ErrorProducerTopic, 0)
 	exitIfError(err)
 
+	avroProducer := event.NewAvroProducer(kafkaProducer)
+
+	neo4jConnPool, err := bolt.NewClosableDriverPool(config.DatabaseAddress, config.Neo4jPoolSize)
+	exitIfError(err)
+
+	hierarchyStore := hierarchy.NewStore(neo4jConnPool)
+
 	// when errors occur - we send a message on an error topic.
 	errorHandler, err := reporter.NewImportErrorReporter(kafkaErrorProducer, log.Namespace)
 	exitIfError(err)
 
-	eventHandler := event.NewObservationsImportedHandler()
+	eventHandler := event.NewDataImportCompleteHandler(hierarchyStore, avroProducer)
 
 	eventConsumer := event.NewConsumer()
 	eventConsumer.Consume(kafkaConsumer, eventHandler, errorHandler)
@@ -87,6 +94,9 @@ func main() {
 		logIfError(err)
 
 		err = kafkaErrorProducer.Close(ctx)
+		logIfError(err)
+
+		err = neo4jConnPool.Close()
 		logIfError(err)
 
 		err = httpServer.Shutdown(ctx)
