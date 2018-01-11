@@ -20,5 +20,5 @@ var hierarchyBuiltSchema = `{
 
 // HierarchyBuiltSchema is the Avro schema for HierarchyBuilt events.
 var HierarchyBuiltSchema = avro.Schema{
-	Definition: observationsInsertedSchema,
+	Definition: hierarchyBuiltSchema,
 }

@@ -22,5 +22,5 @@ var dataImportCompleteSchema = `{
 
 // DataImportCompleteSchema is the Avro schema for DataImportComplete
 var DataImportCompleteSchema = avro.Schema{
-	Definition: observationsInsertedSchema,
+	Definition: dataImportCompleteSchema,
 }

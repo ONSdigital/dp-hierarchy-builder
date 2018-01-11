@@ -2,7 +2,7 @@ package event
 
 import "github.com/ONSdigital/dp-import/events"
 
-// AvroProducer of output events.
+// AvroProducer produces Avro serialised messages.
 type AvroProducer struct {
 	messageProducer MessageProducer
 }
@@ -20,9 +20,19 @@ func NewAvroProducer(messageProducer MessageProducer) *AvroProducer {
 }
 
 // CSVExported produces a new CSV exported event for the given filter output ID.
-func (producer *AvroProducer) HierarchyBuilt(filterID, fileURL string) error {
+func (producer *AvroProducer) HierarchyBuilt(instanceID, dimensionName string) error {
 
-	
+	hierarchyBuiltEvent := &events.HierarchyBuilt{
+		DimensionName: dimensionName,
+		InstanceID:    instanceID,
+	}
+
+	bytes, err := events.HierarchyBuiltSchema.Marshal(hierarchyBuiltEvent)
+	if err != nil {
+		return err
+	}
+
+	producer.messageProducer.Output() <- bytes
 
 	return nil
 }

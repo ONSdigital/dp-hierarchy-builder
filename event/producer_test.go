@@ -3,14 +3,13 @@ package event_test
 import (
 	"testing"
 
-	"github.com/ONSdigital/dp-dataset-exporter/event"
-	"github.com/ONSdigital/dp-dataset-exporter/schema"
+	"github.com/ONSdigital/dp-hierarchy-builder/event"
+	"github.com/ONSdigital/dp-import/events"
 	"github.com/ONSdigital/go-ns/kafka/kafkatest"
-	"github.com/ONSdigital/go-ns/log"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
-func TestAvroProducer_CSVExported(t *testing.T) {
+func TestAvroProducer_HierarchyBuilt(t *testing.T) {
 
 	Convey("Given an a mock message producer", t, func() {
 
@@ -20,28 +19,31 @@ func TestAvroProducer_CSVExported(t *testing.T) {
 
 		eventProducer := event.NewAvroProducer(mockMessageProducer)
 
-		Convey("When CSVExported is called on the event producer", func() {
+		instanceID := "123"
+		dimensionName := "Geography"
 
-			err := eventProducer.CSVExported(filterOutputId, fileUrl)
+		Convey("When HierarchyBuilt is called on the event producer", func() {
+
+			err := eventProducer.HierarchyBuilt(instanceID, dimensionName)
 
 			Convey("The expected event is available on the output channel", func() {
-				log.Debug("error is:", log.Data{"error": err})
+
 				So(err, ShouldBeNil)
 
 				messageBytes := <-outputChannel
 				close(outputChannel)
-				observationEvent := unmarshal(messageBytes)
-				So(observationEvent.FilterID, ShouldEqual, filterOutputId)
-				So(observationEvent.FileURL, ShouldEqual, fileUrl)
+				event := unmarshal(messageBytes)
+				So(event.InstanceID, ShouldEqual, instanceID)
+				So(event.DimensionName, ShouldEqual, dimensionName)
 			})
 		})
 	})
 }
 
 // Unmarshal converts observation events to []byte.
-func unmarshal(bytes []byte) *event.CSVExported {
-	event := &event.CSVExported{}
-	err := schema.CSVExportedEvent.Unmarshal(bytes, event)
+func unmarshal(bytes []byte) *events.HierarchyBuilt {
+	event := &events.HierarchyBuilt{}
+	err := events.HierarchyBuiltSchema.Unmarshal(bytes, event)
 	So(err, ShouldBeNil)
 	return event
 }
