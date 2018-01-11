@@ -1,31 +1,59 @@
 package event
 
 import (
+	"github.com/ONSdigital/dp-import/events"
 	"github.com/ONSdigital/go-ns/log"
 )
 
-// ObservationsImportedHandler ...
-type ObservationsImportedHandler struct {
+//go:generate moq -out eventtest/hierarchy_store.go -pkg eventtest . HierarchyStore
+//go:generate moq -out eventtest/event_producer.go -pkg eventtest . EventProducer
+
+// DataImportCompleteHandler ...
+type DataImportCompleteHandler struct {
+	hierarchyStore HierarchyStore
+	eventProducer  EventProducer
 }
 
-// NewObservationsImportedHandler ...
-func NewObservationsImportedHandler() *ObservationsImportedHandler {
-	return &ObservationsImportedHandler{}
+// HierarchyStore provides storage functionality for hierarchy data
+type HierarchyStore interface {
+	BuildHierarchy(instanceID, codeListID, dimensionName string) error
+}
+
+// EventProducer handles producing output events.
+type EventProducer interface {
+	HierarchyBuilt(instanceID, dimensionName string) error
+}
+
+// NewDataImportCompleteHandler ...
+func NewDataImportCompleteHandler(hierarchyStore HierarchyStore, eventProducer EventProducer) *DataImportCompleteHandler {
+
+	return &DataImportCompleteHandler{
+		hierarchyStore: hierarchyStore,
+		eventProducer:  eventProducer,
+	}
 }
 
 // Handle takes a single event, and returns the observations gathered from the URL in the event.
-func (handler ObservationsImportedHandler) Handle(event *ObservationsImported) error {
+func (handler DataImportCompleteHandler) Handle(event *events.DataImportComplete) error {
 
-	// determine which hierarchies need building for this instance
-	//    take the instance ID and query the recipe to get hierarchies?
+	logData := log.Data{"event": event}
+	log.Debug("event handler called", logData)
 
-	// for now just hardcode to have the coicop hierarchy
-	//hierarchyID := ""
+	err := handler.hierarchyStore.BuildHierarchy(
+		event.InstanceID,
+		event.CodeListID,
+		event.DimensionName,
+	)
+	if err != nil {
+		return err
+	}
 
-	// copy the generic hierarchy nodes to an instance specific copy
+	err = handler.eventProducer.HierarchyBuilt(event.InstanceID, event.DimensionName)
+	if err != nil {
+		return err
+	}
 
-	// populate the instance hierarchy details
+	log.Debug("event successfully handled", logData)
 
-	log.Debug("Event handler called", log.Data{"event": event})
 	return nil
 }
