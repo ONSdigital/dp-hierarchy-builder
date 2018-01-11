@@ -30,6 +30,8 @@ func Get() (*Config, error) {
 		ProducerTopic:           "hierarchy-built",
 		ErrorProducerTopic:      "import-error",
 		GracefulShutdownTimeout: time.Second * 10,
+		DatabaseAddress:         "bolt://localhost:7687",
+		Neo4jPoolSize:           20,
 	}
 
 	return cfg, envconfig.Process("", cfg)
