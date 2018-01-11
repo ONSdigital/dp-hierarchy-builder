@@ -3,16 +3,10 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "fyeLRF/EaLL2+jbnpmRBYPMxl/k=",
-			"path": "github.com/ONSdigital/dp-dataset-exporter/errors",
-			"revision": "15f1df2229c4444b21b4f89246a5b6a69ffb03aa",
-			"revisionTime": "2017-10-05T12:50:38Z"
-		},
-		{
-			"checksumSHA1": "VS6DTnFP8dkG4CKSjiyQWlcnfjQ=",
-			"path": "github.com/ONSdigital/dp-dataset-exporter/errors/errorstest",
-			"revision": "15f1df2229c4444b21b4f89246a5b6a69ffb03aa",
-			"revisionTime": "2017-10-05T12:50:38Z"
+			"checksumSHA1": "3oYwYZb1nVG7WAv0IUGFhPcB5RE=",
+			"path": "github.com/ONSdigital/dp-import/events",
+			"revision": "fb7cd48bdc0a9ac4dbca0b6d201adae3e61ecaef",
+			"revisionTime": "2018-01-08T15:17:02Z"
 		},
 		{
 			"checksumSHA1": "yVhSSS1KY9fmMVUcoZhIVyRB/YA=",

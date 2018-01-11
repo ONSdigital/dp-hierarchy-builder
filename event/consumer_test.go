@@ -12,6 +12,7 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 	"time"
+	"github.com/ONSdigital/dp-import/events"
 )
 
 func TestConsume_UnmarshallError(t *testing.T) {
@@ -21,7 +22,7 @@ func TestConsume_UnmarshallError(t *testing.T) {
 		mockConsumer := kafkatest.NewMessageConsumer(messages)
 
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(filterJobSubmittedEvent *event.ObservationsImported) error {
+			HandleFunc: func(dataImportComplete *events.DataImportComplete) error {
 				return nil
 			},
 		}
@@ -41,7 +42,7 @@ func TestConsume_UnmarshallError(t *testing.T) {
 			Convey("Only the valid event is sent to the mockEventHandler ", func() {
 				So(len(mockEventHandler.HandleCalls()), ShouldEqual, 1)
 
-				event := mockEventHandler.HandleCalls()[0].ObservationsImported
+				event := mockEventHandler.HandleCalls()[0].DataImportComplete
 				So(event.InstanceID, ShouldEqual, expectedEvent.InstanceID)
 			})
 		})
@@ -55,7 +56,7 @@ func TestConsume(t *testing.T) {
 		messages := make(chan kafka.Message, 1)
 		mockConsumer := kafkatest.NewMessageConsumer(messages)
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(filterJobSubmittedEvent *event.ObservationsImported) error {
+			HandleFunc: func(event *events.DataImportComplete) error {
 				return nil
 			},
 		}
@@ -75,8 +76,10 @@ func TestConsume(t *testing.T) {
 			Convey("A event is sent to the mockEventHandler ", func() {
 				So(len(mockEventHandler.HandleCalls()), ShouldEqual, 1)
 
-				event := mockEventHandler.HandleCalls()[0].ObservationsImported
+				event := mockEventHandler.HandleCalls()[0].DataImportComplete
 				So(event.InstanceID, ShouldEqual, expectedEvent.InstanceID)
+				So(event.CodeListID, ShouldEqual, expectedEvent.CodeListID)
+				So(event.DimensionName, ShouldEqual, expectedEvent.DimensionName)
 			})
 
 			Convey("The message is committed", func() {
@@ -90,12 +93,12 @@ func TestConsume_HandlerError(t *testing.T) {
 
 	Convey("Given an event consumer with a mock event handler that returns an error", t, func() {
 
-		expectedError := errors.New("Something bad happened in the event handler.")
+		expectedError := errors.New("something bad happened in the event handler")
 
 		messages := make(chan kafka.Message, 1)
 		mockConsumer := kafkatest.NewMessageConsumer(messages)
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(filterJobSubmittedEvent *event.ObservationsImported) error {
+			HandleFunc: func(event *events.DataImportComplete) error {
 				return expectedError
 			},
 		}
@@ -134,7 +137,7 @@ func TestClose(t *testing.T) {
 		messages := make(chan kafka.Message, 1)
 		mockConsumer := kafkatest.NewMessageConsumer(messages)
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(filterJobSubmittedEvent *event.ObservationsImported) error {
+			HandleFunc: func(event *events.DataImportComplete) error {
 				return nil
 			},
 		}
@@ -160,17 +163,18 @@ func TestClose(t *testing.T) {
 }
 
 // marshal helper method to marshal a event into a []byte
-func marshal(observationsImportedEvent event.ObservationsImported) []byte {
-	bytes, err := event.ObservationsImportedSchema.Marshal(observationsImportedEvent)
+func marshal(event events.DataImportComplete) []byte {
+	bytes, err := events.DataImportCompleteSchema.Marshal(event)
 	So(err, ShouldBeNil)
 	return bytes
 }
 
-func getExampleEvent() *event.ObservationsImported {
-	expectedEvent := &event.ObservationsImported{
+func getExampleEvent() *events.DataImportComplete {
+	return &events.DataImportComplete{
 		InstanceID: "7653",
+		DimensionName: "geography",
+		CodeListID: "543",
 	}
-	return expectedEvent
 }
 
 func waitForEventsToBeSentToHandler(eventHandler *eventtest.HandlerMock) {

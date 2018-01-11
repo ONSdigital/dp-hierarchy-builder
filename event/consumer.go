@@ -6,6 +6,7 @@ import (
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/dp-import/events"
 )
 
 //go:generate moq -out eventtest/handler.go -pkg eventtest . Handler
@@ -17,7 +18,7 @@ type MessageConsumer interface {
 
 // Handler represents a handler for processing a single event.
 type Handler interface {
-	Handle(observationsImported *ObservationsImported) error
+	Handle(dataImportComplete *events.DataImportComplete) error
 }
 
 // Consumer consumes event messages.
@@ -98,8 +99,8 @@ func processMessage(message kafka.Message, handler Handler, errorReporter report
 }
 
 // unmarshal converts a event instance to []byte.
-func unmarshal(message kafka.Message) (*ObservationsImported, error) {
-	var event ObservationsImported
-	err := ObservationsImportedSchema.Unmarshal(message.GetData(), &event)
+func unmarshal(message kafka.Message) (*events.DataImportComplete, error) {
+	var event events.DataImportComplete
+	err := events.DataImportCompleteSchema.Unmarshal(message.GetData(), &event)
 	return &event, err
 }
