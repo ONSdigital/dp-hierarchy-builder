@@ -1,6 +1,9 @@
 package event
 
-import "github.com/ONSdigital/dp-import/events"
+import (
+	"github.com/ONSdigital/dp-import/events"
+	"github.com/ONSdigital/go-ns/log"
+)
 
 // AvroProducer produces Avro serialised messages.
 type AvroProducer struct {
@@ -26,6 +29,9 @@ func (producer *AvroProducer) HierarchyBuilt(instanceID, dimensionName string) e
 		DimensionName: dimensionName,
 		InstanceID:    instanceID,
 	}
+
+	log.Debug("producing hierarchy built event kafka message",
+		log.Data{ "event":hierarchyBuiltEvent })
 
 	bytes, err := events.HierarchyBuiltSchema.Marshal(hierarchyBuiltEvent)
 	if err != nil {
