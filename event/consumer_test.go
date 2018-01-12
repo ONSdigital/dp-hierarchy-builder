@@ -5,6 +5,7 @@ import (
 	"errors"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/event/eventtest"
+	"github.com/ONSdigital/dp-import/events"
 	"github.com/ONSdigital/dp-reporter-client/reporter/reportertest"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/kafka/kafkatest"
@@ -12,7 +13,6 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 	"time"
-	"github.com/ONSdigital/dp-import/events"
 )
 
 func TestConsume_UnmarshallError(t *testing.T) {
@@ -171,9 +171,9 @@ func marshal(event events.DataImportComplete) []byte {
 
 func getExampleEvent() *events.DataImportComplete {
 	return &events.DataImportComplete{
-		InstanceID: "7653",
+		InstanceID:    "7653",
 		DimensionName: "geography",
-		CodeListID: "543",
+		CodeListID:    "543",
 	}
 }
 

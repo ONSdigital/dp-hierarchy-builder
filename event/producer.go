@@ -31,7 +31,7 @@ func (producer *AvroProducer) HierarchyBuilt(instanceID, dimensionName string) e
 	}
 
 	log.Debug("producing hierarchy built event kafka message",
-		log.Data{ "event":hierarchyBuiltEvent })
+		log.Data{"event": hierarchyBuiltEvent})
 
 	bytes, err := events.HierarchyBuiltSchema.Marshal(hierarchyBuiltEvent)
 	if err != nil {

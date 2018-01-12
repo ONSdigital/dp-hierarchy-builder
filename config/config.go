@@ -1,9 +1,9 @@
 package config
 
 import (
+	"encoding/json"
 	"github.com/kelseyhightower/envconfig"
 	"time"
-	"encoding/json"
 )
 
 // Config values for the application.

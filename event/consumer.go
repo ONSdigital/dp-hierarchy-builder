@@ -3,10 +3,10 @@ package event
 import (
 	"context"
 	"errors"
+	"github.com/ONSdigital/dp-import/events"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
-	"github.com/ONSdigital/dp-import/events"
 )
 
 //go:generate moq -out eventtest/handler.go -pkg eventtest . Handler
