@@ -6,12 +6,11 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/go-ns/handlers/healthcheck"
+	"github.com/ONSdigital/go-ns/healthcheck"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
-	"github.com/ONSdigital/go-ns/server"
+	"github.com/ONSdigital/go-ns/neo4j"
 	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
-	"github.com/gorilla/mux"
 	"os"
 	"os/signal"
 	"syscall"
@@ -32,22 +31,6 @@ func main() {
 
 	// a channel used to signal a graceful exit is required.
 	errorChannel := make(chan error)
-
-	router := mux.NewRouter()
-	router.Path("/healthcheck").HandlerFunc(healthcheck.Handler)
-	httpServer := server.New(config.BindAddr, router)
-
-	// Disable auto handling of os signals by the HTTP server. This is handled
-	// in the service so we can gracefully shutdown resources other than just
-	// the HTTP server.
-	httpServer.HandleOSSignals = false
-
-	go func() {
-		log.Debug("starting http server", log.Data{"bind_addr": config.BindAddr})
-		if httpServerErr := httpServer.ListenAndServe(); httpServerErr != nil {
-			errorChannel <- httpServerErr
-		}
-	}()
 
 	kafkaBrokers := config.KafkaAddr
 	kafkaConsumer, err := kafka.NewConsumerGroup(
@@ -79,6 +62,12 @@ func main() {
 	eventConsumer := event.NewConsumer()
 	eventConsumer.Consume(kafkaConsumer, eventHandler, errorHandler)
 
+	healthChecker := healthcheck.NewServer(
+		config.BindAddr,
+		config.HealthCheckInterval,
+		errorChannel,
+		neo4j.NewHealthCheckClient(neo4jConnPool))
+
 	shutdownGracefully := func() {
 
 		ctx, cancel := context.WithTimeout(context.Background(), config.GracefulShutdownTimeout)
@@ -96,10 +85,10 @@ func main() {
 		err = kafkaErrorProducer.Close(ctx)
 		logIfError(err)
 
-		err = neo4jConnPool.Close()
+		err = healthChecker.Close(ctx)
 		logIfError(err)
 
-		err = httpServer.Shutdown(ctx)
+		err = neo4jConnPool.Close()
 		logIfError(err)
 
 		// cancel the timer in the shutdown context.
