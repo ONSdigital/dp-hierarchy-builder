@@ -3,10 +3,10 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "5JL3NRaXhli77Q9DERjQtJ7qLdQ=",
+			"checksumSHA1": "EiTaqi0kmbNTQWGBqm0ucCKONh8=",
 			"path": "github.com/ONSdigital/dp-import/events",
-			"revision": "fb7cd48bdc0a9ac4dbca0b6d201adae3e61ecaef",
-			"revisionTime": "2018-01-08T15:17:02Z"
+			"revision": "3b67b8f7e04de15116cea51ba1324b22abfeaefb",
+			"revisionTime": "2018-01-17T15:21:33Z"
 		},
 		{
 			"checksumSHA1": "yVhSSS1KY9fmMVUcoZhIVyRB/YA=",
