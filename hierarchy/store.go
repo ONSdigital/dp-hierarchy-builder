@@ -26,9 +26,9 @@ func NewStore(pool DBPool) *Store {
 func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string) error {
 
 	logData := log.Data{
-		"instanceID":    instanceID,
-		"codeListID":    codeListID,
-		"dimensionName": dimensionName,
+		"instance_id":    instanceID,
+		"code_list_id":   codeListID,
+		"dimension_name": dimensionName,
 	}
 
 	log.Debug("requesting neo4j connection from the connection pool", logData)
@@ -74,12 +74,13 @@ func createInstanceHierarchyConstraints(connection bolt.Conn, instanceID, dimens
 	query := fmt.Sprintf(
 		"CREATE CONSTRAINT ON (n:`_hierarchy_node_%s_%s`) ASSERT n.code IS UNIQUE;",
 		instanceID,
-		dimensionName)
+		dimensionName,
+	)
 
 	logData := log.Data{
-		"instanceID":    instanceID,
-		"dimensionName": dimensionName,
-		"query":         query,
+		"instance_id":    instanceID,
+		"dimension_name": dimensionName,
+		"query":          query,
 	}
 
 	log.Debug("creating instance hierarchy code constraint", logData)
@@ -105,13 +106,14 @@ func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName stri
 			"MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label,code_list:{code_list} });",
 		codeListID,
 		instanceID,
-		dimensionName)
+		dimensionName,
+	)
 
 	logData := log.Data{
-		"instanceID":    instanceID,
-		"codeListID":    codeListID,
-		"dimensionName": dimensionName,
-		"query":         query,
+		"instance_id":    instanceID,
+		"code_list_id":   codeListID,
+		"dimension_name": dimensionName,
+		"query":          query,
 	}
 
 	log.Debug("cloning nodes from the generic hierarchy", logData)
@@ -143,13 +145,14 @@ func cloneRelationships(connection bolt.Conn, instanceID, codeListID, dimensionN
 		instanceID,
 		dimensionName,
 		instanceID,
-		dimensionName)
+		dimensionName,
+	)
 
 	logData := log.Data{
-		"instanceID":    instanceID,
-		"codeListID":    codeListID,
-		"dimensionName": dimensionName,
-		"query":         query,
+		"instance_id":    instanceID,
+		"code_list_id":   codeListID,
+		"dimension_name": dimensionName,
+		"query":          query,
 	}
 
 	log.Debug("cloning relationships from the generic hierarchy", logData)
@@ -176,12 +179,13 @@ func setNumberOfChildren(connection bolt.Conn, instanceID, dimensionName string)
 		instanceID,
 		dimensionName,
 		instanceID,
-		dimensionName)
+		dimensionName,
+	)
 
 	logData := log.Data{
-		"instanceID":    instanceID,
-		"dimensionName": dimensionName,
-		"query":         query,
+		"instance_id":    instanceID,
+		"dimension_name": dimensionName,
+		"query":          query,
 	}
 
 	log.Debug("setting number of children property value on the instance hierarchy nodes", logData)
@@ -208,12 +212,13 @@ func setHasData(connection bolt.Conn, instanceID, dimensionName string) error {
 	query := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)"+
 		" with n SET n.hasData = true",
 		instanceID,
-		dimensionName)
+		dimensionName,
+	)
 
 	logData := log.Data{
-		"instanceID":    instanceID,
-		"dimensionName": dimensionName,
-		"query":         query,
+		"instance_id":    instanceID,
+		"dimension_name": dimensionName,
+		"query":          query,
 	}
 
 	log.Debug("setting has data property on the instance hierarchy", logData)

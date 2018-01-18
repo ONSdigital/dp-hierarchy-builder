@@ -66,7 +66,8 @@ func main() {
 		config.BindAddr,
 		config.HealthCheckInterval,
 		errorChannel,
-		neo4j.NewHealthCheckClient(neo4jConnPool))
+		neo4j.NewHealthCheckClient(neo4jConnPool),
+	)
 
 	shutdownGracefully := func() {
 
