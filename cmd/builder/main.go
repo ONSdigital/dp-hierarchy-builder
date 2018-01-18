@@ -89,7 +89,7 @@ func cloneNodes(connection bolt.Conn) error {
 	startTime := time.Now()
 	log.Printf("*** Cloning nodes from the generic hierarchy\n")
 
-	insert := fmt.Sprintf("MATCH (n:`_generic_hierarchy_node_%s`) WITH n MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label,code_list:{code_list} });", *codeListID, *instanceID, dimensionName)
+	insert := fmt.Sprintf("MATCH (n:`_generic_hierarchy_node_%s`) WITH n MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label,code_list:{code_list}, hasData:false });", *codeListID, *instanceID, dimensionName)
 	log.Println(insert)
 
 	stmtInsert, err := connection.PrepareNeo(insert)
@@ -120,7 +120,7 @@ func cloneRelationships(connection bolt.Conn) error {
 		" WITH genericNode, genericParent"+
 		" MATCH (node:`_hierarchy_node_%s_%s` { code:genericNode.code })"+
 		", (parent:`_hierarchy_node_%s_%s` { code:genericParent.code }) "+
-		"MERGE (node)-[r:hasParent]->(parent) SET node.hasData=false;", *codeListID, *codeListID, *instanceID, dimensionName, *instanceID, dimensionName)
+		"MERGE (node)-[r:hasParent]->(parent);", *codeListID, *codeListID, *instanceID, dimensionName, *instanceID, dimensionName)
 	log.Println(insert)
 
 	stmtInsert, err := connection.PrepareNeo(insert)
