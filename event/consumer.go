@@ -3,6 +3,7 @@ package event
 import (
 	"context"
 	"errors"
+	"github.com/ONSdigital/dp-import/events"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
@@ -17,7 +18,7 @@ type MessageConsumer interface {
 
 // Handler represents a handler for processing a single event.
 type Handler interface {
-	Handle(observationsImported *ObservationsImported) error
+	Handle(dataImportComplete *events.DataImportComplete) error
 }
 
 // Consumer consumes event messages.
@@ -70,7 +71,7 @@ func (consumer *Consumer) Close(ctx context.Context) (err error) {
 		return nil
 	case <-ctx.Done():
 		log.Info("shutdown context time exceeded, skipping graceful shutdown of event consumer", nil)
-		return errors.New("Shutdown context timed out")
+		return errors.New("shutdown context timed out")
 	}
 
 }
@@ -98,8 +99,8 @@ func processMessage(message kafka.Message, handler Handler, errorReporter report
 }
 
 // unmarshal converts a event instance to []byte.
-func unmarshal(message kafka.Message) (*ObservationsImported, error) {
-	var event ObservationsImported
-	err := ObservationsImportedSchema.Unmarshal(message.GetData(), &event)
+func unmarshal(message kafka.Message) (*events.DataImportComplete, error) {
+	var event events.DataImportComplete
+	err := events.DataImportCompleteSchema.Unmarshal(message.GetData(), &event)
 	return &event, err
 }

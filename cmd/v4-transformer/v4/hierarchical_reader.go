@@ -1,8 +1,8 @@
 package v4
 
 import (
-	"strings"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	"strings"
 )
 
 // HierarchicalLabelReader reads a code / label pair from a V4 file and parses hierarchy information from the label.
@@ -53,7 +53,7 @@ func (reader HierarchicalLabelReader) Read() (*hierarchy.Node, error) {
 	}
 
 	return &hierarchy.Node{
-		CodeList:reader.codeListID,
+		CodeList:        reader.codeListID,
 		Code:            code,
 		Label:           label,
 		Level:           level,

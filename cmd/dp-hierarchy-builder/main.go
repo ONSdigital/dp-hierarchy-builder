@@ -4,12 +4,13 @@ import (
 	"context"
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/go-ns/handlers/healthcheck"
+	"github.com/ONSdigital/go-ns/healthcheck"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
-	"github.com/ONSdigital/go-ns/server"
-	"github.com/gorilla/mux"
+	"github.com/ONSdigital/go-ns/neo4j"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 	"os"
 	"os/signal"
 	"syscall"
@@ -25,29 +26,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Avoid logging the neo4j FileURL as it may contain a password
-	log.Debug("loaded config", log.Data{
-		"config": config,
-	})
+	// sensitive fields are omitted from config.String().
+	log.Debug("loaded config", log.Data{"config": config})
 
 	// a channel used to signal a graceful exit is required.
 	errorChannel := make(chan error)
-
-	router := mux.NewRouter()
-	router.Path("/healthcheck").HandlerFunc(healthcheck.Handler)
-	httpServer := server.New(config.BindAddr, router)
-
-	// Disable auto handling of os signals by the HTTP server. This is handled
-	// in the service so we can gracefully shutdown resources other than just
-	// the HTTP server.
-	httpServer.HandleOSSignals = false
-
-	go func() {
-		log.Debug("starting http server", log.Data{"bind_addr": config.BindAddr})
-		if httpServerErr := httpServer.ListenAndServe(); httpServerErr != nil {
-			errorChannel <- httpServerErr
-		}
-	}()
 
 	kafkaBrokers := config.KafkaAddr
 	kafkaConsumer, err := kafka.NewConsumerGroup(
@@ -63,14 +46,28 @@ func main() {
 	kafkaErrorProducer, err := kafka.NewProducer(config.KafkaAddr, config.ErrorProducerTopic, 0)
 	exitIfError(err)
 
+	avroProducer := event.NewAvroProducer(kafkaProducer)
+
+	neo4jConnPool, err := bolt.NewClosableDriverPool(config.DatabaseAddress, config.Neo4jPoolSize)
+	exitIfError(err)
+
+	hierarchyStore := hierarchy.NewStore(neo4jConnPool)
+
 	// when errors occur - we send a message on an error topic.
 	errorHandler, err := reporter.NewImportErrorReporter(kafkaErrorProducer, log.Namespace)
 	exitIfError(err)
 
-	eventHandler := event.NewObservationsImportedHandler()
+	eventHandler := event.NewDataImportCompleteHandler(hierarchyStore, avroProducer)
 
 	eventConsumer := event.NewConsumer()
 	eventConsumer.Consume(kafkaConsumer, eventHandler, errorHandler)
+
+	healthChecker := healthcheck.NewServer(
+		config.BindAddr,
+		config.HealthCheckInterval,
+		errorChannel,
+		neo4j.NewHealthCheckClient(neo4jConnPool),
+	)
 
 	shutdownGracefully := func() {
 
@@ -89,7 +86,10 @@ func main() {
 		err = kafkaErrorProducer.Close(ctx)
 		logIfError(err)
 
-		err = httpServer.Shutdown(ctx)
+		err = healthChecker.Close(ctx)
+		logIfError(err)
+
+		err = neo4jConnPool.Close()
 		logIfError(err)
 
 		// cancel the timer in the shutdown context.

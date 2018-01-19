@@ -15,7 +15,7 @@ func PopulateChildNodes(nodes *map[string]*Node) {
 		if nodeMap[entry.ParentCode] == nil {
 			log.Error(errors.New("entry not found for label code"), log.Data{
 				"code":        entry.Code,
-				"parent code": entry.ParentCode,
+				"parent_code": entry.ParentCode,
 			})
 			continue
 		}
