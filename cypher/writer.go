@@ -1,8 +1,8 @@
 package cypher
 
 import (
-	"fmt"
 	"bytes"
+	"fmt"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"io/ioutil"
 )

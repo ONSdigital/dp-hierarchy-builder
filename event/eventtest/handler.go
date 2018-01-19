@@ -4,7 +4,7 @@
 package eventtest
 
 import (
-	"github.com/ONSdigital/dp-hierarchy-builder/event"
+	"github.com/ONSdigital/dp-import/events"
 	"sync"
 )
 
@@ -18,7 +18,7 @@ var (
 //
 //         // make and configure a mocked Handler
 //         mockedHandler := &HandlerMock{
-//             HandleFunc: func(observationsImported *event.ObservationsImported) error {
+//             HandleFunc: func(dataImportComplete *events.DataImportComplete) error {
 // 	               panic("TODO: mock out the Handle method")
 //             },
 //         }
@@ -29,42 +29,42 @@ var (
 //     }
 type HandlerMock struct {
 	// HandleFunc mocks the Handle method.
-	HandleFunc func(observationsImported *event.ObservationsImported) error
+	HandleFunc func(dataImportComplete *events.DataImportComplete) error
 
 	// calls tracks calls to the methods.
 	calls struct {
 		// Handle holds details about calls to the Handle method.
 		Handle []struct {
-			// ObservationsImported is the observationsImported argument value.
-			ObservationsImported *event.ObservationsImported
+			// DataImportComplete is the dataImportComplete argument value.
+			DataImportComplete *events.DataImportComplete
 		}
 	}
 }
 
 // Handle calls HandleFunc.
-func (mock *HandlerMock) Handle(observationsImported *event.ObservationsImported) error {
+func (mock *HandlerMock) Handle(dataImportComplete *events.DataImportComplete) error {
 	if mock.HandleFunc == nil {
 		panic("moq: HandlerMock.HandleFunc is nil but Handler.Handle was just called")
 	}
 	callInfo := struct {
-		ObservationsImported *event.ObservationsImported
+		DataImportComplete *events.DataImportComplete
 	}{
-		ObservationsImported: observationsImported,
+		DataImportComplete: dataImportComplete,
 	}
 	lockHandlerMockHandle.Lock()
 	mock.calls.Handle = append(mock.calls.Handle, callInfo)
 	lockHandlerMockHandle.Unlock()
-	return mock.HandleFunc(observationsImported)
+	return mock.HandleFunc(dataImportComplete)
 }
 
 // HandleCalls gets all the calls that were made to Handle.
 // Check the length with:
 //     len(mockedHandler.HandleCalls())
 func (mock *HandlerMock) HandleCalls() []struct {
-	ObservationsImported *event.ObservationsImported
+	DataImportComplete *events.DataImportComplete
 } {
 	var calls []struct {
-		ObservationsImported *event.ObservationsImported
+		DataImportComplete *events.DataImportComplete
 	}
 	lockHandlerMockHandle.RLock()
 	calls = mock.calls.Handle

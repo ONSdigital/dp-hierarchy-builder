@@ -58,6 +58,18 @@ MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_aggregate` {code:"cpi1dim1G12
 | PRODUCER_TOPIC            | hierarchy-built       | The name of the topic to produces messages to
 | ERROR_PRODUCER_TOPIC      | import-error          | The name of the topic to send error messages to
 | GRACEFUL_SHUTDOWN_TIMEOUT | time.Second * 10      | Time time to wait when gracefully shutting down before closing
+| DATABASE_ADDRESS          | bolt://localhost:7687 | The address of the database
+| NEO4J_POOL_SIZE           | 20                    | The number of neo4j connections to pool
+| HEALTHCHECK_INTERVAL      | time.Minute           | How often to run a health check
+
+### Healthcheck
+
+ The `/healthcheck` endpoint returns the current status of the service. Dependent services are health checked on an interval defined by the `HEALTHCHECK_INTERVAL` environment variable.
+
+ On a development machine a request to the health check endpoint can be made by:
+
+ `curl localhost:22500/healthcheck`
+
 
 ### Contributing
 

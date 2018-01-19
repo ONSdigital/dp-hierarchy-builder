@@ -4,18 +4,18 @@ package main
 
 This generator takes a v4 file and infers a hierarchy from the code in the label.
 
- */
+*/
 
 import (
 	"flag"
 	"os"
 
-	"github.com/ONSdigital/go-ns/log"
-	"strings"
 	"encoding/csv"
-	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	"github.com/ONSdigital/go-ns/log"
 	"io"
+	"strings"
 )
 
 var filepath = flag.String("file", "cmd/geography-transformer/WD16_LAD16_CTY16_OTH_UK_LU.csv", "The path to the import filepath")
@@ -30,14 +30,13 @@ func main() {
 
 	f, err := os.Open(*filepath)
 
-
 	csvReader := csv.NewReader(f)
 	defer f.Close()
 
 	// identify the code lists used in this file from the header row.
 	headerRow, err := csvReader.Read()
 	if err != nil {
-		log.ErrorC("Failed to read the first row of the input CSV", err, log.Data{ "file": *filepath })
+		log.ErrorC("Failed to read the first row of the input CSV", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -47,7 +46,7 @@ func main() {
 	// Create a map of code:node
 	nodeMap, err := createNodeMap(csvReader, codelists)
 	if err != nil {
-		log.ErrorC("Failed to read the rows of the input CSV", err, log.Data{ "file": *filepath })
+		log.ErrorC("Failed to read the rows of the input CSV", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
