@@ -37,7 +37,7 @@ func main() {
 		kafkaBrokers,
 		config.ConsumerTopic,
 		config.ConsumerGroup,
-		kafka.OffsetNewest)
+		kafka.OffsetOldest)
 	exitIfError(err)
 
 	kafkaProducer, err := kafka.NewProducer(kafkaBrokers, config.ProducerTopic, 0)
