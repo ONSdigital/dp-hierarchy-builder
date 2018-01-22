@@ -103,7 +103,7 @@ func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName stri
 
 	query := fmt.Sprintf(
 		"MATCH (n:`_generic_hierarchy_node_%s`) WITH n "+
-			"MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label,code_list:{code_list} });",
+			"MERGE (:`_hierarchy_node_%s_%s` { code:n.code,label:n.label,code_list:{code_list}, hasData:false });",
 		codeListID,
 		instanceID,
 		dimensionName,
@@ -206,11 +206,10 @@ func setNumberOfChildren(connection bolt.Conn, instanceID, dimensionName string)
 
 func setHasData(connection bolt.Conn, instanceID, dimensionName string) error {
 
-	// todo: check that a dimension option has observations related to it
-	// we are defaulting 'hasData' property to true for now while we only deal with datasets with no sparsity
-
-	query := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`)"+
-		" with n SET n.hasData = true",
+	query := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_%s_%s`) "+
+		"WHERE n.code = p.value SET n.hasData=true",
+		instanceID,
+		dimensionName,
 		instanceID,
 		dimensionName,
 	)

@@ -12,7 +12,7 @@ import (
 var neoURL = flag.String("neo-url", "bolt://localhost:7687", "")
 var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
 var instanceID = flag.String("instance-id", "12345", "")
-var dimensionNameArg = flag.String("dimension-name", "Aggregate", "")
+var dimensionNameArg = flag.String("dimension-name", "aggregate", "")
 var dimensionName = ""
 
 func main() {
