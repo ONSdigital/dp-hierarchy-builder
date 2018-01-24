@@ -18,7 +18,7 @@ There are a number of utility applications as part of this project (found under 
 
 * Create an instance hierarchy for the coicop hierarchy - please note you will have to replace the value for 'INSTANCE_ID'
 
-`make INSTANCE_ID="c4-d39e-4e2f-942b-3ca105" instance-builder`
+`make INSTANCE_ID="5c03c3e7-9e58-4ed1-baac-6364d99eb4ab" instance-builder`
 
 #### transform a hierarchy input file to a cypher script (set FILE as required input file)
 
@@ -37,13 +37,13 @@ output is written to ``./cmd/geography-transformer/output`
 * get children of a node - note that the "code" field will have to be set in the query
 
 ```
-MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_aggregate` {code:"cpi1dim1T120000"})<-[r:hasParent]-(child) RETURN child`
+MATCH (n:`_hierarchy_node_5c03c3e7-9e58-4ed1-baac-6364d99eb4ab_aggregate` {code:"cpi1dim1T120000"})<-[r:hasParent]-(child) RETURN child`
 ```
 
 * Query the ancestors (aka breadcrumb) of a node
 
 ```
-MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_aggregate` {code:"cpi1dim1G120500"})-[:hasParent *]->(ancestor) RETURN ancestor
+MATCH (n:`_hierarchy_node_5c03c3e7-9e58-4ed1-baac-6364d99eb4ab_aggregate` {code:"cpi1dim1G120500"})-[:hasParent *]->(ancestor) RETURN ancestor
 ```
 
 
@@ -68,7 +68,7 @@ MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_aggregate` {code:"cpi1dim1G12
 
  On a development machine a request to the health check endpoint can be made by:
 
- `curl localhost:22500/healthcheck`
+ `curl localhost:22700/healthcheck`
 
 
 ### Contributing
