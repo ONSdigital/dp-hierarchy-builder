@@ -68,7 +68,7 @@ MATCH (n:`_hierarchy_node_c4-d39e-4e2f-942b-3ca105_aggregate` {code:"cpi1dim1G12
 
  On a development machine a request to the health check endpoint can be made by:
 
- `curl localhost:22500/healthcheck`
+ `curl localhost:22700/healthcheck`
 
 
 ### Contributing
