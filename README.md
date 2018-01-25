@@ -1,51 +1,25 @@
 dp-hierarchy-builder
 ================
 
+The hierarchy builder is a service that forms part of the dataset import process. It requires a 'full' hierarchy to be available for the dataset you are importing
+
 ### Getting started
 
-There are a number of utility applications as part of this project (found under the cmd directory):
+Import the CPIH full hierarchy:
 
-* v4-transformer - take a V4 file and create a full hierarchy input file / cypher script
-* geography-transformer - take a geography input CSV file and output a full hierarchy input file / cypher script
-* hierarchy-transformer - take a hierarchy input CSV file and generate cypher script
-* builder - builds an instance hierarchy from a full hierarchy
+`cypher-shell < cmd/v4-transformer/output/cpih/hierarchy-cpih.cypher`
 
-#### Manually building full and instance hierarchies
+Import the mid-year-pop-est full hierarchy:
 
-* Import the full coicop hierarchy for the CPI dataset
+`cypher-shell < cmd/hierarchy-transformer/output/midYearPopEst/hierarchy.cypher`
 
-`make full`
+You can use additional flags if running against an environment other than localhost:
 
-* Create an instance hierarchy for the coicop hierarchy - please note you will have to replace the value for 'INSTANCE_ID'
+`cypher-shell -u USER -p PASSWORD -a bolt://localhost:7687 < .....`
 
-`make INSTANCE_ID="5c03c3e7-9e58-4ed1-baac-6364d99eb4ab" instance-builder`
+Run the dp-hierarchy-builder service
 
-#### transform a hierarchy input file to a cypher script (set FILE as required input file)
-
-`make FILE=./cmd/hierarchy-transformer/hierarchy.csv generate-full`
-
-output is written to ``./cmd/hierarchy-transformer/output`
-
-#### transform a geography input file to a hierarchy input file / cypher script
-
-`make FILE=./cmd/geography-transformer/WD16_LAD16_CTY16_OTH_UK_LU.csv  generate-full-from-geography `
-
-output is written to ``./cmd/geography-transformer/output`
-
-#### Query the instance hierarchy
-
-* get children of a node - note that the "code" field will have to be set in the query
-
-```
-MATCH (n:`_hierarchy_node_5c03c3e7-9e58-4ed1-baac-6364d99eb4ab_aggregate` {code:"cpi1dim1T120000"})<-[r:hasParent]-(child) RETURN child`
-```
-
-* Query the ancestors (aka breadcrumb) of a node
-
-```
-MATCH (n:`_hierarchy_node_5c03c3e7-9e58-4ed1-baac-6364d99eb4ab_aggregate` {code:"cpi1dim1G120500"})-[:hasParent *]->(ancestor) RETURN ancestor
-```
-
+`make debug`
 
 ### Configuration
 
@@ -70,6 +44,40 @@ MATCH (n:`_hierarchy_node_5c03c3e7-9e58-4ed1-baac-6364d99eb4ab_aggregate` {code:
 
  `curl localhost:22700/healthcheck`
 
+### Command line tools
+
+There are a number of utility applications for manual tasks (found under the cmd directory):
+
+* v4-transformer - take a V4 file and create a full hierarchy input file / cypher script
+* geography-transformer - take a geography input CSV file and output a full hierarchy input file / cypher script
+* hierarchy-transformer - take a hierarchy input CSV file and generate cypher script
+* builder - builds an instance hierarchy from a full hierarchy
+
+#### Manually building instance hierarchies
+
+* Manually create instance hierarchy for CPIH - note you will have to replace the value for 'instance-id'
+
+`go run cmd/builder/main.go --instance-id 27a4019f-6491-4876-bbdd-1439a40e5bb9 --dimension-name aggregate --code-list-id e44de4c4-d39e-4e2f-942b-3ca10584d078`
+
+* Manually create instance hierarchy for mid-year-pop-est - note you will have to replace the value for 'instance-id'
+
+`go run cmd/builder/main.go --instance-id 34b8c139-a1fe-45b1-95e2-e77df3682256 --dimension-name geography --code-list-id mid-year-pop-geography`
+
+If running one of the above commands against an environment, you can specify the neo4j URL with the flag (replacing USER, PASSSWORD, host, and port as required):
+
+`--neo-url="bolt://USER:PASSWORD@localhost:7687"`
+
+#### transform a hierarchy input file to a cypher script (set FILE as required input file)
+
+`make FILE=./cmd/hierarchy-transformer/hierarchy.csv generate-full`
+
+output is written to ``./cmd/hierarchy-transformer/output`
+
+#### transform a geography input file to a hierarchy input file / cypher script
+
+`make FILE=./cmd/geography-transformer/WD16_LAD16_CTY16_OTH_UK_LU.csv  generate-full-from-geography `
+
+output is written to ``./cmd/geography-transformer/output`
 
 ### Contributing
 
