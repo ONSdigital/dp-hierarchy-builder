@@ -4,17 +4,17 @@ package main
 
 This generator takes a v4 file and infers a hierarchy from the code in the label.
 
- */
+*/
 
 import (
 	"encoding/csv"
 	"flag"
 	"os"
 
+	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/go-ns/log"
 	"strings"
-	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
 )
 
 var filepath = flag.String("file", "cmd/hierarchy-transformer/sic07-heirarchy.csv", "The path to the import filepath")
@@ -28,7 +28,7 @@ func main() {
 	// open the input file
 	f, err := os.Open(*filepath)
 	if err != nil {
-		log.ErrorC("Failed to open input file", err, log.Data{ "file": *filepath })
+		log.ErrorC("Failed to open input file", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -38,7 +38,7 @@ func main() {
 	// discard header row
 	_, err = csvReader.Read()
 	if err != nil {
-		log.ErrorC("Failed to read CSV header row", err, log.Data{ "file": *filepath })
+		log.ErrorC("Failed to read CSV header row", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 

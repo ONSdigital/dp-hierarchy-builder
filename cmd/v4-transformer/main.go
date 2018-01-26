@@ -4,19 +4,19 @@ package main
 
 This generator takes a v4 file and infers a hierarchy from the code in the label.
 
- */
+*/
 
 import (
 	"encoding/csv"
 	"flag"
 	"os"
 
-	"github.com/ONSdigital/go-ns/log"
-	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
-	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
-	"io"
 	"errors"
+	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
+	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	"github.com/ONSdigital/go-ns/log"
+	"io"
 )
 
 var filepath = flag.String("file", "cmd/v4-transformer/coicopcomb-inc-geo.csv", "The path to the import filepath")
