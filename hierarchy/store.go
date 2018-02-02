@@ -59,17 +59,17 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return err
 	}
 
-	markNodesToRemain(connection, instanceID, dimensionName)
+	err = markNodesToRemain(connection, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	removeNodesNotMarkedToRemain(connection, instanceID, dimensionName)
+	err = removeNodesNotMarkedToRemain(connection, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	removeRemainMarker(connection, instanceID, dimensionName)
+	err = removeRemainMarker(connection, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
