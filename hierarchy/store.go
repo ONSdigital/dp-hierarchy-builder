@@ -2,8 +2,8 @@ package hierarchy
 
 import (
 	"fmt"
-	"github.com/ONSdigital/dp-hierarchy-builder/bolt"
 	"github.com/ONSdigital/go-ns/log"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 )
 
 //go:generate moq -out hierarchytest/db_pool.go -pkg hierarchytest . DBPool
@@ -41,7 +41,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 
 	defer connection.Close()
 
-	createInstanceHierarchyConstraints(connection, instanceID, dimensionName)
+	err = createInstanceHierarchyConstraints(connection, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
