@@ -1,12 +1,12 @@
 package hierarchy
 
 import (
+	"errors"
 	"fmt"
 	"github.com/ONSdigital/dp-hierarchy-builder/bolt/bolttest"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy/hierarchytest"
 	"github.com/ONSdigital/golang-neo4j-bolt-driver"
 	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
-	"github.com/pkg/errors"
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 )
