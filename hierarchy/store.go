@@ -6,6 +6,8 @@ import (
 	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 )
 
+//go:generate moq -out hierarchytest/db_pool.go -pkg hierarchytest . DBPool
+
 // Store represents storage for hierarchy data.
 type Store struct {
 	pool DBPool
@@ -39,7 +41,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 
 	defer connection.Close()
 
-	createInstanceHierarchyConstraints(connection, instanceID, dimensionName)
+	err = createInstanceHierarchyConstraints(connection, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
@@ -55,6 +57,21 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	}
 
 	err = setHasData(connection, instanceID, dimensionName)
+	if err != nil {
+		return err
+	}
+
+	err = markNodesToRemain(connection, instanceID, dimensionName)
+	if err != nil {
+		return err
+	}
+
+	err = removeNodesNotMarkedToRemain(connection, instanceID, dimensionName)
+	if err != nil {
+		return err
+	}
+
+	err = removeRemainMarker(connection, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
@@ -85,18 +102,8 @@ func createInstanceHierarchyConstraints(connection bolt.Conn, instanceID, dimens
 
 	log.Debug("creating instance hierarchy code constraint", logData)
 
-	stmt, err := connection.PrepareNeo(query)
-	if err != nil {
-		return err
-	}
-
-	_, err = stmt.ExecNeo(nil)
-	if err != nil {
-		return err
-	}
-	stmt.Close()
-
-	return nil
+	_, err := connection.ExecNeo(query, nil)
+	return err
 }
 
 func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName string) error {
@@ -118,18 +125,8 @@ func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName stri
 
 	log.Debug("cloning nodes from the generic hierarchy", logData)
 
-	stmt, err := connection.PrepareNeo(query)
-	if err != nil {
-		return err
-	}
-	defer stmt.Close()
-
-	_, err = stmt.ExecNeo(map[string]interface{}{"code_list": codeListID})
-	if err != nil {
-		return err
-	}
-
-	return nil
+	_, err := connection.ExecNeo(query, map[string]interface{}{"code_list": codeListID})
+	return err
 }
 
 func cloneRelationships(connection bolt.Conn, instanceID, codeListID, dimensionName string) error {
@@ -157,18 +154,8 @@ func cloneRelationships(connection bolt.Conn, instanceID, codeListID, dimensionN
 
 	log.Debug("cloning relationships from the generic hierarchy", logData)
 
-	stmt, err := connection.PrepareNeo(query)
-	if err != nil {
-		return err
-	}
-	defer stmt.Close()
-
-	_, err = stmt.ExecNeo(nil)
-	if err != nil {
-		return err
-	}
-
-	return nil
+	_, err := connection.ExecNeo(query, nil)
+	return err
 }
 
 func setNumberOfChildren(connection bolt.Conn, instanceID, dimensionName string) error {
@@ -190,18 +177,8 @@ func setNumberOfChildren(connection bolt.Conn, instanceID, dimensionName string)
 
 	log.Debug("setting number of children property value on the instance hierarchy nodes", logData)
 
-	stmt, err := connection.PrepareNeo(query)
-	if err != nil {
-		return err
-	}
-	defer stmt.Close()
-
-	_, err = stmt.ExecNeo(nil)
-	if err != nil {
-		return err
-	}
-
-	return nil
+	_, err := connection.ExecNeo(query, nil)
+	return err
 }
 
 func setHasData(connection bolt.Conn, instanceID, dimensionName string) error {
@@ -222,16 +199,66 @@ func setHasData(connection bolt.Conn, instanceID, dimensionName string) error {
 
 	log.Debug("setting has data property on the instance hierarchy", logData)
 
-	stmt, err := connection.PrepareNeo(query)
-	if err != nil {
-		return err
-	}
-	defer stmt.Close()
+	_, err := connection.ExecNeo(query, nil)
+	return err
+}
 
-	_, err = stmt.ExecNeo(nil)
-	if err != nil {
-		return err
+func markNodesToRemain(connection bolt.Conn, instanceID, dimensionName string) error {
+
+	query := fmt.Sprintf("MATCH (parent:`_hierarchy_node_%s_%s`)<-[:hasParent*]-(child:`_hierarchy_node_%s_%s`) "+
+		"WHERE child.hasData=true set parent.remain=true set child.remain=true",
+		instanceID,
+		dimensionName,
+		instanceID,
+		dimensionName,
+	)
+
+	logData := log.Data{
+		"instance_id":    instanceID,
+		"dimension_name": dimensionName,
+		"query":          query,
 	}
 
-	return nil
+	log.Debug("marking nodes to remain after trimming sparse branches", logData)
+
+	_, err := connection.ExecNeo(query, nil)
+	return err
+}
+
+func removeNodesNotMarkedToRemain(connection bolt.Conn, instanceID, dimensionName string) error {
+
+	query := fmt.Sprintf("MATCH (node:`_hierarchy_node_%s_%s`) WHERE NOT EXISTS(node.remain) DETACH DELETE node",
+		instanceID,
+		dimensionName,
+	)
+
+	logData := log.Data{
+		"instance_id":    instanceID,
+		"dimension_name": dimensionName,
+		"query":          query,
+	}
+
+	log.Debug("removing nodes not marked to remain after trimming sparse branches", logData)
+
+	_, err := connection.ExecNeo(query, nil)
+	return err
+}
+
+func removeRemainMarker(connection bolt.Conn, instanceID, dimensionName string) error {
+
+	query := fmt.Sprintf("MATCH (node:`_hierarchy_node_%s_%s`) REMOVE node.remain",
+		instanceID,
+		dimensionName,
+	)
+
+	logData := log.Data{
+		"instance_id":    instanceID,
+		"dimension_name": dimensionName,
+		"query":          query,
+	}
+
+	log.Debug("removing the remain property from the nodes that remain", logData)
+
+	_, err := connection.ExecNeo(query, nil)
+	return err
 }
