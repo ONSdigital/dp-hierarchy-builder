@@ -2,8 +2,9 @@ package hierarchy
 
 import (
 	"fmt"
+
 	"github.com/ONSdigital/go-ns/log"
-	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
+	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
 )
 
 //go:generate moq -out hierarchytest/db_pool.go -pkg hierarchytest . DBPool
