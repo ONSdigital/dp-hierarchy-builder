@@ -1,5 +1,5 @@
 CREATE CONSTRAINT ON (n:`_generic_hierarchy_node_crime-offence`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_generic_hierarchy_node_crime-offence` { code:'offence',label:'Offence' });
+CREATE (node:`_generic_hierarchy_node_crime-offence` { code:'offence',label:'Total offences' });
 MATCH (parent:`_generic_hierarchy_node_crime-offence` { code:'offence' })
 WITH parent CREATE (node:`_generic_hierarchy_node_crime-offence` { code:'fraud-offences',label:'Fraud offences' })-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_crime-offence` { code:'fraud-offences' })
