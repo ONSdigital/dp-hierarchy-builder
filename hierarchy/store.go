@@ -149,8 +149,7 @@ func countNodes(conn bolt.Conn, id string) (count int64, err error) {
 	}
 	defer func() {
 		if err := rowCursor.Close(); err != nil {
-			log.ErrorC("Deferred rowCursor.Close", err, nil)
-			panic(err)
+			log.ErrorC("Deferred rowCursor.Close", err, log.Data{"id": id})
 		}
 	}()
 
