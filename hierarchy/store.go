@@ -1,6 +1,7 @@
 package hierarchy
 
 import (
+	"errors"
 	"fmt"
 
 	"github.com/ONSdigital/go-ns/log"
@@ -50,6 +51,15 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	err = cloneNodes(connection, instanceID, codeListID, dimensionName)
 	if err != nil {
 		return err
+	}
+
+	var nodeCount int64
+	nodeCount, err = countNodes(connection, fmt.Sprintf("_hierarchy_node_%s_%s", instanceID, dimensionName))
+	if err != nil {
+		return err
+	}
+	if nodeCount < 1 {
+		return errors.New("No nodes created - missing generic hierarchy?")
 	}
 
 	err = cloneRelationships(connection, instanceID, codeListID, dimensionName)
@@ -128,6 +138,32 @@ func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName stri
 
 	_, err := connection.ExecNeo(query, map[string]interface{}{"code_list": codeListID})
 	return err
+}
+
+func countNodes(conn bolt.Conn, id string) (count int64, err error) {
+	query := fmt.Sprintf("MATCH (n:`%s`) RETURN COUNT(n);", id)
+
+	rowCursor, err := conn.QueryNeo(query, nil)
+	if err != nil {
+		return
+	}
+	defer func() {
+		if err := rowCursor.Close(); err != nil {
+			log.ErrorC("Deferred rowCursor.Close", err, nil)
+			panic(err)
+		}
+	}()
+
+	rows, _, err := rowCursor.All()
+	if err != nil {
+		return
+	}
+
+	var ok bool
+	if count, ok = rows[0][0].(int64); !ok {
+		err = errors.New("Could not get result from DB")
+	}
+	return
 }
 
 func cloneRelationships(connection bolt.Conn, instanceID, codeListID, dimensionName string) error {

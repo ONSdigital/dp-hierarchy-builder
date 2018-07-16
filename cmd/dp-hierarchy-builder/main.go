@@ -2,6 +2,10 @@ package main
 
 import (
 	"context"
+	"os"
+	"os/signal"
+	"syscall"
+
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
@@ -11,9 +15,6 @@ import (
 	"github.com/ONSdigital/go-ns/log"
 	"github.com/ONSdigital/go-ns/neo4j"
 	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
-	"os"
-	"os/signal"
-	"syscall"
 )
 
 func main() {
@@ -65,6 +66,7 @@ func main() {
 	healthChecker := healthcheck.NewServer(
 		config.BindAddr,
 		config.HealthCheckInterval,
+		config.HealthCheckRecoveryInterval,
 		errorChannel,
 		neo4j.NewHealthCheckClient(neo4jConnPool),
 	)

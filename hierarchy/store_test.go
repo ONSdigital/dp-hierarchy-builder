@@ -22,6 +22,27 @@ var (
 	execErr   = errors.New("failed to execute query")
 )
 
+type boltResultMock struct{}
+
+func (b boltResultMock) RowsAffected() (int64, error)     { return 1, nil }
+func (b boltResultMock) LastInsertId() (int64, error)     { return 2, nil }
+func (b boltResultMock) Metadata() map[string]interface{} { return nil }
+
+type boltResultQueryMock struct{}
+
+func (b boltResultQueryMock) All() ([][]interface{}, map[string]interface{}, error) {
+	return [][]interface{}{[]interface{}{int64(1)}}, nil, nil
+}
+func (b boltResultQueryMock) Close() error      { return nil }
+func (b boltResultQueryMock) Columns() []string { return nil }
+func (b boltResultQueryMock) NextNeo() ([]interface{}, map[string]interface{}, error) {
+	return nil, nil, nil
+}
+func (b boltResultQueryMock) Metadata() map[string]interface{} { return nil }
+
+var resMock = boltResultMock{}
+var resQueryMock = boltResultQueryMock{}
+
 func TestStore_BuildHierarchy(t *testing.T) {
 
 	Convey("Given a store with a mock db pool", t, func() {
@@ -30,8 +51,11 @@ func TestStore_BuildHierarchy(t *testing.T) {
 			CloseFunc: func() error {
 				return nil
 			},
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
-				return nil, nil
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
+				return resMock, nil
+			},
+			QueryNeoFunc: func(query string, params map[string]interface{}) (bolt.Rows, error) {
+				return resQueryMock, nil
 			},
 		}
 
@@ -101,7 +125,7 @@ func TestStore_BuildHierarchy_NeoExecErr(t *testing.T) {
 			CloseFunc: func() error {
 				return nil
 			},
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -144,7 +168,7 @@ func TestStore_createInstanceHierarchyConstraints(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
@@ -170,7 +194,7 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -203,8 +227,8 @@ func TestStore_cloneNodes(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
-				return nil, nil
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
+				return resMock, nil
 			},
 		}
 
@@ -229,7 +253,7 @@ func TestStore_cloneNodes_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -268,7 +292,7 @@ func TestStore_cloneRelationships(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
@@ -294,7 +318,7 @@ func TestStore_cloneRelationships_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -328,7 +352,7 @@ func TestStore_setNumberOfChildren(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
@@ -354,7 +378,7 @@ func TestStore_setNumberOfChildren_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -387,7 +411,7 @@ func TestStore_setHasData(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
@@ -413,7 +437,7 @@ func TestStore_setHasData_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -446,7 +470,7 @@ func TestStore_markNodesToRemain(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
@@ -472,7 +496,7 @@ func TestStore_markNodesToRemain_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -502,7 +526,7 @@ func TestStore_removeNodesNotMarkedToRemain(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
@@ -528,7 +552,7 @@ func TestStore_removeNodesNotMarkedToRemain_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
@@ -558,7 +582,7 @@ func TestStore_removeRemainMarker(t *testing.T) {
 	Convey("Given a mock bolt connection", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
@@ -584,7 +608,7 @@ func TestStore_removeRemainMarker_NeoExecErr(t *testing.T) {
 	Convey("Given a mock bolt connection that returns an error", t, func() {
 
 		boltConn := &bolttest.ConnMock{
-			ExecNeoFunc: func(query string, params map[string]interface{}) (golangNeo4jBoltDriver.Result, error) {
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, execErr
 			},
 		}
