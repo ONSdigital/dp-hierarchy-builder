@@ -81,6 +81,12 @@
 			"revisionTime": "2018-07-11T09:46:46Z"
 		},
 		{
+			"checksumSHA1": "ACpnYmqNJhkkLg4jDqQnX4N2+AE=",
+			"path": "github.com/ONSdigital/go-ns/rchttp",
+			"revision": "eaa06db76f9dcf5459f2915b9e69a639e1a9a1eb",
+			"revisionTime": "2018-07-13T09:18:56Z"
+		},
+		{
 			"checksumSHA1": "GQdzMpAMb42KQQ/GsJFSRU5dj1Y=",
 			"path": "github.com/ONSdigital/go-ns/server",
 			"revision": "1c9a3b0960b517abbf4ce218493fed2921757b9d",
@@ -284,6 +290,20 @@
 			"path": "github.com/smartystreets/goconvey/convey/reporting",
 			"revision": "9e8dc3f972df6c8fcc0375ef492c24d0bb204857",
 			"revisionTime": "2017-06-02T16:46:21Z"
+		},
+		{
+			"checksumSHA1": "GtamqiJoL7PGHsN454AoffBFMa8=",
+			"origin": "github.com/ONSdigital/go-ns/vendor/golang.org/x/net/context",
+			"path": "golang.org/x/net/context",
+			"revision": "eaa06db76f9dcf5459f2915b9e69a639e1a9a1eb",
+			"revisionTime": "2018-07-13T09:18:56Z"
+		},
+		{
+			"checksumSHA1": "WHc3uByvGaMcnSoI21fhzYgbOgg=",
+			"origin": "github.com/ONSdigital/go-ns/vendor/golang.org/x/net/context/ctxhttp",
+			"path": "golang.org/x/net/context/ctxhttp",
+			"revision": "eaa06db76f9dcf5459f2915b9e69a639e1a9a1eb",
+			"revisionTime": "2018-07-13T09:18:56Z"
 		}
 	],
 	"rootPath": "github.com/ONSdigital/dp-hierarchy-builder"
