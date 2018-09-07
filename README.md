@@ -13,6 +13,9 @@ Import the mid-year-pop-est full hierarchy:
 
 `cypher-shell < cmd/hierarchy-transformer/output/midYearPopEst/hierarchy.cypher`
 
+Import the ASHE geography hierarchy:
+`cypher-shell < cmd/geography-transformer/output/hierarchy.cypher`
+
 You can use additional flags if running against an environment other than localhost:
 
 `cypher-shell -u USER -p PASSWORD -a bolt://localhost:7687 < .....`
