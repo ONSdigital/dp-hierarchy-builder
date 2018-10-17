@@ -1,10 +1,11 @@
 package config_test
 
 import (
-	"github.com/ONSdigital/dp-hierarchy-builder/config"
-	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 	"time"
+
+	"github.com/ONSdigital/dp-hierarchy-builder/config"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestSpec(t *testing.T) {
@@ -29,6 +30,7 @@ func TestSpec(t *testing.T) {
 				So(cfg.DatabaseAddress, ShouldEqual, "bolt://localhost:7687")
 				So(cfg.Neo4jPoolSize, ShouldEqual, 20)
 				So(cfg.HealthCheckInterval, ShouldEqual, time.Minute)
+				So(cfg.HealthCheckRecoveryInterval, ShouldEqual, time.Second*2)
 			})
 		})
 	})
