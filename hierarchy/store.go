@@ -3,12 +3,18 @@ package hierarchy
 import (
 	"errors"
 	"fmt"
+	"math"
+	"math/rand"
+	"strings"
+	"time"
 
 	"github.com/ONSdigital/go-ns/log"
 	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
 )
 
 //go:generate moq -out hierarchytest/db_pool.go -pkg hierarchytest . DBPool
+
+const transientErrorPrefix = "Neo.TransientError"
 
 // Store represents storage for hierarchy data.
 type Store struct {
@@ -27,6 +33,16 @@ func NewStore(pool DBPool) *Store {
 	}
 }
 
+// ErrAttemptsExceededLimit is returned when the number of attempts has reaced
+// the maximum permitted
+type ErrAttemptsExceededLimit struct {
+	WrappedErr error
+}
+
+func (e ErrAttemptsExceededLimit) Error() string {
+	return fmt.Sprintf("number of attempts to execute statement exceeded: %s", e.WrappedErr.Error())
+}
+
 func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string) error {
 
 	logData := log.Data{
@@ -43,7 +59,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 
 	defer connection.Close()
 
-	err = createInstanceHierarchyConstraints(connection, instanceID, dimensionName)
+	err = createInstanceHierarchyConstraints(1, 5, connection, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
@@ -97,7 +113,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	return nil
 }
 
-func createInstanceHierarchyConstraints(connection bolt.Conn, instanceID, dimensionName string) error {
+func createInstanceHierarchyConstraints(attempt, maxAttempts int, connection bolt.Conn, instanceID, dimensionName string) error {
 
 	query := fmt.Sprintf(
 		"CREATE CONSTRAINT ON (n:`_hierarchy_node_%s_%s`) ASSERT n.code IS UNIQUE;",
@@ -113,8 +129,24 @@ func createInstanceHierarchyConstraints(connection bolt.Conn, instanceID, dimens
 
 	log.Debug("creating instance hierarchy code constraint", logData)
 
-	_, err := connection.ExecNeo(query, nil)
-	return err
+	if _, err := connection.ExecNeo(query, nil); err != nil {
+		if !strings.Contains(err.Error(), transientErrorPrefix) {
+			log.Info("received an error from neo4j that cannot be retried",
+				log.Data{"instance_id": instanceID, "error": err})
+			return err
+		}
+
+		time.Sleep(getSleepTime(attempt, 20*time.Millisecond))
+
+		if attempt >= maxAttempts {
+			return ErrAttemptsExceededLimit{err}
+		}
+
+		return createInstanceHierarchyConstraints(attempt+1, maxAttempts, connection, instanceID, dimensionName)
+	}
+
+	return nil
+
 }
 
 func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName string) error {
@@ -297,4 +329,15 @@ func removeRemainMarker(connection bolt.Conn, instanceID, dimensionName string) 
 
 	_, err := connection.ExecNeo(query, nil)
 	return err
+}
+
+// getSleepTime will return a sleep time based on the attempt and initial retry time.
+// It uses the algorithm 2^n where n is the attempt number (double the previous) and
+// a randomization factor of between 0-5ms so that the server isn't being hit constantly
+// at the same time by many clients
+func getSleepTime(attempt int, retryTime time.Duration) time.Duration {
+	n := (math.Pow(2, float64(attempt)))
+	rand.Seed(time.Now().Unix())
+	rnd := time.Duration(rand.Intn(4)+1) * time.Millisecond
+	return (time.Duration(n) * retryTime) - rnd
 }

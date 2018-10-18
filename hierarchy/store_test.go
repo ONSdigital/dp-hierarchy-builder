@@ -175,7 +175,7 @@ func TestStore_createInstanceHierarchyConstraints(t *testing.T) {
 
 		Convey("When createInstanceHierarchyConstraints is called", func() {
 
-			err := createInstanceHierarchyConstraints(boltConn, instanceID, dimensionName)
+			err := createInstanceHierarchyConstraints(1, 1, boltConn, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -201,7 +201,7 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecErr(t *testing.T) {
 
 		Convey("When createInstanceHierarchyConstraints is called", func() {
 
-			err := createInstanceHierarchyConstraints(boltConn, instanceID, dimensionName)
+			err := createInstanceHierarchyConstraints(1, 1, boltConn, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
