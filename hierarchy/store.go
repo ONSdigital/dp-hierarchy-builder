@@ -10,6 +10,8 @@ import (
 
 	"github.com/ONSdigital/go-ns/log"
 	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
+	neoErrors "github.com/johnnadratowski/golang-neo4j-bolt-driver/errors"
+	"github.com/johnnadratowski/golang-neo4j-bolt-driver/structures/messages"
 )
 
 //go:generate moq -out hierarchytest/db_pool.go -pkg hierarchytest . DBPool
@@ -130,9 +132,10 @@ func createInstanceHierarchyConstraints(attempt, maxAttempts int, connection bol
 	log.Debug("creating instance hierarchy code constraint", logData)
 
 	if _, err := connection.ExecNeo(query, nil); err != nil {
-		if !strings.Contains(err.Error(), transientErrorPrefix) {
+		if !checkForRetry(err) {
 			log.Info("received an error from neo4j that cannot be retried",
 				log.Data{"instance_id": instanceID, "error": err})
+
 			return err
 		}
 
@@ -147,6 +150,26 @@ func createInstanceHierarchyConstraints(attempt, maxAttempts int, connection bol
 
 	return nil
 
+}
+
+func checkForRetry(err error) bool {
+	var neoErr string
+	var boltErr *neoErrors.Error
+	var ok bool
+
+	if boltErr, ok = err.(*neoErrors.Error); ok {
+		if failureMessage, ok := boltErr.Inner().(messages.FailureMessage); ok {
+			if neoErr, ok = failureMessage.Metadata["code"].(string); !ok {
+				return false
+			}
+		}
+	}
+
+	if strings.Contains(neoErr, transientErrorPrefix) {
+		return true
+	}
+
+	return false
 }
 
 func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName string) error {
