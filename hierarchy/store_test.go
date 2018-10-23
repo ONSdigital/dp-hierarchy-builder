@@ -18,8 +18,9 @@ const (
 )
 
 var (
-	dbPoolErr = errors.New("the db pool is broken")
-	execErr   = errors.New("failed to execute query")
+	dbPoolErr    = errors.New("the db pool is broken")
+	execErr      = errors.New("failed to execute query")
+	transientErr = errors.New(transientErrorPrefix)
 )
 
 type boltResultMock struct{}
@@ -175,7 +176,7 @@ func TestStore_createInstanceHierarchyConstraints(t *testing.T) {
 
 		Convey("When createInstanceHierarchyConstraints is called", func() {
 
-			err := createInstanceHierarchyConstraints(boltConn, instanceID, dimensionName)
+			err := createInstanceHierarchyConstraints(1, 1, boltConn, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -201,7 +202,7 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecErr(t *testing.T) {
 
 		Convey("When createInstanceHierarchyConstraints is called", func() {
 
-			err := createInstanceHierarchyConstraints(boltConn, instanceID, dimensionName)
+			err := createInstanceHierarchyConstraints(1, 1, boltConn, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -209,6 +210,31 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecErr(t *testing.T) {
 
 			Convey("Then the returned error should be that returned from the exec call", func() {
 				So(err, ShouldEqual, execErr)
+			})
+		})
+	})
+}
+
+func TestStore_createInstanceHierarchyConstraints_NeoExecRetry(t *testing.T) {
+
+	Convey("Given a mock bolt connection that returns an error", t, func() {
+
+		boltConn := &bolttest.ConnMock{
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
+				return nil, transientErr
+			},
+		}
+
+		Convey("When createInstanceHierarchyConstraints is called", func() {
+
+			err := createInstanceHierarchyConstraints(1, 5, boltConn, instanceID, dimensionName)
+
+			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
+				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 5)
+			})
+
+			Convey("Then the returned error should wrap that returned from the exec call", func() {
+				So(err, ShouldResemble, ErrAttemptsExceededLimit{transientErr})
 			})
 		})
 	})
