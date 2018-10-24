@@ -8,6 +8,8 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/bolt/bolttest"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy/hierarchytest"
 	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
+	neoErrors "github.com/johnnadratowski/golang-neo4j-bolt-driver/errors"
+	"github.com/johnnadratowski/golang-neo4j-bolt-driver/structures/messages"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
@@ -218,10 +220,11 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecErr(t *testing.T) {
 func TestStore_createInstanceHierarchyConstraints_NeoExecRetry(t *testing.T) {
 
 	Convey("Given a mock bolt connection that returns an error", t, func() {
+		transientNeoErr := neoErrors.Wrap(messages.FailureMessage{Metadata: map[string]interface{}{"code": "Neo.TransientError.Transaction.ConstraintsChanged"}}, "constraint error msg")
 
 		boltConn := &bolttest.ConnMock{
 			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
-				return nil, transientErr
+				return nil, transientNeoErr
 			},
 		}
 
@@ -234,7 +237,7 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecRetry(t *testing.T) {
 			})
 
 			Convey("Then the returned error should wrap that returned from the exec call", func() {
-				So(err, ShouldResemble, ErrAttemptsExceededLimit{transientErr})
+				So(err, ShouldResemble, ErrAttemptsExceededLimit{transientNeoErr})
 			})
 		})
 	})
