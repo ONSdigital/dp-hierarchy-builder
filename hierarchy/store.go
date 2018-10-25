@@ -28,6 +28,11 @@ type DBPool interface {
 	OpenPool() (bolt.Conn, error)
 }
 
+type database struct {
+	maxRetries int
+	conn       bolt.Conn
+}
+
 // NewStore returns a new store instace using the given DB connection.
 func NewStore(pool DBPool) *Store {
 	return &Store{
@@ -53,26 +58,29 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		"dimension_name": dimensionName,
 	}
 
+	db := &database{5, nil}
+
 	log.Debug("requesting neo4j connection from the connection pool", logData)
-	connection, err := store.pool.OpenPool()
+	var err error
+	db.conn, err = store.pool.OpenPool()
 	if err != nil {
 		return err
 	}
 
-	defer connection.Close()
+	defer db.conn.Close()
 
-	err = createInstanceHierarchyConstraints(1, 5, connection, instanceID, dimensionName)
+	err = db.createInstanceHierarchyConstraints(1, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	err = cloneNodes(connection, instanceID, codeListID, dimensionName)
+	err = db.cloneNodes(1, instanceID, codeListID, dimensionName)
 	if err != nil {
 		return err
 	}
 
 	var nodeCount int64
-	nodeCount, err = countNodes(connection, fmt.Sprintf("_hierarchy_node_%s_%s", instanceID, dimensionName))
+	nodeCount, err = countNodes(db.conn, fmt.Sprintf("_hierarchy_node_%s_%s", instanceID, dimensionName))
 	if err != nil {
 		return err
 	}
@@ -80,32 +88,32 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return errors.New("No nodes created - missing generic hierarchy?")
 	}
 
-	err = cloneRelationships(connection, instanceID, codeListID, dimensionName)
+	err = db.cloneRelationships(1, instanceID, codeListID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	err = setHasData(connection, instanceID, dimensionName)
+	err = db.setHasData(1, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	err = markNodesToRemain(connection, instanceID, dimensionName)
+	err = db.markNodesToRemain(1, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	err = removeNodesNotMarkedToRemain(connection, instanceID, dimensionName)
+	err = db.removeNodesNotMarkedToRemain(1, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	err = removeRemainMarker(connection, instanceID, dimensionName)
+	err = db.removeRemainMarker(1, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
-	err = setNumberOfChildren(connection, instanceID, dimensionName)
+	err = db.setNumberOfChildren(1, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
@@ -115,7 +123,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	return nil
 }
 
-func createInstanceHierarchyConstraints(attempt, maxAttempts int, connection bolt.Conn, instanceID, dimensionName string) error {
+func (db *database) createInstanceHierarchyConstraints(attempt int, instanceID, dimensionName string) error {
 
 	query := fmt.Sprintf(
 		"CREATE CONSTRAINT ON (n:`_hierarchy_node_%s_%s`) ASSERT n.code IS UNIQUE;",
@@ -131,48 +139,19 @@ func createInstanceHierarchyConstraints(attempt, maxAttempts int, connection bol
 
 	log.Debug("creating instance hierarchy code constraint", logData)
 
-	if _, err := connection.ExecNeo(query, nil); err != nil {
-		if !checkForRetry(err) {
-			log.Info("received an error from neo4j that cannot be retried",
-				log.Data{"instance_id": instanceID, "error": err})
-
-			return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
 		}
 
-		time.Sleep(getSleepTime(attempt, 20*time.Millisecond))
-
-		if attempt >= maxAttempts {
-			return ErrAttemptsExceededLimit{err}
-		}
-
-		return createInstanceHierarchyConstraints(attempt+1, maxAttempts, connection, instanceID, dimensionName)
+		return db.createInstanceHierarchyConstraints(attempt+1, instanceID, dimensionName)
 	}
 
 	return nil
 
 }
 
-func checkForRetry(err error) bool {
-	var neoErr string
-	var boltErr *neoErrors.Error
-	var ok bool
-
-	if boltErr, ok = err.(*neoErrors.Error); ok {
-		if failureMessage, ok := boltErr.Inner().(messages.FailureMessage); ok {
-			if neoErr, ok = failureMessage.Metadata["code"].(string); !ok {
-				return false
-			}
-		}
-	}
-
-	if strings.Contains(neoErr, transientErrorPrefix) {
-		return true
-	}
-
-	return false
-}
-
-func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName string) error {
+func (db *database) cloneNodes(attempt int, instanceID, codeListID, dimensionName string) error {
 
 	query := fmt.Sprintf(
 		"MATCH (n:`_generic_hierarchy_node_%s`) WITH n "+
@@ -191,8 +170,16 @@ func cloneNodes(connection bolt.Conn, instanceID, codeListID, dimensionName stri
 
 	log.Debug("cloning nodes from the generic hierarchy", logData)
 
-	_, err := connection.ExecNeo(query, map[string]interface{}{"code_list": codeListID})
-	return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
+		}
+
+		return db.cloneNodes(attempt+1, instanceID, codeListID, dimensionName)
+	}
+
+	return nil
+
 }
 
 func countNodes(conn bolt.Conn, id string) (count int64, err error) {
@@ -220,7 +207,7 @@ func countNodes(conn bolt.Conn, id string) (count int64, err error) {
 	return
 }
 
-func cloneRelationships(connection bolt.Conn, instanceID, codeListID, dimensionName string) error {
+func (db *database) cloneRelationships(attempt int, instanceID, codeListID, dimensionName string) error {
 
 	query := fmt.Sprintf(
 		"MATCH (genericNode:`_generic_hierarchy_node_%s`)-[r:hasParent]->(genericParent:`_generic_hierarchy_node_%s`)"+
@@ -245,11 +232,18 @@ func cloneRelationships(connection bolt.Conn, instanceID, codeListID, dimensionN
 
 	log.Debug("cloning relationships from the generic hierarchy", logData)
 
-	_, err := connection.ExecNeo(query, nil)
-	return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
+		}
+
+		return db.cloneRelationships(attempt+1, instanceID, codeListID, dimensionName)
+	}
+
+	return nil
 }
 
-func setNumberOfChildren(connection bolt.Conn, instanceID, dimensionName string) error {
+func (db *database) setNumberOfChildren(attempt int, instanceID, dimensionName string) error {
 
 	query := fmt.Sprintf(
 		"MATCH (n:`_hierarchy_node_%s_%s`)"+
@@ -268,11 +262,18 @@ func setNumberOfChildren(connection bolt.Conn, instanceID, dimensionName string)
 
 	log.Debug("setting number of children property value on the instance hierarchy nodes", logData)
 
-	_, err := connection.ExecNeo(query, nil)
-	return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
+		}
+
+		return db.setNumberOfChildren(attempt+1, instanceID, dimensionName)
+	}
+
+	return nil
 }
 
-func setHasData(connection bolt.Conn, instanceID, dimensionName string) error {
+func (db *database) setHasData(attempt int, instanceID, dimensionName string) error {
 
 	query := fmt.Sprintf("MATCH (n:`_hierarchy_node_%s_%s`), (p:`_%s_%s`) "+
 		"WHERE n.code = p.value SET n.hasData=true",
@@ -290,11 +291,18 @@ func setHasData(connection bolt.Conn, instanceID, dimensionName string) error {
 
 	log.Debug("setting has data property on the instance hierarchy", logData)
 
-	_, err := connection.ExecNeo(query, nil)
-	return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
+		}
+
+		return db.setHasData(attempt+1, instanceID, dimensionName)
+	}
+
+	return nil
 }
 
-func markNodesToRemain(connection bolt.Conn, instanceID, dimensionName string) error {
+func (db *database) markNodesToRemain(attempt int, instanceID, dimensionName string) error {
 
 	query := fmt.Sprintf("MATCH (parent:`_hierarchy_node_%s_%s`)<-[:hasParent*]-(child:`_hierarchy_node_%s_%s`) "+
 		"WHERE child.hasData=true set parent.remain=true set child.remain=true",
@@ -312,11 +320,18 @@ func markNodesToRemain(connection bolt.Conn, instanceID, dimensionName string) e
 
 	log.Debug("marking nodes to remain after trimming sparse branches", logData)
 
-	_, err := connection.ExecNeo(query, nil)
-	return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
+		}
+
+		return db.markNodesToRemain(attempt+1, instanceID, dimensionName)
+	}
+
+	return nil
 }
 
-func removeNodesNotMarkedToRemain(connection bolt.Conn, instanceID, dimensionName string) error {
+func (db *database) removeNodesNotMarkedToRemain(attempt int, instanceID, dimensionName string) error {
 
 	query := fmt.Sprintf("MATCH (node:`_hierarchy_node_%s_%s`) WHERE NOT EXISTS(node.remain) DETACH DELETE node",
 		instanceID,
@@ -331,11 +346,18 @@ func removeNodesNotMarkedToRemain(connection bolt.Conn, instanceID, dimensionNam
 
 	log.Debug("removing nodes not marked to remain after trimming sparse branches", logData)
 
-	_, err := connection.ExecNeo(query, nil)
-	return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
+		}
+
+		return db.removeNodesNotMarkedToRemain(attempt+1, instanceID, dimensionName)
+	}
+
+	return nil
 }
 
-func removeRemainMarker(connection bolt.Conn, instanceID, dimensionName string) error {
+func (db *database) removeRemainMarker(attempt int, instanceID, dimensionName string) error {
 
 	query := fmt.Sprintf("MATCH (node:`_hierarchy_node_%s_%s`) REMOVE node.remain",
 		instanceID,
@@ -350,8 +372,52 @@ func removeRemainMarker(connection bolt.Conn, instanceID, dimensionName string) 
 
 	log.Debug("removing the remain property from the nodes that remain", logData)
 
-	_, err := connection.ExecNeo(query, nil)
-	return err
+	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
+			return finalErr
+		}
+
+		return db.removeRemainMarker(attempt+1, instanceID, dimensionName)
+	}
+
+	return nil
+}
+
+func (db *database) checkAttempts(err error, instanceID string, attempt int) error {
+	if !isTransientError(err) {
+		log.Info("received an error from neo4j that cannot be retried",
+			log.Data{"instance_id": instanceID, "error": err})
+
+		return err
+	}
+
+	time.Sleep(getSleepTime(attempt, 20*time.Millisecond))
+
+	if attempt >= db.maxRetries {
+		return ErrAttemptsExceededLimit{err}
+	}
+
+	return nil
+}
+
+func isTransientError(err error) bool {
+	var neoErr string
+	var boltErr *neoErrors.Error
+	var ok bool
+
+	if boltErr, ok = err.(*neoErrors.Error); ok {
+		if failureMessage, ok := boltErr.Inner().(messages.FailureMessage); ok {
+			if neoErr, ok = failureMessage.Metadata["code"].(string); !ok {
+				return false
+			}
+		}
+	}
+
+	if strings.Contains(neoErr, transientErrorPrefix) {
+		return true
+	}
+
+	return false
 }
 
 // getSleepTime will return a sleep time based on the attempt and initial retry time.
