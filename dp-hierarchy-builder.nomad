@@ -3,7 +3,7 @@ job "dp-hierarchy-builder" {
   region      = "eu"
   type        = "service"
 
-  // Make sure that this API is only ran on the publishing nodes
+  // Make sure that this API is only run on the publishing nodes
   constraint {
     attribute = "${node.class}"
     value     = "publishing"
