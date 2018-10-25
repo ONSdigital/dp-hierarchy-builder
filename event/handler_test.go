@@ -2,11 +2,12 @@ package event_test
 
 import (
 	"errors"
+	"testing"
+
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/event/eventtest"
 	"github.com/ONSdigital/dp-import/events"
 	. "github.com/smartystreets/goconvey/convey"
-	"testing"
 )
 
 var expectedEvent = &events.DataImportComplete{
