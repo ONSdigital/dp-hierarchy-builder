@@ -170,7 +170,7 @@ func (db *database) cloneNodes(attempt int, instanceID, codeListID, dimensionNam
 
 	log.Debug("cloning nodes from the generic hierarchy", logData)
 
-	if _, err := db.conn.ExecNeo(query, nil); err != nil {
+	if _, err := db.conn.ExecNeo(query, map[string]interface{}{"code_list": codeListID}); err != nil {
 		if finalErr := db.checkAttempts(err, instanceID, attempt); finalErr != nil {
 			return finalErr
 		}
