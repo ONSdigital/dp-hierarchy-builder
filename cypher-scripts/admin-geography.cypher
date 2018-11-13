@@ -9572,7 +9572,7 @@ CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"W92000004",label:
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"K02000001",label:"United Kingdom" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"K03000001",label:"Great Britain" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"K04000001",label:"England and Wales" });
-CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"not_classified",label:"Not Classified" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"not-classified",label:"Not Classified" });
 MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
 WHERE parent.code = "E06000001" AND child.code = "E05008942"
 CREATE (child)-[:hasParent]->(parent);
@@ -38290,5 +38290,5 @@ MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierar
 WHERE parent.code = "K03000001" AND child.code = "K04000001"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
-WHERE parent.code = "K02000001" AND child.code = "not_classified"
+WHERE parent.code = "K02000001" AND child.code = "not-classified"
 CREATE (child)-[:hasParent]->(parent);
