@@ -36,7 +36,7 @@ func Get() (*Config, error) {
 		GracefulShutdownTimeout:     time.Second * 10,
 		DatabaseAddress:             "bolt://localhost:7687",
 		Neo4jPoolSize:               20,
-		Neo4jTimeout:                600,
+		Neo4jTimeout:                60,
 		HealthCheckInterval:         time.Minute,
 		HealthCheckRecoveryInterval: 2 * time.Second,
 	}
