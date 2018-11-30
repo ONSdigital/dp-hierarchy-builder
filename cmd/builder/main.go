@@ -2,11 +2,12 @@ package main
 
 import (
 	"flag"
-	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/go-ns/log"
-	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
 	"os"
 	"strings"
+
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	"github.com/ONSdigital/go-ns/log"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 )
 
 var neoURL = flag.String("neo-url", "bolt://localhost:7687", "")
