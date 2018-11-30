@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/ONSdigital/go-ns/log"
-	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
-	neoErrors "github.com/johnnadratowski/golang-neo4j-bolt-driver/errors"
-	"github.com/johnnadratowski/golang-neo4j-bolt-driver/structures/messages"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
+	neoErrors "github.com/ONSdigital/golang-neo4j-bolt-driver/errors"
+	"github.com/ONSdigital/golang-neo4j-bolt-driver/structures/messages"
 )
 
 //go:generate moq -out hierarchytest/db_pool.go -pkg hierarchytest . DBPool

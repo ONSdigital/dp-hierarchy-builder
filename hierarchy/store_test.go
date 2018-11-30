@@ -7,9 +7,9 @@ import (
 
 	"github.com/ONSdigital/dp-hierarchy-builder/bolt/bolttest"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy/hierarchytest"
-	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
-	neoErrors "github.com/johnnadratowski/golang-neo4j-bolt-driver/errors"
-	"github.com/johnnadratowski/golang-neo4j-bolt-driver/structures/messages"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
+	neoErrors "github.com/ONSdigital/golang-neo4j-bolt-driver/errors"
+	"github.com/ONSdigital/golang-neo4j-bolt-driver/structures/messages"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

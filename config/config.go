@@ -18,6 +18,7 @@ type Config struct {
 	GracefulShutdownTimeout     time.Duration `envconfig:"GRACEFUL_SHUTDOWN_TIMEOUT"`
 	DatabaseAddress             string        `envconfig:"DATABASE_ADDRESS"              json:"-"`
 	Neo4jPoolSize               int           `envconfig:"NEO4J_POOL_SIZE"`
+	Neo4jTimeout                int           `envconfig:"NEO4J_TIMEOUT"`
 	HealthCheckInterval         time.Duration `envconfig:"HEALTHCHECK_INTERVAL"`
 	HealthCheckRecoveryInterval time.Duration `envconfig:"HEALTHCHECK_RECOVERY_INTERVAL"`
 }
@@ -35,6 +36,7 @@ func Get() (*Config, error) {
 		GracefulShutdownTimeout:     time.Second * 10,
 		DatabaseAddress:             "bolt://localhost:7687",
 		Neo4jPoolSize:               20,
+		Neo4jTimeout:                600,
 		HealthCheckInterval:         time.Minute,
 		HealthCheckRecoveryInterval: 2 * time.Second,
 	}

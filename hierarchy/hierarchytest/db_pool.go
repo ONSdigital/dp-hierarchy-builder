@@ -4,8 +4,9 @@
 package hierarchytest
 
 import (
-	"github.com/johnnadratowski/golang-neo4j-bolt-driver"
 	"sync"
+
+	"github.com/ONSdigital/golang-neo4j-bolt-driver"
 )
 
 var (
