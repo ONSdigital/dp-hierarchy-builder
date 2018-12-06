@@ -50,7 +50,7 @@ func main() {
 
 	avroProducer := event.NewAvroProducer(kafkaProducer)
 
-	neo4jConnPool, err := bolt.NewClosableDriverPool(cfg.DatabaseAddress, cfg.Neo4jPoolSize)
+	neo4jConnPool, err := bolt.NewClosableDriverPoolWithTimeout(cfg.DatabaseAddress, cfg.Neo4jPoolSize, cfg.Neo4jTimeout)
 	exitIfError(err)
 
 	hierarchyStore := hierarchy.NewStore(neo4jConnPool)
