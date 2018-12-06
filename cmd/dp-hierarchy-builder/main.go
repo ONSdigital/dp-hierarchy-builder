@@ -14,7 +14,7 @@ import (
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
 	"github.com/ONSdigital/go-ns/neo4j"
-	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 )
 
 func main() {
@@ -50,7 +50,7 @@ func main() {
 
 	avroProducer := event.NewAvroProducer(kafkaProducer)
 
-	neo4jConnPool, err := bolt.NewClosableDriverPool(cfg.DatabaseAddress, cfg.Neo4jPoolSize)
+	neo4jConnPool, err := bolt.NewClosableDriverPoolWithTimeout(cfg.DatabaseAddress, cfg.Neo4jPoolSize, cfg.Neo4jTimeout)
 	exitIfError(err)
 
 	hierarchyStore := hierarchy.NewStore(neo4jConnPool)

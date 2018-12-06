@@ -7,7 +7,9 @@ import (
 
 	"github.com/ONSdigital/dp-hierarchy-builder/bolt/bolttest"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy/hierarchytest"
-	bolt "github.com/johnnadratowski/golang-neo4j-bolt-driver"
+	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
+	neoErrors "github.com/ONSdigital/golang-neo4j-bolt-driver/errors"
+	"github.com/ONSdigital/golang-neo4j-bolt-driver/structures/messages"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
@@ -18,8 +20,9 @@ const (
 )
 
 var (
-	dbPoolErr = errors.New("the db pool is broken")
-	execErr   = errors.New("failed to execute query")
+	dbPoolErr    = errors.New("the db pool is broken")
+	execErr      = errors.New("failed to execute query")
+	transientErr = errors.New(transientErrorPrefix)
 )
 
 type boltResultMock struct{}
@@ -166,16 +169,20 @@ func TestStore_createInstanceHierarchyConstraints(t *testing.T) {
 	)
 
 	Convey("Given a mock bolt connection", t, func() {
-
 		boltConn := &bolttest.ConnMock{
 			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
 				return nil, nil
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When createInstanceHierarchyConstraints is called", func() {
 
-			err := createInstanceHierarchyConstraints(boltConn, instanceID, dimensionName)
+			err := db.createInstanceHierarchyConstraints(1, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -199,9 +206,14 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When createInstanceHierarchyConstraints is called", func() {
 
-			err := createInstanceHierarchyConstraints(boltConn, instanceID, dimensionName)
+			err := db.createInstanceHierarchyConstraints(1, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -209,6 +221,37 @@ func TestStore_createInstanceHierarchyConstraints_NeoExecErr(t *testing.T) {
 
 			Convey("Then the returned error should be that returned from the exec call", func() {
 				So(err, ShouldEqual, execErr)
+			})
+		})
+	})
+}
+
+func TestStore_createInstanceHierarchyConstraints_NeoExecRetry(t *testing.T) {
+
+	Convey("Given a mock bolt connection that returns an error", t, func() {
+		transientNeoErr := neoErrors.Wrap(messages.FailureMessage{Metadata: map[string]interface{}{"code": "Neo.TransientError.Transaction.ConstraintsChanged"}}, "constraint error msg")
+
+		boltConn := &bolttest.ConnMock{
+			ExecNeoFunc: func(query string, params map[string]interface{}) (bolt.Result, error) {
+				return nil, transientNeoErr
+			},
+		}
+
+		db := &database{
+			maxRetries: 5,
+			conn:       boltConn,
+		}
+
+		Convey("When createInstanceHierarchyConstraints is called", func() {
+
+			err := db.createInstanceHierarchyConstraints(1, instanceID, dimensionName)
+
+			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
+				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 5)
+			})
+
+			Convey("Then the returned error should wrap that returned from the exec call", func() {
+				So(err, ShouldResemble, ErrAttemptsExceededLimit{transientNeoErr})
 			})
 		})
 	})
@@ -232,9 +275,14 @@ func TestStore_cloneNodes(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When cloneNodes is called", func() {
 
-			err := cloneNodes(boltConn, instanceID, codeListID, dimensionName)
+			err := db.cloneNodes(1, instanceID, codeListID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -258,9 +306,14 @@ func TestStore_cloneNodes_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When cloneNodes is called", func() {
 
-			err := cloneNodes(boltConn, instanceID, codeListID, dimensionName)
+			err := db.cloneNodes(1, instanceID, codeListID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -297,9 +350,14 @@ func TestStore_cloneRelationships(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When cloneRelationships is called", func() {
 
-			err := cloneRelationships(boltConn, instanceID, codeListID, dimensionName)
+			err := db.cloneRelationships(1, instanceID, codeListID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -323,9 +381,14 @@ func TestStore_cloneRelationships_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When cloneRelationships is called", func() {
 
-			err := cloneRelationships(boltConn, instanceID, codeListID, dimensionName)
+			err := db.cloneRelationships(1, instanceID, codeListID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -357,9 +420,14 @@ func TestStore_setNumberOfChildren(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When setNumberOfChildren is called", func() {
 
-			err := setNumberOfChildren(boltConn, instanceID, dimensionName)
+			err := db.setNumberOfChildren(1, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -383,9 +451,14 @@ func TestStore_setNumberOfChildren_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When setNumberOfChildren is called", func() {
 
-			err := setNumberOfChildren(boltConn, instanceID, dimensionName)
+			err := db.setNumberOfChildren(1, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -416,9 +489,14 @@ func TestStore_setHasData(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When setHasData is called", func() {
 
-			err := setHasData(boltConn, instanceID, dimensionName)
+			err := db.setHasData(1, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -442,9 +520,14 @@ func TestStore_setHasData_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When setHasData is called", func() {
 
-			err := setHasData(boltConn, instanceID, dimensionName)
+			err := db.setHasData(1, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -475,9 +558,14 @@ func TestStore_markNodesToRemain(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When markNodesToRemain is called", func() {
 
-			err := markNodesToRemain(boltConn, instanceID, dimensionName)
+			err := db.markNodesToRemain(1, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -501,9 +589,14 @@ func TestStore_markNodesToRemain_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When markNodesToRemain is called", func() {
 
-			err := markNodesToRemain(boltConn, instanceID, dimensionName)
+			err := db.markNodesToRemain(1, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -531,9 +624,14 @@ func TestStore_removeNodesNotMarkedToRemain(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When removeNodesNotMarkedToRemain is called", func() {
 
-			err := removeNodesNotMarkedToRemain(boltConn, instanceID, dimensionName)
+			err := db.removeNodesNotMarkedToRemain(1, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -557,9 +655,14 @@ func TestStore_removeNodesNotMarkedToRemain_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When removeNodesNotMarkedToRemain is called", func() {
 
-			err := removeNodesNotMarkedToRemain(boltConn, instanceID, dimensionName)
+			err := db.removeNodesNotMarkedToRemain(1, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
@@ -587,9 +690,14 @@ func TestStore_removeRemainMarker(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When removeRemainMarker is called", func() {
 
-			err := removeRemainMarker(boltConn, instanceID, dimensionName)
+			err := db.removeRemainMarker(1, instanceID, dimensionName)
 
 			Convey("Then the returned error should be nil", func() {
 				So(err, ShouldBeNil)
@@ -613,9 +721,14 @@ func TestStore_removeRemainMarker_NeoExecErr(t *testing.T) {
 			},
 		}
 
+		db := &database{
+			maxRetries: 1,
+			conn:       boltConn,
+		}
+
 		Convey("When removeRemainMarker is called", func() {
 
-			err := removeRemainMarker(boltConn, instanceID, dimensionName)
+			err := db.removeRemainMarker(1, instanceID, dimensionName)
 
 			Convey("Then boltConn.ExecNeo should be called once for the expected query", func() {
 				So(len(boltConn.ExecNeoCalls()), ShouldEqual, 1)
