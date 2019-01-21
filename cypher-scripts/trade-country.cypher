@@ -630,7 +630,7 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "B5" AND child.code = "DE"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "B5" AND child.code = "GI"
+WHERE parent.code = "europe-exc-european-union" AND child.code = "GI"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "B5" AND child.code = "GR"
@@ -642,7 +642,7 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "B5" AND child.code = "IT"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "B5" AND child.code = "JE"
+WHERE parent.code = "europe-exc-european-union" AND child.code = "JE"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "B5" AND child.code = "LU"
