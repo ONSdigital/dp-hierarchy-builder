@@ -39,9 +39,9 @@ func Get() (*Configuration, error) {
 		if err != nil {
 			return nil, err
 		}
-		//
-		// case "gremgo":
-		// 	d = gremgo.Driver{}
+	//
+	// case "gremgo":
+	// 	d = gremgo.Driver{}
 	default:
 		d = &mock.Mock{}
 	}

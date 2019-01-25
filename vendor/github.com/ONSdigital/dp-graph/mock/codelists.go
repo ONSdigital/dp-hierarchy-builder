@@ -52,15 +52,15 @@ func (m *Mock) GetCodeLists(ctx context.Context, filterBy string) (*models.CodeL
 }
 
 func (m *Mock) GetCodeList(ctx context.Context, codeListID string) (*models.CodeList, error) {
-	if m.IsBackendReachable == true {
+	if m.IsBackendReachable != true {
 		return nil, errors.New("database unavailble - 500")
 	}
 
-	if m.IsQueryValid == true {
+	if m.IsQueryValid != true {
 		return nil, errors.New("invalid query - 400")
 	}
 
-	if m.IsContentFound == true {
+	if m.IsContentFound != true {
 		return nil, errors.New("not found - 404")
 	}
 
@@ -74,15 +74,15 @@ func (m *Mock) GetCodeList(ctx context.Context, codeListID string) (*models.Code
 }
 
 func (m *Mock) GetEditions(ctx context.Context, codeListID string) (*models.Editions, error) {
-	if m.IsBackendReachable == true {
+	if m.IsBackendReachable != true {
 		return nil, errors.New("database unavailble - 500")
 	}
 
-	if m.IsQueryValid == true {
+	if m.IsQueryValid != true {
 		return nil, errors.New("invalid query - 400")
 	}
 
-	if m.IsContentFound == true {
+	if m.IsContentFound != true {
 		return nil, errors.New("not found - 404")
 	}
 
@@ -118,15 +118,15 @@ func (m *Mock) GetEditions(ctx context.Context, codeListID string) (*models.Edit
 }
 
 func (m *Mock) GetEdition(ctx context.Context, codeListID, edition string) (*models.Edition, error) {
-	if m.IsBackendReachable == true {
+	if m.IsBackendReachable != true {
 		return nil, errors.New("database unavailble - 500")
 	}
 
-	if m.IsQueryValid == true {
+	if m.IsQueryValid != true {
 		return nil, errors.New("invalid query - 400")
 	}
 
-	if m.IsContentFound == true {
+	if m.IsContentFound != true {
 		return nil, errors.New("not found - 404")
 	}
 
@@ -140,15 +140,15 @@ func (m *Mock) GetEdition(ctx context.Context, codeListID, edition string) (*mod
 }
 
 func (m *Mock) GetCodes(ctx context.Context, codeListID, edition string) (*models.CodeResults, error) {
-	if m.IsBackendReachable == true {
+	if m.IsBackendReachable != true {
 		return nil, errors.New("database unavailble - 500")
 	}
 
-	if m.IsQueryValid == true {
+	if m.IsQueryValid != true {
 		return nil, errors.New("invalid query - 400")
 	}
 
-	if m.IsContentFound == true {
+	if m.IsContentFound != true {
 		return nil, errors.New("not found - 404")
 	}
 
@@ -184,15 +184,15 @@ func (m *Mock) GetCodes(ctx context.Context, codeListID, edition string) (*model
 }
 
 func (m *Mock) GetCode(ctx context.Context, codeListID, edition string, code string) (*models.Code, error) {
-	if m.IsBackendReachable == true {
+	if m.IsBackendReachable != true {
 		return nil, errors.New("database unavailble - 500")
 	}
 
-	if m.IsQueryValid == true {
+	if m.IsQueryValid != true {
 		return nil, errors.New("invalid query - 400")
 	}
 
-	if m.IsContentFound == true {
+	if m.IsContentFound != true {
 		return nil, errors.New("not found - 404")
 	}
 
@@ -206,15 +206,15 @@ func (m *Mock) GetCode(ctx context.Context, codeListID, edition string, code str
 }
 
 func (m *Mock) GetCodeDatasets(ctx context.Context, codeListID, edition string, code string) (*models.Datasets, error) {
-	if m.IsBackendReachable == true {
+	if m.IsBackendReachable != true {
 		return nil, errors.New("database unavailble - 500")
 	}
 
-	if m.IsQueryValid == true {
+	if m.IsQueryValid != true {
 		return nil, errors.New("invalid query - 400")
 	}
 
-	if m.IsContentFound == true {
+	if m.IsContentFound != true {
 		return nil, errors.New("not found - 404")
 	}
 

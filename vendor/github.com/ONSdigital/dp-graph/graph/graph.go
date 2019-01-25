@@ -11,6 +11,7 @@ import (
 
 type DB struct {
 	driver.Driver
+
 	driver.CodeList
 	driver.Hierarchy
 	driver.Instance

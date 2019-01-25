@@ -39,6 +39,7 @@ func (n *Neo4j) GetCodeList(ctx context.Context, code string) (*models.CodeList,
 	codeListResult := &models.CodeList{}
 
 	if err := n.Read(query, mapper.CodeList(codeListResult, code), true); err != nil {
+		//includes not found/404 responses
 		return nil, err
 	}
 
