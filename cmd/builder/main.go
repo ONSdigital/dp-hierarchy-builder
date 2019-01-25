@@ -1,13 +1,14 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"os"
 	"strings"
 
+	"github.com/ONSdigital/dp-graph/graph"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/go-ns/log"
-	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 )
 
 var neoURL = flag.String("neo-url", "bolt://localhost:7687", "")
@@ -19,17 +20,14 @@ var dimensionName = ""
 func main() {
 	flag.Parse()
 	dimensionName = strings.ToLower(*dimensionNameArg)
+	exitIfError(os.Setenv("GRAPH_DRIVER", "neo4j"))
 
-	neo4jConnPool, err := bolt.NewClosableDriverPool(*neoURL, 1)
+	exitIfError(os.Setenv("GRAPH_ADDR", *neoURL))
+
+	db, err := graph.NewHierarchyStore(context.Background())
 	exitIfError(err)
-	defer neo4jConnPool.Close()
 
-	connection, err := neo4jConnPool.OpenPool()
-	exitIfError(err)
-	defer connection.Close()
-
-	hierarchyStore := hierarchy.NewStore(neo4jConnPool)
-
+	hierarchyStore := &hierarchy.Store{db}
 	hierarchyStore.BuildHierarchy(*instanceID, *codeListID, dimensionName)
 	exitIfError(err)
 }
