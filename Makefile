@@ -25,7 +25,7 @@ full-clean:
 	cypher-shell < "$(V4_TRANSFORMER_DIR)/output/hierarchy-delete.cypher"
 instance-builder:
 	[[ -n "$(INSTANCE_ID)" ]]
-	HUMAN_LOG=1 go run -race cmd/builder/main.go --neo-url="$(DATABASE_ADDRESS)" --instance-id="$(INSTANCE_ID)"
+	HUMAN_LOG=1 GRAPH_DRIVER=neo4j GRAPH_ADDR="$(DATABASE_ADDRESS)" go run -race cmd/builder/main.go --instance-id="$(INSTANCE_ID)"
 instance:
 	[[ -n "$(INSTANCE_ID)" ]]
 	sed "s/12345/$(INSTANCE_ID)/g" < cmd/builder/build.cypher | cypher-shell
