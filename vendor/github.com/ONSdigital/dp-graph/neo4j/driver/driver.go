@@ -10,7 +10,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-//go:generate moq -out drivertest/driver.go -pkg drivertest . Neo4jDriver
+//go:generate moq -out ../internal/driver.go -pkg internal . Neo4jDriver
 
 type Neo4jDriver interface {
 	Read(query string, mapp mapper.ResultMapper, single bool) error
@@ -23,8 +23,8 @@ type NeoDriver struct {
 	pool bolt.ClosableDriverPool
 }
 
-func New(dbAddr string, size int) (n *NeoDriver, err error) {
-	pool, err := bolt.NewClosableDriverPool(dbAddr, size)
+func New(dbAddr string, size, timeout int) (n *NeoDriver, err error) {
+	pool, err := bolt.NewClosableDriverPoolWithTimeout(dbAddr, size, timeout)
 	if err != nil {
 		return nil, err
 	}

@@ -36,7 +36,7 @@ func New(dbAddr string, size, timeout, retries int) (n *Neo4j, err error) {
 		retries = 5
 	}
 
-	d, err := driver.New(dbAddr, size)
+	d, err := driver.New(dbAddr, size, timeout)
 	if err != nil {
 		return nil, err
 	}
