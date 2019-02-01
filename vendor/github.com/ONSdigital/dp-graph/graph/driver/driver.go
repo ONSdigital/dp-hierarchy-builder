@@ -11,6 +11,7 @@ var ErrNotFound = errors.New("not found")
 
 type Driver interface {
 	Close(ctx context.Context) error
+	Healthcheck() (string, error)
 }
 
 type CodeList interface {

@@ -66,7 +66,7 @@ func main() {
 		cfg.HealthCheckInterval,
 		cfg.HealthCheckRecoveryInterval,
 		errorChannel,
-	//	neo4j.NewHealthCheckClient(neo4jConnPool),
+		graph.Healthcheck(),
 	)
 
 	signals := make(chan os.Signal, 1)

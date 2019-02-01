@@ -10,7 +10,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-//go:generate moq -out drivertest/driver.go -pkg drivertest . Neo4jDriver
+//go:generate moq -out ../internal/driver.go -pkg internal . Neo4jDriver
 
 type Neo4jDriver interface {
 	Read(query string, mapp mapper.ResultMapper, single bool) error
