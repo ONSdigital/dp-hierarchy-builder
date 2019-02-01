@@ -66,7 +66,7 @@ func main() {
 		cfg.HealthCheckInterval,
 		cfg.HealthCheckRecoveryInterval,
 		errorChannel,
-		graph.Healthcheck(),
+		db,
 	)
 
 	signals := make(chan os.Signal, 1)
