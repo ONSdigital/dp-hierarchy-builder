@@ -13,11 +13,7 @@ func (m *Mock) CloneNodes(ctx context.Context, attempt int, instanceID, codeList
 }
 
 func (m *Mock) CountNodes(ctx context.Context, instanceID, dimensionName string) (count int64, err error) {
-	if err := m.checkForErrors(); err != nil {
-		return 0, err
-	}
-
-	return 100, nil
+	return 0, m.checkForErrors()
 }
 
 func (m *Mock) CloneRelationships(ctx context.Context, attempt int, instanceID, codeListID, dimensionName string) error {
