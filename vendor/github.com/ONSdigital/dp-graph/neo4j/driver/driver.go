@@ -24,8 +24,8 @@ type NeoDriver struct {
 	pool bolt.ClosableDriverPool
 }
 
-func New(dbAddr string, size int) (n *NeoDriver, err error) {
-	pool, err := bolt.NewClosableDriverPool(dbAddr, size)
+func New(dbAddr string, size, timeout int) (n *NeoDriver, err error) {
+	pool, err := bolt.NewClosableDriverPoolWithTimeout(dbAddr, size, timeout)
 	if err != nil {
 		return nil, err
 	}

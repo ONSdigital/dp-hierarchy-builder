@@ -1,6 +1,8 @@
 package config
 
 import (
+	"errors"
+
 	"github.com/ONSdigital/dp-graph/graph/driver"
 	"github.com/ONSdigital/dp-graph/mock"
 	"github.com/ONSdigital/dp-graph/neo4j"
@@ -8,7 +10,7 @@ import (
 )
 
 type Configuration struct {
-	DriverChoice    string `envconfig:"GRAPH_DRIVER"`
+	DriverChoice    string `envconfig:"GRAPH_DRIVER_TYPE"`
 	DatabaseAddress string `envconfig:"GRAPH_ADDR"`
 	PoolSize        int    `envconfig:"GRAPH_POOL_SIZE"`
 	MaxRetries      int    `envconfig:"MAX_RETRIES"`
@@ -39,11 +41,13 @@ func Get() (*Configuration, error) {
 		if err != nil {
 			return nil, err
 		}
-	//
-	// case "gremgo":
-	// 	d = gremgo.Driver{}
-	default:
+		//
+		// case "gremgo":
+		// 	d = gremgo.Driver{}
+	case "mock":
 		d = &mock.Mock{}
+	default:
+		return nil, errors.New("driver type config not provided")
 	}
 
 	cfg.Driver = d

@@ -540,7 +540,7 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "asia" AND child.code = "BT"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "asia" AND child.code = "IO"
+WHERE parent.code = "africa" AND child.code = "IO"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "asia" AND child.code = "IN"
@@ -603,19 +603,19 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "B5" AND child.code = "other-european-union"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "B5" AND child.code = "aland-islands"
+WHERE parent.code = "europe-exc-european-union" AND child.code = "aland-islands"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "B5" AND child.code = "AT"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "B5" AND child.code = "azores-and-madeira"
+WHERE parent.code = "europe-exc-european-union" AND child.code = "azores-and-madeira"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "B5" AND child.code = "BE"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "B5" AND child.code = "canary-islands"
+WHERE parent.code = "europe-exc-european-union" AND child.code = "canary-islands"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "B5" AND child.code = "DK"
@@ -822,7 +822,7 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "central-and-south-america" AND child.code = "SX"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "central-and-south-america" AND child.code = "GS"
+WHERE parent.code = "oceania" AND child.code = "GS"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "central-and-south-america" AND child.code = "st-barthelemy"
@@ -837,7 +837,7 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "central-and-south-america" AND child.code = "st-martin"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "central-and-south-america" AND child.code = "st-pierre-and-miquelon"
+WHERE parent.code = "north-america" AND child.code = "st-pierre-and-miquelon"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "central-and-south-america" AND child.code = "VC"
@@ -882,10 +882,10 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "europe-exc-european-union" AND child.code = "AD"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "europe-exc-european-union" AND child.code = "AM"
+WHERE parent.code = "asia" AND child.code = "AM"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "europe-exc-european-union" AND child.code = "AZ"
+WHERE parent.code = "asia" AND child.code = "AZ"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "europe-exc-european-union" AND child.code = "BY"
@@ -894,7 +894,7 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "europe-exc-european-union" AND child.code = "BA"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "europe-exc-european-union" AND child.code = "BV"
+WHERE parent.code = "oceania" AND child.code = "BV"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "europe-exc-european-union" AND child.code = "cyprus-northern"
@@ -909,10 +909,10 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "europe-exc-european-union" AND child.code = "MK"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "europe-exc-european-union" AND child.code = "GE"
+WHERE parent.code = "asia" AND child.code = "GE"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "europe-exc-european-union" AND child.code = "GL"
+WHERE parent.code = "north-america" AND child.code = "GL"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "europe-exc-european-union" AND child.code = "IS"
@@ -978,10 +978,10 @@ MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarch
 WHERE parent.code = "north-america" AND child.code = "US"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "north-america" AND child.code = "UM"
+WHERE parent.code = "oceania" AND child.code = "UM"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
-WHERE parent.code = "north-america" AND child.code = "VI"
+WHERE parent.code = "central-and-south-america" AND child.code = "VI"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-country`),(child:`_generic_hierarchy_node_trade-country`)
 WHERE parent.code = "oceania" AND child.code = "AS"
