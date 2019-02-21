@@ -26,7 +26,6 @@ type EventProducer interface {
 
 // NewDataImportCompleteHandler ...
 func NewDataImportCompleteHandler(hierarchyStore HierarchyStore, eventProducer EventProducer) *DataImportCompleteHandler {
-
 	return &DataImportCompleteHandler{
 		hierarchyStore: hierarchyStore,
 		eventProducer:  eventProducer,
