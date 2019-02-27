@@ -17,6 +17,7 @@ type Neo4jDriver interface {
 	Count(query string) (count int64, err error)
 	Exec(query string, params map[string]interface{}) error
 	Close(ctx context.Context) error
+	Healthcheck() (string, error)
 }
 
 type NeoDriver struct {
