@@ -27,8 +27,6 @@ func TestSpec(t *testing.T) {
 				So(cfg.ConsumerGroup, ShouldEqual, "dp-hierarchy-builder")
 				So(cfg.ProducerTopic, ShouldEqual, "hierarchy-built")
 				So(cfg.GracefulShutdownTimeout, ShouldEqual, time.Second*10)
-				So(cfg.DatabaseAddress, ShouldEqual, "bolt://localhost:7687")
-				So(cfg.Neo4jPoolSize, ShouldEqual, 20)
 				So(cfg.HealthCheckInterval, ShouldEqual, time.Minute)
 				So(cfg.HealthCheckRecoveryInterval, ShouldEqual, time.Second*2)
 			})
