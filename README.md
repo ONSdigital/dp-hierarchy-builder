@@ -36,8 +36,6 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 | PRODUCER_TOPIC            | hierarchy-built       | The name of the topic to produces messages to
 | ERROR_PRODUCER_TOPIC      | import-error          | The name of the topic to send error messages to
 | GRACEFUL_SHUTDOWN_TIMEOUT | time.Second * 10      | Time time to wait when gracefully shutting down before closing
-| DATABASE_ADDRESS          | bolt://localhost:7687 | The address of the database
-| NEO4J_POOL_SIZE           | 20                    | The number of neo4j connections to pool
 | HEALTHCHECK_INTERVAL      | time.Minute           | How often to run a health check
 
 ### Healthcheck
