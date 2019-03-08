@@ -87,7 +87,7 @@ CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"79",label:"79 - O
 CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"791I",label:"791I - Road vehicles other than cars (intermediate)" });
 CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"791K",label:"791K - Railway equipment (capital)" });
 CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"792",label:"792 - Aircraft" });
-CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"792/3",label:"792/3 - Ships & aircraft" });
+CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"792-3",label:"792-3 - Ships & aircraft" });
 CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"793",label:"793 - Ships" });
 CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"7E",label:"7E - Electrical machinery" });
 CREATE (node:`_generic_hierarchy_node_trade-commodity` { code:"7EC",label:"7EC - Electrical machinery (consumer)" });
