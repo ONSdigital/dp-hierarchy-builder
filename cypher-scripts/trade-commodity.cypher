@@ -389,6 +389,9 @@ MATCH (parent:`_generic_hierarchy_node_trade-commodity`),(child:`_generic_hierar
 WHERE parent.code = "7" AND child.code = "792"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-commodity`),(child:`_generic_hierarchy_node_trade-commodity`)
+WHERE parent.code = "7" AND child.code = "792-3"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_trade-commodity`),(child:`_generic_hierarchy_node_trade-commodity`)
 WHERE parent.code = "7" AND child.code = "793"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_trade-commodity`),(child:`_generic_hierarchy_node_trade-commodity`)
