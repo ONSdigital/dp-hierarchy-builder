@@ -120,7 +120,7 @@ CREATE (node:`_generic_hierarchy_node_trade-country` { code:"FR",label:"FR - Fra
 CREATE (node:`_generic_hierarchy_node_trade-country` { code:"DE",label:"DE - Germany" });
 CREATE (node:`_generic_hierarchy_node_trade-country` { code:"GI",label:"GI - Gibraltar" });
 CREATE (node:`_generic_hierarchy_node_trade-country` { code:"GR",label:"GR - Greece" });
-CREATE (node:`_generic_hierarchy_node_trade-country` { code:"IE",label:"IE - Irish Republic" });
+CREATE (node:`_generic_hierarchy_node_trade-country` { code:"IE",label:"IE - Ireland" });
 CREATE (node:`_generic_hierarchy_node_trade-country` { code:"IT",label:"IT - Italy" });
 CREATE (node:`_generic_hierarchy_node_trade-country` { code:"JE",label:"JE - Jersey" });
 CREATE (node:`_generic_hierarchy_node_trade-country` { code:"LU",label:"LU - Luxembourg" });
