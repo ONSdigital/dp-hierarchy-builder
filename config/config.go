@@ -16,8 +16,6 @@ type Config struct {
 	ProducerTopic               string        `envconfig:"PRODUCER_TOPIC"`
 	ErrorProducerTopic          string        `envconfig:"ERROR_PRODUCER_TOPIC"`
 	GracefulShutdownTimeout     time.Duration `envconfig:"GRACEFUL_SHUTDOWN_TIMEOUT"`
-	DatabaseAddress             string        `envconfig:"DATABASE_ADDRESS"              json:"-"`
-	Neo4jPoolSize               int           `envconfig:"NEO4J_POOL_SIZE"`
 	HealthCheckInterval         time.Duration `envconfig:"HEALTHCHECK_INTERVAL"`
 	HealthCheckRecoveryInterval time.Duration `envconfig:"HEALTHCHECK_RECOVERY_INTERVAL"`
 }
@@ -33,8 +31,6 @@ func Get() (*Config, error) {
 		ProducerTopic:               "hierarchy-built",
 		ErrorProducerTopic:          "import-error",
 		GracefulShutdownTimeout:     time.Second * 10,
-		DatabaseAddress:             "bolt://localhost:7687",
-		Neo4jPoolSize:               20,
 		HealthCheckInterval:         time.Minute,
 		HealthCheckRecoveryInterval: 2 * time.Second,
 	}
