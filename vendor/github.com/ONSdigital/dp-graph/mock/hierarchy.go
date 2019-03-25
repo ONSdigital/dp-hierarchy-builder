@@ -2,6 +2,8 @@ package mock
 
 import (
 	"context"
+
+	"github.com/ONSdigital/dp-hierarchy-api/models"
 )
 
 func (m *Mock) CreateInstanceHierarchyConstraints(ctx context.Context, attempt int, instanceID, dimensionName string) error {
@@ -38,4 +40,46 @@ func (m *Mock) RemoveNodesNotMarkedToRemain(ctx context.Context, attempt int, in
 
 func (m *Mock) RemoveRemainMarker(ctx context.Context, attempt int, instanceID, dimensionName string) error {
 	return m.checkForErrors()
+}
+
+func (m *Mock) GetHierarchyCodelist(ctx context.Context, instanceID, dimension string) (string, error) {
+	return "codelistID", m.checkForErrors()
+}
+
+func (m *Mock) GetHierarchyRoot(ctx context.Context, instanceID, dimension string) (*models.Response, error) {
+	if err := m.checkForErrors(); err != nil {
+		return nil, err
+	}
+
+	return &models.Response{
+		Label:        "h-lay-bull",
+		ID:           "h-eye-dee",
+		NoOfChildren: 1,
+		HasData:      true,
+		Children: []*models.Element{
+			{
+				Label:        "h-child1",
+				NoOfChildren: 2,
+			},
+		},
+	}, nil
+}
+
+func (m *Mock) GetHierarchyElement(ctx context.Context, instanceID, dimension, code string) (*models.Response, error) {
+	if err := m.checkForErrors(); err != nil {
+		return nil, err
+	}
+
+	return &models.Response{
+		Label:        "lay-bull",
+		ID:           code,
+		NoOfChildren: 1,
+		HasData:      true,
+		Breadcrumbs: []*models.Element{
+			{
+				Label:        "child1",
+				NoOfChildren: 1,
+			},
+		},
+	}, nil
 }
