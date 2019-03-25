@@ -741,9 +741,9 @@ CREATE (node:`_generic_hierarchy_node_sic` { code:"51-22",label:"51.22 : Space t
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52",label:"52 : Warehousing and support activities for transportation" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-1",label:"52.1 : Warehousing and storage" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-10",label:"52.10 : Warehousing and storage" });
-CREATE (node:`_generic_hierarchy_node_sic` { code:"52-101",label:"52.101 : Operation of warehousing and storage facilities for water transport activities of division ##50" });
-CREATE (node:`_generic_hierarchy_node_sic` { code:"52-102",label:"52.102 : Operation of warehousing and storage facilities for air transport activities of division ##51" });
-CREATE (node:`_generic_hierarchy_node_sic` { code:"52-103",label:"52.103 : Operation of warehousing and storage facilities for land transport activities of division ##49" });
+CREATE (node:`_generic_hierarchy_node_sic` { code:"52-101",label:"52.101 : Operation of warehousing and storage facilities for water transport activities of division" });
+CREATE (node:`_generic_hierarchy_node_sic` { code:"52-102",label:"52.102 : Operation of warehousing and storage facilities for air transport activities of division" });
+CREATE (node:`_generic_hierarchy_node_sic` { code:"52-103",label:"52.103 : Operation of warehousing and storage facilities for land transport activities of division" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-2",label:"52.2 : Support activities for transportation" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-21",label:"52.21 : Service activities incidental to land transportation" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-211",label:"52.211 : Operation of rail freight terminals" });
@@ -753,9 +753,9 @@ CREATE (node:`_generic_hierarchy_node_sic` { code:"52-219",label:"52.219 : Other
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-22",label:"52.22 : Service activities incidental to water transportation" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-23",label:"52.23 : Service activities incidental to air transportation" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-24",label:"52.24 : Cargo handling" });
-CREATE (node:`_generic_hierarchy_node_sic` { code:"52-241",label:"52.241 : Cargo handling for water transport activities of division ##50" });
-CREATE (node:`_generic_hierarchy_node_sic` { code:"52-242",label:"52.242 : Cargo handling for air transport activities of division ##51" });
-CREATE (node:`_generic_hierarchy_node_sic` { code:"52-243",label:"52.243 : Cargo handling for land transport activities of division ##49" });
+CREATE (node:`_generic_hierarchy_node_sic` { code:"52-241",label:"52.241 : Cargo handling for water transport activities of division" });
+CREATE (node:`_generic_hierarchy_node_sic` { code:"52-242",label:"52.242 : Cargo handling for air transport activities of division" });
+CREATE (node:`_generic_hierarchy_node_sic` { code:"52-243",label:"52.243 : Cargo handling for land transport activities of division" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"52-29",label:"52.29 : Other transportation support activities" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"53",label:"53 : Postal and courier activities" });
 CREATE (node:`_generic_hierarchy_node_sic` { code:"53-1",label:"53.1 : Postal activities under universal service obligation" });
