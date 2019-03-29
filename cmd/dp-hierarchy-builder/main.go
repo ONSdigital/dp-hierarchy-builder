@@ -6,6 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/ONSdigital/dp-graph/graph"
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
@@ -13,8 +14,6 @@ import (
 	"github.com/ONSdigital/go-ns/healthcheck"
 	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
-	"github.com/ONSdigital/go-ns/neo4j"
-	bolt "github.com/ONSdigital/golang-neo4j-bolt-driver"
 )
 
 func main() {
@@ -50,16 +49,14 @@ func main() {
 
 	avroProducer := event.NewAvroProducer(kafkaProducer)
 
-	neo4jConnPool, err := bolt.NewClosableDriverPoolWithTimeout(cfg.DatabaseAddress, cfg.Neo4jPoolSize, cfg.Neo4jTimeout)
+	db, err := graph.NewHierarchyStore(context.Background())
 	exitIfError(err)
-
-	hierarchyStore := hierarchy.NewStore(neo4jConnPool)
 
 	// when errors occur - we send a message on an error topic.
 	errorHandler, err := reporter.NewImportErrorReporter(kafkaErrorProducer, log.Namespace)
 	exitIfError(err)
 
-	eventHandler := event.NewDataImportCompleteHandler(hierarchyStore, avroProducer)
+	eventHandler := event.NewDataImportCompleteHandler(&hierarchy.Store{db}, avroProducer)
 
 	eventConsumer := event.NewConsumer()
 	eventConsumer.Consume(kafkaConsumer, eventHandler, errorHandler)
@@ -69,7 +66,7 @@ func main() {
 		cfg.HealthCheckInterval,
 		cfg.HealthCheckRecoveryInterval,
 		errorChannel,
-		neo4j.NewHealthCheckClient(neo4jConnPool),
+		db,
 	)
 
 	signals := make(chan os.Signal, 1)
@@ -107,7 +104,7 @@ func main() {
 	err = healthChecker.Close(ctx)
 	logIfError(err)
 
-	err = neo4jConnPool.Close()
+	err = db.Close(ctx)
 	logIfError(err)
 
 	// cancel the timer in the shutdown context
