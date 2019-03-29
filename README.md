@@ -73,7 +73,7 @@ If running one of the above commands against an environment, you can specify the
 
 `make FILE=./cmd/hierarchy-transformer/hierarchy.csv generate-full`
 
-output is written to ``./cmd/hierarchy-transformer/output`
+output is written to `./cmd/hierarchy-transformer/output`
 
 #### transform a geography input file to a hierarchy input file / cypher script
 

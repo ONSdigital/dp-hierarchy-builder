@@ -5,62 +5,86 @@
 		{
 			"checksumSHA1": "QsDPQ6jy7ypJqNUHNTxMWWAA/tw=",
 			"path": "github.com/ONSdigital/dp-code-list-api/models",
-			"revision": "f4d833cf3a06313f770d9158903c6f08cc6381d8",
-			"revisionTime": "2019-02-21T16:34:35Z"
+			"revision": "6565cb0ef559f51d351fe45df7c8667d4e5e4df9",
+			"revisionTime": "2019-03-19T10:24:26Z"
 		},
 		{
-			"checksumSHA1": "Wgm21ZO6di1DHWJfn6WgBlk7pZA=",
+			"checksumSHA1": "o+ldH+dr4mTedWWPnV580F3l2hM=",
+			"path": "github.com/ONSdigital/dp-dimension-importer/model",
+			"revision": "221f2ea9e3719581eb8f75f9e936f31c0de53bb7",
+			"revisionTime": "2019-03-22T12:13:12Z"
+		},
+		{
+			"checksumSHA1": "leH/fyl/KmShljBp5TdSsQr9xyc=",
 			"path": "github.com/ONSdigital/dp-graph/config",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
 		},
 		{
-			"checksumSHA1": "V1WFZtaSjc+rSiyPC+jwR7UbDCI=",
+			"checksumSHA1": "UeeWNjQu6xW/Hw+v4MAfctMmIZ8=",
 			"path": "github.com/ONSdigital/dp-graph/graph",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
 		},
 		{
-			"checksumSHA1": "+Eocp5IebQLKHIdEHHWcFKm8MOg=",
+			"checksumSHA1": "Pcuy1j/u/ZJFwwooiNS9phPqOic=",
 			"path": "github.com/ONSdigital/dp-graph/graph/driver",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
 		},
 		{
-			"checksumSHA1": "GIe94aX6nohYAbaQJXjujLjBXdI=",
+			"checksumSHA1": "PyMyKOBc90I+59WEPLD6Aovpv/4=",
 			"path": "github.com/ONSdigital/dp-graph/mock",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
 		},
 		{
-			"checksumSHA1": "y915XXiNtqEP2aeOqAWF03zPAFc=",
+			"checksumSHA1": "bljN5KJ5+Mijg+yvE+ZZQIuJNyw=",
 			"path": "github.com/ONSdigital/dp-graph/neo4j",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
 		},
 		{
-			"checksumSHA1": "/r5BMdKKwd64u4XvdchNZd9tYSk=",
+			"checksumSHA1": "10C6dRVYfPkcgYHMGLsJLfkPvck=",
 			"path": "github.com/ONSdigital/dp-graph/neo4j/driver",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
 		},
 		{
-			"checksumSHA1": "517gBDBjgLh/EoxpwLZ3I9RmXFc=",
+			"checksumSHA1": "u0TDiIBM7IO/NZDXOvEwm3xbqvw=",
 			"path": "github.com/ONSdigital/dp-graph/neo4j/mapper",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
 		},
 		{
-			"checksumSHA1": "UP39h3Ch+XJqD63dnXL06J80mOE=",
+			"checksumSHA1": "e2tM4AYGw5b9ZZjEh8eSw0yzGyA=",
 			"path": "github.com/ONSdigital/dp-graph/neo4j/query",
-			"revision": "2f1c788321125ab03efb7786c0b604c839c285c3",
-			"revisionTime": "2019-02-14T16:16:56Z"
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
+		},
+		{
+			"checksumSHA1": "4LiEZE5u3kqCBvzigVEhXcjac2g=",
+			"path": "github.com/ONSdigital/dp-graph/observation",
+			"revision": "455120c204d33ab78d5663486630583373856e41",
+			"revisionTime": "2019-03-25T17:53:13Z"
+		},
+		{
+			"checksumSHA1": "sX7Krcb3Xi+QkzybgFfBj6hJ81A=",
+			"path": "github.com/ONSdigital/dp-hierarchy-api/models",
+			"revision": "64ca752d215c28872375f428d10d0d4bd1b84e66",
+			"revisionTime": "2019-03-22T15:22:53Z"
 		},
 		{
 			"checksumSHA1": "EiTaqi0kmbNTQWGBqm0ucCKONh8=",
 			"path": "github.com/ONSdigital/dp-import/events",
 			"revision": "3b67b8f7e04de15116cea51ba1324b22abfeaefb",
 			"revisionTime": "2018-01-17T15:21:33Z"
+		},
+		{
+			"checksumSHA1": "VETtCYCwbZOldq+GK7vzoMWFyng=",
+			"path": "github.com/ONSdigital/dp-observation-importer/models",
+			"revision": "17a25a1d914f591cbd349e79dbea06193fa3e8ce",
+			"revisionTime": "2019-03-22T12:14:13Z"
 		},
 		{
 			"checksumSHA1": "yVhSSS1KY9fmMVUcoZhIVyRB/YA=",
@@ -93,10 +117,10 @@
 			"revisionTime": "2019-01-17T11:52:14Z"
 		},
 		{
-			"checksumSHA1": "WSj2jaJp2epEer5qSp1QnTCJuTg=",
+			"checksumSHA1": "WIzknz1rbQWUgVG7KwwElO7DajY=",
 			"path": "github.com/ONSdigital/go-ns/common",
-			"revision": "1c0a788c5b8e666c674540fc0881960857d73b3b",
-			"revisionTime": "2019-01-17T11:52:14Z"
+			"revision": "81b393bfc6e80674df603b7fde2f31a35e81b9dd",
+			"revisionTime": "2019-03-01T13:55:03Z"
 		},
 		{
 			"checksumSHA1": "Vjyl/gfY0qx2lW9te3Ieb5HV3/s=",
@@ -125,8 +149,8 @@
 		{
 			"checksumSHA1": "g9flYl+PBs6cYflFY3EpG6IcJGM=",
 			"path": "github.com/ONSdigital/go-ns/log",
-			"revision": "1c0a788c5b8e666c674540fc0881960857d73b3b",
-			"revisionTime": "2019-01-17T11:52:14Z"
+			"revision": "81b393bfc6e80674df603b7fde2f31a35e81b9dd",
+			"revisionTime": "2019-03-01T13:55:03Z"
 		},
 		{
 			"checksumSHA1": "L4B1AA6AKWscHCZc02qk2SQU65k=",
@@ -143,44 +167,44 @@
 		{
 			"checksumSHA1": "XuX+fvTCTujj5TRdUSec2DbEWuA=",
 			"path": "github.com/ONSdigital/golang-neo4j-bolt-driver",
-			"revision": "e2337a6b0798d22eb278da1a8c5f7b97c2808abb",
-			"revisionTime": "2018-11-30T09:45:37Z"
+			"revision": "da534111531d44d5dfcdda1b9057586bf7aac44c",
+			"revisionTime": "2019-02-28T15:33:39Z"
 		},
 		{
 			"checksumSHA1": "O5qkFHc/P55wdbOURej2+MJ1IpU=",
 			"path": "github.com/ONSdigital/golang-neo4j-bolt-driver/encoding",
-			"revision": "e2337a6b0798d22eb278da1a8c5f7b97c2808abb",
-			"revisionTime": "2018-11-30T09:45:37Z"
+			"revision": "da534111531d44d5dfcdda1b9057586bf7aac44c",
+			"revisionTime": "2019-02-28T15:33:39Z"
 		},
 		{
 			"checksumSHA1": "A4Cj2p77p0Q0iJYTPfMg3+ymbDs=",
 			"path": "github.com/ONSdigital/golang-neo4j-bolt-driver/errors",
-			"revision": "e2337a6b0798d22eb278da1a8c5f7b97c2808abb",
-			"revisionTime": "2018-11-30T09:45:37Z"
+			"revision": "da534111531d44d5dfcdda1b9057586bf7aac44c",
+			"revisionTime": "2019-02-28T15:33:39Z"
 		},
 		{
 			"checksumSHA1": "cmsdmQr891JU29w8APk0Yg1Swas=",
 			"path": "github.com/ONSdigital/golang-neo4j-bolt-driver/log",
-			"revision": "e2337a6b0798d22eb278da1a8c5f7b97c2808abb",
-			"revisionTime": "2018-11-30T09:45:37Z"
+			"revision": "da534111531d44d5dfcdda1b9057586bf7aac44c",
+			"revisionTime": "2019-02-28T15:33:39Z"
 		},
 		{
 			"checksumSHA1": "WCUVztJBtOykxNRmk/Qa+mbJBlk=",
 			"path": "github.com/ONSdigital/golang-neo4j-bolt-driver/structures",
-			"revision": "e2337a6b0798d22eb278da1a8c5f7b97c2808abb",
-			"revisionTime": "2018-11-30T09:45:37Z"
+			"revision": "da534111531d44d5dfcdda1b9057586bf7aac44c",
+			"revisionTime": "2019-02-28T15:33:39Z"
 		},
 		{
 			"checksumSHA1": "Jz9ShYvpqcvgORATMVBRVgEMskY=",
 			"path": "github.com/ONSdigital/golang-neo4j-bolt-driver/structures/graph",
-			"revision": "e2337a6b0798d22eb278da1a8c5f7b97c2808abb",
-			"revisionTime": "2018-11-30T09:45:37Z"
+			"revision": "da534111531d44d5dfcdda1b9057586bf7aac44c",
+			"revisionTime": "2019-02-28T15:33:39Z"
 		},
 		{
 			"checksumSHA1": "L8Ub/QM9+d1CC/csXwahYw85F3w=",
 			"path": "github.com/ONSdigital/golang-neo4j-bolt-driver/structures/messages",
-			"revision": "e2337a6b0798d22eb278da1a8c5f7b97c2808abb",
-			"revisionTime": "2018-11-30T09:45:37Z"
+			"revision": "da534111531d44d5dfcdda1b9057586bf7aac44c",
+			"revisionTime": "2019-02-28T15:33:39Z"
 		},
 		{
 			"checksumSHA1": "K7wm03LN5CpmnuQPGfSmrx1hNtk=",
@@ -281,8 +305,8 @@
 			"checksumSHA1": "hBgLmZ/4mCxmnH88mqFKBkpJFUY=",
 			"origin": "github.com/ONSdigital/go-ns/vendor/github.com/mgutz/ansi",
 			"path": "github.com/mgutz/ansi",
-			"revision": "1c0a788c5b8e666c674540fc0881960857d73b3b",
-			"revisionTime": "2019-01-17T11:52:14Z"
+			"revision": "81b393bfc6e80674df603b7fde2f31a35e81b9dd",
+			"revisionTime": "2019-03-01T13:55:03Z"
 		},
 		{
 			"checksumSHA1": "FGg99nQ56Fo3radSCuU1AeEUJug=",
@@ -351,8 +375,8 @@
 			"checksumSHA1": "GtamqiJoL7PGHsN454AoffBFMa8=",
 			"origin": "github.com/ONSdigital/go-ns/vendor/golang.org/x/net/context",
 			"path": "golang.org/x/net/context",
-			"revision": "1c0a788c5b8e666c674540fc0881960857d73b3b",
-			"revisionTime": "2019-01-17T11:52:14Z"
+			"revision": "81b393bfc6e80674df603b7fde2f31a35e81b9dd",
+			"revisionTime": "2019-03-01T13:55:03Z"
 		},
 		{
 			"checksumSHA1": "WHc3uByvGaMcnSoI21fhzYgbOgg=",
