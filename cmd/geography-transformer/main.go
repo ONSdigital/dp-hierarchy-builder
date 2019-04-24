@@ -12,6 +12,7 @@ import (
 
 	"encoding/csv"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"github.com/ONSdigital/dp-hierarchy-builder/gremlin"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/go-ns/log"
 	"io"
@@ -23,6 +24,8 @@ var codeList = flag.String("codeList", "123", "The single codelist value to set 
 var csvFile = flag.String("csv", "cmd/geography-transformer/output/hierarchy.csv", "")
 var cypherFile = flag.String("cypher", "cmd/geography-transformer/output/hierarchy.cypher", "")
 var cypherDelFile = flag.String("cypher-delete", "cmd/geography-transformer/output/hierarchy-delete.cypher", "")
+var gremlinFile = flag.String("gremlin", "cmd/geography-transformer/output/hierarchy.gremlin", "")
+var gremlinDelFile = flag.String("gremlin-delete", "cmd/geography-transformer/output/hierarchy-delete.gremlin", "")
 
 func main() {
 
@@ -66,6 +69,14 @@ func main() {
 
 	log.Debug("Generating cypher deletion script", nil)
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
+	logErr(err)
+
+	log.Debug("Generating gremlin script", nil)
+	err = gremlin.CreateGremlinFile(rootNodes, *gremlinFile)
+	logErr(err)
+
+	log.Debug("Generating gremlin deletion script", nil)
+	err = gremlin.CreateGremlinDeleteFile(rootNodes, *gremlinDelFile)
 	logErr(err)
 }
 
