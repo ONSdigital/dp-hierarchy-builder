@@ -17,7 +17,7 @@ You can use additional flags if running against an environment other than localh
 
 `cypher-shell -u USER -p PASSWORD -a bolt://localhost:7687 < .....`
 
-Run the dp-hierarchy-builder service
+Run the `dp-hierarchy-builder` service:
 
 `make debug`
 
@@ -37,6 +37,8 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 | ERROR_PRODUCER_TOPIC      | import-error          | The name of the topic to send error messages to
 | GRACEFUL_SHUTDOWN_TIMEOUT | time.Second * 10      | Time time to wait when gracefully shutting down before closing
 | HEALTHCHECK_INTERVAL      | time.Minute           | How often to run a health check
+
+Plus the graph database vars from [dp-graph](https://github.com/ONSdigital/dp-graph) - namely `GRAPH_DRIVER_TYPE` and `GRAPH_ADDR`
 
 ### Healthcheck
 
@@ -87,6 +89,6 @@ See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### License
 
-Copyright © 2016-2017, Office for National Statistics (https://www.ons.gov.uk)
+Copyright © 2016-2019, Office for National Statistics (https://www.ons.gov.uk)
 
 Released under MIT license, see [LICENSE](LICENSE.md) for details.
