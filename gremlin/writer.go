@@ -17,9 +17,8 @@ func CreateGremlinDeleteFile(nodes []*hierarchy.Node, filename string) error {
 
 	deleteBuffer := &bytes.Buffer{}
 	deleteBuffer.WriteString(fmt.Sprintf(
-		"g.V().hasLabel('_generic_hierarchy_node_%s').outE().drop()\n"+
-			"g.V().hasLabel('_generic_hierarchy_node_%s').drop()\n",
-		nodes[0].CodeList, nodes[0].CodeList,
+		"g.V().hasLabel('_generic_hierarchy_node_%s').drop()\n",
+		nodes[0].CodeList,
 	))
 	return ioutil.WriteFile(filename, deleteBuffer.Bytes(), 0644)
 }
