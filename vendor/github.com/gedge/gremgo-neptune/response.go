@@ -82,7 +82,8 @@ func marshalResponse(msg []byte) (resp Response, err error) {
 	return
 }
 
-// saveResponse makes the response available for retrieval by the requester. Mutexes are used for thread safety.
+// saveResponse makes the response (and its err) available for retrieval by the requester.
+// Mutexes are used for thread safety.
 func (c *Client) saveResponse(resp Response, err error) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
@@ -206,7 +207,6 @@ func (c *Client) deleteResponse(id string) {
 func (r *Response) detectError() (err error) {
 	switch r.Status.Code {
 	case statusSuccess, statusNoContent, statusPartialContent:
-		break
 	case statusUnauthorized:
 		err = fmt.Errorf("UNAUTHORIZED - Response Message: %s", r.Status.Message)
 	case statusAuthenticate:

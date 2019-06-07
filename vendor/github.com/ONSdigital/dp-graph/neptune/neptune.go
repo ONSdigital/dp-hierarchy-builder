@@ -59,7 +59,7 @@ func (n *NeptuneDB) getVertices(gremStmt string) (vertices []graphson.Vertex, er
 			sleepy(attempt, 20*time.Millisecond)
 			logData["attempt"] = attempt
 		}
-		res, err = n.Pool.Get(gremStmt)
+		res, err = n.Pool.Get(gremStmt, nil, nil)
 		if err == nil {
 			var ok bool
 			if vertices, ok = res.([]graphson.Vertex); !ok {
@@ -108,7 +108,7 @@ func (n *NeptuneDB) getEdges(gremStmt string) (edges []graphson.Edge, err error)
 			sleepy(attempt, 20*time.Millisecond)
 			logData["attempt"] = attempt
 		}
-		res, err = n.Pool.GetE(gremStmt)
+		res, err = n.Pool.GetE(gremStmt, nil, nil)
 		if err == nil {
 			// success
 			var ok bool
@@ -171,7 +171,7 @@ func (n *NeptuneDB) getNumber(gremStmt string) (count int64, err error) {
 			sleepy(attempt, 20*time.Millisecond)
 			logData["attempt"] = attempt
 		}
-		if count, err = n.Pool.GetCount(gremStmt); err == nil {
+		if count, err = n.Pool.GetCount(gremStmt, nil, nil); err == nil {
 			// success, so return number
 			return
 		}

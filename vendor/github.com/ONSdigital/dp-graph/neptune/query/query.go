@@ -4,7 +4,7 @@ const (
 	// codelists
 	GetCodeLists       = "g.V().hasLabel('_code_list')%s.dedup().by(label).labels()"
 	GetCodeList        = "g.V().hasLabel('_code_list').hasLabel('_code_list_%s')"
-	CodeListExists     = "g.V().hasLabel('_code_list').hasLabel('_code_list_%s').count()"
+	CodeListExists     = "g.V().hasLabel('_code_list_%s').count()"
 	GetCodeListEdition = "g.V().hasLabel('_code_list').hasLabel('_code_list_%s').has('edition','%s')"
 	CountEditions      = "g.V().hasLabel('_code_list').hasLabel('_code_list_%s').has('edition','%s').count()"
 	GetCodes           = "g.V().hasLabel('_code').as('c').out('usedBy').as('r').inV().hasLabel('_code_list').hasLabel('_code_list_%s').has('edition','%s').select('c','r')"

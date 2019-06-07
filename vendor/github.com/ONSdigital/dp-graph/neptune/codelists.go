@@ -2,8 +2,13 @@ package neptune
 
 import (
 	"context"
+	"fmt"
+
+	"github.com/pkg/errors"
 
 	"github.com/ONSdigital/dp-code-list-api/models"
+	"github.com/ONSdigital/dp-graph/graph/driver"
+	"github.com/ONSdigital/dp-graph/neptune/query"
 )
 
 func (n *NeptuneDB) GetCodeLists(ctx context.Context, filterBy string) (*models.CodeListResults, error) {
@@ -38,7 +43,20 @@ func (n *NeptuneDB) GetCodeLists(ctx context.Context, filterBy string) (*models.
 	}, nil
 }
 
-func (n *NeptuneDB) GetCodeList(ctx context.Context, codeListID string) (*models.CodeList, error) {
+// GetCodeList provides a CodeList for a given ID, having checked it exists
+// in the database. Nb. The caller is expected to fully qualify the embedded
+// Links field afterwards.
+func (n *NeptuneDB) GetCodeList(ctx context.Context, codeListID string) (
+	*models.CodeList, error) {
+	existsQry := fmt.Sprintf(query.CodeListExists, codeListID)
+	count, err := n.getNumber(existsQry)
+	if err != nil {
+		return nil, errors.Wrapf(err, "Gremlin query failed: %q", existsQry)
+	}
+	if count == 0 {
+		return nil, driver.ErrNotFound
+	}
+
 	return &models.CodeList{
 		Links: &models.CodeListLink{
 			Self: &models.Link{

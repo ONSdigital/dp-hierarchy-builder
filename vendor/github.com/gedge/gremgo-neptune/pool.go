@@ -48,9 +48,9 @@ func NewPool(dial func() (*Client, error)) *Pool {
 
 // NewPoolWithDialerCtx returns a NewPool that uses a contextual dialer to dbURL,
 // errs is a chan that receives any errors from the ping/read/write workers for the connection
-func NewPoolWithDialerCtx(ctx context.Context, dbURL string, errs chan error) *Pool {
+func NewPoolWithDialerCtx(ctx context.Context, dbURL string, errs chan error, cfgs ...DialerConfig) *Pool {
 	dialFunc := func() (*Client, error) {
-		dialer := NewDialer(dbURL)
+		dialer := NewDialer(dbURL, cfgs...)
 		cli, err := DialCtx(ctx, dialer, errs)
 		return &cli, err
 	}
@@ -369,60 +369,60 @@ func (p *Pool) ExecuteFile(path string, bindings, rebindings map[string]string) 
 }
 
 // AddV
-func (p *Pool) AddV(query string, i interface{}) (resp graphson.Vertex, err error) {
-	return p.AddVertexCtx(context.Background(), query, i)
+func (p *Pool) AddV(label string, i interface{}, bindings, rebindings map[string]string) (resp graphson.Vertex, err error) {
+	return p.AddVertexCtx(context.Background(), label, i, bindings, rebindings)
 }
-func (p *Pool) AddVertexCtx(ctx context.Context, query string, i interface{}) (resp graphson.Vertex, err error) {
+func (p *Pool) AddVertexCtx(ctx context.Context, label string, i interface{}, bindings, rebindings map[string]string) (resp graphson.Vertex, err error) {
 	var pc *conn
 	if pc, err = p.conn(); err != nil {
 		return resp, errors.Wrap(err, "Failed p.conn")
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.AddVertexCtx(ctx, query, i)
+	return pc.Client.AddVertexCtx(ctx, label, i, bindings, rebindings)
 }
 
 // Get
-func (p *Pool) Get(query string) (resp interface{}, err error) {
+func (p *Pool) Get(query string, bindings, rebindings map[string]string) (resp interface{}, err error) {
 	var pc *conn
 	if pc, err = p.conn(); err != nil {
 		return resp, errors.Wrap(err, "Failed p.conn")
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.Get(query)
+	return pc.Client.Get(query, bindings, rebindings)
 }
 
 // GetCtx
-func (p *Pool) GetCtx(ctx context.Context, query string) (resp interface{}, err error) {
+func (p *Pool) GetCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (resp interface{}, err error) {
 	var pc *conn
 	if pc, err = p.connCtx(ctx); err != nil {
 		return resp, errors.Wrap(err, "GetCtx: Failed p.connCtx")
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.GetCtx(ctx, query)
+	return pc.Client.GetCtx(ctx, query, bindings, rebindings)
 }
 
-// GetCursorCtx initiates a query on the database, returning a cursor to iterate over the results
-func (p *Pool) GetCursorCtx(ctx context.Context, query string) (cursor Cursor, err error) {
+// OpenCursorCtx initiates a query on the database, returning a cursor to iterate over the results
+func (p *Pool) OpenCursorCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (cursor Cursor, err error) {
 	var pc *conn
 	if pc, err = p.connCtx(ctx); err != nil {
 		err = errors.Wrap(err, "GetCursorCtx: Failed p.connCtx")
 		return
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.GetCursorCtx(ctx, query)
+	return pc.Client.OpenCursorCtx(ctx, query, bindings, rebindings)
 }
 
-// NextCursorCtx returns the next set of results for the cursor
+// ReadCursorCtx returns the next set of results for the cursor
 // - `res` returns vertices (and may be empty when results were read by a previous call - this is normal)
 // - `eof` will be true when no more results are available (`res` may still have results)
-func (p *Pool) NextCursorCtx(ctx context.Context, cursor Cursor) (res []graphson.Vertex, eof bool, err error) {
+func (p *Pool) ReadCursorCtx(ctx context.Context, cursor Cursor) (res []graphson.Vertex, eof bool, err error) {
 	var pc *conn
 	if pc, err = p.connCtx(ctx); err != nil {
 		err = errors.Wrap(err, "NextCtx: Failed p.connCtx")
 		return
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.NextCursorCtx(ctx, cursor)
+	return pc.Client.ReadCursorCtx(ctx, cursor)
 }
 
 // AddE
@@ -441,56 +441,56 @@ func (p *Pool) AddEdgeCtx(ctx context.Context, label, fromId, toId string, props
 }
 
 // GetE
-func (p *Pool) GetE(q string) (resp interface{}, err error) {
-	return p.GetEdgeCtx(context.Background(), q)
+func (p *Pool) GetE(q string, bindings, rebindings map[string]string) (resp interface{}, err error) {
+	return p.GetEdgeCtx(context.Background(), q, bindings, rebindings)
 }
 
-func (p *Pool) GetEdgeCtx(ctx context.Context, q string) (resp interface{}, err error) {
+func (p *Pool) GetEdgeCtx(ctx context.Context, q string, bindings, rebindings map[string]string) (resp interface{}, err error) {
 	var pc *conn
 	if pc, err = p.conn(); err != nil {
 		return resp, errors.Wrap(err, "Failed p.conn")
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.GetEdgeCtx(ctx, q)
+	return pc.Client.GetEdgeCtx(ctx, q, bindings, rebindings)
 }
 
-func (p *Pool) GetCount(q string) (i int64, err error) {
-	return p.GetCountCtx(context.Background(), q)
+func (p *Pool) GetCount(q string, bindings, rebindings map[string]string) (i int64, err error) {
+	return p.GetCountCtx(context.Background(), q, bindings, rebindings)
 }
-func (p *Pool) GetCountCtx(ctx context.Context, q string) (i int64, err error) {
+func (p *Pool) GetCountCtx(ctx context.Context, q string, bindings, rebindings map[string]string) (i int64, err error) {
 	var pc *conn
 	if pc, err = p.conn(); err != nil {
 		return 0, errors.Wrap(err, "Failed p.conn")
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.GetCountCtx(ctx, q, nil, nil)
+	return pc.Client.GetCountCtx(ctx, q, bindings, rebindings)
 }
 
-func (p *Pool) GetStringList(q string) (vals []string, err error) {
-	return p.GetStringListCtx(context.Background(), q)
+func (p *Pool) GetStringList(q string, bindings, rebindings map[string]string) (vals []string, err error) {
+	return p.GetStringListCtx(context.Background(), q, bindings, rebindings)
 }
-func (p *Pool) GetStringListCtx(ctx context.Context, q string) (vals []string, err error) {
+func (p *Pool) GetStringListCtx(ctx context.Context, q string, bindings, rebindings map[string]string) (vals []string, err error) {
 	var pc *conn
 	if pc, err = p.conn(); err != nil {
 		err = errors.Wrap(err, "GetStringListCtx: Failed p.conn")
 		return
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.GetStringListCtx(ctx, q, nil, nil)
+	return pc.Client.GetStringListCtx(ctx, q, bindings, rebindings)
 }
 
 // GetProperties returns a map of vertex properties
-func (p *Pool) GetProperties(q string) (vals map[string][]interface{}, err error) {
-	return p.GetPropertiesCtx(context.Background(), q)
+func (p *Pool) GetProperties(q string, bindings, rebindings map[string]string) (vals map[string][]interface{}, err error) {
+	return p.GetPropertiesCtx(context.Background(), q, bindings, rebindings)
 }
-func (p *Pool) GetPropertiesCtx(ctx context.Context, q string) (vals map[string][]interface{}, err error) {
+func (p *Pool) GetPropertiesCtx(ctx context.Context, q string, bindings, rebindings map[string]string) (vals map[string][]interface{}, err error) {
 	var pc *conn
 	if pc, err = p.conn(); err != nil {
 		err = errors.Wrap(err, "GetPropertiesCtx: Failed p.conn")
 		return
 	}
 	defer p.putConn(pc, err)
-	return pc.Client.GetPropertiesCtx(ctx, q, nil, nil)
+	return pc.Client.GetPropertiesCtx(ctx, q, bindings, rebindings)
 }
 
 // Close closes the pool.

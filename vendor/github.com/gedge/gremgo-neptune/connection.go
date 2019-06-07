@@ -10,6 +10,8 @@ import (
 	"github.com/pkg/errors"
 )
 
+//go:generate moq -out dialer_moq_test.go . dialer
+
 type dialer interface {
 	connect() error
 	connectCtx(context.Context) error

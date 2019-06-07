@@ -30,13 +30,11 @@ func (n *NeptuneDB) CloneNodes(ctx context.Context, attempt int, instanceID, cod
 	}
 	log.Debug("cloning nodes from the generic hierarchy", logData)
 
-	var vertices []graphson.Vertex
-	if vertices, err = n.getVertices(gremStmt); err != nil {
+	if _, err = n.getVertices(gremStmt); err != nil {
 		log.ErrorC("get", err, logData)
 		return
 	}
-	logData["num_affected"] = len(vertices)
-	log.Info("ok", logData) // XXX
+
 	return
 }
 
@@ -75,13 +73,10 @@ func (n *NeptuneDB) CloneRelationships(ctx context.Context, attempt int, instanc
 	}
 	log.Debug("cloning relationships from the generic hierarchy", logData)
 
-	var edges []graphson.Edge
-	if edges, err = n.getEdges(gremStmt); err != nil {
+	if _, err = n.getEdges(gremStmt); err != nil {
 		log.ErrorC("getEdges", err, logData)
 		return
 	}
-	logData["num_affected"] = len(edges)
-	log.Info("ok", logData) // XXX
 
 	return n.RemoveCloneEdges(ctx, attempt, instanceID, dimensionName)
 }
@@ -123,13 +118,11 @@ func (n *NeptuneDB) SetNumberOfChildren(ctx context.Context, attempt int, instan
 
 	log.Debug("setting number-of-children property value on the instance hierarchy nodes", logData)
 
-	var vertices []graphson.Vertex
-	if vertices, err = n.getVertices(gremStmt); err != nil {
+	if _, err = n.getVertices(gremStmt); err != nil {
 		log.ErrorC("getV", err, logData)
 		return
 	}
-	logData["num_affected"] = len(vertices)
-	log.Info("ok", logData) // XXX
+
 	return
 }
 
@@ -150,13 +143,10 @@ func (n *NeptuneDB) SetHasData(ctx context.Context, attempt int, instanceID, dim
 
 	log.Debug("setting has-data property on the instance hierarchy", logData)
 
-	var vertices []graphson.Vertex
-	if vertices, err = n.getVertices(gremStmt); err != nil {
+	if _, err = n.getVertices(gremStmt); err != nil {
 		log.ErrorC("getV", err, logData)
 		return
 	}
-	logData["num_affected"] = len(vertices)
-	log.Info("ok", logData) // XXX
 
 	return
 }
@@ -177,13 +167,10 @@ func (n *NeptuneDB) MarkNodesToRemain(ctx context.Context, attempt int, instance
 
 	log.Debug("marking nodes to remain after trimming sparse branches", logData)
 
-	var vertices []graphson.Vertex
-	if vertices, err = n.getVertices(gremStmt); err != nil {
+	if _, err = n.getVertices(gremStmt); err != nil {
 		log.ErrorC("getV", err, logData)
 		return
 	}
-	logData["num_affected"] = len(vertices)
-	log.Info("ok", logData) // XXX
 
 	return
 }
