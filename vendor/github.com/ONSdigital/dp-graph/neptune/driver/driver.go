@@ -7,7 +7,7 @@ import (
 )
 
 type NeptuneDriver struct {
-	Pool *gremgo.Pool
+	Pool NeptunePool // Defined with an interface to support mocking.
 }
 
 func New(ctx context.Context, dbAddr string, errs chan error) (*NeptuneDriver, error) {
