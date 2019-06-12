@@ -19,7 +19,7 @@ build:
 debug:
 	HUMAN_LOG=1 GRAPH_DRIVER_TYPE=$(GRAPH_DRIVER_TYPE) GRAPH_ADDR="$(DATABASE_ADDRESS)" go run -race cmd/dp-hierarchy-builder/main.go
 test:
-	go test -cover $(shell go list ./... | grep -v /vendor/)
+	go test -count=1 -race -cover $(shell go list ./... | grep -v /vendor/)
 
 full:
 	cypher-shell < "$(V4_TRANSFORMER_DIR)/output/hierarchy.cypher"
