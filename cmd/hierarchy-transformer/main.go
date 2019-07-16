@@ -74,18 +74,18 @@ func main() {
 func createNodeMap(csvReader *csv.Reader) (*map[string]*hierarchy.Node, error) {
 
 	// create node map
-	var nodeMap = make(map[string]*hierarchy.Node, 0)
-
-	var err error = nil
+	var (
+		nodeMap   = make(map[string]*hierarchy.Node, 0)
+		rootCodes []string
+		record    []string
+		err       error
+	)
 
 	// populate a full map of codes to node objects.
-	for err == nil {
-
-		record, err := csvReader.Read()
-		if err != nil {
+	for {
+		if record, err = csvReader.Read(); err != nil {
 			break
 		}
-
 		option := &hierarchy.Node{
 			CodeList:   strings.Trim(record[0], " "),
 			Code:       strings.Trim(record[1], " "),
@@ -93,9 +93,17 @@ func createNodeMap(csvReader *csv.Reader) (*map[string]*hierarchy.Node, error) {
 			ParentCode: strings.Trim(record[3], " "),
 		}
 		nodeMap[option.Code] = option
-
+		if option.ParentCode == "" {
+			rootCodes = append(rootCodes, option.Code)
+		}
 	}
-
+	if len(rootCodes) != 1 {
+		fakeRoot := &hierarchy.Node{}
+		nodeMap[""] = fakeRoot
+		for _, multiRoot := range rootCodes {
+			nodeMap[multiRoot].ParentCode = fakeRoot.Code
+		}
+	}
 	return &nodeMap, err
 }
 
