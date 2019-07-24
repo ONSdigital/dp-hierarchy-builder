@@ -9573,6 +9573,15 @@ CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"K02000001",label:
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"K03000001",label:"Great Britain" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"K04000001",label:"England and Wales" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"not-classified",label:"Not Classified" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E07000244",label:"East Suffolk" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E07000245",label:"West Suffolk" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E06000058",label:"Bournemouth, Christchurch and Poole" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E06000059",label:"Dorset" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E07000246",label:"Somerset West and Taunton" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"S12000047",label:"Fife" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"S12000049",label:"Glasgow City" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"S12000050",label:"North Lanarkshire" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"S12000048",label:"Perth and Kinross" });
 MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
 WHERE parent.code = "E06000001" AND child.code = "E05008942"
 CREATE (child)-[:hasParent]->(parent);
@@ -38292,3 +38301,31 @@ CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
 WHERE parent.code = "K02000001" AND child.code = "not-classified"
 CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "E10000029" AND child.code = "E07000244"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "E10000029" AND child.code = "E07000245"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "E12000009" AND child.code = "E06000058"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "E12000009" AND child.code = "E06000059"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "E10000027" AND child.code = "E07000246"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "S92000003" AND child.code = "S12000047"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "S92000003" AND child.code = "S12000049"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "S92000003" AND child.code = "S12000050"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "S92000003" AND child.code = "S12000048"
+CREATE (child)-[:hasParent]->(parent);
+
