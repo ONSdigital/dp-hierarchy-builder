@@ -19,7 +19,7 @@ You can use additional flags if running against an environment other than localh
 
 Run the dp-hierarchy-builder service
 
-`make debug`
+`make debug` 
 
 ### Kafka scripts
 
