@@ -6,6 +6,7 @@ import (
 	"github.com/ONSdigital/dp-graph/graph/driver"
 	"github.com/ONSdigital/dp-graph/mock"
 	"github.com/ONSdigital/dp-graph/neo4j"
+	"github.com/ONSdigital/dp-graph/neptune"
 	"github.com/kelseyhightower/envconfig"
 )
 
@@ -24,7 +25,7 @@ type Configuration struct {
 var cfg *Configuration
 
 // Get reads config and returns the configured instantiated driver
-func Get() (*Configuration, error) {
+func Get(errs chan error) (*Configuration, error) {
 	if cfg != nil {
 		return cfg, nil
 	}
@@ -43,9 +44,11 @@ func Get() (*Configuration, error) {
 		if err != nil {
 			return nil, err
 		}
-		//
-		// case "gremgo":
-		// 	d = gremgo.Driver{}
+	case "neptune":
+		d, err = neptune.New(cfg.DatabaseAddress, cfg.PoolSize, cfg.QueryTimeout, cfg.MaxRetries, errs)
+		if err != nil {
+			return nil, err
+		}
 	case "mock":
 		d = &mock.Mock{}
 	default:
