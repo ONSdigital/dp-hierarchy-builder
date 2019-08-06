@@ -1,8 +1,6 @@
 # gremgo-neptune
 
-[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/gedge/gremgo-neptune)
-[![Build Status](https://travis-ci.org/gedge/gremgo-neptune.svg?branch=master)](https://travis-ci.org/gedge/gremgo-neptune)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gedge/gremgo-neptune)](https://goreportcard.com/report/github.com/gedge/gremgo-neptune)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/ONSdigital/gremgo-neptune) [![Build Status](https://travis-ci.org/ONSdigital/gremgo-neptune.svg?branch=master)](https://travis-ci.org/ONSdigital/gremgo-neptune) [![Go Report Card](https://goreportcard.com/badge/github.com/ONSdigital/gremgo-neptune)](https://goreportcard.com/report/github.com/ONSdigital/gremgo-neptune)
 
 gremgo-neptune is a fork of [qasaur/gremgo](https://github.com/qasaur/gremgo) with alterations to make it compatible with [AWS Neptune](https://aws.amazon.com/neptune/) which is a "Fast, reliable graph database built for the cloud".
 
@@ -13,7 +11,7 @@ gremgo is a fast, efficient, and easy-to-use client for the TinkerPop graph data
 Installation
 ==========
 ```
-go get github.com/gedge/gremgo-neptune
+go get github.com/ONSdigital/gremgo-neptune
 dep ensure
 ```
 
@@ -28,10 +26,9 @@ go generate
 Documentation
 ==========
 
-* [GoDoc](https://godoc.org/github.com/gedge/gremgo-neptune)
+* [GoDoc](https://godoc.org/github.com/ONSdigital/gremgo-neptune)
 
 Examples
-==========
 
 - [simple example](examples/simple/main.go)
 - [cursor example](examples/cursor/main.go)

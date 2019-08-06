@@ -7,6 +7,7 @@ import (
 	"fmt"
 )
 
+// DeserializeVertices converts a graphson string to a slice of Vertex
 func DeserializeVertices(rawResponse string) ([]Vertex, error) {
 	// TODO: empty strings for property values will cause invalid json
 	// make so it can handle that case
@@ -16,6 +17,7 @@ func DeserializeVertices(rawResponse string) ([]Vertex, error) {
 	return DeserializeVerticesFromBytes([]byte(rawResponse))
 }
 
+// DeserializeVerticesFromBytes returns a slice of Vertex from the graphson rawResponse list of vertex
 func DeserializeVerticesFromBytes(rawResponse []byte) ([]Vertex, error) {
 	// TODO: empty strings for property values will cause invalid json
 	// make so it can handle that case
@@ -31,6 +33,7 @@ func DeserializeVerticesFromBytes(rawResponse []byte) ([]Vertex, error) {
 	return response, nil
 }
 
+// DeserializeListOfVerticesFromBytes returns a slice of Vertex from the graphson rawResponse g:List of vertex
 func DeserializeListOfVerticesFromBytes(rawResponse []byte) ([]Vertex, error) {
 	var metaResponse ListVertices
 	var response []Vertex
@@ -44,7 +47,7 @@ func DeserializeListOfVerticesFromBytes(rawResponse []byte) ([]Vertex, error) {
 	}
 
 	if metaResponse.Type != "g:List" {
-		return response, errors.New("DeserializeListOfVerticesFromBytes: Expected `g:List` type")
+		return response, fmt.Errorf("DeserializeListOfVerticesFromBytes: Expected `g:List` type, but got %q", metaResponse.Type)
 	}
 
 	return metaResponse.Value, nil
@@ -64,7 +67,7 @@ func DeserializeListOfEdgesFromBytes(rawResponse []byte) (Edges, error) {
 	}
 
 	if metaResponse.Type != "g:List" {
-		return response, errors.New("DeserializeListOfEdgesFromBytes: Expected `g:List` type")
+		return response, fmt.Errorf("DeserializeListOfEdgesFromBytes: Expected `g:List` type, but got %q", metaResponse.Type)
 	}
 
 	return metaResponse.Value, nil
@@ -82,7 +85,7 @@ func DeserializeMapFromBytes(rawResponse []byte) (resMap map[string]interface{},
 	}
 
 	if metaResponse.Type != "g:Map" {
-		return resMap, errors.New("DeserializeMapFromBytes: Expected `g:Map` type")
+		return resMap, fmt.Errorf("DeserializeMapFromBytes: Expected `g:Map` type, but got %q", metaResponse.Type)
 	}
 
 	return resMap, nil
@@ -101,7 +104,7 @@ func DeserializePropertiesFromBytes(rawResponse []byte, resMap map[string][]inte
 	}
 
 	if metaResponse.Type != "g:List" {
-		return errors.New("DeserializePropertiesFromBytes: Expected `g:List` type")
+		return fmt.Errorf("DeserializePropertiesFromBytes: Expected `g:List` type, but got %q", metaResponse.Type)
 	}
 	var props []VertexProperty
 	if err = json.Unmarshal(metaResponse.Value, &props); err != nil {
@@ -133,7 +136,7 @@ func DeserializeStringListFromBytes(rawResponse []byte) (vals []string, err erro
 	}
 
 	if metaResponse.Type != "g:List" {
-		err = errors.New("DeserializeStringListFromBytes: Expected `g:List` type")
+		err = fmt.Errorf("DeserializeStringListFromBytes: Expected `g:List` type, but got %q", metaResponse.Type)
 		return
 	}
 
@@ -157,7 +160,7 @@ func DeserializeSingleFromBytes(rawResponse []byte) (gV GenericValue, err error)
 	}
 
 	if metaResponse.Type != "g:List" {
-		err = errors.New("DeserializeSingleFromBytes: Expected `g:List` type")
+		err = fmt.Errorf("DeserializeSingleFromBytes: Expected `g:List` type, but got %q", metaResponse.Type)
 		return
 	}
 
@@ -182,7 +185,7 @@ func DeserializeNumber(rawResponse []byte) (count int64, err error) {
 	}
 
 	if genVal.Type != "g:Int64" {
-		err = errors.New("DeserializeNumber: Expected `g:Int64` type")
+		err = fmt.Errorf("DeserializeNumber: Expected `g:Int64` type, but got %q", genVal.Type)
 		return
 	}
 	count = int64(genVal.Value.(float64))

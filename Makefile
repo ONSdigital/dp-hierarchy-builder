@@ -6,18 +6,17 @@ BIN_DIR?=.
 
 V4_TRANSFORMER_DIR=cmd/v4-transformer
 
-# DATABASE_ADDRESS?=bolt://localhost:7687
-DATABASE_ADDRESS?=ws://localhost:8182/gremlin
-GRAPH_DRIVER_TYPE?=neptune
-
 export GOOS?=$(shell go env GOOS)
 export GOARCH?=$(shell go env GOARCH)
+
+export GRAPH_DRIVER_TYPE?="neptune"
+export GRAPH_ADDR?="ws://localhost:8182/gremlin"
 
 build:
 	@mkdir -p $(BUILD_ARCH)/$(BIN_DIR)
 	go build -o $(BUILD_ARCH)/$(BIN_DIR)/dp-hierarchy-builder cmd/dp-hierarchy-builder/main.go
 debug:
-	HUMAN_LOG=1 GRAPH_DRIVER_TYPE=$(GRAPH_DRIVER_TYPE) GRAPH_ADDR="$(DATABASE_ADDRESS)" go run -race cmd/dp-hierarchy-builder/main.go
+	HUMAN_LOG=1 go run -race cmd/dp-hierarchy-builder/main.go
 test:
 	go test -count=1 -race -cover $(shell go list ./... | grep -v /vendor/)
 
@@ -27,7 +26,7 @@ full-clean:
 	cypher-shell < "$(V4_TRANSFORMER_DIR)/output/hierarchy-delete.cypher"
 instance-builder:
 	[[ -n "$(INSTANCE_ID)" ]]
-	HUMAN_LOG=1 GRAPH_DRIVER_TYPE=$(GRAPH_DRIVER_TYPE) GRAPH_ADDR="$(DATABASE_ADDRESS)" go run -race cmd/builder/main.go --instance-id="$(INSTANCE_ID)"
+	HUMAN_LOG=1 go run -race cmd/builder/main.go --instance-id="$(INSTANCE_ID)"
 instance:
 	[[ -n "$(INSTANCE_ID)" ]]
 	sed "s/12345/$(INSTANCE_ID)/g" < cmd/builder/build.cypher | cypher-shell

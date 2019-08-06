@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gedge/graphson"
+	"github.com/ONSdigital/graphson"
 	"github.com/pkg/errors"
 )
 
@@ -28,12 +28,8 @@ type Client struct {
 	results          *sync.Map
 	responseNotifier *sync.Map // responseNotifier notifies the requester that a response has been completed for the request
 	chunkNotifier    *sync.Map // chunkNotifier contains channels per requestID (if using cursors) which notifies the requester that a partial response has arrived
-	mu               sync.RWMutex
-	Errored          bool
-}
-
-type Cursor struct {
-	ID string
+	sync.RWMutex
+	Errored bool
 }
 
 // NewDialer returns a WebSocket dialer to use when connecting to Gremlin Server
@@ -114,7 +110,7 @@ func (c *Client) executeRequestCtx(ctx context.Context, query string, bindings, 
 	}
 	return
 }
-func (c *Client) executeRequestCursorCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (cursor Cursor, err error) {
+func (c *Client) executeRequestCursorCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (cursor *Cursor, err error) {
 	var req request
 	var id string
 	if req, id, err = prepareRequest(query, bindings, rebindings); err != nil {
@@ -132,7 +128,10 @@ func (c *Client) executeRequestCursorCtx(ctx context.Context, query string, bind
 		err = errors.Wrap(err, "executeRequestCursorCtx")
 		return
 	}
-	cursor.ID = id
+
+	cursor = &Cursor{
+		ID: id,
+	}
 	return
 }
 
@@ -158,16 +157,15 @@ func (c *Client) Execute(query string, bindings, rebindings map[string]string) (
 	return c.ExecuteCtx(context.Background(), query, bindings, rebindings)
 }
 func (c *Client) ExecuteCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (resp []Response, err error) {
-	if c.conn.isDisposed() {
+	if c.conn.IsDisposed() {
 		return resp, ErrorConnectionDisposed
 	}
-	resp, err = c.executeRequestCtx(ctx, query, bindings, rebindings)
-	return
+	return c.executeRequestCtx(ctx, query, bindings, rebindings)
 }
 
 // ExecuteFile takes a file path to a Gremlin script, sends it to Gremlin Server, and returns the result.
 func (c *Client) ExecuteFile(path string, bindings, rebindings map[string]string) (resp []Response, err error) {
-	if c.conn.isDisposed() {
+	if c.conn.IsDisposed() {
 		return resp, ErrorConnectionDisposed
 	}
 	d, err := ioutil.ReadFile(path) // Read script from file
@@ -176,8 +174,7 @@ func (c *Client) ExecuteFile(path string, bindings, rebindings map[string]string
 		return
 	}
 	query := string(d)
-	resp, err = c.executeRequest(query, bindings, rebindings)
-	return
+	return c.executeRequest(query, bindings, rebindings)
 }
 
 // Get formats a raw Gremlin query, sends it to Gremlin Server, and populates the passed []interface.
@@ -187,7 +184,7 @@ func (c *Client) Get(query string, bindings, rebindings map[string]string) (res 
 
 // GetCtx - execute a gremlin command and return the response as vertices
 func (c *Client) GetCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (res []graphson.Vertex, err error) {
-	if c.conn.isDisposed() {
+	if c.conn.IsDisposed() {
 		err = ErrorConnectionDisposed
 		return
 	}
@@ -201,7 +198,7 @@ func (c *Client) GetCtx(ctx context.Context, query string, bindings, rebindings 
 }
 
 func (c *Client) deserializeResponseToVertices(resp []Response) (res []graphson.Vertex, err error) {
-	if len(resp) == 0 || resp[0].Status.Code == statusNoContent {
+	if len(resp) == 0 || resp[0].Status.Code == StatusNoContent {
 		return
 	}
 
@@ -215,23 +212,33 @@ func (c *Client) deserializeResponseToVertices(resp []Response) (res []graphson.
 	return
 }
 
-// OpenCursorCtx initiates a query on the database, returning a cursor used to iterate over the results as they arrive
-func (c *Client) OpenCursorCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (cursor Cursor, err error) {
-	if c.conn.isDisposed() {
+// OpenStreamCursor initiates a query on the database, returning a stream cursor used to iterate over the results as they arrive.
+// The provided query must only return a string list, as the Read() function on Stream explicitly handles string values.
+func (c *Client) OpenStreamCursor(ctx context.Context, query string, bindings, rebindings map[string]string) (*Stream, error) {
+	if c.conn.IsDisposed() {
+		return nil, ErrorConnectionDisposed
+	}
+	basicCursor, err := c.executeRequestCursorCtx(ctx, query, bindings, rebindings)
+	return &Stream{
+		cursor: basicCursor,
+		client: c,
+	}, err
+}
+
+// OpenCursorCtx initiates a query on the database, returning a cursor used to iterate over the results as they arrive.
+// The provided query must return a vertex or list of vertices in order for ReadCursorCtx to correctly format the results.
+func (c *Client) OpenCursorCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (cursor *Cursor, err error) {
+	if c.conn.IsDisposed() {
 		err = ErrorConnectionDisposed
 		return
 	}
-
-	if cursor, err = c.executeRequestCursorCtx(ctx, query, bindings, rebindings); err != nil {
-		return
-	}
-	return
+	return c.executeRequestCursorCtx(ctx, query, bindings, rebindings)
 }
 
 // ReadCursorCtx returns the next set of results, deserialized as []Vertex, for the cursor
 // - `res` may be empty when results were read by a previous call
 // - `eof` will be true when no more results are available
-func (c *Client) ReadCursorCtx(ctx context.Context, cursor Cursor) (res []graphson.Vertex, eof bool, err error) {
+func (c *Client) ReadCursorCtx(ctx context.Context, cursor *Cursor) (res []graphson.Vertex, eof bool, err error) {
 	var resp []Response
 	if resp, eof, err = c.retrieveNextResponseCtx(ctx, cursor); err != nil {
 		err = errors.Wrapf(err, "ReadCursorCtx: %s", cursor.ID)
@@ -250,7 +257,7 @@ func (c *Client) GetE(query string, bindings, rebindings map[string]string) (res
 	return c.GetEdgeCtx(context.Background(), query, bindings, rebindings)
 }
 func (c *Client) GetEdgeCtx(ctx context.Context, query string, bindings, rebindings map[string]string) (res []graphson.Edge, err error) {
-	if c.conn.isDisposed() {
+	if c.conn.IsDisposed() {
 		err = ErrorConnectionDisposed
 		return
 	}
@@ -259,7 +266,7 @@ func (c *Client) GetEdgeCtx(ctx context.Context, query string, bindings, rebindi
 	if err != nil {
 		return
 	}
-	if len(resp) == 0 || resp[0].Status.Code == statusNoContent {
+	if len(resp) == 0 || resp[0].Status.Code == StatusNoContent {
 		return
 	}
 
@@ -413,7 +420,7 @@ func (c *Client) AddV(label string, data interface{}, bindings, rebindings map[s
 	return c.AddVertexCtx(context.Background(), label, data, bindings, rebindings)
 }
 func (c *Client) AddVertexCtx(ctx context.Context, label string, data interface{}, bindings, rebindings map[string]string) (vert graphson.Vertex, err error) {
-	if c.conn.isDisposed() {
+	if c.conn.IsDisposed() {
 		return vert, ErrorConnectionDisposed
 	}
 
@@ -451,7 +458,7 @@ func (c *Client) AddE(label, fromId, toId string, props map[string]interface{}) 
 	return c.AddEdgeCtx(context.Background(), label, fromId, toId, props)
 }
 func (c *Client) AddEdgeCtx(ctx context.Context, label, fromId, toId string, props map[string]interface{}) (resp interface{}, err error) {
-	if c.conn.isDisposed() {
+	if c.conn.IsDisposed() {
 		return nil, ErrorConnectionDisposed
 	}
 

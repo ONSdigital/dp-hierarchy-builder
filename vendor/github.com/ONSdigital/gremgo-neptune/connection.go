@@ -15,8 +15,8 @@ import (
 type dialer interface {
 	connect() error
 	connectCtx(context.Context) error
-	isConnected() bool
-	isDisposed() bool
+	IsConnected() bool
+	IsDisposed() bool
 	write([]byte) error
 	read() (int, []byte, error)
 	readCtx(context.Context, chan message)
@@ -77,11 +77,13 @@ func (ws *Ws) connectCtx(ctx context.Context) (err error) {
 	return
 }
 
-func (ws *Ws) isConnected() bool {
+// IsConnected returns whether the underlying websocket is connected
+func (ws *Ws) IsConnected() bool {
 	return ws.connected
 }
 
-func (ws *Ws) isDisposed() bool {
+// IsDisposed returns whether the underlying websocket is disposed
+func (ws *Ws) IsDisposed() bool {
 	return ws.disposed
 }
 
@@ -171,15 +173,15 @@ func (c *Client) writeWorker(errs chan error, quit chan struct{}) {
 	for {
 		select {
 		case msg := <-c.requests:
-			c.mu.Lock()
+			c.Lock()
 			err := c.conn.write(msg)
 			if err != nil {
 				errs <- err
 				c.Errored = true
-				c.mu.Unlock()
+				c.Unlock()
 				break
 			}
-			c.mu.Unlock()
+			c.Unlock()
 
 		case <-quit:
 			return
@@ -192,15 +194,15 @@ func (c *Client) writeWorkerCtx(ctx context.Context, errs chan error) {
 	for {
 		select {
 		case msg := <-c.requests:
-			c.mu.Lock()
+			c.Lock()
 			err := c.conn.write(msg)
 			if err != nil {
 				errs <- err
 				c.Errored = true
-				c.mu.Unlock()
+				c.Unlock()
 				break
 			}
-			c.mu.Unlock()
+			c.Unlock()
 
 		case <-ctx.Done():
 			return
