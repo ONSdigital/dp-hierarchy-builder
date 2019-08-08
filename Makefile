@@ -35,6 +35,8 @@ instance-clean:
 	sed "s/12345/$(INSTANCE_ID)/g" < cmd/builder/build-delete.cypher | cypher-shell
 generate-full:
 	HUMAN_LOG=1 go run -race cmd/hierarchy-transformer/main.go
+generate-full-import:
+	HUMAN_LOG=1 go run -race cmd/hierarchy-transformer/main.go -file import-scripts/$(CODE_LIST).csv -cypher import-scripts/cypher/$(CODE_LIST).cypher -gremlin import-scripts/gremlin/$(CODE_LIST).grm
 generate-full-from-v4:
 	HUMAN_LOG=1 go run -race "$(V4_TRANSFORMER_DIR)/main.go"
 generate-full-from-geography:

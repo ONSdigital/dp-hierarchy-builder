@@ -7,11 +7,11 @@ The hierarchy builder is a service that forms part of the dataset import process
 
 Import the CPIH full hierarchy:
 
-`cypher-shell < cmd/v4-transformer/output/cpih/hierarchy-cpih.cypher`
+`cypher-shell < import-scripts/cypher/cpih1dim1aggid.cypher`
 
 Import the mid-year-pop-est full hierarchy:
 
-`cypher-shell < cmd/hierarchy-transformer/output/midYearPopEst/hierarchy.cypher`
+`cypher-shell < import-scripts/cypher/mid-year-pop-geography.cypher`
 
 You can use additional flags if running against an environment other than localhost:
 
@@ -52,10 +52,10 @@ Plus the graph database vars from [dp-graph](https://github.com/ONSdigital/dp-gr
 
 There are a number of utility applications for manual tasks (found under the cmd directory):
 
-* v4-transformer - take a V4 file and create a full hierarchy input file / cypher script
-* geography-transformer - take a geography input CSV file and output a full hierarchy input file / cypher script
-* hierarchy-transformer - take a hierarchy input CSV file and generate cypher script
 * builder - builds an instance hierarchy from a full hierarchy
+* v4-transformer - take a V4 file and create a full hierarchy input file / cypher/gremlin scripts for codes following the 1.2.3 format
+* geography-transformer - take a geography input CSV file and output a full hierarchy input file / cypher/gremlin scripts
+* hierarchy-transformer - take a hierarchy input CSV file, containing codes, labels and parent codes and generate cypher/gremlin scripts
 
 #### Manually building instance hierarchies
 
@@ -71,17 +71,10 @@ If running one of the above commands against an environment, you can specify the
 
 `--neo-url="bolt://USER:PASSWORD@localhost:7687"`
 
-#### transform a hierarchy input file to a cypher script (set FILE as required input file)
+#### Transformers
 
-`make FILE=./cmd/hierarchy-transformer/hierarchy.csv generate-full`
-
-output is written to `./cmd/hierarchy-transformer/output`
-
-#### transform a geography input file to a hierarchy input file / cypher script
-
-`make FILE=./cmd/geography-transformer/WD16_LAD16_CTY16_OTH_UK_LU.csv  generate-full-from-geography `
-
-output is written to ``./cmd/geography-transformer/output`
+Transformers allow the conversion of CSV files into the cypher/gremlin scripts needed to load the full (generic) hierarchy into a graph database.
+See [TRANSFORMERS](TRANSFORMERS.md) for details.
 
 ### Contributing
 
