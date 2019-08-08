@@ -38,11 +38,11 @@ func CreateGremlinFile(nodes []*hierarchy.Node, filename string) error {
 func CreateGremlin(nodes []*hierarchy.Node) (string, error) {
 
 	var buffer = &bytes.Buffer{}
-	traverseNodesWriteGremlin(nodes, buffer, nil, nil)
+	traverseNodesWriteGremlin(nodes, buffer, nil)
 	return buffer.String(), nil
 }
 
-func traverseNodesWriteGremlin(nodes []*hierarchy.Node, buffer *bytes.Buffer, safeParentID, parentCodeList *string) {
+func traverseNodesWriteGremlin(nodes []*hierarchy.Node, buffer *bytes.Buffer, safeParentID *string) {
 	for _, node := range nodes {
 
 		// 'CodeList--Code' used as node ID for uniqueness
@@ -59,13 +59,13 @@ func traverseNodesWriteGremlin(nodes []*hierarchy.Node, buffer *bytes.Buffer, sa
 		} else {
 			// suffix the create node statement with the creation of the (outgoing) edge to its parent
 			buffer.WriteString(fmt.Sprintf(
-				"%s.\n\taddE('hasParent').to(g.V().hasId('%s')).property(single,'code','%s').property(single,'parent','_generic_hierarchy_node_%s').next()\n",
-				createNode, *safeParentID, safeCode, *parentCodeList,
+				"%s.\n\taddE('hasParent').to(g.V().hasId('%s')).next()\n",
+				createNode, *safeParentID,
 			))
 		}
 
 		if node.Children != nil {
-			traverseNodesWriteGremlin(node.Children, buffer, &nodeID, &node.CodeList)
+			traverseNodesWriteGremlin(node.Children, buffer, &nodeID)
 		}
 	}
 }
