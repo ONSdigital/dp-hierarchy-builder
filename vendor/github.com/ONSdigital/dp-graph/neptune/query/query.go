@@ -4,6 +4,7 @@ package query
 // (https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-differences.html)
 // Important practices:
 // 1) .property() function must contain 'single' where not a list, as the Neptune default is 'set'
+// 2) .from() and .to() functions do not work in Neptune, g.V('thing1').addE('newEdge').V('thing2') is valid
 
 const (
 	// codelists
@@ -49,12 +50,13 @@ const (
 	`
 
 	// hierarchy write
-	CloneHierarchyNodes = `g.V().hasLabel('_generic_hierarchy_node_%s').as('old').addE('clone_of')` +
+	CloneHierarchyNodes = `g.V().hasLabel('_generic_hierarchy_node_%s').as('old').` +
 		`.addV('_hierarchy_node_%s_%s')` +
 		`.property(single,'code',select('old').values('code'))` +
 		`.property(single,'label',select('old').values('label'))` +
 		`.property(single,'hasData', false)` +
 		`.property('code_list','%s').as('new')` +
+		`.addE('clone_of').select('old')` +
 		`.select('new')`
 	CountHierarchyNodes         = `g.V().hasLabel('_hierarchy_node_%s_%s').count()`
 	CloneHierarchyRelationships = `g.V().hasLabel('_generic_hierarchy_node_%s').as('oc')` +
