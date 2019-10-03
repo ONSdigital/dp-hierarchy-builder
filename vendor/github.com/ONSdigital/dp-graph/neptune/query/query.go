@@ -61,8 +61,9 @@ const (
 	CountHierarchyNodes         = `g.V().hasLabel('_hierarchy_node_%s_%s').count()`
 	CloneHierarchyRelationships = `g.V().hasLabel('_generic_hierarchy_node_%s').as('oc')` +
 		`.out('hasParent')` +
-		`.in('clone_of').hasLabel('_hierarchy_node_%s_%s')` +
-		`.addE('hasParent').to('oc')`
+		`.in('clone_of').hasLabel('_hierarchy_node_%s_%s').as('p')` +
+		`.select('oc').in('clone_of').hasLabel('_hierarchy_node_%s_%s')` +
+		`.addE('hasParent').to('p')`
 	RemoveCloneMarkers  = `g.V().hasLabel('_hierarchy_node_%s_%s').outE('clone_of').drop()`
 	SetNumberOfChildren = `g.V().hasLabel('_hierarchy_node_%s_%s').property(single,'numberOfChildren',__.in('hasParent').count())`
 	SetHasData          = `g.V().hasLabel('_hierarchy_node_%s_%s').as('v')` +
