@@ -56,13 +56,13 @@ const (
 		`.property(single,'label',select('old').values('label'))` +
 		`.property(single,'hasData', false)` +
 		`.property('code_list','%s').as('new')` +
-		`.addE('clone_of').select('old')` +
+		`.addE('clone_of').to('old')` +
 		`.select('new')`
 	CountHierarchyNodes         = `g.V().hasLabel('_hierarchy_node_%s_%s').count()`
 	CloneHierarchyRelationships = `g.V().hasLabel('_generic_hierarchy_node_%s').as('oc')` +
 		`.out('hasParent')` +
 		`.in('clone_of').hasLabel('_hierarchy_node_%s_%s')` +
-		`.addE('hasParent').select('oc').in('clone_of').hasLabel('_hierarchy_node_%s_%s')`
+		`.addE('hasParent').to('oc').in('clone_of').hasLabel('_hierarchy_node_%s_%s')`
 	RemoveCloneMarkers  = `g.V().hasLabel('_hierarchy_node_%s_%s').outE('clone_of').drop()`
 	SetNumberOfChildren = `g.V().hasLabel('_hierarchy_node_%s_%s').property(single,'numberOfChildren',__.in('hasParent').count())`
 	SetHasData          = `g.V().hasLabel('_hierarchy_node_%s_%s').as('v')` +
@@ -98,8 +98,9 @@ const (
 	// dimension
 	DropDimensionRelationships            = `g.V().hasLabel('_%s_%s').has('value', "%s").bothE().drop().iterate();`
 	DropDimension                         = `g.V().hasLabel('_%s_%s').has('value', "%s").drop().iterate();`
-	CreateDimensionToInstanceRelationship = `g.addV('_%s_%s').as('d').property('value',"%s").addE('HAS_DIMENSION')` +
-		`.V().hasLabel('_%s_Instance').select('d')`
+	CreateDimensionToInstanceRelationship = `g.V().hasLabel('_%s_Instance').as('inst')` +
+		`.addV('_%s_%s').as('d').property('value',"%s")` +
+		`.addE('HAS_DIMENSION').to('inst').select('d')`
 
 	// observation
 	DropObservationRelationships   = `g.V().hasLabel('_%s_observation').has('value', "%s").bothE().drop().iterate();`
