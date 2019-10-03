@@ -50,7 +50,7 @@ const (
 	`
 
 	// hierarchy write
-	CloneHierarchyNodes = `g.V().hasLabel('_generic_hierarchy_node_%s').as('old').` +
+	CloneHierarchyNodes = `g.V().hasLabel('_generic_hierarchy_node_%s').as('old')` +
 		`.addV('_hierarchy_node_%s_%s')` +
 		`.property(single,'code',select('old').values('code'))` +
 		`.property(single,'label',select('old').values('label'))` +
