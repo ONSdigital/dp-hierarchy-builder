@@ -4,7 +4,6 @@ package query
 // (https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-differences.html)
 // Important practices:
 // 1) .property() function must contain 'single' where not a list, as the Neptune default is 'set'
-// 2) .from() and .to() functions do not work in Neptune, g.V('thing1').addE('newEdge').V('thing2') is valid
 
 const (
 	// codelists
@@ -85,8 +84,9 @@ const (
 	// instance - import process
 	CreateInstance                   = `g.addV('_%s_Instance').property(single,'header',"%s")`
 	CheckInstance                    = `g.V().hasLabel('_%s_Instance').count()`
-	CreateInstanceToCodeRelationship = `g.V().hasLabel('_%s_Instance').as('i').addE('inDataset').` +
-		`V().hasLabel('_code').has('value',"%s").where(out('usedBy').hasLabel('_code_list').has('listID','%s'))`
+	CreateInstanceToCodeRelationship = `g.V().hasLabel('_%s_Instance').as('i').` +
+		`V().hasLabel('_code').has('value',"%s").where(out('usedBy').hasLabel('_code_list').has('listID','%s')).as('c')` +
+		`.addE('inDataset').to('i')`
 	AddVersionDetailsToInstance = `g.V().hasLabel('_%s_Instance').property(single,'dataset_id','%s').` +
 		`property(single,'edition','%s').property(single,'version','%s')`
 	SetInstanceIsPublished = `g.V().hasLabel('_%s_Instance').property(single,'is_published',true)`
@@ -104,16 +104,17 @@ const (
 		`.addE('HAS_DIMENSION').to('inst').select('d')`
 
 	// observation
-	DropObservationRelationships   = `g.V().hasLabel('_%s_observation').has('value', "%s").bothE().drop().iterate();`
-	DropObservation                = `g.V().hasLabel('_%s_observation').has('value', "%s").drop().iterate();`
-	CreateObservationPart          = `g.addV('_%s_observation').property(single, 'value', "%s").property(single, 'rowIndex', '%d')`
-	AddObservationRelationshipPart = `.addE('isValueOf').as('%s').V().hasId('%s').hasLabel('_%s_%s').where(values('value').is("%s")).select('%s').outV()`
+	DropObservationRelationships   = `g.V().hasLabel('_%s_observation').has('value', '%s').bothE().drop().iterate();`
+	DropObservation                = `g.V().hasLabel('_%s_observation').has('value', '%s').drop().iterate();`
+	CreateObservationPart          = `g.addV('_%s_observation').property(single, 'value', '%s').property(single, 'rowIndex', '%d')`
+	AddObservationRelationshipPart = `.V().hasId('%s').hasLabel('_%s_%s').where(values('value').is("%s"))` +
+		`.addE('isValueOf').from('o').select('o')`
 
 	GetInstanceHeaderPart  = `g.V().hasLabel('_%s_Instance').as('instance')`
 	GetAllObservationsPart = `.V().hasLabel('_%s_observation').values('row')`
 
 	GetObservationsPart         = `.V().hasLabel('_%s_observation').match(`
-	GetObservationDimensionPart = `__.as('row').out('isValueOf').hasLabel('_%s_%s').where(values('value').is(within("%s")))`
+	GetObservationDimensionPart = `__.as('row').out('isValueOf').hasLabel('_%s_%s').where(values('value').is(within('%s')))`
 	GetObservationSelectRowPart = `.select('instance', 'row').by('header').by('row').unfold().dedup().select(values)`
 	LimitPart                   = `.limit(%d)`
 )
