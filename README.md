@@ -7,11 +7,11 @@ The hierarchy builder is a service that forms part of the dataset import process
 
 Import the CPIH full hierarchy:
 
-`cypher-shell < cmd/v4-transformer/output/cpih/hierarchy-cpih.cypher`
+`cypher-shell < cypher-scripts/cpih1dim1aggid.cypher`
 
 Import the mid-year-pop-est full hierarchy:
 
-`cypher-shell < cmd/hierarchy-transformer/output/midYearPopEst/hierarchy.cypher`
+`cypher-shell < cypher-scripts/mid-year-pop-geography.cypher`
 
 You can use additional flags if running against an environment other than localhost:
 
