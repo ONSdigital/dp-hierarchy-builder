@@ -6,9 +6,9 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/event/eventtest"
 	"github.com/ONSdigital/dp-import/events"
+	kafka "github.com/ONSdigital/dp-kafka"
+	"github.com/ONSdigital/dp-kafka/kafkatest"
 	"github.com/ONSdigital/dp-reporter-client/reporter/reportertest"
-	"github.com/ONSdigital/go-ns/kafka"
-	"github.com/ONSdigital/go-ns/kafka/kafkatest"
 	"github.com/ONSdigital/go-ns/log"
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
@@ -18,8 +18,9 @@ import (
 func TestConsume_UnmarshallError(t *testing.T) {
 	Convey("Given an event consumer with an invalid schema and a valid schema", t, func() {
 
-		messages := make(chan kafka.Message, 2)
-		mockConsumer := kafkatest.NewMessageConsumer(messages)
+		mockConsumer := kafkatest.NewMessageConsumerWithChannels(&kafka.ConsumerGroupChannels{
+			Upstream: make(chan kafka.Message, 2),
+		}, true)
 
 		mockEventHandler := &eventtest.HandlerMock{
 			HandleFunc: func(dataImportComplete *events.DataImportComplete) error {
@@ -29,8 +30,8 @@ func TestConsume_UnmarshallError(t *testing.T) {
 
 		expectedEvent := getExampleEvent()
 
-		messages <- kafkatest.NewMessage([]byte("invalid schema"))
-		messages <- kafkatest.NewMessage(marshal(*expectedEvent))
+		mockConsumer.Channels().Upstream <- kafkatest.NewMessage([]byte("invalid schema"), 0)
+		mockConsumer.Channels().Upstream <- kafkatest.NewMessage(marshal(*expectedEvent), 1)
 
 		consumer := event.NewConsumer()
 
@@ -53,8 +54,7 @@ func TestConsume(t *testing.T) {
 
 	Convey("Given an event consumer with a valid schema", t, func() {
 
-		messages := make(chan kafka.Message, 1)
-		mockConsumer := kafkatest.NewMessageConsumer(messages)
+		mockConsumer := kafkatest.NewMessageConsumer(true)
 		mockEventHandler := &eventtest.HandlerMock{
 			HandleFunc: func(event *events.DataImportComplete) error {
 				return nil
@@ -62,9 +62,9 @@ func TestConsume(t *testing.T) {
 		}
 
 		expectedEvent := getExampleEvent()
-		message := kafkatest.NewMessage(marshal(*expectedEvent))
+		message := kafkatest.NewMessage(marshal(*expectedEvent), 0)
 
-		messages <- message
+		mockConsumer.Channels().Upstream <- message
 
 		consumer := event.NewConsumer()
 
@@ -83,7 +83,7 @@ func TestConsume(t *testing.T) {
 			})
 
 			Convey("The message is committed", func() {
-				So(message.Committed(), ShouldEqual, true)
+				So(len(message.CommitCalls()), ShouldEqual, 1)
 			})
 		})
 	})
@@ -95,8 +95,7 @@ func TestConsume_HandlerError(t *testing.T) {
 
 		expectedError := errors.New("something bad happened in the event handler")
 
-		messages := make(chan kafka.Message, 1)
-		mockConsumer := kafkatest.NewMessageConsumer(messages)
+		mockConsumer := kafkatest.NewMessageConsumer(true)
 		mockEventHandler := &eventtest.HandlerMock{
 			HandleFunc: func(event *events.DataImportComplete) error {
 				return expectedError
@@ -107,8 +106,8 @@ func TestConsume_HandlerError(t *testing.T) {
 
 		expectedEvent := getExampleEvent()
 
-		message := kafkatest.NewMessage(marshal(*expectedEvent))
-		messages <- message
+		message := kafkatest.NewMessage(marshal(*expectedEvent), 0)
+		mockConsumer.Channels().Upstream <- message
 
 		consumer := event.NewConsumer()
 
@@ -124,7 +123,7 @@ func TestConsume_HandlerError(t *testing.T) {
 			})
 
 			Convey("The message is committed", func() {
-				So(message.Committed(), ShouldEqual, true)
+				So(len(message.CommitCalls()), ShouldEqual, 1)
 			})
 		})
 	})
@@ -134,8 +133,7 @@ func TestClose(t *testing.T) {
 
 	Convey("Given a consumer", t, func() {
 
-		messages := make(chan kafka.Message, 1)
-		mockConsumer := kafkatest.NewMessageConsumer(messages)
+		mockConsumer := kafkatest.NewMessageConsumer(true)
 		mockEventHandler := &eventtest.HandlerMock{
 			HandleFunc: func(event *events.DataImportComplete) error {
 				return nil
@@ -143,9 +141,9 @@ func TestClose(t *testing.T) {
 		}
 
 		expectedEvent := getExampleEvent()
-		message := kafkatest.NewMessage(marshal(*expectedEvent))
+		message := kafkatest.NewMessage(marshal(*expectedEvent), 0)
 
-		messages <- message
+		mockConsumer.Channels().Upstream <- message
 
 		consumer := event.NewConsumer()
 

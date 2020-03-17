@@ -10,14 +10,16 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	kafka "github.com/ONSdigital/dp-kafka"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/go-ns/healthcheck"
-	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
 )
 
 func main() {
 	log.Namespace = "dp-hierarchy-builder"
+	ctx := context.Background()
+
 	log.Debug("Starting hierarchy builder", nil)
 
 	cfg, err := config.Get()
@@ -33,23 +35,31 @@ func main() {
 	errorChannel := make(chan error)
 
 	kafkaBrokers := cfg.KafkaAddr
+
+	cgChannels := kafka.CreateConsumerGroupChannels(true)
 	kafkaConsumer, err := kafka.NewConsumerGroup(
+		ctx,
 		kafkaBrokers,
 		cfg.ConsumerTopic,
 		cfg.ConsumerGroup,
 		kafka.OffsetNewest,
+		true,
+		cgChannels,
 	)
 	exitIfError(err)
 
-	kafkaProducer, err := kafka.NewProducer(kafkaBrokers, cfg.ProducerTopic, 0)
+	pChannels := kafka.CreateProducerChannels()
+	useDefaultMaxMessageSize := 0 // pass zero to use the default
+	kafkaProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ProducerTopic, useDefaultMaxMessageSize, pChannels)
 	exitIfError(err)
 
-	kafkaErrorProducer, err := kafka.NewProducer(cfg.KafkaAddr, cfg.ErrorProducerTopic, 0)
+	errorProducerChannels := kafka.CreateProducerChannels()
+	kafkaErrorProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ErrorProducerTopic, useDefaultMaxMessageSize, errorProducerChannels)
 	exitIfError(err)
 
 	avroProducer := event.NewAvroProducer(kafkaProducer)
 
-	db, err := graph.NewHierarchyStore(context.Background())
+	db, err := graph.NewHierarchyStore(ctx)
 	exitIfError(err)
 
 	// when errors occur - we send a message on an error topic.
@@ -74,11 +84,11 @@ func main() {
 
 	// this will block (main) until a fatal error occurs
 	select {
-	case err := <-kafkaConsumer.Errors():
+	case err := <-kafkaConsumer.Channels().Errors:
 		log.ErrorC("kafka consumer", err, nil)
-	case err := <-kafkaProducer.Errors():
+	case err := <-kafkaProducer.Channels().Errors:
 		log.ErrorC("kafka result producer", err, nil)
-	case err := <-kafkaErrorProducer.Errors():
+	case err := <-kafkaErrorProducer.Channels().Errors:
 		log.ErrorC("kafka error producer", err, nil)
 	case err := <-errorChannel:
 		log.ErrorC("error channel", err, nil)
@@ -86,7 +96,7 @@ func main() {
 		log.Debug("os signal received", nil)
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), cfg.GracefulShutdownTimeout)
+	ctx, cancel := context.WithTimeout(ctx, cfg.GracefulShutdownTimeout)
 
 	// gracefully dispose resources
 	err = eventConsumer.Close(ctx)

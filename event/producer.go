@@ -1,24 +1,26 @@
 package event
 
 import (
+	"context"
 	"github.com/ONSdigital/dp-import/events"
+	kafka "github.com/ONSdigital/dp-kafka"
 	"github.com/ONSdigital/go-ns/log"
 )
 
 // AvroProducer produces Avro serialised messages.
 type AvroProducer struct {
-	messageProducer MessageProducer
+	kafkaProducer KafkaProducer
 }
 
-// MessageProducer dependency that writes messages.
-type MessageProducer interface {
-	Output() chan []byte
+type KafkaProducer interface {
+	Channels() *kafka.ProducerChannels
+	Close(ctx context.Context) (err error)
 }
 
 // NewAvroProducer returns a new instance of AvroProducer.
-func NewAvroProducer(messageProducer MessageProducer) *AvroProducer {
+func NewAvroProducer(kafkaProducer KafkaProducer) *AvroProducer {
 	return &AvroProducer{
-		messageProducer: messageProducer,
+		kafkaProducer: kafkaProducer,
 	}
 }
 
@@ -39,7 +41,7 @@ func (producer *AvroProducer) HierarchyBuilt(instanceID, dimensionName string) e
 		return err
 	}
 
-	producer.messageProducer.Output() <- bytes
+	producer.kafkaProducer.Channels().Output <- bytes
 
 	return nil
 }

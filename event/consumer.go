@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 	"github.com/ONSdigital/dp-import/events"
+	kafka "github.com/ONSdigital/dp-kafka"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/go-ns/kafka"
 	"github.com/ONSdigital/go-ns/log"
 )
 
@@ -13,7 +13,7 @@ import (
 
 // MessageConsumer provides a generic interface for consuming []byte messages
 type MessageConsumer interface {
-	Incoming() chan kafka.Message
+	Channels() *kafka.ConsumerGroupChannels
 }
 
 // Handler represents a handler for processing a single event.
@@ -43,7 +43,7 @@ func (consumer *Consumer) Consume(messageConsumer MessageConsumer, handler Handl
 
 		for {
 			select {
-			case message := <-messageConsumer.Incoming():
+			case message := <-messageConsumer.Channels().Upstream:
 
 				processMessage(message, handler, errorReporter)
 
