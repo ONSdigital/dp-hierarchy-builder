@@ -17,7 +17,7 @@ build:
 debug: build
 	HUMAN_LOG=1 GRAPH_DRIVER_TYPE=neo4j GRAPH_ADDR="$(DATABASE_ADDRESS)" go run -race cmd/dp-hierarchy-builder/main.go
 test:
-	go test -cover $(shell go list ./... | grep -v /vendor/)
+	go test -cover -race ./...
 
 full:
 	cypher-shell < "$(V4_TRANSFORMER_DIR)/output/hierarchy.cypher"
