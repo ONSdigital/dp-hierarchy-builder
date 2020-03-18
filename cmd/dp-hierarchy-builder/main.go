@@ -2,6 +2,8 @@ package main
 
 import (
 	"context"
+	"github.com/ONSdigital/go-ns/server"
+	"github.com/gorilla/mux"
 	"os"
 	"os/signal"
 	"syscall"
@@ -81,11 +83,15 @@ func main() {
 
 	hc := startHealthChecks(ctx, cfg, kafkaConsumer, kafkaProducer, kafkaErrorProducer, db)
 
+	apiErrors, httpServer := startApi(hc, cfg)
+
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, os.Interrupt, syscall.SIGTERM)
 
 	// this will block (main) until a fatal error occurs
 	select {
+	case err := <-apiErrors:
+		log.ErrorC("http server error", err, nil)
 	case err := <-kafkaConsumer.Channels().Errors:
 		log.ErrorC("kafka consumer", err, nil)
 	case err := <-kafkaProducer.Channels().Errors:
@@ -101,6 +107,9 @@ func main() {
 	ctx, cancel := context.WithTimeout(ctx, cfg.GracefulShutdownTimeout)
 
 	// gracefully dispose resources
+	err = httpServer.Close(ctx)
+	logIfError(err)
+
 	err = eventConsumer.Close(ctx)
 	logIfError(err)
 
@@ -123,6 +132,26 @@ func main() {
 
 	log.Debug("graceful shutdown was successful", nil)
 	os.Exit(1)
+}
+
+func startApi(hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *server.Server) {
+	router := mux.NewRouter()
+	router.HandleFunc("/health", hc.Handler)
+	apiErrors := make(chan error, 1)
+
+	httpServer := server.New(cfg.BindAddr, router)
+	// Disable this here to allow main to manage graceful shutdown of the entire app.
+	httpServer.HandleOSSignals = false
+
+	go func() {
+		log.Debug("starting api", nil)
+		if err := httpServer.ListenAndServe(); err != nil {
+			log.Error(err, log.Data{})
+			hc.Stop()
+			apiErrors <- err
+		}
+	}()
+	return apiErrors, httpServer
 }
 
 func startHealthChecks(
