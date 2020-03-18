@@ -7,13 +7,14 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
 */
 
 import (
+	"context"
 	"flag"
 	"os"
 
 	"encoding/csv"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/log.go/log"
 	"io"
 	"strings"
 )
@@ -26,6 +27,7 @@ var cypherDelFile = flag.String("cypher-delete", "cmd/geography-transformer/outp
 
 func main() {
 
+	ctx := context.Background()
 	flag.Parse()
 
 	f, err := os.Open(*filepath)
@@ -36,7 +38,7 @@ func main() {
 	// identify the code lists used in this file from the header row.
 	headerRow, err := csvReader.Read()
 	if err != nil {
-		log.ErrorC("Failed to read the first row of the input CSV", err, log.Data{"file": *filepath})
+		log.Event(ctx, "Failed to read the first row of the input CSV", log.ERROR, log.Error(err), log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -46,7 +48,7 @@ func main() {
 	// Create a map of code:node
 	nodeMap, err := createNodeMap(csvReader, codelists)
 	if err != nil {
-		log.ErrorC("Failed to read the rows of the input CSV", err, log.Data{"file": *filepath})
+		log.Event(ctx, "Failed to read the rows of the input CSV", log.ERROR, log.Error(err), log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -54,19 +56,19 @@ func main() {
 	rootNodes := hierarchy.IdentifyRootNodes(nodeMap)
 
 	// populate the children of each node using the map to look up parents
-	hierarchy.PopulateChildNodes(nodeMap)
+	hierarchy.PopulateChildNodes(ctx, nodeMap)
 
-	log.Debug("Generating csv", nil)
+	log.Event(ctx, "Generating csv")
 	err = hierarchy.CreateCSVFile(rootNodes, *csvFile)
-	logErr(err)
+	logIfError(ctx, err, "error generating csv")
 
-	log.Debug("Generating cypher script", nil)
+	log.Event(ctx, "Generating cypher script")
 	err = cypher.CreateCypherFile(rootNodes, *cypherFile)
-	logErr(err)
+	logIfError(ctx, err, "error generating cypher script")
 
-	log.Debug("Generating cypher deletion script", nil)
+	log.Event(ctx, "Generating cypher deletion script")
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
-	logErr(err)
+	logIfError(ctx, err, "error generating deletion script")
 }
 
 func createNodeMap(csvr *csv.Reader, codelists []string) (*map[string]*hierarchy.Node, error) {
@@ -156,8 +158,8 @@ func createCodeListSlice(headerRow []string) []string {
 	return codelists
 }
 
-func logErr(err error) {
+func logIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Error(err, nil)
+		log.Event(ctx, message, log.ERROR, log.Error(err))
 	}
 }

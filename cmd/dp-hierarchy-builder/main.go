@@ -15,7 +15,7 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	kafka "github.com/ONSdigital/dp-kafka"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/log.go/log"
 )
 
 var (
@@ -31,16 +31,13 @@ func main() {
 	log.Namespace = "dp-hierarchy-builder"
 	ctx := context.Background()
 
-	log.Debug("Starting hierarchy builder", nil)
+	log.Event(ctx, "starting hierarchy builder", log.INFO)
 
 	cfg, err := config.Get()
-	if err != nil {
-		log.Error(err, nil)
-		os.Exit(1)
-	}
+	exitIfError(ctx, err, "error getting config")
 
 	// sensitive fields are omitted from cfg.String().
-	log.Debug("loaded config", log.Data{"cfg": cfg})
+	log.Event(ctx, "loaded config", log.INFO, log.Data{"cfg": cfg})
 
 	// a channel used to signal a graceful exit is required.
 	errorChannel := make(chan error)
@@ -56,34 +53,37 @@ func main() {
 		true,
 		cgChannels,
 	)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating kafka consumer")
 
 	pChannels := kafka.CreateProducerChannels()
 	useDefaultMaxMessageSize := 0 // pass zero to use the default
 	kafkaProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ProducerTopic, useDefaultMaxMessageSize, pChannels)
-	exitIfError(err)
+	if err != nil {
+		log.Event(ctx, "error creating kafka producer", log.FATAL, log.Error(err))
+		os.Exit(1)
+	}
 
 	errorProducerChannels := kafka.CreateProducerChannels()
 	kafkaErrorProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ErrorProducerTopic, useDefaultMaxMessageSize, errorProducerChannels)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating kafka producer")
 
 	avroProducer := event.NewAvroProducer(kafkaProducer)
 
 	db, err := graph.NewHierarchyStore(ctx)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating Kafka error producer")
 
 	// when errors occur - we send a message on an error topic.
 	errorHandler, err := reporter.NewImportErrorReporter(kafkaErrorProducer, log.Namespace)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating import error reporter")
 
 	eventHandler := event.NewDataImportCompleteHandler(&hierarchy.Store{db}, avroProducer)
 
 	eventConsumer := event.NewConsumer()
-	eventConsumer.Consume(kafkaConsumer, eventHandler, errorHandler)
+	eventConsumer.Consume(ctx, kafkaConsumer, eventHandler, errorHandler)
 
 	hc := startHealthChecks(ctx, cfg, kafkaConsumer, kafkaProducer, kafkaErrorProducer, db)
 
-	apiErrors, httpServer := startApi(hc, cfg)
+	apiErrors, httpServer := startApi(ctx, hc, cfg)
 
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, os.Interrupt, syscall.SIGTERM)
@@ -91,50 +91,50 @@ func main() {
 	// this will block (main) until a fatal error occurs
 	select {
 	case err := <-apiErrors:
-		log.ErrorC("http server error", err, nil)
+		log.Event(ctx, "http server error", log.ERROR, log.Error(err))
 	case err := <-kafkaConsumer.Channels().Errors:
-		log.ErrorC("kafka consumer", err, nil)
+		log.Event(ctx, "kafka consumer error", log.ERROR, log.Error(err))
 	case err := <-kafkaProducer.Channels().Errors:
-		log.ErrorC("kafka result producer", err, nil)
+		log.Event(ctx, "kafka result producer error", log.ERROR, log.Error(err))
 	case err := <-kafkaErrorProducer.Channels().Errors:
-		log.ErrorC("kafka error producer", err, nil)
+		log.Event(ctx, "kafka error producer error", log.ERROR, log.Error(err))
 	case err := <-errorChannel:
-		log.ErrorC("error channel", err, nil)
+		log.Event(ctx, "error channel error", log.ERROR, log.Error(err))
 	case <-signals:
-		log.Debug("os signal received", nil)
+		log.Event(ctx, "os signal received", log.INFO)
 	}
 
 	ctx, cancel := context.WithTimeout(ctx, cfg.GracefulShutdownTimeout)
 
 	// gracefully dispose resources
+	hc.Stop()
+
 	err = httpServer.Close(ctx)
-	logIfError(err)
+	logIfError(ctx, err, "error closing http server")
 
 	err = eventConsumer.Close(ctx)
-	logIfError(err)
+	logIfError(ctx, err, "error closing event consumer")
 
 	err = kafkaConsumer.Close(ctx)
-	logIfError(err)
+	logIfError(ctx, err, "error closing kafka consumer")
 
 	err = kafkaProducer.Close(ctx)
-	logIfError(err)
+	logIfError(ctx, err, "error closing kafka producer")
 
 	err = kafkaErrorProducer.Close(ctx)
-	logIfError(err)
+	logIfError(ctx, err, "error closing kafka error producer")
 
 	err = db.Close(ctx)
-	logIfError(err)
-
-	hc.Stop()
+	logIfError(ctx, err, "error closing graph db connection")
 
 	// cancel the timer in the shutdown context
 	cancel()
 
-	log.Debug("graceful shutdown was successful", nil)
+	log.Event(ctx, "graceful shutdown was successful", log.INFO)
 	os.Exit(1)
 }
 
-func startApi(hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *server.Server) {
+func startApi(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *server.Server) {
 	router := mux.NewRouter()
 	router.HandleFunc("/health", hc.Handler)
 	apiErrors := make(chan error, 1)
@@ -144,10 +144,9 @@ func startApi(hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *serv
 	httpServer.HandleOSSignals = false
 
 	go func() {
-		log.Debug("starting api", nil)
+		log.Event(ctx, "starting api", log.INFO)
 		if err := httpServer.ListenAndServe(); err != nil {
-			log.Error(err, log.Data{})
-			hc.Stop()
+			log.Event(ctx, "http server error", log.ERROR, log.Error(err))
 			apiErrors <- err
 		}
 	}()
@@ -163,34 +162,34 @@ func startHealthChecks(
 	db *graph.DB) healthcheck.HealthCheck {
 
 	versionInfo, err := healthcheck.NewVersionInfo(BuildTime, GitCommit, Version)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating version info")
 	hc := healthcheck.New(versionInfo, cfg.HealthCheckRecoveryInterval, cfg.HealthCheckInterval)
 
 	err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating kafka consumer")
 
 	err = hc.AddCheck("Kafka Producer", kafkaProducer.Checker)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating kafka producer")
 
 	err = hc.AddCheck("Kafka Error Producer", kafkaErrorProducer.Checker)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating kafka error producer")
 
 	err = hc.AddCheck("GraphDB", db.Checker)
-	exitIfError(err)
+	exitIfError(ctx, err, "error creating graph db connection")
 
 	hc.Start(ctx)
 	return hc
 }
 
-func exitIfError(err error) {
+func logIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Error(err, nil)
-		os.Exit(1)
+		log.Event(ctx, message, log.ERROR, log.Error(err))
 	}
 }
 
-func logIfError(err error) {
+func exitIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Error(err, nil)
+		log.Event(ctx, message, log.FATAL, log.Error(err))
+		os.Exit(1)
 	}
 }

@@ -1,10 +1,10 @@
 package event
 
 import (
-	"context"
 	"github.com/ONSdigital/dp-import/events"
 	kafka "github.com/ONSdigital/dp-kafka"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/log.go/log"
+	"golang.org/x/net/context"
 )
 
 // AvroProducer produces Avro serialised messages.
@@ -25,16 +25,14 @@ func NewAvroProducer(kafkaProducer KafkaProducer) *AvroProducer {
 }
 
 // CSVExported produces a new CSV exported event for the given filter output ID.
-func (producer *AvroProducer) HierarchyBuilt(instanceID, dimensionName string) error {
+func (producer *AvroProducer) HierarchyBuilt(ctx context.Context, instanceID, dimensionName string) error {
 
 	hierarchyBuiltEvent := &events.HierarchyBuilt{
 		DimensionName: dimensionName,
 		InstanceID:    instanceID,
 	}
 
-	log.Debug("producing hierarchy built event kafka message",
-		log.Data{"event": hierarchyBuiltEvent},
-	)
+	log.Event(ctx, "producing hierarchy built event kafka message", log.INFO, log.Data{"event": hierarchyBuiltEvent})
 
 	bytes, err := events.HierarchyBuiltSchema.Marshal(hierarchyBuiltEvent)
 	if err != nil {

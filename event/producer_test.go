@@ -1,11 +1,11 @@
 package event_test
 
 import (
+	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-kafka"
 	"github.com/ONSdigital/dp-kafka/kafkatest"
 	"testing"
 
-	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-import/events"
 	. "github.com/smartystreets/goconvey/convey"
 )
@@ -25,7 +25,7 @@ func TestAvroProducer_HierarchyBuilt(t *testing.T) {
 
 		Convey("When HierarchyBuilt is called on the event producer", func() {
 
-			err := eventProducer.HierarchyBuilt(instanceID, dimensionName)
+			err := eventProducer.HierarchyBuilt(ctx, instanceID, dimensionName)
 
 			Convey("The expected event is available on the output channel", func() {
 

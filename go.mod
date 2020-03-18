@@ -9,6 +9,7 @@ require (
 	github.com/ONSdigital/dp-kafka v1.1.4
 	github.com/ONSdigital/dp-reporter-client v1.0.0
 	github.com/ONSdigital/go-ns v0.0.0-20191104121206-f144c4ec2e58
+	github.com/ONSdigital/log.go v1.0.0
 	github.com/facebookgo/freeport v0.0.0-20150612182905-d4adf43b75b9 // indirect
 	github.com/gorilla/mux v1.7.4
 	github.com/justinas/alice v1.2.0 // indirect
@@ -17,5 +18,6 @@ require (
 	github.com/onsi/ginkgo v1.12.0 // indirect
 	github.com/onsi/gomega v1.9.0 // indirect
 	github.com/smartystreets/goconvey v1.6.4
+	golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3
 	gopkg.in/avro.v0 v0.0.0-20171217001914-a730b5802183 // indirect
 )

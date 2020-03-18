@@ -6,7 +6,7 @@ import (
 	"github.com/ONSdigital/dp-import/events"
 	kafka "github.com/ONSdigital/dp-kafka"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/log.go/log"
 )
 
 //go:generate moq -out eventtest/handler.go -pkg eventtest . Handler
@@ -18,7 +18,7 @@ type MessageConsumer interface {
 
 // Handler represents a handler for processing a single event.
 type Handler interface {
-	Handle(dataImportComplete *events.DataImportComplete) error
+	Handle(ctx context.Context, dataImportComplete *events.DataImportComplete) error
 }
 
 // Consumer consumes event messages.
@@ -36,7 +36,7 @@ func NewConsumer() *Consumer {
 }
 
 // Consume converts messages to event instances, and pass the event to the provided handler.
-func (consumer *Consumer) Consume(messageConsumer MessageConsumer, handler Handler, errorReporter reporter.ErrorReporter) {
+func (consumer *Consumer) Consume(ctx context.Context, messageConsumer MessageConsumer, handler Handler, errorReporter reporter.ErrorReporter) {
 
 	go func() {
 		defer close(consumer.closed)
@@ -45,10 +45,10 @@ func (consumer *Consumer) Consume(messageConsumer MessageConsumer, handler Handl
 			select {
 			case message := <-messageConsumer.Channels().Upstream:
 
-				processMessage(message, handler, errorReporter)
+				processMessage(ctx, message, handler, errorReporter)
 
 			case <-consumer.closing:
-				log.Info("closing event consumer loop", nil)
+				log.Event(ctx, "closing event consumer loop", log.INFO)
 				return
 			}
 		}
@@ -67,35 +67,34 @@ func (consumer *Consumer) Close(ctx context.Context) (err error) {
 
 	select {
 	case <-consumer.closed:
-		log.Info("successfully closed event consumer", nil)
+		log.Event(ctx, "successfully closed event consumer", log.INFO)
 		return nil
 	case <-ctx.Done():
-		log.Info("shutdown context time exceeded, skipping graceful shutdown of event consumer", nil)
+		log.Event(ctx, "shutdown context time exceeded, skipping graceful shutdown of event consumer", log.INFO)
 		return errors.New("shutdown context timed out")
 	}
 
 }
 
-func processMessage(message kafka.Message, handler Handler, errorReporter reporter.ErrorReporter) {
+func processMessage(ctx context.Context, message kafka.Message, handler Handler, errorReporter reporter.ErrorReporter) {
 
 	event, err := unmarshal(message)
 	if err != nil {
-		log.Error(err, log.Data{"message": "failed to unmarshal event"})
+		log.Event(ctx, "failed to unmarshal event", log.ERROR, log.Error(err))
 		return
 	}
 
-	log.Debug("event received", log.Data{"event": event})
+	log.Event(ctx, "event received", log.Data{"event": event})
 
-	err = handler.Handle(event)
+	err = handler.Handle(ctx, event)
 	if err != nil {
 		errorReporter.Notify(event.InstanceID, "failed to handle event", err)
-		log.Error(err, log.Data{"message": "failed to handle event"})
+		log.Event(ctx, "failed to handle event", log.ERROR, log.Error(err))
 	}
 
-	log.Debug("event processed - committing message", log.Data{"event": event})
+	log.Event(ctx, "event processed - committing message", log.INFO, log.Data{"event": event})
 	message.Commit()
-	log.Debug("message committed", log.Data{"event": event})
-
+	log.Event(ctx, "message committed", log.INFO, log.Data{"event": event})
 }
 
 // unmarshal converts a event instance to []byte.
