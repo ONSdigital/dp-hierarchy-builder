@@ -11,11 +11,16 @@ DATABASE_ADDRESS?=bolt://localhost:7687
 export GOOS?=$(shell go env GOOS)
 export GOARCH?=$(shell go env GOARCH)
 
+BUILD_TIME=$(shell date +%s)
+GIT_COMMIT=$(shell git rev-parse HEAD)
+VERSION ?= $(shell git tag --points-at HEAD | grep ^v | head -n 1)
+LDFLAGS=-ldflags "-w -s -X 'main.Version=${VERSION}' -X 'main.BuildTime=$(BUILD_TIME)' -X 'main.GitCommit=$(GIT_COMMIT)'"
+
 build:
 	@mkdir -p $(BUILD_ARCH)/$(BIN_DIR)
-	go build -o $(BUILD_ARCH)/$(BIN_DIR)/dp-hierarchy-builder cmd/dp-hierarchy-builder/main.go
+	go build $(LDFLAGS) -o $(BUILD_ARCH)/$(BIN_DIR)/dp-hierarchy-builder cmd/dp-hierarchy-builder/main.go
 debug: build
-	HUMAN_LOG=1 GRAPH_DRIVER_TYPE=neo4j GRAPH_ADDR="$(DATABASE_ADDRESS)" go run -race cmd/dp-hierarchy-builder/main.go
+	HUMAN_LOG=1 GRAPH_DRIVER_TYPE=neo4j GRAPH_ADDR="$(DATABASE_ADDRESS)" go run $(LDFLAGS) -race cmd/dp-hierarchy-builder/main.go
 test:
 	go test -cover -race ./...
 

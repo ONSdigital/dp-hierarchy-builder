@@ -7,13 +7,22 @@ import (
 	"syscall"
 
 	"github.com/ONSdigital/dp-graph/graph"
+	"github.com/ONSdigital/dp-healthcheck/healthcheck"
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	kafka "github.com/ONSdigital/dp-kafka"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/go-ns/healthcheck"
 	"github.com/ONSdigital/go-ns/log"
+)
+
+var (
+	// BuildTime represents the time in which the service was built
+	BuildTime string
+	// GitCommit represents the commit (SHA-1) hash of the service that is running
+	GitCommit string
+	// Version represents the version of the service that is running
+	Version string
 )
 
 func main() {
@@ -71,13 +80,15 @@ func main() {
 	eventConsumer := event.NewConsumer()
 	eventConsumer.Consume(kafkaConsumer, eventHandler, errorHandler)
 
-	healthChecker := healthcheck.NewServer(
-		cfg.BindAddr,
-		cfg.HealthCheckInterval,
-		cfg.HealthCheckRecoveryInterval,
-		errorChannel,
-		db,
-	)
+	// Create healthcheck object with versionInfo
+	versionInfo, err := healthcheck.NewVersionInfo(BuildTime, GitCommit, Version)
+	exitIfError(err)
+	hc := healthcheck.New(versionInfo, cfg.HealthCheckRecoveryInterval, cfg.HealthCheckInterval)
+
+	err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker)
+	exitIfError(err)
+
+	hc.Start(ctx)
 
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, os.Interrupt, syscall.SIGTERM)
@@ -111,8 +122,7 @@ func main() {
 	err = kafkaErrorProducer.Close(ctx)
 	logIfError(err)
 
-	err = healthChecker.Close(ctx)
-	logIfError(err)
+	hc.Stop()
 
 	err = db.Close(ctx)
 	logIfError(err)
