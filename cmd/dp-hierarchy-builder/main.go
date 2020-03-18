@@ -44,7 +44,6 @@ func main() {
 	errorChannel := make(chan error)
 
 	kafkaBrokers := cfg.KafkaAddr
-
 	cgChannels := kafka.CreateConsumerGroupChannels(true)
 	kafkaConsumer, err := kafka.NewConsumerGroup(
 		ctx,
@@ -80,15 +79,7 @@ func main() {
 	eventConsumer := event.NewConsumer()
 	eventConsumer.Consume(kafkaConsumer, eventHandler, errorHandler)
 
-	// Create healthcheck object with versionInfo
-	versionInfo, err := healthcheck.NewVersionInfo(BuildTime, GitCommit, Version)
-	exitIfError(err)
-	hc := healthcheck.New(versionInfo, cfg.HealthCheckRecoveryInterval, cfg.HealthCheckInterval)
-
-	err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker)
-	exitIfError(err)
-
-	hc.Start(ctx)
+	hc := startHealthChecks(ctx, cfg, kafkaConsumer, kafkaProducer, kafkaErrorProducer, db)
 
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, os.Interrupt, syscall.SIGTERM)
@@ -122,16 +113,44 @@ func main() {
 	err = kafkaErrorProducer.Close(ctx)
 	logIfError(err)
 
-	hc.Stop()
-
 	err = db.Close(ctx)
 	logIfError(err)
+
+	hc.Stop()
 
 	// cancel the timer in the shutdown context
 	cancel()
 
 	log.Debug("graceful shutdown was successful", nil)
 	os.Exit(1)
+}
+
+func startHealthChecks(
+	ctx context.Context,
+	cfg *config.Config,
+	kafkaConsumer *kafka.ConsumerGroup,
+	kafkaProducer *kafka.Producer,
+	kafkaErrorProducer *kafka.Producer,
+	db *graph.DB) healthcheck.HealthCheck {
+
+	versionInfo, err := healthcheck.NewVersionInfo(BuildTime, GitCommit, Version)
+	exitIfError(err)
+	hc := healthcheck.New(versionInfo, cfg.HealthCheckRecoveryInterval, cfg.HealthCheckInterval)
+
+	err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker)
+	exitIfError(err)
+
+	err = hc.AddCheck("Kafka Producer", kafkaProducer.Checker)
+	exitIfError(err)
+
+	err = hc.AddCheck("Kafka Error Producer", kafkaErrorProducer.Checker)
+	exitIfError(err)
+
+	err = hc.AddCheck("GraphDB", db.Checker)
+	exitIfError(err)
+
+	hc.Start(ctx)
+	return hc
 }
 
 func exitIfError(err error) {
