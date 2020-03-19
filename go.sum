@@ -2,6 +2,8 @@ github.com/ONSdigital/dp-graph v1.0.3-0.20200318104631-bfc95a183ee5 h1:FhDReJItL
 github.com/ONSdigital/dp-graph v1.0.3-0.20200318104631-bfc95a183ee5/go.mod h1:D2lzCTD4OH1QmiPGf9P2oRXPhFzMSboLJJ0OVSlVPcs=
 github.com/ONSdigital/dp-healthcheck v1.0.0 h1:bySQU8kQRs4n3WbgH8QtVwCJLqG9ri722saATjvNNfc=
 github.com/ONSdigital/dp-healthcheck v1.0.0/go.mod h1:zighxZ/0m5u7zo0eAr8XFlA+Dz2ic7A1vna6YXvhCjQ=
+github.com/ONSdigital/dp-healthcheck v1.0.1-0.20200319141459-ca3f60017dab h1:UR8GahAamSmnG6+lC2qAtOi5zmhfjBeKK7ryORfxjGk=
+github.com/ONSdigital/dp-healthcheck v1.0.1-0.20200319141459-ca3f60017dab/go.mod h1:zighxZ/0m5u7zo0eAr8XFlA+Dz2ic7A1vna6YXvhCjQ=
 github.com/ONSdigital/dp-import v0.0.0-20180202121531-d3cc28e452c3 h1:Pu6j9UKFMQDGIVrTRGIpr9p1f6PVDtvlHfWdwf/iY8Y=
 github.com/ONSdigital/dp-import v0.0.0-20180202121531-d3cc28e452c3/go.mod h1:U5fHAZhyo54q29u4nELS9vYsmFXmeDmfPqSIhHZyj78=
 github.com/ONSdigital/dp-kafka v1.1.1 h1:wqs5STohIk3GPmRBizzJU6AKwiEwcLgOLzUNfVQo2gc=
