@@ -25,7 +25,7 @@ func TestConsume_UnmarshallError(t *testing.T) {
 		}, true)
 
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(dataImportComplete *events.DataImportComplete) error {
+			HandleFunc: func(ctx context.Context, dataImportComplete *events.DataImportComplete) error {
 				return nil
 			},
 		}
@@ -58,7 +58,7 @@ func TestConsume(t *testing.T) {
 
 		mockConsumer := kafkatest.NewMessageConsumer(true)
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(event *events.DataImportComplete) error {
+			HandleFunc: func(ctx context.Context, event *events.DataImportComplete) error {
 				return nil
 			},
 		}
@@ -99,7 +99,7 @@ func TestConsume_HandlerError(t *testing.T) {
 
 		mockConsumer := kafkatest.NewMessageConsumer(true)
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(event *events.DataImportComplete) error {
+			HandleFunc: func(ctx context.Context, event *events.DataImportComplete) error {
 				return expectedError
 			},
 		}
@@ -137,7 +137,7 @@ func TestClose(t *testing.T) {
 
 		mockConsumer := kafkatest.NewMessageConsumer(true)
 		mockEventHandler := &eventtest.HandlerMock{
-			HandleFunc: func(event *events.DataImportComplete) error {
+			HandleFunc: func(ctx context.Context, event *events.DataImportComplete) error {
 				return nil
 			},
 		}

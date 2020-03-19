@@ -1,6 +1,7 @@
 package event_test
 
 import (
+	"context"
 	"errors"
 	"testing"
 
@@ -60,7 +61,7 @@ func TestDataImportCompleteHandler_Handle_EventProducerError(t *testing.T) {
 		}
 
 		mockEventProducer := &eventtest.EventProducerMock{
-			HierarchyBuiltFunc: func(instanceID string, dimensionName string) error {
+			HierarchyBuiltFunc: func(ctx context.Context, instanceID string, dimensionName string) error {
 				return expectedError
 			},
 		}
@@ -97,7 +98,7 @@ func TestDataImportCompleteHandler_Handle(t *testing.T) {
 		}
 
 		mockEventProducer := &eventtest.EventProducerMock{
-			HierarchyBuiltFunc: func(instanceID string, dimensionName string) error {
+			HierarchyBuiltFunc: func(ctx context.Context, instanceID string, dimensionName string) error {
 				return nil
 			},
 		}

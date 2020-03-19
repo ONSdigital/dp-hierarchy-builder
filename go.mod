@@ -15,6 +15,7 @@ require (
 	github.com/justinas/alice v1.2.0 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/klauspost/cpuid v1.2.3 // indirect
+	github.com/matryer/moq v0.0.0-20191105074349-1206bf1e2aad // indirect
 	github.com/onsi/ginkgo v1.12.0 // indirect
 	github.com/onsi/gomega v1.9.0 // indirect
 	github.com/smartystreets/goconvey v1.6.4
