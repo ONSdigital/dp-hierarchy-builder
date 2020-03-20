@@ -219,20 +219,22 @@ CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKM7",label:"Easte
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKM8",label:"West Central Scotland" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKM9",label:"Southern Scotland" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKN0",label:"Northern Ireland" });
-CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKC",label:"North East (England)" });
-CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKD",label:"North West (England)" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKC",label:"North East" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKD",label:"North West" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKE",label:"Yorkshire and The Humber" });
-CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKF",label:"East Midlands (England)" });
-CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKG",label:"West Midlands (England)" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKF",label:"East Midlands" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKG",label:"West Midlands" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKH",label:"East of England" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKI",label:"London" });
-CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKJ",label:"South East (England)" });
-CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKK",label:"South West (England)" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKJ",label:"South East" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKK",label:"South West" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKL",label:"Wales" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKM",label:"Scotland" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKN",label:"Northern Ireland" });
-CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"T",label:"Total" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UK",label:"United Kingdom" });
 CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKZ",label:"Extra-regio" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UK0",label:"England" });
+CREATE (node:`_generic_hierarchy_node_nuts-geography` { code:"UKX",label:"UK less extra-regio" });
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
 WHERE parent.code = "UKC1" AND child.code = "UKC11"
 CREATE (child)-[:hasParent]->(parent);
@@ -894,41 +896,47 @@ MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarc
 WHERE parent.code = "UKN" AND child.code = "UKN0"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKC"
+WHERE parent.code = "UK0" AND child.code = "UKC"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKD"
+WHERE parent.code = "UK0" AND child.code = "UKD"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKE"
+WHERE parent.code = "UK0" AND child.code = "UKE"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKF"
+WHERE parent.code = "UK0" AND child.code = "UKF"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKG"
+WHERE parent.code = "UK0" AND child.code = "UKG"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKH"
+WHERE parent.code = "UK0" AND child.code = "UKH"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKI"
+WHERE parent.code = "UK0" AND child.code = "UKI"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKJ"
+WHERE parent.code = "UK0" AND child.code = "UKJ"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKK"
+WHERE parent.code = "UK0" AND child.code = "UKK"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKL"
+WHERE parent.code = "UK" AND child.code = "UKL"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKM"
+WHERE parent.code = "UK" AND child.code = "UKM"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKN"
+WHERE parent.code = "UK" AND child.code = "UKN"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
-WHERE parent.code = "T" AND child.code = "UKZ"
+WHERE parent.code = "UK" AND child.code = "UKZ"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
+WHERE parent.code = "UK" AND child.code = "UK0"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_nuts-geography`),(child:`_generic_hierarchy_node_nuts-geography`)
+WHERE parent.code = "UK" AND child.code = "UKX"
 CREATE (child)-[:hasParent]->(parent);
