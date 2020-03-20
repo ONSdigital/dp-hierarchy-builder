@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/ONSdigital/dp-graph v1.0.3-0.20200318104631-bfc95a183ee5
-	github.com/ONSdigital/dp-healthcheck v1.0.1-0.20200319141459-ca3f60017dab
+	github.com/ONSdigital/dp-healthcheck v1.0.1
 	github.com/ONSdigital/dp-import v0.0.0-20180202121531-d3cc28e452c3
 	github.com/ONSdigital/dp-kafka v1.1.4
 	github.com/ONSdigital/dp-reporter-client v1.0.0
@@ -15,7 +15,6 @@ require (
 	github.com/justinas/alice v1.2.0 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/klauspost/cpuid v1.2.3 // indirect
-	github.com/matryer/moq v0.0.0-20191105074349-1206bf1e2aad // indirect
 	github.com/onsi/ginkgo v1.12.0 // indirect
 	github.com/onsi/gomega v1.9.0 // indirect
 	github.com/smartystreets/goconvey v1.6.4
