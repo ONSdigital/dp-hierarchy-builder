@@ -163,7 +163,7 @@ func startHealthChecks(
 
 	versionInfo, err := healthcheck.NewVersionInfo(BuildTime, GitCommit, Version)
 	exitIfError(ctx, err, "error creating version info")
-	hc := healthcheck.New(versionInfo, cfg.HealthCheckRecoveryInterval, cfg.HealthCheckInterval)
+	hc := healthcheck.New(versionInfo, cfg.HealthCheckCriticalTimeout, cfg.HealthCheckInterval)
 
 	err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker)
 	exitIfError(ctx, err, "error creating kafka consumer")

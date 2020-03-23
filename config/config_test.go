@@ -28,7 +28,7 @@ func TestSpec(t *testing.T) {
 				So(cfg.ProducerTopic, ShouldEqual, "hierarchy-built")
 				So(cfg.GracefulShutdownTimeout, ShouldEqual, time.Second*10)
 				So(cfg.HealthCheckInterval, ShouldEqual, time.Minute)
-				So(cfg.HealthCheckRecoveryInterval, ShouldEqual, time.Second*2)
+				So(cfg.HealthCheckCriticalTimeout, ShouldEqual, time.Second*2)
 			})
 		})
 	})
