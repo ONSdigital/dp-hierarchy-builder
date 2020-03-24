@@ -89,16 +89,14 @@ func main() {
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, os.Interrupt, syscall.SIGTERM)
 
+	kafkaConsumer.Channels().LogErrors(ctx, "error received from kafka consumer, topic: "+cfg.ConsumerTopic)
+	kafkaProducer.Channels().LogErrors(ctx, "error received from kafka producer, topic: "+cfg.ProducerTopic)
+	kafkaErrorProducer.Channels().LogErrors(ctx, "error received from kafka error producer, topic: "+cfg.ErrorProducerTopic)
+
 	// this will block (main) until a fatal error occurs
 	select {
 	case err := <-apiErrors:
 		log.Event(ctx, "http server error", log.ERROR, log.Error(err))
-	case err := <-kafkaConsumer.Channels().Errors:
-		log.Event(ctx, "kafka consumer error", log.ERROR, log.Error(err))
-	case err := <-kafkaProducer.Channels().Errors:
-		log.Event(ctx, "kafka result producer error", log.ERROR, log.Error(err))
-	case err := <-kafkaErrorProducer.Channels().Errors:
-		log.Event(ctx, "kafka error producer error", log.ERROR, log.Error(err))
 	case err := <-errorChannel:
 		log.Event(ctx, "error channel error", log.ERROR, log.Error(err))
 	case <-signals:
