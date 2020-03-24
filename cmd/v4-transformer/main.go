@@ -72,7 +72,7 @@ func main() {
 
 		if entry.ParentLabelCode == "" {
 			if entry.Level != 0 {
-				log.Event(ctx, "entry no parent, but level>0", log.Data{"entry": entry})
+				log.Event(ctx, "entry no parent, but level>0", log.INFO, log.Data{"entry": entry})
 			}
 			continue
 		}
