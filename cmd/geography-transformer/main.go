@@ -58,15 +58,15 @@ func main() {
 	// populate the children of each node using the map to look up parents
 	hierarchy.PopulateChildNodes(ctx, nodeMap)
 
-	log.Event(ctx, "Generating csv")
+	log.Event(ctx, "Generating csv", log.INFO)
 	err = hierarchy.CreateCSVFile(rootNodes, *csvFile)
 	logIfError(ctx, err, "error generating csv")
 
-	log.Event(ctx, "Generating cypher script")
+	log.Event(ctx, "Generating cypher script", log.INFO)
 	err = cypher.CreateCypherFile(rootNodes, *cypherFile)
 	logIfError(ctx, err, "error generating cypher script")
 
-	log.Event(ctx, "Generating cypher deletion script")
+	log.Event(ctx, "Generating cypher deletion script", log.INFO)
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
 	logIfError(ctx, err, "error generating deletion script")
 }

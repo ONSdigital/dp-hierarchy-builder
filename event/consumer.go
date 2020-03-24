@@ -84,7 +84,7 @@ func processMessage(ctx context.Context, message kafka.Message, handler Handler,
 		return
 	}
 
-	log.Event(ctx, "event received", log.Data{"event": event})
+	log.Event(ctx, "event received", log.INFO, log.Data{"event": event})
 
 	err = handler.Handle(ctx, event)
 	if err != nil {

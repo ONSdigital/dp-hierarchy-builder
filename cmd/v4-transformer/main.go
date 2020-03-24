@@ -90,11 +90,11 @@ func main() {
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
-	log.Event(ctx, "Generating cypher script")
+	log.Event(ctx, "Generating cypher script", log.INFO)
 	err = cypher.CreateCypherFile(rootNodes, *cypherFile)
 	logIfError(ctx, err, "error generating cypher script")
 
-	log.Event(ctx, "Generating cypher deletion script")
+	log.Event(ctx, "Generating cypher deletion script", log.INFO)
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
 	logIfError(ctx, err, "error generating cypher deletion script")
 }
