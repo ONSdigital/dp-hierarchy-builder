@@ -15,7 +15,7 @@ import (
 	"time"
 )
 
-var ctx = context.Background()
+var testCtx = context.Background()
 
 func TestConsume_UnmarshallError(t *testing.T) {
 	Convey("Given an event consumer with an invalid schema and a valid schema", t, func() {
@@ -39,7 +39,7 @@ func TestConsume_UnmarshallError(t *testing.T) {
 
 		Convey("When consume messages is called", func() {
 
-			consumer.Consume(ctx, mockConsumer, mockEventHandler, nil)
+			consumer.Consume(testCtx, mockConsumer, mockEventHandler, nil)
 			waitForEventsToBeSentToHandler(mockEventHandler)
 
 			Convey("Only the valid event is sent to the mockEventHandler ", func() {
@@ -72,7 +72,7 @@ func TestConsume(t *testing.T) {
 
 		Convey("When consume is called", func() {
 
-			consumer.Consume(ctx, mockConsumer, mockEventHandler, nil)
+			consumer.Consume(testCtx, mockConsumer, mockEventHandler, nil)
 			waitForEventsToBeSentToHandler(mockEventHandler)
 
 			Convey("A event is sent to the mockEventHandler ", func() {
@@ -115,7 +115,7 @@ func TestConsume_HandlerError(t *testing.T) {
 
 		Convey("When consume is called", func() {
 
-			consumer.Consume(ctx, mockConsumer, mockEventHandler, mockErrorHandler)
+			consumer.Consume(testCtx, mockConsumer, mockEventHandler, mockErrorHandler)
 			waitForEventsToBeSentToHandler(mockEventHandler)
 
 			Convey("The error handler is given the error returned from the event handler", func() {
@@ -149,7 +149,7 @@ func TestClose(t *testing.T) {
 
 		consumer := event.NewConsumer()
 
-		consumer.Consume(ctx, mockConsumer, mockEventHandler, nil)
+		consumer.Consume(testCtx, mockConsumer, mockEventHandler, nil)
 
 		Convey("When close is called", func() {
 
@@ -183,12 +183,12 @@ func waitForEventsToBeSentToHandler(eventHandler *eventtest.HandlerMock) {
 	timeout := start.Add(time.Millisecond * 500)
 	for {
 		if len(eventHandler.HandleCalls()) > 0 {
-			log.Event(ctx, "events have been sent to the handler")
+			log.Event(testCtx, "events have been sent to the handler")
 			break
 		}
 
 		if time.Now().After(timeout) {
-			log.Event(ctx, "timeout hit")
+			log.Event(testCtx, "timeout hit")
 			break
 		}
 

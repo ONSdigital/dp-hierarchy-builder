@@ -35,7 +35,7 @@ func TestDataImportCompleteHandler_Handle_HierarchyStoreError(t *testing.T) {
 
 		Convey("When handle is called", func() {
 
-			err := eventHandler.Handle(ctx, expectedEvent)
+			err := eventHandler.Handle(testCtx, expectedEvent)
 
 			Convey("Then the hierarchy store is called", func() {
 				So(len(mockHierarchyStore.BuildHierarchyCalls()), ShouldEqual, 1)
@@ -70,7 +70,7 @@ func TestDataImportCompleteHandler_Handle_EventProducerError(t *testing.T) {
 
 		Convey("When handle is called", func() {
 
-			err := eventHandler.Handle(ctx, expectedEvent)
+			err := eventHandler.Handle(testCtx, expectedEvent)
 
 			Convey("Then the hierarchy store is called", func() {
 				So(len(mockHierarchyStore.BuildHierarchyCalls()), ShouldEqual, 1)
@@ -107,7 +107,7 @@ func TestDataImportCompleteHandler_Handle(t *testing.T) {
 
 		Convey("When handle is called", func() {
 
-			err := eventHandler.Handle(ctx, expectedEvent)
+			err := eventHandler.Handle(testCtx, expectedEvent)
 
 			Convey("Then the hierarchy store is called", func() {
 				So(len(mockHierarchyStore.BuildHierarchyCalls()), ShouldEqual, 1)

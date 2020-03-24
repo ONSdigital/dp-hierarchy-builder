@@ -25,7 +25,7 @@ func TestAvroProducer_HierarchyBuilt(t *testing.T) {
 
 		Convey("When HierarchyBuilt is called on the event producer", func() {
 
-			err := eventProducer.HierarchyBuilt(ctx, instanceID, dimensionName)
+			err := eventProducer.HierarchyBuilt(testCtx, instanceID, dimensionName)
 
 			Convey("The expected event is available on the output channel", func() {
 
