@@ -44,9 +44,8 @@ func (consumer *Consumer) Consume(ctx context.Context, messageConsumer MessageCo
 		for {
 			select {
 			case message := <-messageConsumer.Channels().Upstream:
-
-				processMessage(ctx, message, handler, errorReporter)
-
+				messageCtx := context.Background()
+				processMessage(messageCtx, message, handler, errorReporter)
 			case <-consumer.closing:
 				log.Event(ctx, "closing event consumer loop", log.INFO)
 				return
