@@ -40,9 +40,6 @@ func main() {
 	// sensitive fields are omitted from cfg.String().
 	log.Event(ctx, "loaded config", log.INFO, log.Data{"cfg": cfg})
 
-	// a channel used to signal a graceful exit is required.
-	errorChannel := make(chan error)
-
 	kafkaBrokers := cfg.KafkaAddr
 	cgChannels := kafka.CreateConsumerGroupChannels(true)
 	kafkaConsumer, err := kafka.NewConsumerGroup(
@@ -97,8 +94,6 @@ func main() {
 	select {
 	case err := <-apiErrors:
 		log.Event(ctx, "http server error", log.ERROR, log.Error(err))
-	case err := <-errorChannel:
-		log.Event(ctx, "error channel error", log.ERROR, log.Error(err))
 	case <-signals:
 		log.Event(ctx, "os signal received", log.INFO)
 	}
