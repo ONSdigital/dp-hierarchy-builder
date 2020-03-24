@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"errors"
 	"github.com/ONSdigital/go-ns/server"
 	"github.com/gorilla/mux"
 	"os"
@@ -105,30 +106,55 @@ func main() {
 	}
 
 	ctx, cancel := context.WithTimeout(ctx, cfg.GracefulShutdownTimeout)
+	hasShutdownError := false
 
 	// gracefully dispose resources
 	hc.Stop()
 
 	err = httpServer.Close(ctx)
-	logIfError(ctx, err, "error closing http server")
+	if err != nil {
+		log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
+		hasShutdownError = true
+	}
 
 	err = eventConsumer.Close(ctx)
-	logIfError(ctx, err, "error closing event consumer")
+	if err != nil {
+		log.Event(ctx, "error closing event consumer", log.ERROR, log.Error(err))
+		hasShutdownError = true
+	}
 
 	err = kafkaConsumer.Close(ctx)
-	logIfError(ctx, err, "error closing kafka consumer")
+	if err != nil {
+		log.Event(ctx, "error closing kafka consumer", log.ERROR, log.Error(err))
+		hasShutdownError = true
+	}
 
 	err = kafkaProducer.Close(ctx)
-	logIfError(ctx, err, "error closing kafka producer")
+	if err != nil {
+		log.Event(ctx, "error closing kafka producer", log.ERROR, log.Error(err))
+		hasShutdownError = true
+	}
 
 	err = kafkaErrorProducer.Close(ctx)
-	logIfError(ctx, err, "error closing kafka error producer")
+	if err != nil {
+		log.Event(ctx, "error closing kafka error producer", log.ERROR, log.Error(err))
+		hasShutdownError = true
+	}
 
 	err = db.Close(ctx)
-	logIfError(ctx, err, "error closing graph db connection")
+	if err != nil {
+		log.Event(ctx, "error closing graph db connection", log.ERROR, log.Error(err))
+		hasShutdownError = true
+	}
 
 	// cancel the timer in the shutdown context
 	cancel()
+
+	if hasShutdownError {
+		err = errors.New("failed to shutdown gracefully")
+		log.Event(ctx, "failed to shutdown gracefully ", log.ERROR, log.Error(err))
+		os.Exit(1)
+	}
 
 	log.Event(ctx, "graceful shutdown was successful", log.INFO)
 	os.Exit(1)
