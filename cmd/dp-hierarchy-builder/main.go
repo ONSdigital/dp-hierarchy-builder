@@ -83,7 +83,7 @@ func main() {
 
 	hc := startHealthChecks(ctx, cfg, kafkaConsumer, kafkaProducer, kafkaErrorProducer, db)
 
-	apiErrors, httpServer := startApi(ctx, hc, cfg)
+	apiErrors, httpServer := startAPI(ctx, hc, cfg)
 
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, os.Interrupt, syscall.SIGTERM)
@@ -134,7 +134,7 @@ func main() {
 	os.Exit(1)
 }
 
-func startApi(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *server.Server) {
+func startAPI(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *server.Server) {
 	router := mux.NewRouter()
 	router.HandleFunc("/health", hc.Handler)
 	apiErrors := make(chan error, 1)
@@ -161,21 +161,38 @@ func startHealthChecks(
 	kafkaErrorProducer *kafka.Producer,
 	db *graph.DB) healthcheck.HealthCheck {
 
+	hasErrors := false
+
 	versionInfo, err := healthcheck.NewVersionInfo(BuildTime, GitCommit, Version)
-	exitIfError(ctx, err, "error creating version info")
+	if err != nil {
+		hasErrors = true
+		log.Event(ctx, "error creating version info", log.ERROR, log.Error(err))
+	}
 	hc := healthcheck.New(versionInfo, cfg.HealthCheckCriticalTimeout, cfg.HealthCheckInterval)
 
-	err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker)
-	exitIfError(ctx, err, "error creating kafka consumer")
+	if err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker); err != nil {
+		hasErrors = true
+		log.Event(ctx, "error creating kafka consumer", log.ERROR, log.Error(err))
+	}
 
-	err = hc.AddCheck("Kafka Producer", kafkaProducer.Checker)
-	exitIfError(ctx, err, "error creating kafka producer")
+	if err = hc.AddCheck("Kafka Producer", kafkaProducer.Checker); err != nil {
+		hasErrors = true
+		log.Event(ctx, "error creating kafka producer", log.ERROR, log.Error(err))
+	}
 
-	err = hc.AddCheck("Kafka Error Producer", kafkaErrorProducer.Checker)
-	exitIfError(ctx, err, "error creating kafka error producer")
+	if err = hc.AddCheck("Kafka Error Producer", kafkaErrorProducer.Checker); err != nil {
+		hasErrors = true
+		log.Event(ctx, "error creating kafka error producer", log.ERROR, log.Error(err))
+	}
 
-	err = hc.AddCheck("GraphDB", db.Checker)
-	exitIfError(ctx, err, "error creating graph db connection")
+	if err = hc.AddCheck("GraphDB", db.Checker); err != nil {
+		hasErrors = true
+		log.Event(ctx, "error creating graph db connection", log.ERROR, log.Error(err))
+	}
+
+	if hasErrors {
+		os.Exit(1)
+	}
 
 	hc.Start(ctx)
 	return hc
