@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ONSdigital/dp-graph/graph"
+	"github.com/ONSdigital/dp-graph/v2/graph"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/log.go/log"
 )

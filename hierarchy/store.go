@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ONSdigital/dp-graph/graph"
+	"github.com/ONSdigital/dp-graph/v2/graph"
 	"github.com/ONSdigital/log.go/log"
 )
 
