@@ -20,9 +20,14 @@ var testCtx = context.Background()
 func TestConsume_UnmarshallError(t *testing.T) {
 	Convey("Given an event consumer with an invalid schema and a valid schema", t, func() {
 
-		mockConsumer := kafkatest.NewMessageConsumerWithChannels(&kafka.ConsumerGroupChannels{
+		cgChannels := &kafka.ConsumerGroupChannels{
 			Upstream: make(chan kafka.Message, 2),
-		}, true)
+		}
+
+		mockConsumer := &kafkatest.IConsumerGroupMock{
+			ChannelsFunc: func() *kafka.ConsumerGroupChannels { return cgChannels },
+			ReleaseFunc:  func() {},
+		}
 
 		mockEventHandler := &eventtest.HandlerMock{
 			HandleFunc: func(ctx context.Context, dataImportComplete *events.DataImportComplete) error {
@@ -56,7 +61,15 @@ func TestConsume(t *testing.T) {
 
 	Convey("Given an event consumer with a valid schema", t, func() {
 
-		mockConsumer := kafkatest.NewMessageConsumer(true)
+		cgChannels := &kafka.ConsumerGroupChannels{
+			Upstream: make(chan kafka.Message, 2),
+		}
+
+		mockConsumer := &kafkatest.IConsumerGroupMock{
+			ChannelsFunc: func() *kafka.ConsumerGroupChannels { return cgChannels },
+			ReleaseFunc:  func() {},
+		}
+
 		mockEventHandler := &eventtest.HandlerMock{
 			HandleFunc: func(ctx context.Context, event *events.DataImportComplete) error {
 				return nil
@@ -86,6 +99,10 @@ func TestConsume(t *testing.T) {
 
 			Convey("The message is committed", func() {
 				So(len(message.CommitCalls()), ShouldEqual, 1)
+			})
+
+			Convey("Release is called on the consumer", func() {
+				So(len(mockConsumer.ReleaseCalls()), ShouldEqual, 1)
 			})
 		})
 	})
