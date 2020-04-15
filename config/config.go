@@ -31,8 +31,8 @@ func Get() (*Config, error) {
 		ProducerTopic:              "hierarchy-built",
 		ErrorProducerTopic:         "import-error",
 		GracefulShutdownTimeout:    time.Second * 10,
-		HealthCheckInterval:        time.Minute,
-		HealthCheckCriticalTimeout: 2 * time.Second,
+		HealthCheckInterval:        30 * time.Second,
+		HealthCheckCriticalTimeout: 90 * time.Second,
 	}
 
 	return cfg, envconfig.Process("", cfg)
