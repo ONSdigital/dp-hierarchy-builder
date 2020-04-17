@@ -48,7 +48,14 @@ job "dp-hierarchy-builder" {
 
       service {
         name = "dp-hierarchy-builder"
+        port = "http"
         tags = ["publishing"]
+        check {
+          type     = "http"
+          path     = "/health"
+          interval = "10s"
+          timeout  = "2s"
+        }
       }
 
       resources {

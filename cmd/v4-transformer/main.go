@@ -7,15 +7,15 @@ This generator takes a v4 file and infers a hierarchy from the code in the label
 */
 
 import (
+	"context"
 	"encoding/csv"
 	"flag"
 	"os"
 
-	"errors"
 	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/log.go/log"
 	"io"
 )
 
@@ -30,11 +30,13 @@ var csvFile = flag.String("csv", "cmd/v4-transformer/output/hierarchy.csv", "")
 var cypherDelFile = flag.String("cypher-delete", "cmd/v4-transformer/output/hierarchy-delete.cypher", "")
 
 func main() {
+
+	ctx := context.Background()
 	flag.Parse()
 
 	f, err := os.Open(*filepath)
 	if err != nil {
-		log.ErrorC("Failed to open input file", err, log.Data{"file": *filepath})
+		log.Event(ctx, "Failed to open input file", log.ERROR, log.Error(err), log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -52,7 +54,7 @@ func main() {
 		entry, err := reader.Read()
 		if err != nil {
 			if err != io.EOF {
-				log.ErrorC("Failed to read CSV rows from the input file", err, log.Data{"file": *filepath})
+				log.Event(ctx, "Failed to read CSV rows from the input file", log.ERROR, log.Error(err), log.Data{"file": *filepath})
 				os.Exit(1)
 			}
 
@@ -70,33 +72,35 @@ func main() {
 
 		if entry.ParentLabelCode == "" {
 			if entry.Level != 0 {
-				log.Info("entry no parent, but level>0", log.Data{"entry": entry})
+				log.Event(ctx, "entry no parent, but level>0", log.INFO, log.Data{"entry": entry})
 			}
 			continue
 		}
 
 		if labelIDToEntry[entry.ParentLabelCode] == nil {
-			log.Error(errors.New("entry not found for label code"), log.Data{
+
+			log.Event(ctx, "entry not found for label code", log.ERROR, log.Data{
 				"code":        entry.Code,
 				"parent code": entry.ParentCode,
 			})
+
 			continue
 		}
 
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
-	log.Debug("Generating cypher script", nil)
+	log.Event(ctx, "Generating cypher script", log.INFO)
 	err = cypher.CreateCypherFile(rootNodes, *cypherFile)
-	logErr(err)
+	logIfError(ctx, err, "error generating cypher script")
 
-	log.Debug("Generating cypher deletion script", nil)
+	log.Event(ctx, "Generating cypher deletion script", log.INFO)
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
-	logErr(err)
+	logIfError(ctx, err, "error generating cypher deletion script")
 }
 
-func logErr(err error) {
+func logIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Error(err, nil)
+		log.Event(ctx, message, log.ERROR, log.Error(err))
 	}
 }
