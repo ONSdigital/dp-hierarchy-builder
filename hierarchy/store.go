@@ -4,11 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ONSdigital/dp-graph/graph"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/dp-graph/v2/graph"
+	"github.com/ONSdigital/log.go/log"
 )
-
-//go:generate moq -out hierarchytest/db_pool.go -pkg hierarchytest . DBPool
 
 // Store represents storage for hierarchy data.
 type Store struct {
@@ -67,7 +65,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return err
 	}
 
-	log.Debug("hierarchy build complete", logData)
+	log.Event(ctx, "hierarchy build complete", log.INFO, logData)
 
 	return nil
 }

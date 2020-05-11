@@ -7,11 +7,11 @@ The hierarchy builder is a service that forms part of the dataset import process
 
 Import the CPIH full hierarchy:
 
-`cypher-shell < cmd/v4-transformer/output/cpih/hierarchy-cpih.cypher`
+`cypher-shell < cypher-scripts/cpih1dim1aggid.cypher`
 
 Import the mid-year-pop-est full hierarchy:
 
-`cypher-shell < cmd/hierarchy-transformer/output/midYearPopEst/hierarchy.cypher`
+`cypher-shell < cypher-scripts/mid-year-pop-geography.cypher`
 
 You can use additional flags if running against an environment other than localhost:
 
@@ -19,7 +19,7 @@ You can use additional flags if running against an environment other than localh
 
 Run the `dp-hierarchy-builder` service:
 
-`make debug`
+`make debug` 
 
 ### Kafka scripts
 
@@ -27,16 +27,17 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 
 ### Configuration
 
-| Environment variable      | Default               | Description
-| ------------------------- | --------------------- | -----------
-| BIND_ADDR                 | :22700                | The host and port to bind to
-| KAFKA_ADDR                | localhost:9092        | A list of Kafka host addresses
-| CONSUMER_GROUP            | dp-hierarchy-builder  | The name of the Kafka consumer group
-| CONSUMER_TOPIC            | observations-imported | The name of the topic to consumes messages from
-| PRODUCER_TOPIC            | hierarchy-built       | The name of the topic to produces messages to
-| ERROR_PRODUCER_TOPIC      | import-error          | The name of the topic to send error messages to
-| GRACEFUL_SHUTDOWN_TIMEOUT | time.Second * 10      | Time time to wait when gracefully shutting down before closing
-| HEALTHCHECK_INTERVAL      | time.Minute           | How often to run a health check
+| Environment variable         | Default               | Description
+| ---------------------------- | --------------------- | -----------
+| BIND_ADDR                    | :22700                | The host and port to bind to
+| KAFKA_ADDR                   | localhost:9092        | A list of Kafka host addresses
+| CONSUMER_GROUP               | dp-hierarchy-builder  | The name of the Kafka consumer group
+| CONSUMER_TOPIC               | observations-imported | The name of the topic to consumes messages from
+| PRODUCER_TOPIC               | hierarchy-built       | The name of the topic to produces messages to
+| ERROR_PRODUCER_TOPIC         | import-error          | The name of the topic to send error messages to
+| GRACEFUL_SHUTDOWN_TIMEOUT    | time.Second * 10      | Time time to wait when gracefully shutting down before closing
+| HEALTHCHECK_INTERVAL         | 30s                   | The time between doing health checks
+| HEALTHCHECK_CRITICAL_TIMEOUT | 90s                   | The time taken for the health changes from warning state to critical due to subsystem check failures
 
 Plus the graph database vars from [dp-graph](https://github.com/ONSdigital/dp-graph) - namely `GRAPH_DRIVER_TYPE` and `GRAPH_ADDR`
 

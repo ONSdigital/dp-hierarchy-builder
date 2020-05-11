@@ -1,12 +1,13 @@
 package event
 
 import (
+	"context"
 	"github.com/ONSdigital/dp-import/events"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/log.go/log"
 )
 
-//go:generate moq -out eventtest/hierarchy_store.go -pkg eventtest . HierarchyStore
-//go:generate moq -out eventtest/event_producer.go -pkg eventtest . EventProducer
+//go:generate moq -out ./eventtest/hierarchy_store.go -pkg eventtest . HierarchyStore
+//go:generate moq -out ./eventtest/event_producer.go -pkg eventtest . EventProducer
 
 // DataImportCompleteHandler ...
 type DataImportCompleteHandler struct {
@@ -21,7 +22,7 @@ type HierarchyStore interface {
 
 // EventProducer handles producing output events.
 type EventProducer interface {
-	HierarchyBuilt(instanceID, dimensionName string) error
+	HierarchyBuilt(ctx context.Context, instanceID, dimensionName string) error
 }
 
 // NewDataImportCompleteHandler ...
@@ -33,10 +34,10 @@ func NewDataImportCompleteHandler(hierarchyStore HierarchyStore, eventProducer E
 }
 
 // Handle takes a single event, and returns the observations gathered from the URL in the event.
-func (handler DataImportCompleteHandler) Handle(event *events.DataImportComplete) error {
+func (handler DataImportCompleteHandler) Handle(ctx context.Context, event *events.DataImportComplete) error {
 
 	logData := log.Data{"event": event}
-	log.Debug("event handler called", logData)
+	log.Event(ctx, "event handler called", log.INFO, logData)
 
 	err := handler.hierarchyStore.BuildHierarchy(
 		event.InstanceID,
@@ -47,12 +48,12 @@ func (handler DataImportCompleteHandler) Handle(event *events.DataImportComplete
 		return err
 	}
 
-	err = handler.eventProducer.HierarchyBuilt(event.InstanceID, event.DimensionName)
+	err = handler.eventProducer.HierarchyBuilt(ctx, event.InstanceID, event.DimensionName)
 	if err != nil {
 		return err
 	}
 
-	log.Debug("event successfully handled", logData)
+	log.Event(ctx, "event successfully handled", log.INFO, logData)
 
 	return nil
 }

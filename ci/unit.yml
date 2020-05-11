@@ -6,11 +6,11 @@ image_resource:
   type: docker-image
   source:
     repository: golang
-    tag: 1.12.5
+    tag: 1.13.8
 
 inputs:
   - name: dp-hierarchy-builder
-    path: go/src/github.com/ONSdigital/dp-hierarchy-builder
+    path: dp-hierarchy-builder
 
 run:
-  path: go/src/github.com/ONSdigital/dp-hierarchy-builder/ci/scripts/unit.sh
+  path: dp-hierarchy-builder/ci/scripts/unit.sh
