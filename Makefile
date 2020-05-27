@@ -11,6 +11,7 @@ export GOARCH?=$(shell go env GOARCH)
 
 export GRAPH_DRIVER_TYPE?=neptune
 export GRAPH_ADDR?=ws://localhost:8182/gremlin
+export GRAPH_QUERY_TIMEOUT=600
 
 BUILD_TIME=$(shell date +%s)
 GIT_COMMIT=$(shell git rev-parse HEAD)
@@ -21,10 +22,9 @@ build:
 	@mkdir -p $(BUILD_ARCH)/$(BIN_DIR)
 	go build $(LDFLAGS) -o $(BUILD_ARCH)/$(BIN_DIR)/dp-hierarchy-builder cmd/dp-hierarchy-builder/main.go
 debug: build
-	HUMAN_LOG=1 GRAPH_DRIVER_TYPE=neo4j GRAPH_ADDR="$(DATABASE_ADDRESS)" GRAPH_QUERY_TIMEOUT=600 go run $(LDFLAGS) -race cmd/dp-hierarchy-builder/main.go
+	HUMAN_LOG=1 go run $(LDFLAGS) -race cmd/dp-hierarchy-builder/main.go
 test:
 	go test -cover -race ./...
-
 full:
 	cypher-shell < "$(V4_TRANSFORMER_DIR)/output/hierarchy.cypher"
 full-clean:
