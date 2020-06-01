@@ -9546,6 +9546,7 @@ CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E10000034",label:
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E10000023",label:"North Yorkshire" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E10000032",label:"West Sussex" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E10000002",label:"Buckinghamshire" });
+CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E06000060",label:"Buckinghamshire" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E10000028",label:"Staffordshire" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E10000029",label:"Suffolk" });
 CREATE (node:`_generic_hierarchy_node_admin-geography` { code:"E11000005",label:"West Midlands" });
@@ -40431,6 +40432,9 @@ WHERE parent.code = "E12000008" AND child.code = "E10000032"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
 WHERE parent.code = "E12000008" AND child.code = "E10000002"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
+WHERE parent.code = "E12000008" AND child.code = "E06000060"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_admin-geography`),(child:`_generic_hierarchy_node_admin-geography`)
 WHERE parent.code = "E12000005" AND child.code = "E10000028"
