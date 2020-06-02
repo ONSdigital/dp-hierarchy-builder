@@ -50,6 +50,7 @@ CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"S09000006",lab
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"E92000001",label:"England" });
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W92000004",label:"Wales" });
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"S92000003",label:"Scotland" });
+CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"K03000001",label:"Great Britain" });
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
 WHERE parent.code = "E92000001" AND child.code = "E37000001"
 CREATE (child)-[:hasParent]->(parent);
@@ -193,4 +194,13 @@ WHERE parent.code = "S92000003" AND child.code = "S09000005"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
 WHERE parent.code = "S92000003" AND child.code = "S09000006"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
+WHERE parent.code = "K03000001" AND child.code = "S92000003"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
+WHERE parent.code = "K03000001" AND child.code = "W92000004"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
+WHERE parent.code = "K03000001" AND child.code = "E92000001"
 CREATE (child)-[:hasParent]->(parent);
