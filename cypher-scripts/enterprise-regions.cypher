@@ -37,10 +37,10 @@ CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"E37000055",lab
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"E37000056",label:"South East" });
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"E37000057",label:"South East Midlands" });
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"E37000058",label:"York, North Yorkshire and East Riding" });
-CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W42000001",label:"Cardiff Capital Region" });
-CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W42000002",label:"Growing Mid Wales" });
-CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W42000003",label:"North Wales Economic Ambition Board" });
-CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W42000004",label:"Swansea Bay City Region" });
+CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W19000001",label:"North Wales" });
+CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W19000002",label:"Mid Wales" });
+CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W19000003",label:"South West Wales" });
+CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"W19000004",label:"South East Wales" });
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"S09000001",label:"Aberdeen City and Shire" });
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"S09000002",label:"East of Scotland" });
 CREATE (node:`_generic_hierarchy_node_enterprise-regions` { code:"S09000003",label:"Highlands and Islands" });
@@ -166,16 +166,16 @@ MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hie
 WHERE parent.code = "E92000001" AND child.code = "E37000058"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
-WHERE parent.code = "W92000004" AND child.code = "W42000001"
+WHERE parent.code = "W92000004" AND child.code = "W19000001"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
-WHERE parent.code = "W92000004" AND child.code = "W42000002"
+WHERE parent.code = "W92000004" AND child.code = "W19000002"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
-WHERE parent.code = "W92000004" AND child.code = "W42000003"
+WHERE parent.code = "W92000004" AND child.code = "W19000003"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
-WHERE parent.code = "W92000004" AND child.code = "W42000004"
+WHERE parent.code = "W92000004" AND child.code = "W19000004"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
 WHERE parent.code = "S92000003" AND child.code = "S09000001"
@@ -196,11 +196,11 @@ MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hie
 WHERE parent.code = "S92000003" AND child.code = "S09000006"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
-WHERE parent.code = "K03000001" AND child.code = "S92000003"
+WHERE parent.code = "K03000001" AND child.code = "E92000001"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
 WHERE parent.code = "K03000001" AND child.code = "W92000004"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_enterprise-regions`),(child:`_generic_hierarchy_node_enterprise-regions`)
-WHERE parent.code = "K03000001" AND child.code = "E92000001"
+WHERE parent.code = "K03000001" AND child.code = "S92000003"
 CREATE (child)-[:hasParent]->(parent);
