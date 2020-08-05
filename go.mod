@@ -3,7 +3,7 @@ module github.com/ONSdigital/dp-hierarchy-builder
 go 1.13
 
 require (
-	github.com/ONSdigital/dp-graph/v2 v2.0.1
+	github.com/ONSdigital/dp-graph/v2 v2.0.11
 	github.com/ONSdigital/dp-healthcheck v1.0.3
 	github.com/ONSdigital/dp-import v0.0.0-20180202121531-d3cc28e452c3
 	github.com/ONSdigital/dp-kafka v1.1.5

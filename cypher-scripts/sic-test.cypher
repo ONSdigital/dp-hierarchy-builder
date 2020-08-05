@@ -1252,7 +1252,7 @@ CREATE (node:`_generic_hierarchy_node_sic-test` { code:"90--91",label:"90-91 : C
 CREATE (node:`_generic_hierarchy_node_sic-test` { code:"92--93",label:"92-93 : Gambling and betting; sports and recreation activities" });
 CREATE (node:`_generic_hierarchy_node_sic-test` { code:"97--98",label:"97-98 : Households as employers and own use production" });
 CREATE (node:`_generic_hierarchy_node_sic-test` { code:"G--T",label:"G-T : Services sector" });
-CREATE (node:`_generic_hierarchy_node_sic-test` { code:"01--09; 35--39",label:"01-09; 35-39 : Agriculture, mining, electricity, gas, water and waste" });
+CREATE (node:`_generic_hierarchy_node_sic-test` { code:"01--09--35--39",label:"01-09; 35-39 : Agriculture, mining, electricity, gas, water and waste" });
 CREATE (node:`_generic_hierarchy_node_sic-test` { code:"ABDE",label:"ABDE : Agriculture, mining, electricity, gas, water and waste" });
 CREATE (node:`_generic_hierarchy_node_sic-test` { code:"10--15",label:"10-15 : Manufacture of food, beverages, textiles and clothing" });
 CREATE (node:`_generic_hierarchy_node_sic-test` { code:"CA--CB",label:"CA-CB : Manufacture of food, beverages, textiles and clothing" });
@@ -5025,7 +5025,7 @@ MATCH (parent:`_generic_hierarchy_node_sic-test`),(child:`_generic_hierarchy_nod
 WHERE parent.code = "total" AND child.code = "G--T"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_sic-test`),(child:`_generic_hierarchy_node_sic-test`)
-WHERE parent.code = "A" AND child.code = "01--09; 35--39"
+WHERE parent.code = "A" AND child.code = "01--09--35--39"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_sic-test`),(child:`_generic_hierarchy_node_sic-test`)
 WHERE parent.code = "total" AND child.code = "ABDE"
