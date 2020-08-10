@@ -101,47 +101,57 @@ func main() {
 	ctx, cancel := context.WithTimeout(ctx, cfg.GracefulShutdownTimeout)
 	hasShutdownError := false
 
-	// gracefully dispose resources
-	hc.Stop()
+	go func() {
+		defer cancel()
 
-	err = httpServer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
+		log.Event(ctx, "stopping health check", log.INFO)
+		hc.Stop()
 
-	err = eventConsumer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing event consumer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
+		log.Event(ctx, "closing http server", log.INFO)
+		err = httpServer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
 
-	err = kafkaConsumer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing kafka consumer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
+		log.Event(ctx, "closing event consumer", log.INFO)
+		err = eventConsumer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing event consumer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
 
-	err = kafkaProducer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing kafka producer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
+		log.Event(ctx, "closing kafka consumer", log.INFO)
+		err = kafkaConsumer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing kafka consumer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
 
-	err = kafkaErrorProducer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing kafka error producer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
+		log.Event(ctx, "closing kafka producer", log.INFO)
+		err = kafkaProducer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing kafka producer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
 
-	err = db.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing graph db connection", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
+		log.Event(ctx, "closing kafka error producer", log.INFO)
+		err = kafkaErrorProducer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing kafka error producer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
 
-	// cancel the timer in the shutdown context
-	cancel()
+		log.Event(ctx, "closing graph db connection", log.INFO)
+		err = db.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing graph db connection", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+	}()
+
+	// wait for timeout or success (cancel)
+	<-ctx.Done()
 
 	if hasShutdownError {
 		err = errors.New("failed to shutdown gracefully")
