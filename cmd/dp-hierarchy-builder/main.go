@@ -153,6 +153,12 @@ func main() {
 	// wait for timeout or success (cancel)
 	<-ctx.Done()
 
+	// timeout expired
+	if ctx.Err() == context.DeadlineExceeded {
+		log.Event(ctx, "shutdown timed out", log.ERROR, log.Error(ctx.Err()))
+		os.Exit(1)
+	}
+
 	if hasShutdownError {
 		err = errors.New("failed to shutdown gracefully")
 		log.Event(ctx, "failed to shutdown gracefully ", log.ERROR, log.Error(err))
