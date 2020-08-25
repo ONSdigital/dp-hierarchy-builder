@@ -57,6 +57,7 @@ There are a number of utility applications for manual tasks (found under the cmd
 * geography-transformer - take a geography input CSV file and output a full hierarchy input file / cypher script
 * hierarchy-transformer - take a hierarchy input CSV file and generate cypher script
 * builder - builds an instance hierarchy from a full hierarchy
+* cypher-transformer - build a hierarchy input CSV from an existing cypher hierarchy script
 
 #### Manually building instance hierarchies
 
