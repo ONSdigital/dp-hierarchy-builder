@@ -1,0 +1,126 @@
+code,label,parent
+0,0 - Food & live animals,T
+00,00 - Live animals,0
+01,01 - Meat & meat preparations,0
+02,02 - Dairy products & eggs,0
+03,03 - Fish & shellfish,0
+04,04 - Cereals,0
+05,05 - Vegetables & fruit,0
+06,06 - Sugar,0
+07,"07 - Coffee, tea, cocoa etc",0
+08,08 - Animal feeding stuffs,0
+09,09 - Miscellaneous foods,0
+1,1 - Beverages & tobacco,T
+11,11 - Beverages,1
+12,12 - Tobacco,1
+2,2 - Crude materials,T
+21,"21 - Hides, skins & furskins",2
+22,22 - Oil-seeds & oleaginous fruits,2
+23,23 - Crude rubber,2
+24,24 - Wood & cork,2
+25,25 - Pulp & waste paper,2
+26,26 - Textile fibres,2
+27,27 - Crude minerals & fertilisers,2
+28,28 - Metal ores & scrap,2
+29,29 - Other crude animal & vegetable materials,2
+3,3 - Fuels,T
+32,"32 - Coal, coke & briquettes",3
+33,33 - Oil,3
+33O,33O - Crude oil,3
+33R,33R - Refined oil,3
+34,34 - Gas,3
+35,35 - Electricity,3
+3OF,3OF - Fuels other than oil,3
+4,4 - Animal & vegetable oils & fats,T
+41,41 - Animal oils & fats,4
+42,42 - Vegetable oils & fats,4
+43,43 - Processed oils & fats,4
+5,5 - Chemicals,T
+51,51 - Organic chemicals,5
+52,52 - Inorganic chemicals,5
+53,"53 - Dyeing, tanning & colouring materials",5
+54,54 - Medicinal & pharmaceutical products,5
+55,55 - Toilet & cleansing preparations,5
+56,56 - Processed fertilisers,5
+57,57 - Plastics in primary forms,5
+58,58 - Plastics in non-primary forms,5
+59,59 - Other chemicals,5
+6,6 - Material manufactures,T
+61,61 - Leather manufactures,6
+62,62 - Rubber manufactures,6
+63,63 - Wood & cork manufactures,6
+64,64 - Paper & paperboard,6
+65,65 - Textile fabrics,6
+66,66 - Mineral manufactures,6
+67,67 - Iron & steel,6
+68,68 - Non-ferrous metals,6
+69,69 - Miscellaneous metal manufactures,6
+7,7 - Machinery & transport equipment,T
+71EI,71EI - Electric motors (intermediate),7
+71EK,71EK - Electric motors (capital),7
+71MC,71MC - Mechanical power generators (consumer),7
+71MI,71MI - Mechanical power generators (intermediate),7
+71MK,71MK - Mechanical power generators (capital),7
+72C,72C - Specialised machinery (consumer),7
+72I,72I - Specialised machinery (intermediate),7
+72K,72K - Specialised machinery (capital),7
+73I,73I - Metal working machinery (intermediate),7
+73K,73K - Metal working machinery (capital),7
+74C,74C - General industrial machinery (consumer),7
+74I,74I - General industrial machinery (intermediate),7
+74K,74K - General industrial machinery (capital),7
+75C,75C - Office machinery (consumer),7
+75I,75I - Office machinery (intermediate),7
+75K,75K - Office machinery (capital),7
+76C,76C - Telecoms & sound equipment (consumer),7
+76I,76I - Telecoms & sound equipment (intermediate),7
+76K,76K - Telecoms & sound equipment (capital),7
+77C,77C - Miscellaneous electrical goods (consumer),7
+77I,77I - Miscellaneous electrical goods (intermediate),7
+77K,77K - Miscellaneous electrical goods (capital),7
+78,78 - Road vehicles,7
+78C,78C - Road vehicles other than cars (consumer),7
+78I,78I - Road vehicles other than cars (intermediate),7
+78K,78K - Road vehicles other than cars (capital),7
+78M,78M - Cars,7
+79,79 - Other transport equipment,7
+791I,791I - Road vehicles other than cars (intermediate),7
+791K,791K - Railway equipment (capital),7
+792,792 - Aircraft,7
+792-3,792-3 - Ships & aircraft,7
+793,793 - Ships,7
+7E,7E - Electrical machinery,7
+7EC,7EC - Electrical machinery (consumer),7
+7EI,7EI - Electrical machinery (intermediate),7
+7EK,7EK - Electrical machinery (intermediate),7
+7M,7M - Mechanical machinery,7
+7MC,7MC - Mechanical machinery (consumer),7
+7MI,7MI - Mechanical machinery (intermediate),7
+7MK,7MK - Mechanical machinery (capital),7
+8,8 - Miscellaneous manufactures,T
+81C,"81C - Plumbing, heating & lighting fixtures (consumer)",8
+81I,"81I - Plumbing, heating & lighting fixtures (intermediate)",8
+81K,"81K - Plumbing, heating & lighting fixtures (capital)",8
+82C,82C - Furniture (consumer),8
+82I,82I - Furniture (intermediate),8
+82K,82K - Furniture (capital),8
+83,"83 - Travel goods, handbags etc",8
+84,84 - Clothing,8
+85,85 - Footwear,8
+87C,87C - Scientific instruments (consumer),8
+87I,87I - Scientific instruments (intermediate),8
+87K,87K - Scientific instruments (capital),8
+88C,88C - Photographic & optical goods & clocks (consumer),8
+88I,88I - Photographic & optical goods & clocks (intermediate),8
+88K,88K - Photographic & optical goods & clocks (capital),8
+896,896 - Works of art,8
+897C,897C - Jewellery,8
+89I,89I - Other manufactures (intermediate),8
+89K,89K - Other manufactures (capital),8
+89OC,89OC - Other manufactures (consumer),8
+8O,8O - Other manufactures,8
+8OC,8OC - Other miscellaneous manufactures (consumer),8
+8OI,8OI - Other miscellaneous manufactures (intermediate),8
+8OK,8OK - Other miscellaneous manufactures (capital),8
+9,9 - Unspecified goods,T
+T,T - Total,

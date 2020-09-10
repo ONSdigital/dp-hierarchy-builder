@@ -1,0 +1,495 @@
+code,label,parent
+1,"Managers, directors and senior officials",all
+11,Corporate managers and directors,1
+111,Chief executives and senior officials,11
+1115,Chief executives and senior officials,111
+1116,Elected officers and representatives,111
+112,Production managers and directors,11
+1121,Production managers and directors in manufacturing,112
+1122,Production managers and directors in construction,112
+1123,Production managers and directors in mining and energy,112
+113,Functional managers and directors,11
+1131,Financial managers and directors,113
+1132,Marketing and sales directors,113
+1133,Purchasing managers and directors,113
+1134,Advertising and public relations directors,113
+1135,Human resource managers and directors,113
+1136,Information technology and telecommunications directors,113
+1139,Functional managers and directors n.e.c.,113
+115,Financial institution managers and directors,11
+1150,Financial institution managers and directors,115
+116,Managers and directors in transport and logistics,11
+1161,Managers and directors in transport and distribution,116
+1162,Managers and directors in storage and warehousing,116
+117,Senior officers in protective services,11
+1171,Officers in armed forces,117
+1172,Senior police officers,117
+1173,"Senior officers in fire, ambulance, prison and related services",117
+118,Health and social services managers and directors,11
+1181,Health services and public health managers and directors,118
+1184,Social services managers and directors,118
+119,Managers and directors in retail and wholesale,11
+1190,Managers and directors in retail and wholesale,119
+12,Other managers and proprietors,1
+121,Managers and proprietors in agriculture related services,12
+1211,Managers and proprietors in agriculture and horticulture,121
+1213,"Managers and proprietors in forestry, fishing and related services",121
+122,Managers and proprietors in hospitality and leisure services,12
+1221,Hotel and accommodation managers and proprietors,122
+1223,Restaurant and catering establishment managers and proprietors,122
+1224,Publicans and managers of licensed premises,122
+1225,Leisure and sports managers,122
+1226,Travel agency managers and proprietors,122
+124,Managers and proprietors in health and care services,12
+1241,Health care practice managers,124
+1242,"Residential, day and domiciliary  care managers and proprietors",124
+125,Managers and proprietors in other services,12
+1251,"Property, housing and estate managers",125
+1252,Garage managers and proprietors,125
+1253,Hairdressing and beauty salon managers and proprietors,125
+1254,Shopkeepers and proprietors – wholesale and retail,125
+1255,Waste disposal and environmental services managers,125
+1259,Managers and proprietors in other services n.e.c.,125
+2,Professional occupations,all
+21,"Science, research, engineering and technology professionals",2
+211,Natural and social science professionals,21
+2111,Chemical scientists,211
+2112,Biological scientists and biochemists,211
+2113,Physical scientists,211
+2114,Social and humanities scientists,211
+2119,Natural and social science professionals n.e.c.,211
+212,Engineering professionals,21
+2121,Civil engineers,212
+2122,Mechanical engineers,212
+2123,Electrical engineers,212
+2124,Electronics engineers,212
+2126,Design and development engineers,212
+2127,Production and process engineers,212
+2129,Engineering professionals n.e.c.,212
+213,Information technology and telecommunications professionals,21
+2133,It specialist managers,213
+2134,It project and programme managers,213
+2135,"It business analysts, architects and systems designers",213
+2136,Programmers and software development professionals,213
+2137,Web design and development professionals,213
+2139,Information technology and telecommunications professionals n.e.c.,213
+214,Conservation and environment professionals,21
+2141,Conservation professionals,214
+2142,Environment professionals,214
+215,Research and development managers ,21
+2150,Research and development managers,215
+22,Health professionals,2
+221,Health professionals,22
+2211,Medical practitioners,221
+2212,Psychologists,221
+2213,Pharmacists,221
+2214,Ophthalmic opticians,221
+2215,Dental practitioners,221
+2216,Veterinarians,221
+2217,Medical radiographers,221
+2218,Podiatrists,221
+2219,Health professionals n.e.c.,221
+222,Therapy professionals,22
+2221,Physiotherapists,222
+2222,Occupational therapists,222
+2223,Speech and language therapists,222
+2229,Therapy professionals n.e.c.,222
+223,Nursing and midwifery professionals,22
+2231,Nurses,223
+2232,Midwives,223
+23,Teaching and educational professionals,2
+231,Teaching and educational professionals,23
+2311,Higher education teaching professionals,231
+2312,Further education teaching professionals,231
+2314,Secondary education teaching professionals,231
+2315,Primary and nursery education teaching professionals,231
+2316,Special needs education teaching professionals,231
+2317,Senior professionals of educational establishments,231
+2318,Education advisers and school inspectors,231
+2319,Teaching and other educational professionals n.e.c.,231
+24,"Business, media and public service professionals",2
+241,Legal professionals,24
+2412,Barristers and judges,241
+2413,Solicitors,241
+2419,Legal professionals n.e.c.,241
+242,"Business, research and administrative professionals",24
+2421,Chartered and certified accountants,242
+2423,Management consultants and business analysts,242
+2424,Business and financial project management professionals,242
+2425,"Actuaries, economists and statisticians",242
+2426,Business and related research professionals,242
+2429,"Business, research and administrative professionals n.e.c.",242
+243,"Architects, town planners and surveyors",24
+2431,Architects,243
+2432,Town planning officers,243
+2433,Quantity surveyors,243
+2434,Chartered surveyors,243
+2435,Chartered architectural technologists,243
+2436,Construction project managers and related professionals,243
+244,Welfare professionals,24
+2442,Social workers,244
+2443,Probation officers,244
+2444,Clergy,244
+2449,Welfare professionals n.e.c.,244
+245,Librarians and related professionals,24
+2451,Librarians,245
+2452,Archivists and curators,245
+246,Quality and regulatory professionals,24
+2461,Quality control and planning engineers,246
+2462,Quality assurance and regulatory professionals,246
+2463,Environmental health professionals,246
+247,Media professionals,24
+2471,"Journalists, newspaper and periodical editors",247
+2472,Public relations professionals,247
+2473,Advertising accounts managers and creative directors,247
+3,Associate professional and technical occupations,all
+31,"Science, engineering and technology associate professionals",3
+311,"Science, engineering and production technicians",31
+3111,Laboratory technicians,311
+3112,Electrical and electronics technicians,311
+3113,Engineering technicians,311
+3114,Building and civil engineering technicians,311
+3115,Quality assurance technicians,311
+3116,"Planning, process and production technicians",311
+3119,"Science, engineering and production technicians n.e.c.",311
+312,Draughtspersons and related architectural technicians,31
+3121,Architectural and town planning technicians,312
+3122,Draughtspersons,312
+313,Information technology technicians,31
+3131,It operations technicians,313
+3132,It user support technicians,313
+32,Health and social care associate professionals,3
+321,Health associate professionals,32
+3213,Paramedics,321
+3216,Dispensing opticians,321
+3217,Pharmaceutical technicians,321
+3218,Medical and dental technicians,321
+3219,Health associate professionals n.e.c.,321
+323,Welfare and housing associate professionals,32
+3231,Youth and community workers,323
+3233,Child and early years officers,323
+3234,Housing officers,323
+3235,Counsellors,323
+3239,Welfare and housing associate professionals n.e.c.,323
+33,Protective service occupations,3
+331,Protective service occupations,33
+3311,Ncos and other ranks,331
+3312,Police officers (sergeant and below),331
+3313,Fire service officers (watch manager and below),331
+3314,Prison service officers (below principal officer),331
+3315,Police community support officers,331
+3319,Protective service associate professionals n.e.c.,331
+34,"Culture, media and sports occupations",3
+341,"Artistic, literary and media occupations",34
+3411,Artists,341
+3412,"Authors, writers and translators",341
+3413,"Actors, entertainers and presenters",341
+3414,Dancers and choreographers,341
+3415,Musicians,341
+3416,"Arts officers, producers and directors",341
+3417,"Photographers, audio-visual and broadcasting equipment operators",341
+342,Design occupations,34
+3421,Graphic designers,342
+3422,"Product, clothing and related designers",342
+344,Sports and fitness occupations,34
+3441,Sports players,344
+3442,"Sports coaches, instructors and officials",344
+3443,Fitness instructors,344
+35,Business and public service associate professionals,3
+351,Transport associate professionals,35
+3511,Air traffic controllers,351
+3512,Aircraft pilots and flight engineers,351
+3513,Ship and hovercraft officers,351
+352,Legal associate professionals,35
+3520,Legal associate professionals,352
+353,"Business, finance and related associate professionals",35
+3531,"Estimators, valuers and assessors",353
+3532,Brokers,353
+3533,Insurance underwriters,353
+3534,Finance and investment analysts and advisers,353
+3535,Taxation experts,353
+3536,Importers and exporters,353
+3537,Financial and accounting technicians,353
+3538,Financial accounts managers,353
+3539,Business and related associate professionals n.e.c.,353
+354,"Sales, marketing and related associate professionals",35
+3541,Buyers and procurement officers,354
+3542,Business sales executives,354
+3543,Marketing associate professionals,354
+3544,Estate agents and auctioneers,354
+3545,Sales accounts and business development managers,354
+3546,Conference and exhibition managers and organisers,354
+355,Conservation and environmental associate professionals,35
+3550,Conservation and environmental associate professionals,355
+356,Public services and other associate professionals,35
+3561,Public services associate professionals,356
+3562,Human resources and industrial relations officers,356
+3563,Vocational and industrial trainers and instructors,356
+3564,Careers advisers and vocational guidance specialists,356
+3565,Inspectors of standards and regulations,356
+3567,Health and safety officers,356
+4,Administrative and secretarial occupations,all
+41,Administrative occupations,4
+411,Administrative occupations: government and related organisations,41
+4112,National government administrative occupations,411
+4113,Local government administrative occupations,411
+4114,Officers of non-governmental organisations,411
+412,Administrative occupations: finance,41
+4121,Credit controllers,412
+4122,"Book-keepers, payroll managers and wages clerks",412
+4123,Bank and post office clerks,412
+4124,Finance officers,412
+4129,Financial administrative occupations n.e.c.,412
+413,Administrative occupations: records,41
+4131,Records clerks and assistants,413
+4132,Pensions and insurance clerks and assistants,413
+4133,Stock control clerks and assistants,413
+4134,Transport and distribution clerks and assistants,413
+4135,Library clerks and assistants,413
+4138,Human resources administrative occupations,413
+415,Other administrative occupations,41
+4151,Sales administrators,415
+4159,Other administrative occupations n.e.c.,415
+416,Administrative occupations: office managers and supervisors,41
+4161,Office managers,416
+4162,Office supervisors,416
+42,Secretarial and related occupations,4
+421,Secretarial and related occupations,42
+4211,Medical secretaries,421
+4212,Legal secretaries,421
+4213,School secretaries,421
+4214,Company secretaries,421
+4215,Personal assistants and other secretaries,421
+4216,Receptionists,421
+4217,Typists and related keyboard occupations,421
+5,Skilled trades occupations,all
+51,Skilled agricultural and related trades,5
+511,Agricultural and related trades,51
+5111,Farmers,511
+5112,Horticultural trades,511
+5113,Gardeners and landscape gardeners,511
+5114,Groundsmen and greenkeepers,511
+5119,Agricultural and fishing trades n.e.c.,511
+52,"Skilled metal, electrical and electronic trades",5
+521,"Metal forming, welding and related trades",52
+5211,Smiths and forge workers,521
+5212,"Moulders, core makers and die casters",521
+5213,Sheet metal workers,521
+5214,"Metal plate workers, and riveters",521
+5215,Welding trades,521
+5216,Pipe fitters,521
+522,"Metal machining, fitting and instrument making trades",52
+5221,Metal machining setters and setter-operators,522
+5222,"Tool makers, tool fitters and markers-out",522
+5223,Metal working production and maintenance fitters,522
+5224,Precision instrument makers and repairers,522
+5225,Air-conditioning and refrigeration engineers,522
+523,Vehicle trades,52
+5231,"Vehicle technicians, mechanics and electricians",523
+5232,Vehicle body builders and repairers ,523
+5234,Vehicle paint technicians,523
+5235,Aircraft maintenance and related trades,523
+5236,Boat and ship builders and repairers,523
+5237,Rail and rolling stock builders and repairers,523
+524,Electrical and electronic trades,52
+5241,Electricians and electrical fitters,524
+5242,Telecommunications engineers,524
+5244,"Tv, video and audio engineers",524
+5245,It engineers,524
+5249,Electrical and electronic trades n.e.c.,524
+525,"Skilled metal, electrical and electronic trades supervisors",52
+5250,"Skilled metal, electrical and electronic trades supervisors",525
+53,Skilled construction and building trades,5
+531,Construction and building trades,53
+5311,Steel erectors,531
+5312,Bricklayers and masons,531
+5313,"Roofers, roof tilers and slaters",531
+5314,Plumbers and heating and ventilating engineers,531
+5315,Carpenters and joiners,531
+5316,"Glaziers, window fabricators and fitters",531
+5319,Construction and building trades n.e.c.,531
+532,Building finishing trades,53
+5321,Plasterers,532
+5322,Floorers and wall tilers,532
+5323,Painters and decorators,532
+533,Construction and building trades supervisors,53
+5330,Construction and building trades supervisors,533
+54,"Textiles, printing and other skilled trades",5
+541,Textiles and garments trades,54
+5411,Weavers and knitters,541
+5412,Upholsterers,541
+5413,Footwear and leather working trades,541
+5414,Tailors and dressmakers,541
+5419,"Textiles, garments and related trades n.e.c.",541
+542,Printing trades,54
+5421,Pre-press technicians,542
+5422,Printers,542
+5423,Print finishing and binding workers,542
+543,Food preparation and hospitality trades,54
+5431,Butchers,543
+5432,Bakers and flour confectioners,543
+5433,Fishmongers and poultry dressers,543
+5434,Chefs,543
+5435,Cooks,543
+5436,Catering and bar managers,543
+544,Other skilled trades,54
+5441,"Glass and ceramics makers, decorators and finishers",544
+5442,Furniture makers and other craft woodworkers,544
+5443,Florists,544
+5449,Other skilled trades n.e.c.,544
+6,"Caring, leisure and other service occupations",all
+61,Caring personal service occupations,6
+612,Childcare and related personal services,61
+6121,Nursery nurses and assistants,612
+6122,Childminders and related occupations,612
+6123,Playworkers,612
+6125,Teaching assistants,612
+6126,Educational support assistants,612
+613,Animal care and control services,61
+6131,Veterinary nurses,613
+6132,Pest control officers,613
+6139,Animal care services occupations n.e.c.,613
+614,Caring personal services,61
+6141,Nursing auxiliaries and assistants,614
+6142,Ambulance staff (excluding paramedics),614
+6143,Dental nurses,614
+6144,Houseparents and residential wardens,614
+6145,Care workers and home carers,614
+6146,Senior care workers,614
+6147,Care escorts,614
+6148,"Undertakers, mortuary and crematorium assistants",614
+62,"Leisure, travel and related personal service occupations",6
+621,Leisure and travel services,62
+6211,Sports and leisure assistants,621
+6212,Travel agents,621
+6214,Air travel assistants,621
+6215,Rail travel assistants,621
+6219,Leisure and travel service occupations n.e.c.,621
+622,Hairdressers and related services,62
+6221,Hairdressers and barbers,622
+6222,Beauticians and related occupations,622
+623,Housekeeping and related services,62
+6231,Housekeepers and related occupations,623
+6232,Caretakers,623
+624,Cleaning and housekeeping managers and supervisors,62
+6240,Cleaning and housekeeping managers and supervisors,624
+7,Sales and customer service occupations,all
+71,Sales occupations,7
+711,Sales assistants and retail cashiers,71
+7111,Sales and retail assistants,711
+7112,Retail cashiers and check-out operators,711
+7113,Telephone salespersons,711
+7114,Pharmacy and other dispensing assistants,711
+7115,Vehicle and parts salespersons and advisers,711
+712,Sales related occupations,71
+7121,Collector salespersons and credit agents,712
+7122,"Debt, rent and other cash collectors",712
+7123,Roundspersons and van salespersons,712
+7124,Market and street traders and assistants,712
+7125,Merchandisers and window dressers,712
+7129,Sales related occupations n.e.c.,712
+713,Sales supervisors,71
+7130,Sales supervisors,713
+72,Customer service occupations,7
+721,Customer service occupations,72
+7211,Call and contact centre occupations,721
+7213,Telephonists,721
+7214,Communication operators,721
+7215,Market research interviewers,721
+7219,Customer service occupations n.e.c.,721
+722,Customer service managers and supervisors,72
+7220,Customer service managers and supervisors,722
+8,"Process, plant and machine operatives",all
+81,"Process, plant and machine operatives",8
+811,Process operatives,81
+8111,"Food, drink and tobacco process operatives",811
+8112,Glass and ceramics process operatives,811
+8113,Textile process operatives,811
+8114,Chemical and related process operatives,811
+8115,Rubber process operatives,811
+8116,Plastics process operatives,811
+8117,Metal making and treating process operatives,811
+8118,Electroplaters,811
+8119,Process operatives n.e.c.,811
+812,Plant and machine operatives,81
+8121,Paper and wood machine operatives,812
+8122,Coal mine operatives,812
+8123,Quarry workers and related operatives,812
+8124,Energy plant operatives,812
+8125,Metal working machine operatives,812
+8126,Water and sewerage plant operatives,812
+8127,Printing machine assistants,812
+8129,Plant and machine operatives n.e.c.,812
+813,Assemblers and routine operatives,81
+8131,Assemblers (electrical and electronic products),813
+8132,Assemblers (vehicles and metal goods),813
+8133,Routine inspectors and testers,813
+8134,"Weighers, graders and sorters",813
+8135,"Tyre, exhaust and windscreen fitters",813
+8137,Sewing machinists,813
+8139,Assemblers and routine operatives n.e.c.,813
+814,Construction operatives,81
+8141,"Scaffolders, stagers and riggers",814
+8142,Road construction operatives,814
+8143,Rail construction and maintenance operatives,814
+8149,Construction operatives n.e.c.,814
+82,Transport and mobile machine drivers and operatives,8
+821,Road transport drivers,82
+8211,Large goods vehicle drivers,821
+8212,Van drivers,821
+8213,Bus and coach drivers,821
+8214,Taxi and cab drivers and chauffeurs,821
+8215,Driving instructors,821
+822,Mobile machine drivers and operatives,82
+8221,Crane drivers,822
+8222,Fork-lift truck drivers,822
+8223,Agricultural machinery drivers,822
+8229,Mobile machine drivers and operatives n.e.c.,822
+823,Other drivers and transport operatives,82
+8231,Train and tram drivers,823
+8232,Marine and waterways transport operatives,823
+8233,Air transport operatives,823
+8234,Rail transport operatives,823
+8239,Other drivers and transport operatives n.e.c.,823
+9,Elementary occupations,all
+91,Elementary trades and related occupations,9
+911,Elementary agricultural occupations,91
+9111,Farm workers,911
+9112,Forestry workers,911
+9119,Fishing and other elementary agriculture occupations n.e.c.,911
+912,Elementary construction occupations,91
+9120,Elementary construction occupations,912
+913,Elementary process plant occupations,91
+9132,Industrial cleaning process occupations,913
+9134,"Packers, bottlers, canners and fillers",913
+9139,Elementary process plant occupations n.e.c.,913
+92,Elementary administration and service occupations,9
+921,Elementary administration occupations,92
+9211,"Postal workers, mail sorters, messengers and couriers",921
+9219,Elementary administration occupations n.e.c.,921
+923,Elementary cleaning occupations,92
+9231,Window cleaners,923
+9232,Street cleaners,923
+9233,Cleaners and domestics,923
+9234,"Launderers, dry cleaners and pressers",923
+9235,Refuse and salvage occupations,923
+9236,Vehicle valeters and cleaners,923
+9239,Elementary cleaning occupations n.e.c.,923
+924,Elementary security occupations,92
+9241,Security guards and related occupations,924
+9242,Parking and civil enforcement occupations,924
+9244,School midday and crossing patrol occupations,924
+9249,Elementary security occupations n.e.c.,924
+925,Elementary sales occupations,92
+9251,Shelf fillers,925
+9259,Elementary sales occupations n.e.c.,925
+926,Elementary storage occupations,92
+9260,Elementary storage occupations,926
+927,Other elementary services occupations,92
+9271,Hospital porters,927
+9272,Kitchen and catering assistants,927
+9273,Waiters and waitresses,927
+9274,Bar staff,927
+9275,Leisure and theme park attendants,927
+9279,Other elementary services occupations n.e.c.,927
+all,All,
