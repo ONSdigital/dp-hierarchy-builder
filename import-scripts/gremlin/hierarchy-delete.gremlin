@@ -1,0 +1,1 @@
+g.V().hasLabel('_generic_hierarchy_node_output-area-geography').drop()

@@ -18,9 +18,11 @@ import (
 	"strings"
 )
 
-var filepath = flag.String("file", "cmd/hierarchy-transformer/sic07-heirarchy.csv", "The path to the import filepath")
-var cypherFile = flag.String("cypher", "cmd/hierarchy-transformer/output/hierarchy.cypher", "")
-var cypherDelFile = flag.String("cypher-delete", "cmd/hierarchy-transformer/output/hierarchy-delete.cypher", "")
+var filepath = flag.String("file", "import-scripts/output_area_geography_hierarchy_input.csv", "The path to the import filepath")
+var cypherFile = flag.String("cypher", "import-scripts/cypher/hierarchy.cypher", "")
+var cypherDelFile = flag.String("cypher-delete", "import-scripts/cypher/output/hierarchy-delete.cypher", "")
+var gremlinFile = flag.String("gremlin", "import-scripts/gremlin/hierarchy.gremlin", "")
+var gremlinDelFile = flag.String("gremlin-delete", "import-scripts/gremlin/hierarchy-delete.gremlin", "")
 
 func main() {
 

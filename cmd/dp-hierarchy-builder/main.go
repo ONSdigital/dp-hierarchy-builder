@@ -47,7 +47,7 @@ func main() {
 		kafkaBrokers,
 		cfg.ConsumerTopic,
 		cfg.ConsumerGroup,
-		kafka.OffsetNewest,
+		kafka.OffsetOldest,
 		true,
 		cgChannels,
 	)
