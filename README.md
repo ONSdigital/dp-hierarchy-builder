@@ -4,22 +4,28 @@ dp-hierarchy-builder
 The hierarchy builder is a service that forms part of the dataset import process. It requires a 'full' hierarchy to be available for the dataset you are importing
 
 ### Getting started
-
-Import the CPIH full hierarchy:
-
-`cypher-shell < cypher-scripts/cpih1dim1aggid.cypher`
-
-Import the mid-year-pop-est full hierarchy:
-
-`cypher-shell < cypher-scripts/mid-year-pop-geography.cypher`
-
-You can use additional flags if running against an environment other than localhost:
-
-`cypher-shell -u USER -p PASSWORD -a bolt://localhost:7687 < .....`
-
 Run the `dp-hierarchy-builder` service:
 
 `make debug` 
+
+### Hierarchy import scripts
+
+The import scripts rely on the CLI tool for the database you're targeting:
+ - `cypher-shell` for Neo4j / Cypher import
+ - `gremlin.sh` for Neptune / Gremlin imports
+
+You may also need an SSH tunnel to the database if it's not running locally.
+
+Example import for the CPIH full hierarchy: (replace the filename for other hierarchy import files)
+
+Cypher:
+`cypher-shell < import-scripts/cypher/cpih1dim1aggid.cypher`
+
+Gremlin:
+`./gremlin-import.sh import-scripts/gremlin/cpih1dim1aggid.grm`
+
+For Cypher imports, you can use additional flags if running against an environment other than localhost:
+`cypher-shell -u USER -p PASSWORD -a bolt://localhost:7687 < .....`
 
 ### Kafka scripts
 
