@@ -1,0 +1,72 @@
+code,label,parent
+W92000004,Wales,K03000001
+E92000001,England,K03000001
+S09000006,West of Scotland,S92000003
+S09000005,Tayside,S92000003
+S09000004,South of Scotland,S92000003
+S09000003,Highlands and Islands,S92000003
+S09000002,East of Scotland,S92000003
+S09000001,Aberdeen City and Shire,S92000003
+W19000004,South East Wales,W92000004
+W19000003,South West Wales,W92000004
+W19000002,Mid Wales,W92000004
+W19000001,North Wales,W92000004
+E37000058,"York, North Yorkshire and East Riding",E92000001
+E37000057,South East Midlands,E92000001
+E37000056,South East,E92000001
+E37000055,Solent,E92000001
+E37000054,Sheffield City Region,E92000001
+E37000053,Oxfordshire,E92000001
+E37000052,New Anglia,E92000001
+E37000051,London,E92000001
+E37000050,Leeds City Region,E92000001
+E37000001,Black Country,E92000001
+E37000002,Buckinghamshire Thames Valley,E92000001
+E37000003,Cheshire and Warrington,E92000001
+E37000004,Coast to Capital,E92000001
+E37000005,Cornwall and Isles of Scilly,E92000001
+E37000006,Coventry and Warwickshire,E92000001
+E37000007,Cumbria,E92000001
+E37000008,"Derby, Derbyshire, Nottingham and Nottinghamshire",E92000001
+E37000009,Dorset,E92000001
+E37000010,Enterprise M3,E92000001
+E37000011,Gloucestershire,E92000001
+E37000012,Greater Birmingham and Solihull,E92000001
+E37000014,Greater Lincolnshire,E92000001
+E37000015,Greater Manchester,E92000001
+E37000016,Heart of the South West,E92000001
+E37000017,Hertfordshire,E92000001
+E37000018,Humber,E92000001
+E37000019,Lancashire,E92000001
+E37000020,Leeds City Region,E92000001
+E37000021,Leicester and Leicestershire,E92000001
+E37000022,Liverpool City Region,E92000001
+E37000023,London,E92000001
+E37000024,New Anglia,E92000001
+E37000025,North East,E92000001
+E37000027,Oxfordshire,E92000001
+E37000029,Solent,E92000001
+E37000030,South East,E92000001
+E37000032,Stoke-on-Trent and Staffordshire,E92000001
+E37000033,Swindon and Wiltshire,E92000001
+E37000034,Tees Valley,E92000001
+E37000035,Thames Valley Berkshire,E92000001
+E37000036,The Marches,E92000001
+E37000037,West of England,E92000001
+E37000038,Worcestershire,E92000001
+E37000039,"York, North Yorkshire and East Riding",E92000001
+E37000040,Sheffield City Region,E92000001
+E37000041,South East Midlands,E92000001
+E37000042,Greater Cambridge and Greater Peterborough,E92000001
+E37000013,Greater Cambridge and Greater Peterborough,E92000001
+E37000026,Northamptonshire,E92000001
+E37000031,South East Midlands,E92000001
+K03000001,Great Britain,
+S92000003,Scotland,K03000001
+E37000043,Buckinghamshire Thames Valley,E92000001
+E37000044,Coast to Capital,E92000001
+E37000045,"Derby, Derbyshire, Nottingham and Nottinghamshire",E92000001
+E37000046,Enterprise M3,E92000001
+E37000047,Greater Cambridge and Greater Peterborough,E92000001
+E37000048,Hertfordshire,E92000001
+E37000049,Humber,E92000001
