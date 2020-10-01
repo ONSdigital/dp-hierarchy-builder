@@ -1,3 +1,5 @@
+github.com/ONSdigital/dp-graph/v2 v2.2.0 h1:duocjKyN3623/A/gvata/6PWjcD4bnMWgBxlwiN46sc=
+github.com/ONSdigital/dp-graph/v2 v2.2.0/go.mod h1:6C59rOY0qBKblczkQrJZZKa8ZLR3yKkyunSCeIUavtU=
 github.com/ONSdigital/dp-healthcheck v1.0.0/go.mod h1:zighxZ/0m5u7zo0eAr8XFlA+Dz2ic7A1vna6YXvhCjQ=
 github.com/ONSdigital/dp-healthcheck v1.0.2/go.mod h1:zighxZ/0m5u7zo0eAr8XFlA+Dz2ic7A1vna6YXvhCjQ=
 github.com/ONSdigital/dp-healthcheck v1.0.3 h1:wNA34U3uPD5t1SE8P3cbGqNZP4CUjyJFbSugPYgrBG0=
