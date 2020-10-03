@@ -1,0 +1,237 @@
+codelist,code,label,parent
+nuts,UKC11,Hartlepool and Stockton-on-Tees,UKC1
+nuts,UKC12,South Teesside,UKC1
+nuts,UKC13,Darlington,UKC1
+nuts,UKC14,Durham CC,UKC1
+nuts,UKC21,Northumberland,UKC2
+nuts,UKC22,Tyneside,UKC2
+nuts,UKC23,Sunderland,UKC2
+nuts,UKD11,West Cumbria,UKD1
+nuts,UKD12,East Cumbria,UKD1
+nuts,UKD33,Manchester,UKD3
+nuts,UKD34,Greater Manchester South West,UKD3
+nuts,UKD35,Greater Manchester South East,UKD3
+nuts,UKD36,Greater Manchester North West,UKD3
+nuts,UKD37,Greater Manchester North East,UKD3
+nuts,UKD41,Blackburn with Darwen,UKD4
+nuts,UKD42,Blackpool,UKD4
+nuts,UKD44,Lancaster and Wyre,UKD4
+nuts,UKD45,Mid Lancashire,UKD4
+nuts,UKD46,East Lancashire,UKD4
+nuts,UKD47,Chorley and West Lancashire,UKD4
+nuts,UKD61,Warrington,UKD6
+nuts,UKD62,Cheshire East,UKD6
+nuts,UKD63,Cheshire West and Chester,UKD6
+nuts,UKD71,East Merseyside,UKD7
+nuts,UKD72,Liverpool,UKD7
+nuts,UKD73,Sefton,UKD7
+nuts,UKD74,Wirral,UKD7
+nuts,UKE11,"Kingston upon Hull, City of",UKE1
+nuts,UKE12,East Riding of Yorkshire,UKE1
+nuts,UKE13,North and North East Lincolnshire,UKE1
+nuts,UKE21,York,UKE2
+nuts,UKE22,North Yorkshire CC,UKE2
+nuts,UKE31,"Barnsley, Doncaster and Rotherham",UKE3
+nuts,UKE32,Sheffield,UKE3
+nuts,UKE41,Bradford,UKE4
+nuts,UKE42,Leeds,UKE4
+nuts,UKE44,Calderdale and Kirklees,UKE4
+nuts,UKE45,Wakefield,UKE4
+nuts,UKF11,Derby,UKF1
+nuts,UKF12,East Derbyshire,UKF1
+nuts,UKF13,South and West Derbyshire,UKF1
+nuts,UKF14,Nottingham,UKF1
+nuts,UKF15,North Nottinghamshire,UKF1
+nuts,UKF16,South Nottinghamshire,UKF1
+nuts,UKF21,Leicester,UKF2
+nuts,UKF22,Leicestershire CC and Rutland,UKF2
+nuts,UKF24,West Northamptonshire,UKF2
+nuts,UKF25,North Northamptonshire,UKF2
+nuts,UKF30,Lincolnshire,UKF3
+nuts,UKG11,"Herefordshire, County of",UKG1
+nuts,UKG12,Worcestershire,UKG1
+nuts,UKG13,Warwickshire,UKG1
+nuts,UKG21,Telford and Wrekin,UKG2
+nuts,UKG22,Shropshire CC,UKG2
+nuts,UKG23,Stoke-on-Trent,UKG2
+nuts,UKG24,Staffordshire CC,UKG2
+nuts,UKG31,Birmingham,UKG3
+nuts,UKG32,Solihull,UKG3
+nuts,UKG33,Coventry,UKG3
+nuts,UKG36,Dudley,UKG3
+nuts,UKG37,Sandwell,UKG3
+nuts,UKG38,Walsall,UKG3
+nuts,UKG39,Wolverhampton,UKG3
+nuts,UKH11,Peterborough,UKH1
+nuts,UKH12,Cambridgeshire CC,UKH1
+nuts,UKH14,Suffolk,UKH1
+nuts,UKH15,Norwich and East Norfolk,UKH1
+nuts,UKH16,North and West Norfolk,UKH1
+nuts,UKH17,Breckland and South Norfolk,UKH1
+nuts,UKH21,Luton,UKH2
+nuts,UKH23,Hertfordshire,UKH2
+nuts,UKH24,Bedford,UKH2
+nuts,UKH25,Central Bedfordshire,UKH2
+nuts,UKH31,Southend-on-Sea,UKH3
+nuts,UKH32,Thurrock,UKH3
+nuts,UKH34,Essex Haven Gateway,UKH3
+nuts,UKH35,West Essex,UKH3
+nuts,UKH36,Heart of Essex,UKH3
+nuts,UKH37,Essex Thames Gateway,UKH3
+nuts,UKI31,Camden and City of London,UKI3
+nuts,UKI32,Westminster,UKI3
+nuts,UKI33,Kensington & Chelsea and Hammersmith & Fulham,UKI3
+nuts,UKI34,Wandsworth,UKI3
+nuts,UKI41,Hackney and Newham,UKI4
+nuts,UKI42,Tower Hamlets,UKI4
+nuts,UKI43,Haringey and Islington,UKI4
+nuts,UKI44,Lewisham and Southwark,UKI4
+nuts,UKI45,Lambeth,UKI4
+nuts,UKI51,Bexley and Greenwich,UKI5
+nuts,UKI52,Barking & Dagenham and Havering,UKI5
+nuts,UKI53,Redbridge and Waltham Forest,UKI5
+nuts,UKI54,Enfield,UKI5
+nuts,UKI61,Bromley,UKI6
+nuts,UKI62,Croydon,UKI6
+nuts,UKI63,"Merton, Kingston upon Thames and Sutton",UKI6
+nuts,UKI71,Barnet,UKI7
+nuts,UKI72,Brent,UKI7
+nuts,UKI73,Ealing,UKI7
+nuts,UKI74,Harrow and Hillingdon,UKI7
+nuts,UKI75,Hounslow and Richmond upon Thames,UKI7
+nuts,UKJ11,Berkshire,UKJ1
+nuts,UKJ12,Milton Keynes,UKJ1
+nuts,UKJ13,Buckinghamshire CC,UKJ1
+nuts,UKJ14,Oxfordshire,UKJ1
+nuts,UKJ21,Brighton and Hove,UKJ2
+nuts,UKJ22,East Sussex CC,UKJ2
+nuts,UKJ25,West Surrey,UKJ2
+nuts,UKJ26,East Surrey,UKJ2
+nuts,UKJ27,West Sussex (South West),UKJ2
+nuts,UKJ28,West Sussex (North East),UKJ2
+nuts,UKJ31,Portsmouth,UKJ3
+nuts,UKJ32,Southampton,UKJ3
+nuts,UKJ34,Isle of Wight,UKJ3
+nuts,UKJ35,South Hampshire,UKJ3
+nuts,UKJ36,Central Hampshire,UKJ3
+nuts,UKJ37,North Hampshire,UKJ3
+nuts,UKJ41,Medway,UKJ4
+nuts,UKJ43,Kent Thames Gateway,UKJ4
+nuts,UKJ44,East Kent,UKJ4
+nuts,UKJ45,Mid Kent,UKJ4
+nuts,UKJ46,West Kent,UKJ4
+nuts,UKK11,"Bristol, City of",UKK1
+nuts,UKK12,"Bath and North East Somerset, North Somerset and South Gloucestershire",UKK1
+nuts,UKK13,Gloucestershire,UKK1
+nuts,UKK14,Swindon,UKK1
+nuts,UKK15,Wiltshire,UKK1
+nuts,UKK21,Bournemouth and Poole,UKK2
+nuts,UKK22,Dorset CC,UKK2
+nuts,UKK23,Somerset,UKK2
+nuts,UKK30,Cornwall and Isles of Scilly,UKK3
+nuts,UKK41,Plymouth,UKK4
+nuts,UKK42,Torbay,UKK4
+nuts,UKK43,Devon CC,UKK4
+nuts,UKL11,Isle of Anglesey,UKL1
+nuts,UKL12,Gwynedd,UKL1
+nuts,UKL13,Conwy and Denbighshire,UKL1
+nuts,UKL14,South West Wales,UKL1
+nuts,UKL15,Central Valleys,UKL1
+nuts,UKL16,Gwent Valleys,UKL1
+nuts,UKL17,Bridgend and Neath Port Talbot,UKL1
+nuts,UKL18,Swansea,UKL1
+nuts,UKL21,Monmouthshire and Newport,UKL2
+nuts,UKL22,Cardiff and Vale of Glamorgan,UKL2
+nuts,UKL23,Flintshire and Wrexham,UKL2
+nuts,UKL24,Powys,UKL2
+nuts,UKM50,Aberdeen City and Aberdeenshire,UKM5
+nuts,UKM61,Caithness and Sutherland and Ross and Cromarty,UKM6
+nuts,UKM62,"Inverness and Nairn and Moray, Badenoch and Strathspey",UKM6
+nuts,UKM63,"Lochaber, Skye and Lochalsh, Arran and Cumbrae and Argyll and Bute",UKM6
+nuts,UKM64,Na h-Eileanan Siar,UKM6
+nuts,UKM65,Orkney Islands,UKM6
+nuts,UKM66,Shetland Islands,UKM6
+nuts,UKM71,Angus and Dundee City,UKM7
+nuts,UKM72,Clackmannanshire and Fife,UKM7
+nuts,UKM73,East Lothian and Midlothian,UKM7
+nuts,UKM75,City of Edinburgh,UKM7
+nuts,UKM76,Falkirk,UKM7
+nuts,UKM77,Perth and Kinross and Stirling,UKM7
+nuts,UKM78,West Lothian,UKM7
+nuts,UKM81,"East Dunbartonshire, West Dunbartonshire and Helensburgh and Lomond",UKM8
+nuts,UKM82,Glasgow City,UKM8
+nuts,UKM83,"Inverclyde, East Renfrewshire and Renfrewshire",UKM8
+nuts,UKM84,North Lanarkshire,UKM8
+nuts,UKM91,Scottish Borders,UKM9
+nuts,UKM92,Dumfries and Galloway,UKM9
+nuts,UKM93,East Ayrshire and North Ayrshire mainland,UKM9
+nuts,UKM94,South Ayrshire,UKM9
+nuts,UKM95,South Lanarkshire,UKM9
+nuts,UKN06,Belfast,UKN0
+nuts,UKN07,"Armagh City, Banbridge and Craigavon",UKN0
+nuts,UKN08,"Newry, Mourne and Down",UKN0
+nuts,UKN09,Ards and North Down,UKN0
+nuts,UKN10,Derry City and Strabane,UKN0
+nuts,UKN11,Mid Ulster,UKN0
+nuts,UKN12,Causeway Coast and Glens,UKN0
+nuts,UKN13,Antrim and Newtownabbey,UKN0
+nuts,UKN14,Lisburn and Castlereagh,UKN0
+nuts,UKN15,Mid and East Antrim,UKN0
+nuts,UKN16,Fermanagh and Omagh,UKN0
+nuts,UKC1,Tees Valley and Durham,UKC
+nuts,UKC2,Northumberland and Tyne and Wear,UKC
+nuts,UKD1,Cumbria,UKD
+nuts,UKD3,Greater Manchester,UKD
+nuts,UKD4,Lancashire,UKD
+nuts,UKD6,Cheshire,UKD
+nuts,UKD7,Merseyside,UKD
+nuts,UKE1,East Yorkshire and Northern Lincolnshire,UKE
+nuts,UKE2,North Yorkshire,UKE
+nuts,UKE3,South Yorkshire,UKE
+nuts,UKE4,West Yorkshire,UKE
+nuts,UKF1,Derbyshire and Nottinghamshire,UKF
+nuts,UKF2,"Leicestershire, Rutland and Northamptonshire",UKF
+nuts,UKF3,Lincolnshire,UKF
+nuts,UKG1,"Herefordshire, Worcestershire and Warwickshire",UKG
+nuts,UKG2,Shropshire and Staffordshire,UKG
+nuts,UKG3,West Midlands,UKG
+nuts,UKH1,East Anglia,UKH
+nuts,UKH2,Bedfordshire and Hertfordshire,UKH
+nuts,UKH3,Essex,UKH
+nuts,UKI3,Inner London - West,UKI
+nuts,UKI4,Inner London - East,UKI
+nuts,UKI5,Outer London - East and North East,UKI
+nuts,UKI6,Outer London - South,UKI
+nuts,UKI7,Outer London - West and North West,UKI
+nuts,UKJ1,"Berkshire, Buckinghamshire and Oxfordshire",UKJ
+nuts,UKJ2,"Surrey, East and West Sussex",UKJ
+nuts,UKJ3,Hampshire and Isle of Wight,UKJ
+nuts,UKJ4,Kent,UKJ
+nuts,UKK1,"Gloucestershire, Wiltshire and Bath/Bristol area",UKK
+nuts,UKK2,Dorset and Somerset,UKK
+nuts,UKK3,Cornwall and Isles of Scilly,UKK
+nuts,UKK4,Devon,UKK
+nuts,UKL1,West Wales and The Valleys,UKL
+nuts,UKL2,East Wales,UKL
+nuts,UKM5,North Eastern Scotland,UKM
+nuts,UKM6,Highlands and Islands,UKM
+nuts,UKM7,Eastern Scotland,UKM
+nuts,UKM8,West Central Scotland,UKM
+nuts,UKM9,Southern Scotland,UKM
+nuts,UKN0,Northern Ireland,UKN
+nuts,UKC,North East,UK0
+nuts,UKD,North West,UK0
+nuts,UKE,Yorkshire and The Humber,UK0
+nuts,UKF,East Midlands,UK0
+nuts,UKG,West Midlands,UK0
+nuts,UKH,East of England,UK0
+nuts,UKI,London,UK0
+nuts,UKJ,South East,UK0
+nuts,UKK,South West,UK0
+nuts,UKL,Wales,UK
+nuts,UKM,Scotland,UK
+nuts,UKN,Northern Ireland,UK
+nuts,UK,United Kingdom,
+nuts,UKZ,Extra-regio,UK
+nuts,UK0,England,UK
+nuts,UKX,UK less extra-regio,UK
