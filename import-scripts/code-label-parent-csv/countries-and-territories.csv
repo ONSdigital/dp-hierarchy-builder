@@ -1,0 +1,274 @@
+code,label,parent
+DZ,DZ - Algeria,africa
+EG,EG - Egypt,africa
+LY,LY - Libya,africa
+MR,MR - Mauritania,africa
+MA,MA - Morocco,africa
+SD,SD - Sudan,africa
+sudan-ex,Sudan (Ex),africa
+TN,TN - Tunisia,africa
+western-sahara,Western Sahara,africa
+AO,AO - Angola,africa
+BJ,BJ - Benin,africa
+BW,BW - Botswana,africa
+BF,BF - Burkina Faso,africa
+BI,BI - Burundi,africa
+CM,CM - Cameroon,africa
+CV,CV - Cape Verde,africa
+CF,CF - Central African Republic,africa
+TD,TD - Chad,africa
+KM,KM - Comoros,africa
+CD,CD - Congo (Democratic Republic),africa
+CG,CG - Congo (Republic),africa
+DJ,DJ - Djibouti,africa
+GQ,GQ - Equatorial Guinea,africa
+ER,ER - Eritrea,africa
+ET,ET - Ethiopia,africa
+GA,GA - Gabon,africa
+GM,GM - Gambia,africa
+GH,GH - Ghana,africa
+GN,GN - Guinea,africa
+GW,GW - Guinea Bissau,africa
+CI,CI - Ivory Coast,africa
+KE,KE - Kenya,africa
+LS,LS - Lesotho,africa
+LR,LR - Liberia,africa
+MG,MG - Madagascar,africa
+MW,MW - Malawi,africa
+ML,ML - Mali,africa
+MU,MU - Mauritius,africa
+mayotte,Mayotte,africa
+MZ,MZ - Mozambique,africa
+NA,NA - Namibia,africa
+NE,NE - Niger,africa
+NG,NG - Nigeria,africa
+reunion,Reunion,africa
+RW,RW - Rwanda,africa
+ST,ST - Sao Tome & Principe,africa
+SN,SN - Senegal,africa
+SC,SC - Seychelles,africa
+SL,SL - Sierra Leone,africa
+SO,SO - Somalia,africa
+ZA,ZA - South Africa,africa
+SS,SS - South Sudan,africa
+SH,SH - St. Helena,africa
+SZ,SZ - Swaziland,africa
+TZ,TZ - Tanzania,africa
+TG,TG - Togo,africa
+UG,UG - Uganda,africa
+ZM,ZM - Zambia,africa
+ZW,ZW - Zimbabwe,africa
+CN,CN - China,asia
+HK,HK - Hong Kong,asia
+JP,JP - Japan,asia
+MO,MO - Macao,asia
+MN,MN - Mongolia,asia
+KP,KP - North Korea,asia
+KR,KR - South Korea,asia
+TW,TW - Taiwan,asia
+AF,AF - Afghanistan,asia
+BH,BH - Bahrain,asia
+IR,IR - Iran,asia
+IQ,IQ - Iraq,asia
+IL,IL - Israel,asia
+JO,JO - Jordan,asia
+KZ,KZ - Kazakhstan,asia
+KW,KW - Kuwait,asia
+KG,KG - Kyrgyz Republic,asia
+LB,LB - Lebanon,asia
+PS,PS - Occupied Palestinian Territory,asia
+OM,OM - Oman,asia
+QA,QA - Qatar,asia
+SA,SA - Saudi Arabia,asia
+SY,SY - Syria,asia
+TJ,TJ - Tajikistan,asia
+TM,TM - Turkmenistan,asia
+AE,AE - United Arab Emirates,asia
+UZ,UZ - Uzbekistan,asia
+YE,YE - Yemen,asia
+BD,BD - Bangladesh,asia
+BT,BT - Bhutan,asia
+IO,IO - British Indian Ocean Territory,africa
+IN,IN - India,asia
+MV,MV - Maldives,asia
+NP,NP - Nepal,asia
+PK,PK - Pakistan,asia
+LK,LK - Sri Lanka,asia
+BN,BN - Brunei,asia
+KH,KH - Cambodia,asia
+TL,TL - East Timor,asia
+ID,ID - Indonesia,asia
+LA,LA - Laos,asia
+MY,MY - Malaysia,asia
+MM,MM - Myanmar,asia
+PH,PH - Philippines,asia
+SG,SG - Singapore,asia
+TH,TH - Thailand,asia
+VN,VN - Vietnam,asia
+european-union-eu15,European Union EU15,B5
+european-union-eu2,European Union EU2,B5
+european-union-eu8,European Union EU8,B5
+other-european-union,Other European Union,B5
+aland-islands,Aland Islands,europe-exc-european-union
+AT,AT - Austria,B5
+azores-and-madeira,Azores and Madeira,europe-exc-european-union
+BE,BE - Belgium,B5
+canary-islands,Canary Islands,europe-exc-european-union
+DK,DK - Denmark,B5
+FI,FI - Finland,B5
+FR,FR - France,B5
+DE,DE - Germany,B5
+GI,GI - Gibraltar,europe-exc-european-union
+GR,GR - Greece,B5
+IE,IE - Ireland,B5
+IT,IT - Italy,B5
+JE,JE - Jersey,europe-exc-european-union
+LU,LU - Luxembourg,B5
+NL,NL - Netherlands,B5
+PT,PT - Portugal,B5
+ES,ES - Spain,B5
+spain-and-balearic-islands,Spain and Balearic Islands,B5
+SE,SE - Sweden,B5
+BG,BG - Bulgaria,B5
+RO,RO - Romania,B5
+CZ,CZ - Czech Republic,B5
+EE,EE - Estonia,B5
+HU,HU - Hungary,B5
+LV,LV - Latvia,B5
+LT,LT - Lithuania,B5
+PL,PL - Poland,B5
+SK,SK - Slovakia,B5
+SI,SI - Slovenia,B5
+HR,HR - Croatia,B5
+CY,CY - Cyprus,B5
+cyprus-ex,Cyprus (Ex),B5
+MT,MT - Malta,B5
+AI,AI - Anguilla,central-and-south-america
+AG,AG - Antigua & Barbuda,central-and-south-america
+AR,AR - Argentina,central-and-south-america
+AW,AW - Aruba,central-and-south-america
+BS,BS - Bahamas,central-and-south-america
+BB,BB - Barbados,central-and-south-america
+BZ,BZ - Belize,central-and-south-america
+BM,BM - Bermuda,central-and-south-america
+BO,BO - Bolivia,central-and-south-america
+BQ,"BQ - Bonaire, Sint Eustatius and Saba",central-and-south-america
+BR,BR - Brazil,central-and-south-america
+VG,VG - British Virgin Islands,central-and-south-america
+KY,KY - Cayman Islands,central-and-south-america
+CL,CL - Chile,central-and-south-america
+CO,CO - Colombia,central-and-south-america
+CR,CR - Costa Rica,central-and-south-america
+CU,CU - Cuba,central-and-south-america
+CW,CW - Curacao,central-and-south-america
+DM,DM - Dominica,central-and-south-america
+DO,DO - Dominican Republic,central-and-south-america
+EC,EC - Ecuador,central-and-south-america
+SV,SV - El Salvador,central-and-south-america
+FK,FK - Falkland Islands,central-and-south-america
+french-guiana,French Guiana,central-and-south-america
+GD,GD - Grenada,central-and-south-america
+guadeloupe,Guadeloupe,central-and-south-america
+GT,GT - Guatemala,central-and-south-america
+GY,GY - Guyana,central-and-south-america
+HT,HT - Haiti,central-and-south-america
+HN,HN - Honduras,central-and-south-america
+JM,JM - Jamaica,central-and-south-america
+martinique,Martinique,central-and-south-america
+MX,MX - Mexico,central-and-south-america
+MS,MS - Montserrat,central-and-south-america
+NI,NI - Nicaragua,central-and-south-america
+PA,PA - Panama,central-and-south-america
+PY,PY - Paraguay,central-and-south-america
+PE,PE - Peru,central-and-south-america
+SX,SX - Sint Maarten,central-and-south-america
+GS,GS - South Georgia,australia-oceania-and-polar-regions
+st-barthelemy,St Barthelemy,central-and-south-america
+KN,KN - St Kitts & Nevis,central-and-south-america
+LC,LC - St Lucia,central-and-south-america
+st-martin,St Martin,central-and-south-america
+st-pierre-and-miquelon,St Pierre and Miquelon,north-america
+VC,VC - St Vincent,central-and-south-america
+SR,SR - Suriname,central-and-south-america
+TT,TT - Trinidad & Tobago,central-and-south-america
+TC,TC - Turks & Caicos Islands,central-and-south-america
+UY,UY - Uruguay,central-and-south-america
+VE,VE - Venezuela,central-and-south-america
+asia,Asia,D5
+central-and-south-america,Central and South America,D5
+europe-exc-european-union,Europe exc European Union,D5
+north-america,North America,D5
+australia-oceania-and-polar-regions,"Australia, Oceania and Polar Regions",D5
+africa,Africa,D5
+AL,AL - Albania,europe-exc-european-union
+AD,AD - Andorra,europe-exc-european-union
+AM,AM - Armenia,asia
+AZ,AZ - Azerbaijan,asia
+BY,BY - Belarus,europe-exc-european-union
+BA,BA - Bosnia & Herzegovina,europe-exc-european-union
+BV,BV - Bouvet Island,australia-oceania-and-polar-regions
+cyprus-northern,"Cyprus, Northern",europe-exc-european-union
+czechoslovakia-ex,Czechoslovakia (Ex),europe-exc-european-union
+FO,FO - Faroe Islands,europe-exc-european-union
+MK,MK - FYR Macedonia,europe-exc-european-union
+GE,GE - Georgia,asia
+GL,GL - Greenland,north-america
+IS,IS - Iceland,europe-exc-european-union
+XK,XK - Kosovo,europe-exc-european-union
+LI,LI - Liechtenstein,europe-exc-european-union
+MD,MD - Moldova,europe-exc-european-union
+monaco,Monaco,europe-exc-european-union
+ME,ME - Montenegro,europe-exc-european-union
+NO,NO - Norway,europe-exc-european-union
+RU,RU - Russia,europe-exc-european-union
+SM,SM - San Marino,europe-exc-european-union
+RS,RS - Serbia,europe-exc-european-union
+svalbard-and-jan-mayen,Svalbard and Jan Mayen,europe-exc-european-union
+CH,CH - Switzerland,europe-exc-european-union
+TR,TR - Turkey,europe-exc-european-union
+UA,UA - Ukraine,europe-exc-european-union
+ussr-ex,USSR (Ex),europe-exc-european-union
+VA,VA - Vatican City,europe-exc-european-union
+yugoslavia-ex,Yugoslavia (Ex),europe-exc-european-union
+yugoslavia-not-otherwise-specified,Yugoslavia (not otherwise specified),europe-exc-european-union
+CA,CA - Canada,north-america
+puerto-rico,Puerto Rico,north-america
+US,US - United States inc Puerto Rico,north-america
+UM,UM - US Minor Outlying Islands,australia-oceania-and-polar-regions
+VI,VI - US Virgin Islands,central-and-south-america
+AS,AS - American Samoa,australia-oceania-and-polar-regions
+AQ,AQ - Antarctica,australia-oceania-and-polar-regions
+AU,AU - Australia,australia-oceania-and-polar-regions
+CX,CX - Christmas Island,australia-oceania-and-polar-regions
+CC,CC - Cocos Islands,australia-oceania-and-polar-regions
+CK,CK - Cook Islands,australia-oceania-and-polar-regions
+FJ,FJ - Fiji,australia-oceania-and-polar-regions
+PF,PF - French Polynesia,australia-oceania-and-polar-regions
+TF,TF - French Southern Territories,australia-oceania-and-polar-regions
+GU,GU - Guam,australia-oceania-and-polar-regions
+HM,HM - Heard & McDonald Islands,australia-oceania-and-polar-regions
+KI,KI - Kiribati,australia-oceania-and-polar-regions
+MH,MH - Marshall Islands,australia-oceania-and-polar-regions
+FM,FM - Micronesia,australia-oceania-and-polar-regions
+NR,NR - Nauru,australia-oceania-and-polar-regions
+NC,NC - New Caledonia,australia-oceania-and-polar-regions
+NZ,NZ - New Zealand,australia-oceania-and-polar-regions
+NU,NU - Niue Island,australia-oceania-and-polar-regions
+NF,NF - Norfolk Island,australia-oceania-and-polar-regions
+MP,MP - Northern Mariana Islands,australia-oceania-and-polar-regions
+pacific-islands-inc-palau,Pacific Islands (inc Palau),australia-oceania-and-polar-regions
+PW,PW - Palau,australia-oceania-and-polar-regions
+PG,PG - Papua New Guinea,australia-oceania-and-polar-regions
+PN,PN - Pitcairn,australia-oceania-and-polar-regions
+WS,WS - Samoa,australia-oceania-and-polar-regions
+SB,SB - Solomon Islands,australia-oceania-and-polar-regions
+TK,TK - Tokelau Islands,australia-oceania-and-polar-regions
+TO,TO - Tonga,australia-oceania-and-polar-regions
+TV,TV - Tuvalu,australia-oceania-and-polar-regions
+VU,VU - Vanuatu,australia-oceania-and-polar-regions
+WF,WF - Wallis & Futuna,australia-oceania-and-polar-regions
+D5,D5 - Non-EU (Rest of World),W1
+non-european-union,Non European Union,W1
+other-groupings,Other Groupings,W1
+B5,B5 - EU(28),W1
+W1,W1 - Whole world,
