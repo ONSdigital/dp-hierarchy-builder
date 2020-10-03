@@ -1,14 +1,110 @@
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1A0').property(single,'code','cpih1dim1A0').property(single,'label','CPI (overall index)').next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T80000').property(single,'code','cpih1dim1T80000').property(single,'label','08 Communication').
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1A0').property(single,'code','cpih1dim1A0').property(single,'label','Overall Index').next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T20000').property(single,'code','cpih1dim1T20000').property(single,'label','02 Alcoholic beverages and tobacco').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G80100').property(single,'code','cpih1dim1G80100').property(single,'label','08.1 Postal services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T80000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S80100').property(single,'code','cpih1dim1S80100').property(single,'label','08.1.0 Postal Services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G80100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G80200').property(single,'code','cpih1dim1G80200').property(single,'label','08.2/3 Telephone and telefax equip').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T80000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G20100').property(single,'code','cpih1dim1G20100').property(single,'label','02.1 Alcoholic beverages').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T20000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20101').property(single,'code','cpih1dim1S20101').property(single,'label','02.1.1 Spirits').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20102').property(single,'code','cpih1dim1S20102').property(single,'label','02.1.2 Wine').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20103').property(single,'code','cpih1dim1S20103').property(single,'label','02.1.3 Beer').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G20200').property(single,'code','cpih1dim1G20200').property(single,'label','02.2 Tobacco').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T20000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20200').property(single,'code','cpih1dim1S20200').property(single,'label','02.2.0 Tobacco').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T90000').property(single,'code','cpih1dim1T90000').property(single,'label','09 Recreation and culture').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90100').property(single,'code','cpih1dim1G90100').property(single,'label','09.1 Audio-visual equipment and related products').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90104').property(single,'code','cpih1dim1S90104').property(single,'label','09.1.4 Recording media').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90102').property(single,'code','cpih1dim1S90102').property(single,'label','09.1.2 Photographic, cinematographic and optical equipment').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90101').property(single,'code','cpih1dim1S90101').property(single,'label','09.1.1 Reception and reproduction of sound and pictures').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90103').property(single,'code','cpih1dim1S90103').property(single,'label','09.1.3 Data processing equipment').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90105').property(single,'code','cpih1dim1S90105').property(single,'label','09.1.5 Repair of audio-visual equipment , related products').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90500').property(single,'code','cpih1dim1G90500').property(single,'label','09.5 Books, newspapers and stationery').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90502').property(single,'code','cpih1dim1S90502').property(single,'label','09.5.2 Newspapers and periodicals').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90501').property(single,'code','cpih1dim1S90501').property(single,'label','09.5.1 Books').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90503').property(single,'code','cpih1dim1S90503').property(single,'label','09.5.3/4 Misc. printed matter, stationery, drawing materials').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90300').property(single,'code','cpih1dim1G90300').property(single,'label','09.3 Other recreational items, gardens and pets').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90301').property(single,'code','cpih1dim1S90301').property(single,'label','09.3.1 Games, toys and hobbies').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90302').property(single,'code','cpih1dim1S90302').property(single,'label','09.3.2 Equipment for sport and open-air recreation').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90303').property(single,'code','cpih1dim1S90303').property(single,'label','09.3.3 Gardens, plants and flowers').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90304').property(single,'code','cpih1dim1S90304').property(single,'label','09.3.4/5 Pets, related products and services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90200').property(single,'code','cpih1dim1G90200').property(single,'label','9.2 Other major durables for recreation and culture').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90201').property(single,'code','cpih1dim1S90201').property(single,'label','09.2.1/2 Major durables for in/outdoor recreation').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90400').property(single,'code','cpih1dim1G90400').property(single,'label','09.4 Recreational and cultural services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90401').property(single,'code','cpih1dim1S90401').property(single,'label','09.4.1 Recreational and sporting services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90400')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90402').property(single,'code','cpih1dim1S90402').property(single,'label','09.4.2 Cultural services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90400')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90600').property(single,'code','cpih1dim1G90600').property(single,'label','09.6 Package holidays').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90600').property(single,'code','cpih1dim1S90600').property(single,'label','09.6.0 Package Holidays').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90600')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T110000').property(single,'code','cpih1dim1T110000').property(single,'label','11 Restaurants and hotels').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G110100').property(single,'code','cpih1dim1G110100').property(single,'label','11.1 Catering services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T110000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S110102').property(single,'code','cpih1dim1S110102').property(single,'label','11.1.2 Canteens').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G110100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S110101').property(single,'code','cpih1dim1S110101').property(single,'label','11.1.1 Restaurants, cafes').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G110100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G110200').property(single,'code','cpih1dim1G110200').property(single,'label','11.2 Accommodation services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T110000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S110200').property(single,'code','cpih1dim1S110200').property(single,'label','11.2.0 Accommodation Services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G110200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T10000').property(single,'code','cpih1dim1T10000').property(single,'label','01 Food and non-alcoholic beverages').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G10100').property(single,'code','cpih1dim1G10100').property(single,'label','01.1 Food').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T10000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10101').property(single,'code','cpih1dim1S10101').property(single,'label','01.1.1 Bread and cereals').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10105').property(single,'code','cpih1dim1S10105').property(single,'label','01.1.5 Oils and fats').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10107').property(single,'code','cpih1dim1S10107').property(single,'label','01.1.7 Vegetables including potatoes and tubers').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10106').property(single,'code','cpih1dim1S10106').property(single,'label','01.1.6 Fruit').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10102').property(single,'code','cpih1dim1S10102').property(single,'label','01.1.2 Meat').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10109').property(single,'code','cpih1dim1S10109').property(single,'label','01.1.9 Food products (nec)').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10103').property(single,'code','cpih1dim1S10103').property(single,'label','01.1.3 Fish').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10108').property(single,'code','cpih1dim1S10108').property(single,'label','01.1.8 Sugar, jam, syrups, chocolate and confectionery').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10104').property(single,'code','cpih1dim1S10104').property(single,'label','01.1.4 Milk, cheese and eggs').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G10200').property(single,'code','cpih1dim1G10200').property(single,'label','01.2 Non-alcoholic beverages').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T10000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10202').property(single,'code','cpih1dim1S10202').property(single,'label','01.2.2 Mineral waters, soft drinks and juices').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10201').property(single,'code','cpih1dim1S10201').property(single,'label','01.2.1 Coffee, tea and cocoa').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10200')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T60000').property(single,'code','cpih1dim1T60000').property(single,'label','06 Health').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G60300').property(single,'code','cpih1dim1G60300').property(single,'label','06.3 Hospital services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T60000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S60300').property(single,'code','cpih1dim1S60300').property(single,'label','06.3.0 Hospital Services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G60300')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G60200').property(single,'code','cpih1dim1G60200').property(single,'label','06.2 Out-patient services').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T60000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S60202').property(single,'code','cpih1dim1S60202').property(single,'label','06.2.2 Dental services').
@@ -17,192 +113,42 @@ g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cp
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G60200')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G60100').property(single,'code','cpih1dim1G60100').property(single,'label','06.1 Medical products, appliances and equipment').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T60000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S60101').property(single,'code','cpih1dim1S60101').property(single,'label','06.1.1 Pharmaceutical products').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G60100')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S60102').property(single,'code','cpih1dim1S60102').property(single,'label','06.1.2/3 Other medical and therapeutic equipment').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G60100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G60300').property(single,'code','cpih1dim1G60300').property(single,'label','06.3 Hospital services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T60000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S60300').property(single,'code','cpih1dim1S60300').property(single,'label','06.3.0 Hospital Services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G60300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T10000').property(single,'code','cpih1dim1T10000').property(single,'label','01 Food and non-alcoholic beverages').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G10100').property(single,'code','cpih1dim1G10100').property(single,'label','01.1 Food').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T10000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10105').property(single,'code','cpih1dim1S10105').property(single,'label','01.1.5 Oils and fats').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10107').property(single,'code','cpih1dim1S10107').property(single,'label','01.1.7 Vegetables including potatoes and tubers').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10104').property(single,'code','cpih1dim1S10104').property(single,'label','01.1.4 Milk, cheese and eggs').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10103').property(single,'code','cpih1dim1S10103').property(single,'label','01.1.3 Fish').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10101').property(single,'code','cpih1dim1S10101').property(single,'label','01.1.1 Bread and cereals').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10109').property(single,'code','cpih1dim1S10109').property(single,'label','01.1.9 Food products (nec)').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10106').property(single,'code','cpih1dim1S10106').property(single,'label','01.1.6 Fruit').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10108').property(single,'code','cpih1dim1S10108').property(single,'label','01.1.8 Sugar, jam, syrups, chocolate and confectionery').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10102').property(single,'code','cpih1dim1S10102').property(single,'label','01.1.2 Meat').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G10200').property(single,'code','cpih1dim1G10200').property(single,'label','01.2 Non-alcoholic beverages').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T10000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10201').property(single,'code','cpih1dim1S10201').property(single,'label','01.2.1 Coffee, tea and cocoa').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S10202').property(single,'code','cpih1dim1S10202').property(single,'label','01.2.2 Mineral waters, soft drinks and juices').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G10200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S60101').property(single,'code','cpih1dim1S60101').property(single,'label','06.1.1 Pharmaceutical products').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G60100')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T40000').property(single,'code','cpih1dim1T40000').property(single,'label','04 Housing, water, electricity, gas and other fuels').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G40500').property(single,'code','cpih1dim1G40500').property(single,'label','04.5 Electricity , gas and other fuels').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T40000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40502').property(single,'code','cpih1dim1S40502').property(single,'label','04.5.2 Gas').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40501').property(single,'code','cpih1dim1S40501').property(single,'label','04.5.1 Electricity').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40504').property(single,'code','cpih1dim1S40504').property(single,'label','04.5.4 Solid fuels').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40503').property(single,'code','cpih1dim1S40503').property(single,'label','04.5.3 Liquid fuels').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G40300').property(single,'code','cpih1dim1G40300').property(single,'label','04.3 Regular maintenance and repair of the dwelling').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T40000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40302').property(single,'code','cpih1dim1S40302').property(single,'label','04.3.2 Services for maintenance and repair').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40300')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40301').property(single,'code','cpih1dim1S40301').property(single,'label','04.3.1 Materials for maintenance and repair').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40200').property(single,'code','cpih1dim1S40200').property(single,'label','04.2.0 Owner Occupied Housing Costs').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T40000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G40100').property(single,'code','cpih1dim1G40100').property(single,'label','04.1 Actual rentals for housing').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T40000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40100').property(single,'code','cpih1dim1S40100').property(single,'label','04.1.0 Actual rentals for housing').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G40500').property(single,'code','cpih1dim1G40500').property(single,'label','04.5 Electricity , gas and other fuels').
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40900').property(single,'code','cpih1dim1S40900').property(single,'label','04.9.0 Council Tax and rates').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T40000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40503').property(single,'code','cpih1dim1S40503').property(single,'label','04.5.3 Liquid fuels').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40502').property(single,'code','cpih1dim1S40502').property(single,'label','04.5.2 Gas').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40504').property(single,'code','cpih1dim1S40504').property(single,'label','04.5.4 Solid fuels').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40501').property(single,'code','cpih1dim1S40501').property(single,'label','04.5.1 Electricity').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40500')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G40400').property(single,'code','cpih1dim1G40400').property(single,'label','04.4 Water supply and misc. services for the dwelling').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T40000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40403').property(single,'code','cpih1dim1S40403').property(single,'label','04.4.3 Sewerage collection').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40400')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S40401').property(single,'code','cpih1dim1S40401').property(single,'label','04.4.1 Water supply').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G40400')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T100000').property(single,'code','cpih1dim1T100000').property(single,'label','10 Education').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G100000').property(single,'code','cpih1dim1G100000').property(single,'label','10.0 Education').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T100000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S100000').property(single,'code','cpih1dim1S100000').property(single,'label','10.0.0 Education').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G100000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T120000').property(single,'code','cpih1dim1T120000').property(single,'label','12 Miscellaneous goods and services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120400').property(single,'code','cpih1dim1G120400').property(single,'label','12.4 Social protection').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120400').property(single,'code','cpih1dim1S120400').property(single,'label','12.4.0 Social Protection').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120400')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120500').property(single,'code','cpih1dim1G120500').property(single,'label','12.5 Insurance').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120502').property(single,'code','cpih1dim1S120502').property(single,'label','12.5.2 House contents insurance').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120504').property(single,'code','cpih1dim1S120504').property(single,'label','12.5.4 Transport insurance').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120503').property(single,'code','cpih1dim1S120503').property(single,'label','12.5.3 Health insurance').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120600').property(single,'code','cpih1dim1G120600').property(single,'label','12.6 Financial services (nec)').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120602').property(single,'code','cpih1dim1S120602').property(single,'label','12.6.2 Other financial services (nec)').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120600')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120700').property(single,'code','cpih1dim1G120700').property(single,'label','12.7 Other services (nec)').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120700').property(single,'code','cpih1dim1S120700').property(single,'label','12.7.0 Other Services Not Elsewhere covered').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120700')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120100').property(single,'code','cpih1dim1G120100').property(single,'label','12.1 Personal care').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120101').property(single,'code','cpih1dim1S120101').property(single,'label','12.1.1 Hairdressing and personal grooming establishments').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120102').property(single,'code','cpih1dim1S120102').property(single,'label','12.1.2/3 Appliances and products for personal care').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120300').property(single,'code','cpih1dim1G120300').property(single,'label','12.3 Personal effects (nec)').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120301').property(single,'code','cpih1dim1S120301').property(single,'label','12.3.1 Jewellery, clocks and watches').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120302').property(single,'code','cpih1dim1S120302').property(single,'label','12.3.2 Other personal effects').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T20000').property(single,'code','cpih1dim1T20000').property(single,'label','02 Alcoholic beverages and tobacco').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G20200').property(single,'code','cpih1dim1G20200').property(single,'label','02.2 Tobacco').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T20000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20200').property(single,'code','cpih1dim1S20200').property(single,'label','02.2.0 Tobacco').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G20100').property(single,'code','cpih1dim1G20100').property(single,'label','02.1 Alcoholic beverages').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T20000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20103').property(single,'code','cpih1dim1S20103').property(single,'label','02.1.3 Beer').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20102').property(single,'code','cpih1dim1S20102').property(single,'label','02.1.2 Wine').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S20101').property(single,'code','cpih1dim1S20101').property(single,'label','02.1.1 Spirits').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G20100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T110000').property(single,'code','cpih1dim1T110000').property(single,'label','11 Restaurants and hotels').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G110100').property(single,'code','cpih1dim1G110100').property(single,'label','11.1 Catering services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T110000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S110101').property(single,'code','cpih1dim1S110101').property(single,'label','11.1.1 Restaurants, cafes').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G110100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S110102').property(single,'code','cpih1dim1S110102').property(single,'label','11.1.2 Canteens').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G110100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G110200').property(single,'code','cpih1dim1G110200').property(single,'label','11.2 Accommodation services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T110000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S110200').property(single,'code','cpih1dim1S110200').property(single,'label','11.2.0 Accommodation Services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G110200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T30000').property(single,'code','cpih1dim1T30000').property(single,'label','03 Clothing and footwear').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G30200').property(single,'code','cpih1dim1G30200').property(single,'label','03.2 Footwear including repairs').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T30000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30200').property(single,'code','cpih1dim1S30200').property(single,'label','03.2.0 Footwear including repairs').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G30100').property(single,'code','cpih1dim1G30100').property(single,'label','03.1 Clothing').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T30000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30102').property(single,'code','cpih1dim1S30102').property(single,'label','03.1.2 Garments').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30104').property(single,'code','cpih1dim1S30104').property(single,'label','03.1.4 Cleaning, repair and hire of clothing').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30103').property(single,'code','cpih1dim1S30103').property(single,'label','03.1.3 Other clothing and clothing accessories').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T90000').property(single,'code','cpih1dim1T90000').property(single,'label','09 Recreation and culture').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90600').property(single,'code','cpih1dim1G90600').property(single,'label','09.6 Package holidays').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90600').property(single,'code','cpih1dim1S90600').property(single,'label','09.6.0 Package Holidays').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90600')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90400').property(single,'code','cpih1dim1G90400').property(single,'label','09.4 Recreational and cultural services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90402').property(single,'code','cpih1dim1S90402').property(single,'label','09.4.2 Cultural services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90400')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90401').property(single,'code','cpih1dim1S90401').property(single,'label','09.4.1 Recreational and sporting services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90400')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90300').property(single,'code','cpih1dim1G90300').property(single,'label','09.3 Other recreational items, gardens and pets').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90301').property(single,'code','cpih1dim1S90301').property(single,'label','09.3.1 Games, toys and hobbies').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90304').property(single,'code','cpih1dim1S90304').property(single,'label','09.3.4/5 Pets, related products and services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90303').property(single,'code','cpih1dim1S90303').property(single,'label','09.3.3 Gardens, plants and flowers').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90302').property(single,'code','cpih1dim1S90302').property(single,'label','09.3.2 Equipment for sport and open-air recreation').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90500').property(single,'code','cpih1dim1G90500').property(single,'label','09.5 Books, newspapers and stationery').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90501').property(single,'code','cpih1dim1S90501').property(single,'label','09.5.1 Books').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90503').property(single,'code','cpih1dim1S90503').property(single,'label','09.5.3/4 Misc. printed matter, stationery, drawing materials').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90502').property(single,'code','cpih1dim1S90502').property(single,'label','09.5.2 Newspapers and periodicals').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90500')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G90100').property(single,'code','cpih1dim1G90100').property(single,'label','09.1 Audio-visual equipment and related products').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T90000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90102').property(single,'code','cpih1dim1S90102').property(single,'label','09.1.2 Photographic, cinematographic and optical equipment').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90104').property(single,'code','cpih1dim1S90104').property(single,'label','09.1.4 Recording media').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90105').property(single,'code','cpih1dim1S90105').property(single,'label','09.1.5 Repair of audio-visual equipment , related products').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90103').property(single,'code','cpih1dim1S90103').property(single,'label','09.1.3 Data processing equipment').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S90101').property(single,'code','cpih1dim1S90101').property(single,'label','09.1.1 Reception and reproduction of sound and pictures').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G90100')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T50000').property(single,'code','cpih1dim1T50000').property(single,'label','05 Furniture, household equipment and maintenance').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50500').property(single,'code','cpih1dim1G50500').property(single,'label','05.5 Tools and equipment for house and garden').
@@ -211,57 +157,121 @@ g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cp
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50500')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50100').property(single,'code','cpih1dim1G50100').property(single,'label','05.1 Furniture, furnishings and carpets').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T50000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50101').property(single,'code','cpih1dim1S50101').property(single,'label','05.1.1 Furniture and furnishings').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50100')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50102').property(single,'code','cpih1dim1S50102').property(single,'label','05.1.2 Carpets and other floor coverings').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50101').property(single,'code','cpih1dim1S50101').property(single,'label','05.1.1 Furniture and furnishings').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50400').property(single,'code','cpih1dim1G50400').property(single,'label','05.4 Glassware, tableware and household utensils').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T50000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50400').property(single,'code','cpih1dim1S50400').property(single,'label','05.4.0 Glassware, Tableware and Household Utensils').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50400')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50300').property(single,'code','cpih1dim1G50300').property(single,'label','05.3 Household appliances, fitting and repairs').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T50000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50301').property(single,'code','cpih1dim1S50301').property(single,'label','05.3.1/2 Major appliances and small electric goods').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50303').property(single,'code','cpih1dim1S50303').property(single,'label','05.3.3 Repair of household appliances').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50300')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50600').property(single,'code','cpih1dim1G50600').property(single,'label','05.6 Goods and services for routine maintenance').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T50000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50602').property(single,'code','cpih1dim1S50602').property(single,'label','05.6.2 Domestic services and household services').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50600')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50601').property(single,'code','cpih1dim1S50601').property(single,'label','05.6.1 Non-durable household goods').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50600')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50300').property(single,'code','cpih1dim1G50300').property(single,'label','05.3 Household appliances, fitting and repairs').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T50000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50303').property(single,'code','cpih1dim1S50303').property(single,'label','05.3.3 Repair of household appliances').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50301').property(single,'code','cpih1dim1S50301').property(single,'label','05.3.1/2 Major appliances and small electric goods').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50300')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50200').property(single,'code','cpih1dim1G50200').property(single,'label','05.2 Household textiles').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T50000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50200').property(single,'code','cpih1dim1S50200').property(single,'label','05.2.0 Household Textiles').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G50400').property(single,'code','cpih1dim1G50400').property(single,'label','05.4 Glassware, tableware and household utensils').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T50000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S50400').property(single,'code','cpih1dim1S50400').property(single,'label','05.4.0 Glassware, Tableware and Household Utensils').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G50400')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T100000').property(single,'code','cpih1dim1T100000').property(single,'label','10 Education').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G100000').property(single,'code','cpih1dim1G100000').property(single,'label','10.0 Education').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T100000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S100000').property(single,'code','cpih1dim1S100000').property(single,'label','10.0.0 Education').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G100000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T30000').property(single,'code','cpih1dim1T30000').property(single,'label','03 Clothing and footwear').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G30200').property(single,'code','cpih1dim1G30200').property(single,'label','03.2 Footwear including repairs').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T30000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30200').property(single,'code','cpih1dim1S30200').property(single,'label','03.2.0 Footwear including repairs').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G30100').property(single,'code','cpih1dim1G30100').property(single,'label','03.1 Clothing').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T30000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30104').property(single,'code','cpih1dim1S30104').property(single,'label','03.1.4 Cleaning, repair and hire of clothing').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30103').property(single,'code','cpih1dim1S30103').property(single,'label','03.1.3 Other clothing and clothing accessories').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S30102').property(single,'code','cpih1dim1S30102').property(single,'label','03.1.2 Garments').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G30100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T120000').property(single,'code','cpih1dim1T120000').property(single,'label','12 Miscellaneous goods and services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120600').property(single,'code','cpih1dim1G120600').property(single,'label','12.6 Financial services (nec)').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120602').property(single,'code','cpih1dim1S120602').property(single,'label','12.6.2 Other financial services (nec)').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120600')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120400').property(single,'code','cpih1dim1G120400').property(single,'label','12.4 Social protection').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120400').property(single,'code','cpih1dim1S120400').property(single,'label','12.4.0 Social Protection').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120400')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120100').property(single,'code','cpih1dim1G120100').property(single,'label','12.1 Personal care').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120101').property(single,'code','cpih1dim1S120101').property(single,'label','12.1.1 Hairdressing and personal grooming establishments').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120102').property(single,'code','cpih1dim1S120102').property(single,'label','12.1.2/3 Appliances and products for personal care').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120500').property(single,'code','cpih1dim1G120500').property(single,'label','12.5 Insurance').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120503').property(single,'code','cpih1dim1S120503').property(single,'label','12.5.3 Health insurance').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120502').property(single,'code','cpih1dim1S120502').property(single,'label','12.5.2 House contents insurance').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120504').property(single,'code','cpih1dim1S120504').property(single,'label','12.5.4 Transport insurance').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120500')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120700').property(single,'code','cpih1dim1G120700').property(single,'label','12.7 Other services (nec)').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120700').property(single,'code','cpih1dim1S120700').property(single,'label','12.7.0 Other Services Not Elsewhere covered').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120700')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G120300').property(single,'code','cpih1dim1G120300').property(single,'label','12.3 Personal effects (nec)').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T120000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120301').property(single,'code','cpih1dim1S120301').property(single,'label','12.3.1 Jewellery, clocks and watches').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S120302').property(single,'code','cpih1dim1S120302').property(single,'label','12.3.2 Other personal effects').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G120300')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T70000').property(single,'code','cpih1dim1T70000').property(single,'label','07 Transport').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G70200').property(single,'code','cpih1dim1G70200').property(single,'label','07.2 Operation of personal transport equipment').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T70000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70204').property(single,'code','cpih1dim1S70204').property(single,'label','07.2.4 Other services').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70203').property(single,'code','cpih1dim1S70203').property(single,'label','07.2.3 Maintenance and repairs').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70201').property(single,'code','cpih1dim1S70201').property(single,'label','07.2.1 Spare parts and accessories').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70202').property(single,'code','cpih1dim1S70202').property(single,'label','07.2.2 Fuels and lubricants').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G70100').property(single,'code','cpih1dim1G70100').property(single,'label','07.1 Purchase of vehicles').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T70000')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70181').property(single,'code','cpih1dim1S70181').property(single,'label','07.1.1 New Cars').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70100')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70191').property(single,'code','cpih1dim1S70191').property(single,'label','07.1.1b Second Hand Cars').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70100')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70102').property(single,'code','cpih1dim1S70102').property(single,'label','07.1.2/3 Motorcycles and bicycles').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70191').property(single,'code','cpih1dim1S70191').property(single,'label','07.1.1b Second Hand Cars').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70100')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G70300').property(single,'code','cpih1dim1G70300').property(single,'label','07.3 Transport services').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T70000')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70303').property(single,'code','cpih1dim1S70303').property(single,'label','07.3.3 Passenger transport by air').
-	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70301').property(single,'code','cpih1dim1S70301').property(single,'label','07.3.1 Passenger transport by railway').
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70304').property(single,'code','cpih1dim1S70304').property(single,'label','07.3.4 Passenger transport by sea and inland waterway').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70300')).next()
 g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70302').property(single,'code','cpih1dim1S70302').property(single,'label','07.3.2 Passenger transport by road').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70300')).next()
-g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70304').property(single,'code','cpih1dim1S70304').property(single,'label','07.3.4 Passenger transport by sea and inland waterway').
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70301').property(single,'code','cpih1dim1S70301').property(single,'label','07.3.1 Passenger transport by railway').
 	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70303').property(single,'code','cpih1dim1S70303').property(single,'label','07.3.3 Passenger transport by air').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70300')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G70200').property(single,'code','cpih1dim1G70200').property(single,'label','07.2 Operation of personal transport equipment').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T70000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70202').property(single,'code','cpih1dim1S70202').property(single,'label','07.2.2 Fuels and lubricants').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70201').property(single,'code','cpih1dim1S70201').property(single,'label','07.2.1 Spare parts and accessories').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70203').property(single,'code','cpih1dim1S70203').property(single,'label','07.2.3 Maintenance and repairs').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S70204').property(single,'code','cpih1dim1S70204').property(single,'label','07.2.4 Other services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G70200')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1T80000').property(single,'code','cpih1dim1T80000').property(single,'label','08 Communication').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1A0')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G80100').property(single,'code','cpih1dim1G80100').property(single,'label','08.1 Postal services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T80000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S80100').property(single,'code','cpih1dim1S80100').property(single,'label','08.1.0 Postal Services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G80100')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1G80200').property(single,'code','cpih1dim1G80200').property(single,'label','08.2/3 Telephone and telefax equip').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1T80000')).next()
+g.addV('_generic_hierarchy_node_cpih1dim1aggid').property(id,'cpih1dim1aggid--cpih1dim1S80200').property(single,'code','cpih1dim1S80200').property(single,'label','08.2.0 Telephone and Telefax Equipment & Services').
+	addE('hasParent').to(g.V().hasId('cpih1dim1aggid--cpih1dim1G80200')).next()

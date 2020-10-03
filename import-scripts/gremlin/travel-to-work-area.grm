@@ -1,0 +1,487 @@
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K02000001').property(single,'code','K02000001').property(single,'label','United Kingdom').next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N92000002').property(single,'code','N92000002').property(single,'label','Northern Ireland').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--K02000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000002').property(single,'code','N12000002').property(single,'label','Belfast').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000001').property(single,'code','N12000001').property(single,'label','Ballymena').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000006').property(single,'code','N12000006').property(single,'label','Derry').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000009').property(single,'code','N12000009').property(single,'label','Newry and Banbridge').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000004').property(single,'code','N12000004').property(single,'label','Cookstown and Magherafelt').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000008').property(single,'code','N12000008').property(single,'label','Enniskillen').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000005').property(single,'code','N12000005').property(single,'label','Craigavon').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000003').property(single,'code','N12000003').property(single,'label','Coleraine').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000010').property(single,'code','N12000010').property(single,'label','Omagh and Strabane').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--N12000007').property(single,'code','N12000007').property(single,'label','Dungannon').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--N92000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K03000001').property(single,'code','K03000001').property(single,'label','Great Britain').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--K02000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K04000001').property(single,'code','K04000001').property(single,'label','England and Wales').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--K03000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E92000001').property(single,'code','E92000001').property(single,'label','England').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--K04000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000006').property(single,'code','E12000006').property(single,'label','East of England').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000166').property(single,'code','E30000166').property(single,'label','Bedford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000221').property(single,'code','E30000221').property(single,'label','Huntingdon').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000235').property(single,'code','E30000235').property(single,'label','Lowestoft').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000108').property(single,'code','E30000108').property(single,'label','Peterborough').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000224').property(single,'code','E30000224').property(single,'label','Kettering and Wellingborough').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000186').property(single,'code','E30000186').property(single,'label','Cambridge').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000188').property(single,'code','E30000188').property(single,'label','Chelmsford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000248').property(single,'code','E30000248').property(single,'label','Norwich').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000135').property(single,'code','E30000135').property(single,'label','Thetford and Mildenhall').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000287').property(single,'code','E30000287').property(single,'label','Wisbech').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000193').property(single,'code','E30000193').property(single,'label','Colchester').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000222').property(single,'code','E30000222').property(single,'label','Ipswich').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000272').property(single,'code','E30000272').property(single,'label','Stevenage and Welwyn Garden City').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000198').property(single,'code','E30000198').property(single,'label','Cromer and Sheringham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000210').property(single,'code','E30000210').property(single,'label','Great Yarmouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000268').property(single,'code','E30000268').property(single,'label','Southend').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000184').property(single,'code','E30000184').property(single,'label','Bury St Edmunds').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000225').property(single,'code','E30000225').property(single,'label','King\'s Lynn').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000192').property(single,'code','E30000192').property(single,'label','Clacton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000006')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000004').property(single,'code','E12000004').property(single,'label','East Midlands').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000190').property(single,'code','E30000190').property(single,'label','Chesterfield').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000291').property(single,'code','E30000291').property(single,'label','Worksop and Retford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000240').property(single,'code','E30000240').property(single,'label','Mansfield').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000231').property(single,'code','E30000231').property(single,'label','Lincoln').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000247').property(single,'code','E30000247').property(single,'label','Northampton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000124').property(single,'code','E30000124').property(single,'label','Spalding').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000230').property(single,'code','E30000230').property(single,'label','Leicester').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000185').property(single,'code','E30000185').property(single,'label','Buxton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000174').property(single,'code','E30000174').property(single,'label','Boston').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000194').property(single,'code','E30000194').property(single,'label','Corby').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000211').property(single,'code','E30000211').property(single,'label','Grimsby').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000054').property(single,'code','E30000054').property(single,'label','Grantham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000264').property(single,'code','E30000264').property(single,'label','Skegness and Louth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000260').property(single,'code','E30000260').property(single,'label','Scunthorpe').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000249').property(single,'code','E30000249').property(single,'label','Nottingham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000261').property(single,'code','E30000261').property(single,'label','Sheffield').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000239').property(single,'code','E30000239').property(single,'label','Manchester').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000001').property(single,'code','E12000001').property(single,'label','North East').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000215').property(single,'code','E30000215').property(single,'label','Hartlepool').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000203').property(single,'code','E30000203').property(single,'label','Durham and Bishop Auckland').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000173').property(single,'code','E30000173').property(single,'label','Blyth and Ashington').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000245').property(single,'code','E30000245').property(single,'label','Newcastle').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K01000009').property(single,'code','K01000009').property(single,'label','Berwick').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000275').property(single,'code','E30000275').property(single,'label','Sunderland').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000005').property(single,'code','E12000005').property(single,'label','West Midlands').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000273').property(single,'code','E30000273').property(single,'label','Stoke-on-Trent').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000278').property(single,'code','E30000278').property(single,'label','Telford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000236').property(single,'code','E30000236').property(single,'label','Ludlow').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000288').property(single,'code','E30000288').property(single,'label','Wolverhampton and Walsall').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000169').property(single,'code','E30000169').property(single,'label','Birmingham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000195').property(single,'code','E30000195').property(single,'label','Coventry').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000216').property(single,'code','E30000216').property(single,'label','Hereford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000289').property(single,'code','E30000289').property(single,'label','Worcester and Kidderminster').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000183').property(single,'code','E30000183').property(single,'label','Burton upon Trent').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000262').property(single,'code','E30000262').property(single,'label','Shrewsbury').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000271').property(single,'code','E30000271').property(single,'label','Stafford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000202').property(single,'code','E30000202').property(single,'label','Dudley').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000200').property(single,'code','E30000200').property(single,'label','Derby').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000005')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000002').property(single,'code','E12000002').property(single,'label','North West').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000168').property(single,'code','E30000168').property(single,'label','Birkenhead').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000076').property(single,'code','E30000076').property(single,'label','Lancaster and Morecambe').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000197').property(single,'code','E30000197').property(single,'label','Crewe').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000233').property(single,'code','E30000233').property(single,'label','Liverpool').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000170').property(single,'code','E30000170').property(single,'label','Blackburn').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000182').property(single,'code','E30000182').property(single,'label','Burnley').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000064').property(single,'code','E30000064').property(single,'label','Hexham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K01000010').property(single,'code','K01000010').property(single,'label','Carlisle').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000171').property(single,'code','E30000171').property(single,'label','Blackpool').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000223').property(single,'code','E30000223').property(single,'label','Kendal').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000284').property(single,'code','E30000284').property(single,'label','Warrington and Wigan').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000286').property(single,'code','E30000286').property(single,'label','Whitehaven').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000106').property(single,'code','E30000106').property(single,'label','Penrith').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000290').property(single,'code','E30000290').property(single,'label','Workington').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000163').property(single,'code','E30000163').property(single,'label','Barrow-in-Furness').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000255').property(single,'code','E30000255').property(single,'label','Preston').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000002')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000009').property(single,'code','E12000009').property(single,'label','South West').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000175').property(single,'code','E30000175').property(single,'label','Bournemouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000046').property(single,'code','E30000046').property(single,'label','Dorchester and Weymouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000274').property(single,'code','E30000274').property(single,'label','Street and Wells').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000110').property(single,'code','E30000110').property(single,'label','Poole').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000244').property(single,'code','E30000244').property(single,'label','Newbury').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000206').property(single,'code','E30000206').property(single,'label','Exeter').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000176').property(single,'code','E30000176').property(single,'label','Bridgwater').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000253').property(single,'code','E30000253').property(single,'label','Plymouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000258').property(single,'code','E30000258').property(single,'label','Salisbury').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000178').property(single,'code','E30000178').property(single,'label','Bridport').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000280').property(single,'code','E30000280').property(single,'label','Trowbridge').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000232').property(single,'code','E30000232').property(single,'label','Liskeard').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000276').property(single,'code','E30000276').property(single,'label','Swindon').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000159').property(single,'code','E30000159').property(single,'label','Andover').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000162').property(single,'code','E30000162').property(single,'label','Barnstaple').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000279').property(single,'code','E30000279').property(single,'label','Torquay and Paignton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000165').property(single,'code','E30000165').property(single,'label','Bath').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000263').property(single,'code','E30000263').property(single,'label','Sidmouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000228').property(single,'code','E30000228').property(single,'label','Leamington Spa').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000285').property(single,'code','E30000285').property(single,'label','Weston-super-Mare').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000051').property(single,'code','E30000051').property(single,'label','Falmouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000293').property(single,'code','E30000293').property(single,'label','Yeovil').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000181').property(single,'code','E30000181').property(single,'label','Bude').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000277').property(single,'code','E30000277').property(single,'label','Taunton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000209').property(single,'code','E30000209').property(single,'label','Gloucester').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000095').property(single,'code','E30000095').property(single,'label','Minehead').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000172').property(single,'code','E30000172').property(single,'label','Blandford Forum and Gillingham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000226').property(single,'code','E30000226').property(single,'label','Kingsbridge and Dartmouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000252').property(single,'code','E30000252').property(single,'label','Penzance').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000257').property(single,'code','E30000257').property(single,'label','Redruth and Truro').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000180').property(single,'code','E30000180').property(single,'label','Bristol').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000189').property(single,'code','E30000189').property(single,'label','Cheltenham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000205').property(single,'code','E30000205').property(single,'label','Evesham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000270').property(single,'code','E30000270').property(single,'label','St Austell and Newquay').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000167').property(single,'code','E30000167').property(single,'label','Bideford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000227').property(single,'code','E30000227').property(single,'label','Launceston').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000282').property(single,'code','E30000282').property(single,'label','Wadebridge').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000009')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000008').property(single,'code','E12000008').property(single,'label','South East').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000243').property(single,'code','E30000243').property(single,'label','Milton Keynes').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000254').property(single,'code','E30000254').property(single,'label','Portsmouth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000179').property(single,'code','E30000179').property(single,'label','Brighton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000196').property(single,'code','E30000196').property(single,'label','Crawley').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000160').property(single,'code','E30000160').property(single,'label','Ashford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000164').property(single,'code','E30000164').property(single,'label','Basingstoke').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000234').property(single,'code','E30000234').property(single,'label','London').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000187').property(single,'code','E30000187').property(single,'label','Canterbury').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000237').property(single,'code','E30000237').property(single,'label','Luton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000266').property(single,'code','E30000266').property(single,'label','Slough and Heathrow').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000212').property(single,'code','E30000212').property(single,'label','Guildford and Aldershot').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000204').property(single,'code','E30000204').property(single,'label','Eastbourne').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000281').property(single,'code','E30000281').property(single,'label','Tunbridge Wells').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000161').property(single,'code','E30000161').property(single,'label','Banbury').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000061').property(single,'code','E30000061').property(single,'label','Hastings').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000267').property(single,'code','E30000267').property(single,'label','Southampton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000208').property(single,'code','E30000208').property(single,'label','Folkestone and Dover').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000241').property(single,'code','E30000241').property(single,'label','Margate and Ramsgate').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000242').property(single,'code','E30000242').property(single,'label','Medway').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000191').property(single,'code','E30000191').property(single,'label','Chichester and Bognor Regis').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000256').property(single,'code','E30000256').property(single,'label','Reading').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000218').property(single,'code','E30000218').property(single,'label','High Wycombe and Aylesbury').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000292').property(single,'code','E30000292').property(single,'label','Worthing').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000070').property(single,'code','E30000070').property(single,'label','Isle of Wight').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000250').property(single,'code','E30000250').property(single,'label','Oxford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000008')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000003').property(single,'code','E12000003').property(single,'label','Yorkshire and The Humber').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000018').property(single,'code','E30000018').property(single,'label','Bradford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000214').property(single,'code','E30000214').property(single,'label','Harrogate').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000029').property(single,'code','E30000029').property(single,'label','Halifax').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000147').property(single,'code','E30000147').property(single,'label','Whitby').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000004').property(single,'code','E30000004').property(single,'label','Barnsley').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000246').property(single,'code','E30000246').property(single,'label','Northallerton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000177').property(single,'code','E30000177').property(single,'label','Bridlington').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000199').property(single,'code','E30000199').property(single,'label','Darlington').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000283').property(single,'code','E30000283').property(single,'label','Wakefield and Castleford').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000201').property(single,'code','E30000201').property(single,'label','Doncaster').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000220').property(single,'code','E30000220').property(single,'label','Hull').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000238').property(single,'code','E30000238').property(single,'label','Malton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000039').property(single,'code','E30000039').property(single,'label','Skipton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000294').property(single,'code','E30000294').property(single,'label','York').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000259').property(single,'code','E30000259').property(single,'label','Scarborough').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000093').property(single,'code','E30000093').property(single,'label','Middlesbrough and Stockton').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000229').property(single,'code','E30000229').property(single,'label','Leeds').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E30000219').property(single,'code','E30000219').property(single,'label','Huddersfield').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E12000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--E12000007').property(single,'code','E12000007').property(single,'label','London').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--E92000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W92000004').property(single,'code','W92000004').property(single,'label','Wales').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--K04000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000003').property(single,'code','W22000003').property(single,'label','Bridgend').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000032').property(single,'code','W22000032').property(single,'label','Swansea').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000009').property(single,'code','W22000009').property(single,'label','Haverfordwest and Milford Haven').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000016').property(single,'code','W22000016').property(single,'label','Pembroke and Tenby').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000022').property(single,'code','W22000022').property(single,'label','Bangor and Holyhead').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000034').property(single,'code','W22000034').property(single,'label','Wrexham').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000031').property(single,'code','W22000031').property(single,'label','Rhyl').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000024').property(single,'code','W22000024').property(single,'label','Cardiff').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000028').property(single,'code','W22000028').property(single,'label','Llanelli').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000023').property(single,'code','W22000023').property(single,'label','Brecon').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000029').property(single,'code','W22000029').property(single,'label','Merthyr Tydfil').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000025').property(single,'code','W22000025').property(single,'label','Cardigan').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000011').property(single,'code','W22000011').property(single,'label','Llandrindod Wells and Builth Wells').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K01000013').property(single,'code','K01000013').property(single,'label','Newport').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000030').property(single,'code','W22000030').property(single,'label','Pwllheli and Porthmadog').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K01000014').property(single,'code','K01000014').property(single,'label','Oswestry').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000033').property(single,'code','W22000033').property(single,'label','Tywyn and Dolgellau').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000015').property(single,'code','W22000015').property(single,'label','Newtown and Welshpool').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K01000005').property(single,'code','K01000005').property(single,'label','Cinderford and Ross-on-Wye').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000021').property(single,'code','W22000021').property(single,'label','Aberystwyth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--W22000026').property(single,'code','W22000026').property(single,'label','Colwyn Bay').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--K01000011').property(single,'code','K01000011').property(single,'label','Chester').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--W92000004')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S92000003').property(single,'code','S92000003').property(single,'label','Scotland').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--K03000001')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000065').property(single,'code','S22000065').property(single,'label','Glasgow').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000081').property(single,'code','S22000081').property(single,'label','Turriff and Banff').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000063').property(single,'code','S22000063').property(single,'label','Galashiels and Peebles').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000073').property(single,'code','S22000073').property(single,'label','Oban').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000086').property(single,'code','S22000086').property(single,'label','Lochgilphead').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000052').property(single,'code','S22000052').property(single,'label','Broadford and Kyle of Lochalsh').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000084').property(single,'code','S22000084').property(single,'label','Fraserburgh').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000039').property(single,'code','S22000039').property(single,'label','Shetland Islands').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000070').property(single,'code','S22000070').property(single,'label','Livingston').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000077').property(single,'code','S22000077').property(single,'label','Portree').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000049').property(single,'code','S22000049').property(single,'label','Arbroath and Montrose').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000066').property(single,'code','S22000066').property(single,'label','Golspie and Brora').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000055').property(single,'code','S22000055').property(single,'label','Dumfries').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000060').property(single,'code','S22000060').property(single,'label','Elgin').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000062').property(single,'code','S22000062').property(single,'label','Fort William').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000068').property(single,'code','S22000068').property(single,'label','Inverness').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000071').property(single,'code','S22000071').property(single,'label','Motherwell and Airdrie').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000082').property(single,'code','S22000082').property(single,'label','Ullapool').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000013').property(single,'code','S22000013').property(single,'label','Western Isles').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000056').property(single,'code','S22000056').property(single,'label','Dundee').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000051').property(single,'code','S22000051').property(single,'label','Ayr').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000067').property(single,'code','S22000067').property(single,'label','Hawick and Kelso').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000064').property(single,'code','S22000064').property(single,'label','Girvan').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000069').property(single,'code','S22000069').property(single,'label','Kilmarnock and Irvine').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000085').property(single,'code','S22000085').property(single,'label','Greenock').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000072').property(single,'code','S22000072').property(single,'label','Newton Stewart').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000059').property(single,'code','S22000059').property(single,'label','Edinburgh').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000079').property(single,'code','S22000079').property(single,'label','Stranraer').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000058').property(single,'code','S22000058').property(single,'label','Dunoon and Rothesay').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000075').property(single,'code','S22000075').property(single,'label','Peterhead').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000047').property(single,'code','S22000047').property(single,'label','Aberdeen').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000053').property(single,'code','S22000053').property(single,'label','Dalbeattie and Castle Douglas').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000057').property(single,'code','S22000057').property(single,'label','Dunfermline and Kirkcaldy').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000080').property(single,'code','S22000080').property(single,'label','Thurso').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000048').property(single,'code','S22000048').property(single,'label','Alness and Invergordon').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000074').property(single,'code','S22000074').property(single,'label','Perth').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000032').property(single,'code','S22000032').property(single,'label','Mull and Islay').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000061').property(single,'code','S22000061').property(single,'label','Falkirk and Stirling').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000083').property(single,'code','S22000083').property(single,'label','Wick').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000054').property(single,'code','S22000054').property(single,'label','Dumbarton and Helensburgh').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000035').property(single,'code','S22000035').property(single,'label','Orkney Islands').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000076').property(single,'code','S22000076').property(single,'label','Pitlochry and Aberfeldy').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000078').property(single,'code','S22000078').property(single,'label','St Andrews and Cupar').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000005').property(single,'code','S22000005').property(single,'label','Campbeltown').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
+g.addV('_generic_hierarchy_node_travel-to-work-area').property(id,'travel-to-work-area--S22000050').property(single,'code','S22000050').property(single,'label','Aviemore and Grantown-on-Spey').
+	addE('hasParent').to(g.V().hasId('travel-to-work-area--S92000003')).next()
