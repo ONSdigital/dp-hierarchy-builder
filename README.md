@@ -90,6 +90,13 @@ output is written to `./cmd/hierarchy-transformer/output`
 
 output is written to ``./cmd/geography-transformer/output`
 
+#### transform a `code,label,parent` format csv to a hierarchy input file
+
+```
+codelistid=cpih1dim1aggid
+go run cmd/code-label-parent-transformer/main.go --file import-scripts/code-label-parent-csv/$codelistid.csv --code-list-id $codelistid --output import-scripts/$codelistid.csv`
+```
+
 ### Contributing
 
 See [CONTRIBUTING](CONTRIBUTING.md) for details.
