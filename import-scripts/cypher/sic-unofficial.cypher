@@ -1271,6 +1271,14 @@ CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"CA",label:"CA : Ma
 CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"11--12",label:"11-12 : Manufacture of beverages and tobacco products" });
 CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"05--08",label:"05-08 : Mining and quarrying, excluding support activities" });
 CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"A--T",label:"A-T : Total" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"01--03",label:"01-03 : Agriculture, forestry & fishing" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"49--53",label:"49-53 : Transport & Storage (inc. postal)" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"86--88",label:"86-88 : Health" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"77-82",label:"77-82 : Business administration & support services" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"41--43",label:"41-43 : Construction" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"05--39",label:"05-39 : Production" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"90--99",label:"90-99 : Arts, entertainment, recreation & other" });
+CREATE (node:`_generic_hierarchy_node_sic-unofficial` { code:"69--75",label:"69-75 : Professional, scientific & technical" });
 MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
 WHERE parent.code = "total" AND child.code = "A"
 CREATE (child)-[:hasParent]->(parent);
@@ -5083,4 +5091,28 @@ WHERE parent.code = "B" AND child.code = "05--08"
 CREATE (child)-[:hasParent]->(parent);
 MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
 WHERE parent.code = "total" AND child.code = "A--T"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "A" AND child.code = "01--03"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "H" AND child.code = "49--53"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "Q" AND child.code = "86-88"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "N" AND child.code = "77-82"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "F" AND child.code = "41--43"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "B" AND child.code = "05--39"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "R" AND child.code = "90-99"
+CREATE (child)-[:hasParent]->(parent);
+MATCH (parent:`_generic_hierarchy_node_sic-unofficial`),(child:`_generic_hierarchy_node_sic-unofficial`)
+WHERE parent.code = "M" AND child.code = "69--75"
 CREATE (child)-[:hasParent]->(parent);

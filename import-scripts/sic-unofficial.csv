@@ -1271,3 +1271,11 @@ sic-unofficial,CA,"CA : Manufacture of food, beverages and tobacco",total
 sic-unofficial,11--12,11-12 : Manufacture of beverages and tobacco products,C
 sic-unofficial,05--08,"05-08 : Mining and quarrying, excluding support activities",B
 sic-unofficial,A--T,A-T : Total,total
+sic-unofficial,01--03,"01-03 : Agriculture, forestry & fishing",A
+sic-unofficial,49--53,"49-53 : Transport & Storage (inc. postal)",H
+sic-unofficial,86--88,"86-88 : Health",Q
+sic-unofficial,77--82,"77-82 : Business administration & support services",N
+sic-unofficial,41--43,"41-43 : Construction",F
+sic-unofficial,05--39,"05-39 : Production",B
+sic-unofficial,90--99,"90-99 : Arts, entertainment, recreation & other",R
+sic-unofficial,69--75,"69-75 : Professional, scientific & technical",M
