@@ -70,6 +70,8 @@ func main() {
 	db, err := graph.NewHierarchyStore(ctx)
 	exitIfError(ctx, err, "error creating Kafka error producer")
 
+	graphErrorConsumer := graph.NewLoggingErrorConsumer(ctx, db.ErrorChan())
+
 	// when errors occur - we send a message on an error topic.
 	errorHandler, err := reporter.NewImportErrorReporter(kafkaErrorProducer, log.Namespace)
 	exitIfError(ctx, err, "error creating import error reporter")
@@ -146,6 +148,13 @@ func main() {
 		err = db.Close(ctx)
 		if err != nil {
 			log.Event(ctx, "error closing graph db connection", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+
+		log.Event(ctx, "closing graph db error consumer", log.INFO)
+		graphErrorConsumer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing graph db error consumer", log.ERROR, log.Error(err))
 			hasShutdownError = true
 		}
 	}()
