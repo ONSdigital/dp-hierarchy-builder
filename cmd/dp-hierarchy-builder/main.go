@@ -3,8 +3,6 @@ package main
 import (
 	"context"
 	"errors"
-	"github.com/ONSdigital/go-ns/server"
-	"github.com/gorilla/mux"
 	"os"
 	"os/signal"
 	"syscall"
@@ -15,8 +13,10 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	kafka "github.com/ONSdigital/dp-kafka"
+	dphttp "github.com/ONSdigital/dp-net/http"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/log.go/log"
+	"github.com/gorilla/mux"
 )
 
 var (
@@ -108,7 +108,7 @@ func main() {
 		hc.Stop()
 
 		log.Event(ctx, "closing http server", log.INFO)
-		err = httpServer.Close(ctx)
+		err = httpServer.Close()
 		if err != nil {
 			log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
 			hasShutdownError = true
@@ -169,12 +169,12 @@ func main() {
 	os.Exit(1)
 }
 
-func startAPI(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *server.Server) {
+func startAPI(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *dphttp.Server) {
 	router := mux.NewRouter()
 	router.HandleFunc("/health", hc.Handler)
 	apiErrors := make(chan error, 1)
 
-	httpServer := server.New(cfg.BindAddr, router)
+	httpServer := dphttp.NewServer(cfg.BindAddr, router)
 	// Disable this here to allow main to manage graceful shutdown of the entire app.
 	httpServer.HandleOSSignals = false
 
