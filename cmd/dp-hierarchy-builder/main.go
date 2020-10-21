@@ -110,7 +110,7 @@ func main() {
 		hc.Stop()
 
 		log.Event(ctx, "closing http server", log.INFO)
-		err = httpServer.Close()
+		err = httpServer.Shutdown(ctx)
 		if err != nil {
 			log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
 			hasShutdownError = true
