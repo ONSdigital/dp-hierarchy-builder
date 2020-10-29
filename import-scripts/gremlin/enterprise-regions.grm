@@ -1,0 +1,141 @@
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--K03000001').property(single,'code','K03000001').property(single,'label','Great Britain').next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--S92000003').property(single,'code','S92000003').property(single,'label','Scotland').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--K03000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--S09000002').property(single,'code','S09000002').property(single,'label','East of Scotland').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--S92000003')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--S09000005').property(single,'code','S09000005').property(single,'label','Tayside').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--S92000003')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--S09000001').property(single,'code','S09000001').property(single,'label','Aberdeen City and Shire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--S92000003')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--S09000003').property(single,'code','S09000003').property(single,'label','Highlands and Islands').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--S92000003')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--S09000004').property(single,'code','S09000004').property(single,'label','South of Scotland').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--S92000003')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--S09000006').property(single,'code','S09000006').property(single,'label','West of Scotland').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--S92000003')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--W92000004').property(single,'code','W92000004').property(single,'label','Wales').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--K03000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--W19000004').property(single,'code','W19000004').property(single,'label','South East Wales').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--W92000004')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--W19000002').property(single,'code','W19000002').property(single,'label','Mid Wales').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--W92000004')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--W19000003').property(single,'code','W19000003').property(single,'label','South West Wales').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--W92000004')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--W19000001').property(single,'code','W19000001').property(single,'label','North Wales').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--W92000004')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E92000001').property(single,'code','E92000001').property(single,'label','England').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--K03000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000055').property(single,'code','E37000055').property(single,'label','Solent').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000051').property(single,'code','E37000051').property(single,'label','London').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000016').property(single,'code','E37000016').property(single,'label','Heart of the South West').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000039').property(single,'code','E37000039').property(single,'label','York, North Yorkshire and East Riding').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000026').property(single,'code','E37000026').property(single,'label','Northamptonshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000048').property(single,'code','E37000048').property(single,'label','Hertfordshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000009').property(single,'code','E37000009').property(single,'label','Dorset').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000019').property(single,'code','E37000019').property(single,'label','Lancashire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000025').property(single,'code','E37000025').property(single,'label','North East').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000032').property(single,'code','E37000032').property(single,'label','Stoke-on-Trent and Staffordshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000034').property(single,'code','E37000034').property(single,'label','Tees Valley').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000058').property(single,'code','E37000058').property(single,'label','York, North Yorkshire and East Riding').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000003').property(single,'code','E37000003').property(single,'label','Cheshire and Warrington').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000007').property(single,'code','E37000007').property(single,'label','Cumbria').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000035').property(single,'code','E37000035').property(single,'label','Thames Valley Berkshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000038').property(single,'code','E37000038').property(single,'label','Worcestershire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000010').property(single,'code','E37000010').property(single,'label','Enterprise M3').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000041').property(single,'code','E37000041').property(single,'label','South East Midlands').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000044').property(single,'code','E37000044').property(single,'label','Coast to Capital').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000054').property(single,'code','E37000054').property(single,'label','Sheffield City Region').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000012').property(single,'code','E37000012').property(single,'label','Greater Birmingham and Solihull').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000030').property(single,'code','E37000030').property(single,'label','South East').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000031').property(single,'code','E37000031').property(single,'label','South East Midlands').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000056').property(single,'code','E37000056').property(single,'label','South East').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000001').property(single,'code','E37000001').property(single,'label','Black Country').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000037').property(single,'code','E37000037').property(single,'label','West of England').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000020').property(single,'code','E37000020').property(single,'label','Leeds City Region').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000027').property(single,'code','E37000027').property(single,'label','Oxfordshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000029').property(single,'code','E37000029').property(single,'label','Solent').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000052').property(single,'code','E37000052').property(single,'label','New Anglia').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000011').property(single,'code','E37000011').property(single,'label','Gloucestershire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000017').property(single,'code','E37000017').property(single,'label','Hertfordshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000047').property(single,'code','E37000047').property(single,'label','Greater Cambridge and Greater Peterborough').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000049').property(single,'code','E37000049').property(single,'label','Humber').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000018').property(single,'code','E37000018').property(single,'label','Humber').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000040').property(single,'code','E37000040').property(single,'label','Sheffield City Region').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000042').property(single,'code','E37000042').property(single,'label','Greater Cambridge and Greater Peterborough').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000057').property(single,'code','E37000057').property(single,'label','South East Midlands').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000050').property(single,'code','E37000050').property(single,'label','Leeds City Region').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000014').property(single,'code','E37000014').property(single,'label','Greater Lincolnshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000023').property(single,'code','E37000023').property(single,'label','London').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000036').property(single,'code','E37000036').property(single,'label','The Marches').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000043').property(single,'code','E37000043').property(single,'label','Buckinghamshire Thames Valley').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000006').property(single,'code','E37000006').property(single,'label','Coventry and Warwickshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000015').property(single,'code','E37000015').property(single,'label','Greater Manchester').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000021').property(single,'code','E37000021').property(single,'label','Leicester and Leicestershire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000053').property(single,'code','E37000053').property(single,'label','Oxfordshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000008').property(single,'code','E37000008').property(single,'label','Derby, Derbyshire, Nottingham and Nottinghamshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000024').property(single,'code','E37000024').property(single,'label','New Anglia').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000046').property(single,'code','E37000046').property(single,'label','Enterprise M3').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000005').property(single,'code','E37000005').property(single,'label','Cornwall and Isles of Scilly').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000022').property(single,'code','E37000022').property(single,'label','Liverpool City Region').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000033').property(single,'code','E37000033').property(single,'label','Swindon and Wiltshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000013').property(single,'code','E37000013').property(single,'label','Greater Cambridge and Greater Peterborough').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000002').property(single,'code','E37000002').property(single,'label','Buckinghamshire Thames Valley').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000004').property(single,'code','E37000004').property(single,'label','Coast to Capital').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()
+g.addV('_generic_hierarchy_node_enterprise-regions').property(id,'enterprise-regions--E37000045').property(single,'code','E37000045').property(single,'label','Derby, Derbyshire, Nottingham and Nottinghamshire').
+	addE('hasParent').to(g.V().hasId('enterprise-regions--E92000001')).next()

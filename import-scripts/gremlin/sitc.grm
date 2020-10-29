@@ -1,0 +1,249 @@
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--T').property(single,'code','T').property(single,'label','T - Total').next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--3').property(single,'code','3').property(single,'label','3 - Fuels').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--35').property(single,'code','35').property(single,'label','35 - Electricity').
+	addE('hasParent').to(g.V().hasId('sitc--3')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--3OF').property(single,'code','3OF').property(single,'label','3OF - Fuels other than oil').
+	addE('hasParent').to(g.V().hasId('sitc--3')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--32').property(single,'code','32').property(single,'label','32 - Coal, coke & briquettes').
+	addE('hasParent').to(g.V().hasId('sitc--3')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--33').property(single,'code','33').property(single,'label','33 - Oil').
+	addE('hasParent').to(g.V().hasId('sitc--3')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--33R').property(single,'code','33R').property(single,'label','33R - Refined oil').
+	addE('hasParent').to(g.V().hasId('sitc--3')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--34').property(single,'code','34').property(single,'label','34 - Gas').
+	addE('hasParent').to(g.V().hasId('sitc--3')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--33O').property(single,'code','33O').property(single,'label','33O - Crude oil').
+	addE('hasParent').to(g.V().hasId('sitc--3')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--4').property(single,'code','4').property(single,'label','4 - Animal & vegetable oils & fats').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--42').property(single,'code','42').property(single,'label','42 - Vegetable oils & fats').
+	addE('hasParent').to(g.V().hasId('sitc--4')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--43').property(single,'code','43').property(single,'label','43 - Processed oils & fats').
+	addE('hasParent').to(g.V().hasId('sitc--4')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--41').property(single,'code','41').property(single,'label','41 - Animal oils & fats').
+	addE('hasParent').to(g.V().hasId('sitc--4')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--2').property(single,'code','2').property(single,'label','2 - Crude materials').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--21').property(single,'code','21').property(single,'label','21 - Hides, skins & furskins').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--28').property(single,'code','28').property(single,'label','28 - Metal ores & scrap').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--24').property(single,'code','24').property(single,'label','24 - Wood & cork').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--26').property(single,'code','26').property(single,'label','26 - Textile fibres').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--23').property(single,'code','23').property(single,'label','23 - Crude rubber').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--25').property(single,'code','25').property(single,'label','25 - Pulp & waste paper').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--29').property(single,'code','29').property(single,'label','29 - Other crude animal & vegetable materials').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--27').property(single,'code','27').property(single,'label','27 - Crude minerals & fertilisers').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--22').property(single,'code','22').property(single,'label','22 - Oil-seeds & oleaginous fruits').
+	addE('hasParent').to(g.V().hasId('sitc--2')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--0').property(single,'code','0').property(single,'label','0 - Food & live animals').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--09').property(single,'code','09').property(single,'label','09 - Miscellaneous foods').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--01').property(single,'code','01').property(single,'label','01 - Meat & meat preparations').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--04').property(single,'code','04').property(single,'label','04 - Cereals').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--08').property(single,'code','08').property(single,'label','08 - Animal feeding stuffs').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--06').property(single,'code','06').property(single,'label','06 - Sugar').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--02').property(single,'code','02').property(single,'label','02 - Dairy products & eggs').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--03').property(single,'code','03').property(single,'label','03 - Fish & shellfish').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--05').property(single,'code','05').property(single,'label','05 - Vegetables & fruit').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--07').property(single,'code','07').property(single,'label','07 - Coffee, tea, cocoa etc').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--00').property(single,'code','00').property(single,'label','00 - Live animals').
+	addE('hasParent').to(g.V().hasId('sitc--0')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--5').property(single,'code','5').property(single,'label','5 - Chemicals').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--55').property(single,'code','55').property(single,'label','55 - Toilet & cleansing preparations').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--56').property(single,'code','56').property(single,'label','56 - Processed fertilisers').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--54').property(single,'code','54').property(single,'label','54 - Medicinal & pharmaceutical products').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--52').property(single,'code','52').property(single,'label','52 - Inorganic chemicals').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--57').property(single,'code','57').property(single,'label','57 - Plastics in primary forms').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--51').property(single,'code','51').property(single,'label','51 - Organic chemicals').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--58').property(single,'code','58').property(single,'label','58 - Plastics in non-primary forms').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--53').property(single,'code','53').property(single,'label','53 - Dyeing, tanning & colouring materials').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--59').property(single,'code','59').property(single,'label','59 - Other chemicals').
+	addE('hasParent').to(g.V().hasId('sitc--5')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--9').property(single,'code','9').property(single,'label','9 - Unspecified goods').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--6').property(single,'code','6').property(single,'label','6 - Material manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--67').property(single,'code','67').property(single,'label','67 - Iron & steel').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--64').property(single,'code','64').property(single,'label','64 - Paper & paperboard').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--65').property(single,'code','65').property(single,'label','65 - Textile fabrics').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--68').property(single,'code','68').property(single,'label','68 - Non-ferrous metals').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--62').property(single,'code','62').property(single,'label','62 - Rubber manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--63').property(single,'code','63').property(single,'label','63 - Wood & cork manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--66').property(single,'code','66').property(single,'label','66 - Mineral manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--69').property(single,'code','69').property(single,'label','69 - Miscellaneous metal manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--61').property(single,'code','61').property(single,'label','61 - Leather manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--6')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--8').property(single,'code','8').property(single,'label','8 - Miscellaneous manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--89OC').property(single,'code','89OC').property(single,'label','89OC - Other manufactures (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--89K').property(single,'code','89K').property(single,'label','89K - Other manufactures (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--87C').property(single,'code','87C').property(single,'label','87C - Scientific instruments (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--88K').property(single,'code','88K').property(single,'label','88K - Photographic & optical goods & clocks (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--81C').property(single,'code','81C').property(single,'label','81C - Plumbing, heating & lighting fixtures (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--89I').property(single,'code','89I').property(single,'label','89I - Other manufactures (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--81K').property(single,'code','81K').property(single,'label','81K - Plumbing, heating & lighting fixtures (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--82K').property(single,'code','82K').property(single,'label','82K - Furniture (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--8OK').property(single,'code','8OK').property(single,'label','8OK - Other miscellaneous manufactures (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--82I').property(single,'code','82I').property(single,'label','82I - Furniture (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--84').property(single,'code','84').property(single,'label','84 - Clothing').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--83').property(single,'code','83').property(single,'label','83 - Travel goods, handbags etc').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--8O').property(single,'code','8O').property(single,'label','8O - Other manufactures').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--82C').property(single,'code','82C').property(single,'label','82C - Furniture (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--87I').property(single,'code','87I').property(single,'label','87I - Scientific instruments (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--8OI').property(single,'code','8OI').property(single,'label','8OI - Other miscellaneous manufactures (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--81I').property(single,'code','81I').property(single,'label','81I - Plumbing, heating & lighting fixtures (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--896').property(single,'code','896').property(single,'label','896 - Works of art').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--85').property(single,'code','85').property(single,'label','85 - Footwear').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--88C').property(single,'code','88C').property(single,'label','88C - Photographic & optical goods & clocks (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--88I').property(single,'code','88I').property(single,'label','88I - Photographic & optical goods & clocks (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--897C').property(single,'code','897C').property(single,'label','897C - Jewellery').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--87K').property(single,'code','87K').property(single,'label','87K - Scientific instruments (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--8OC').property(single,'code','8OC').property(single,'label','8OC - Other miscellaneous manufactures (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--8')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--1').property(single,'code','1').property(single,'label','1 - Beverages & tobacco').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--11').property(single,'code','11').property(single,'label','11 - Beverages').
+	addE('hasParent').to(g.V().hasId('sitc--1')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--12').property(single,'code','12').property(single,'label','12 - Tobacco').
+	addE('hasParent').to(g.V().hasId('sitc--1')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7').property(single,'code','7').property(single,'label','7 - Machinery & transport equipment').
+	addE('hasParent').to(g.V().hasId('sitc--T')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--78C').property(single,'code','78C').property(single,'label','78C - Road vehicles other than cars (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7E').property(single,'code','7E').property(single,'label','7E - Electrical machinery').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7M').property(single,'code','7M').property(single,'label','7M - Mechanical machinery').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--77I').property(single,'code','77I').property(single,'label','77I - Miscellaneous electrical goods (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--792').property(single,'code','792').property(single,'label','792 - Aircraft').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--76C').property(single,'code','76C').property(single,'label','76C - Telecoms & sound equipment (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7EK').property(single,'code','7EK').property(single,'label','7EK - Electrical machinery (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--72C').property(single,'code','72C').property(single,'label','72C - Specialised machinery (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7MC').property(single,'code','7MC').property(single,'label','7MC - Mechanical machinery (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--73K').property(single,'code','73K').property(single,'label','73K - Metal working machinery (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--74C').property(single,'code','74C').property(single,'label','74C - General industrial machinery (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--793').property(single,'code','793').property(single,'label','793 - Ships').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7MK').property(single,'code','7MK').property(single,'label','7MK - Mechanical machinery (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--72I').property(single,'code','72I').property(single,'label','72I - Specialised machinery (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--791I').property(single,'code','791I').property(single,'label','791I - Road vehicles other than cars (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--74K').property(single,'code','74K').property(single,'label','74K - General industrial machinery (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--78I').property(single,'code','78I').property(single,'label','78I - Road vehicles other than cars (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--79').property(single,'code','79').property(single,'label','79 - Other transport equipment').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--72K').property(single,'code','72K').property(single,'label','72K - Specialised machinery (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--78').property(single,'code','78').property(single,'label','78 - Road vehicles').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--77K').property(single,'code','77K').property(single,'label','77K - Miscellaneous electrical goods (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--71MI').property(single,'code','71MI').property(single,'label','71MI - Mechanical power generators (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--71EK').property(single,'code','71EK').property(single,'label','71EK - Electric motors (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--73I').property(single,'code','73I').property(single,'label','73I - Metal working machinery (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--792-3').property(single,'code','792-3').property(single,'label','792-3 - Ships & aircraft').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--74I').property(single,'code','74I').property(single,'label','74I - General industrial machinery (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--791K').property(single,'code','791K').property(single,'label','791K - Railway equipment (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--71MC').property(single,'code','71MC').property(single,'label','71MC - Mechanical power generators (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--75I').property(single,'code','75I').property(single,'label','75I - Office machinery (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--71MK').property(single,'code','71MK').property(single,'label','71MK - Mechanical power generators (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--78K').property(single,'code','78K').property(single,'label','78K - Road vehicles other than cars (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7EI').property(single,'code','7EI').property(single,'label','7EI - Electrical machinery (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--75K').property(single,'code','75K').property(single,'label','75K - Office machinery (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7MI').property(single,'code','7MI').property(single,'label','7MI - Mechanical machinery (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--75C').property(single,'code','75C').property(single,'label','75C - Office machinery (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--76I').property(single,'code','76I').property(single,'label','76I - Telecoms & sound equipment (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--77C').property(single,'code','77C').property(single,'label','77C - Miscellaneous electrical goods (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--71EI').property(single,'code','71EI').property(single,'label','71EI - Electric motors (intermediate)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--76K').property(single,'code','76K').property(single,'label','76K - Telecoms & sound equipment (capital)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--78M').property(single,'code','78M').property(single,'label','78M - Cars').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
+g.addV('_generic_hierarchy_node_sitc').property(id,'sitc--7EC').property(single,'code','7EC').property(single,'label','7EC - Electrical machinery (consumer)').
+	addE('hasParent').to(g.V().hasId('sitc--7')).next()
