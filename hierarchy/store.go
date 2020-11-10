@@ -44,25 +44,34 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return nil
 	}
 
-	// Get node IDs corresponding to generic hierarchy nodes with data (leaves)
-	leafIDs, err := store.GetGenericHierarchyNodeIDs(ctx, 1, codeListID, codes)
+	// Get node IDs corresponding to generic hierarchy nodes with data
+	nodesWithData, err := store.GetGenericHierarchyNodeIDs(ctx, 1, codeListID, codes)
 	if err != nil {
 		return err
 	}
 
-	// Get node IDs corresponding to generic hierarchy nodes without data (ancestries)
+	// Get node IDs corresponding to generic hierarchy nodes which are ancestries to the nodes with data
 	ancestryIDs, err := store.GetGenericHierarchyAncestriesIDs(ctx, 1, codeListID, codes)
 	if err != nil {
 		return err
 	}
 
-	// Clone necessary generic hierarchy nodes
-	if err := store.CloneNodesFromIDs(ctx, 1, instanceID, codeListID, dimensionName, leafIDs, true); err != nil {
+	// some ancestries may have data. Create a map with ancestries without data only.
+	// note: for big datasets we expect len(ancestries) << len(nodesWithData), so we iterate ancestries for efficiency
+	nodesWithoutData := map[string]struct{}{}
+	for id := range ancestryIDs {
+		if _, found := nodesWithData[id]; !found {
+			nodesWithoutData[id] = struct{}{}
+		}
+	}
+
+	// Clone necessary generic hierarchy nodes with data
+	if err := store.CloneNodesFromIDs(ctx, 1, instanceID, codeListID, dimensionName, nodesWithData, true); err != nil {
 		return err
 	}
 
-	// Clone necessary ancestry generic hierarchy nodes
-	if err := store.CloneNodesFromIDs(ctx, 1, instanceID, codeListID, dimensionName, ancestryIDs, false); err != nil {
+	// Clone necessary ancestry generic hierarchy nodes without data
+	if err := store.CloneNodesFromIDs(ctx, 1, instanceID, codeListID, dimensionName, nodesWithoutData, false); err != nil {
 		return err
 	}
 
@@ -78,11 +87,11 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	logData["node_count"] = nodeCount
 
 	// Clone Relationships for the newly created nodes
-	if err := store.CloneRelationshipsFromIDs(ctx, 1, instanceID, dimensionName, leafIDs); err != nil {
+	if err := store.CloneRelationshipsFromIDs(ctx, 1, instanceID, dimensionName, nodesWithData); err != nil {
 		return err
 	}
 
-	if err := store.CloneRelationshipsFromIDs(ctx, 1, instanceID, dimensionName, ancestryIDs); err != nil {
+	if err := store.CloneRelationshipsFromIDs(ctx, 1, instanceID, dimensionName, nodesWithoutData); err != nil {
 		return err
 	}
 

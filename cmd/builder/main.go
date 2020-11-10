@@ -11,8 +11,8 @@ import (
 	"github.com/ONSdigital/log.go/log"
 )
 
-var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d078", "")
-var instanceID = flag.String("instance-id", "12345", "")
+var codeListID = flag.String("code-list-id", "cpih1dim1aggid", "")
+var instanceID = flag.String("instance-id", "20d7fe05-99fb-420b-b68d-cf0bfdd27a63", "")
 var dimensionNameArg = flag.String("dimension-name", "aggregate", "")
 var dimensionName = ""
 
