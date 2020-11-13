@@ -2,12 +2,13 @@ package gremlin
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"io/ioutil"
 	"strings"
 
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/go-ns/log"
+	"github.com/ONSdigital/log.go/log"
 )
 
 var seenLabel = map[string]bool{}
@@ -74,7 +75,7 @@ func escapeGremlin(label string) string {
 	escapedLabel := strings.Replace(label, "'", "\\'", -1)
 	if label != escapedLabel {
 		if _, ok := seenLabel[label]; !ok {
-			log.Info("trim", log.Data{"esc": escapedLabel})
+			log.Event(context.Background(), "trim", log.INFO, log.Data{"esc": escapedLabel})
 			seenLabel[label] = true
 		}
 	}
