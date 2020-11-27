@@ -1,0 +1,126 @@
+codelist,code,label,parent
+sitc,0,0 - Food & live animals,T
+sitc,00,00 - Live animals,0
+sitc,01,01 - Meat & meat preparations,0
+sitc,02,02 - Dairy products & eggs,0
+sitc,03,03 - Fish & shellfish,0
+sitc,04,04 - Cereals,0
+sitc,05,05 - Vegetables & fruit,0
+sitc,06,06 - Sugar,0
+sitc,07,"07 - Coffee, tea, cocoa etc",0
+sitc,08,08 - Animal feeding stuffs,0
+sitc,09,09 - Miscellaneous foods,0
+sitc,1,1 - Beverages & tobacco,T
+sitc,11,11 - Beverages,1
+sitc,12,12 - Tobacco,1
+sitc,2,2 - Crude materials,T
+sitc,21,"21 - Hides, skins & furskins",2
+sitc,22,22 - Oil-seeds & oleaginous fruits,2
+sitc,23,23 - Crude rubber,2
+sitc,24,24 - Wood & cork,2
+sitc,25,25 - Pulp & waste paper,2
+sitc,26,26 - Textile fibres,2
+sitc,27,27 - Crude minerals & fertilisers,2
+sitc,28,28 - Metal ores & scrap,2
+sitc,29,29 - Other crude animal & vegetable materials,2
+sitc,3,3 - Fuels,T
+sitc,32,"32 - Coal, coke & briquettes",3
+sitc,33,33 - Oil,3
+sitc,33O,33O - Crude oil,3
+sitc,33R,33R - Refined oil,3
+sitc,34,34 - Gas,3
+sitc,35,35 - Electricity,3
+sitc,3OF,3OF - Fuels other than oil,3
+sitc,4,4 - Animal & vegetable oils & fats,T
+sitc,41,41 - Animal oils & fats,4
+sitc,42,42 - Vegetable oils & fats,4
+sitc,43,43 - Processed oils & fats,4
+sitc,5,5 - Chemicals,T
+sitc,51,51 - Organic chemicals,5
+sitc,52,52 - Inorganic chemicals,5
+sitc,53,"53 - Dyeing, tanning & colouring materials",5
+sitc,54,54 - Medicinal & pharmaceutical products,5
+sitc,55,55 - Toilet & cleansing preparations,5
+sitc,56,56 - Processed fertilisers,5
+sitc,57,57 - Plastics in primary forms,5
+sitc,58,58 - Plastics in non-primary forms,5
+sitc,59,59 - Other chemicals,5
+sitc,6,6 - Material manufactures,T
+sitc,61,61 - Leather manufactures,6
+sitc,62,62 - Rubber manufactures,6
+sitc,63,63 - Wood & cork manufactures,6
+sitc,64,64 - Paper & paperboard,6
+sitc,65,65 - Textile fabrics,6
+sitc,66,66 - Mineral manufactures,6
+sitc,67,67 - Iron & steel,6
+sitc,68,68 - Non-ferrous metals,6
+sitc,69,69 - Miscellaneous metal manufactures,6
+sitc,7,7 - Machinery & transport equipment,T
+sitc,71EI,71EI - Electric motors (intermediate),7
+sitc,71EK,71EK - Electric motors (capital),7
+sitc,71MC,71MC - Mechanical power generators (consumer),7
+sitc,71MI,71MI - Mechanical power generators (intermediate),7
+sitc,71MK,71MK - Mechanical power generators (capital),7
+sitc,72C,72C - Specialised machinery (consumer),7
+sitc,72I,72I - Specialised machinery (intermediate),7
+sitc,72K,72K - Specialised machinery (capital),7
+sitc,73I,73I - Metal working machinery (intermediate),7
+sitc,73K,73K - Metal working machinery (capital),7
+sitc,74C,74C - General industrial machinery (consumer),7
+sitc,74I,74I - General industrial machinery (intermediate),7
+sitc,74K,74K - General industrial machinery (capital),7
+sitc,75C,75C - Office machinery (consumer),7
+sitc,75I,75I - Office machinery (intermediate),7
+sitc,75K,75K - Office machinery (capital),7
+sitc,76C,76C - Telecoms & sound equipment (consumer),7
+sitc,76I,76I - Telecoms & sound equipment (intermediate),7
+sitc,76K,76K - Telecoms & sound equipment (capital),7
+sitc,77C,77C - Miscellaneous electrical goods (consumer),7
+sitc,77I,77I - Miscellaneous electrical goods (intermediate),7
+sitc,77K,77K - Miscellaneous electrical goods (capital),7
+sitc,78,78 - Road vehicles,7
+sitc,78C,78C - Road vehicles other than cars (consumer),7
+sitc,78I,78I - Road vehicles other than cars (intermediate),7
+sitc,78K,78K - Road vehicles other than cars (capital),7
+sitc,78M,78M - Cars,7
+sitc,79,79 - Other transport equipment,7
+sitc,791I,791I - Road vehicles other than cars (intermediate),7
+sitc,791K,791K - Railway equipment (capital),7
+sitc,792,792 - Aircraft,7
+sitc,792-3,792-3 - Ships & aircraft,7
+sitc,793,793 - Ships,7
+sitc,7E,7E - Electrical machinery,7
+sitc,7EC,7EC - Electrical machinery (consumer),7
+sitc,7EI,7EI - Electrical machinery (intermediate),7
+sitc,7EK,7EK - Electrical machinery (intermediate),7
+sitc,7M,7M - Mechanical machinery,7
+sitc,7MC,7MC - Mechanical machinery (consumer),7
+sitc,7MI,7MI - Mechanical machinery (intermediate),7
+sitc,7MK,7MK - Mechanical machinery (capital),7
+sitc,8,8 - Miscellaneous manufactures,T
+sitc,81C,"81C - Plumbing, heating & lighting fixtures (consumer)",8
+sitc,81I,"81I - Plumbing, heating & lighting fixtures (intermediate)",8
+sitc,81K,"81K - Plumbing, heating & lighting fixtures (capital)",8
+sitc,82C,82C - Furniture (consumer),8
+sitc,82I,82I - Furniture (intermediate),8
+sitc,82K,82K - Furniture (capital),8
+sitc,83,"83 - Travel goods, handbags etc",8
+sitc,84,84 - Clothing,8
+sitc,85,85 - Footwear,8
+sitc,87C,87C - Scientific instruments (consumer),8
+sitc,87I,87I - Scientific instruments (intermediate),8
+sitc,87K,87K - Scientific instruments (capital),8
+sitc,88C,88C - Photographic & optical goods & clocks (consumer),8
+sitc,88I,88I - Photographic & optical goods & clocks (intermediate),8
+sitc,88K,88K - Photographic & optical goods & clocks (capital),8
+sitc,896,896 - Works of art,8
+sitc,897C,897C - Jewellery,8
+sitc,89I,89I - Other manufactures (intermediate),8
+sitc,89K,89K - Other manufactures (capital),8
+sitc,89OC,89OC - Other manufactures (consumer),8
+sitc,8O,8O - Other manufactures,8
+sitc,8OC,8OC - Other miscellaneous manufactures (consumer),8
+sitc,8OI,8OI - Other miscellaneous manufactures (intermediate),8
+sitc,8OK,8OK - Other miscellaneous manufactures (capital),8
+sitc,9,9 - Unspecified goods,T
+sitc,T,T - Total,

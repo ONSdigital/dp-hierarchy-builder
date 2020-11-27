@@ -4,22 +4,28 @@ dp-hierarchy-builder
 The hierarchy builder is a service that forms part of the dataset import process. It requires a 'full' hierarchy to be available for the dataset you are importing
 
 ### Getting started
-
-Import the CPIH full hierarchy:
-
-`cypher-shell < cypher-scripts/cpih1dim1aggid.cypher`
-
-Import the mid-year-pop-est full hierarchy:
-
-`cypher-shell < cypher-scripts/mid-year-pop-geography.cypher`
-
-You can use additional flags if running against an environment other than localhost:
-
-`cypher-shell -u USER -p PASSWORD -a bolt://localhost:7687 < .....`
-
-Run the dp-hierarchy-builder service
+Run the `dp-hierarchy-builder` service:
 
 `make debug` 
+
+### Hierarchy import scripts
+
+The import scripts rely on the CLI tool for the database you're targeting:
+ - `cypher-shell` for Neo4j / Cypher import
+ - `gremlin.sh` for Neptune / Gremlin imports
+
+You may also need an SSH tunnel to the database if it's not running locally.
+
+Example import for the CPIH full hierarchy: (replace the filename for other hierarchy import files)
+
+Cypher:
+`cypher-shell < import-scripts/cypher/cpih1dim1aggid.cypher`
+
+Gremlin:
+`./gremlin-import.sh import-scripts/gremlin/cpih1dim1aggid.grm`
+
+For Cypher imports, you can use additional flags if running against an environment other than localhost:
+`cypher-shell -u USER -p PASSWORD -a bolt://localhost:7687 < .....`
 
 ### Kafka scripts
 
@@ -38,6 +44,8 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 | GRACEFUL_SHUTDOWN_TIMEOUT    | time.Second * 10      | Time time to wait when gracefully shutting down before closing
 | HEALTHCHECK_INTERVAL         | 30s                   | The time between doing health checks
 | HEALTHCHECK_CRITICAL_TIMEOUT | 90s                   | The time taken for the health changes from warning state to critical due to subsystem check failures
+
+Plus the graph database vars from [dp-graph](https://github.com/ONSdigital/dp-graph) - namely `GRAPH_DRIVER_TYPE` and `GRAPH_ADDR`
 
 ### Healthcheck
 
@@ -82,12 +90,19 @@ output is written to `./cmd/hierarchy-transformer/output`
 
 output is written to ``./cmd/geography-transformer/output`
 
+#### transform a `code,label,parent` format csv to a hierarchy input file
+
+```
+codelistid=cpih1dim1aggid
+go run cmd/code-label-parent-transformer/main.go --file import-scripts/code-label-parent-csv/$codelistid.csv --code-list-id $codelistid --output import-scripts/$codelistid.csv`
+```
+
 ### Contributing
 
 See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### License
 
-Copyright © 2016-2017, Office for National Statistics (https://www.ons.gov.uk)
+Copyright © 2016-2019, Office for National Statistics (https://www.ons.gov.uk)
 
 Released under MIT license, see [LICENSE](LICENSE.md) for details.

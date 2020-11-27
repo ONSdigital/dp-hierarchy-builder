@@ -11,16 +11,19 @@ import (
 	"encoding/csv"
 	"flag"
 	"os"
+	"strings"
 
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"github.com/ONSdigital/dp-hierarchy-builder/gremlin"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/log.go/log"
-	"strings"
 )
 
 var filepath = flag.String("file", "cmd/hierarchy-transformer/sic07-heirarchy.csv", "The path to the import filepath")
 var cypherFile = flag.String("cypher", "cmd/hierarchy-transformer/output/hierarchy.cypher", "")
 var cypherDelFile = flag.String("cypher-delete", "cmd/hierarchy-transformer/output/hierarchy-delete.cypher", "")
+var gremlinFile = flag.String("gremlin", "cmd/hierarchy-transformer/output/hierarchy.gremlin", "")
+var gremlinDelFile = flag.String("gremlin-delete", "cmd/hierarchy-transformer/output/hierarchy-delete.gremlin", "")
 
 func main() {
 
@@ -34,6 +37,7 @@ func main() {
 		os.Exit(1)
 	}
 
+	log.Event(ctx, "Opened", log.INFO, log.Data{"file": *filepath})
 	csvReader := csv.NewReader(f)
 	defer f.Close()
 
@@ -59,7 +63,15 @@ func main() {
 
 	log.Event(ctx, "Generating cypher deletion script", log.INFO)
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
-	logIfError(ctx, err, "error generating deletion script")
+	logIfError(ctx, err, "error generating cypher deletion script")
+
+	log.Event(ctx, "Generating gremlin script", log.INFO)
+	err = gremlin.CreateGremlinFile(rootNodes, *gremlinFile)
+	logIfError(ctx, err, "error creating gremlin script")
+
+	log.Event(ctx, "Generating gremlin deletion script", log.INFO)
+	err = gremlin.CreateGremlinDeleteFile(rootNodes, *gremlinDelFile)
+	logIfError(ctx, err, "error creating gremlin deletion script")
 }
 
 func createNodeMap(csvReader *csv.Reader) (*map[string]*hierarchy.Node, error) {
@@ -77,16 +89,12 @@ func createNodeMap(csvReader *csv.Reader) (*map[string]*hierarchy.Node, error) {
 			break
 		}
 
-		trimmedLabel := strings.Trim(record[2], " ")
-		escapedLabel := strings.Replace(trimmedLabel, "'", "\\'", -1)
-
 		option := &hierarchy.Node{
 			CodeList:   strings.Trim(record[0], " "),
 			Code:       strings.Trim(record[1], " "),
-			Label:      escapedLabel,
+			Label:      strings.Trim(record[2], " "),
 			ParentCode: strings.Trim(record[3], " "),
 		}
-
 		nodeMap[option.Code] = option
 
 	}

@@ -1,0 +1,471 @@
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UK').property(single,'code','UK').property(single,'label','United Kingdom').next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKZ').property(single,'code','UKZ').property(single,'label','Extra-regio').
+	addE('hasParent').to(g.V().hasId('nuts--UK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN').property(single,'code','UKN').property(single,'label','Northern Ireland').
+	addE('hasParent').to(g.V().hasId('nuts--UK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN0').property(single,'code','UKN0').property(single,'label','Northern Ireland').
+	addE('hasParent').to(g.V().hasId('nuts--UKN')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN10').property(single,'code','UKN10').property(single,'label','Derry City and Strabane').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN13').property(single,'code','UKN13').property(single,'label','Antrim and Newtownabbey').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN16').property(single,'code','UKN16').property(single,'label','Fermanagh and Omagh').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN14').property(single,'code','UKN14').property(single,'label','Lisburn and Castlereagh').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN12').property(single,'code','UKN12').property(single,'label','Causeway Coast and Glens').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN07').property(single,'code','UKN07').property(single,'label','Armagh City, Banbridge and Craigavon').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN09').property(single,'code','UKN09').property(single,'label','Ards and North Down').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN11').property(single,'code','UKN11').property(single,'label','Mid Ulster').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN08').property(single,'code','UKN08').property(single,'label','Newry, Mourne and Down').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN06').property(single,'code','UKN06').property(single,'label','Belfast').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKN15').property(single,'code','UKN15').property(single,'label','Mid and East Antrim').
+	addE('hasParent').to(g.V().hasId('nuts--UKN0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UK0').property(single,'code','UK0').property(single,'label','England').
+	addE('hasParent').to(g.V().hasId('nuts--UK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI').property(single,'code','UKI').property(single,'label','London').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI4').property(single,'code','UKI4').property(single,'label','Inner London - East').
+	addE('hasParent').to(g.V().hasId('nuts--UKI')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI44').property(single,'code','UKI44').property(single,'label','Lewisham and Southwark').
+	addE('hasParent').to(g.V().hasId('nuts--UKI4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI42').property(single,'code','UKI42').property(single,'label','Tower Hamlets').
+	addE('hasParent').to(g.V().hasId('nuts--UKI4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI43').property(single,'code','UKI43').property(single,'label','Haringey and Islington').
+	addE('hasParent').to(g.V().hasId('nuts--UKI4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI41').property(single,'code','UKI41').property(single,'label','Hackney and Newham').
+	addE('hasParent').to(g.V().hasId('nuts--UKI4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI45').property(single,'code','UKI45').property(single,'label','Lambeth').
+	addE('hasParent').to(g.V().hasId('nuts--UKI4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI7').property(single,'code','UKI7').property(single,'label','Outer London - West and North West').
+	addE('hasParent').to(g.V().hasId('nuts--UKI')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI75').property(single,'code','UKI75').property(single,'label','Hounslow and Richmond upon Thames').
+	addE('hasParent').to(g.V().hasId('nuts--UKI7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI71').property(single,'code','UKI71').property(single,'label','Barnet').
+	addE('hasParent').to(g.V().hasId('nuts--UKI7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI72').property(single,'code','UKI72').property(single,'label','Brent').
+	addE('hasParent').to(g.V().hasId('nuts--UKI7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI74').property(single,'code','UKI74').property(single,'label','Harrow and Hillingdon').
+	addE('hasParent').to(g.V().hasId('nuts--UKI7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI73').property(single,'code','UKI73').property(single,'label','Ealing').
+	addE('hasParent').to(g.V().hasId('nuts--UKI7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI6').property(single,'code','UKI6').property(single,'label','Outer London - South').
+	addE('hasParent').to(g.V().hasId('nuts--UKI')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI61').property(single,'code','UKI61').property(single,'label','Bromley').
+	addE('hasParent').to(g.V().hasId('nuts--UKI6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI63').property(single,'code','UKI63').property(single,'label','Merton, Kingston upon Thames and Sutton').
+	addE('hasParent').to(g.V().hasId('nuts--UKI6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI62').property(single,'code','UKI62').property(single,'label','Croydon').
+	addE('hasParent').to(g.V().hasId('nuts--UKI6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI5').property(single,'code','UKI5').property(single,'label','Outer London - East and North East').
+	addE('hasParent').to(g.V().hasId('nuts--UKI')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI54').property(single,'code','UKI54').property(single,'label','Enfield').
+	addE('hasParent').to(g.V().hasId('nuts--UKI5')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI52').property(single,'code','UKI52').property(single,'label','Barking & Dagenham and Havering').
+	addE('hasParent').to(g.V().hasId('nuts--UKI5')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI53').property(single,'code','UKI53').property(single,'label','Redbridge and Waltham Forest').
+	addE('hasParent').to(g.V().hasId('nuts--UKI5')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI51').property(single,'code','UKI51').property(single,'label','Bexley and Greenwich').
+	addE('hasParent').to(g.V().hasId('nuts--UKI5')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI3').property(single,'code','UKI3').property(single,'label','Inner London - West').
+	addE('hasParent').to(g.V().hasId('nuts--UKI')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI34').property(single,'code','UKI34').property(single,'label','Wandsworth').
+	addE('hasParent').to(g.V().hasId('nuts--UKI3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI32').property(single,'code','UKI32').property(single,'label','Westminster').
+	addE('hasParent').to(g.V().hasId('nuts--UKI3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI33').property(single,'code','UKI33').property(single,'label','Kensington & Chelsea and Hammersmith & Fulham').
+	addE('hasParent').to(g.V().hasId('nuts--UKI3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKI31').property(single,'code','UKI31').property(single,'label','Camden and City of London').
+	addE('hasParent').to(g.V().hasId('nuts--UKI3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC').property(single,'code','UKC').property(single,'label','North East').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC2').property(single,'code','UKC2').property(single,'label','Northumberland and Tyne and Wear').
+	addE('hasParent').to(g.V().hasId('nuts--UKC')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC21').property(single,'code','UKC21').property(single,'label','Northumberland').
+	addE('hasParent').to(g.V().hasId('nuts--UKC2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC22').property(single,'code','UKC22').property(single,'label','Tyneside').
+	addE('hasParent').to(g.V().hasId('nuts--UKC2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC23').property(single,'code','UKC23').property(single,'label','Sunderland').
+	addE('hasParent').to(g.V().hasId('nuts--UKC2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC1').property(single,'code','UKC1').property(single,'label','Tees Valley and Durham').
+	addE('hasParent').to(g.V().hasId('nuts--UKC')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC13').property(single,'code','UKC13').property(single,'label','Darlington').
+	addE('hasParent').to(g.V().hasId('nuts--UKC1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC11').property(single,'code','UKC11').property(single,'label','Hartlepool and Stockton-on-Tees').
+	addE('hasParent').to(g.V().hasId('nuts--UKC1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC12').property(single,'code','UKC12').property(single,'label','South Teesside').
+	addE('hasParent').to(g.V().hasId('nuts--UKC1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKC14').property(single,'code','UKC14').property(single,'label','Durham CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKC1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ').property(single,'code','UKJ').property(single,'label','South East').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ1').property(single,'code','UKJ1').property(single,'label','Berkshire, Buckinghamshire and Oxfordshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ11').property(single,'code','UKJ11').property(single,'label','Berkshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ13').property(single,'code','UKJ13').property(single,'label','Buckinghamshire CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ12').property(single,'code','UKJ12').property(single,'label','Milton Keynes').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ14').property(single,'code','UKJ14').property(single,'label','Oxfordshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ2').property(single,'code','UKJ2').property(single,'label','Surrey, East and West Sussex').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ25').property(single,'code','UKJ25').property(single,'label','West Surrey').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ26').property(single,'code','UKJ26').property(single,'label','East Surrey').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ21').property(single,'code','UKJ21').property(single,'label','Brighton and Hove').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ28').property(single,'code','UKJ28').property(single,'label','West Sussex (North East)').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ27').property(single,'code','UKJ27').property(single,'label','West Sussex (South West)').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ22').property(single,'code','UKJ22').property(single,'label','East Sussex CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ4').property(single,'code','UKJ4').property(single,'label','Kent').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ43').property(single,'code','UKJ43').property(single,'label','Kent Thames Gateway').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ45').property(single,'code','UKJ45').property(single,'label','Mid Kent').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ41').property(single,'code','UKJ41').property(single,'label','Medway').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ46').property(single,'code','UKJ46').property(single,'label','West Kent').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ44').property(single,'code','UKJ44').property(single,'label','East Kent').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ3').property(single,'code','UKJ3').property(single,'label','Hampshire and Isle of Wight').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ32').property(single,'code','UKJ32').property(single,'label','Southampton').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ34').property(single,'code','UKJ34').property(single,'label','Isle of Wight').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ36').property(single,'code','UKJ36').property(single,'label','Central Hampshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ35').property(single,'code','UKJ35').property(single,'label','South Hampshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ37').property(single,'code','UKJ37').property(single,'label','North Hampshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKJ31').property(single,'code','UKJ31').property(single,'label','Portsmouth').
+	addE('hasParent').to(g.V().hasId('nuts--UKJ3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF').property(single,'code','UKF').property(single,'label','East Midlands').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF3').property(single,'code','UKF3').property(single,'label','Lincolnshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF30').property(single,'code','UKF30').property(single,'label','Lincolnshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF1').property(single,'code','UKF1').property(single,'label','Derbyshire and Nottinghamshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF14').property(single,'code','UKF14').property(single,'label','Nottingham').
+	addE('hasParent').to(g.V().hasId('nuts--UKF1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF13').property(single,'code','UKF13').property(single,'label','South and West Derbyshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF15').property(single,'code','UKF15').property(single,'label','North Nottinghamshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF12').property(single,'code','UKF12').property(single,'label','East Derbyshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF11').property(single,'code','UKF11').property(single,'label','Derby').
+	addE('hasParent').to(g.V().hasId('nuts--UKF1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF16').property(single,'code','UKF16').property(single,'label','South Nottinghamshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF2').property(single,'code','UKF2').property(single,'label','Leicestershire, Rutland and Northamptonshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF22').property(single,'code','UKF22').property(single,'label','Leicestershire CC and Rutland').
+	addE('hasParent').to(g.V().hasId('nuts--UKF2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF24').property(single,'code','UKF24').property(single,'label','West Northamptonshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF25').property(single,'code','UKF25').property(single,'label','North Northamptonshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKF2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKF21').property(single,'code','UKF21').property(single,'label','Leicester').
+	addE('hasParent').to(g.V().hasId('nuts--UKF2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE').property(single,'code','UKE').property(single,'label','Yorkshire and The Humber').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE1').property(single,'code','UKE1').property(single,'label','East Yorkshire and Northern Lincolnshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKE')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE13').property(single,'code','UKE13').property(single,'label','North and North East Lincolnshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKE1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE12').property(single,'code','UKE12').property(single,'label','East Riding of Yorkshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKE1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE11').property(single,'code','UKE11').property(single,'label','Kingston upon Hull, City of').
+	addE('hasParent').to(g.V().hasId('nuts--UKE1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE3').property(single,'code','UKE3').property(single,'label','South Yorkshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKE')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE32').property(single,'code','UKE32').property(single,'label','Sheffield').
+	addE('hasParent').to(g.V().hasId('nuts--UKE3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE31').property(single,'code','UKE31').property(single,'label','Barnsley, Doncaster and Rotherham').
+	addE('hasParent').to(g.V().hasId('nuts--UKE3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE4').property(single,'code','UKE4').property(single,'label','West Yorkshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKE')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE41').property(single,'code','UKE41').property(single,'label','Bradford').
+	addE('hasParent').to(g.V().hasId('nuts--UKE4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE42').property(single,'code','UKE42').property(single,'label','Leeds').
+	addE('hasParent').to(g.V().hasId('nuts--UKE4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE45').property(single,'code','UKE45').property(single,'label','Wakefield').
+	addE('hasParent').to(g.V().hasId('nuts--UKE4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE44').property(single,'code','UKE44').property(single,'label','Calderdale and Kirklees').
+	addE('hasParent').to(g.V().hasId('nuts--UKE4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE2').property(single,'code','UKE2').property(single,'label','North Yorkshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKE')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE21').property(single,'code','UKE21').property(single,'label','York').
+	addE('hasParent').to(g.V().hasId('nuts--UKE2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKE22').property(single,'code','UKE22').property(single,'label','North Yorkshire CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKE2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK').property(single,'code','UKK').property(single,'label','South West').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK4').property(single,'code','UKK4').property(single,'label','Devon').
+	addE('hasParent').to(g.V().hasId('nuts--UKK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK42').property(single,'code','UKK42').property(single,'label','Torbay').
+	addE('hasParent').to(g.V().hasId('nuts--UKK4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK43').property(single,'code','UKK43').property(single,'label','Devon CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKK4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK41').property(single,'code','UKK41').property(single,'label','Plymouth').
+	addE('hasParent').to(g.V().hasId('nuts--UKK4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK2').property(single,'code','UKK2').property(single,'label','Dorset and Somerset').
+	addE('hasParent').to(g.V().hasId('nuts--UKK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK22').property(single,'code','UKK22').property(single,'label','Dorset CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKK2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK21').property(single,'code','UKK21').property(single,'label','Bournemouth and Poole').
+	addE('hasParent').to(g.V().hasId('nuts--UKK2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK23').property(single,'code','UKK23').property(single,'label','Somerset').
+	addE('hasParent').to(g.V().hasId('nuts--UKK2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK1').property(single,'code','UKK1').property(single,'label','Gloucestershire, Wiltshire and Bath/Bristol area').
+	addE('hasParent').to(g.V().hasId('nuts--UKK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK14').property(single,'code','UKK14').property(single,'label','Swindon').
+	addE('hasParent').to(g.V().hasId('nuts--UKK1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK11').property(single,'code','UKK11').property(single,'label','Bristol, City of').
+	addE('hasParent').to(g.V().hasId('nuts--UKK1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK12').property(single,'code','UKK12').property(single,'label','Bath and North East Somerset, North Somerset and South Gloucestershire').
+	addE('hasParent').to(g.V().hasId('nuts--UKK1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK15').property(single,'code','UKK15').property(single,'label','Wiltshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKK1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK13').property(single,'code','UKK13').property(single,'label','Gloucestershire').
+	addE('hasParent').to(g.V().hasId('nuts--UKK1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK3').property(single,'code','UKK3').property(single,'label','Cornwall and Isles of Scilly').
+	addE('hasParent').to(g.V().hasId('nuts--UKK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKK30').property(single,'code','UKK30').property(single,'label','Cornwall and Isles of Scilly').
+	addE('hasParent').to(g.V().hasId('nuts--UKK3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH').property(single,'code','UKH').property(single,'label','East of England').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH3').property(single,'code','UKH3').property(single,'label','Essex').
+	addE('hasParent').to(g.V().hasId('nuts--UKH')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH37').property(single,'code','UKH37').property(single,'label','Essex Thames Gateway').
+	addE('hasParent').to(g.V().hasId('nuts--UKH3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH35').property(single,'code','UKH35').property(single,'label','West Essex').
+	addE('hasParent').to(g.V().hasId('nuts--UKH3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH34').property(single,'code','UKH34').property(single,'label','Essex Haven Gateway').
+	addE('hasParent').to(g.V().hasId('nuts--UKH3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH32').property(single,'code','UKH32').property(single,'label','Thurrock').
+	addE('hasParent').to(g.V().hasId('nuts--UKH3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH31').property(single,'code','UKH31').property(single,'label','Southend-on-Sea').
+	addE('hasParent').to(g.V().hasId('nuts--UKH3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH36').property(single,'code','UKH36').property(single,'label','Heart of Essex').
+	addE('hasParent').to(g.V().hasId('nuts--UKH3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH1').property(single,'code','UKH1').property(single,'label','East Anglia').
+	addE('hasParent').to(g.V().hasId('nuts--UKH')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH15').property(single,'code','UKH15').property(single,'label','Norwich and East Norfolk').
+	addE('hasParent').to(g.V().hasId('nuts--UKH1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH12').property(single,'code','UKH12').property(single,'label','Cambridgeshire CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKH1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH14').property(single,'code','UKH14').property(single,'label','Suffolk').
+	addE('hasParent').to(g.V().hasId('nuts--UKH1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH16').property(single,'code','UKH16').property(single,'label','North and West Norfolk').
+	addE('hasParent').to(g.V().hasId('nuts--UKH1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH11').property(single,'code','UKH11').property(single,'label','Peterborough').
+	addE('hasParent').to(g.V().hasId('nuts--UKH1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH17').property(single,'code','UKH17').property(single,'label','Breckland and South Norfolk').
+	addE('hasParent').to(g.V().hasId('nuts--UKH1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH2').property(single,'code','UKH2').property(single,'label','Bedfordshire and Hertfordshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKH')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH23').property(single,'code','UKH23').property(single,'label','Hertfordshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKH2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH21').property(single,'code','UKH21').property(single,'label','Luton').
+	addE('hasParent').to(g.V().hasId('nuts--UKH2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH24').property(single,'code','UKH24').property(single,'label','Bedford').
+	addE('hasParent').to(g.V().hasId('nuts--UKH2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKH25').property(single,'code','UKH25').property(single,'label','Central Bedfordshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKH2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG').property(single,'code','UKG').property(single,'label','West Midlands').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG2').property(single,'code','UKG2').property(single,'label','Shropshire and Staffordshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKG')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG24').property(single,'code','UKG24').property(single,'label','Staffordshire CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKG2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG23').property(single,'code','UKG23').property(single,'label','Stoke-on-Trent').
+	addE('hasParent').to(g.V().hasId('nuts--UKG2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG21').property(single,'code','UKG21').property(single,'label','Telford and Wrekin').
+	addE('hasParent').to(g.V().hasId('nuts--UKG2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG22').property(single,'code','UKG22').property(single,'label','Shropshire CC').
+	addE('hasParent').to(g.V().hasId('nuts--UKG2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG1').property(single,'code','UKG1').property(single,'label','Herefordshire, Worcestershire and Warwickshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKG')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG13').property(single,'code','UKG13').property(single,'label','Warwickshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKG1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG12').property(single,'code','UKG12').property(single,'label','Worcestershire').
+	addE('hasParent').to(g.V().hasId('nuts--UKG1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG11').property(single,'code','UKG11').property(single,'label','Herefordshire, County of').
+	addE('hasParent').to(g.V().hasId('nuts--UKG1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG3').property(single,'code','UKG3').property(single,'label','West Midlands').
+	addE('hasParent').to(g.V().hasId('nuts--UKG')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG32').property(single,'code','UKG32').property(single,'label','Solihull').
+	addE('hasParent').to(g.V().hasId('nuts--UKG3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG33').property(single,'code','UKG33').property(single,'label','Coventry').
+	addE('hasParent').to(g.V().hasId('nuts--UKG3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG39').property(single,'code','UKG39').property(single,'label','Wolverhampton').
+	addE('hasParent').to(g.V().hasId('nuts--UKG3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG36').property(single,'code','UKG36').property(single,'label','Dudley').
+	addE('hasParent').to(g.V().hasId('nuts--UKG3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG38').property(single,'code','UKG38').property(single,'label','Walsall').
+	addE('hasParent').to(g.V().hasId('nuts--UKG3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG37').property(single,'code','UKG37').property(single,'label','Sandwell').
+	addE('hasParent').to(g.V().hasId('nuts--UKG3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKG31').property(single,'code','UKG31').property(single,'label','Birmingham').
+	addE('hasParent').to(g.V().hasId('nuts--UKG3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD').property(single,'code','UKD').property(single,'label','North West').
+	addE('hasParent').to(g.V().hasId('nuts--UK0')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD7').property(single,'code','UKD7').property(single,'label','Merseyside').
+	addE('hasParent').to(g.V().hasId('nuts--UKD')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD73').property(single,'code','UKD73').property(single,'label','Sefton').
+	addE('hasParent').to(g.V().hasId('nuts--UKD7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD72').property(single,'code','UKD72').property(single,'label','Liverpool').
+	addE('hasParent').to(g.V().hasId('nuts--UKD7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD74').property(single,'code','UKD74').property(single,'label','Wirral').
+	addE('hasParent').to(g.V().hasId('nuts--UKD7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD71').property(single,'code','UKD71').property(single,'label','East Merseyside').
+	addE('hasParent').to(g.V().hasId('nuts--UKD7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD1').property(single,'code','UKD1').property(single,'label','Cumbria').
+	addE('hasParent').to(g.V().hasId('nuts--UKD')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD11').property(single,'code','UKD11').property(single,'label','West Cumbria').
+	addE('hasParent').to(g.V().hasId('nuts--UKD1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD12').property(single,'code','UKD12').property(single,'label','East Cumbria').
+	addE('hasParent').to(g.V().hasId('nuts--UKD1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD6').property(single,'code','UKD6').property(single,'label','Cheshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKD')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD61').property(single,'code','UKD61').property(single,'label','Warrington').
+	addE('hasParent').to(g.V().hasId('nuts--UKD6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD63').property(single,'code','UKD63').property(single,'label','Cheshire West and Chester').
+	addE('hasParent').to(g.V().hasId('nuts--UKD6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD62').property(single,'code','UKD62').property(single,'label','Cheshire East').
+	addE('hasParent').to(g.V().hasId('nuts--UKD6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD4').property(single,'code','UKD4').property(single,'label','Lancashire').
+	addE('hasParent').to(g.V().hasId('nuts--UKD')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD45').property(single,'code','UKD45').property(single,'label','Mid Lancashire').
+	addE('hasParent').to(g.V().hasId('nuts--UKD4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD41').property(single,'code','UKD41').property(single,'label','Blackburn with Darwen').
+	addE('hasParent').to(g.V().hasId('nuts--UKD4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD46').property(single,'code','UKD46').property(single,'label','East Lancashire').
+	addE('hasParent').to(g.V().hasId('nuts--UKD4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD44').property(single,'code','UKD44').property(single,'label','Lancaster and Wyre').
+	addE('hasParent').to(g.V().hasId('nuts--UKD4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD42').property(single,'code','UKD42').property(single,'label','Blackpool').
+	addE('hasParent').to(g.V().hasId('nuts--UKD4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD47').property(single,'code','UKD47').property(single,'label','Chorley and West Lancashire').
+	addE('hasParent').to(g.V().hasId('nuts--UKD4')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD3').property(single,'code','UKD3').property(single,'label','Greater Manchester').
+	addE('hasParent').to(g.V().hasId('nuts--UKD')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD33').property(single,'code','UKD33').property(single,'label','Manchester').
+	addE('hasParent').to(g.V().hasId('nuts--UKD3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD35').property(single,'code','UKD35').property(single,'label','Greater Manchester South East').
+	addE('hasParent').to(g.V().hasId('nuts--UKD3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD34').property(single,'code','UKD34').property(single,'label','Greater Manchester South West').
+	addE('hasParent').to(g.V().hasId('nuts--UKD3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD37').property(single,'code','UKD37').property(single,'label','Greater Manchester North East').
+	addE('hasParent').to(g.V().hasId('nuts--UKD3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKD36').property(single,'code','UKD36').property(single,'label','Greater Manchester North West').
+	addE('hasParent').to(g.V().hasId('nuts--UKD3')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL').property(single,'code','UKL').property(single,'label','Wales').
+	addE('hasParent').to(g.V().hasId('nuts--UK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL1').property(single,'code','UKL1').property(single,'label','West Wales and The Valleys').
+	addE('hasParent').to(g.V().hasId('nuts--UKL')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL15').property(single,'code','UKL15').property(single,'label','Central Valleys').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL13').property(single,'code','UKL13').property(single,'label','Conwy and Denbighshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL17').property(single,'code','UKL17').property(single,'label','Bridgend and Neath Port Talbot').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL11').property(single,'code','UKL11').property(single,'label','Isle of Anglesey').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL18').property(single,'code','UKL18').property(single,'label','Swansea').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL12').property(single,'code','UKL12').property(single,'label','Gwynedd').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL14').property(single,'code','UKL14').property(single,'label','South West Wales').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL16').property(single,'code','UKL16').property(single,'label','Gwent Valleys').
+	addE('hasParent').to(g.V().hasId('nuts--UKL1')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL2').property(single,'code','UKL2').property(single,'label','East Wales').
+	addE('hasParent').to(g.V().hasId('nuts--UKL')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL24').property(single,'code','UKL24').property(single,'label','Powys').
+	addE('hasParent').to(g.V().hasId('nuts--UKL2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL23').property(single,'code','UKL23').property(single,'label','Flintshire and Wrexham').
+	addE('hasParent').to(g.V().hasId('nuts--UKL2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL21').property(single,'code','UKL21').property(single,'label','Monmouthshire and Newport').
+	addE('hasParent').to(g.V().hasId('nuts--UKL2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKL22').property(single,'code','UKL22').property(single,'label','Cardiff and Vale of Glamorgan').
+	addE('hasParent').to(g.V().hasId('nuts--UKL2')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM').property(single,'code','UKM').property(single,'label','Scotland').
+	addE('hasParent').to(g.V().hasId('nuts--UK')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM9').property(single,'code','UKM9').property(single,'label','Southern Scotland').
+	addE('hasParent').to(g.V().hasId('nuts--UKM')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM92').property(single,'code','UKM92').property(single,'label','Dumfries and Galloway').
+	addE('hasParent').to(g.V().hasId('nuts--UKM9')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM93').property(single,'code','UKM93').property(single,'label','East Ayrshire and North Ayrshire mainland').
+	addE('hasParent').to(g.V().hasId('nuts--UKM9')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM94').property(single,'code','UKM94').property(single,'label','South Ayrshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKM9')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM91').property(single,'code','UKM91').property(single,'label','Scottish Borders').
+	addE('hasParent').to(g.V().hasId('nuts--UKM9')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM95').property(single,'code','UKM95').property(single,'label','South Lanarkshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKM9')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM8').property(single,'code','UKM8').property(single,'label','West Central Scotland').
+	addE('hasParent').to(g.V().hasId('nuts--UKM')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM83').property(single,'code','UKM83').property(single,'label','Inverclyde, East Renfrewshire and Renfrewshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKM8')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM82').property(single,'code','UKM82').property(single,'label','Glasgow City').
+	addE('hasParent').to(g.V().hasId('nuts--UKM8')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM84').property(single,'code','UKM84').property(single,'label','North Lanarkshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKM8')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM81').property(single,'code','UKM81').property(single,'label','East Dunbartonshire, West Dunbartonshire and Helensburgh and Lomond').
+	addE('hasParent').to(g.V().hasId('nuts--UKM8')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM5').property(single,'code','UKM5').property(single,'label','North Eastern Scotland').
+	addE('hasParent').to(g.V().hasId('nuts--UKM')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM50').property(single,'code','UKM50').property(single,'label','Aberdeen City and Aberdeenshire').
+	addE('hasParent').to(g.V().hasId('nuts--UKM5')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM6').property(single,'code','UKM6').property(single,'label','Highlands and Islands').
+	addE('hasParent').to(g.V().hasId('nuts--UKM')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM64').property(single,'code','UKM64').property(single,'label','Na h-Eileanan Siar').
+	addE('hasParent').to(g.V().hasId('nuts--UKM6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM65').property(single,'code','UKM65').property(single,'label','Orkney Islands').
+	addE('hasParent').to(g.V().hasId('nuts--UKM6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM66').property(single,'code','UKM66').property(single,'label','Shetland Islands').
+	addE('hasParent').to(g.V().hasId('nuts--UKM6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM62').property(single,'code','UKM62').property(single,'label','Inverness and Nairn and Moray, Badenoch and Strathspey').
+	addE('hasParent').to(g.V().hasId('nuts--UKM6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM61').property(single,'code','UKM61').property(single,'label','Caithness and Sutherland and Ross and Cromarty').
+	addE('hasParent').to(g.V().hasId('nuts--UKM6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM63').property(single,'code','UKM63').property(single,'label','Lochaber, Skye and Lochalsh, Arran and Cumbrae and Argyll and Bute').
+	addE('hasParent').to(g.V().hasId('nuts--UKM6')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM7').property(single,'code','UKM7').property(single,'label','Eastern Scotland').
+	addE('hasParent').to(g.V().hasId('nuts--UKM')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM71').property(single,'code','UKM71').property(single,'label','Angus and Dundee City').
+	addE('hasParent').to(g.V().hasId('nuts--UKM7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM75').property(single,'code','UKM75').property(single,'label','City of Edinburgh').
+	addE('hasParent').to(g.V().hasId('nuts--UKM7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM72').property(single,'code','UKM72').property(single,'label','Clackmannanshire and Fife').
+	addE('hasParent').to(g.V().hasId('nuts--UKM7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM78').property(single,'code','UKM78').property(single,'label','West Lothian').
+	addE('hasParent').to(g.V().hasId('nuts--UKM7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM73').property(single,'code','UKM73').property(single,'label','East Lothian and Midlothian').
+	addE('hasParent').to(g.V().hasId('nuts--UKM7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM77').property(single,'code','UKM77').property(single,'label','Perth and Kinross and Stirling').
+	addE('hasParent').to(g.V().hasId('nuts--UKM7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKM76').property(single,'code','UKM76').property(single,'label','Falkirk').
+	addE('hasParent').to(g.V().hasId('nuts--UKM7')).next()
+g.addV('_generic_hierarchy_node_nuts').property(id,'nuts--UKX').property(single,'code','UKX').property(single,'label','UK less extra-regio').
+	addE('hasParent').to(g.V().hasId('nuts--UK')).next()

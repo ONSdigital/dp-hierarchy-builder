@@ -15,9 +15,15 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+<<<<<<< HEAD
 	kafka "github.com/ONSdigital/dp-kafka/v2"
+=======
+	kafka "github.com/ONSdigital/dp-kafka"
+	dphttp "github.com/ONSdigital/dp-net/http"
+>>>>>>> develop
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/log.go/log"
+	"github.com/gorilla/mux"
 )
 
 var (
@@ -85,6 +91,8 @@ func main() {
 	db, err := graph.NewHierarchyStore(ctx)
 	exitIfError(ctx, err, "error creating Kafka error producer")
 
+	graphErrorConsumer := graph.NewLoggingErrorConsumer(ctx, db.ErrorChan())
+
 	// when errors occur - we send a message on an error topic.
 	errorHandler, err := reporter.NewImportErrorReporter(kafkaErrorProducer, log.Namespace)
 	exitIfError(ctx, err, "error creating import error reporter")
@@ -116,47 +124,70 @@ func main() {
 	ctx, cancel := context.WithTimeout(ctx, cfg.GracefulShutdownTimeout)
 	hasShutdownError := false
 
-	// gracefully dispose resources
-	hc.Stop()
+	go func() {
+		defer cancel()
 
-	err = httpServer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
-		hasShutdownError = true
+		log.Event(ctx, "stopping health check", log.INFO)
+		hc.Stop()
+
+		log.Event(ctx, "closing http server", log.INFO)
+		err = httpServer.Shutdown(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+
+		log.Event(ctx, "closing event consumer", log.INFO)
+		err = eventConsumer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing event consumer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+
+		log.Event(ctx, "closing kafka consumer", log.INFO)
+		err = kafkaConsumer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing kafka consumer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+
+		log.Event(ctx, "closing kafka producer", log.INFO)
+		err = kafkaProducer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing kafka producer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+
+		log.Event(ctx, "closing kafka error producer", log.INFO)
+		err = kafkaErrorProducer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing kafka error producer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+
+		log.Event(ctx, "closing graph db connection", log.INFO)
+		err = db.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing graph db connection", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+
+		log.Event(ctx, "closing graph db error consumer", log.INFO)
+		graphErrorConsumer.Close(ctx)
+		if err != nil {
+			log.Event(ctx, "error closing graph db error consumer", log.ERROR, log.Error(err))
+			hasShutdownError = true
+		}
+	}()
+
+	// wait for timeout or success (cancel)
+	<-ctx.Done()
+
+	// timeout expired
+	if ctx.Err() == context.DeadlineExceeded {
+		log.Event(ctx, "shutdown timed out", log.ERROR, log.Error(ctx.Err()))
+		os.Exit(1)
 	}
-
-	err = eventConsumer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing event consumer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
-
-	err = kafkaConsumer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing kafka consumer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
-
-	err = kafkaProducer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing kafka producer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
-
-	err = kafkaErrorProducer.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing kafka error producer", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
-
-	err = db.Close(ctx)
-	if err != nil {
-		log.Event(ctx, "error closing graph db connection", log.ERROR, log.Error(err))
-		hasShutdownError = true
-	}
-
-	// cancel the timer in the shutdown context
-	cancel()
 
 	if hasShutdownError {
 		err = errors.New("failed to shutdown gracefully")
@@ -168,12 +199,12 @@ func main() {
 	os.Exit(1)
 }
 
-func startAPI(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *server.Server) {
+func startAPI(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Config) (chan error, *dphttp.Server) {
 	router := mux.NewRouter()
 	router.HandleFunc("/health", hc.Handler)
 	apiErrors := make(chan error, 1)
 
-	httpServer := server.New(cfg.BindAddr, router)
+	httpServer := dphttp.NewServer(cfg.BindAddr, router)
 	// Disable this here to allow main to manage graceful shutdown of the entire app.
 	httpServer.HandleOSSignals = false
 

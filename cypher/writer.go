@@ -2,10 +2,16 @@ package cypher
 
 import (
 	"bytes"
+	"context"
 	"fmt"
-	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"io/ioutil"
+	"strings"
+
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
+	"github.com/ONSdigital/log.go/log"
 )
+
+var seenLabel = map[string]bool{}
 
 // CreateCypherDeleteFile generates a cypher script file to delete an existing hierarchy for the given nodes.
 func CreateCypherDeleteFile(nodes []*hierarchy.Node, filename string) error {
@@ -42,7 +48,7 @@ func CreateCypher(nodes []*hierarchy.Node) (string, error) {
 func traverseNodesWriteCypher(nodes []*hierarchy.Node, buffer *bytes.Buffer, parent *hierarchy.Node) {
 	for _, node := range nodes {
 
-		createNode := fmt.Sprintf("CREATE (node:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.CodeList, node.Code, node.Label)
+		createNode := fmt.Sprintf("CREATE (node:`_generic_hierarchy_node_%s` { code:'%s',label:'%s' })", node.CodeList, node.Code, escapeLabel(node.Label))
 
 		if parent == nil {
 			buffer.WriteString(createNode + ";\n")
@@ -57,4 +63,15 @@ func traverseNodesWriteCypher(nodes []*hierarchy.Node, buffer *bytes.Buffer, par
 			traverseNodesWriteCypher(node.Children, buffer, node)
 		}
 	}
+}
+
+func escapeLabel(label string) string {
+	escapedLabel := strings.Replace(label, "'", "\\'", -1)
+	if label != escapedLabel {
+		if _, ok := seenLabel[label]; !ok {
+			log.Event(context.Background(), "trim", log.INFO, log.Data{"esc": escapedLabel})
+			seenLabel[label] = true
+		}
+	}
+	return escapedLabel
 }

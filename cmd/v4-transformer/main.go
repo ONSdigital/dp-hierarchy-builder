@@ -14,6 +14,7 @@ import (
 
 	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
+	"github.com/ONSdigital/dp-hierarchy-builder/gremlin"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"github.com/ONSdigital/log.go/log"
 	"io"
@@ -26,8 +27,10 @@ var codeListID = flag.String("code-list-id", "e44de4c4-d39e-4e2f-942b-3ca10584d0
 var rootLabelCode = flag.String("root-label-code", "CPI", "")
 var jsonFile = flag.String("json", "cmd/v4-transformer/output/hierarchy.json", "")
 var cypherFile = flag.String("cypher", "cmd/v4-transformer/output/hierarchy.cypher", "")
+var gremlinFile = flag.String("gremlin", "cmd/v4-transformer/output/hierarchy.gremlin", "")
 var csvFile = flag.String("csv", "cmd/v4-transformer/output/hierarchy.csv", "")
 var cypherDelFile = flag.String("cypher-delete", "cmd/v4-transformer/output/hierarchy-delete.cypher", "")
+var gremlinDelFile = flag.String("gremlin-delete", "cmd/v4-transformer/output/hierarchy-delete.gremlin", "")
 
 func main() {
 
@@ -97,6 +100,14 @@ func main() {
 	log.Event(ctx, "Generating cypher deletion script", log.INFO)
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
 	logIfError(ctx, err, "error generating cypher deletion script")
+
+	log.Event(ctx, "Generating gremlin script", nil)
+	err = gremlin.CreateGremlinFile(rootNodes, *gremlinFile)
+	logIfError(ctx, err, "error generating gremlin script")
+
+	log.Event(ctx, "Generating gremlin deletion script", nil)
+	err = gremlin.CreateGremlinDeleteFile(rootNodes, *gremlinDelFile)
+	logIfError(ctx, err, "error generating gremlin deletion script")
 }
 
 func logIfError(ctx context.Context, err error, message string) {

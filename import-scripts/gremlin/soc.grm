@@ -1,0 +1,987 @@
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--all').property(single,'code','all').property(single,'label','All').next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7').property(single,'code','7').property(single,'label','Sales and customer service occupations').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--72').property(single,'code','72').property(single,'label','Customer service occupations').
+	addE('hasParent').to(g.V().hasId('soc--7')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--722').property(single,'code','722').property(single,'label','Customer service managers and supervisors').
+	addE('hasParent').to(g.V().hasId('soc--72')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7220').property(single,'code','7220').property(single,'label','Customer service managers and supervisors').
+	addE('hasParent').to(g.V().hasId('soc--722')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--721').property(single,'code','721').property(single,'label','Customer service occupations').
+	addE('hasParent').to(g.V().hasId('soc--72')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7214').property(single,'code','7214').property(single,'label','Communication operators').
+	addE('hasParent').to(g.V().hasId('soc--721')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7215').property(single,'code','7215').property(single,'label','Market research interviewers').
+	addE('hasParent').to(g.V().hasId('soc--721')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7211').property(single,'code','7211').property(single,'label','Call and contact centre occupations').
+	addE('hasParent').to(g.V().hasId('soc--721')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7213').property(single,'code','7213').property(single,'label','Telephonists').
+	addE('hasParent').to(g.V().hasId('soc--721')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7219').property(single,'code','7219').property(single,'label','Customer service occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--721')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--71').property(single,'code','71').property(single,'label','Sales occupations').
+	addE('hasParent').to(g.V().hasId('soc--7')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--712').property(single,'code','712').property(single,'label','Sales related occupations').
+	addE('hasParent').to(g.V().hasId('soc--71')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7124').property(single,'code','7124').property(single,'label','Market and street traders and assistants').
+	addE('hasParent').to(g.V().hasId('soc--712')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7122').property(single,'code','7122').property(single,'label','Debt, rent and other cash collectors').
+	addE('hasParent').to(g.V().hasId('soc--712')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7123').property(single,'code','7123').property(single,'label','Roundspersons and van salespersons').
+	addE('hasParent').to(g.V().hasId('soc--712')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7125').property(single,'code','7125').property(single,'label','Merchandisers and window dressers').
+	addE('hasParent').to(g.V().hasId('soc--712')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7129').property(single,'code','7129').property(single,'label','Sales related occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--712')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7121').property(single,'code','7121').property(single,'label','Collector salespersons and credit agents').
+	addE('hasParent').to(g.V().hasId('soc--712')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--713').property(single,'code','713').property(single,'label','Sales supervisors').
+	addE('hasParent').to(g.V().hasId('soc--71')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7130').property(single,'code','7130').property(single,'label','Sales supervisors').
+	addE('hasParent').to(g.V().hasId('soc--713')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--711').property(single,'code','711').property(single,'label','Sales assistants and retail cashiers').
+	addE('hasParent').to(g.V().hasId('soc--71')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7111').property(single,'code','7111').property(single,'label','Sales and retail assistants').
+	addE('hasParent').to(g.V().hasId('soc--711')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7113').property(single,'code','7113').property(single,'label','Telephone salespersons').
+	addE('hasParent').to(g.V().hasId('soc--711')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7115').property(single,'code','7115').property(single,'label','Vehicle and parts salespersons and advisers').
+	addE('hasParent').to(g.V().hasId('soc--711')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7114').property(single,'code','7114').property(single,'label','Pharmacy and other dispensing assistants').
+	addE('hasParent').to(g.V().hasId('soc--711')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--7112').property(single,'code','7112').property(single,'label','Retail cashiers and check-out operators').
+	addE('hasParent').to(g.V().hasId('soc--711')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3').property(single,'code','3').property(single,'label','Associate professional and technical occupations').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--31').property(single,'code','31').property(single,'label','Science, engineering and technology associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--3')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--313').property(single,'code','313').property(single,'label','Information technology technicians').
+	addE('hasParent').to(g.V().hasId('soc--31')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3132').property(single,'code','3132').property(single,'label','It user support technicians').
+	addE('hasParent').to(g.V().hasId('soc--313')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3131').property(single,'code','3131').property(single,'label','It operations technicians').
+	addE('hasParent').to(g.V().hasId('soc--313')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--311').property(single,'code','311').property(single,'label','Science, engineering and production technicians').
+	addE('hasParent').to(g.V().hasId('soc--31')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3112').property(single,'code','3112').property(single,'label','Electrical and electronics technicians').
+	addE('hasParent').to(g.V().hasId('soc--311')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3113').property(single,'code','3113').property(single,'label','Engineering technicians').
+	addE('hasParent').to(g.V().hasId('soc--311')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3116').property(single,'code','3116').property(single,'label','Planning, process and production technicians').
+	addE('hasParent').to(g.V().hasId('soc--311')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3114').property(single,'code','3114').property(single,'label','Building and civil engineering technicians').
+	addE('hasParent').to(g.V().hasId('soc--311')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3115').property(single,'code','3115').property(single,'label','Quality assurance technicians').
+	addE('hasParent').to(g.V().hasId('soc--311')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3119').property(single,'code','3119').property(single,'label','Science, engineering and production technicians n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--311')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3111').property(single,'code','3111').property(single,'label','Laboratory technicians').
+	addE('hasParent').to(g.V().hasId('soc--311')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--312').property(single,'code','312').property(single,'label','Draughtspersons and related architectural technicians').
+	addE('hasParent').to(g.V().hasId('soc--31')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3122').property(single,'code','3122').property(single,'label','Draughtspersons').
+	addE('hasParent').to(g.V().hasId('soc--312')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3121').property(single,'code','3121').property(single,'label','Architectural and town planning technicians').
+	addE('hasParent').to(g.V().hasId('soc--312')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--33').property(single,'code','33').property(single,'label','Protective service occupations').
+	addE('hasParent').to(g.V().hasId('soc--3')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--331').property(single,'code','331').property(single,'label','Protective service occupations').
+	addE('hasParent').to(g.V().hasId('soc--33')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3313').property(single,'code','3313').property(single,'label','Fire service officers (watch manager and below)').
+	addE('hasParent').to(g.V().hasId('soc--331')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3314').property(single,'code','3314').property(single,'label','Prison service officers (below principal officer)').
+	addE('hasParent').to(g.V().hasId('soc--331')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3312').property(single,'code','3312').property(single,'label','Police officers (sergeant and below)').
+	addE('hasParent').to(g.V().hasId('soc--331')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3315').property(single,'code','3315').property(single,'label','Police community support officers').
+	addE('hasParent').to(g.V().hasId('soc--331')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3311').property(single,'code','3311').property(single,'label','Ncos and other ranks').
+	addE('hasParent').to(g.V().hasId('soc--331')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3319').property(single,'code','3319').property(single,'label','Protective service associate professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--331')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--35').property(single,'code','35').property(single,'label','Business and public service associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--3')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--351').property(single,'code','351').property(single,'label','Transport associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--35')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3513').property(single,'code','3513').property(single,'label','Ship and hovercraft officers').
+	addE('hasParent').to(g.V().hasId('soc--351')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3511').property(single,'code','3511').property(single,'label','Air traffic controllers').
+	addE('hasParent').to(g.V().hasId('soc--351')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3512').property(single,'code','3512').property(single,'label','Aircraft pilots and flight engineers').
+	addE('hasParent').to(g.V().hasId('soc--351')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--356').property(single,'code','356').property(single,'label','Public services and other associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--35')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3564').property(single,'code','3564').property(single,'label','Careers advisers and vocational guidance specialists').
+	addE('hasParent').to(g.V().hasId('soc--356')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3567').property(single,'code','3567').property(single,'label','Health and safety officers').
+	addE('hasParent').to(g.V().hasId('soc--356')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3561').property(single,'code','3561').property(single,'label','Public services associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--356')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3562').property(single,'code','3562').property(single,'label','Human resources and industrial relations officers').
+	addE('hasParent').to(g.V().hasId('soc--356')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3563').property(single,'code','3563').property(single,'label','Vocational and industrial trainers and instructors').
+	addE('hasParent').to(g.V().hasId('soc--356')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3565').property(single,'code','3565').property(single,'label','Inspectors of standards and regulations').
+	addE('hasParent').to(g.V().hasId('soc--356')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--352').property(single,'code','352').property(single,'label','Legal associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--35')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3520').property(single,'code','3520').property(single,'label','Legal associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--352')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--353').property(single,'code','353').property(single,'label','Business, finance and related associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--35')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3539').property(single,'code','3539').property(single,'label','Business and related associate professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3531').property(single,'code','3531').property(single,'label','Estimators, valuers and assessors').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3535').property(single,'code','3535').property(single,'label','Taxation experts').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3534').property(single,'code','3534').property(single,'label','Finance and investment analysts and advisers').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3536').property(single,'code','3536').property(single,'label','Importers and exporters').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3537').property(single,'code','3537').property(single,'label','Financial and accounting technicians').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3538').property(single,'code','3538').property(single,'label','Financial accounts managers').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3532').property(single,'code','3532').property(single,'label','Brokers').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3533').property(single,'code','3533').property(single,'label','Insurance underwriters').
+	addE('hasParent').to(g.V().hasId('soc--353')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--354').property(single,'code','354').property(single,'label','Sales, marketing and related associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--35')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3541').property(single,'code','3541').property(single,'label','Buyers and procurement officers').
+	addE('hasParent').to(g.V().hasId('soc--354')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3546').property(single,'code','3546').property(single,'label','Conference and exhibition managers and organisers').
+	addE('hasParent').to(g.V().hasId('soc--354')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3545').property(single,'code','3545').property(single,'label','Sales accounts and business development managers').
+	addE('hasParent').to(g.V().hasId('soc--354')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3543').property(single,'code','3543').property(single,'label','Marketing associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--354')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3544').property(single,'code','3544').property(single,'label','Estate agents and auctioneers').
+	addE('hasParent').to(g.V().hasId('soc--354')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3542').property(single,'code','3542').property(single,'label','Business sales executives').
+	addE('hasParent').to(g.V().hasId('soc--354')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--355').property(single,'code','355').property(single,'label','Conservation and environmental associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--35')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3550').property(single,'code','3550').property(single,'label','Conservation and environmental associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--355')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--34').property(single,'code','34').property(single,'label','Culture, media and sports occupations').
+	addE('hasParent').to(g.V().hasId('soc--3')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--342').property(single,'code','342').property(single,'label','Design occupations').
+	addE('hasParent').to(g.V().hasId('soc--34')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3422').property(single,'code','3422').property(single,'label','Product, clothing and related designers').
+	addE('hasParent').to(g.V().hasId('soc--342')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3421').property(single,'code','3421').property(single,'label','Graphic designers').
+	addE('hasParent').to(g.V().hasId('soc--342')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--341').property(single,'code','341').property(single,'label','Artistic, literary and media occupations').
+	addE('hasParent').to(g.V().hasId('soc--34')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3417').property(single,'code','3417').property(single,'label','Photographers, audio-visual and broadcasting equipment operators').
+	addE('hasParent').to(g.V().hasId('soc--341')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3415').property(single,'code','3415').property(single,'label','Musicians').
+	addE('hasParent').to(g.V().hasId('soc--341')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3414').property(single,'code','3414').property(single,'label','Dancers and choreographers').
+	addE('hasParent').to(g.V().hasId('soc--341')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3411').property(single,'code','3411').property(single,'label','Artists').
+	addE('hasParent').to(g.V().hasId('soc--341')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3413').property(single,'code','3413').property(single,'label','Actors, entertainers and presenters').
+	addE('hasParent').to(g.V().hasId('soc--341')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3416').property(single,'code','3416').property(single,'label','Arts officers, producers and directors').
+	addE('hasParent').to(g.V().hasId('soc--341')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3412').property(single,'code','3412').property(single,'label','Authors, writers and translators').
+	addE('hasParent').to(g.V().hasId('soc--341')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--344').property(single,'code','344').property(single,'label','Sports and fitness occupations').
+	addE('hasParent').to(g.V().hasId('soc--34')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3442').property(single,'code','3442').property(single,'label','Sports coaches, instructors and officials').
+	addE('hasParent').to(g.V().hasId('soc--344')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3441').property(single,'code','3441').property(single,'label','Sports players').
+	addE('hasParent').to(g.V().hasId('soc--344')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3443').property(single,'code','3443').property(single,'label','Fitness instructors').
+	addE('hasParent').to(g.V().hasId('soc--344')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--32').property(single,'code','32').property(single,'label','Health and social care associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--3')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--323').property(single,'code','323').property(single,'label','Welfare and housing associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--32')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3233').property(single,'code','3233').property(single,'label','Child and early years officers').
+	addE('hasParent').to(g.V().hasId('soc--323')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3239').property(single,'code','3239').property(single,'label','Welfare and housing associate professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--323')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3235').property(single,'code','3235').property(single,'label','Counsellors').
+	addE('hasParent').to(g.V().hasId('soc--323')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3234').property(single,'code','3234').property(single,'label','Housing officers').
+	addE('hasParent').to(g.V().hasId('soc--323')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3231').property(single,'code','3231').property(single,'label','Youth and community workers').
+	addE('hasParent').to(g.V().hasId('soc--323')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--321').property(single,'code','321').property(single,'label','Health associate professionals').
+	addE('hasParent').to(g.V().hasId('soc--32')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3217').property(single,'code','3217').property(single,'label','Pharmaceutical technicians').
+	addE('hasParent').to(g.V().hasId('soc--321')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3213').property(single,'code','3213').property(single,'label','Paramedics').
+	addE('hasParent').to(g.V().hasId('soc--321')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3216').property(single,'code','3216').property(single,'label','Dispensing opticians').
+	addE('hasParent').to(g.V().hasId('soc--321')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3218').property(single,'code','3218').property(single,'label','Medical and dental technicians').
+	addE('hasParent').to(g.V().hasId('soc--321')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--3219').property(single,'code','3219').property(single,'label','Health associate professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--321')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1').property(single,'code','1').property(single,'label','Managers, directors and senior officials').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--11').property(single,'code','11').property(single,'label','Corporate managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--1')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--119').property(single,'code','119').property(single,'label','Managers and directors in retail and wholesale').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1190').property(single,'code','1190').property(single,'label','Managers and directors in retail and wholesale').
+	addE('hasParent').to(g.V().hasId('soc--119')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--115').property(single,'code','115').property(single,'label','Financial institution managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1150').property(single,'code','1150').property(single,'label','Financial institution managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--115')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--116').property(single,'code','116').property(single,'label','Managers and directors in transport and logistics').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1161').property(single,'code','1161').property(single,'label','Managers and directors in transport and distribution').
+	addE('hasParent').to(g.V().hasId('soc--116')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1162').property(single,'code','1162').property(single,'label','Managers and directors in storage and warehousing').
+	addE('hasParent').to(g.V().hasId('soc--116')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--113').property(single,'code','113').property(single,'label','Functional managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1139').property(single,'code','1139').property(single,'label','Functional managers and directors n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--113')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1132').property(single,'code','1132').property(single,'label','Marketing and sales directors').
+	addE('hasParent').to(g.V().hasId('soc--113')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1131').property(single,'code','1131').property(single,'label','Financial managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--113')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1136').property(single,'code','1136').property(single,'label','Information technology and telecommunications directors').
+	addE('hasParent').to(g.V().hasId('soc--113')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1135').property(single,'code','1135').property(single,'label','Human resource managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--113')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1133').property(single,'code','1133').property(single,'label','Purchasing managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--113')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1134').property(single,'code','1134').property(single,'label','Advertising and public relations directors').
+	addE('hasParent').to(g.V().hasId('soc--113')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--111').property(single,'code','111').property(single,'label','Chief executives and senior officials').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1115').property(single,'code','1115').property(single,'label','Chief executives and senior officials').
+	addE('hasParent').to(g.V().hasId('soc--111')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1116').property(single,'code','1116').property(single,'label','Elected officers and representatives').
+	addE('hasParent').to(g.V().hasId('soc--111')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--117').property(single,'code','117').property(single,'label','Senior officers in protective services').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1173').property(single,'code','1173').property(single,'label','Senior officers in fire, ambulance, prison and related services').
+	addE('hasParent').to(g.V().hasId('soc--117')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1172').property(single,'code','1172').property(single,'label','Senior police officers').
+	addE('hasParent').to(g.V().hasId('soc--117')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1171').property(single,'code','1171').property(single,'label','Officers in armed forces').
+	addE('hasParent').to(g.V().hasId('soc--117')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--118').property(single,'code','118').property(single,'label','Health and social services managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1181').property(single,'code','1181').property(single,'label','Health services and public health managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--118')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1184').property(single,'code','1184').property(single,'label','Social services managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--118')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--112').property(single,'code','112').property(single,'label','Production managers and directors').
+	addE('hasParent').to(g.V().hasId('soc--11')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1122').property(single,'code','1122').property(single,'label','Production managers and directors in construction').
+	addE('hasParent').to(g.V().hasId('soc--112')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1121').property(single,'code','1121').property(single,'label','Production managers and directors in manufacturing').
+	addE('hasParent').to(g.V().hasId('soc--112')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1123').property(single,'code','1123').property(single,'label','Production managers and directors in mining and energy').
+	addE('hasParent').to(g.V().hasId('soc--112')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--12').property(single,'code','12').property(single,'label','Other managers and proprietors').
+	addE('hasParent').to(g.V().hasId('soc--1')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--121').property(single,'code','121').property(single,'label','Managers and proprietors in agriculture related services').
+	addE('hasParent').to(g.V().hasId('soc--12')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1213').property(single,'code','1213').property(single,'label','Managers and proprietors in forestry, fishing and related services').
+	addE('hasParent').to(g.V().hasId('soc--121')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1211').property(single,'code','1211').property(single,'label','Managers and proprietors in agriculture and horticulture').
+	addE('hasParent').to(g.V().hasId('soc--121')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--125').property(single,'code','125').property(single,'label','Managers and proprietors in other services').
+	addE('hasParent').to(g.V().hasId('soc--12')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1254').property(single,'code','1254').property(single,'label','Shopkeepers and proprietors – wholesale and retail').
+	addE('hasParent').to(g.V().hasId('soc--125')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1255').property(single,'code','1255').property(single,'label','Waste disposal and environmental services managers').
+	addE('hasParent').to(g.V().hasId('soc--125')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1253').property(single,'code','1253').property(single,'label','Hairdressing and beauty salon managers and proprietors').
+	addE('hasParent').to(g.V().hasId('soc--125')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1259').property(single,'code','1259').property(single,'label','Managers and proprietors in other services n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--125')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1251').property(single,'code','1251').property(single,'label','Property, housing and estate managers').
+	addE('hasParent').to(g.V().hasId('soc--125')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1252').property(single,'code','1252').property(single,'label','Garage managers and proprietors').
+	addE('hasParent').to(g.V().hasId('soc--125')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--124').property(single,'code','124').property(single,'label','Managers and proprietors in health and care services').
+	addE('hasParent').to(g.V().hasId('soc--12')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1242').property(single,'code','1242').property(single,'label','Residential, day and domiciliary  care managers and proprietors').
+	addE('hasParent').to(g.V().hasId('soc--124')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1241').property(single,'code','1241').property(single,'label','Health care practice managers').
+	addE('hasParent').to(g.V().hasId('soc--124')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--122').property(single,'code','122').property(single,'label','Managers and proprietors in hospitality and leisure services').
+	addE('hasParent').to(g.V().hasId('soc--12')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1221').property(single,'code','1221').property(single,'label','Hotel and accommodation managers and proprietors').
+	addE('hasParent').to(g.V().hasId('soc--122')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1226').property(single,'code','1226').property(single,'label','Travel agency managers and proprietors').
+	addE('hasParent').to(g.V().hasId('soc--122')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1223').property(single,'code','1223').property(single,'label','Restaurant and catering establishment managers and proprietors').
+	addE('hasParent').to(g.V().hasId('soc--122')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1225').property(single,'code','1225').property(single,'label','Leisure and sports managers').
+	addE('hasParent').to(g.V().hasId('soc--122')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--1224').property(single,'code','1224').property(single,'label','Publicans and managers of licensed premises').
+	addE('hasParent').to(g.V().hasId('soc--122')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6').property(single,'code','6').property(single,'label','Caring, leisure and other service occupations').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--61').property(single,'code','61').property(single,'label','Caring personal service occupations').
+	addE('hasParent').to(g.V().hasId('soc--6')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--614').property(single,'code','614').property(single,'label','Caring personal services').
+	addE('hasParent').to(g.V().hasId('soc--61')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6142').property(single,'code','6142').property(single,'label','Ambulance staff (excluding paramedics)').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6145').property(single,'code','6145').property(single,'label','Care workers and home carers').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6144').property(single,'code','6144').property(single,'label','Houseparents and residential wardens').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6143').property(single,'code','6143').property(single,'label','Dental nurses').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6148').property(single,'code','6148').property(single,'label','Undertakers, mortuary and crematorium assistants').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6147').property(single,'code','6147').property(single,'label','Care escorts').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6141').property(single,'code','6141').property(single,'label','Nursing auxiliaries and assistants').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6146').property(single,'code','6146').property(single,'label','Senior care workers').
+	addE('hasParent').to(g.V().hasId('soc--614')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--612').property(single,'code','612').property(single,'label','Childcare and related personal services').
+	addE('hasParent').to(g.V().hasId('soc--61')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6126').property(single,'code','6126').property(single,'label','Educational support assistants').
+	addE('hasParent').to(g.V().hasId('soc--612')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6123').property(single,'code','6123').property(single,'label','Playworkers').
+	addE('hasParent').to(g.V().hasId('soc--612')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6125').property(single,'code','6125').property(single,'label','Teaching assistants').
+	addE('hasParent').to(g.V().hasId('soc--612')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6122').property(single,'code','6122').property(single,'label','Childminders and related occupations').
+	addE('hasParent').to(g.V().hasId('soc--612')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6121').property(single,'code','6121').property(single,'label','Nursery nurses and assistants').
+	addE('hasParent').to(g.V().hasId('soc--612')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--613').property(single,'code','613').property(single,'label','Animal care and control services').
+	addE('hasParent').to(g.V().hasId('soc--61')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6131').property(single,'code','6131').property(single,'label','Veterinary nurses').
+	addE('hasParent').to(g.V().hasId('soc--613')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6139').property(single,'code','6139').property(single,'label','Animal care services occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--613')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6132').property(single,'code','6132').property(single,'label','Pest control officers').
+	addE('hasParent').to(g.V().hasId('soc--613')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--62').property(single,'code','62').property(single,'label','Leisure, travel and related personal service occupations').
+	addE('hasParent').to(g.V().hasId('soc--6')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--622').property(single,'code','622').property(single,'label','Hairdressers and related services').
+	addE('hasParent').to(g.V().hasId('soc--62')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6222').property(single,'code','6222').property(single,'label','Beauticians and related occupations').
+	addE('hasParent').to(g.V().hasId('soc--622')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6221').property(single,'code','6221').property(single,'label','Hairdressers and barbers').
+	addE('hasParent').to(g.V().hasId('soc--622')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--623').property(single,'code','623').property(single,'label','Housekeeping and related services').
+	addE('hasParent').to(g.V().hasId('soc--62')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6232').property(single,'code','6232').property(single,'label','Caretakers').
+	addE('hasParent').to(g.V().hasId('soc--623')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6231').property(single,'code','6231').property(single,'label','Housekeepers and related occupations').
+	addE('hasParent').to(g.V().hasId('soc--623')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--621').property(single,'code','621').property(single,'label','Leisure and travel services').
+	addE('hasParent').to(g.V().hasId('soc--62')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6214').property(single,'code','6214').property(single,'label','Air travel assistants').
+	addE('hasParent').to(g.V().hasId('soc--621')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6212').property(single,'code','6212').property(single,'label','Travel agents').
+	addE('hasParent').to(g.V().hasId('soc--621')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6219').property(single,'code','6219').property(single,'label','Leisure and travel service occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--621')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6215').property(single,'code','6215').property(single,'label','Rail travel assistants').
+	addE('hasParent').to(g.V().hasId('soc--621')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6211').property(single,'code','6211').property(single,'label','Sports and leisure assistants').
+	addE('hasParent').to(g.V().hasId('soc--621')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--624').property(single,'code','624').property(single,'label','Cleaning and housekeeping managers and supervisors').
+	addE('hasParent').to(g.V().hasId('soc--62')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--6240').property(single,'code','6240').property(single,'label','Cleaning and housekeeping managers and supervisors').
+	addE('hasParent').to(g.V().hasId('soc--624')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8').property(single,'code','8').property(single,'label','Process, plant and machine operatives').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--81').property(single,'code','81').property(single,'label','Process, plant and machine operatives').
+	addE('hasParent').to(g.V().hasId('soc--8')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--811').property(single,'code','811').property(single,'label','Process operatives').
+	addE('hasParent').to(g.V().hasId('soc--81')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8111').property(single,'code','8111').property(single,'label','Food, drink and tobacco process operatives').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8119').property(single,'code','8119').property(single,'label','Process operatives n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8118').property(single,'code','8118').property(single,'label','Electroplaters').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8113').property(single,'code','8113').property(single,'label','Textile process operatives').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8114').property(single,'code','8114').property(single,'label','Chemical and related process operatives').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8117').property(single,'code','8117').property(single,'label','Metal making and treating process operatives').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8112').property(single,'code','8112').property(single,'label','Glass and ceramics process operatives').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8116').property(single,'code','8116').property(single,'label','Plastics process operatives').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8115').property(single,'code','8115').property(single,'label','Rubber process operatives').
+	addE('hasParent').to(g.V().hasId('soc--811')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--813').property(single,'code','813').property(single,'label','Assemblers and routine operatives').
+	addE('hasParent').to(g.V().hasId('soc--81')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8132').property(single,'code','8132').property(single,'label','Assemblers (vehicles and metal goods)').
+	addE('hasParent').to(g.V().hasId('soc--813')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8137').property(single,'code','8137').property(single,'label','Sewing machinists').
+	addE('hasParent').to(g.V().hasId('soc--813')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8131').property(single,'code','8131').property(single,'label','Assemblers (electrical and electronic products)').
+	addE('hasParent').to(g.V().hasId('soc--813')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8139').property(single,'code','8139').property(single,'label','Assemblers and routine operatives n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--813')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8134').property(single,'code','8134').property(single,'label','Weighers, graders and sorters').
+	addE('hasParent').to(g.V().hasId('soc--813')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8135').property(single,'code','8135').property(single,'label','Tyre, exhaust and windscreen fitters').
+	addE('hasParent').to(g.V().hasId('soc--813')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8133').property(single,'code','8133').property(single,'label','Routine inspectors and testers').
+	addE('hasParent').to(g.V().hasId('soc--813')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--814').property(single,'code','814').property(single,'label','Construction operatives').
+	addE('hasParent').to(g.V().hasId('soc--81')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8149').property(single,'code','8149').property(single,'label','Construction operatives n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--814')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8142').property(single,'code','8142').property(single,'label','Road construction operatives').
+	addE('hasParent').to(g.V().hasId('soc--814')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8143').property(single,'code','8143').property(single,'label','Rail construction and maintenance operatives').
+	addE('hasParent').to(g.V().hasId('soc--814')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8141').property(single,'code','8141').property(single,'label','Scaffolders, stagers and riggers').
+	addE('hasParent').to(g.V().hasId('soc--814')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--812').property(single,'code','812').property(single,'label','Plant and machine operatives').
+	addE('hasParent').to(g.V().hasId('soc--81')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8121').property(single,'code','8121').property(single,'label','Paper and wood machine operatives').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8123').property(single,'code','8123').property(single,'label','Quarry workers and related operatives').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8127').property(single,'code','8127').property(single,'label','Printing machine assistants').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8125').property(single,'code','8125').property(single,'label','Metal working machine operatives').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8122').property(single,'code','8122').property(single,'label','Coal mine operatives').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8129').property(single,'code','8129').property(single,'label','Plant and machine operatives n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8124').property(single,'code','8124').property(single,'label','Energy plant operatives').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8126').property(single,'code','8126').property(single,'label','Water and sewerage plant operatives').
+	addE('hasParent').to(g.V().hasId('soc--812')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--82').property(single,'code','82').property(single,'label','Transport and mobile machine drivers and operatives').
+	addE('hasParent').to(g.V().hasId('soc--8')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--823').property(single,'code','823').property(single,'label','Other drivers and transport operatives').
+	addE('hasParent').to(g.V().hasId('soc--82')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8231').property(single,'code','8231').property(single,'label','Train and tram drivers').
+	addE('hasParent').to(g.V().hasId('soc--823')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8233').property(single,'code','8233').property(single,'label','Air transport operatives').
+	addE('hasParent').to(g.V().hasId('soc--823')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8239').property(single,'code','8239').property(single,'label','Other drivers and transport operatives n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--823')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8234').property(single,'code','8234').property(single,'label','Rail transport operatives').
+	addE('hasParent').to(g.V().hasId('soc--823')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8232').property(single,'code','8232').property(single,'label','Marine and waterways transport operatives').
+	addE('hasParent').to(g.V().hasId('soc--823')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--822').property(single,'code','822').property(single,'label','Mobile machine drivers and operatives').
+	addE('hasParent').to(g.V().hasId('soc--82')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8221').property(single,'code','8221').property(single,'label','Crane drivers').
+	addE('hasParent').to(g.V().hasId('soc--822')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8229').property(single,'code','8229').property(single,'label','Mobile machine drivers and operatives n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--822')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8223').property(single,'code','8223').property(single,'label','Agricultural machinery drivers').
+	addE('hasParent').to(g.V().hasId('soc--822')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8222').property(single,'code','8222').property(single,'label','Fork-lift truck drivers').
+	addE('hasParent').to(g.V().hasId('soc--822')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--821').property(single,'code','821').property(single,'label','Road transport drivers').
+	addE('hasParent').to(g.V().hasId('soc--82')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8214').property(single,'code','8214').property(single,'label','Taxi and cab drivers and chauffeurs').
+	addE('hasParent').to(g.V().hasId('soc--821')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8215').property(single,'code','8215').property(single,'label','Driving instructors').
+	addE('hasParent').to(g.V().hasId('soc--821')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8211').property(single,'code','8211').property(single,'label','Large goods vehicle drivers').
+	addE('hasParent').to(g.V().hasId('soc--821')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8212').property(single,'code','8212').property(single,'label','Van drivers').
+	addE('hasParent').to(g.V().hasId('soc--821')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--8213').property(single,'code','8213').property(single,'label','Bus and coach drivers').
+	addE('hasParent').to(g.V().hasId('soc--821')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5').property(single,'code','5').property(single,'label','Skilled trades occupations').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--53').property(single,'code','53').property(single,'label','Skilled construction and building trades').
+	addE('hasParent').to(g.V().hasId('soc--5')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--532').property(single,'code','532').property(single,'label','Building finishing trades').
+	addE('hasParent').to(g.V().hasId('soc--53')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5321').property(single,'code','5321').property(single,'label','Plasterers').
+	addE('hasParent').to(g.V().hasId('soc--532')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5322').property(single,'code','5322').property(single,'label','Floorers and wall tilers').
+	addE('hasParent').to(g.V().hasId('soc--532')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5323').property(single,'code','5323').property(single,'label','Painters and decorators').
+	addE('hasParent').to(g.V().hasId('soc--532')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--533').property(single,'code','533').property(single,'label','Construction and building trades supervisors').
+	addE('hasParent').to(g.V().hasId('soc--53')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5330').property(single,'code','5330').property(single,'label','Construction and building trades supervisors').
+	addE('hasParent').to(g.V().hasId('soc--533')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--531').property(single,'code','531').property(single,'label','Construction and building trades').
+	addE('hasParent').to(g.V().hasId('soc--53')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5313').property(single,'code','5313').property(single,'label','Roofers, roof tilers and slaters').
+	addE('hasParent').to(g.V().hasId('soc--531')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5314').property(single,'code','5314').property(single,'label','Plumbers and heating and ventilating engineers').
+	addE('hasParent').to(g.V().hasId('soc--531')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5319').property(single,'code','5319').property(single,'label','Construction and building trades n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--531')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5315').property(single,'code','5315').property(single,'label','Carpenters and joiners').
+	addE('hasParent').to(g.V().hasId('soc--531')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5311').property(single,'code','5311').property(single,'label','Steel erectors').
+	addE('hasParent').to(g.V().hasId('soc--531')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5316').property(single,'code','5316').property(single,'label','Glaziers, window fabricators and fitters').
+	addE('hasParent').to(g.V().hasId('soc--531')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5312').property(single,'code','5312').property(single,'label','Bricklayers and masons').
+	addE('hasParent').to(g.V().hasId('soc--531')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--52').property(single,'code','52').property(single,'label','Skilled metal, electrical and electronic trades').
+	addE('hasParent').to(g.V().hasId('soc--5')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--524').property(single,'code','524').property(single,'label','Electrical and electronic trades').
+	addE('hasParent').to(g.V().hasId('soc--52')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5249').property(single,'code','5249').property(single,'label','Electrical and electronic trades n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--524')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5241').property(single,'code','5241').property(single,'label','Electricians and electrical fitters').
+	addE('hasParent').to(g.V().hasId('soc--524')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5244').property(single,'code','5244').property(single,'label','Tv, video and audio engineers').
+	addE('hasParent').to(g.V().hasId('soc--524')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5242').property(single,'code','5242').property(single,'label','Telecommunications engineers').
+	addE('hasParent').to(g.V().hasId('soc--524')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5245').property(single,'code','5245').property(single,'label','It engineers').
+	addE('hasParent').to(g.V().hasId('soc--524')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--525').property(single,'code','525').property(single,'label','Skilled metal, electrical and electronic trades supervisors').
+	addE('hasParent').to(g.V().hasId('soc--52')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5250').property(single,'code','5250').property(single,'label','Skilled metal, electrical and electronic trades supervisors').
+	addE('hasParent').to(g.V().hasId('soc--525')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--522').property(single,'code','522').property(single,'label','Metal machining, fitting and instrument making trades').
+	addE('hasParent').to(g.V().hasId('soc--52')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5225').property(single,'code','5225').property(single,'label','Air-conditioning and refrigeration engineers').
+	addE('hasParent').to(g.V().hasId('soc--522')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5222').property(single,'code','5222').property(single,'label','Tool makers, tool fitters and markers-out').
+	addE('hasParent').to(g.V().hasId('soc--522')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5223').property(single,'code','5223').property(single,'label','Metal working production and maintenance fitters').
+	addE('hasParent').to(g.V().hasId('soc--522')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5224').property(single,'code','5224').property(single,'label','Precision instrument makers and repairers').
+	addE('hasParent').to(g.V().hasId('soc--522')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5221').property(single,'code','5221').property(single,'label','Metal machining setters and setter-operators').
+	addE('hasParent').to(g.V().hasId('soc--522')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--523').property(single,'code','523').property(single,'label','Vehicle trades').
+	addE('hasParent').to(g.V().hasId('soc--52')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5231').property(single,'code','5231').property(single,'label','Vehicle technicians, mechanics and electricians').
+	addE('hasParent').to(g.V().hasId('soc--523')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5237').property(single,'code','5237').property(single,'label','Rail and rolling stock builders and repairers').
+	addE('hasParent').to(g.V().hasId('soc--523')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5232').property(single,'code','5232').property(single,'label','Vehicle body builders and repairers').
+	addE('hasParent').to(g.V().hasId('soc--523')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5236').property(single,'code','5236').property(single,'label','Boat and ship builders and repairers').
+	addE('hasParent').to(g.V().hasId('soc--523')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5234').property(single,'code','5234').property(single,'label','Vehicle paint technicians').
+	addE('hasParent').to(g.V().hasId('soc--523')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5235').property(single,'code','5235').property(single,'label','Aircraft maintenance and related trades').
+	addE('hasParent').to(g.V().hasId('soc--523')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--521').property(single,'code','521').property(single,'label','Metal forming, welding and related trades').
+	addE('hasParent').to(g.V().hasId('soc--52')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5214').property(single,'code','5214').property(single,'label','Metal plate workers, and riveters').
+	addE('hasParent').to(g.V().hasId('soc--521')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5215').property(single,'code','5215').property(single,'label','Welding trades').
+	addE('hasParent').to(g.V().hasId('soc--521')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5213').property(single,'code','5213').property(single,'label','Sheet metal workers').
+	addE('hasParent').to(g.V().hasId('soc--521')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5216').property(single,'code','5216').property(single,'label','Pipe fitters').
+	addE('hasParent').to(g.V().hasId('soc--521')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5211').property(single,'code','5211').property(single,'label','Smiths and forge workers').
+	addE('hasParent').to(g.V().hasId('soc--521')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5212').property(single,'code','5212').property(single,'label','Moulders, core makers and die casters').
+	addE('hasParent').to(g.V().hasId('soc--521')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--51').property(single,'code','51').property(single,'label','Skilled agricultural and related trades').
+	addE('hasParent').to(g.V().hasId('soc--5')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--511').property(single,'code','511').property(single,'label','Agricultural and related trades').
+	addE('hasParent').to(g.V().hasId('soc--51')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5119').property(single,'code','5119').property(single,'label','Agricultural and fishing trades n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--511')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5111').property(single,'code','5111').property(single,'label','Farmers').
+	addE('hasParent').to(g.V().hasId('soc--511')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5114').property(single,'code','5114').property(single,'label','Groundsmen and greenkeepers').
+	addE('hasParent').to(g.V().hasId('soc--511')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5112').property(single,'code','5112').property(single,'label','Horticultural trades').
+	addE('hasParent').to(g.V().hasId('soc--511')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5113').property(single,'code','5113').property(single,'label','Gardeners and landscape gardeners').
+	addE('hasParent').to(g.V().hasId('soc--511')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--54').property(single,'code','54').property(single,'label','Textiles, printing and other skilled trades').
+	addE('hasParent').to(g.V().hasId('soc--5')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--542').property(single,'code','542').property(single,'label','Printing trades').
+	addE('hasParent').to(g.V().hasId('soc--54')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5423').property(single,'code','5423').property(single,'label','Print finishing and binding workers').
+	addE('hasParent').to(g.V().hasId('soc--542')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5421').property(single,'code','5421').property(single,'label','Pre-press technicians').
+	addE('hasParent').to(g.V().hasId('soc--542')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5422').property(single,'code','5422').property(single,'label','Printers').
+	addE('hasParent').to(g.V().hasId('soc--542')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--543').property(single,'code','543').property(single,'label','Food preparation and hospitality trades').
+	addE('hasParent').to(g.V().hasId('soc--54')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5432').property(single,'code','5432').property(single,'label','Bakers and flour confectioners').
+	addE('hasParent').to(g.V().hasId('soc--543')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5433').property(single,'code','5433').property(single,'label','Fishmongers and poultry dressers').
+	addE('hasParent').to(g.V().hasId('soc--543')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5436').property(single,'code','5436').property(single,'label','Catering and bar managers').
+	addE('hasParent').to(g.V().hasId('soc--543')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5435').property(single,'code','5435').property(single,'label','Cooks').
+	addE('hasParent').to(g.V().hasId('soc--543')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5431').property(single,'code','5431').property(single,'label','Butchers').
+	addE('hasParent').to(g.V().hasId('soc--543')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5434').property(single,'code','5434').property(single,'label','Chefs').
+	addE('hasParent').to(g.V().hasId('soc--543')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--544').property(single,'code','544').property(single,'label','Other skilled trades').
+	addE('hasParent').to(g.V().hasId('soc--54')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5442').property(single,'code','5442').property(single,'label','Furniture makers and other craft woodworkers').
+	addE('hasParent').to(g.V().hasId('soc--544')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5441').property(single,'code','5441').property(single,'label','Glass and ceramics makers, decorators and finishers').
+	addE('hasParent').to(g.V().hasId('soc--544')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5449').property(single,'code','5449').property(single,'label','Other skilled trades n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--544')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5443').property(single,'code','5443').property(single,'label','Florists').
+	addE('hasParent').to(g.V().hasId('soc--544')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--541').property(single,'code','541').property(single,'label','Textiles and garments trades').
+	addE('hasParent').to(g.V().hasId('soc--54')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5411').property(single,'code','5411').property(single,'label','Weavers and knitters').
+	addE('hasParent').to(g.V().hasId('soc--541')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5414').property(single,'code','5414').property(single,'label','Tailors and dressmakers').
+	addE('hasParent').to(g.V().hasId('soc--541')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5412').property(single,'code','5412').property(single,'label','Upholsterers').
+	addE('hasParent').to(g.V().hasId('soc--541')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5413').property(single,'code','5413').property(single,'label','Footwear and leather working trades').
+	addE('hasParent').to(g.V().hasId('soc--541')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--5419').property(single,'code','5419').property(single,'label','Textiles, garments and related trades n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--541')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9').property(single,'code','9').property(single,'label','Elementary occupations').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--91').property(single,'code','91').property(single,'label','Elementary trades and related occupations').
+	addE('hasParent').to(g.V().hasId('soc--9')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--912').property(single,'code','912').property(single,'label','Elementary construction occupations').
+	addE('hasParent').to(g.V().hasId('soc--91')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9120').property(single,'code','9120').property(single,'label','Elementary construction occupations').
+	addE('hasParent').to(g.V().hasId('soc--912')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--913').property(single,'code','913').property(single,'label','Elementary process plant occupations').
+	addE('hasParent').to(g.V().hasId('soc--91')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9134').property(single,'code','9134').property(single,'label','Packers, bottlers, canners and fillers').
+	addE('hasParent').to(g.V().hasId('soc--913')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9139').property(single,'code','9139').property(single,'label','Elementary process plant occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--913')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9132').property(single,'code','9132').property(single,'label','Industrial cleaning process occupations').
+	addE('hasParent').to(g.V().hasId('soc--913')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--911').property(single,'code','911').property(single,'label','Elementary agricultural occupations').
+	addE('hasParent').to(g.V().hasId('soc--91')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9111').property(single,'code','9111').property(single,'label','Farm workers').
+	addE('hasParent').to(g.V().hasId('soc--911')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9112').property(single,'code','9112').property(single,'label','Forestry workers').
+	addE('hasParent').to(g.V().hasId('soc--911')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9119').property(single,'code','9119').property(single,'label','Fishing and other elementary agriculture occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--911')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--92').property(single,'code','92').property(single,'label','Elementary administration and service occupations').
+	addE('hasParent').to(g.V().hasId('soc--9')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--923').property(single,'code','923').property(single,'label','Elementary cleaning occupations').
+	addE('hasParent').to(g.V().hasId('soc--92')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9232').property(single,'code','9232').property(single,'label','Street cleaners').
+	addE('hasParent').to(g.V().hasId('soc--923')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9233').property(single,'code','9233').property(single,'label','Cleaners and domestics').
+	addE('hasParent').to(g.V().hasId('soc--923')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9231').property(single,'code','9231').property(single,'label','Window cleaners').
+	addE('hasParent').to(g.V().hasId('soc--923')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9239').property(single,'code','9239').property(single,'label','Elementary cleaning occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--923')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9234').property(single,'code','9234').property(single,'label','Launderers, dry cleaners and pressers').
+	addE('hasParent').to(g.V().hasId('soc--923')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9236').property(single,'code','9236').property(single,'label','Vehicle valeters and cleaners').
+	addE('hasParent').to(g.V().hasId('soc--923')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9235').property(single,'code','9235').property(single,'label','Refuse and salvage occupations').
+	addE('hasParent').to(g.V().hasId('soc--923')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--927').property(single,'code','927').property(single,'label','Other elementary services occupations').
+	addE('hasParent').to(g.V().hasId('soc--92')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9274').property(single,'code','9274').property(single,'label','Bar staff').
+	addE('hasParent').to(g.V().hasId('soc--927')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9279').property(single,'code','9279').property(single,'label','Other elementary services occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--927')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9275').property(single,'code','9275').property(single,'label','Leisure and theme park attendants').
+	addE('hasParent').to(g.V().hasId('soc--927')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9272').property(single,'code','9272').property(single,'label','Kitchen and catering assistants').
+	addE('hasParent').to(g.V().hasId('soc--927')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9273').property(single,'code','9273').property(single,'label','Waiters and waitresses').
+	addE('hasParent').to(g.V().hasId('soc--927')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9271').property(single,'code','9271').property(single,'label','Hospital porters').
+	addE('hasParent').to(g.V().hasId('soc--927')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--926').property(single,'code','926').property(single,'label','Elementary storage occupations').
+	addE('hasParent').to(g.V().hasId('soc--92')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9260').property(single,'code','9260').property(single,'label','Elementary storage occupations').
+	addE('hasParent').to(g.V().hasId('soc--926')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--924').property(single,'code','924').property(single,'label','Elementary security occupations').
+	addE('hasParent').to(g.V().hasId('soc--92')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9249').property(single,'code','9249').property(single,'label','Elementary security occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--924')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9242').property(single,'code','9242').property(single,'label','Parking and civil enforcement occupations').
+	addE('hasParent').to(g.V().hasId('soc--924')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9244').property(single,'code','9244').property(single,'label','School midday and crossing patrol occupations').
+	addE('hasParent').to(g.V().hasId('soc--924')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9241').property(single,'code','9241').property(single,'label','Security guards and related occupations').
+	addE('hasParent').to(g.V().hasId('soc--924')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--925').property(single,'code','925').property(single,'label','Elementary sales occupations').
+	addE('hasParent').to(g.V().hasId('soc--92')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9251').property(single,'code','9251').property(single,'label','Shelf fillers').
+	addE('hasParent').to(g.V().hasId('soc--925')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9259').property(single,'code','9259').property(single,'label','Elementary sales occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--925')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--921').property(single,'code','921').property(single,'label','Elementary administration occupations').
+	addE('hasParent').to(g.V().hasId('soc--92')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9211').property(single,'code','9211').property(single,'label','Postal workers, mail sorters, messengers and couriers').
+	addE('hasParent').to(g.V().hasId('soc--921')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--9219').property(single,'code','9219').property(single,'label','Elementary administration occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--921')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4').property(single,'code','4').property(single,'label','Administrative and secretarial occupations').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--41').property(single,'code','41').property(single,'label','Administrative occupations').
+	addE('hasParent').to(g.V().hasId('soc--4')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--412').property(single,'code','412').property(single,'label','Administrative occupations: finance').
+	addE('hasParent').to(g.V().hasId('soc--41')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4129').property(single,'code','4129').property(single,'label','Financial administrative occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--412')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4121').property(single,'code','4121').property(single,'label','Credit controllers').
+	addE('hasParent').to(g.V().hasId('soc--412')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4123').property(single,'code','4123').property(single,'label','Bank and post office clerks').
+	addE('hasParent').to(g.V().hasId('soc--412')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4124').property(single,'code','4124').property(single,'label','Finance officers').
+	addE('hasParent').to(g.V().hasId('soc--412')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4122').property(single,'code','4122').property(single,'label','Book-keepers, payroll managers and wages clerks').
+	addE('hasParent').to(g.V().hasId('soc--412')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--415').property(single,'code','415').property(single,'label','Other administrative occupations').
+	addE('hasParent').to(g.V().hasId('soc--41')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4151').property(single,'code','4151').property(single,'label','Sales administrators').
+	addE('hasParent').to(g.V().hasId('soc--415')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4159').property(single,'code','4159').property(single,'label','Other administrative occupations n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--415')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--416').property(single,'code','416').property(single,'label','Administrative occupations: office managers and supervisors').
+	addE('hasParent').to(g.V().hasId('soc--41')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4162').property(single,'code','4162').property(single,'label','Office supervisors').
+	addE('hasParent').to(g.V().hasId('soc--416')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4161').property(single,'code','4161').property(single,'label','Office managers').
+	addE('hasParent').to(g.V().hasId('soc--416')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--413').property(single,'code','413').property(single,'label','Administrative occupations: records').
+	addE('hasParent').to(g.V().hasId('soc--41')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4131').property(single,'code','4131').property(single,'label','Records clerks and assistants').
+	addE('hasParent').to(g.V().hasId('soc--413')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4132').property(single,'code','4132').property(single,'label','Pensions and insurance clerks and assistants').
+	addE('hasParent').to(g.V().hasId('soc--413')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4134').property(single,'code','4134').property(single,'label','Transport and distribution clerks and assistants').
+	addE('hasParent').to(g.V().hasId('soc--413')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4133').property(single,'code','4133').property(single,'label','Stock control clerks and assistants').
+	addE('hasParent').to(g.V().hasId('soc--413')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4138').property(single,'code','4138').property(single,'label','Human resources administrative occupations').
+	addE('hasParent').to(g.V().hasId('soc--413')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4135').property(single,'code','4135').property(single,'label','Library clerks and assistants').
+	addE('hasParent').to(g.V().hasId('soc--413')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--411').property(single,'code','411').property(single,'label','Administrative occupations: government and related organisations').
+	addE('hasParent').to(g.V().hasId('soc--41')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4113').property(single,'code','4113').property(single,'label','Local government administrative occupations').
+	addE('hasParent').to(g.V().hasId('soc--411')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4112').property(single,'code','4112').property(single,'label','National government administrative occupations').
+	addE('hasParent').to(g.V().hasId('soc--411')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4114').property(single,'code','4114').property(single,'label','Officers of non-governmental organisations').
+	addE('hasParent').to(g.V().hasId('soc--411')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--42').property(single,'code','42').property(single,'label','Secretarial and related occupations').
+	addE('hasParent').to(g.V().hasId('soc--4')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--421').property(single,'code','421').property(single,'label','Secretarial and related occupations').
+	addE('hasParent').to(g.V().hasId('soc--42')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4216').property(single,'code','4216').property(single,'label','Receptionists').
+	addE('hasParent').to(g.V().hasId('soc--421')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4214').property(single,'code','4214').property(single,'label','Company secretaries').
+	addE('hasParent').to(g.V().hasId('soc--421')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4211').property(single,'code','4211').property(single,'label','Medical secretaries').
+	addE('hasParent').to(g.V().hasId('soc--421')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4217').property(single,'code','4217').property(single,'label','Typists and related keyboard occupations').
+	addE('hasParent').to(g.V().hasId('soc--421')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4212').property(single,'code','4212').property(single,'label','Legal secretaries').
+	addE('hasParent').to(g.V().hasId('soc--421')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4213').property(single,'code','4213').property(single,'label','School secretaries').
+	addE('hasParent').to(g.V().hasId('soc--421')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--4215').property(single,'code','4215').property(single,'label','Personal assistants and other secretaries').
+	addE('hasParent').to(g.V().hasId('soc--421')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2').property(single,'code','2').property(single,'label','Professional occupations').
+	addE('hasParent').to(g.V().hasId('soc--all')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--22').property(single,'code','22').property(single,'label','Health professionals').
+	addE('hasParent').to(g.V().hasId('soc--2')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--223').property(single,'code','223').property(single,'label','Nursing and midwifery professionals').
+	addE('hasParent').to(g.V().hasId('soc--22')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2231').property(single,'code','2231').property(single,'label','Nurses').
+	addE('hasParent').to(g.V().hasId('soc--223')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2232').property(single,'code','2232').property(single,'label','Midwives').
+	addE('hasParent').to(g.V().hasId('soc--223')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--222').property(single,'code','222').property(single,'label','Therapy professionals').
+	addE('hasParent').to(g.V().hasId('soc--22')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2221').property(single,'code','2221').property(single,'label','Physiotherapists').
+	addE('hasParent').to(g.V().hasId('soc--222')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2223').property(single,'code','2223').property(single,'label','Speech and language therapists').
+	addE('hasParent').to(g.V().hasId('soc--222')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2222').property(single,'code','2222').property(single,'label','Occupational therapists').
+	addE('hasParent').to(g.V().hasId('soc--222')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2229').property(single,'code','2229').property(single,'label','Therapy professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--222')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--221').property(single,'code','221').property(single,'label','Health professionals').
+	addE('hasParent').to(g.V().hasId('soc--22')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2212').property(single,'code','2212').property(single,'label','Psychologists').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2211').property(single,'code','2211').property(single,'label','Medical practitioners').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2213').property(single,'code','2213').property(single,'label','Pharmacists').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2217').property(single,'code','2217').property(single,'label','Medical radiographers').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2215').property(single,'code','2215').property(single,'label','Dental practitioners').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2214').property(single,'code','2214').property(single,'label','Ophthalmic opticians').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2216').property(single,'code','2216').property(single,'label','Veterinarians').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2218').property(single,'code','2218').property(single,'label','Podiatrists').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2219').property(single,'code','2219').property(single,'label','Health professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--221')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--24').property(single,'code','24').property(single,'label','Business, media and public service professionals').
+	addE('hasParent').to(g.V().hasId('soc--2')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--244').property(single,'code','244').property(single,'label','Welfare professionals').
+	addE('hasParent').to(g.V().hasId('soc--24')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2449').property(single,'code','2449').property(single,'label','Welfare professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--244')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2444').property(single,'code','2444').property(single,'label','Clergy').
+	addE('hasParent').to(g.V().hasId('soc--244')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2442').property(single,'code','2442').property(single,'label','Social workers').
+	addE('hasParent').to(g.V().hasId('soc--244')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2443').property(single,'code','2443').property(single,'label','Probation officers').
+	addE('hasParent').to(g.V().hasId('soc--244')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--241').property(single,'code','241').property(single,'label','Legal professionals').
+	addE('hasParent').to(g.V().hasId('soc--24')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2412').property(single,'code','2412').property(single,'label','Barristers and judges').
+	addE('hasParent').to(g.V().hasId('soc--241')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2419').property(single,'code','2419').property(single,'label','Legal professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--241')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2413').property(single,'code','2413').property(single,'label','Solicitors').
+	addE('hasParent').to(g.V().hasId('soc--241')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--245').property(single,'code','245').property(single,'label','Librarians and related professionals').
+	addE('hasParent').to(g.V().hasId('soc--24')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2452').property(single,'code','2452').property(single,'label','Archivists and curators').
+	addE('hasParent').to(g.V().hasId('soc--245')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2451').property(single,'code','2451').property(single,'label','Librarians').
+	addE('hasParent').to(g.V().hasId('soc--245')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--247').property(single,'code','247').property(single,'label','Media professionals').
+	addE('hasParent').to(g.V().hasId('soc--24')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2472').property(single,'code','2472').property(single,'label','Public relations professionals').
+	addE('hasParent').to(g.V().hasId('soc--247')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2473').property(single,'code','2473').property(single,'label','Advertising accounts managers and creative directors').
+	addE('hasParent').to(g.V().hasId('soc--247')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2471').property(single,'code','2471').property(single,'label','Journalists, newspaper and periodical editors').
+	addE('hasParent').to(g.V().hasId('soc--247')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--242').property(single,'code','242').property(single,'label','Business, research and administrative professionals').
+	addE('hasParent').to(g.V().hasId('soc--24')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2423').property(single,'code','2423').property(single,'label','Management consultants and business analysts').
+	addE('hasParent').to(g.V().hasId('soc--242')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2421').property(single,'code','2421').property(single,'label','Chartered and certified accountants').
+	addE('hasParent').to(g.V().hasId('soc--242')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2425').property(single,'code','2425').property(single,'label','Actuaries, economists and statisticians').
+	addE('hasParent').to(g.V().hasId('soc--242')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2429').property(single,'code','2429').property(single,'label','Business, research and administrative professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--242')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2424').property(single,'code','2424').property(single,'label','Business and financial project management professionals').
+	addE('hasParent').to(g.V().hasId('soc--242')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2426').property(single,'code','2426').property(single,'label','Business and related research professionals').
+	addE('hasParent').to(g.V().hasId('soc--242')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--243').property(single,'code','243').property(single,'label','Architects, town planners and surveyors').
+	addE('hasParent').to(g.V().hasId('soc--24')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2436').property(single,'code','2436').property(single,'label','Construction project managers and related professionals').
+	addE('hasParent').to(g.V().hasId('soc--243')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2431').property(single,'code','2431').property(single,'label','Architects').
+	addE('hasParent').to(g.V().hasId('soc--243')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2432').property(single,'code','2432').property(single,'label','Town planning officers').
+	addE('hasParent').to(g.V().hasId('soc--243')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2435').property(single,'code','2435').property(single,'label','Chartered architectural technologists').
+	addE('hasParent').to(g.V().hasId('soc--243')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2433').property(single,'code','2433').property(single,'label','Quantity surveyors').
+	addE('hasParent').to(g.V().hasId('soc--243')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2434').property(single,'code','2434').property(single,'label','Chartered surveyors').
+	addE('hasParent').to(g.V().hasId('soc--243')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--246').property(single,'code','246').property(single,'label','Quality and regulatory professionals').
+	addE('hasParent').to(g.V().hasId('soc--24')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2462').property(single,'code','2462').property(single,'label','Quality assurance and regulatory professionals').
+	addE('hasParent').to(g.V().hasId('soc--246')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2463').property(single,'code','2463').property(single,'label','Environmental health professionals').
+	addE('hasParent').to(g.V().hasId('soc--246')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2461').property(single,'code','2461').property(single,'label','Quality control and planning engineers').
+	addE('hasParent').to(g.V().hasId('soc--246')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--21').property(single,'code','21').property(single,'label','Science, research, engineering and technology professionals').
+	addE('hasParent').to(g.V().hasId('soc--2')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--213').property(single,'code','213').property(single,'label','Information technology and telecommunications professionals').
+	addE('hasParent').to(g.V().hasId('soc--21')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2136').property(single,'code','2136').property(single,'label','Programmers and software development professionals').
+	addE('hasParent').to(g.V().hasId('soc--213')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2135').property(single,'code','2135').property(single,'label','It business analysts, architects and systems designers').
+	addE('hasParent').to(g.V().hasId('soc--213')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2139').property(single,'code','2139').property(single,'label','Information technology and telecommunications professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--213')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2134').property(single,'code','2134').property(single,'label','It project and programme managers').
+	addE('hasParent').to(g.V().hasId('soc--213')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2133').property(single,'code','2133').property(single,'label','It specialist managers').
+	addE('hasParent').to(g.V().hasId('soc--213')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2137').property(single,'code','2137').property(single,'label','Web design and development professionals').
+	addE('hasParent').to(g.V().hasId('soc--213')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--212').property(single,'code','212').property(single,'label','Engineering professionals').
+	addE('hasParent').to(g.V().hasId('soc--21')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2123').property(single,'code','2123').property(single,'label','Electrical engineers').
+	addE('hasParent').to(g.V().hasId('soc--212')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2127').property(single,'code','2127').property(single,'label','Production and process engineers').
+	addE('hasParent').to(g.V().hasId('soc--212')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2129').property(single,'code','2129').property(single,'label','Engineering professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--212')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2122').property(single,'code','2122').property(single,'label','Mechanical engineers').
+	addE('hasParent').to(g.V().hasId('soc--212')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2124').property(single,'code','2124').property(single,'label','Electronics engineers').
+	addE('hasParent').to(g.V().hasId('soc--212')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2121').property(single,'code','2121').property(single,'label','Civil engineers').
+	addE('hasParent').to(g.V().hasId('soc--212')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2126').property(single,'code','2126').property(single,'label','Design and development engineers').
+	addE('hasParent').to(g.V().hasId('soc--212')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--211').property(single,'code','211').property(single,'label','Natural and social science professionals').
+	addE('hasParent').to(g.V().hasId('soc--21')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2114').property(single,'code','2114').property(single,'label','Social and humanities scientists').
+	addE('hasParent').to(g.V().hasId('soc--211')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2112').property(single,'code','2112').property(single,'label','Biological scientists and biochemists').
+	addE('hasParent').to(g.V().hasId('soc--211')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2111').property(single,'code','2111').property(single,'label','Chemical scientists').
+	addE('hasParent').to(g.V().hasId('soc--211')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2119').property(single,'code','2119').property(single,'label','Natural and social science professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--211')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2113').property(single,'code','2113').property(single,'label','Physical scientists').
+	addE('hasParent').to(g.V().hasId('soc--211')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--215').property(single,'code','215').property(single,'label','Research and development managers').
+	addE('hasParent').to(g.V().hasId('soc--21')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2150').property(single,'code','2150').property(single,'label','Research and development managers').
+	addE('hasParent').to(g.V().hasId('soc--215')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--214').property(single,'code','214').property(single,'label','Conservation and environment professionals').
+	addE('hasParent').to(g.V().hasId('soc--21')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2141').property(single,'code','2141').property(single,'label','Conservation professionals').
+	addE('hasParent').to(g.V().hasId('soc--214')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2142').property(single,'code','2142').property(single,'label','Environment professionals').
+	addE('hasParent').to(g.V().hasId('soc--214')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--23').property(single,'code','23').property(single,'label','Teaching and educational professionals').
+	addE('hasParent').to(g.V().hasId('soc--2')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--231').property(single,'code','231').property(single,'label','Teaching and educational professionals').
+	addE('hasParent').to(g.V().hasId('soc--23')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2318').property(single,'code','2318').property(single,'label','Education advisers and school inspectors').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2314').property(single,'code','2314').property(single,'label','Secondary education teaching professionals').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2316').property(single,'code','2316').property(single,'label','Special needs education teaching professionals').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2317').property(single,'code','2317').property(single,'label','Senior professionals of educational establishments').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2311').property(single,'code','2311').property(single,'label','Higher education teaching professionals').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2319').property(single,'code','2319').property(single,'label','Teaching and other educational professionals n.e.c.').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2312').property(single,'code','2312').property(single,'label','Further education teaching professionals').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--2315').property(single,'code','2315').property(single,'label','Primary and nursery education teaching professionals').
+	addE('hasParent').to(g.V().hasId('soc--231')).next()

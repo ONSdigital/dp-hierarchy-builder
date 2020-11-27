@@ -1,0 +1,274 @@
+codelist,code,label,parent
+countries-and-territories,DZ,DZ - Algeria,africa
+countries-and-territories,EG,EG - Egypt,africa
+countries-and-territories,LY,LY - Libya,africa
+countries-and-territories,MR,MR - Mauritania,africa
+countries-and-territories,MA,MA - Morocco,africa
+countries-and-territories,SD,SD - Sudan,africa
+countries-and-territories,sudan-ex,Sudan (Ex),africa
+countries-and-territories,TN,TN - Tunisia,africa
+countries-and-territories,western-sahara,Western Sahara,africa
+countries-and-territories,AO,AO - Angola,africa
+countries-and-territories,BJ,BJ - Benin,africa
+countries-and-territories,BW,BW - Botswana,africa
+countries-and-territories,BF,BF - Burkina Faso,africa
+countries-and-territories,BI,BI - Burundi,africa
+countries-and-territories,CM,CM - Cameroon,africa
+countries-and-territories,CV,CV - Cape Verde,africa
+countries-and-territories,CF,CF - Central African Republic,africa
+countries-and-territories,TD,TD - Chad,africa
+countries-and-territories,KM,KM - Comoros,africa
+countries-and-territories,CD,CD - Congo (Democratic Republic),africa
+countries-and-territories,CG,CG - Congo (Republic),africa
+countries-and-territories,DJ,DJ - Djibouti,africa
+countries-and-territories,GQ,GQ - Equatorial Guinea,africa
+countries-and-territories,ER,ER - Eritrea,africa
+countries-and-territories,ET,ET - Ethiopia,africa
+countries-and-territories,GA,GA - Gabon,africa
+countries-and-territories,GM,GM - Gambia,africa
+countries-and-territories,GH,GH - Ghana,africa
+countries-and-territories,GN,GN - Guinea,africa
+countries-and-territories,GW,GW - Guinea Bissau,africa
+countries-and-territories,CI,CI - Ivory Coast,africa
+countries-and-territories,KE,KE - Kenya,africa
+countries-and-territories,LS,LS - Lesotho,africa
+countries-and-territories,LR,LR - Liberia,africa
+countries-and-territories,MG,MG - Madagascar,africa
+countries-and-territories,MW,MW - Malawi,africa
+countries-and-territories,ML,ML - Mali,africa
+countries-and-territories,MU,MU - Mauritius,africa
+countries-and-territories,mayotte,Mayotte,africa
+countries-and-territories,MZ,MZ - Mozambique,africa
+countries-and-territories,NA,NA - Namibia,africa
+countries-and-territories,NE,NE - Niger,africa
+countries-and-territories,NG,NG - Nigeria,africa
+countries-and-territories,reunion,Reunion,africa
+countries-and-territories,RW,RW - Rwanda,africa
+countries-and-territories,ST,ST - Sao Tome & Principe,africa
+countries-and-territories,SN,SN - Senegal,africa
+countries-and-territories,SC,SC - Seychelles,africa
+countries-and-territories,SL,SL - Sierra Leone,africa
+countries-and-territories,SO,SO - Somalia,africa
+countries-and-territories,ZA,ZA - South Africa,africa
+countries-and-territories,SS,SS - South Sudan,africa
+countries-and-territories,SH,SH - St. Helena,africa
+countries-and-territories,SZ,SZ - Swaziland,africa
+countries-and-territories,TZ,TZ - Tanzania,africa
+countries-and-territories,TG,TG - Togo,africa
+countries-and-territories,UG,UG - Uganda,africa
+countries-and-territories,ZM,ZM - Zambia,africa
+countries-and-territories,ZW,ZW - Zimbabwe,africa
+countries-and-territories,CN,CN - China,asia
+countries-and-territories,HK,HK - Hong Kong,asia
+countries-and-territories,JP,JP - Japan,asia
+countries-and-territories,MO,MO - Macao,asia
+countries-and-territories,MN,MN - Mongolia,asia
+countries-and-territories,KP,KP - North Korea,asia
+countries-and-territories,KR,KR - South Korea,asia
+countries-and-territories,TW,TW - Taiwan,asia
+countries-and-territories,AF,AF - Afghanistan,asia
+countries-and-territories,BH,BH - Bahrain,asia
+countries-and-territories,IR,IR - Iran,asia
+countries-and-territories,IQ,IQ - Iraq,asia
+countries-and-territories,IL,IL - Israel,asia
+countries-and-territories,JO,JO - Jordan,asia
+countries-and-territories,KZ,KZ - Kazakhstan,asia
+countries-and-territories,KW,KW - Kuwait,asia
+countries-and-territories,KG,KG - Kyrgyz Republic,asia
+countries-and-territories,LB,LB - Lebanon,asia
+countries-and-territories,PS,PS - Occupied Palestinian Territory,asia
+countries-and-territories,OM,OM - Oman,asia
+countries-and-territories,QA,QA - Qatar,asia
+countries-and-territories,SA,SA - Saudi Arabia,asia
+countries-and-territories,SY,SY - Syria,asia
+countries-and-territories,TJ,TJ - Tajikistan,asia
+countries-and-territories,TM,TM - Turkmenistan,asia
+countries-and-territories,AE,AE - United Arab Emirates,asia
+countries-and-territories,UZ,UZ - Uzbekistan,asia
+countries-and-territories,YE,YE - Yemen,asia
+countries-and-territories,BD,BD - Bangladesh,asia
+countries-and-territories,BT,BT - Bhutan,asia
+countries-and-territories,IO,IO - British Indian Ocean Territory,africa
+countries-and-territories,IN,IN - India,asia
+countries-and-territories,MV,MV - Maldives,asia
+countries-and-territories,NP,NP - Nepal,asia
+countries-and-territories,PK,PK - Pakistan,asia
+countries-and-territories,LK,LK - Sri Lanka,asia
+countries-and-territories,BN,BN - Brunei,asia
+countries-and-territories,KH,KH - Cambodia,asia
+countries-and-territories,TL,TL - East Timor,asia
+countries-and-territories,ID,ID - Indonesia,asia
+countries-and-territories,LA,LA - Laos,asia
+countries-and-territories,MY,MY - Malaysia,asia
+countries-and-territories,MM,MM - Myanmar,asia
+countries-and-territories,PH,PH - Philippines,asia
+countries-and-territories,SG,SG - Singapore,asia
+countries-and-territories,TH,TH - Thailand,asia
+countries-and-territories,VN,VN - Vietnam,asia
+countries-and-territories,european-union-eu15,European Union EU15,B5
+countries-and-territories,european-union-eu2,European Union EU2,B5
+countries-and-territories,european-union-eu8,European Union EU8,B5
+countries-and-territories,other-european-union,Other European Union,B5
+countries-and-territories,aland-islands,Aland Islands,europe-exc-european-union
+countries-and-territories,AT,AT - Austria,B5
+countries-and-territories,azores-and-madeira,Azores and Madeira,europe-exc-european-union
+countries-and-territories,BE,BE - Belgium,B5
+countries-and-territories,canary-islands,Canary Islands,europe-exc-european-union
+countries-and-territories,DK,DK - Denmark,B5
+countries-and-territories,FI,FI - Finland,B5
+countries-and-territories,FR,FR - France,B5
+countries-and-territories,DE,DE - Germany,B5
+countries-and-territories,GI,GI - Gibraltar,europe-exc-european-union
+countries-and-territories,GR,GR - Greece,B5
+countries-and-territories,IE,IE - Ireland,B5
+countries-and-territories,IT,IT - Italy,B5
+countries-and-territories,JE,JE - Jersey,europe-exc-european-union
+countries-and-territories,LU,LU - Luxembourg,B5
+countries-and-territories,NL,NL - Netherlands,B5
+countries-and-territories,PT,PT - Portugal,B5
+countries-and-territories,ES,ES - Spain,B5
+countries-and-territories,spain-and-balearic-islands,Spain and Balearic Islands,B5
+countries-and-territories,SE,SE - Sweden,B5
+countries-and-territories,BG,BG - Bulgaria,B5
+countries-and-territories,RO,RO - Romania,B5
+countries-and-territories,CZ,CZ - Czech Republic,B5
+countries-and-territories,EE,EE - Estonia,B5
+countries-and-territories,HU,HU - Hungary,B5
+countries-and-territories,LV,LV - Latvia,B5
+countries-and-territories,LT,LT - Lithuania,B5
+countries-and-territories,PL,PL - Poland,B5
+countries-and-territories,SK,SK - Slovakia,B5
+countries-and-territories,SI,SI - Slovenia,B5
+countries-and-territories,HR,HR - Croatia,B5
+countries-and-territories,CY,CY - Cyprus,B5
+countries-and-territories,cyprus-ex,Cyprus (Ex),B5
+countries-and-territories,MT,MT - Malta,B5
+countries-and-territories,AI,AI - Anguilla,central-and-south-america
+countries-and-territories,AG,AG - Antigua & Barbuda,central-and-south-america
+countries-and-territories,AR,AR - Argentina,central-and-south-america
+countries-and-territories,AW,AW - Aruba,central-and-south-america
+countries-and-territories,BS,BS - Bahamas,central-and-south-america
+countries-and-territories,BB,BB - Barbados,central-and-south-america
+countries-and-territories,BZ,BZ - Belize,central-and-south-america
+countries-and-territories,BM,BM - Bermuda,central-and-south-america
+countries-and-territories,BO,BO - Bolivia,central-and-south-america
+countries-and-territories,BQ,"BQ - Bonaire, Sint Eustatius and Saba",central-and-south-america
+countries-and-territories,BR,BR - Brazil,central-and-south-america
+countries-and-territories,VG,VG - British Virgin Islands,central-and-south-america
+countries-and-territories,KY,KY - Cayman Islands,central-and-south-america
+countries-and-territories,CL,CL - Chile,central-and-south-america
+countries-and-territories,CO,CO - Colombia,central-and-south-america
+countries-and-territories,CR,CR - Costa Rica,central-and-south-america
+countries-and-territories,CU,CU - Cuba,central-and-south-america
+countries-and-territories,CW,CW - Curacao,central-and-south-america
+countries-and-territories,DM,DM - Dominica,central-and-south-america
+countries-and-territories,DO,DO - Dominican Republic,central-and-south-america
+countries-and-territories,EC,EC - Ecuador,central-and-south-america
+countries-and-territories,SV,SV - El Salvador,central-and-south-america
+countries-and-territories,FK,FK - Falkland Islands,central-and-south-america
+countries-and-territories,french-guiana,French Guiana,central-and-south-america
+countries-and-territories,GD,GD - Grenada,central-and-south-america
+countries-and-territories,guadeloupe,Guadeloupe,central-and-south-america
+countries-and-territories,GT,GT - Guatemala,central-and-south-america
+countries-and-territories,GY,GY - Guyana,central-and-south-america
+countries-and-territories,HT,HT - Haiti,central-and-south-america
+countries-and-territories,HN,HN - Honduras,central-and-south-america
+countries-and-territories,JM,JM - Jamaica,central-and-south-america
+countries-and-territories,martinique,Martinique,central-and-south-america
+countries-and-territories,MX,MX - Mexico,central-and-south-america
+countries-and-territories,MS,MS - Montserrat,central-and-south-america
+countries-and-territories,NI,NI - Nicaragua,central-and-south-america
+countries-and-territories,PA,PA - Panama,central-and-south-america
+countries-and-territories,PY,PY - Paraguay,central-and-south-america
+countries-and-territories,PE,PE - Peru,central-and-south-america
+countries-and-territories,SX,SX - Sint Maarten,central-and-south-america
+countries-and-territories,GS,GS - South Georgia,australia-oceania-and-polar-regions
+countries-and-territories,st-barthelemy,St Barthelemy,central-and-south-america
+countries-and-territories,KN,KN - St Kitts & Nevis,central-and-south-america
+countries-and-territories,LC,LC - St Lucia,central-and-south-america
+countries-and-territories,st-martin,St Martin,central-and-south-america
+countries-and-territories,st-pierre-and-miquelon,St Pierre and Miquelon,north-america
+countries-and-territories,VC,VC - St Vincent,central-and-south-america
+countries-and-territories,SR,SR - Suriname,central-and-south-america
+countries-and-territories,TT,TT - Trinidad & Tobago,central-and-south-america
+countries-and-territories,TC,TC - Turks & Caicos Islands,central-and-south-america
+countries-and-territories,UY,UY - Uruguay,central-and-south-america
+countries-and-territories,VE,VE - Venezuela,central-and-south-america
+countries-and-territories,asia,Asia,D5
+countries-and-territories,central-and-south-america,Central and South America,D5
+countries-and-territories,europe-exc-european-union,Europe exc European Union,D5
+countries-and-territories,north-america,North America,D5
+countries-and-territories,australia-oceania-and-polar-regions,"Australia, Oceania and Polar Regions",D5
+countries-and-territories,africa,Africa,D5
+countries-and-territories,AL,AL - Albania,europe-exc-european-union
+countries-and-territories,AD,AD - Andorra,europe-exc-european-union
+countries-and-territories,AM,AM - Armenia,asia
+countries-and-territories,AZ,AZ - Azerbaijan,asia
+countries-and-territories,BY,BY - Belarus,europe-exc-european-union
+countries-and-territories,BA,BA - Bosnia & Herzegovina,europe-exc-european-union
+countries-and-territories,BV,BV - Bouvet Island,australia-oceania-and-polar-regions
+countries-and-territories,cyprus-northern,"Cyprus, Northern",europe-exc-european-union
+countries-and-territories,czechoslovakia-ex,Czechoslovakia (Ex),europe-exc-european-union
+countries-and-territories,FO,FO - Faroe Islands,europe-exc-european-union
+countries-and-territories,MK,MK - FYR Macedonia,europe-exc-european-union
+countries-and-territories,GE,GE - Georgia,asia
+countries-and-territories,GL,GL - Greenland,north-america
+countries-and-territories,IS,IS - Iceland,europe-exc-european-union
+countries-and-territories,XK,XK - Kosovo,europe-exc-european-union
+countries-and-territories,LI,LI - Liechtenstein,europe-exc-european-union
+countries-and-territories,MD,MD - Moldova,europe-exc-european-union
+countries-and-territories,monaco,Monaco,europe-exc-european-union
+countries-and-territories,ME,ME - Montenegro,europe-exc-european-union
+countries-and-territories,NO,NO - Norway,europe-exc-european-union
+countries-and-territories,RU,RU - Russia,europe-exc-european-union
+countries-and-territories,SM,SM - San Marino,europe-exc-european-union
+countries-and-territories,RS,RS - Serbia,europe-exc-european-union
+countries-and-territories,svalbard-and-jan-mayen,Svalbard and Jan Mayen,europe-exc-european-union
+countries-and-territories,CH,CH - Switzerland,europe-exc-european-union
+countries-and-territories,TR,TR - Turkey,europe-exc-european-union
+countries-and-territories,UA,UA - Ukraine,europe-exc-european-union
+countries-and-territories,ussr-ex,USSR (Ex),europe-exc-european-union
+countries-and-territories,VA,VA - Vatican City,europe-exc-european-union
+countries-and-territories,yugoslavia-ex,Yugoslavia (Ex),europe-exc-european-union
+countries-and-territories,yugoslavia-not-otherwise-specified,Yugoslavia (not otherwise specified),europe-exc-european-union
+countries-and-territories,CA,CA - Canada,north-america
+countries-and-territories,puerto-rico,Puerto Rico,north-america
+countries-and-territories,US,US - United States inc Puerto Rico,north-america
+countries-and-territories,UM,UM - US Minor Outlying Islands,australia-oceania-and-polar-regions
+countries-and-territories,VI,VI - US Virgin Islands,central-and-south-america
+countries-and-territories,AS,AS - American Samoa,australia-oceania-and-polar-regions
+countries-and-territories,AQ,AQ - Antarctica,australia-oceania-and-polar-regions
+countries-and-territories,AU,AU - Australia,australia-oceania-and-polar-regions
+countries-and-territories,CX,CX - Christmas Island,australia-oceania-and-polar-regions
+countries-and-territories,CC,CC - Cocos Islands,australia-oceania-and-polar-regions
+countries-and-territories,CK,CK - Cook Islands,australia-oceania-and-polar-regions
+countries-and-territories,FJ,FJ - Fiji,australia-oceania-and-polar-regions
+countries-and-territories,PF,PF - French Polynesia,australia-oceania-and-polar-regions
+countries-and-territories,TF,TF - French Southern Territories,australia-oceania-and-polar-regions
+countries-and-territories,GU,GU - Guam,australia-oceania-and-polar-regions
+countries-and-territories,HM,HM - Heard & McDonald Islands,australia-oceania-and-polar-regions
+countries-and-territories,KI,KI - Kiribati,australia-oceania-and-polar-regions
+countries-and-territories,MH,MH - Marshall Islands,australia-oceania-and-polar-regions
+countries-and-territories,FM,FM - Micronesia,australia-oceania-and-polar-regions
+countries-and-territories,NR,NR - Nauru,australia-oceania-and-polar-regions
+countries-and-territories,NC,NC - New Caledonia,australia-oceania-and-polar-regions
+countries-and-territories,NZ,NZ - New Zealand,australia-oceania-and-polar-regions
+countries-and-territories,NU,NU - Niue Island,australia-oceania-and-polar-regions
+countries-and-territories,NF,NF - Norfolk Island,australia-oceania-and-polar-regions
+countries-and-territories,MP,MP - Northern Mariana Islands,australia-oceania-and-polar-regions
+countries-and-territories,pacific-islands-inc-palau,Pacific Islands (inc Palau),australia-oceania-and-polar-regions
+countries-and-territories,PW,PW - Palau,australia-oceania-and-polar-regions
+countries-and-territories,PG,PG - Papua New Guinea,australia-oceania-and-polar-regions
+countries-and-territories,PN,PN - Pitcairn,australia-oceania-and-polar-regions
+countries-and-territories,WS,WS - Samoa,australia-oceania-and-polar-regions
+countries-and-territories,SB,SB - Solomon Islands,australia-oceania-and-polar-regions
+countries-and-territories,TK,TK - Tokelau Islands,australia-oceania-and-polar-regions
+countries-and-territories,TO,TO - Tonga,australia-oceania-and-polar-regions
+countries-and-territories,TV,TV - Tuvalu,australia-oceania-and-polar-regions
+countries-and-territories,VU,VU - Vanuatu,australia-oceania-and-polar-regions
+countries-and-territories,WF,WF - Wallis & Futuna,australia-oceania-and-polar-regions
+countries-and-territories,D5,D5 - Non-EU (Rest of World),W1
+countries-and-territories,non-european-union,Non European Union,W1
+countries-and-territories,other-groupings,Other Groupings,W1
+countries-and-territories,B5,B5 - EU(28),W1
+countries-and-territories,W1,W1 - Whole world,
