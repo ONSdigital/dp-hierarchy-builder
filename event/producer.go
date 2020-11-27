@@ -2,7 +2,7 @@ package event
 
 import (
 	"github.com/ONSdigital/dp-import/events"
-	kafka "github.com/ONSdigital/dp-kafka"
+	kafka "github.com/ONSdigital/dp-kafka/v2"
 	"github.com/ONSdigital/log.go/log"
 	"golang.org/x/net/context"
 )

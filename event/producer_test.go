@@ -1,10 +1,11 @@
 package event_test
 
 import (
-	"github.com/ONSdigital/dp-hierarchy-builder/event"
-	"github.com/ONSdigital/dp-kafka"
-	"github.com/ONSdigital/dp-kafka/kafkatest"
 	"testing"
+
+	"github.com/ONSdigital/dp-hierarchy-builder/event"
+	kafka "github.com/ONSdigital/dp-kafka/v2"
+	"github.com/ONSdigital/dp-kafka/v2/kafkatest"
 
 	"github.com/ONSdigital/dp-import/events"
 	. "github.com/smartystreets/goconvey/convey"

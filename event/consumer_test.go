@@ -3,16 +3,17 @@ package event_test
 import (
 	"context"
 	"errors"
+	"testing"
+	"time"
+
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/event/eventtest"
 	"github.com/ONSdigital/dp-import/events"
-	kafka "github.com/ONSdigital/dp-kafka"
-	"github.com/ONSdigital/dp-kafka/kafkatest"
+	kafka "github.com/ONSdigital/dp-kafka/v2"
+	"github.com/ONSdigital/dp-kafka/v2/kafkatest"
 	"github.com/ONSdigital/dp-reporter-client/reporter/reportertest"
 	"github.com/ONSdigital/log.go/log"
 	. "github.com/smartystreets/goconvey/convey"
-	"testing"
-	"time"
 )
 
 var testCtx = context.Background()
@@ -26,7 +27,6 @@ func TestConsume_UnmarshallError(t *testing.T) {
 
 		mockConsumer := &kafkatest.IConsumerGroupMock{
 			ChannelsFunc: func() *kafka.ConsumerGroupChannels { return cgChannels },
-			ReleaseFunc:  func() {},
 		}
 
 		mockEventHandler := &eventtest.HandlerMock{
@@ -67,7 +67,6 @@ func TestConsume(t *testing.T) {
 
 		mockConsumer := &kafkatest.IConsumerGroupMock{
 			ChannelsFunc: func() *kafka.ConsumerGroupChannels { return cgChannels },
-			ReleaseFunc:  func() {},
 		}
 
 		mockEventHandler := &eventtest.HandlerMock{
@@ -102,7 +101,7 @@ func TestConsume(t *testing.T) {
 			})
 
 			Convey("Release is called on the consumer", func() {
-				So(len(mockConsumer.ReleaseCalls()), ShouldEqual, 1)
+				So(len(message.ReleaseCalls()), ShouldEqual, 1)
 			})
 		})
 	})
