@@ -7,7 +7,6 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/ONSdigital/go-ns/server"
 	"github.com/gorilla/mux"
 
 	"github.com/ONSdigital/dp-graph/v2/graph"
@@ -15,12 +14,8 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-<<<<<<< HEAD
 	kafka "github.com/ONSdigital/dp-kafka/v2"
-=======
-	kafka "github.com/ONSdigital/dp-kafka"
 	dphttp "github.com/ONSdigital/dp-net/http"
->>>>>>> develop
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/log.go/log"
 	"github.com/gorilla/mux"
