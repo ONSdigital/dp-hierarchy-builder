@@ -101,7 +101,7 @@ func TestConsume(t *testing.T) {
 			})
 
 			Convey("Release is called on the consumer", func() {
-				So(len(message.ReleaseCalls()), ShouldEqual, 1)
+				So(message.ReleaseCalls(), ShouldHaveLength, 1)
 			})
 		})
 	})

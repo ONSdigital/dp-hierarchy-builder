@@ -29,6 +29,8 @@ var (
 	Version string
 )
 
+var bufferSize = 1
+
 func main() {
 	log.Namespace = "dp-hierarchy-builder"
 	ctx := context.Background()
@@ -54,7 +56,7 @@ func main() {
 		KafkaVersion: &cfg.KafkaVersion,
 	}
 
-	cgChannels := kafka.CreateConsumerGroupChannels(1)
+	cgChannels := kafka.CreateConsumerGroupChannels(bufferSize)
 	kafkaConsumer, err := kafka.NewConsumerGroup(
 		ctx,
 		kafkaBrokers,
