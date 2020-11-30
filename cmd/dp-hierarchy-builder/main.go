@@ -18,7 +18,6 @@ import (
 	dphttp "github.com/ONSdigital/dp-net/http"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/log.go/log"
-	"github.com/gorilla/mux"
 )
 
 var (
