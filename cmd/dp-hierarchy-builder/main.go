@@ -7,16 +7,17 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/gorilla/mux"
+
 	"github.com/ONSdigital/dp-graph/v2/graph"
 	"github.com/ONSdigital/dp-healthcheck/healthcheck"
 	"github.com/ONSdigital/dp-hierarchy-builder/config"
 	"github.com/ONSdigital/dp-hierarchy-builder/event"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	kafka "github.com/ONSdigital/dp-kafka"
+	kafka "github.com/ONSdigital/dp-kafka/v2"
 	dphttp "github.com/ONSdigital/dp-net/http"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
 	"github.com/ONSdigital/log.go/log"
-	"github.com/gorilla/mux"
 )
 
 var (
@@ -27,6 +28,8 @@ var (
 	// Version represents the version of the service that is running
 	Version string
 )
+
+var bufferSize = 1
 
 func main() {
 	log.Namespace = "dp-hierarchy-builder"
@@ -41,28 +44,42 @@ func main() {
 	log.Event(ctx, "loaded config", log.INFO, log.Data{"cfg": cfg})
 
 	kafkaBrokers := cfg.KafkaAddr
-	cgChannels := kafka.CreateConsumerGroupChannels(true)
+
+	kafkaOffset := kafka.OffsetNewest
+
+	if cfg.KafkaOffsetOldest {
+		kafkaOffset = kafka.OffsetOldest
+	}
+
+	cgConfig := &kafka.ConsumerGroupConfig{
+		Offset:       &kafkaOffset,
+		KafkaVersion: &cfg.KafkaVersion,
+	}
+
+	cgChannels := kafka.CreateConsumerGroupChannels(bufferSize)
 	kafkaConsumer, err := kafka.NewConsumerGroup(
 		ctx,
 		kafkaBrokers,
 		cfg.ConsumerTopic,
 		cfg.ConsumerGroup,
-		kafka.OffsetNewest,
-		true,
 		cgChannels,
+		cgConfig,
 	)
 	exitIfError(ctx, err, "error creating kafka consumer")
 
+	pConfig := &kafka.ProducerConfig{
+		KafkaVersion: &cfg.KafkaVersion,
+	}
+
 	pChannels := kafka.CreateProducerChannels()
-	useDefaultMaxMessageSize := 0 // pass zero to use the default
-	kafkaProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ProducerTopic, useDefaultMaxMessageSize, pChannels)
+	kafkaProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ProducerTopic, pChannels, pConfig)
 	if err != nil {
 		log.Event(ctx, "error creating kafka producer", log.FATAL, log.Error(err))
 		os.Exit(1)
 	}
 
 	errorProducerChannels := kafka.CreateProducerChannels()
-	kafkaErrorProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ErrorProducerTopic, useDefaultMaxMessageSize, errorProducerChannels)
+	kafkaErrorProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ErrorProducerTopic, errorProducerChannels, pConfig)
 	exitIfError(ctx, err, "error creating kafka producer")
 
 	avroProducer := event.NewAvroProducer(kafkaProducer)
