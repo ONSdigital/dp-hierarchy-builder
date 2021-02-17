@@ -11,6 +11,7 @@ require (
 	github.com/ONSdigital/dp-reporter-client v1.0.1
 	github.com/ONSdigital/log.go v1.0.1
 	github.com/gorilla/mux v1.8.0
+	github.com/gorilla/websocket v1.4.1 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/smartystreets/goconvey v1.6.4
 	golang.org/x/net v0.0.0-20201006153459-a7d1128ccaa0
