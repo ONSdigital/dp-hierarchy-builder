@@ -23,7 +23,7 @@ all: audit test build
 
 PHONY: audit
 audit:
-	nancy go.sum
+	go list -m all | nancy sleuth
 
 build:
 	@mkdir -p $(BUILD_ARCH)/$(BIN_DIR)
