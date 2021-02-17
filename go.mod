@@ -1,6 +1,6 @@
 module github.com/ONSdigital/dp-hierarchy-builder
 
-go 1.13
+go 1.15
 
 require (
 	github.com/ONSdigital/dp-graph/v2 v2.6.1
