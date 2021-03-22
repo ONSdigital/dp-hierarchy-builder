@@ -1,10 +1,10 @@
 module github.com/ONSdigital/dp-hierarchy-builder
 
-go 1.15
+go 1.16
 
 require (
 	github.com/ONSdigital/dp-api-clients-go v1.33.5 // indirect
-	github.com/ONSdigital/dp-graph/v2 v2.7.1
+	github.com/ONSdigital/dp-graph/v2 v2.8.0
 	github.com/ONSdigital/dp-healthcheck v1.0.5
 	github.com/ONSdigital/dp-import v0.0.0-20180202121531-d3cc28e452c3
 	github.com/ONSdigital/dp-kafka/v2 v2.1.2
@@ -16,10 +16,9 @@ require (
 	github.com/fatih/color v1.10.0 // indirect
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/gorilla/mux v1.8.0
-	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/hokaccha/go-prettyjson v0.0.0-20210113012101-fb4e108d2519 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/smartystreets/goconvey v1.6.4
-	golang.org/x/net v0.0.0-20210119194325-5f4716e94777
+	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
 	golang.org/x/sys v0.0.0-20210217105451-b926d437f341 // indirect
 )
