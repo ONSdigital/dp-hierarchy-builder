@@ -4,14 +4,18 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ONSdigital/dp-graph/v2/graph"
 	"github.com/ONSdigital/dp-graph/v2/graph/driver"
 	"github.com/ONSdigital/log.go/log"
 )
 
+//go:generate moq -out hierarchytest/db.go -pkg hierarchytest . DB
+type DB = driver.Hierarchy // type is declared locally to enable the above moq generation
+
+var AlreadyExistsErr = errors.New("failed to build hierarchy as it already exists")
+
 // Store represents storage for hierarchy data.
 type Store struct {
-	*graph.DB
+	DB
 }
 
 // BuildHierarchy clones the necessary generic hierarchy subgraph, according to the existing codes in the nodes for instanceID and dimensionName
@@ -24,8 +28,14 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	}
 
 	ctx := context.Background()
+	hierarchyExists, err := store.HierarchyExists(ctx, instanceID, dimensionName)
+	if err != nil {
+		return err
+	}
+	if hierarchyExists {
+		return AlreadyExistsErr
+	}
 
-	var err error
 	if err = store.CreateInstanceHierarchyConstraints(ctx, 1, instanceID, dimensionName); err != nil {
 		return err
 	}

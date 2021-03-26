@@ -64,6 +64,7 @@ There are a number of utility applications for manual tasks (found under the cmd
 * geography-transformer - take a geography input CSV file and output a full hierarchy input file / cypher script
 * hierarchy-transformer - take a hierarchy input CSV file and generate cypher script
 * builder - builds an instance hierarchy from a full hierarchy
+* producer - produces a Kafka message for the dp-hierarchy-builder process to consume
 
 #### Manually building instance hierarchies
 
@@ -96,6 +97,12 @@ output is written to ``./cmd/geography-transformer/output`
 ```
 codelistid=cpih1dim1aggid
 go run cmd/code-label-parent-transformer/main.go --file import-scripts/code-label-parent-csv/$codelistid.csv --code-list-id $codelistid --output import-scripts/$codelistid.csv`
+```
+
+#### produce a Kafka message for the dp-hierarchy-builder process to consume
+
+```
+go run cmd/producer/main.go --instance-id '58004716-a2d4-4dd1-a6c3-6accab30ad2a' --code-list-id 'cpih1dim1aggid' --dimension-name 'aggregate'
 ```
 
 ### Contributing

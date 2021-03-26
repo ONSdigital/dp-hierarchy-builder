@@ -12,7 +12,7 @@ import (
 )
 
 var codeListID = flag.String("code-list-id", "cpih1dim1aggid", "")
-var instanceID = flag.String("instance-id", "20d7fe05-99fb-420b-b68d-cf0bfdd27a63", "")
+var instanceID = flag.String("instance-id", "58004716-a2d4-4dd1-a6c3-6accab30ad2a", "")
 var dimensionNameArg = flag.String("dimension-name", "aggregate", "")
 var dimensionName = ""
 
@@ -25,7 +25,7 @@ func main() {
 	exitIfError(ctx, err, "error creating hierarchy store")
 
 	hierarchyStore := &hierarchy.Store{db}
-	hierarchyStore.BuildHierarchy(*instanceID, *codeListID, dimensionName)
+	err = hierarchyStore.BuildHierarchy(*instanceID, *codeListID, dimensionName)
 	exitIfError(ctx, err, "error building hierarchy")
 }
 
