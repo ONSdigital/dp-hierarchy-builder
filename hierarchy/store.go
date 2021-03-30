@@ -11,7 +11,7 @@ import (
 //go:generate moq -out hierarchytest/db.go -pkg hierarchytest . DB
 type DB = driver.Hierarchy // type is declared locally to enable the above moq generation
 
-var AlreadyExistsErr = errors.New("failed to build hierarchy as it already exists")
+var ErrAlreadyExists = errors.New("failed to build hierarchy as it already exists")
 
 // Store represents storage for hierarchy data.
 type Store struct {
@@ -33,7 +33,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return err
 	}
 	if hierarchyExists {
-		return AlreadyExistsErr
+		return ErrAlreadyExists
 	}
 
 	if err = store.CreateInstanceHierarchyConstraints(ctx, 1, instanceID, dimensionName); err != nil {
@@ -44,7 +44,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	codes, err := store.GetCodesWithData(ctx, 1, instanceID, dimensionName)
 	if err != nil {
 		if err == driver.ErrNotImplemented {
-			// if this is not implemented, use the legacy hierarchy build algorithm (e.g. Neo4j)
+			// if this is not implemented, use the legacy hierarchy build algorithm (e.g. Neo4j) - note that the legacy algorithm doesn't implement dimension order
 			return store.buildHierarchyLegacy(instanceID, codeListID, dimensionName)
 		}
 		return err
@@ -68,11 +68,19 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 
 	// some ancestries may have data. Create a map with ancestries without data only.
 	// note: for big datasets we expect len(ancestries) << len(nodesWithData), so we iterate ancestries for efficiency
-	nodesWithoutData := map[string]struct{}{}
-	for id := range ancestryIDs {
+	nodesWithoutData := map[string]string{}
+	for id, code := range ancestryIDs {
 		if _, found := nodesWithData[id]; !found {
-			nodesWithoutData[id] = struct{}{}
+			nodesWithoutData[id] = code
 		}
+	}
+
+	// Create 'hasCode' edges if they don't exist
+	if err := store.CreateHasCodeEdges(ctx, 1, codeListID, nodesWithData); err != nil {
+		return err
+	}
+	if err := store.CreateHasCodeEdges(ctx, 1, codeListID, nodesWithoutData); err != nil {
+		return err
 	}
 
 	// Clone necessary generic hierarchy nodes with data
@@ -95,6 +103,14 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return errors.New("No nodes created - missing generic hierarchy or trying to clone nodes with no data?")
 	}
 	logData["node_count"] = nodeCount
+
+	// Set order property to newly created nodes
+	if err := store.CloneOrderFromIDs(ctx, codeListID, nodesWithData); err != nil {
+		return err
+	}
+	if err := store.CloneOrderFromIDs(ctx, codeListID, nodesWithoutData); err != nil {
+		return err
+	}
 
 	// Clone Relationships for the newly created nodes
 	if err := store.CloneRelationshipsFromIDs(ctx, 1, instanceID, dimensionName, nodesWithData); err != nil {

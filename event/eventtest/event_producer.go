@@ -13,7 +13,7 @@ var (
 	lockEventProducerMockHierarchyBuilt sync.RWMutex
 )
 
-// Ensure, that EventProducerMock does implement EventProducer.
+// Ensure, that EventProducerMock does implement event.EventProducer.
 // If this is not the case, regenerate this file with moq.
 var _ event.EventProducer = &EventProducerMock{}
 

@@ -6,8 +6,40 @@ package hierarchytest
 import (
 	"context"
 	"github.com/ONSdigital/dp-graph/v2/models"
+	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
 	"sync"
 )
+
+var (
+	lockDBMockCloneNodes                         sync.RWMutex
+	lockDBMockCloneNodesFromIDs                  sync.RWMutex
+	lockDBMockCloneOrderFromIDs                  sync.RWMutex
+	lockDBMockCloneRelationships                 sync.RWMutex
+	lockDBMockCloneRelationshipsFromIDs          sync.RWMutex
+	lockDBMockCountNodes                         sync.RWMutex
+	lockDBMockCreateHasCodeEdges                 sync.RWMutex
+	lockDBMockCreateInstanceHierarchyConstraints sync.RWMutex
+	lockDBMockGetCodesWithData                   sync.RWMutex
+	lockDBMockGetGenericHierarchyAncestriesIDs   sync.RWMutex
+	lockDBMockGetGenericHierarchyNodeIDs         sync.RWMutex
+	lockDBMockGetHierarchyCodelist               sync.RWMutex
+	lockDBMockGetHierarchyElement                sync.RWMutex
+	lockDBMockGetHierarchyNodeIDs                sync.RWMutex
+	lockDBMockGetHierarchyRoot                   sync.RWMutex
+	lockDBMockHierarchyExists                    sync.RWMutex
+	lockDBMockMarkNodesToRemain                  sync.RWMutex
+	lockDBMockRemoveCloneEdges                   sync.RWMutex
+	lockDBMockRemoveCloneEdgesFromSourceIDs      sync.RWMutex
+	lockDBMockRemoveNodesNotMarkedToRemain       sync.RWMutex
+	lockDBMockRemoveRemainMarker                 sync.RWMutex
+	lockDBMockSetHasData                         sync.RWMutex
+	lockDBMockSetNumberOfChildren                sync.RWMutex
+	lockDBMockSetNumberOfChildrenFromIDs         sync.RWMutex
+)
+
+// Ensure, that DBMock does implement hierarchy.DB.
+// If this is not the case, regenerate this file with moq.
+var _ hierarchy.DB = &DBMock{}
 
 // DBMock is a mock implementation of hierarchy.DB.
 //
@@ -18,17 +50,23 @@ import (
 //             CloneNodesFunc: func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string) error {
 // 	               panic("mock out the CloneNodes method")
 //             },
-//             CloneNodesFromIDsFunc: func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string, ids map[string]struct{}, hasData bool) error {
+//             CloneNodesFromIDsFunc: func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string, ids map[string]string, hasData bool) error {
 // 	               panic("mock out the CloneNodesFromIDs method")
+//             },
+//             CloneOrderFromIDsFunc: func(ctx context.Context, codeListID string, ids map[string]string) error {
+// 	               panic("mock out the CloneOrderFromIDs method")
 //             },
 //             CloneRelationshipsFunc: func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string) error {
 // 	               panic("mock out the CloneRelationships method")
 //             },
-//             CloneRelationshipsFromIDsFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string, ids map[string]struct{}) error {
+//             CloneRelationshipsFromIDsFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string, ids map[string]string) error {
 // 	               panic("mock out the CloneRelationshipsFromIDs method")
 //             },
 //             CountNodesFunc: func(ctx context.Context, instanceID string, dimensionName string) (int64, error) {
 // 	               panic("mock out the CountNodes method")
+//             },
+//             CreateHasCodeEdgesFunc: func(ctx context.Context, attempt int, codeListID string, codesById map[string]string) error {
+// 	               panic("mock out the CreateHasCodeEdges method")
 //             },
 //             CreateInstanceHierarchyConstraintsFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string) error {
 // 	               panic("mock out the CreateInstanceHierarchyConstraints method")
@@ -36,10 +74,10 @@ import (
 //             GetCodesWithDataFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string) ([]string, error) {
 // 	               panic("mock out the GetCodesWithData method")
 //             },
-//             GetGenericHierarchyAncestriesIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]struct{}, error) {
+//             GetGenericHierarchyAncestriesIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
 // 	               panic("mock out the GetGenericHierarchyAncestriesIDs method")
 //             },
-//             GetGenericHierarchyNodeIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]struct{}, error) {
+//             GetGenericHierarchyNodeIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
 // 	               panic("mock out the GetGenericHierarchyNodeIDs method")
 //             },
 //             GetHierarchyCodelistFunc: func(ctx context.Context, instanceID string, dimension string) (string, error) {
@@ -48,7 +86,7 @@ import (
 //             GetHierarchyElementFunc: func(ctx context.Context, instanceID string, dimension string, code string) (*models.HierarchyResponse, error) {
 // 	               panic("mock out the GetHierarchyElement method")
 //             },
-//             GetHierarchyNodeIDsFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string) (map[string]struct{}, error) {
+//             GetHierarchyNodeIDsFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string) (map[string]string, error) {
 // 	               panic("mock out the GetHierarchyNodeIDs method")
 //             },
 //             GetHierarchyRootFunc: func(ctx context.Context, instanceID string, dimension string) (*models.HierarchyResponse, error) {
@@ -63,7 +101,7 @@ import (
 //             RemoveCloneEdgesFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string) error {
 // 	               panic("mock out the RemoveCloneEdges method")
 //             },
-//             RemoveCloneEdgesFromSourceIDsFunc: func(ctx context.Context, attempt int, ids map[string]struct{}) error {
+//             RemoveCloneEdgesFromSourceIDsFunc: func(ctx context.Context, attempt int, ids map[string]string) error {
 // 	               panic("mock out the RemoveCloneEdgesFromSourceIDs method")
 //             },
 //             RemoveNodesNotMarkedToRemainFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string) error {
@@ -78,7 +116,7 @@ import (
 //             SetNumberOfChildrenFunc: func(ctx context.Context, attempt int, instanceID string, dimensionName string) error {
 // 	               panic("mock out the SetNumberOfChildren method")
 //             },
-//             SetNumberOfChildrenFromIDsFunc: func(ctx context.Context, attempt int, ids map[string]struct{}) error {
+//             SetNumberOfChildrenFromIDsFunc: func(ctx context.Context, attempt int, ids map[string]string) error {
 // 	               panic("mock out the SetNumberOfChildrenFromIDs method")
 //             },
 //         }
@@ -92,16 +130,22 @@ type DBMock struct {
 	CloneNodesFunc func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string) error
 
 	// CloneNodesFromIDsFunc mocks the CloneNodesFromIDs method.
-	CloneNodesFromIDsFunc func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string, ids map[string]struct{}, hasData bool) error
+	CloneNodesFromIDsFunc func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string, ids map[string]string, hasData bool) error
+
+	// CloneOrderFromIDsFunc mocks the CloneOrderFromIDs method.
+	CloneOrderFromIDsFunc func(ctx context.Context, codeListID string, ids map[string]string) error
 
 	// CloneRelationshipsFunc mocks the CloneRelationships method.
 	CloneRelationshipsFunc func(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string) error
 
 	// CloneRelationshipsFromIDsFunc mocks the CloneRelationshipsFromIDs method.
-	CloneRelationshipsFromIDsFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string, ids map[string]struct{}) error
+	CloneRelationshipsFromIDsFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string, ids map[string]string) error
 
 	// CountNodesFunc mocks the CountNodes method.
 	CountNodesFunc func(ctx context.Context, instanceID string, dimensionName string) (int64, error)
+
+	// CreateHasCodeEdgesFunc mocks the CreateHasCodeEdges method.
+	CreateHasCodeEdgesFunc func(ctx context.Context, attempt int, codeListID string, codesById map[string]string) error
 
 	// CreateInstanceHierarchyConstraintsFunc mocks the CreateInstanceHierarchyConstraints method.
 	CreateInstanceHierarchyConstraintsFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string) error
@@ -110,10 +154,10 @@ type DBMock struct {
 	GetCodesWithDataFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string) ([]string, error)
 
 	// GetGenericHierarchyAncestriesIDsFunc mocks the GetGenericHierarchyAncestriesIDs method.
-	GetGenericHierarchyAncestriesIDsFunc func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]struct{}, error)
+	GetGenericHierarchyAncestriesIDsFunc func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error)
 
 	// GetGenericHierarchyNodeIDsFunc mocks the GetGenericHierarchyNodeIDs method.
-	GetGenericHierarchyNodeIDsFunc func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]struct{}, error)
+	GetGenericHierarchyNodeIDsFunc func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error)
 
 	// GetHierarchyCodelistFunc mocks the GetHierarchyCodelist method.
 	GetHierarchyCodelistFunc func(ctx context.Context, instanceID string, dimension string) (string, error)
@@ -122,7 +166,7 @@ type DBMock struct {
 	GetHierarchyElementFunc func(ctx context.Context, instanceID string, dimension string, code string) (*models.HierarchyResponse, error)
 
 	// GetHierarchyNodeIDsFunc mocks the GetHierarchyNodeIDs method.
-	GetHierarchyNodeIDsFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string) (map[string]struct{}, error)
+	GetHierarchyNodeIDsFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string) (map[string]string, error)
 
 	// GetHierarchyRootFunc mocks the GetHierarchyRoot method.
 	GetHierarchyRootFunc func(ctx context.Context, instanceID string, dimension string) (*models.HierarchyResponse, error)
@@ -137,7 +181,7 @@ type DBMock struct {
 	RemoveCloneEdgesFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string) error
 
 	// RemoveCloneEdgesFromSourceIDsFunc mocks the RemoveCloneEdgesFromSourceIDs method.
-	RemoveCloneEdgesFromSourceIDsFunc func(ctx context.Context, attempt int, ids map[string]struct{}) error
+	RemoveCloneEdgesFromSourceIDsFunc func(ctx context.Context, attempt int, ids map[string]string) error
 
 	// RemoveNodesNotMarkedToRemainFunc mocks the RemoveNodesNotMarkedToRemain method.
 	RemoveNodesNotMarkedToRemainFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string) error
@@ -152,7 +196,7 @@ type DBMock struct {
 	SetNumberOfChildrenFunc func(ctx context.Context, attempt int, instanceID string, dimensionName string) error
 
 	// SetNumberOfChildrenFromIDsFunc mocks the SetNumberOfChildrenFromIDs method.
-	SetNumberOfChildrenFromIDsFunc func(ctx context.Context, attempt int, ids map[string]struct{}) error
+	SetNumberOfChildrenFromIDsFunc func(ctx context.Context, attempt int, ids map[string]string) error
 
 	// calls tracks calls to the methods.
 	calls struct {
@@ -182,9 +226,18 @@ type DBMock struct {
 			// DimensionName is the dimensionName argument value.
 			DimensionName string
 			// Ids is the ids argument value.
-			Ids map[string]struct{}
+			Ids map[string]string
 			// HasData is the hasData argument value.
 			HasData bool
+		}
+		// CloneOrderFromIDs holds details about calls to the CloneOrderFromIDs method.
+		CloneOrderFromIDs []struct {
+			// Ctx is the ctx argument value.
+			Ctx context.Context
+			// CodeListID is the codeListID argument value.
+			CodeListID string
+			// Ids is the ids argument value.
+			Ids map[string]string
 		}
 		// CloneRelationships holds details about calls to the CloneRelationships method.
 		CloneRelationships []struct {
@@ -210,7 +263,7 @@ type DBMock struct {
 			// DimensionName is the dimensionName argument value.
 			DimensionName string
 			// Ids is the ids argument value.
-			Ids map[string]struct{}
+			Ids map[string]string
 		}
 		// CountNodes holds details about calls to the CountNodes method.
 		CountNodes []struct {
@@ -220,6 +273,17 @@ type DBMock struct {
 			InstanceID string
 			// DimensionName is the dimensionName argument value.
 			DimensionName string
+		}
+		// CreateHasCodeEdges holds details about calls to the CreateHasCodeEdges method.
+		CreateHasCodeEdges []struct {
+			// Ctx is the ctx argument value.
+			Ctx context.Context
+			// Attempt is the attempt argument value.
+			Attempt int
+			// CodeListID is the codeListID argument value.
+			CodeListID string
+			// CodesById is the codesById argument value.
+			CodesById map[string]string
 		}
 		// CreateInstanceHierarchyConstraints holds details about calls to the CreateInstanceHierarchyConstraints method.
 		CreateInstanceHierarchyConstraints []struct {
@@ -343,7 +407,7 @@ type DBMock struct {
 			// Attempt is the attempt argument value.
 			Attempt int
 			// Ids is the ids argument value.
-			Ids map[string]struct{}
+			Ids map[string]string
 		}
 		// RemoveNodesNotMarkedToRemain holds details about calls to the RemoveNodesNotMarkedToRemain method.
 		RemoveNodesNotMarkedToRemain []struct {
@@ -396,31 +460,9 @@ type DBMock struct {
 			// Attempt is the attempt argument value.
 			Attempt int
 			// Ids is the ids argument value.
-			Ids map[string]struct{}
+			Ids map[string]string
 		}
 	}
-	lockCloneNodes                         sync.RWMutex
-	lockCloneNodesFromIDs                  sync.RWMutex
-	lockCloneRelationships                 sync.RWMutex
-	lockCloneRelationshipsFromIDs          sync.RWMutex
-	lockCountNodes                         sync.RWMutex
-	lockCreateInstanceHierarchyConstraints sync.RWMutex
-	lockGetCodesWithData                   sync.RWMutex
-	lockGetGenericHierarchyAncestriesIDs   sync.RWMutex
-	lockGetGenericHierarchyNodeIDs         sync.RWMutex
-	lockGetHierarchyCodelist               sync.RWMutex
-	lockGetHierarchyElement                sync.RWMutex
-	lockGetHierarchyNodeIDs                sync.RWMutex
-	lockGetHierarchyRoot                   sync.RWMutex
-	lockHierarchyExists                    sync.RWMutex
-	lockMarkNodesToRemain                  sync.RWMutex
-	lockRemoveCloneEdges                   sync.RWMutex
-	lockRemoveCloneEdgesFromSourceIDs      sync.RWMutex
-	lockRemoveNodesNotMarkedToRemain       sync.RWMutex
-	lockRemoveRemainMarker                 sync.RWMutex
-	lockSetHasData                         sync.RWMutex
-	lockSetNumberOfChildren                sync.RWMutex
-	lockSetNumberOfChildrenFromIDs         sync.RWMutex
 }
 
 // CloneNodes calls CloneNodesFunc.
@@ -441,9 +483,9 @@ func (mock *DBMock) CloneNodes(ctx context.Context, attempt int, instanceID stri
 		CodeListID:    codeListID,
 		DimensionName: dimensionName,
 	}
-	mock.lockCloneNodes.Lock()
+	lockDBMockCloneNodes.Lock()
 	mock.calls.CloneNodes = append(mock.calls.CloneNodes, callInfo)
-	mock.lockCloneNodes.Unlock()
+	lockDBMockCloneNodes.Unlock()
 	return mock.CloneNodesFunc(ctx, attempt, instanceID, codeListID, dimensionName)
 }
 
@@ -464,14 +506,14 @@ func (mock *DBMock) CloneNodesCalls() []struct {
 		CodeListID    string
 		DimensionName string
 	}
-	mock.lockCloneNodes.RLock()
+	lockDBMockCloneNodes.RLock()
 	calls = mock.calls.CloneNodes
-	mock.lockCloneNodes.RUnlock()
+	lockDBMockCloneNodes.RUnlock()
 	return calls
 }
 
 // CloneNodesFromIDs calls CloneNodesFromIDsFunc.
-func (mock *DBMock) CloneNodesFromIDs(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string, ids map[string]struct{}, hasData bool) error {
+func (mock *DBMock) CloneNodesFromIDs(ctx context.Context, attempt int, instanceID string, codeListID string, dimensionName string, ids map[string]string, hasData bool) error {
 	if mock.CloneNodesFromIDsFunc == nil {
 		panic("DBMock.CloneNodesFromIDsFunc: method is nil but DB.CloneNodesFromIDs was just called")
 	}
@@ -481,7 +523,7 @@ func (mock *DBMock) CloneNodesFromIDs(ctx context.Context, attempt int, instance
 		InstanceID    string
 		CodeListID    string
 		DimensionName string
-		Ids           map[string]struct{}
+		Ids           map[string]string
 		HasData       bool
 	}{
 		Ctx:           ctx,
@@ -492,9 +534,9 @@ func (mock *DBMock) CloneNodesFromIDs(ctx context.Context, attempt int, instance
 		Ids:           ids,
 		HasData:       hasData,
 	}
-	mock.lockCloneNodesFromIDs.Lock()
+	lockDBMockCloneNodesFromIDs.Lock()
 	mock.calls.CloneNodesFromIDs = append(mock.calls.CloneNodesFromIDs, callInfo)
-	mock.lockCloneNodesFromIDs.Unlock()
+	lockDBMockCloneNodesFromIDs.Unlock()
 	return mock.CloneNodesFromIDsFunc(ctx, attempt, instanceID, codeListID, dimensionName, ids, hasData)
 }
 
@@ -507,7 +549,7 @@ func (mock *DBMock) CloneNodesFromIDsCalls() []struct {
 	InstanceID    string
 	CodeListID    string
 	DimensionName string
-	Ids           map[string]struct{}
+	Ids           map[string]string
 	HasData       bool
 } {
 	var calls []struct {
@@ -516,12 +558,51 @@ func (mock *DBMock) CloneNodesFromIDsCalls() []struct {
 		InstanceID    string
 		CodeListID    string
 		DimensionName string
-		Ids           map[string]struct{}
+		Ids           map[string]string
 		HasData       bool
 	}
-	mock.lockCloneNodesFromIDs.RLock()
+	lockDBMockCloneNodesFromIDs.RLock()
 	calls = mock.calls.CloneNodesFromIDs
-	mock.lockCloneNodesFromIDs.RUnlock()
+	lockDBMockCloneNodesFromIDs.RUnlock()
+	return calls
+}
+
+// CloneOrderFromIDs calls CloneOrderFromIDsFunc.
+func (mock *DBMock) CloneOrderFromIDs(ctx context.Context, codeListID string, ids map[string]string) error {
+	if mock.CloneOrderFromIDsFunc == nil {
+		panic("DBMock.CloneOrderFromIDsFunc: method is nil but DB.CloneOrderFromIDs was just called")
+	}
+	callInfo := struct {
+		Ctx        context.Context
+		CodeListID string
+		Ids        map[string]string
+	}{
+		Ctx:        ctx,
+		CodeListID: codeListID,
+		Ids:        ids,
+	}
+	lockDBMockCloneOrderFromIDs.Lock()
+	mock.calls.CloneOrderFromIDs = append(mock.calls.CloneOrderFromIDs, callInfo)
+	lockDBMockCloneOrderFromIDs.Unlock()
+	return mock.CloneOrderFromIDsFunc(ctx, codeListID, ids)
+}
+
+// CloneOrderFromIDsCalls gets all the calls that were made to CloneOrderFromIDs.
+// Check the length with:
+//     len(mockedDB.CloneOrderFromIDsCalls())
+func (mock *DBMock) CloneOrderFromIDsCalls() []struct {
+	Ctx        context.Context
+	CodeListID string
+	Ids        map[string]string
+} {
+	var calls []struct {
+		Ctx        context.Context
+		CodeListID string
+		Ids        map[string]string
+	}
+	lockDBMockCloneOrderFromIDs.RLock()
+	calls = mock.calls.CloneOrderFromIDs
+	lockDBMockCloneOrderFromIDs.RUnlock()
 	return calls
 }
 
@@ -543,9 +624,9 @@ func (mock *DBMock) CloneRelationships(ctx context.Context, attempt int, instanc
 		CodeListID:    codeListID,
 		DimensionName: dimensionName,
 	}
-	mock.lockCloneRelationships.Lock()
+	lockDBMockCloneRelationships.Lock()
 	mock.calls.CloneRelationships = append(mock.calls.CloneRelationships, callInfo)
-	mock.lockCloneRelationships.Unlock()
+	lockDBMockCloneRelationships.Unlock()
 	return mock.CloneRelationshipsFunc(ctx, attempt, instanceID, codeListID, dimensionName)
 }
 
@@ -566,14 +647,14 @@ func (mock *DBMock) CloneRelationshipsCalls() []struct {
 		CodeListID    string
 		DimensionName string
 	}
-	mock.lockCloneRelationships.RLock()
+	lockDBMockCloneRelationships.RLock()
 	calls = mock.calls.CloneRelationships
-	mock.lockCloneRelationships.RUnlock()
+	lockDBMockCloneRelationships.RUnlock()
 	return calls
 }
 
 // CloneRelationshipsFromIDs calls CloneRelationshipsFromIDsFunc.
-func (mock *DBMock) CloneRelationshipsFromIDs(ctx context.Context, attempt int, instanceID string, dimensionName string, ids map[string]struct{}) error {
+func (mock *DBMock) CloneRelationshipsFromIDs(ctx context.Context, attempt int, instanceID string, dimensionName string, ids map[string]string) error {
 	if mock.CloneRelationshipsFromIDsFunc == nil {
 		panic("DBMock.CloneRelationshipsFromIDsFunc: method is nil but DB.CloneRelationshipsFromIDs was just called")
 	}
@@ -582,7 +663,7 @@ func (mock *DBMock) CloneRelationshipsFromIDs(ctx context.Context, attempt int, 
 		Attempt       int
 		InstanceID    string
 		DimensionName string
-		Ids           map[string]struct{}
+		Ids           map[string]string
 	}{
 		Ctx:           ctx,
 		Attempt:       attempt,
@@ -590,9 +671,9 @@ func (mock *DBMock) CloneRelationshipsFromIDs(ctx context.Context, attempt int, 
 		DimensionName: dimensionName,
 		Ids:           ids,
 	}
-	mock.lockCloneRelationshipsFromIDs.Lock()
+	lockDBMockCloneRelationshipsFromIDs.Lock()
 	mock.calls.CloneRelationshipsFromIDs = append(mock.calls.CloneRelationshipsFromIDs, callInfo)
-	mock.lockCloneRelationshipsFromIDs.Unlock()
+	lockDBMockCloneRelationshipsFromIDs.Unlock()
 	return mock.CloneRelationshipsFromIDsFunc(ctx, attempt, instanceID, dimensionName, ids)
 }
 
@@ -604,18 +685,18 @@ func (mock *DBMock) CloneRelationshipsFromIDsCalls() []struct {
 	Attempt       int
 	InstanceID    string
 	DimensionName string
-	Ids           map[string]struct{}
+	Ids           map[string]string
 } {
 	var calls []struct {
 		Ctx           context.Context
 		Attempt       int
 		InstanceID    string
 		DimensionName string
-		Ids           map[string]struct{}
+		Ids           map[string]string
 	}
-	mock.lockCloneRelationshipsFromIDs.RLock()
+	lockDBMockCloneRelationshipsFromIDs.RLock()
 	calls = mock.calls.CloneRelationshipsFromIDs
-	mock.lockCloneRelationshipsFromIDs.RUnlock()
+	lockDBMockCloneRelationshipsFromIDs.RUnlock()
 	return calls
 }
 
@@ -633,9 +714,9 @@ func (mock *DBMock) CountNodes(ctx context.Context, instanceID string, dimension
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockCountNodes.Lock()
+	lockDBMockCountNodes.Lock()
 	mock.calls.CountNodes = append(mock.calls.CountNodes, callInfo)
-	mock.lockCountNodes.Unlock()
+	lockDBMockCountNodes.Unlock()
 	return mock.CountNodesFunc(ctx, instanceID, dimensionName)
 }
 
@@ -652,9 +733,52 @@ func (mock *DBMock) CountNodesCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockCountNodes.RLock()
+	lockDBMockCountNodes.RLock()
 	calls = mock.calls.CountNodes
-	mock.lockCountNodes.RUnlock()
+	lockDBMockCountNodes.RUnlock()
+	return calls
+}
+
+// CreateHasCodeEdges calls CreateHasCodeEdgesFunc.
+func (mock *DBMock) CreateHasCodeEdges(ctx context.Context, attempt int, codeListID string, codesById map[string]string) error {
+	if mock.CreateHasCodeEdgesFunc == nil {
+		panic("DBMock.CreateHasCodeEdgesFunc: method is nil but DB.CreateHasCodeEdges was just called")
+	}
+	callInfo := struct {
+		Ctx        context.Context
+		Attempt    int
+		CodeListID string
+		CodesById  map[string]string
+	}{
+		Ctx:        ctx,
+		Attempt:    attempt,
+		CodeListID: codeListID,
+		CodesById:  codesById,
+	}
+	lockDBMockCreateHasCodeEdges.Lock()
+	mock.calls.CreateHasCodeEdges = append(mock.calls.CreateHasCodeEdges, callInfo)
+	lockDBMockCreateHasCodeEdges.Unlock()
+	return mock.CreateHasCodeEdgesFunc(ctx, attempt, codeListID, codesById)
+}
+
+// CreateHasCodeEdgesCalls gets all the calls that were made to CreateHasCodeEdges.
+// Check the length with:
+//     len(mockedDB.CreateHasCodeEdgesCalls())
+func (mock *DBMock) CreateHasCodeEdgesCalls() []struct {
+	Ctx        context.Context
+	Attempt    int
+	CodeListID string
+	CodesById  map[string]string
+} {
+	var calls []struct {
+		Ctx        context.Context
+		Attempt    int
+		CodeListID string
+		CodesById  map[string]string
+	}
+	lockDBMockCreateHasCodeEdges.RLock()
+	calls = mock.calls.CreateHasCodeEdges
+	lockDBMockCreateHasCodeEdges.RUnlock()
 	return calls
 }
 
@@ -674,9 +798,9 @@ func (mock *DBMock) CreateInstanceHierarchyConstraints(ctx context.Context, atte
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockCreateInstanceHierarchyConstraints.Lock()
+	lockDBMockCreateInstanceHierarchyConstraints.Lock()
 	mock.calls.CreateInstanceHierarchyConstraints = append(mock.calls.CreateInstanceHierarchyConstraints, callInfo)
-	mock.lockCreateInstanceHierarchyConstraints.Unlock()
+	lockDBMockCreateInstanceHierarchyConstraints.Unlock()
 	return mock.CreateInstanceHierarchyConstraintsFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -695,9 +819,9 @@ func (mock *DBMock) CreateInstanceHierarchyConstraintsCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockCreateInstanceHierarchyConstraints.RLock()
+	lockDBMockCreateInstanceHierarchyConstraints.RLock()
 	calls = mock.calls.CreateInstanceHierarchyConstraints
-	mock.lockCreateInstanceHierarchyConstraints.RUnlock()
+	lockDBMockCreateInstanceHierarchyConstraints.RUnlock()
 	return calls
 }
 
@@ -717,9 +841,9 @@ func (mock *DBMock) GetCodesWithData(ctx context.Context, attempt int, instanceI
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockGetCodesWithData.Lock()
+	lockDBMockGetCodesWithData.Lock()
 	mock.calls.GetCodesWithData = append(mock.calls.GetCodesWithData, callInfo)
-	mock.lockGetCodesWithData.Unlock()
+	lockDBMockGetCodesWithData.Unlock()
 	return mock.GetCodesWithDataFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -738,14 +862,14 @@ func (mock *DBMock) GetCodesWithDataCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockGetCodesWithData.RLock()
+	lockDBMockGetCodesWithData.RLock()
 	calls = mock.calls.GetCodesWithData
-	mock.lockGetCodesWithData.RUnlock()
+	lockDBMockGetCodesWithData.RUnlock()
 	return calls
 }
 
 // GetGenericHierarchyAncestriesIDs calls GetGenericHierarchyAncestriesIDsFunc.
-func (mock *DBMock) GetGenericHierarchyAncestriesIDs(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]struct{}, error) {
+func (mock *DBMock) GetGenericHierarchyAncestriesIDs(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
 	if mock.GetGenericHierarchyAncestriesIDsFunc == nil {
 		panic("DBMock.GetGenericHierarchyAncestriesIDsFunc: method is nil but DB.GetGenericHierarchyAncestriesIDs was just called")
 	}
@@ -760,9 +884,9 @@ func (mock *DBMock) GetGenericHierarchyAncestriesIDs(ctx context.Context, attemp
 		CodeListID: codeListID,
 		Codes:      codes,
 	}
-	mock.lockGetGenericHierarchyAncestriesIDs.Lock()
+	lockDBMockGetGenericHierarchyAncestriesIDs.Lock()
 	mock.calls.GetGenericHierarchyAncestriesIDs = append(mock.calls.GetGenericHierarchyAncestriesIDs, callInfo)
-	mock.lockGetGenericHierarchyAncestriesIDs.Unlock()
+	lockDBMockGetGenericHierarchyAncestriesIDs.Unlock()
 	return mock.GetGenericHierarchyAncestriesIDsFunc(ctx, attempt, codeListID, codes)
 }
 
@@ -781,14 +905,14 @@ func (mock *DBMock) GetGenericHierarchyAncestriesIDsCalls() []struct {
 		CodeListID string
 		Codes      []string
 	}
-	mock.lockGetGenericHierarchyAncestriesIDs.RLock()
+	lockDBMockGetGenericHierarchyAncestriesIDs.RLock()
 	calls = mock.calls.GetGenericHierarchyAncestriesIDs
-	mock.lockGetGenericHierarchyAncestriesIDs.RUnlock()
+	lockDBMockGetGenericHierarchyAncestriesIDs.RUnlock()
 	return calls
 }
 
 // GetGenericHierarchyNodeIDs calls GetGenericHierarchyNodeIDsFunc.
-func (mock *DBMock) GetGenericHierarchyNodeIDs(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]struct{}, error) {
+func (mock *DBMock) GetGenericHierarchyNodeIDs(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
 	if mock.GetGenericHierarchyNodeIDsFunc == nil {
 		panic("DBMock.GetGenericHierarchyNodeIDsFunc: method is nil but DB.GetGenericHierarchyNodeIDs was just called")
 	}
@@ -803,9 +927,9 @@ func (mock *DBMock) GetGenericHierarchyNodeIDs(ctx context.Context, attempt int,
 		CodeListID: codeListID,
 		Codes:      codes,
 	}
-	mock.lockGetGenericHierarchyNodeIDs.Lock()
+	lockDBMockGetGenericHierarchyNodeIDs.Lock()
 	mock.calls.GetGenericHierarchyNodeIDs = append(mock.calls.GetGenericHierarchyNodeIDs, callInfo)
-	mock.lockGetGenericHierarchyNodeIDs.Unlock()
+	lockDBMockGetGenericHierarchyNodeIDs.Unlock()
 	return mock.GetGenericHierarchyNodeIDsFunc(ctx, attempt, codeListID, codes)
 }
 
@@ -824,9 +948,9 @@ func (mock *DBMock) GetGenericHierarchyNodeIDsCalls() []struct {
 		CodeListID string
 		Codes      []string
 	}
-	mock.lockGetGenericHierarchyNodeIDs.RLock()
+	lockDBMockGetGenericHierarchyNodeIDs.RLock()
 	calls = mock.calls.GetGenericHierarchyNodeIDs
-	mock.lockGetGenericHierarchyNodeIDs.RUnlock()
+	lockDBMockGetGenericHierarchyNodeIDs.RUnlock()
 	return calls
 }
 
@@ -844,9 +968,9 @@ func (mock *DBMock) GetHierarchyCodelist(ctx context.Context, instanceID string,
 		InstanceID: instanceID,
 		Dimension:  dimension,
 	}
-	mock.lockGetHierarchyCodelist.Lock()
+	lockDBMockGetHierarchyCodelist.Lock()
 	mock.calls.GetHierarchyCodelist = append(mock.calls.GetHierarchyCodelist, callInfo)
-	mock.lockGetHierarchyCodelist.Unlock()
+	lockDBMockGetHierarchyCodelist.Unlock()
 	return mock.GetHierarchyCodelistFunc(ctx, instanceID, dimension)
 }
 
@@ -863,9 +987,9 @@ func (mock *DBMock) GetHierarchyCodelistCalls() []struct {
 		InstanceID string
 		Dimension  string
 	}
-	mock.lockGetHierarchyCodelist.RLock()
+	lockDBMockGetHierarchyCodelist.RLock()
 	calls = mock.calls.GetHierarchyCodelist
-	mock.lockGetHierarchyCodelist.RUnlock()
+	lockDBMockGetHierarchyCodelist.RUnlock()
 	return calls
 }
 
@@ -885,9 +1009,9 @@ func (mock *DBMock) GetHierarchyElement(ctx context.Context, instanceID string, 
 		Dimension:  dimension,
 		Code:       code,
 	}
-	mock.lockGetHierarchyElement.Lock()
+	lockDBMockGetHierarchyElement.Lock()
 	mock.calls.GetHierarchyElement = append(mock.calls.GetHierarchyElement, callInfo)
-	mock.lockGetHierarchyElement.Unlock()
+	lockDBMockGetHierarchyElement.Unlock()
 	return mock.GetHierarchyElementFunc(ctx, instanceID, dimension, code)
 }
 
@@ -906,14 +1030,14 @@ func (mock *DBMock) GetHierarchyElementCalls() []struct {
 		Dimension  string
 		Code       string
 	}
-	mock.lockGetHierarchyElement.RLock()
+	lockDBMockGetHierarchyElement.RLock()
 	calls = mock.calls.GetHierarchyElement
-	mock.lockGetHierarchyElement.RUnlock()
+	lockDBMockGetHierarchyElement.RUnlock()
 	return calls
 }
 
 // GetHierarchyNodeIDs calls GetHierarchyNodeIDsFunc.
-func (mock *DBMock) GetHierarchyNodeIDs(ctx context.Context, attempt int, instanceID string, dimensionName string) (map[string]struct{}, error) {
+func (mock *DBMock) GetHierarchyNodeIDs(ctx context.Context, attempt int, instanceID string, dimensionName string) (map[string]string, error) {
 	if mock.GetHierarchyNodeIDsFunc == nil {
 		panic("DBMock.GetHierarchyNodeIDsFunc: method is nil but DB.GetHierarchyNodeIDs was just called")
 	}
@@ -928,9 +1052,9 @@ func (mock *DBMock) GetHierarchyNodeIDs(ctx context.Context, attempt int, instan
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockGetHierarchyNodeIDs.Lock()
+	lockDBMockGetHierarchyNodeIDs.Lock()
 	mock.calls.GetHierarchyNodeIDs = append(mock.calls.GetHierarchyNodeIDs, callInfo)
-	mock.lockGetHierarchyNodeIDs.Unlock()
+	lockDBMockGetHierarchyNodeIDs.Unlock()
 	return mock.GetHierarchyNodeIDsFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -949,9 +1073,9 @@ func (mock *DBMock) GetHierarchyNodeIDsCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockGetHierarchyNodeIDs.RLock()
+	lockDBMockGetHierarchyNodeIDs.RLock()
 	calls = mock.calls.GetHierarchyNodeIDs
-	mock.lockGetHierarchyNodeIDs.RUnlock()
+	lockDBMockGetHierarchyNodeIDs.RUnlock()
 	return calls
 }
 
@@ -969,9 +1093,9 @@ func (mock *DBMock) GetHierarchyRoot(ctx context.Context, instanceID string, dim
 		InstanceID: instanceID,
 		Dimension:  dimension,
 	}
-	mock.lockGetHierarchyRoot.Lock()
+	lockDBMockGetHierarchyRoot.Lock()
 	mock.calls.GetHierarchyRoot = append(mock.calls.GetHierarchyRoot, callInfo)
-	mock.lockGetHierarchyRoot.Unlock()
+	lockDBMockGetHierarchyRoot.Unlock()
 	return mock.GetHierarchyRootFunc(ctx, instanceID, dimension)
 }
 
@@ -988,9 +1112,9 @@ func (mock *DBMock) GetHierarchyRootCalls() []struct {
 		InstanceID string
 		Dimension  string
 	}
-	mock.lockGetHierarchyRoot.RLock()
+	lockDBMockGetHierarchyRoot.RLock()
 	calls = mock.calls.GetHierarchyRoot
-	mock.lockGetHierarchyRoot.RUnlock()
+	lockDBMockGetHierarchyRoot.RUnlock()
 	return calls
 }
 
@@ -1008,9 +1132,9 @@ func (mock *DBMock) HierarchyExists(ctx context.Context, instanceID string, dime
 		InstanceID: instanceID,
 		Dimension:  dimension,
 	}
-	mock.lockHierarchyExists.Lock()
+	lockDBMockHierarchyExists.Lock()
 	mock.calls.HierarchyExists = append(mock.calls.HierarchyExists, callInfo)
-	mock.lockHierarchyExists.Unlock()
+	lockDBMockHierarchyExists.Unlock()
 	return mock.HierarchyExistsFunc(ctx, instanceID, dimension)
 }
 
@@ -1027,9 +1151,9 @@ func (mock *DBMock) HierarchyExistsCalls() []struct {
 		InstanceID string
 		Dimension  string
 	}
-	mock.lockHierarchyExists.RLock()
+	lockDBMockHierarchyExists.RLock()
 	calls = mock.calls.HierarchyExists
-	mock.lockHierarchyExists.RUnlock()
+	lockDBMockHierarchyExists.RUnlock()
 	return calls
 }
 
@@ -1049,9 +1173,9 @@ func (mock *DBMock) MarkNodesToRemain(ctx context.Context, attempt int, instance
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockMarkNodesToRemain.Lock()
+	lockDBMockMarkNodesToRemain.Lock()
 	mock.calls.MarkNodesToRemain = append(mock.calls.MarkNodesToRemain, callInfo)
-	mock.lockMarkNodesToRemain.Unlock()
+	lockDBMockMarkNodesToRemain.Unlock()
 	return mock.MarkNodesToRemainFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -1070,9 +1194,9 @@ func (mock *DBMock) MarkNodesToRemainCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockMarkNodesToRemain.RLock()
+	lockDBMockMarkNodesToRemain.RLock()
 	calls = mock.calls.MarkNodesToRemain
-	mock.lockMarkNodesToRemain.RUnlock()
+	lockDBMockMarkNodesToRemain.RUnlock()
 	return calls
 }
 
@@ -1092,9 +1216,9 @@ func (mock *DBMock) RemoveCloneEdges(ctx context.Context, attempt int, instanceI
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockRemoveCloneEdges.Lock()
+	lockDBMockRemoveCloneEdges.Lock()
 	mock.calls.RemoveCloneEdges = append(mock.calls.RemoveCloneEdges, callInfo)
-	mock.lockRemoveCloneEdges.Unlock()
+	lockDBMockRemoveCloneEdges.Unlock()
 	return mock.RemoveCloneEdgesFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -1113,29 +1237,29 @@ func (mock *DBMock) RemoveCloneEdgesCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockRemoveCloneEdges.RLock()
+	lockDBMockRemoveCloneEdges.RLock()
 	calls = mock.calls.RemoveCloneEdges
-	mock.lockRemoveCloneEdges.RUnlock()
+	lockDBMockRemoveCloneEdges.RUnlock()
 	return calls
 }
 
 // RemoveCloneEdgesFromSourceIDs calls RemoveCloneEdgesFromSourceIDsFunc.
-func (mock *DBMock) RemoveCloneEdgesFromSourceIDs(ctx context.Context, attempt int, ids map[string]struct{}) error {
+func (mock *DBMock) RemoveCloneEdgesFromSourceIDs(ctx context.Context, attempt int, ids map[string]string) error {
 	if mock.RemoveCloneEdgesFromSourceIDsFunc == nil {
 		panic("DBMock.RemoveCloneEdgesFromSourceIDsFunc: method is nil but DB.RemoveCloneEdgesFromSourceIDs was just called")
 	}
 	callInfo := struct {
 		Ctx     context.Context
 		Attempt int
-		Ids     map[string]struct{}
+		Ids     map[string]string
 	}{
 		Ctx:     ctx,
 		Attempt: attempt,
 		Ids:     ids,
 	}
-	mock.lockRemoveCloneEdgesFromSourceIDs.Lock()
+	lockDBMockRemoveCloneEdgesFromSourceIDs.Lock()
 	mock.calls.RemoveCloneEdgesFromSourceIDs = append(mock.calls.RemoveCloneEdgesFromSourceIDs, callInfo)
-	mock.lockRemoveCloneEdgesFromSourceIDs.Unlock()
+	lockDBMockRemoveCloneEdgesFromSourceIDs.Unlock()
 	return mock.RemoveCloneEdgesFromSourceIDsFunc(ctx, attempt, ids)
 }
 
@@ -1145,16 +1269,16 @@ func (mock *DBMock) RemoveCloneEdgesFromSourceIDs(ctx context.Context, attempt i
 func (mock *DBMock) RemoveCloneEdgesFromSourceIDsCalls() []struct {
 	Ctx     context.Context
 	Attempt int
-	Ids     map[string]struct{}
+	Ids     map[string]string
 } {
 	var calls []struct {
 		Ctx     context.Context
 		Attempt int
-		Ids     map[string]struct{}
+		Ids     map[string]string
 	}
-	mock.lockRemoveCloneEdgesFromSourceIDs.RLock()
+	lockDBMockRemoveCloneEdgesFromSourceIDs.RLock()
 	calls = mock.calls.RemoveCloneEdgesFromSourceIDs
-	mock.lockRemoveCloneEdgesFromSourceIDs.RUnlock()
+	lockDBMockRemoveCloneEdgesFromSourceIDs.RUnlock()
 	return calls
 }
 
@@ -1174,9 +1298,9 @@ func (mock *DBMock) RemoveNodesNotMarkedToRemain(ctx context.Context, attempt in
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockRemoveNodesNotMarkedToRemain.Lock()
+	lockDBMockRemoveNodesNotMarkedToRemain.Lock()
 	mock.calls.RemoveNodesNotMarkedToRemain = append(mock.calls.RemoveNodesNotMarkedToRemain, callInfo)
-	mock.lockRemoveNodesNotMarkedToRemain.Unlock()
+	lockDBMockRemoveNodesNotMarkedToRemain.Unlock()
 	return mock.RemoveNodesNotMarkedToRemainFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -1195,9 +1319,9 @@ func (mock *DBMock) RemoveNodesNotMarkedToRemainCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockRemoveNodesNotMarkedToRemain.RLock()
+	lockDBMockRemoveNodesNotMarkedToRemain.RLock()
 	calls = mock.calls.RemoveNodesNotMarkedToRemain
-	mock.lockRemoveNodesNotMarkedToRemain.RUnlock()
+	lockDBMockRemoveNodesNotMarkedToRemain.RUnlock()
 	return calls
 }
 
@@ -1217,9 +1341,9 @@ func (mock *DBMock) RemoveRemainMarker(ctx context.Context, attempt int, instanc
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockRemoveRemainMarker.Lock()
+	lockDBMockRemoveRemainMarker.Lock()
 	mock.calls.RemoveRemainMarker = append(mock.calls.RemoveRemainMarker, callInfo)
-	mock.lockRemoveRemainMarker.Unlock()
+	lockDBMockRemoveRemainMarker.Unlock()
 	return mock.RemoveRemainMarkerFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -1238,9 +1362,9 @@ func (mock *DBMock) RemoveRemainMarkerCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockRemoveRemainMarker.RLock()
+	lockDBMockRemoveRemainMarker.RLock()
 	calls = mock.calls.RemoveRemainMarker
-	mock.lockRemoveRemainMarker.RUnlock()
+	lockDBMockRemoveRemainMarker.RUnlock()
 	return calls
 }
 
@@ -1260,9 +1384,9 @@ func (mock *DBMock) SetHasData(ctx context.Context, attempt int, instanceID stri
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockSetHasData.Lock()
+	lockDBMockSetHasData.Lock()
 	mock.calls.SetHasData = append(mock.calls.SetHasData, callInfo)
-	mock.lockSetHasData.Unlock()
+	lockDBMockSetHasData.Unlock()
 	return mock.SetHasDataFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -1281,9 +1405,9 @@ func (mock *DBMock) SetHasDataCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockSetHasData.RLock()
+	lockDBMockSetHasData.RLock()
 	calls = mock.calls.SetHasData
-	mock.lockSetHasData.RUnlock()
+	lockDBMockSetHasData.RUnlock()
 	return calls
 }
 
@@ -1303,9 +1427,9 @@ func (mock *DBMock) SetNumberOfChildren(ctx context.Context, attempt int, instan
 		InstanceID:    instanceID,
 		DimensionName: dimensionName,
 	}
-	mock.lockSetNumberOfChildren.Lock()
+	lockDBMockSetNumberOfChildren.Lock()
 	mock.calls.SetNumberOfChildren = append(mock.calls.SetNumberOfChildren, callInfo)
-	mock.lockSetNumberOfChildren.Unlock()
+	lockDBMockSetNumberOfChildren.Unlock()
 	return mock.SetNumberOfChildrenFunc(ctx, attempt, instanceID, dimensionName)
 }
 
@@ -1324,29 +1448,29 @@ func (mock *DBMock) SetNumberOfChildrenCalls() []struct {
 		InstanceID    string
 		DimensionName string
 	}
-	mock.lockSetNumberOfChildren.RLock()
+	lockDBMockSetNumberOfChildren.RLock()
 	calls = mock.calls.SetNumberOfChildren
-	mock.lockSetNumberOfChildren.RUnlock()
+	lockDBMockSetNumberOfChildren.RUnlock()
 	return calls
 }
 
 // SetNumberOfChildrenFromIDs calls SetNumberOfChildrenFromIDsFunc.
-func (mock *DBMock) SetNumberOfChildrenFromIDs(ctx context.Context, attempt int, ids map[string]struct{}) error {
+func (mock *DBMock) SetNumberOfChildrenFromIDs(ctx context.Context, attempt int, ids map[string]string) error {
 	if mock.SetNumberOfChildrenFromIDsFunc == nil {
 		panic("DBMock.SetNumberOfChildrenFromIDsFunc: method is nil but DB.SetNumberOfChildrenFromIDs was just called")
 	}
 	callInfo := struct {
 		Ctx     context.Context
 		Attempt int
-		Ids     map[string]struct{}
+		Ids     map[string]string
 	}{
 		Ctx:     ctx,
 		Attempt: attempt,
 		Ids:     ids,
 	}
-	mock.lockSetNumberOfChildrenFromIDs.Lock()
+	lockDBMockSetNumberOfChildrenFromIDs.Lock()
 	mock.calls.SetNumberOfChildrenFromIDs = append(mock.calls.SetNumberOfChildrenFromIDs, callInfo)
-	mock.lockSetNumberOfChildrenFromIDs.Unlock()
+	lockDBMockSetNumberOfChildrenFromIDs.Unlock()
 	return mock.SetNumberOfChildrenFromIDsFunc(ctx, attempt, ids)
 }
 
@@ -1356,15 +1480,15 @@ func (mock *DBMock) SetNumberOfChildrenFromIDs(ctx context.Context, attempt int,
 func (mock *DBMock) SetNumberOfChildrenFromIDsCalls() []struct {
 	Ctx     context.Context
 	Attempt int
-	Ids     map[string]struct{}
+	Ids     map[string]string
 } {
 	var calls []struct {
 		Ctx     context.Context
 		Attempt int
-		Ids     map[string]struct{}
+		Ids     map[string]string
 	}
-	mock.lockSetNumberOfChildrenFromIDs.RLock()
+	lockDBMockSetNumberOfChildrenFromIDs.RLock()
 	calls = mock.calls.SetNumberOfChildrenFromIDs
-	mock.lockSetNumberOfChildrenFromIDs.RUnlock()
+	lockDBMockSetNumberOfChildrenFromIDs.RUnlock()
 	return calls
 }
