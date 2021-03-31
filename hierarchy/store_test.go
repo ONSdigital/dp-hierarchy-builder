@@ -12,17 +12,21 @@ import (
 )
 
 var (
-	testInstanceID        = "123"
-	testCodeListID        = "aggr123"
-	testDimensionName     = "aggregate"
-	testCodes             = []string{"code1", "code2", "code3"}
-	testGenericNodeIDsMap = map[string]string{
+	testInstanceID    = "123"
+	testCodeListID    = "aggr123"
+	testDimensionName = "aggregate"
+	testCodes         = []string{"code1", "code2", "code3"}
+	testNodesWithData = map[string]string{
 		"node1": "code1",
 		"node2": "code2",
 		"node3": "code3",
 	}
-	testGenericAncestriesIDsMap = map[string]string{
+	testAncestryNodes = map[string]string{
 		"node1": "code1",
+		"node4": "code4",
+		"node5": "code5",
+	}
+	testNodesWithoutData = map[string]string{
 		"node4": "code4",
 		"node5": "code5",
 	}
@@ -100,11 +104,11 @@ func TestStore_BuildHierarchy(t *testing.T) {
 				return testCodes, nil
 			},
 			GetGenericHierarchyNodeIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
-				return testGenericNodeIDsMap, nil
+				return testNodesWithData, nil
 
 			},
 			GetGenericHierarchyAncestriesIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
-				return testGenericAncestriesIDsMap, nil
+				return testAncestryNodes, nil
 			},
 			CreateHasCodeEdgesFunc: func(ctx context.Context, attempt int, codeListID string, codesById map[string]string) error {
 				return nil
@@ -177,16 +181,9 @@ func TestStore_BuildHierarchy(t *testing.T) {
 				calls := mockDB.CreateHasCodeEdgesCalls()
 				So(calls, ShouldHaveLength, 2)
 				So(calls[0].CodeListID, ShouldEqual, testCodeListID)
-				So(calls[0].CodesById, ShouldResemble, map[string]string{
-					"node1": "code1",
-					"node2": "code2",
-					"node3": "code3",
-				})
+				So(calls[0].CodesById, ShouldResemble, testNodesWithData)
 				So(calls[1].CodeListID, ShouldEqual, testCodeListID)
-				So(calls[1].CodesById, ShouldResemble, map[string]string{
-					"node4": "code4",
-					"node5": "code5",
-				})
+				So(calls[1].CodesById, ShouldResemble, testNodesWithoutData)
 			})
 
 			Convey("Then CloneNodesFromIDs is called twice, without repeated items even if some nodes are associated to a requested code and an ancestry at the same time", func() {
@@ -195,20 +192,13 @@ func TestStore_BuildHierarchy(t *testing.T) {
 				So(calls[0].InstanceID, ShouldEqual, testInstanceID)
 				So(calls[0].CodeListID, ShouldEqual, testCodeListID)
 				So(calls[0].DimensionName, ShouldEqual, testDimensionName)
-				So(calls[0].Ids, ShouldResemble, map[string]string{
-					"node1": "code1",
-					"node2": "code2",
-					"node3": "code3",
-				})
+				So(calls[0].Ids, ShouldResemble, testNodesWithData)
 				So(calls[0].HasData, ShouldBeTrue)
 
 				So(calls[1].InstanceID, ShouldEqual, testInstanceID)
 				So(calls[1].CodeListID, ShouldEqual, testCodeListID)
 				So(calls[1].DimensionName, ShouldEqual, testDimensionName)
-				So(calls[1].Ids, ShouldResemble, map[string]string{
-					"node4": "code4",
-					"node5": "code5",
-				})
+				So(calls[1].Ids, ShouldResemble, testNodesWithoutData)
 				So(calls[1].HasData, ShouldBeFalse)
 			})
 
@@ -223,17 +213,10 @@ func TestStore_BuildHierarchy(t *testing.T) {
 				calls := mockDB.CloneOrderFromIDsCalls()
 				So(calls, ShouldHaveLength, 2)
 				So(calls[0].CodeListID, ShouldEqual, testCodeListID)
-				So(calls[0].Ids, ShouldResemble, map[string]string{
-					"node1": "code1",
-					"node2": "code2",
-					"node3": "code3",
-				})
+				So(calls[0].Ids, ShouldResemble, testNodesWithData)
 
 				So(calls[1].CodeListID, ShouldEqual, testCodeListID)
-				So(calls[1].Ids, ShouldResemble, map[string]string{
-					"node4": "code4",
-					"node5": "code5",
-				})
+				So(calls[1].Ids, ShouldResemble, testNodesWithoutData)
 			})
 
 			Convey("Then CloneRelationshipsFromIDs is called twice, without repeated items even if some nodes are associated to a requested code and an ancestry at the same time", func() {
@@ -241,18 +224,11 @@ func TestStore_BuildHierarchy(t *testing.T) {
 				So(calls, ShouldHaveLength, 2)
 				So(calls[0].InstanceID, ShouldEqual, testInstanceID)
 				So(calls[0].DimensionName, ShouldEqual, testDimensionName)
-				So(calls[0].Ids, ShouldResemble, map[string]string{
-					"node1": "code1",
-					"node2": "code2",
-					"node3": "code3",
-				})
+				So(calls[0].Ids, ShouldResemble, testNodesWithData)
 
 				So(calls[1].InstanceID, ShouldEqual, testInstanceID)
 				So(calls[1].DimensionName, ShouldEqual, testDimensionName)
-				So(calls[1].Ids, ShouldResemble, map[string]string{
-					"node4": "code4",
-					"node5": "code5",
-				})
+				So(calls[1].Ids, ShouldResemble, testNodesWithoutData)
 			})
 
 			Convey("Then GetHierarchyNodeIDs is called with the expected paramters", func() {
@@ -291,10 +267,10 @@ func TestStore_BuildHierarchy(t *testing.T) {
 				return expectedError
 			},
 			GetGenericHierarchyNodeIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
-				return testGenericNodeIDsMap, nil
+				return testNodesWithData, nil
 			},
 			GetGenericHierarchyAncestriesIDsFunc: func(ctx context.Context, attempt int, codeListID string, codes []string) (map[string]string, error) {
-				return testGenericAncestriesIDsMap, nil
+				return testAncestryNodes, nil
 			},
 		}
 
