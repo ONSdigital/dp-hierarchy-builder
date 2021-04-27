@@ -20,9 +20,6 @@ func main() {
 	ctx := context.Background()
 	flag.Parse()
 
-	var brokers []string
-	brokers = append(brokers, "localhost:9092")
-
 	log.Event(ctx, "starting producer for DataImportComplete event", log.INFO, log.Data{
 		"instance_id":    instanceID,
 		"code_list_id":   codeListID,
@@ -38,13 +35,21 @@ func main() {
 	log.Event(ctx, "loaded config", log.INFO, log.Data{"cfg": cfg})
 
 	pChannels := kafka.CreateProducerChannels()
+	pChannels.LogErrors(ctx, "Producer error")
 	pConfig := &kafka.ProducerConfig{
 		KafkaVersion: &cfg.KafkaVersion,
 	}
 
-	producer, err := kafka.NewProducer(ctx, brokers, cfg.ConsumerTopic, pChannels, pConfig)
+	producer, err := kafka.NewProducer(ctx, cfg.KafkaAddr, cfg.ConsumerTopic, pChannels, pConfig)
 	if err != nil {
 		log.Event(ctx, "failed to create kafka producer", log.FATAL, log.Error(err))
+		os.Exit(1)
+	}
+
+	select {
+	case <-pChannels.Ready: // wait for the producer to be ready before attempting to send the message
+	case <-time.After(5 * time.Second):
+		log.Event(ctx, "kafka producer initialisation timeout", log.FATAL)
 		os.Exit(1)
 	}
 
@@ -53,6 +58,8 @@ func main() {
 		DimensionName: *dimensionName,
 		CodeListID:    *codeListID,
 	}
+
+	log.Event(ctx, "producing DataImportComplete event", log.INFO)
 	sendEvent(producer, event)
 
 	time.Sleep(5000 * time.Millisecond)

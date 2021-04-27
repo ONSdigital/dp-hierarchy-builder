@@ -12,7 +12,7 @@ var (
 	lockHierarchyStoreMockBuildHierarchy sync.RWMutex
 )
 
-// Ensure, that HierarchyStoreMock does implement HierarchyStore.
+// Ensure, that HierarchyStoreMock does implement event.HierarchyStore.
 // If this is not the case, regenerate this file with moq.
 var _ event.HierarchyStore = &HierarchyStoreMock{}
 

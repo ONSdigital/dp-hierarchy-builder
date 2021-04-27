@@ -11,7 +11,10 @@ import (
 //go:generate moq -out hierarchytest/db.go -pkg hierarchytest . DB
 type DB = driver.Hierarchy // type is declared locally to enable the above moq generation
 
-var AlreadyExistsErr = errors.New("failed to build hierarchy as it already exists")
+// firstAttempt is the attempt nubmer passed to dp-graph queries
+const firstAttempt = 1
+
+var ErrAlreadyExists = errors.New("failed to build hierarchy as it already exists")
 
 // Store represents storage for hierarchy data.
 type Store struct {
@@ -33,18 +36,18 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return err
 	}
 	if hierarchyExists {
-		return AlreadyExistsErr
+		return ErrAlreadyExists
 	}
 
-	if err = store.CreateInstanceHierarchyConstraints(ctx, 1, instanceID, dimensionName); err != nil {
+	if err = store.CreateInstanceHierarchyConstraints(ctx, firstAttempt, instanceID, dimensionName); err != nil {
 		return err
 	}
 
 	// Get codes from existing nodes
-	codes, err := store.GetCodesWithData(ctx, 1, instanceID, dimensionName)
+	codes, err := store.GetCodesWithData(ctx, firstAttempt, instanceID, dimensionName)
 	if err != nil {
 		if err == driver.ErrNotImplemented {
-			// if this is not implemented, use the legacy hierarchy build algorithm (e.g. Neo4j)
+			// if this is not implemented, use the legacy hierarchy build algorithm (e.g. Neo4j) - note that the legacy algorithm doesn't implement dimension order
 			return store.buildHierarchyLegacy(instanceID, codeListID, dimensionName)
 		}
 		return err
@@ -55,33 +58,41 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	}
 
 	// Get node IDs corresponding to generic hierarchy nodes with data
-	nodesWithData, err := store.GetGenericHierarchyNodeIDs(ctx, 1, codeListID, codes)
+	nodesWithData, err := store.GetGenericHierarchyNodeIDs(ctx, firstAttempt, codeListID, codes)
 	if err != nil {
 		return err
 	}
 
 	// Get node IDs corresponding to generic hierarchy nodes which are ancestries to the nodes with data
-	ancestryIDs, err := store.GetGenericHierarchyAncestriesIDs(ctx, 1, codeListID, codes)
+	ancestryIDs, err := store.GetGenericHierarchyAncestriesIDs(ctx, firstAttempt, codeListID, codes)
 	if err != nil {
 		return err
 	}
 
 	// some ancestries may have data. Create a map with ancestries without data only.
 	// note: for big datasets we expect len(ancestries) << len(nodesWithData), so we iterate ancestries for efficiency
-	nodesWithoutData := map[string]struct{}{}
-	for id := range ancestryIDs {
+	nodesWithoutData := map[string]string{}
+	for id, code := range ancestryIDs {
 		if _, found := nodesWithData[id]; !found {
-			nodesWithoutData[id] = struct{}{}
+			nodesWithoutData[id] = code
 		}
 	}
 
+	// Create 'hasCode' edges if they don't exist
+	if err := store.CreateHasCodeEdges(ctx, firstAttempt, codeListID, nodesWithData); err != nil {
+		return err
+	}
+	if err := store.CreateHasCodeEdges(ctx, firstAttempt, codeListID, nodesWithoutData); err != nil {
+		return err
+	}
+
 	// Clone necessary generic hierarchy nodes with data
-	if err := store.CloneNodesFromIDs(ctx, 1, instanceID, codeListID, dimensionName, nodesWithData, true); err != nil {
+	if err := store.CloneNodesFromIDs(ctx, firstAttempt, instanceID, codeListID, dimensionName, nodesWithData, true); err != nil {
 		return err
 	}
 
 	// Clone necessary ancestry generic hierarchy nodes without data
-	if err := store.CloneNodesFromIDs(ctx, 1, instanceID, codeListID, dimensionName, nodesWithoutData, false); err != nil {
+	if err := store.CloneNodesFromIDs(ctx, firstAttempt, instanceID, codeListID, dimensionName, nodesWithoutData, false); err != nil {
 		return err
 	}
 
@@ -96,28 +107,36 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 	}
 	logData["node_count"] = nodeCount
 
-	// Clone Relationships for the newly created nodes
-	if err := store.CloneRelationshipsFromIDs(ctx, 1, instanceID, dimensionName, nodesWithData); err != nil {
+	// Set order property to newly created nodes
+	if err := store.CloneOrderFromIDs(ctx, codeListID, nodesWithData); err != nil {
+		return err
+	}
+	if err := store.CloneOrderFromIDs(ctx, codeListID, nodesWithoutData); err != nil {
 		return err
 	}
 
-	if err := store.CloneRelationshipsFromIDs(ctx, 1, instanceID, dimensionName, nodesWithoutData); err != nil {
+	// Clone Relationships for the newly created nodes
+	if err := store.CloneRelationshipsFromIDs(ctx, firstAttempt, instanceID, dimensionName, nodesWithData); err != nil {
+		return err
+	}
+
+	if err := store.CloneRelationshipsFromIDs(ctx, firstAttempt, instanceID, dimensionName, nodesWithoutData); err != nil {
 		return err
 	}
 
 	// Get newly created hierarchy node IDs
-	newNodeIDs, err := store.GetHierarchyNodeIDs(ctx, 1, instanceID, dimensionName)
+	newNodeIDs, err := store.GetHierarchyNodeIDs(ctx, firstAttempt, instanceID, dimensionName)
 	if err != nil {
 		return err
 	}
 
 	// Remove CloneEdges (concurrently in batches)
-	if err := store.RemoveCloneEdgesFromSourceIDs(ctx, 1, newNodeIDs); err != nil {
+	if err := store.RemoveCloneEdgesFromSourceIDs(ctx, firstAttempt, newNodeIDs); err != nil {
 		return err
 	}
 
 	// Set number of children for the newly created nodes
-	if err = store.SetNumberOfChildrenFromIDs(ctx, 1, newNodeIDs); err != nil {
+	if err = store.SetNumberOfChildrenFromIDs(ctx, firstAttempt, newNodeIDs); err != nil {
 		return err
 	}
 
@@ -139,11 +158,11 @@ func (store *Store) buildHierarchyLegacy(instanceID, codeListID, dimensionName s
 	ctx := context.Background()
 
 	var err error
-	if err = store.CreateInstanceHierarchyConstraints(ctx, 1, instanceID, dimensionName); err != nil {
+	if err = store.CreateInstanceHierarchyConstraints(ctx, firstAttempt, instanceID, dimensionName); err != nil {
 		return err
 	}
 
-	if err = store.CloneNodes(ctx, 1, instanceID, codeListID, dimensionName); err != nil {
+	if err = store.CloneNodes(ctx, firstAttempt, instanceID, codeListID, dimensionName); err != nil {
 		return err
 	}
 
@@ -156,27 +175,27 @@ func (store *Store) buildHierarchyLegacy(instanceID, codeListID, dimensionName s
 		return errors.New("No nodes created - missing generic hierarchy?")
 	}
 
-	if err = store.CloneRelationships(ctx, 1, instanceID, codeListID, dimensionName); err != nil {
+	if err = store.CloneRelationships(ctx, firstAttempt, instanceID, codeListID, dimensionName); err != nil {
 		return err
 	}
 
-	if err = store.SetHasData(ctx, 1, instanceID, dimensionName); err != nil {
+	if err = store.SetHasData(ctx, firstAttempt, instanceID, dimensionName); err != nil {
 		return err
 	}
 
-	if err = store.MarkNodesToRemain(ctx, 1, instanceID, dimensionName); err != nil {
+	if err = store.MarkNodesToRemain(ctx, firstAttempt, instanceID, dimensionName); err != nil {
 		return err
 	}
 
-	if err = store.RemoveNodesNotMarkedToRemain(ctx, 1, instanceID, dimensionName); err != nil {
+	if err = store.RemoveNodesNotMarkedToRemain(ctx, firstAttempt, instanceID, dimensionName); err != nil {
 		return err
 	}
 
-	if err = store.RemoveRemainMarker(ctx, 1, instanceID, dimensionName); err != nil {
+	if err = store.RemoveRemainMarker(ctx, firstAttempt, instanceID, dimensionName); err != nil {
 		return err
 	}
 
-	if err = store.SetNumberOfChildren(ctx, 1, instanceID, dimensionName); err != nil {
+	if err = store.SetNumberOfChildren(ctx, firstAttempt, instanceID, dimensionName); err != nil {
 		return err
 	}
 
