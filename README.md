@@ -53,6 +53,10 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 
 Plus the graph database vars from [dp-graph](https://github.com/ONSdigital/dp-graph) - namely `GRAPH_DRIVER_TYPE` and `GRAPH_ADDR`
 
+**Notes:**
+
+1. For more info, see the [kafka TLS examples documentation](https://github.com/ONSdigital/dp-kafka/tree/main/examples#tls)
+
 ### Healthcheck
 
  The `/healthcheck` endpoint returns the current status of the service. Dependent services are health checked on an interval defined by the `HEALTHCHECK_INTERVAL` environment variable.
