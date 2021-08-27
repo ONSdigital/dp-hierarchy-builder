@@ -55,6 +55,14 @@ func main() {
 		Offset:       &kafkaOffset,
 		KafkaVersion: &cfg.KafkaVersion,
 	}
+	if cfg.KafkaSecProtocol == "TLS" {
+		cgConfig.SecurityConfig = kafka.GetSecurityConfig(
+			cfg.KafkaSecCACerts,
+			cfg.KafkaSecClientCert,
+			cfg.KafkaSecClientKey,
+			cfg.KafkaSecSkipVerify,
+		)
+	}
 
 	cgChannels := kafka.CreateConsumerGroupChannels(bufferSize)
 	kafkaConsumer, err := kafka.NewConsumerGroup(
@@ -69,6 +77,14 @@ func main() {
 
 	pConfig := &kafka.ProducerConfig{
 		KafkaVersion: &cfg.KafkaVersion,
+	}
+	if cfg.KafkaSecProtocol == "TLS" {
+		pConfig.SecurityConfig = kafka.GetSecurityConfig(
+			cfg.KafkaSecCACerts,
+			cfg.KafkaSecClientCert,
+			cfg.KafkaSecClientKey,
+			cfg.KafkaSecSkipVerify,
+		)
 	}
 
 	pChannels := kafka.CreateProducerChannels()
