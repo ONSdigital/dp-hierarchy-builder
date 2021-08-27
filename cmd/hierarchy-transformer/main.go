@@ -16,7 +16,7 @@ import (
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
 	"github.com/ONSdigital/dp-hierarchy-builder/gremlin"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 var filepath = flag.String("file", "cmd/hierarchy-transformer/sic07-heirarchy.csv", "The path to the import filepath")
@@ -33,18 +33,18 @@ func main() {
 	// open the input file
 	f, err := os.Open(*filepath)
 	if err != nil {
-		log.Event(ctx, "Failed to open input file", log.ERROR, log.Error(err), log.Data{"file": *filepath})
+		log.Error(ctx, "Failed to open input file", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
-	log.Event(ctx, "Opened", log.INFO, log.Data{"file": *filepath})
+	log.Info(ctx, "Opened", log.Data{"file": *filepath})
 	csvReader := csv.NewReader(f)
 	defer f.Close()
 
 	// discard header row
 	_, err = csvReader.Read()
 	if err != nil {
-		log.Event(ctx, "Failed to read CSV header row", log.ERROR, log.Error(err), log.Data{"file": *filepath})
+		log.Error(ctx, "Failed to read CSV header row", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -57,19 +57,19 @@ func main() {
 	// populate the children of each node using the map to look up parents
 	hierarchy.PopulateChildNodes(ctx, nodeMap)
 
-	log.Event(ctx, "Generating cypher script", log.INFO)
+	log.Info(ctx, "Generating cypher script")
 	err = cypher.CreateCypherFile(rootNodes, *cypherFile)
 	logIfError(ctx, err, "error creating cypher file")
 
-	log.Event(ctx, "Generating cypher deletion script", log.INFO)
+	log.Info(ctx, "Generating cypher deletion script")
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
 	logIfError(ctx, err, "error generating cypher deletion script")
 
-	log.Event(ctx, "Generating gremlin script", log.INFO)
+	log.Info(ctx, "Generating gremlin script")
 	err = gremlin.CreateGremlinFile(rootNodes, *gremlinFile)
 	logIfError(ctx, err, "error creating gremlin script")
 
-	log.Event(ctx, "Generating gremlin deletion script", log.INFO)
+	log.Info(ctx, "Generating gremlin deletion script")
 	err = gremlin.CreateGremlinDeleteFile(rootNodes, *gremlinDelFile)
 	logIfError(ctx, err, "error creating gremlin deletion script")
 }
@@ -104,6 +104,6 @@ func createNodeMap(csvReader *csv.Reader) (*map[string]*hierarchy.Node, error) {
 
 func logIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Event(ctx, message, log.ERROR, log.Error(err))
+		log.Error(ctx, message, err)
 	}
 }

@@ -8,7 +8,7 @@ import (
 
 	"github.com/ONSdigital/dp-graph/v2/graph"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 var codeListID = flag.String("code-list-id", "cpih1dim1aggid", "")
@@ -31,7 +31,7 @@ func main() {
 
 func exitIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Event(ctx, message, log.FATAL, log.Error(err))
+		log.Fatal(ctx, message, err)
 		os.Exit(1)
 	}
 }
