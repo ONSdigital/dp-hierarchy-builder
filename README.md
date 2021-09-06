@@ -38,11 +38,11 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 | KAFKA_ADDR                   | localhost:9092        | A list of Kafka host addresses
 | KAFKA_VERSION                | `1.0.2`               | The kafka version that this service expects to connect to
 | KAFKA_OFFSET_OLDEST          | true                  | sets kafka offset to oldest if `true`
-| KAFKA_SEC_PROTO              | _unset_               | if set to `TLS`, kafka connections will use TLS [1]
-| KAFKA_SEC_CLIENT_KEY         | _unset_               | PEM for the client key [1]
-| KAFKA_SEC_CLIENT_CERT        | _unset_               | PEM for the client certificate [1]
-| KAFKA_SEC_CA_CERTS           | _unset_               | CA cert chain for the server cert [1]
-| KAFKA_SEC_SKIP_VERIFY        | false                 | ignores server certificate issues if `true` [1]
+| KAFKA_SEC_PROTO              | _unset_               | if set to `TLS`, kafka connections will use TLS [[1]](#notes_1)
+| KAFKA_SEC_CLIENT_KEY         | _unset_               | PEM for the client key [[1]](#notes_1)
+| KAFKA_SEC_CLIENT_CERT        | _unset_               | PEM for the client certificate [[1]](#notes_1)
+| KAFKA_SEC_CA_CERTS           | _unset_               | CA cert chain for the server cert [[1]](#notes_1)
+| KAFKA_SEC_SKIP_VERIFY        | false                 | ignores server certificate issues if `true` [[1]](#notes_1)
 | CONSUMER_GROUP               | dp-hierarchy-builder  | The name of the Kafka consumer group
 | CONSUMER_TOPIC               | observations-imported | The name of the topic to consumes messages from
 | PRODUCER_TOPIC               | hierarchy-built       | The name of the topic to produces messages to
@@ -55,7 +55,7 @@ Plus the graph database vars from [dp-graph](https://github.com/ONSdigital/dp-gr
 
 **Notes:**
 
-1. For more info, see the [kafka TLS examples documentation](https://github.com/ONSdigital/dp-kafka/tree/main/examples#tls)
+1. <a name="notes_1">For more info, see the [kafka TLS examples documentation](https://github.com/ONSdigital/dp-kafka/tree/main/examples#tls)</a>
 
 ### Healthcheck
 
