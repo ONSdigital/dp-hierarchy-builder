@@ -12,7 +12,7 @@ import (
 	"bytes"
 	"context"
 	"flag"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 	"io/ioutil"
 	"os"
 )
@@ -29,11 +29,11 @@ func main() {
 	// open the input file
 	f, err := os.Open(*filepath)
 	if err != nil {
-		log.Event(ctx, "Failed to open input file", log.ERROR, log.Error(err), log.Data{"file": *filepath})
+		log.Error(ctx, "Failed to open input file", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
-	log.Event(ctx, "Opened", log.INFO, log.Data{"file": *filepath})
+	log.Info(ctx, "Opened", log.Data{"file": *filepath})
 	reader := bufio.NewReader(f)
 	defer f.Close()
 
@@ -43,13 +43,13 @@ func main() {
 	// header
 	line, _, err = reader.ReadLine()
 	if err != nil {
-		log.Event(ctx, "Failed to read header row", log.ERROR, log.Error(err), log.Data{"file": *filepath})
+		log.Error(ctx, "Failed to read header row", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
 	buffer.WriteString("codelist," + string(line) + "\n")
 	if err != nil {
-		log.Event(ctx, "Write header row", log.ERROR, log.Error(err), log.Data{"file": *filepath})
+		log.Error(ctx, "Write header row", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 

@@ -12,12 +12,13 @@ import (
 	"flag"
 	"os"
 
+	"io"
+
 	"github.com/ONSdigital/dp-hierarchy-builder/cmd/v4-transformer/v4"
 	"github.com/ONSdigital/dp-hierarchy-builder/cypher"
 	"github.com/ONSdigital/dp-hierarchy-builder/gremlin"
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/log.go/log"
-	"io"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 var filepath = flag.String("file", "cmd/v4-transformer/coicopcomb-inc-geo.csv", "The path to the import filepath")
@@ -39,7 +40,7 @@ func main() {
 
 	f, err := os.Open(*filepath)
 	if err != nil {
-		log.Event(ctx, "Failed to open input file", log.ERROR, log.Error(err), log.Data{"file": *filepath})
+		log.Error(ctx, "Failed to open input file", err, log.Data{"file": *filepath})
 		os.Exit(1)
 	}
 
@@ -57,7 +58,7 @@ func main() {
 		entry, err := reader.Read()
 		if err != nil {
 			if err != io.EOF {
-				log.Event(ctx, "Failed to read CSV rows from the input file", log.ERROR, log.Error(err), log.Data{"file": *filepath})
+				log.Error(ctx, "Failed to read CSV rows from the input file", err, log.Data{"file": *filepath})
 				os.Exit(1)
 			}
 
@@ -75,14 +76,14 @@ func main() {
 
 		if entry.ParentLabelCode == "" {
 			if entry.Level != 0 {
-				log.Event(ctx, "entry no parent, but level>0", log.INFO, log.Data{"entry": entry})
+				log.Info(ctx, "entry no parent, but level>0", log.Data{"entry": entry})
 			}
 			continue
 		}
 
 		if labelIDToEntry[entry.ParentLabelCode] == nil {
 
-			log.Event(ctx, "entry not found for label code", log.ERROR, log.Data{
+			log.Error(ctx, "entry not found for label code", nil, log.Data{
 				"code":        entry.Code,
 				"parent code": entry.ParentCode,
 			})
@@ -93,25 +94,25 @@ func main() {
 		labelIDToEntry[entry.ParentLabelCode].Children = append(labelIDToEntry[entry.ParentLabelCode].Children, entry)
 	}
 
-	log.Event(ctx, "Generating cypher script", log.INFO)
+	log.Info(ctx, "Generating cypher script")
 	err = cypher.CreateCypherFile(rootNodes, *cypherFile)
 	logIfError(ctx, err, "error generating cypher script")
 
-	log.Event(ctx, "Generating cypher deletion script", log.INFO)
+	log.Info(ctx, "Generating cypher deletion script")
 	err = cypher.CreateCypherDeleteFile(rootNodes, *cypherDelFile)
 	logIfError(ctx, err, "error generating cypher deletion script")
 
-	log.Event(ctx, "Generating gremlin script", nil)
+	log.Info(ctx, "Generating gremlin script")
 	err = gremlin.CreateGremlinFile(rootNodes, *gremlinFile)
 	logIfError(ctx, err, "error generating gremlin script")
 
-	log.Event(ctx, "Generating gremlin deletion script", nil)
+	log.Info(ctx, "Generating gremlin deletion script")
 	err = gremlin.CreateGremlinDeleteFile(rootNodes, *gremlinDelFile)
 	logIfError(ctx, err, "error generating gremlin deletion script")
 }
 
 func logIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Event(ctx, message, log.ERROR, log.Error(err))
+		log.Error(ctx, message, err)
 	}
 }
