@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/ONSdigital/dp-hierarchy-builder/hierarchy"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 var seenLabel = map[string]bool{}
@@ -69,7 +69,7 @@ func escapeLabel(label string) string {
 	escapedLabel := strings.Replace(label, "'", "\\'", -1)
 	if label != escapedLabel {
 		if _, ok := seenLabel[label]; !ok {
-			log.Event(context.Background(), "trim", log.INFO, log.Data{"esc": escapedLabel})
+			log.Info(context.Background(), "trim", log.Data{"esc": escapedLabel})
 			seenLabel[label] = true
 		}
 	}

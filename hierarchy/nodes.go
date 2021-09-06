@@ -2,7 +2,9 @@ package hierarchy
 
 import (
 	"context"
-	"github.com/ONSdigital/log.go/log"
+	"errors"
+
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 // PopulateChildNodes takes a flat map of nodes and populates the children slice for each node.
@@ -14,7 +16,7 @@ func PopulateChildNodes(ctx context.Context, nodes *map[string]*Node) {
 
 		if nodeMap[entry.ParentCode] == nil {
 
-			log.Event(ctx, "entry not found for label code", log.ERROR, log.Data{
+			log.Error(ctx, "entry not found for label code", errors.New("entry not found for label code"), log.Data{
 				"code":        entry.Code,
 				"parent_code": entry.ParentCode,
 			})

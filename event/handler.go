@@ -3,7 +3,7 @@ package event
 import (
 	"context"
 	"github.com/ONSdigital/dp-import/events"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 //go:generate moq -out ./eventtest/hierarchy_store.go -pkg eventtest . HierarchyStore
@@ -37,7 +37,7 @@ func NewDataImportCompleteHandler(hierarchyStore HierarchyStore, eventProducer E
 func (handler DataImportCompleteHandler) Handle(ctx context.Context, event *events.DataImportComplete) error {
 
 	logData := log.Data{"event": event}
-	log.Event(ctx, "event handler called", log.INFO, logData)
+	log.Info(ctx, "event handler called", logData)
 
 	err := handler.hierarchyStore.BuildHierarchy(
 		event.InstanceID,
@@ -53,7 +53,7 @@ func (handler DataImportCompleteHandler) Handle(ctx context.Context, event *even
 		return err
 	}
 
-	log.Event(ctx, "event successfully handled", log.INFO, logData)
+	log.Info(ctx, "event successfully handled", logData)
 
 	return nil
 }

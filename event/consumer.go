@@ -7,7 +7,7 @@ import (
 	"github.com/ONSdigital/dp-import/events"
 	kafka "github.com/ONSdigital/dp-kafka/v2"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 //go:generate moq -out eventtest/handler.go -pkg eventtest . Handler
@@ -49,7 +49,7 @@ func (consumer *Consumer) Consume(ctx context.Context, messageConsumer MessageCo
 				processMessage(messageCtx, message, handler, errorReporter)
 				message.Release()
 			case <-consumer.closing:
-				log.Event(ctx, "closing event consumer loop", log.INFO)
+				log.Info(ctx, "closing event consumer loop")
 				return
 			}
 		}
@@ -68,10 +68,10 @@ func (consumer *Consumer) Close(ctx context.Context) (err error) {
 
 	select {
 	case <-consumer.closed:
-		log.Event(ctx, "successfully closed event consumer", log.INFO)
+		log.Info(ctx, "successfully closed event consumer")
 		return nil
 	case <-ctx.Done():
-		log.Event(ctx, "shutdown context time exceeded, skipping graceful shutdown of event consumer", log.INFO)
+		log.Info(ctx, "shutdown context time exceeded, skipping graceful shutdown of event consumer")
 		return errors.New("shutdown context timed out")
 	}
 
@@ -81,21 +81,21 @@ func processMessage(ctx context.Context, message kafka.Message, handler Handler,
 
 	event, err := unmarshal(message)
 	if err != nil {
-		log.Event(ctx, "failed to unmarshal event", log.ERROR, log.Error(err))
+		log.Error(ctx, "failed to unmarshal event", err)
 		return
 	}
 
-	log.Event(ctx, "event received", log.INFO, log.Data{"event": event})
+	log.Info(ctx, "event received", log.Data{"event": event})
 
 	err = handler.Handle(ctx, event)
 	if err != nil {
 		errorReporter.Notify(event.InstanceID, "failed to handle event", err)
-		log.Event(ctx, "failed to handle event", log.ERROR, log.Error(err))
+		log.Error(ctx, "failed to handle event", err)
 	}
 
-	log.Event(ctx, "event processed - committing message", log.INFO, log.Data{"event": event})
+	log.Info(ctx, "event processed - committing message", log.Data{"event": event})
 	message.Commit()
-	log.Event(ctx, "message committed", log.INFO, log.Data{"event": event})
+	log.Info(ctx, "message committed", log.Data{"event": event})
 }
 
 // unmarshal converts a event instance to []byte.

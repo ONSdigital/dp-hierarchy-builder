@@ -3,7 +3,7 @@ package event
 import (
 	"github.com/ONSdigital/dp-import/events"
 	kafka "github.com/ONSdigital/dp-kafka/v2"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 	"golang.org/x/net/context"
 )
 
@@ -32,7 +32,7 @@ func (producer *AvroProducer) HierarchyBuilt(ctx context.Context, instanceID, di
 		InstanceID:    instanceID,
 	}
 
-	log.Event(ctx, "producing hierarchy built event kafka message", log.INFO, log.Data{"event": hierarchyBuiltEvent})
+	log.Info(ctx, "producing hierarchy built event kafka message", log.Data{"event": hierarchyBuiltEvent})
 
 	bytes, err := events.HierarchyBuiltSchema.Marshal(hierarchyBuiltEvent)
 	if err != nil {
