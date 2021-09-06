@@ -83,7 +83,10 @@ func main() {
 
 		if labelIDToEntry[entry.ParentLabelCode] == nil {
 
-			log.Error(ctx, "entry not found for label code", nil)
+			log.Error(ctx, "entry not found for label code", nil, log.Data{
+				"code":        entry.Code,
+				"parent code": entry.ParentCode,
+			})
 
 			continue
 		}
