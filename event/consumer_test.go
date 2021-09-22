@@ -12,7 +12,7 @@ import (
 	kafka "github.com/ONSdigital/dp-kafka/v2"
 	"github.com/ONSdigital/dp-kafka/v2/kafkatest"
 	"github.com/ONSdigital/dp-reporter-client/reporter/reportertest"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
@@ -199,12 +199,12 @@ func waitForEventsToBeSentToHandler(eventHandler *eventtest.HandlerMock) {
 	timeout := start.Add(time.Millisecond * 500)
 	for {
 		if len(eventHandler.HandleCalls()) > 0 {
-			log.Event(testCtx, "events have been sent to the handler")
+			log.Info(testCtx, "events have been sent to the handler")
 			break
 		}
 
 		if time.Now().After(timeout) {
-			log.Event(testCtx, "timeout hit")
+			log.Info(testCtx, "timeout hit")
 			break
 		}
 

@@ -17,7 +17,7 @@ import (
 	kafka "github.com/ONSdigital/dp-kafka/v2"
 	dphttp "github.com/ONSdigital/dp-net/http"
 	"github.com/ONSdigital/dp-reporter-client/reporter"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 var (
@@ -35,13 +35,13 @@ func main() {
 	log.Namespace = "dp-hierarchy-builder"
 	ctx := context.Background()
 
-	log.Event(ctx, "starting hierarchy builder", log.INFO)
+	log.Info(ctx, "starting hierarchy builder")
 
 	cfg, err := config.Get()
 	exitIfError(ctx, err, "error getting config")
 
 	// sensitive fields are omitted from cfg.String().
-	log.Event(ctx, "loaded config", log.INFO, log.Data{"cfg": cfg})
+	log.Info(ctx, "loaded config", log.Data{"cfg": cfg})
 
 	kafkaBrokers := cfg.KafkaAddr
 
@@ -54,6 +54,14 @@ func main() {
 	cgConfig := &kafka.ConsumerGroupConfig{
 		Offset:       &kafkaOffset,
 		KafkaVersion: &cfg.KafkaVersion,
+	}
+	if cfg.KafkaSecProtocol == "TLS" {
+		cgConfig.SecurityConfig = kafka.GetSecurityConfig(
+			cfg.KafkaSecCACerts,
+			cfg.KafkaSecClientCert,
+			cfg.KafkaSecClientKey,
+			cfg.KafkaSecSkipVerify,
+		)
 	}
 
 	cgChannels := kafka.CreateConsumerGroupChannels(bufferSize)
@@ -70,11 +78,19 @@ func main() {
 	pConfig := &kafka.ProducerConfig{
 		KafkaVersion: &cfg.KafkaVersion,
 	}
+	if cfg.KafkaSecProtocol == "TLS" {
+		pConfig.SecurityConfig = kafka.GetSecurityConfig(
+			cfg.KafkaSecCACerts,
+			cfg.KafkaSecClientCert,
+			cfg.KafkaSecClientKey,
+			cfg.KafkaSecSkipVerify,
+		)
+	}
 
 	pChannels := kafka.CreateProducerChannels()
 	kafkaProducer, err := kafka.NewProducer(ctx, kafkaBrokers, cfg.ProducerTopic, pChannels, pConfig)
 	if err != nil {
-		log.Event(ctx, "error creating kafka producer", log.FATAL, log.Error(err))
+		log.Fatal(ctx, "error creating kafka producer", err)
 		os.Exit(1)
 	}
 
@@ -112,9 +128,9 @@ func main() {
 	// this will block (main) until a fatal error occurs
 	select {
 	case err := <-apiErrors:
-		log.Event(ctx, "http server error", log.ERROR, log.Error(err))
+		log.Error(ctx, "http server error", err)
 	case <-signals:
-		log.Event(ctx, "os signal received", log.INFO)
+		log.Info(ctx, "os signal received")
 	}
 
 	ctx, cancel := context.WithTimeout(ctx, cfg.GracefulShutdownTimeout)
@@ -123,55 +139,55 @@ func main() {
 	go func() {
 		defer cancel()
 
-		log.Event(ctx, "stopping health check", log.INFO)
+		log.Info(ctx, "stopping health check")
 		hc.Stop()
 
-		log.Event(ctx, "closing http server", log.INFO)
+		log.Info(ctx, "closing http server")
 		err = httpServer.Shutdown(ctx)
 		if err != nil {
-			log.Event(ctx, "error closing http server", log.ERROR, log.Error(err))
+			log.Error(ctx, "error closing http server", err)
 			hasShutdownError = true
 		}
 
-		log.Event(ctx, "closing event consumer", log.INFO)
+		log.Info(ctx, "closing event consumer")
 		err = eventConsumer.Close(ctx)
 		if err != nil {
-			log.Event(ctx, "error closing event consumer", log.ERROR, log.Error(err))
+			log.Error(ctx, "error closing event consumer", err)
 			hasShutdownError = true
 		}
 
-		log.Event(ctx, "closing kafka consumer", log.INFO)
+		log.Info(ctx, "closing kafka consumer")
 		err = kafkaConsumer.Close(ctx)
 		if err != nil {
-			log.Event(ctx, "error closing kafka consumer", log.ERROR, log.Error(err))
+			log.Error(ctx, "error closing kafka consumer", err)
 			hasShutdownError = true
 		}
 
-		log.Event(ctx, "closing kafka producer", log.INFO)
+		log.Info(ctx, "closing kafka producer")
 		err = kafkaProducer.Close(ctx)
 		if err != nil {
-			log.Event(ctx, "error closing kafka producer", log.ERROR, log.Error(err))
+			log.Error(ctx, "error closing kafka producer", err)
 			hasShutdownError = true
 		}
 
-		log.Event(ctx, "closing kafka error producer", log.INFO)
+		log.Info(ctx, "closing kafka error producer")
 		err = kafkaErrorProducer.Close(ctx)
 		if err != nil {
-			log.Event(ctx, "error closing kafka error producer", log.ERROR, log.Error(err))
+			log.Error(ctx, "error closing kafka error producer", err)
 			hasShutdownError = true
 		}
 
-		log.Event(ctx, "closing graph db connection", log.INFO)
+		log.Info(ctx, "closing graph db connection")
 		err = db.Close(ctx)
 		if err != nil {
-			log.Event(ctx, "error closing graph db connection", log.ERROR, log.Error(err))
+			log.Error(ctx, "error closing graph db connection", err)
 			hasShutdownError = true
 		}
 
-		log.Event(ctx, "closing graph db error consumer", log.INFO)
+		log.Info(ctx, "closing graph db error consumer")
 		graphErrorConsumer.Close(ctx)
 		if err != nil {
-			log.Event(ctx, "error closing graph db error consumer", log.ERROR, log.Error(err))
+			log.Error(ctx, "error closing graph db error consumer", err)
 			hasShutdownError = true
 		}
 	}()
@@ -181,17 +197,17 @@ func main() {
 
 	// timeout expired
 	if ctx.Err() == context.DeadlineExceeded {
-		log.Event(ctx, "shutdown timed out", log.ERROR, log.Error(ctx.Err()))
+		log.Error(ctx, "shutdown timed out", ctx.Err())
 		os.Exit(1)
 	}
 
 	if hasShutdownError {
 		err = errors.New("failed to shutdown gracefully")
-		log.Event(ctx, "failed to shutdown gracefully ", log.ERROR, log.Error(err))
+		log.Error(ctx, "failed to shutdown gracefully ", err)
 		os.Exit(1)
 	}
 
-	log.Event(ctx, "graceful shutdown was successful", log.INFO)
+	log.Info(ctx, "graceful shutdown was successful")
 	os.Exit(1)
 }
 
@@ -205,9 +221,9 @@ func startAPI(ctx context.Context, hc healthcheck.HealthCheck, cfg *config.Confi
 	httpServer.HandleOSSignals = false
 
 	go func() {
-		log.Event(ctx, "starting api", log.INFO)
+		log.Info(ctx, "starting api")
 		if err := httpServer.ListenAndServe(); err != nil {
-			log.Event(ctx, "http server error", log.ERROR, log.Error(err))
+			log.Error(ctx, "http server error", err)
 			apiErrors <- err
 		}
 	}()
@@ -227,28 +243,28 @@ func startHealthChecks(
 	versionInfo, err := healthcheck.NewVersionInfo(BuildTime, GitCommit, Version)
 	if err != nil {
 		hasErrors = true
-		log.Event(ctx, "error creating version info", log.ERROR, log.Error(err))
+		log.Error(ctx, "error creating version info", err)
 	}
 	hc := healthcheck.New(versionInfo, cfg.HealthCheckCriticalTimeout, cfg.HealthCheckInterval)
 
 	if err = hc.AddCheck("Kafka Consumer", kafkaConsumer.Checker); err != nil {
 		hasErrors = true
-		log.Event(ctx, "error creating kafka consumer", log.ERROR, log.Error(err))
+		log.Error(ctx, "error creating kafka consumer", err)
 	}
 
 	if err = hc.AddCheck("Kafka Producer", kafkaProducer.Checker); err != nil {
 		hasErrors = true
-		log.Event(ctx, "error creating kafka producer", log.ERROR, log.Error(err))
+		log.Error(ctx, "error creating kafka producer", err)
 	}
 
 	if err = hc.AddCheck("Kafka Error Producer", kafkaErrorProducer.Checker); err != nil {
 		hasErrors = true
-		log.Event(ctx, "error creating kafka error producer", log.ERROR, log.Error(err))
+		log.Error(ctx, "error creating kafka error producer", err)
 	}
 
 	if err = hc.AddCheck("GraphDB", db.Checker); err != nil {
 		hasErrors = true
-		log.Event(ctx, "error creating graph db connection", log.ERROR, log.Error(err))
+		log.Error(ctx, "error creating graph db connection", err)
 	}
 
 	if hasErrors {
@@ -261,13 +277,13 @@ func startHealthChecks(
 
 func logIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Event(ctx, message, log.ERROR, log.Error(err))
+		log.Error(ctx, message, err)
 	}
 }
 
 func exitIfError(ctx context.Context, err error, message string) {
 	if err != nil {
-		log.Event(ctx, message, log.FATAL, log.Error(err))
+		log.Fatal(ctx, message, err)
 		os.Exit(1)
 	}
 }

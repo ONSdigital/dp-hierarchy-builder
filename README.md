@@ -1,10 +1,9 @@
-dp-hierarchy-builder
-================
+# dp-hierarchy-builder
 
 The hierarchy builder is a service that forms part of the dataset import process. It requires a 'full' hierarchy to be available for the dataset you are importing
 
-
 ### Getting started
+
 Run the `dp-hierarchy-builder` service:
 
 `make debug` 
@@ -38,6 +37,13 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 | ---------------------------- | --------------------- | -----------
 | BIND_ADDR                    | :22700                | The host and port to bind to
 | KAFKA_ADDR                   | localhost:9092        | A list of Kafka host addresses
+| KAFKA_VERSION                | `1.0.2`               | The kafka version that this service expects to connect to
+| KAFKA_OFFSET_OLDEST          | true                  | sets kafka offset to oldest if `true`
+| KAFKA_SEC_PROTO              | _unset_               | if set to `TLS`, kafka connections will use TLS [[1]](#notes_1)
+| KAFKA_SEC_CLIENT_KEY         | _unset_               | PEM for the client key [[1]](#notes_1)
+| KAFKA_SEC_CLIENT_CERT        | _unset_               | PEM for the client certificate [[1]](#notes_1)
+| KAFKA_SEC_CA_CERTS           | _unset_               | CA cert chain for the server cert [[1]](#notes_1)
+| KAFKA_SEC_SKIP_VERIFY        | false                 | ignores server certificate issues if `true` [[1]](#notes_1)
 | CONSUMER_GROUP               | dp-hierarchy-builder  | The name of the Kafka consumer group
 | CONSUMER_TOPIC               | observations-imported | The name of the topic to consumes messages from
 | PRODUCER_TOPIC               | hierarchy-built       | The name of the topic to produces messages to
@@ -47,6 +53,10 @@ Scripts for updating and debugging Kafka can be found [here](https://github.com/
 | HEALTHCHECK_CRITICAL_TIMEOUT | 90s                   | The time taken for the health changes from warning state to critical due to subsystem check failures
 
 Plus the graph database vars from [dp-graph](https://github.com/ONSdigital/dp-graph) - namely `GRAPH_DRIVER_TYPE` and `GRAPH_ADDR`
+
+**Notes:**
+
+1. <a name="notes_1">For more info, see the [kafka TLS examples documentation](https://github.com/ONSdigital/dp-kafka/tree/main/examples#tls)</a>
 
 ### Healthcheck
 

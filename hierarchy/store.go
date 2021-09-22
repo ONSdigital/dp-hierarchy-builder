@@ -5,7 +5,7 @@ import (
 	"errors"
 
 	"github.com/ONSdigital/dp-graph/v2/graph/driver"
-	"github.com/ONSdigital/log.go/log"
+	"github.com/ONSdigital/log.go/v2/log"
 )
 
 //go:generate moq -out hierarchytest/db.go -pkg hierarchytest . DB
@@ -53,7 +53,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return err
 	}
 	if len(codes) == 0 {
-		log.Event(ctx, "no codes found for the provided instance and dimension. Nothing to clone", log.INFO, logData)
+		log.Info(ctx, "no codes found for the provided instance and dimension. Nothing to clone", logData)
 		return nil
 	}
 
@@ -140,7 +140,7 @@ func (store *Store) BuildHierarchy(instanceID, codeListID, dimensionName string)
 		return err
 	}
 
-	log.Event(ctx, "hierarchy build complete", log.INFO, logData)
+	log.Info(ctx, "hierarchy build complete", logData)
 
 	return nil
 }
@@ -199,7 +199,7 @@ func (store *Store) buildHierarchyLegacy(instanceID, codeListID, dimensionName s
 		return err
 	}
 
-	log.Event(ctx, "hierarchy build complete", log.INFO, logData)
+	log.Info(ctx, "hierarchy build complete", logData)
 
 	return nil
 }
