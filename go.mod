@@ -5,8 +5,11 @@ go 1.20
 // to avoid 'sonatype-2021-4899' non-CVE Vulnerability
 exclude github.com/gorilla/sessions v1.2.1
 
-//to avoid  [CVE-2022-29153] CWE-918: Server-Side Request Forgery (SSRF) 
+//to avoid  [CVE-2022-29153] CWE-918: Server-Side Request Forgery (SSRF)
 exclude github.com/hashicorp/consul/api v1.1.0
+
+// to fix: [CVE-2023-32731] CWE-Other
+replace google.golang.org/grpc => google.golang.org/grpc v1.55.0
 
 require (
 	github.com/ONSdigital/dp-api-clients-go v1.43.0 // indirect
@@ -41,6 +44,7 @@ require (
 	github.com/go-avro/avro v0.0.0-20171219232920-444163702c11 // indirect
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hashicorp/go-uuid v1.0.2 // indirect
 	github.com/hokaccha/go-prettyjson v0.0.0-20211117102719-0474bc63780f // indirect
@@ -52,7 +56,7 @@ require (
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/justinas/alice v1.2.0 // indirect
-	github.com/klauspost/compress v1.13.6 // indirect
+	github.com/klauspost/compress v1.15.9 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.18 // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
