@@ -397,6 +397,8 @@ g.addV('_generic_hierarchy_node_soc').property(id,'soc--624').property(single,'c
 	addE('hasParent').to(g.V().hasId('soc--62')).next()
 g.addV('_generic_hierarchy_node_soc').property(id,'soc--6240').property(single,'code','6240').property(single,'label','Cleaning and housekeeping managers and supervisors').
 	addE('hasParent').to(g.V().hasId('soc--624')).next()
+g.addV('_generic_hierarchy_node_soc').property(id,'soc--63').property(single,'code','63').property(single,'label','Community and civil enforcement occupations').
+	addE('hasParent').to(g.V().hasId('soc--6')).next()
 g.addV('_generic_hierarchy_node_soc').property(id,'soc--8').property(single,'code','8').property(single,'label','Process, plant and machine operatives').
 	addE('hasParent').to(g.V().hasId('soc--all')).next()
 g.addV('_generic_hierarchy_node_soc').property(id,'soc--81').property(single,'code','81').property(single,'label','Process, plant and machine operatives').

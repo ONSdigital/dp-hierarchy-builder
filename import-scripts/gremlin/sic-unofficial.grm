@@ -1,10 +1,12 @@
-g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--total').property(single,'code','total').property(single,'label','Total').next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--top-level').property(single,'code','top-level').property(single,'label','Top Level').next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--total').property(single,'code','total').property(single,'label','Total').
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--B--E').property(single,'code','B--E').property(single,'label','B-E : Production Industries').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CD--CG').property(single,'code','CD--CG').property(single,'label','CD-CG : Manufacture of petroleum, chemicals and other minerals').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--B').property(single,'code','B').property(single,'label','B : Mining and quarrying').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--09').property(single,'code','09').property(single,'label','09 : Mining support service activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--B')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--09-1').property(single,'code','09-1').property(single,'label','09.1 : Support activities for petroleum and natural gas extraction').
@@ -76,7 +78,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--07
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--05--09').property(single,'code','05--09').property(single,'label','05-09 : Mining and quarrying').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--B')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--D').property(single,'code','D').property(single,'label','D : Electricity, gas, steam and air conditioning supply').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--35--39').property(single,'code','35--39').property(single,'label','35-39 : Electricity, gas, water').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--D')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--35').property(single,'code','35').property(single,'label','35 : Electricity, gas, steam and air conditioning supply').
@@ -104,17 +106,17 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--35
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--35-30').property(single,'code','35-30').property(single,'label','35.30 : Steam and air conditioning supply').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--35-3')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-service-industries').property(single,'code','all-service-industries').property(single,'label','All Service Industries').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CA--CB').property(single,'code','CA--CB').property(single,'label','CA-CB : Manufacture of food, beverages, textiles and clothing').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--G--S').property(single,'code','G--S').property(single,'label','G-S : Services').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--public-sector-excluding-financial-services').property(single,'code','public-sector-excluding-financial-services').property(single,'label','Public sector excluding financial services').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CH--CL').property(single,'code','CH--CL').property(single,'label','CH-CL : Manufacture of metals, electrical products and machinery').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--N').property(single,'code','N').property(single,'label','N : Administrative and support service activities').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--78--80').property(single,'code','78--80').property(single,'label','78-80 : Employment activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--N')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--79').property(single,'code','79').property(single,'label','79 : Travel agency, tour operator and other reservation service and related activities').
@@ -276,9 +278,9 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--77
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--77-342').property(single,'code','77-342').property(single,'label','77.34/2 : Renting and leasing of freight water transport equipment').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--77-34')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-index-of-production-industries').property(single,'code','all-index-of-production-industries').property(single,'label','All Index of Production Industries').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--R').property(single,'code','R').property(single,'label','R : Arts, entertainment and recreation').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--90--91').property(single,'code','90--91').property(single,'label','90-91 : Creative, arts, entertainment and cultural activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--R')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--92--93').property(single,'code','92--93').property(single,'label','92-93 : Gambling and betting').
@@ -344,9 +346,9 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--91
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--91-04').property(single,'code','91-04').property(single,'label','91.04 : Botanical and zoological gardens and nature reserve activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--91-0')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CK--CL').property(single,'code','CK--CL').property(single,'label','CK-CL : Manufacture of machinery and transport equipment').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--H').property(single,'code','H').property(single,'label','H : Transportation and storage').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--49--51').property(single,'code','49--51').property(single,'label','49-51 : Land, water and air transport').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--H')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--49--53').property(single,'code','49--53').property(single,'label','49-53 : Transport & Storage (inc. postal)').
@@ -474,7 +476,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--51
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--51-101').property(single,'code','51-101').property(single,'label','51.10/1 : Scheduled passenger air transport').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--51-10')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--A').property(single,'code','A').property(single,'label','A : Agriculture, forestry and fishing').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--01--09').property(single,'code','01--09').property(single,'label','01-09 : Agriculture, forestry and fishing').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--A')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--01').property(single,'code','01').property(single,'label','01 : Crop and animal production, hunting and related service activities').
@@ -598,7 +600,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--02
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--01--03').property(single,'code','01--03').property(single,'label','01-03 : Agriculture, forestry & fishing').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--A')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--I').property(single,'code','I').property(single,'label','I : Accommodation and food service activities').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--55--56').property(single,'code','55--56').property(single,'label','55-56 : Accommodation and food service activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--I')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--56').property(single,'code','56').property(single,'label','56 : Food and beverage service activities').
@@ -652,7 +654,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--55
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--55-30').property(single,'code','55-30').property(single,'label','55.30 : Camping grounds, recreational vehicle parks and trailer parks').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--55-3')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--J').property(single,'code','J').property(single,'label','J : Information and communication').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--61').property(single,'code','61').property(single,'label','61 : Telecommunications').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--J')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--61-9').property(single,'code','61-9').property(single,'label','61.9 : Other telecommunications activities').
@@ -772,11 +774,11 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--62
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--62-03').property(single,'code','62-03').property(single,'label','62.03 : Computer facilities management activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--62-0')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CJ').property(single,'code','CJ').property(single,'label','CJ : Manufacture of electrical equipment').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CC').property(single,'code','CC').property(single,'label','CC : Manufacture of wood and paper products and printing').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--U').property(single,'code','U').property(single,'label','U : Activities of extraterritorial organisations and bodies').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--99').property(single,'code','99').property(single,'label','99 : Activities of extraterritorial organisations and bodies').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--U')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--99-0').property(single,'code','99-0').property(single,'label','99.0 : Activities of extraterritorial organisations and bodies').
@@ -784,7 +786,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--99
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--99-00').property(single,'code','99-00').property(single,'label','99.00 : Activities of extraterritorial organisations and bodies').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--99-0')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--M').property(single,'code','M').property(single,'label','M : Professional, scientific and technical activities').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--75').property(single,'code','75').property(single,'label','75 : Veterinary activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--M')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--75-0').property(single,'code','75-0').property(single,'label','75.0 : Veterinary activities').
@@ -914,19 +916,19 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--69
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--69-201').property(single,'code','69-201').property(single,'label','69.20/1 : Accounting, and auditing activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--69-20')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CI').property(single,'code','CI').property(single,'label','CI : Manufacture of computer, electronic and optical products').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CH').property(single,'code','CH').property(single,'label','CH : Manufacture of basic and fabricated metal products').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--H-and-J').property(single,'code','H-and-J').property(single,'label','H & J : Transport, Storage and Communications').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-manufacturing').property(single,'code','all-manufacturing').property(single,'label','All Manufacturing').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--G--T').property(single,'code','G--T').property(single,'label','G-T : Services sector').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CF').property(single,'code','CF').property(single,'label','CF : Manufacture of pharmaceutical products').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--G').property(single,'code','G').property(single,'label','G : Wholesale and retail trade').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--45').property(single,'code','45').property(single,'label','45 : Wholesale and retail trade and repair of motor vehicles and motorcycles').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--G')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--45-4').property(single,'code','45-4').property(single,'label','45.4 : Sale, mainte*ce and repair of motorcycles and related parts and accessories').
@@ -1204,9 +1206,9 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--46
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--46-22').property(single,'code','46-22').property(single,'label','46.22 : Wholesale of flowers and plants').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--46-2')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CC--CG').property(single,'code','CC--CG').property(single,'label','CC-CG : Manufacture of wood, petroleum, chemicals and minerals').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--L').property(single,'code','L').property(single,'label','L : Real estate activities').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--68IMP').property(single,'code','68IMP').property(single,'label','68IMP : Owner-occupiers\' imputed rental').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--L')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--68').property(single,'code','68').property(single,'label','68 : Real estate activities').
@@ -1232,7 +1234,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--68
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--68-10').property(single,'code','68-10').property(single,'label','68.10 : Buying and selling of own real estate').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--68-1')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--S').property(single,'code','S').property(single,'label','S : Other service activities').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--94').property(single,'code','94').property(single,'label','94 : Activities of membership organisations').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--S')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--94-2').property(single,'code','94-2').property(single,'label','94.2 : Activities of trade unions').
@@ -1292,23 +1294,23 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--96
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--96-04').property(single,'code','96-04').property(single,'label','96.04 : Physical well-being activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--96-0')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--K--N').property(single,'code','K--N').property(single,'label','K-N : Finance and Business Services').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CD--CF').property(single,'code','CD--CF').property(single,'label','CD-CF : Manufacture of petroleum, chemicals and pharmaceuticals').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CB').property(single,'code','CB').property(single,'label','CB : Manufacture of textiles, wearing apparel and leather').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CK').property(single,'code','CK').property(single,'label','CK : Manufacture of machinery and equipment').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CD--CE').property(single,'code','CD--CE').property(single,'label','CD-CE : Manufacture of coke, refined petroleum and chemicals').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--AB').property(single,'code','AB').property(single,'label','AB : Agriculture, forestry and fishing').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CL').property(single,'code','CL').property(single,'label','CL : Manufacture of transport equipment').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CG').property(single,'code','CG').property(single,'label','CG : Manufacture of rubber, plastic and non-metallic minerals').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--C').property(single,'code','C').property(single,'label','C : Manufacturing').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--15').property(single,'code','15').property(single,'label','15 : Manufacture of leather and related products').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--C')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--15-1').property(single,'code','15-1').property(single,'label','15.1 : Tanning and dressing of leather').
@@ -2142,7 +2144,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--16
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--11--12').property(single,'code','11--12').property(single,'label','11-12 : Manufacture of beverages and tobacco products').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--C')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--O').property(single,'code','O').property(single,'label','O : Public administration and defence').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--84').property(single,'code','84').property(single,'label','84 : Public administration and defence').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--O')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--84-3').property(single,'code','84-3').property(single,'label','84.3 : Compulsory social security activities').
@@ -2170,7 +2172,7 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--84
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--84-22').property(single,'code','84-22').property(single,'label','84.22 : Defence activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--84-2')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--E').property(single,'code','E').property(single,'label','E : Water supply').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--39').property(single,'code','39').property(single,'label','39 : Remediation activities and other waste management services.').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--E')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--39-0').property(single,'code','39-0').property(single,'label','39.0 : Remediation activities and other waste management services').
@@ -2214,9 +2216,9 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--36
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--36-00').property(single,'code','36-00').property(single,'label','36.00 : Water collection, treatment and supply').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--36-0')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--A--T').property(single,'code','A--T').property(single,'label','A-T : Total').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--K').property(single,'code','K').property(single,'label','K : Financial and insurance activities').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--65').property(single,'code','65').property(single,'label','65 : Insurance, reinsurance and pension funding, except compulsory social security').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--K')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--65-2').property(single,'code','65-2').property(single,'label','65.2 : Reinsurance').
@@ -2328,11 +2330,11 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--64
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--65--66').property(single,'code','65--66').property(single,'label','65-66 : Insurance, pension funding and auxiliary financial activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--K')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--A--S').property(single,'code','A--S').property(single,'label','A-S : Agriculture, Fishing, Production, Construction, Distribution and Non-Financial Service Industries').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CI--CJ').property(single,'code','CI--CJ').property(single,'label','CI-CJ : Manufacture of electronic, optical and electrical products').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--T').property(single,'code','T').property(single,'label','T : Activities of households as employers').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--97').property(single,'code','97').property(single,'label','97 : Activities of households as employers of domestic personnel').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--T')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--97-0').property(single,'code','97-0').property(single,'label','97.0 : Activities of households as employers of domestic personnel').
@@ -2352,13 +2354,13 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--98
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--98-10').property(single,'code','98-10').property(single,'label','98.10 : Undifferentiated goods-producing activities of private households for own use').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--98-1')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--A--E').property(single,'code','A--E').property(single,'label','A-E : Production sector').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--O--T').property(single,'code','O--T').property(single,'label','O-T : Government and Other Services').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--whole-economy').property(single,'code','whole-economy').property(single,'label','Whole Economy').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--Q').property(single,'code','Q').property(single,'label','Q : Human health and social work activities').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--87').property(single,'code','87').property(single,'label','87 : Residential care activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--Q')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--87-9').property(single,'code','87-9').property(single,'label','87.9 : Other residential care activities').
@@ -2416,13 +2418,13 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--86
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--86-90').property(single,'code','86-90').property(single,'label','86.90 : Other human health activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--86-9')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CA').property(single,'code','CA').property(single,'label','CA : Manufacture of food, beverages and tobacco').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--public-sector').property(single,'code','public-sector').property(single,'label','Public sector').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--G-and-I').property(single,'code','G-and-I').property(single,'label','G & I : Wholesaling, Retailing, Hotels & Restaurants').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--P').property(single,'code','P').property(single,'label','P : Education').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--85').property(single,'code','85').property(single,'label','85 : Education').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--P')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--85-2').property(single,'code','85-2').property(single,'label','85.2 : Primary education').
@@ -2464,17 +2466,17 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--85
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--85-60').property(single,'code','85-60').property(single,'label','85.60 : Educational support activities').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--85-6')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--CM').property(single,'code','CM').property(single,'label','CM : Other manufacturing, repair and installation').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--DE').property(single,'code','DE').property(single,'label','DE : Electricity, gas, water').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--ABDE').property(single,'code','ABDE').property(single,'label','ABDE : Agriculture, mining, electricity, gas, water and waste').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--private-sector').property(single,'code','private-sector').property(single,'label','Private sector').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-industries-and-services').property(single,'code','all-industries-and-services').property(single,'label','All Industries and Services').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--F').property(single,'code','F').property(single,'label','F : Construction').
-	addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+	addE('hasParent').to(g.V().hasId('sic-unofficial--top-level')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--41').property(single,'code','41').property(single,'label','41 : Construction of buildings').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--F')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--41-2').property(single,'code','41-2').property(single,'label','41.2 : Construction of residential and non-residential buildings').
@@ -2557,3 +2559,137 @@ g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--42
 	addE('hasParent').to(g.V().hasId('sic-unofficial--42-9')).next()
 g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--42-99').property(single,'code','42-99').property(single,'label','42.99 : Construction of other civil engineering projects n.e.c.').
 	addE('hasParent').to(g.V().hasId('sic-unofficial--42-9')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-including-automotive-fuel').property(single,'code','all-retailing-including-automotive-fuel').property(single,'label','All retailing including automotive fuel').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-excluding-automotive-fuel').property(single,'code','all-retailing-excluding-automotive-fuel').property(single,'label','All retailing excluding automotive fuel').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-food-stores').property(single,'code','predominantly-food-stores').property(single,'label','Predominantly food stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--total-of-predominantly-non-food-stores').property(single,'code','total-of-predominantly-non-food-stores').property(single,'label','Total of predominantly non-food stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-specialised-stores').property(single,'code','non-specialised-stores').property(single,'label','Non-specialised (i.e department) stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total-of-predominantly-non-food-stores')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--textile-clothing-and-footwear-stores').property(single,'code','textile-clothing-and-footwear-stores').property(single,'label','Textile, clothing and footwear stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total-of-predominantly-non-food-stores')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--household-goods-stores').property(single,'code','household-goods-stores').property(single,'label','Household goods stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total-of-predominantly-non-food-stores')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--other-stores').property(single,'code','other-stores').property(single,'label','Other non-food stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total-of-predominantly-non-food-stores')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-store-retailing').property(single,'code','non-store-retailing').property(single,'label','Non-store retailing').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-automotive-fuel').property(single,'code','predominantly-automotive-fuel').property(single,'label','Predominantly automotive fuel').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-including-automotive-fuel-all-businesses').property(single,'code','all-retailing-including-automotive-fuel-all-businesses').property(single,'label','All retailing including automotive fuel').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-excluding-automotive-fuel-all-businesses').property(single,'code','all-retailing-excluding-automotive-fuel-all-businesses').property(single,'label','All retailing excluding automotive fuel').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-food-stores-all-businesses').property(single,'code','predominantly-food-stores-all-businesses').property(single,'label','Predominantly food stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-specialised-food-stores-all-businesses').property(single,'code','non-specialised-food-stores-all-businesses').property(single,'label','Non-specialised Food Stores (i.e supermarkets)').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--specialist-food-stores-all-businesses').property(single,'code','specialist-food-stores-all-businesses').property(single,'label','Specialist food stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--alcoholic-drinks-other-beverages-and-tobacco-all-businesses').property(single,'code','alcoholic-drinks-other-beverages-and-tobacco-all-businesses').property(single,'label','Alcoholic drinks, other beverages and tobacco').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-non-food-stores-all-businesses').property(single,'code','predominantly-non-food-stores-all-businesses').property(single,'label','Predominantly non-food stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-specialised-predominantly-non-food-stores-all-businesses').property(single,'code','non-specialised-predominantly-non-food-stores-all-businesses').property(single,'label','Non-Specialised Predominantly Non-Food Stores (i.e departmnet stores)').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--textile-clothing-footwear-and-leather-all-businesses').property(single,'code','textile-clothing-footwear-and-leather-all-businesses').property(single,'label','Textile, clothing, footwear and leather').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--textiles-all-businesses').property(single,'code','textiles-all-businesses').property(single,'label','Textiles').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--textile-clothing-footwear-and-leather-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--clothing-all-businesses').property(single,'code','clothing-all-businesses').property(single,'label','Clothing').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--textile-clothing-footwear-and-leather-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--footwear-and-leather-goods-all-businesses').property(single,'code','footwear-and-leather-goods-all-businesses').property(single,'label','Footwear and leather goods').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--textile-clothing-footwear-and-leather-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--household-goods-stores-all-businesses').property(single,'code','household-goods-stores-all-businesses').property(single,'label','Household goods stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--furniture-lighting-etc-all-businesses').property(single,'code','furniture-lighting-etc-all-businesses').property(single,'label','Furniture, lighting etc').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--household-goods-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--electrical-household-appliances-all-businesses').property(single,'code','electrical-household-appliances-all-businesses').property(single,'label','Electrical household appliances').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--household-goods-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--hardware-paints-and-glass-all-businesses').property(single,'code','hardware-paints-and-glass-all-businesses').property(single,'label','Hardware, paints and glass').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--household-goods-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--music-and-video-recordings-and-equipment-all-businesses').property(single,'code','music-and-video-recordings-and-equipment-all-businesses').property(single,'label','Music and video recordings and equipment').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--household-goods-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--other-specialised-non-food-stores-all-businesses').property(single,'code','other-specialised-non-food-stores-all-businesses').property(single,'label','Other specialised non-food stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--dispensing-chemists-all-businesses').property(single,'code','dispensing-chemists-all-businesses').property(single,'label','Dispensing chemists').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--medical-goods-all-businesses').property(single,'code','medical-goods-all-businesses').property(single,'label','Medical goods').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--cosmetic-and-toilet-articles-all-businesses').property(single,'code','cosmetic-and-toilet-articles-all-businesses').property(single,'label','Cosmetic & toilet articles').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--computers-and-telecomms-equipment-all-businesses').property(single,'code','computers-and-telecomms-equipment-all-businesses').property(single,'label','Computers & telecomms equipment').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--floor-coverings-all-businesses').property(single,'code','floor-coverings-all-businesses').property(single,'label','Floor coverings').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--books-newspapers-and-periodicals-all-businesses').property(single,'code','books-newspapers-and-periodicals-all-businesses').property(single,'label','Books, newspapers & periodicals').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--sports-equipment-games-and-toys-all-businesses').property(single,'code','sports-equipment-games-and-toys-all-businesses').property(single,'label','Sports equipment, games & toys').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--flowers-plants-seeds-fertilisers-and-pet-foods-all-businesses').property(single,'code','flowers-plants-seeds-fertilisers-and-pet-foods-all-businesses').property(single,'label','Flowers, plants, seeds, fertilisers and pet foods').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--watches-and-jewellery-all-businesses').property(single,'code','watches-and-jewellery-all-businesses').property(single,'label','Watches & jewellery').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--other-retail-sale-of-new-goods-in-specialised-stores-all-businesses').property(single,'code','other-retail-sale-of-new-goods-in-specialised-stores-all-businesses').property(single,'label','Other retail sale of new goods in specialised stores').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--second-hand-goods-all-businesses').property(single,'code','second-hand-goods-all-businesses').property(single,'label','Second-hand goods').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-store-retail-all-businesses').property(single,'code','non-store-retail-all-businesses').property(single,'label','Non-store retail').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--mail-order-all-businesses').property(single,'code','mail-order-all-businesses').property(single,'label','Mail order').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-store-retail-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--other-non-store-retail-all-businesses').property(single,'code','other-non-store-retail-all-businesses').property(single,'label','Other non-store retail').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-store-retail-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--automotive-fuel-all-businesses').property(single,'code','automotive-fuel-all-businesses').property(single,'label','Automotive fuel').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--total')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-including-automotive-fuel-large-businesses').property(single,'code','all-retailing-including-automotive-fuel-large-businesses').property(single,'label','All retailing, including automotive fuel, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--all-retailing-including-automotive-fuel-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-including-automotive-fuel-small-businesses').property(single,'code','all-retailing-including-automotive-fuel-small-businesses').property(single,'label','All retailing, including automotive fuel, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--all-retailing-including-automotive-fuel-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-excluding-automotive-fuel-large-businesses').property(single,'code','all-retailing-excluding-automotive-fuel-large-businesses').property(single,'label','All retailing, excluding automotive fuel, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--all-retailing-excluding-automotive-fuel-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--all-retailing-excluding-automotive-fuel-small-businesses').property(single,'code','all-retailing-excluding-automotive-fuel-small-businesses').property(single,'label','All retailing, excluding automotive fuel, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--all-retailing-excluding-automotive-fuel-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-food-stores-large-businesses').property(single,'code','predominantly-food-stores-large-businesses').property(single,'label','Predominantly food stores, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-food-stores-small-businesses').property(single,'code','predominantly-food-stores-small-businesses').property(single,'label','Predominantly food stores, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-specialised-food-stores-large-businesses').property(single,'code','non-specialised-food-stores-large-businesses').property(single,'label','Non-specialised food stores, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-specialised-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-specialised-food-stores-small-businesses').property(single,'code','non-specialised-food-stores-small-businesses').property(single,'label','Non-specialised food stores, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-specialised-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-non-food-stores-large-businesses').property(single,'code','predominantly-non-food-stores-large-businesses').property(single,'label','Predominantly non-food stores, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--predominantly-non-food-stores-small-businesses').property(single,'code','predominantly-non-food-stores-small-businesses').property(single,'label','Predominantly non-food stores, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-specialised-predominantly-non-food-stores-large-businesses').property(single,'code','non-specialised-predominantly-non-food-stores-large-businesses').property(single,'label','Non-specialised predominantly non-food stores, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-specialised-predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-specialised-predominantly-non-food-stores-small-businesses').property(single,'code','non-specialised-predominantly-non-food-stores-small-businesses').property(single,'label','Non-specialised predominantly non-food stores, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-specialised-predominantly-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--textile-clothing-footwear-and-leather-large-businesses').property(single,'code','textile-clothing-footwear-and-leather-large-businesses').property(single,'label','Textile, clothing, footwear and leather, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--textile-clothing-footwear-and-leather-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--textile-clothing-footwear-and-leather-small-businesses').property(single,'code','textile-clothing-footwear-and-leather-small-businesses').property(single,'label','Textile, clothing, footwear and leather, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--textile-clothing-footwear-and-leather-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--clothing-large-businesses').property(single,'code','clothing-large-businesses').property(single,'label','Clothing, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--clothing-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--clothing-small-businesses').property(single,'code','clothing-small-businesses').property(single,'label','Clothing, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--clothing-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--household-goods-stores-large-businesses').property(single,'code','household-goods-stores-large-businesses').property(single,'label','Household goods stores, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--household-goods-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--household-goods-stores-small-businesses').property(single,'code','household-goods-stores-small-businesses').property(single,'label','Household goods stores, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--household-goods-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--other-specialised-non-food-stores-large-businesses').property(single,'code','other-specialised-non-food-stores-large-businesses').property(single,'label','Other specialised non-food stores, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--other-specialised-non-food-stores-small-businesses').property(single,'code','other-specialised-non-food-stores-small-businesses').property(single,'label','Other specialised non-food stores, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--pharmaceutical-medical-cosmetic-and-toilet-goods-all-businesses').property(single,'code','pharmaceutical-medical-cosmetic-and-toilet-goods-all-businesses').property(single,'label','Pharmaceutical, medical, cosmetic & toilet goods').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--other-retail-sales-in-specialised-stores-nec-all-businesses').property(single,'code','other-retail-sales-in-specialised-stores-nec-all-businesses').property(single,'label','Other retail sales in specialised stores nec').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--other-specialised-non-food-stores-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-store-retail-large-businesses').property(single,'code','non-store-retail-large-businesses').property(single,'label','Non-store retail, large businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-store-retail-all-businesses')).next()
+g.addV('_generic_hierarchy_node_sic-unofficial').property(id,'sic-unofficial--non-store-retail-small-businesses').property(single,'code','non-store-retail-small-businesses').property(single,'label','Non-store retail, small businesses').
+   addE('hasParent').to(g.V().hasId('sic-unofficial--non-store-retail-all-businesses')).next()

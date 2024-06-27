@@ -15,7 +15,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--B5')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--DK').property(single,'code','DK').property(single,'label','DK - Denmark').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--B5')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--CZ').property(single,'code','CZ').property(single,'label','CZ - Czech Republic').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--CZ').property(single,'code','CZ').property(single,'label','CZ - Czechia').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--B5')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--LV').property(single,'code','LV').property(single,'label','LV - Latvia').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--B5')).next()
@@ -87,7 +87,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--NZ').property(single,'code','NZ').property(single,'label','NZ - New Zealand').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--HM').property(single,'code','HM').property(single,'label','HM - Heard & McDonald Islands').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--HM').property(single,'code','HM').property(single,'label','HM - Heard and McDonald Islands').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TF').property(single,'code','TF').property(single,'label','TF - French Southern Territories').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
@@ -121,7 +121,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--NR').property(single,'code','NR').property(single,'label','NR - Nauru').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--WF').property(single,'code','WF').property(single,'label','WF - Wallis & Futuna').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--WF').property(single,'code','WF').property(single,'label','WF - Wallis and Futuna').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--BV').property(single,'code','BV').property(single,'label','BV - Bouvet Island').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--australia-oceania-and-polar-regions')).next()
@@ -177,7 +177,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--BB').property(single,'code','BB').property(single,'label','BB - Barbados').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--KN').property(single,'code','KN').property(single,'label','KN - St Kitts & Nevis').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--KN').property(single,'code','KN').property(single,'label','KN - St Kitts and Nevis').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--SX').property(single,'code','SX').property(single,'label','SX - Sint Maarten').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
@@ -191,13 +191,13 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--HN').property(single,'code','HN').property(single,'label','HN - Honduras').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TC').property(single,'code','TC').property(single,'label','TC - Turks & Caicos Islands').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TC').property(single,'code','TC').property(single,'label','TC - Turks and Caicos Islands').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--VI').property(single,'code','VI').property(single,'label','VI - US Virgin Islands').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--AR').property(single,'code','AR').property(single,'label','AR - Argentina').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--AG').property(single,'code','AG').property(single,'label','AG - Antigua & Barbuda').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--AG').property(single,'code','AG').property(single,'label','AG - Antigua and Barbuda').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--martinique').property(single,'code','martinique').property(single,'label','Martinique').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
@@ -221,7 +221,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--VC').property(single,'code','VC').property(single,'label','VC - St Vincent').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TT').property(single,'code','TT').property(single,'label','TT - Trinidad & Tobago').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TT').property(single,'code','TT').property(single,'label','TT - Trinidad and Tobago').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--BZ').property(single,'code','BZ').property(single,'label','BZ - Belize').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
@@ -237,7 +237,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--FK').property(single,'code','FK').property(single,'label','FK - Falkland Islands').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--BS').property(single,'code','BS').property(single,'label','BS - Bahamas').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--BS').property(single,'code','BS').property(single,'label','BS - The Bahamas').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--CR').property(single,'code','CR').property(single,'label','CR - Costa Rica').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--central-and-south-america')).next()
@@ -267,7 +267,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--AD').property(single,'code','AD').property(single,'label','AD - Andorra').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--MK').property(single,'code','MK').property(single,'label','MK - FYR Macedonia').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--MK').property(single,'code','MK').property(single,'label','MK - North Macedonia').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--RU').property(single,'code','RU').property(single,'label','RU - Russia').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
@@ -279,11 +279,15 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--SM').property(single,'code','SM').property(single,'label','SM - San Marino').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--BA').property(single,'code','BA').property(single,'label','BA - Bosnia & Herzegovina').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--BA').property(single,'code','BA').property(single,'label','BA - Bosnia and Herzegovina').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--RS').property(single,'code','RS').property(single,'label','RS - Serbia').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--JE').property(single,'code','JE').property(single,'label','JE - Jersey').
+	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--GG').property(single,'code','GG').property(single,'label','GG - Guernsey').
+	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--IM').property(single,'code','IM').property(single,'label','IM - Isle of Man').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--ussr-ex').property(single,'code','ussr-ex').property(single,'label','USSR (Ex)').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--europe-exc-european-union')).next()
@@ -343,7 +347,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TM').property(single,'code','TM').property(single,'label','TM - Turkmenistan').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--MM').property(single,'code','MM').property(single,'label','MM - Myanmar').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--MM').property(single,'code','MM').property(single,'label','MM - Myanmar (Burma)').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TH').property(single,'code','TH').property(single,'label','TH - Thailand').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
@@ -367,7 +371,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--KR').property(single,'code','KR').property(single,'label','KR - South Korea').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--KG').property(single,'code','KG').property(single,'label','KG - Kyrgyz Republic').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--KG').property(single,'code','KG').property(single,'label','KG - Kyrgyzstan').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--LB').property(single,'code','LB').property(single,'label','LB - Lebanon').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--asia')).next()
@@ -443,7 +447,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--MR').property(single,'code','MR').property(single,'label','MR - Mauritania').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--MA').property(single,'code','MA').property(single,'label','MA - Morocco').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--MA').property(single,'code','MA').property(single,'label','MA - Morocco incl Western Sahara').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--NG').property(single,'code','NG').property(single,'label','NG - Nigeria').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
@@ -491,7 +495,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--LY').property(single,'code','LY').property(single,'label','LY - Libya').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--SZ').property(single,'code','SZ').property(single,'label','SZ - Swaziland').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--SZ').property(single,'code','SZ').property(single,'label','SZ - Eswatini').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--GN').property(single,'code','GN').property(single,'label','GN - Guinea').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
@@ -501,7 +505,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TD').property(single,'code','TD').property(single,'label','TD - Chad').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--ST').property(single,'code','ST').property(single,'label','ST - Sao Tome & Principe').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--ST').property(single,'code','ST').property(single,'label','ST - Sao Tome and Principe').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--SN').property(single,'code','SN').property(single,'label','SN - Senegal').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
@@ -519,7 +523,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--SC').property(single,'code','SC').property(single,'label','SC - Seychelles').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--CG').property(single,'code','CG').property(single,'label','CG - Congo (Republic)').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--CG').property(single,'code','CG').property(single,'label','CG - Congo').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--EG').property(single,'code','EG').property(single,'label','EG - Egypt').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
@@ -537,7 +541,7 @@ g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countri
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--TN').property(single,'code','TN').property(single,'label','TN - Tunisia').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
-g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--GM').property(single,'code','GM').property(single,'label','GM - Gambia').
+g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--GM').property(single,'code','GM').property(single,'label','GM - The Gambia').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
 g.addV('_generic_hierarchy_node_countries-and-territories').property(id,'countries-and-territories--CD').property(single,'code','CD').property(single,'label','CD - Congo (Democratic Republic)').
 	addE('hasParent').to(g.V().hasId('countries-and-territories--africa')).next()
