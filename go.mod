@@ -28,7 +28,7 @@ require (
 require (
 	github.com/ONSdigital/dp-api-clients-go/v2 v2.262.0 // indirect
 	github.com/ONSdigital/dp-kafka/v3 v3.10.0 // indirect
-	github.com/ONSdigital/dp-net/v2 v2.16.0 // indirect
+	github.com/ONSdigital/dp-net/v2 v2.18.0 // indirect
 	github.com/ONSdigital/golang-neo4j-bolt-driver v0.0.0-20241121114036-9f4b82bb9d37 // indirect
 	github.com/ONSdigital/graphson v0.3.0 // indirect
 	github.com/ONSdigital/gremgo-neptune v1.1.0 // indirect
