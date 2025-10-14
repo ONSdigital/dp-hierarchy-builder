@@ -23,7 +23,7 @@ all: audit test build
 
 PHONY: audit
 audit:
-	go list -m all | nancy sleuth
+	dis-vulncheck
 
 build:
 	@mkdir -p $(BUILD_ARCH)/$(BIN_DIR)
