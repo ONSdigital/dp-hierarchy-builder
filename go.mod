@@ -1,18 +1,15 @@
 module github.com/ONSdigital/dp-hierarchy-builder
 
-go 1.24.0
+go 1.27.0
 
 require (
-	github.com/ONSdigital/dp-api-clients-go v1.43.0 // indirect
 	github.com/ONSdigital/dp-graph/v2 v2.18.0
 	github.com/ONSdigital/dp-healthcheck v1.6.3
 	github.com/ONSdigital/dp-import v1.4.0
 	github.com/ONSdigital/dp-kafka/v2 v2.8.0
 	github.com/ONSdigital/dp-net v1.5.0
 	github.com/ONSdigital/dp-reporter-client v1.2.0
-	github.com/ONSdigital/go-ns v0.0.0-20241030091535-cc1b11756418 // indirect
 	github.com/ONSdigital/log.go/v2 v2.4.3
-	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/gorilla/mux v1.8.1
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/smartystreets/goconvey v1.8.1
@@ -20,9 +17,11 @@ require (
 )
 
 require (
+	github.com/ONSdigital/dp-api-clients-go v1.43.0 // indirect
 	github.com/ONSdigital/dp-api-clients-go/v2 v2.262.0 // indirect
 	github.com/ONSdigital/dp-kafka/v3 v3.10.0 // indirect
 	github.com/ONSdigital/dp-net/v2 v2.18.0 // indirect
+	github.com/ONSdigital/go-ns v0.0.0-20241030091535-cc1b11756418 // indirect
 	github.com/ONSdigital/golang-neo4j-bolt-driver v0.0.0-20241121114036-9f4b82bb9d37 // indirect
 	github.com/ONSdigital/graphson v0.3.0 // indirect
 	github.com/ONSdigital/gremgo-neptune v1.1.0 // indirect
@@ -39,6 +38,7 @@ require (
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/uuid v1.6.0 // indirect
+	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
