@@ -2,7 +2,8 @@
 
 The hierarchy builder is a service that forms part of the dataset import process. It requires a 'full' hierarchy to be available for the dataset you are importing
 
-## Getting started
+### Getting started
+
 Run the `dp-hierarchy-builder` service:
 
 `make debug` 
